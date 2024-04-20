@@ -9,21 +9,23 @@
 
 header {
     position: relative;
+
 }
 
 main {
     background-color: #bab6b6;
     height: 100vh;
     overflow: hidden;
+    padding: 100px;
 }
 
 footer {
     background-color: #494949;
-    height: 100px;
 }
 
 body::-webkit-scrollbar {
     display: none;
+    padding: 100px;
 }
 
 
@@ -48,8 +50,9 @@ body::-webkit-scrollbar {
 
 
 
-
-
+/* =================================
+        HEADER    -    START
+===================================== */
 /*  *****  .HEADER-INFO   *****  */
 .header-info {
     background-color: transparent;
@@ -400,6 +403,7 @@ header .header-info .page-list .pages-pc ul {
     z-index: 999;
     display: flex;
     flex-direction: column;
+    /* justify-content: space-between; */
     overflow-y: auto;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
     display: none;
@@ -591,6 +595,7 @@ header .header-info .page-list .pages-pc ul {
 
 
 /*  *****  BASKET VIEW  *****  */
+
 .searchs .basket-list .basket-view .bastek-total-price {
     padding: 14px 0;
     border-top: 1px solid #444444;
@@ -669,7 +674,9 @@ header .header-info .page-list .pages-pc ul {
     background: #d90000;
 }
 
-
+.searchs .basket-list .basket-view .basket-buttons .basket-viewcart:active {
+    background: #9a0101;
+}
 
 
 
@@ -763,9 +770,298 @@ header .header-info .page-list .pages-pc ul {
     font-size: 14px;
     text-align: center;
     background: #d90000;
+    width: 100px;
+    height: 30px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.user-info .go-admin:active {
+    background: #9a0101;
+}
+/* =================================
+        HEADER    -    END
+===================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================
+        FOOTER   -   START
+===================================== */
+
+
+.footer-top {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 18px 5%;
+    background-image: url(/cilent/assets/images/settings/background-img.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer-top .brand-info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 30%;
+}
+
+.footer-top .brand-info h1 {
+    color: #fff;
+    font-size: 18px;
 }
 
 
+.footer-top .brand-info .contact a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+
+.footer-top .brand-info .contact img {
+    width: 14px;
+    height: 14px;
+}
+
+
+.footer-top .brand-info .contact {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    gap: 10px;
+}
+
+
+.footer-top .brand-info .contact .brand-ad {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    gap: 12px;
+}
+
+
+
+.web-info {
+    min-width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    position: relative;
+}
+
+.info-list h3 {
+    color: #fff;
+    font-size: 14px;
+}
+
+.info-list a {
+    color: #fff;
+    font-size: 12px;
+    text-decoration: none;
+    position: relative;
+}
+
+.info-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.info-list a:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+}
+
+
+
+
+
+
+
+.info-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+
+
+.brand-info .social-platforms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.brand-info .social-platforms a {
+    display: flex;
+    align-items: center;
+}
+
+.brand-info .social-platforms img {
+    width: 15px;
+    height: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.subscribe {
+    min-width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #fff;
+}
+
+.subscribe p {
+    width: 250px;
+    font-size: 12px;
+}
+
+.subscribe-form div {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.subscribe button {
+    width: 70px;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    padding: 7px;
+    background: #d90000;
+    transition: all 0.3s;
+    text-align: center;
+    font-weight: 500;
+    border: none;
+}
+
+.subscribe button:active {
+    background: #9a0101;
+}
+
+.subscribe h3 {
+    font-size: 14px;
+}
+
+.subscribe .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+
+
+.subscribe .subscribe-form input[type="email"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    margin: 0;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #fff;
+    align-items: center;
+    padding: 10px 5%;
+    background: #000;
+}
+
+.footer-bottom p {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 8px;
+}
+
+.footer-bottom a {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 8px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.footer-bottom .payments {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-bottom .payments img {
+    width: 20px;
+    height: 20px;
+}
+
+/* =================================
+        FOOTER    -    END
+===================================== */
 
 
 
@@ -782,6 +1078,9 @@ header .header-info .page-list .pages-pc ul {
 ===================================== */
 
 @media screen and (min-width: 1024px) {
+/* =================================
+        HEADER    -    START
+===================================== */
 
     /*  *****  .HEADER-INFO   *****  */
     .header-info {
@@ -889,5 +1188,175 @@ header .header-info .page-list .pages-pc ul {
     .searchs .basket-list {
         width: 30%;
     }
+
+/* =================================
+        HEADER    -    END
+===================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* =================================
+        FOOTER
+===================================== */
+
+    .footer-top {
+        justify-content: space-between;
+        padding: 3% 5%;
+    }
+
+    .footer-top .brand-info {
+
+        gap: 30px;
+        min-width: 10%;
+    }
+
+    .footer-top .brand-info h1 {
+        font-size: 22px;
+    }
+
+
+    .footer-top .brand-info .contact a {
+        font-size: 14px;
+    }
+
+    .footer-top .brand-info .contact img {
+        width: 16px;
+        height: 16px;
+    }
+
+
+    .footer-top .brand-info .contact {
+        gap: 12px;
+    }
+
+
+    .footer-top .brand-info .contact .brand-ad {
+        gap: 18px;
+    }
+
+
+
+    .web-info {
+        min-width: 35%;
+        gap: 150px;
+    }
+
+    .info-list {
+        gap: 30px;
+    }
+
+    .info-list h3 {
+        font-size: 16px;
+    }
+
+    .info-list a {
+        font-size: 14px;
+    }
+
+
+
+
+
+    .brand-info .social-platforms {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    .brand-info .social-platforms img {
+        width: 20px;
+        height: 20px;
+    }
+
+
+    .subscribe {
+        gap: 30px;
+    }
+
+    .subscribe p {
+        font-size: 14px;
+    }
+
+    .subscribe button {
+        padding: 7px 10px;
+    }
+
+    .subscribe h3 {
+        font-size: 16px;
+    }
+
+    .subscribe .subscribe-form {
+        gap: 16px;
+    }
+
+
+
+    .subscribe .subscribe-form input[type="email"] {
+        padding: 7px 10px;
+        margin-top: 7px;
+    }
+
+
+    .footer-bottom {
+        padding: 10px 5%;
+    }
+
+    .footer-bottom p {
+        font-size: 10px;
+    }
+
+    .footer-bottom a {
+        font-size: 12px;
+    }
+
+    .footer-bottom .payments {
+        gap: 12px;
+    }
+
+    .footer-bottom .payments img {
+        width: 24px;
+        height: 24px;
+    }
+
+
+/* =================================
+        FOOTER    -    END
+===================================== */
 
 }
