@@ -1,3 +1,4 @@
+'use strict';
 
 /* =================================
        BASKET TOGGLE
@@ -7,7 +8,7 @@ var basketList = document.querySelector('.basket-list');
 var basketClose = document.querySelector('.basket-close');
 
 basaketIcon.addEventListener('click', (event) => {
-    event.preventDefault(); 
+  event.preventDefault();
 
   event.stopPropagation();
   basketList.classList.add('show');
@@ -15,14 +16,14 @@ basaketIcon.addEventListener('click', (event) => {
 
 
 basketClose.addEventListener('click', (event) => {
-    event.preventDefault(); 
+  event.preventDefault();
 
   event.stopPropagation();
   basketList.classList.remove('show');
 });
 
 document.addEventListener('click', (event) => {
-    event.preventDefault(); 
+  event.preventDefault();
 
   const clickedElement = event.target;
   if (!basketList.contains(clickedElement) && !basaketIcon.contains(clickedElement)) {
@@ -165,7 +166,7 @@ var decreaseBtns = document.querySelectorAll('.decrease-btn');
 
 increaseBtns.forEach(btn => {
   btn.addEventListener('click', (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     let inpValue = btn.nextElementSibling.value;
     if (inpValue > 1) {
       btn.nextElementSibling.value = --inpValue;
@@ -174,11 +175,224 @@ increaseBtns.forEach(btn => {
 });
 
 decreaseBtns.forEach(btn => {
-  btn.addEventListener('click', function (event) 
-  {
-    event.preventDefault(); 
+  btn.addEventListener('click', function (event) {
+    event.preventDefault();
 
     let inpValue = btn.previousElementSibling.value;
     btn.previousElementSibling.value = ++inpValue;
   });
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =========== SLIDER - START =========== */
+
+document.addEventListener('DOMContentLoaded', function () {
+  var sliderLeftBtn = document.querySelector('.slider-left-btn');
+  var sliderRightBtn = document.querySelector('.slider-right-btn');
+  var slider = document.querySelector('.sliders');
+  var slides = document.querySelectorAll('.sliders .slide');
+  var slideCount = slides.length;
+
+  var currentSlide = 0; 
+
+  var sliderCircleBtnContainer = document.querySelector('.slider-cricle-btn');
+
+  for (var i = 0; i < slideCount; i++) {
+    var circleBtn = document.createElement('div');
+    circleBtn.classList.add('cricle-btn');
+    circleBtn.setAttribute('data-slide-index', i);
+    sliderCircleBtnContainer.appendChild(circleBtn);
+  }
+
+  var sliderCircleBtns = document.querySelectorAll('.slider-cricle-btn .cricle-btn');
+  sliderCircleBtns.forEach(function (circleBtn, index) {
+    circleBtn.addEventListener('click', function () {
+      goToSlide(index); 
+    });
+  });
+
+  slides[0].classList.add('active');
+  sliderCircleBtns[0].classList.add('active');
+
+  if (slideCount <= 1) {
+    sliderLeftBtn.style.display = "none";
+    sliderRightBtn.style.display = "none";
+  }
+
+  function moveSlider(direction) {
+    const slideWidthPercent = 100 / slideCount; 
+    let newTranslatePercent = currentSlide * -100;
+
+    if (direction === 'left') {
+      currentSlide = (currentSlide === 0) ? slideCount - 1 : currentSlide - 1; 
+    } else if (direction === 'right') {
+      currentSlide = (currentSlide === slideCount - 1) ? 0 : currentSlide + 1; 
+    }
+
+    newTranslatePercent = currentSlide * -100; 
+
+    slider.style.transform = `translateX(${newTranslatePercent}%)`; 
+
+    updateCircleButtons();
+  }
+
+  function goToSlide(slideIndex) {
+    currentSlide = slideIndex;
+    moveSlider('stay'); 
+  }
+
+  function updateCircleButtons() {
+    sliderCircleBtns.forEach(function (circleBtn) {
+      circleBtn.classList.remove('active');
+    });
+    sliderCircleBtns[currentSlide].classList.add('active');
+  }
+
+  sliderLeftBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    moveSlider('left');
+  });
+
+  sliderRightBtn.addEventListener('click', function (event) {
+    event.preventDefault();
+    moveSlider('right');
+  });
+
+  window.addEventListener('resize', function () {
+    moveSlider('stay');
+  });
+});
+
+
+
+
+/* =========== SLIDER - End =========== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,7 +16,6 @@ main {
     background-color: #bab6b6;
     height: 100vh;
     overflow: hidden;
-    padding: 100px;
 }
 
 footer {
@@ -25,10 +24,18 @@ footer {
 
 body::-webkit-scrollbar {
     display: none;
-    padding: 100px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 
+body {
+    min-height: 100vh;
+}
 
 
 
@@ -63,6 +70,7 @@ body::-webkit-scrollbar {
     position: fixed;
     width: 100%;
     transition: background-color 0.8s ease;
+    z-index: 999;
 }
 
 .header-info.scrolled {
@@ -557,19 +565,19 @@ header .header-info .page-list .pages-pc ul {
 
 
 
-.searchs .basket-list .basket-product-list .basket-prod .basket-price-close .dis-price {
+.searchs .basket-list .basket-product-list .basket-prod .dis-price {
     font-size: 14px;
     font-weight: 600;
     color: #d90000;
 }
 
-.searchs .basket-list .basket-product-list .basket-prod .basket-price-close .sell-price {
+.searchs .basket-list .basket-product-list .basket-prod .sell-price {
     font-size: 14px;
     font-weight: 600;
     color: #000;
 }
 
-.searchs .basket-list .basket-product-list .basket-prod .basket-price-close .sel-price {
+.searchs .basket-list .basket-product-list .basket-prod .sel-price {
     font-size: 12px;
     font-weight: 500;
     color: #000;
@@ -715,6 +723,7 @@ header .header-info .page-list .pages-pc ul {
     width: 170px;
     padding: 15px;
     display: none;
+    z-index: 1000;
 }
 
 
@@ -779,6 +788,7 @@ header .header-info .page-list .pages-pc ul {
 .user-info .go-admin:active {
     background: #9a0101;
 }
+
 /* =================================
         HEADER    -    END
 ===================================== */
@@ -991,6 +1001,7 @@ header .header-info .page-list .pages-pc ul {
     text-align: center;
     font-weight: 500;
     border: none;
+    cursor: pointer;
 }
 
 .subscribe button:active {
@@ -1073,12 +1084,65 @@ header .header-info .page-list .pages-pc ul {
 
 
 
+
+
+
+
+
+
+
+/* =================================
+        MAIN    -    START
+===================================== */
+
+
+/* ========== SECTION - HEAD SLIDER ========== */
+
+
+
+
+
+/* =================================
+        MAIN    -    END
+===================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =================================
         RESPONSIVE    1024 PX
 ===================================== */
 
 @media screen and (min-width: 1024px) {
-/* =================================
+    /* =================================
         HEADER    -    START
 ===================================== */
 
@@ -1189,7 +1253,7 @@ header .header-info .page-list .pages-pc ul {
         width: 30%;
     }
 
-/* =================================
+    /* =================================
         HEADER    -    END
 ===================================== */
 
@@ -1355,8 +1419,384 @@ header .header-info .page-list .pages-pc ul {
     }
 
 
-/* =================================
+    /* =================================
         FOOTER    -    END
 ===================================== */
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================
+        MAIN    -    START
+===================================== */
+
+.section {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    max-width: 1540px;
+    width: 95%;
+    border-left: 1px solid #eae9e9;
+    border-right: 1px solid #eae9e9;
+    background: #594040;
+    height: 100%;
+}
+
+.hero-slider-1 {
+    height: 100vh;
+}
+
+
+
+
+
+
+
+
+
+
+/* =========== SLIDER - Start =========== */
+
+.brand-section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.sliders {
+    display: flex;
+    transition: all 0.8s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* =========== SLIDER - End =========== */
+
+
+
+
+
+
+
+
+
+
+/* =========== SLIDER-Info - Start =========== */
+
+.slide-info {
+    top: 50%;
+    position: absolute;
+    left: 14%;
+    color: #fff;
+    padding: 10px;
+    z-index: 10;
+}
+
+
+
+.slide-info .slide-title {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.slide-info .slide-name {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.slide-info .slide-description {
+    margin-top: 5%;
+    width: 55%;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.slide-info .slide-go {
+    margin-top: 7%;
+    display: flex;
+    align-items: center;
+}
+
+.slide-info .slide-go a {
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 8px 14px;
+    text-align: center;
+    transition: all 0.5s ease;
+    font-size: 10px;
+}
+
+.slide-info .slide-go a:hover {
+    text-decoration: none;
+    background-color: #d90000;
+    border: none;
+    border: 1px solid transparent;
+    text-align: center;
+}
+
+.slide-info .slide-go a:active {
+    text-decoration: none;
+    background-color: #9a0101;
+    text-align: center;
+}
+
+
+
+/* =========== SLIDER-Info - End =========== */
+
+
+
+
+
+
+/* =========== SLIDER-Toggle - Start =========== */
+
+.toggle-button .slider-left-btn,
+.toggle-button .slider-right-btn {
+    opacity: 0.1;
+}
+
+.toggle-button .slider-left-btn:hover,
+.toggle-button .slider-right-btn:hover {
+    opacity: 1;
+}
+
+.toggle-button .slider-left-btn:active,
+.toggle-button .slider-right-btn:active {
+    opacity: 1;
+}
+
+.toggle-button .slider-left-btn img:active,
+.toggle-button .slider-right-btn img:active {
+    transform: scale(0.5);
+}
+
+.toggle-button img {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+
+}
+
+.toggle-button {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    z-index: 20;
+}
+
+/* =========== SLIDER-Toggle - End =========== */
+
+
+
+
+
+
+
+
+
+/* =========== SLIDER-Cricle - Start =========== */
+
+
+.slider-cricle-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+}
+
+.slider-cricle-btn .cricle-btn {
+    width: 14px;
+    height: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+}
+
+.slider-cricle-btn .cricle-btn:hover {
+    background-color: #fff;
+}
+
+.slider-cricle-btn .cricle-btn:active {
+    background-color: #d90000;
+    border: none;
+}
+
+.slider-cricle-btn .cricle-btn.active {
+    background: #d90000;
+    border: none;
+}
+
+/* =========== SLIDER-Cricle - End =========== */
+
+/* =================================
+        MAIN    -    END
+===================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* =================================
+        MAIN > RESPONSIVE    -    START
+===================================== */
+
+@media screen and (min-width: 1024px) {
+
+    /* =========== SLIDER-Info - Start =========== */
+    
+    .slide-info {
+        top: 34%;
+        padding: 20px;
+    }
+    
+    .slide-info .slide-title {
+        font-size: 24px;
+    }
+    
+    .slide-info .slide-name {
+        font-size: 34px;
+    }
+    
+    .slide-info .slide-description {
+        margin-top: 2%;
+        font-size: 16px;
+    }
+    
+    .slide-info .slide-go a {
+        padding: 14px 20px;
+        font-size: 14px;
+    }
+    
+    /* =========== SLIDER-Info - End =========== */
+    
+    
+    
+    
+    
+    
+    /* =========== SLIDER-Toggle - Start =========== */
+    
+    .toggle-button img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .toggle-button {
+        padding: 0 30px;
+    }
+    
+    /* =========== SLIDER-Toggle - End =========== */
+    
+    
+    
+    
+    
+    
+    
+    /* =========== SLIDER-Cricle - Start =========== */
+    
+    .slider-cricle-btn {
+        gap: 14px;
+        bottom: 7%;
+    }
+    
+    .slider-cricle-btn .cricle-btn {
+        width: 20px;
+        height: 20px;
+    }
+
+    /* =========== SLIDER-Cricle - eND =========== */
+
+
+}
+
+/* =================================
+        MAIN > RESPONSIVE    -    END
+===================================== */
