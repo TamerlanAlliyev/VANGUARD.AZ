@@ -13,14 +13,12 @@ header {
 }
 
 main {
-    background-color: #bab6b6;
+    /* background-color: #bab6b6; */
     height: 100vh;
     overflow: hidden;
 }
 
-footer {
-    background-color: #494949;
-}
+
 
 body::-webkit-scrollbar {
     display: none;
@@ -185,6 +183,7 @@ header .header-info .page-list .pages-pc ul {
     margin-top: 4px;
     width: 100%;
     position: absolute;
+    z-index: 100;
 }
 
 .searchs .search-list input {
@@ -355,6 +354,23 @@ header .header-info .page-list .pages-pc ul {
 }
 
 
+/* .user-info ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.user-info ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+} */
 
 
 
@@ -376,7 +392,30 @@ header .header-info .page-list .pages-pc ul {
     color: #fff;
     text-decoration: none;
     font-size: 14px;
+    position: relative;
 }
+
+
+.searchs .pages-mobile ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.searchs .pages-mobile ul li a:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+}
+
+
+
 
 
 .pages-close {
@@ -415,7 +454,7 @@ header .header-info .page-list .pages-pc ul {
     overflow-y: auto;
     box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.5);
     display: none;
-    padding: 18px;
+    padding: 24px;
     right: -50px;
     opacity: 0.3;
     transition: right 0.7s ease, opacity 0.5s ease;
@@ -523,26 +562,7 @@ header .header-info .page-list .pages-pc ul {
     color: #3c3c3c;
 }
 
-.searchs .basket-list .basket-product-list li a .basket-prod-detail .basket-prod-count {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
 
-.searchs .basket-list .basket-product-list li a .basket-prod-detail .basket-prod-count input[type="number"] {
-    width: 50px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-}
-
-.searchs .basket-list .basket-product-list li a .basket-prod-info input[type="number"]::-webkit-inner-spin-button,
-.searchs .basket-list .basket-product-list li a .basket-prod-info input[type="number"]::-webkit-outer-spin-button,
-.searchs .basket-list .basket-product-list li a .basket-prod-info input[type="number"]::-webkit-clear-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
 
 
 .searchs .basket-list .basket-product-list ul .basket-prod {
@@ -1251,6 +1271,7 @@ header .header-info .page-list .pages-pc ul {
 
     .searchs .basket-list {
         width: 30%;
+        padding: 24px 36px;
     }
 
     /* =================================
@@ -1476,21 +1497,6 @@ header .header-info .page-list .pages-pc ul {
         MAIN    -    START
 ===================================== */
 
-.section {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: column;
-    max-width: 1540px;
-    width: 95%;
-    border-left: 1px solid #eae9e9;
-    border-right: 1px solid #eae9e9;
-    background: #594040;
-    height: 100%;
-}
-
-.hero-slider-1 {
-    height: 100vh;
-}
 
 
 
@@ -1501,7 +1507,8 @@ header .header-info .page-list .pages-pc ul {
 
 
 
-/* =========== SLIDER - Start =========== */
+
+/* =========== BRAND SLIDER - Start =========== */
 
 .brand-section {
     width: 100%;
@@ -1528,7 +1535,7 @@ header .header-info .page-list .pages-pc ul {
 }
 
 
-/* =========== SLIDER - End =========== */
+/* =========== BRAND SLIDER - End =========== */
 
 
 
@@ -1539,7 +1546,7 @@ header .header-info .page-list .pages-pc ul {
 
 
 
-/* =========== SLIDER-Info - Start =========== */
+/* =========== BRAND SLIDER-Info - Start =========== */
 
 .slide-info {
     top: 50%;
@@ -1603,14 +1610,14 @@ header .header-info .page-list .pages-pc ul {
 
 
 
-/* =========== SLIDER-Info - End =========== */
+/* =========== BRAND SLIDER-Info - End =========== */
 
 
 
 
 
 
-/* =========== SLIDER-Toggle - Start =========== */
+/* =========== BRAND SLIDER-Toggle - Start =========== */
 
 .toggle-button .slider-left-btn,
 .toggle-button .slider-right-btn {
@@ -1650,7 +1657,7 @@ header .header-info .page-list .pages-pc ul {
     z-index: 20;
 }
 
-/* =========== SLIDER-Toggle - End =========== */
+/* =========== BRAND SLIDER-Toggle - End =========== */
 
 
 
@@ -1660,7 +1667,7 @@ header .header-info .page-list .pages-pc ul {
 
 
 
-/* =========== SLIDER-Cricle - Start =========== */
+/* =========== BRAND SLIDER-Cricle - Start =========== */
 
 
 .slider-cricle-btn {
@@ -1699,7 +1706,522 @@ header .header-info .page-list .pages-pc ul {
     border: none;
 }
 
-/* =========== SLIDER-Cricle - End =========== */
+/* =========== BRAND SLIDER-Cricle - End =========== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 85%;
+    background: #cec4c4;
+    height: 100%;
+    margin: 15% auto 0;
+}
+
+.section:last-child {
+    margin: 15% auto;
+}
+
+
+/* ---------------------- 
+COLLECTION SLIDER - Start
+------------------------- */
+
+.collection-area {
+    height: 100vh;
+    display: flex;
+}
+
+.section.collection h1 {
+    text-align: center;
+    margin: 0 auto 5%;
+    color: #000;
+    font-size: 16px;
+}
+
+
+.collection-list {
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+    width: 100%;
+}
+
+
+
+/* ========== list-one - Start ========== */
+
+.collection-area .list-one {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    padding: 10%;
+}
+
+
+.list-one-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+}
+
+.list-one-card {
+    display: flex;
+    gap: 7%;
+}
+
+.list-one-card .list-one-info p {
+    font-size: 10px;
+    color: #000;
+}
+
+.list-one-card .list-one-info a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.list-one-card .one-btn a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 10px;
+    border: 1px solid #000;
+    padding: 2%;
+    transition: all 0.5s ease;
+}
+
+
+.list-one-card .one-btn a:hover {
+    background-color: #d90000;
+    border: none;
+    border: 1px solid transparent;
+    text-align: center;
+    color: #fff;
+}
+
+.list-one-card .one-btn a:active {
+    text-decoration: none;
+    background-color: #9a0101;
+    text-align: center;
+}
+
+
+/* ========== list-one - End ========== */
+
+
+
+
+
+
+
+
+
+/* ========== list-two - Start ========== */
+
+.collection-area .list-two {
+    background: #d0c9c9;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.collection-area .list-two .list-two-product {
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    padding: 10%;
+}
+
+.list-two-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    width: 100%;
+    height: 100%;
+    gap: 7%;
+}
+
+
+
+
+
+
+.list-two-card .list-two-info p {
+    color: #000;
+    font-size: 10px;
+}
+
+.list-two-card .list-two-info a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+
+}
+
+.list-two-card .two-btn a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 10px;
+    border: 1px solid #000;
+    padding: 2%;
+    transition: all 0.5s ease;
+
+}
+
+
+.list-two-card .two-btn a:hover {
+    background-color: #d90000;
+    border: none;
+    border: 1px solid transparent;
+    text-align: center;
+    color: #fff;
+}
+
+.list-two-card .two-btn a:active {
+    text-decoration: none;
+    background-color: #9a0101;
+    text-align: center;
+}
+
+/* ========== list-two - End ========== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== list-two-gift - Start ========== */
+
+
+.collection-area .list-two .list-two-gift {
+    width: 100%;
+    height: 30%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+
+
+
+.list-two-gift {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 5%;
+    color: #fff;
+    padding: 10%;
+}
+
+.list-two-gift .gift-info {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+}
+
+.list-two-gift .gift-info a {
+    display: flex;
+    color: #fff;
+    text-decoration: none;
+}
+
+.list-two-gift .gift-info a:first-child {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.list-two-gift .gift-info a:last-child {
+    color: #ffffff;
+    font-size: 12px;
+}
+
+
+
+.list-two-gift .shop-btn {
+    width: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #d90000;
+    font-weight: 500;
+    font-size: 10px;
+    padding: 2%;
+    transition: all 0.5s ease;
+}
+
+.list-two-gift .shop-btn:active {
+    background-color: #9a0101;
+}
+
+/* ========== list-two-gift - End ========== */
+
+
+
+/* ----------------------
+COLLECTION SLIDER - End
+------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------
+TRENDY SLIDER - Start
+------------------------- */
+
+/* =========== trendy-sec-head - Start =========== */
+
+
+.section.trendy {
+    min-height: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+
+.section.trendy .trendy-sec-head {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+    width: 100%;
+    height: 100%;
+}
+
+.section.trendy .trendy-sec-head {
+    margin: 0 auto 2%;
+}
+
+.section.trendy .trendy-sec-head .trendy-list {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    list-style: none;
+}
+
+
+.section.trendy .trendy-sec-head .trendy-list a{
+    text-decoration: none;
+    color: #292929;
+    position: relative;
+}
+
+.section.trendy .trendy-sec-head .trendy-list a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #292929;
+    opacity: 0;
+    transition: all 0.3s ease, left 0.3s ease;
+}
+
+.section.trendy .trendy-sec-head .trendy-list a:hover::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+}
+
+.section.trendy .trendy-sec-head .trendy-list a.active::after {
+    width: 100%;
+    left: 0;
+    opacity: 1;
+}
+
+/* =========== trendy-sec-head - Start =========== */
+
+
+
+
+
+
+
+/* =========== trendy-product - Start =========== */
+
+.trendy-product-list{
+    display: flex;
+    gap: 2%;
+}
+
+
+.trendy-product-list .trendy-product .product-image{
+    min-width: 400px;
+}
+
+.trendy-product-list .trendy-product .product-image img{
+    width: 100%;
+}
+
+/* =========== trendy-product - End =========== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.trendly-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+
+/* =========== trendy-cricle-btn - Start =========== */
+
+.trendy-cricle-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 10px; */
+    gap: 14px;
+
+    
+}
+
+.trendy-cricle-btn .cric-btn {
+    /* width: 14px;
+    height: 14px; */
+    width: 20px;
+    height: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+
+}
+
+.trendy-cricle-btn .cric-btn:hover {
+    background-color: #fff;
+}
+
+.trendy-cricle-btn .cric-btn:active {
+    background-color: #d90000;
+    border: none;
+}
+
+.trendy-cricle-btn .cric-btn.active {
+    background: #d90000;
+    border: none;
+}
+
+
+/* =========== trendy-cricle-btn - End =========== */
+
+
+
+
+
+
+
+/* ----------------------
+TRENDY SLIDER - End
+------------------------- */
+
+
+
+
+
+
+
+
+
+
 
 /* =================================
         MAIN    -    END
@@ -1714,6 +2236,22 @@ header .header-info .page-list .pages-pc ul {
 
 
 
+@media screen and (min-width: 600px) {
+    .list-two-gift {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .list-two-gift .shop-btn {
+        width: 40%;
+    }
+
+    .collection-list {
+        flex-direction: row;
+    }
+}
 
 
 
@@ -1729,70 +2267,220 @@ header .header-info .page-list .pages-pc ul {
 
 @media screen and (min-width: 1024px) {
 
-    /* =========== SLIDER-Info - Start =========== */
-    
+    /* =========== BRAND SLIDER-Info - Start =========== */
+
     .slide-info {
-        top: 34%;
+        top: 44%;
         padding: 20px;
     }
-    
+
     .slide-info .slide-title {
         font-size: 24px;
     }
-    
+
     .slide-info .slide-name {
         font-size: 34px;
     }
-    
+
     .slide-info .slide-description {
         margin-top: 2%;
         font-size: 16px;
     }
-    
+
     .slide-info .slide-go a {
         padding: 14px 20px;
         font-size: 14px;
     }
-    
-    /* =========== SLIDER-Info - End =========== */
-    
-    
-    
-    
-    
-    
-    /* =========== SLIDER-Toggle - Start =========== */
-    
+
+    /* =========== BRAND SLIDER-Info - End =========== */
+
+
+
+
+
+
+    /* =========== BRAND SLIDER-Toggle - Start =========== */
+
     .toggle-button img {
         width: 30px;
         height: 30px;
     }
-    
+
     .toggle-button {
         padding: 0 30px;
     }
-    
-    /* =========== SLIDER-Toggle - End =========== */
-    
-    
-    
-    
-    
-    
-    
-    /* =========== SLIDER-Cricle - Start =========== */
-    
+
+    /* =========== BRAND SLIDER-Toggle - End =========== */
+
+
+
+
+
+
+
+    /* =========== BRAND SLIDER-Cricle - Start =========== */
+
     .slider-cricle-btn {
         gap: 14px;
         bottom: 7%;
     }
-    
+
     .slider-cricle-btn .cricle-btn {
         width: 20px;
         height: 20px;
     }
 
-    /* =========== SLIDER-Cricle - eND =========== */
+    /* =========== BRAND SLIDER-Cricle - eND =========== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .section {
+        margin: 10% auto 0;
+    }
+
+    .section:last-child {
+        margin: 10% auto;
+    }
+
+
+    /* ---------------------- 
+COLLECTION SLIDER - Start
+------------------------- */
+
+    .collection-area {
+        height: 80vh;
+    }
+
+    .section.collection h1 {
+        margin: 0 auto 3%;
+        font-size: 24px;
+    }
+
+
+
+
+
+    /* ========== list-one - Start ========== */
+
+    .collection-area .list-one {
+        padding: 5%;
+    }
+
+
+    .list-one-card {
+        gap: 5%;
+    }
+
+    .list-one-card .list-one-info p {
+        font-size: 16px;
+    }
+
+    .list-one-card .list-one-info a {
+        font-size: 24px;
+    }
+
+    .list-one-card .one-btn a {
+        font-size: 16px;
+    }
+
+
+    /* ========== list-one - End ========== */
+
+
+
+
+
+
+
+
+
+    /* ========== list-two - Start ========== */
+
+
+
+    .collection-area .list-two .list-two-product {
+        padding: 10%;
+    }
+
+    .list-two-card {
+        gap: 5%;
+    }
+
+
+
+
+
+
+    .list-two-card .list-two-info p {
+        font-size: 16px;
+    }
+
+    .list-two-card .list-two-info a {
+        font-size: 24px;
+    }
+
+    .list-two-card .two-btn a {
+        font-size: 16px;
+    }
+
+
+    /* ========== list-two - End ========== */
+
+
+
+
+    /* ========== list-two-gift - Start ========== */
+
+    .list-two-gift {
+        padding: 10%;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 5%;
+    }
+
+    .list-two-gift .gift-info a:first-child {
+        font-size: 24px;
+    }
+
+    .list-two-gift .gift-info a:last-child {
+        font-size: 16px;
+    }
+
+
+
+    .list-two-gift .shop-btn {
+        width: 150px;
+        font-size: 16px;
+    }
+
+    .list-two-gift {}
+
+
+
+
+
+
+    /* ========== list-two-gift - End ========== */
+
+
+
+    /* ----------------------
+COLLECTION SLIDER - End
+------------------------- */
 
 
 }

@@ -217,6 +217,8 @@ decreaseBtns.forEach(btn => {
 
 
 
+
+
 /* =========== SLIDER - START =========== */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -226,7 +228,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var slides = document.querySelectorAll('.sliders .slide');
   var slideCount = slides.length;
 
-  var currentSlide = 0; 
+  var currentSlide = 0;
 
   var sliderCircleBtnContainer = document.querySelector('.slider-cricle-btn');
 
@@ -240,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var sliderCircleBtns = document.querySelectorAll('.slider-cricle-btn .cricle-btn');
   sliderCircleBtns.forEach(function (circleBtn, index) {
     circleBtn.addEventListener('click', function () {
-      goToSlide(index); 
+      goToSlide(index);
     });
   });
 
@@ -253,25 +255,25 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function moveSlider(direction) {
-    const slideWidthPercent = 100 / slideCount; 
+    const slideWidthPercent = 100 / slideCount;
     let newTranslatePercent = currentSlide * -100;
 
     if (direction === 'left') {
-      currentSlide = (currentSlide === 0) ? slideCount - 1 : currentSlide - 1; 
+      currentSlide = (currentSlide === 0) ? slideCount - 1 : currentSlide - 1;
     } else if (direction === 'right') {
-      currentSlide = (currentSlide === slideCount - 1) ? 0 : currentSlide + 1; 
+      currentSlide = (currentSlide === slideCount - 1) ? 0 : currentSlide + 1;
     }
 
-    newTranslatePercent = currentSlide * -100; 
+    newTranslatePercent = currentSlide * -100;
 
-    slider.style.transform = `translateX(${newTranslatePercent}%)`; 
+    slider.style.transform = `translateX(${newTranslatePercent}%)`;
 
     updateCircleButtons();
   }
 
   function goToSlide(slideIndex) {
     currentSlide = slideIndex;
-    moveSlider('stay'); 
+    moveSlider('stay');
   }
 
   function updateCircleButtons() {
@@ -294,6 +296,20 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', function () {
     moveSlider('stay');
   });
+
+  var autoSlideInterval = setInterval(function () {
+    moveSlider('right');
+  }, 5000);
+
+  slider.addEventListener('mouseenter', function () {
+    clearInterval(autoSlideInterval);
+  });
+
+  slider.addEventListener('mouseleave', function () {
+    autoSlideInterval = setInterval(function () {
+      moveSlider('right');
+    }, 5000);
+  });
 });
 
 
@@ -305,6 +321,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+// =============== TRENDY SLIDER - Start ===============
+
+var trendyList = document.querySelector('.trendy-list');
+var trendyCat = document.querySelectorAll('.trendy-list a');
+
+trendyCat.forEach(cat => {
+  cat.addEventListener('click', (event) => {
+    event.preventDefault();
+    trendyCat.forEach(category => {
+      category.classList.remove('active');
+    });
+    cat.classList.add('active');
+  });
+});
+
+// =============== TRENDY SLIDER - End ===============
 
 
 
