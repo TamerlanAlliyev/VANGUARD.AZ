@@ -1532,7 +1532,6 @@ header .header-info .page-list .pages-pc ul {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform-origin: center bottom;
 }
 
 
@@ -1733,12 +1732,12 @@ header .header-info .page-list .pages-pc ul {
 
 .section {
     display: flex;
-    margin: 0 auto;
     flex-direction: column;
-    width: 85%;
-    background: #cec4c4;
+    max-width: 1280px;
+    width: 100%;
     height: 100%;
     margin: 15% auto 0;
+
 }
 
 .section:last-child {
@@ -2030,49 +2029,79 @@ COLLECTION SLIDER - End
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ----------------------
 TRENDY SLIDER - Start
 ------------------------- */
 
-/* =========== trendy-sec-head - Start =========== */
 
 
-.section.trendy {
-    min-height: 100%;
-    height: 90vh;
+.section {
+    padding: 0 7%;
+}
+
+/* ---------- trendy-sec-head - Start ---------- */
+
+.trendy .trendy-sec-head {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    gap: 8px;
+    margin-bottom: 3%;
 }
 
-
-.section.trendy .trendy-sec-head {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-}
-
-.section.trendy .trendy-sec-head {
-    margin: 0 auto 2%;
-}
-
-.section.trendy .trendy-sec-head .trendy-list {
+.trendy .trendy-sec-head h2 {
     display: flex;
     justify-content: center;
-    gap: 40px;
-    list-style: none;
-    margin-top: 2%;
+    text-align: center;
+    font-size: 16px;
 }
 
+.trendy .trendy-sec-head .trendy-list {
+    display: flex;
+    justify-content: center;
+    gap: 4%;
+    list-style: none;
+    font-size: 12px;
+}
 
-.section.trendy .trendy-sec-head .trendy-list a {
+.trendy .trendy-sec-head .trendy-list a {
     text-decoration: none;
-    color: #292929;
+    color: #444444;
     position: relative;
 }
 
-.section.trendy .trendy-sec-head .trendy-list a::after {
+
+.trendy .trendy-sec-head .trendy-list a::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -2084,113 +2113,185 @@ TRENDY SLIDER - Start
     transition: all 0.3s ease, left 0.3s ease;
 }
 
-.section.trendy .trendy-sec-head .trendy-list a:hover::after {
+.trendy .trendy-sec-head .trendy-list a:hover::after {
     width: 100%;
     left: 0;
     opacity: 1;
 }
 
-.section.trendy .trendy-sec-head .trendy-list a.active::after {
+.trendy .trendy-sec-head .trendy-list a.active::after {
     width: 100%;
     left: 0;
     opacity: 1;
 }
 
-/* =========== trendy-sec-head - Start =========== */
+/* ---------- trendy-sec-head - End ---------- */
 
 
 
+/* ---------- SWIPER - START ---------- */
 
 
+.section.trendy .swiper {
+    width: 100%;
+    height: 800px;
+    display: none !important;
+}
+
+.section.trendy .swiper.active {
+    display: inherit !important;
+}
 
 
-/* =========== trendy-product - Start =========== */
-.trendly-area {
+.section.trendy .swiper-pagination {
+    position: static;
+    top: 0 !important;
+    height: 100%;
+}
+
+.section.trendy .swiper-wrapper {
+    height: 100%;
+}
+
+.section.trendy .swiper {
+    position: static;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    overflow: hidden;
-
+    gap: 3%;
 }
 
-
-/* *************************************************************************** */
-.trendy-product-list {
-    display: flex;
-    gap: 2%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%);
-}
-
-
-.trendy-product-list .trendy-product {
-    min-width: 350px;
-    height: 450px;
-}
-
-
-.trendy-product-list .trendy-product .product-image {
-    height: 100%;
-    width: 100%;
+.section.trendy .swiper-pagination {
     position: relative;
-    transition: all 0.5s ease;
+    align-items: center;
+    text-align: center;
 }
 
-/* *************************************************************************** */
+@media only screen and (max-width: 480px) {
+    .section.trendy .swiper {
+        width: 100%;
+        height: 330px;
+    }
+
+    .section {
+        padding: 0 7%;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .section.trendy .swiper {
+        width: 100%;
+        height: 700px;
+    }
+
+    .section {
+        padding: 0 3%;
+    }
+}
 
 
-.trendy-product-list .trendy-product .product-image img {
+
+/* ---------- SWIPER Pagenation - START ---------- */
+
+.swiper-pagination {
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-size: 16px;
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    --swiper-pagination-top: auto;
+}
+
+
+/* ---------- SWIPER Pagenation - END ---------- */
+
+
+
+/* ---------- SWIPER - End ---------- */
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- trendy-product - Start ---------- */
+
+/* ***** product-image ***** */
+
+
+
+.section.trendy .swiper-slide.trendy-product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section.trendy .swiper-slide.trendy-product .product-image {
+    display: flex;
+    width: 100%;
+    height: 77%;
+    transition: all 0.9s ease;
+}
+
+.section.trendy .swiper-slide.trendy-product .product-image .prod-img {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.section.trendy .swiper-slide.trendy-product .product-image .prod-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform-origin: center bottom;
-}
-
-.trendy-product-list .trendy-product .product-image:hover {
-    transform: scaleY(1.02) scaleX(1.05);
-}
-
-
-.trendy-product-list .trendy-product .product-image .prod-img {
-    width: 100%;
-    height: 100%;
-    display: flex;
+    object-position: top center;
+    transition: all 0.5s ease;
 }
 
 
 
-.trendy-product-list .trendy-product .product-image .prod-add {
+
+
+
+
+
+.section.trendy .swiper-slide.trendy-product .product-image .prod-add {
     position: absolute;
-    z-index: 1;
-    bottom: 0;
-    left: 0;
-    transform: translate(12%);
-    margin-bottom: 15px;
-
+    bottom: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
+
     text-align: center;
-    width: 80%;
+    width: 70%;
     text-decoration: none;
+    font-size: 14px;
     color: #000;
     background: #fff;
     padding: 3% 12%;
     transition: all 0.5s ease;
 }
 
-.trendy-product-list .trendy-product .product-image .prod-add.active {
-
+.section.trendy .swiper-slide.trendy-product .product-image .prod-add.active {
     display: block;
 }
 
-.trendy-product-list .trendy-product .product-image .prod-add:hover {
+.section.trendy .swiper-slide.trendy-product .product-image .prod-add:hover {
     background-color: #d90000;
     color: #fff;
     font-weight: 500;
 }
 
-.trendy-product-list .trendy-product .product-image .prod-add:active {
+.section.trendy .swiper-slide.trendy-product .product-image .prod-add:active {
     background-color: #9a0101;
 }
 
@@ -2203,155 +2304,93 @@ TRENDY SLIDER - Start
 
 
 
-.trendy-product-list .trendy-product .product-info {
-    margin-top: 5%;
+/* ***** product-image ***** */
+
+
+
+/* ***** product-info ***** */
+
+.section.trendy .swiper-slide.trendy-product .product-info {
     display: flex;
     justify-content: space-between;
     align-items: start;
+    width: 100%;
+    height: 20%;
 }
 
-
-
-.trendy-product-list .trendy-product .product-info img {
-    width: 25px;
-    transition: all 0.5s ease;
-}
-
-.trendy-product-list .trendy-product .product-info img:hover {
-    transform: scale(1.15);
-}
-
-.trendy-product-list .trendy-product .product-info img:active {
-    transform: scale(0.9);
-}
-
-.trendy-product-list .trendy-product .product-info .product-name {
+.section.trendy .swiper-slide.trendy-product .product-info .product-name {
     display: flex;
     flex-direction: column;
 }
 
-.trendy-product-list .trendy-product .product-info .product-name .prod-cat {
+.section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-cat {
     text-decoration: none;
     color: #292929;
     margin-top: 2%;
-    font-size: 14px;
+    font-size: 10px;
 }
 
-.trendy-product-list .trendy-product .product-info .product-name .prod-name {
+.section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-name {
     text-decoration: none;
     font-weight: 500;
     color: #000;
-    margin-top: 0.5%;
+    margin-bottom: 4%;
+    font-size: 14px;
 }
 
-
-
-
-.trendy-product-list .trendy-product .product-info .product-name .dis-price {
-    font-size: 16px;
+.section.trendy .swiper-slide.trendy-product .product-info .product-name .dis-price {
     font-weight: 600;
     color: #d90000;
-    margin-top: 5%;
+    font-size: 14px;
 }
 
-.trendy-product-list .trendy-product .product-info .product-name .sell-price {
-    font-size: 16px;
+.section.trendy .swiper-slide.trendy-product .product-info .product-name .sell-price {
     font-weight: 600;
     color: #000;
-    margin-top: 5%;
+    font-size: 14px;
 }
 
-.trendy-product-list .trendy-product .product-info .product-name .sel-price {
-    font-size: 12px;
+.section.trendy .swiper-slide.trendy-product .product-info .product-name .sel-price {
     font-weight: 500;
     color: #000;
+    font-size: 10px;
 }
 
-
-/* =========== trendy-product - End =========== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* =========== trendy-cricle-btn - Start =========== */
-
-.trendy-cricle-btn {
+.section.trendy .swiper-slide.trendy-product .product-info .wish {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    /* gap: 10px; */
-    gap: 14px;
 }
 
-.trendy-cricle-btn .cric-btn {
-    /* width: 14px;
-    height: 14px; */
-    width: 20px;
-    height: 20px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-
+.section.trendy .swiper-slide.trendy-product .product-info img {
+    transition: all 0.5s ease;
+    width: 18px;
 }
 
-.trendy-cricle-btn .cric-btn:hover {
-    background-color: #fff;
+.section.trendy .swiper-slide.trendy-product .product-info img:hover {
+    transform: scale(1.15);
 }
 
-.trendy-cricle-btn .cric-btn:active {
-    background-color: #d90000;
-    border: none;
-}
-
-.trendy-cricle-btn .cric-btn.active {
-    background: #d90000;
-    border: none;
+.section.trendy .swiper-slide.trendy-product .product-info img:active {
+    transform: scale(0.9);
 }
 
 
-/* =========== trendy-cricle-btn - End =========== */
 
 
 
 
+/* ***** product-info ***** */
+
+
+/* ---------- trendy-product - End ---------- */
 
 
 
 /* ----------------------
 TRENDY SLIDER - End
 ------------------------- */
+
+
+
 
 
 
@@ -2607,13 +2646,6 @@ COLLECTION SLIDER - Start
         font-size: 16px;
     }
 
-    /* .list-two-gift {} */
-
-
-
-
-
-
     /* ========== list-two-gift - End ========== */
 
 
@@ -2622,6 +2654,90 @@ COLLECTION SLIDER - Start
 COLLECTION SLIDER - End
 ------------------------- */
 
+
+
+
+
+
+
+
+
+
+
+    /* ----------------------
+TRENDY SLIDER - Start
+------------------------- */
+
+
+    .section {
+        padding: 0;
+    }
+
+    .trendy .trendy-sec-head {
+        gap: 12px;
+        margin-bottom: 1.5%;
+    }
+
+    .trendy .trendy-sec-head h2 {
+        font-size: 24px;
+        gap: 8px;
+    }
+
+    .trendy .trendy-sec-head .trendy-list {
+        font-size: 16px;
+    }
+
+    .trendy .trendy-sec-head .trendy-list a {
+        text-decoration: none;
+        color: #444444;
+    }
+
+
+    /* ---------- SWIPER - START ---------- */
+
+    .swiper {
+        gap: 5%;
+    }
+
+    /* ---------- SWIPER - End ---------- */
+
+
+    .section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-cat {
+        font-size: 12px;
+    }
+
+    .section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-name {
+        margin-bottom: 2%;
+        font-size: 16px;
+    }
+
+    .section.trendy .swiper-slide.trendy-product .product-info .product-name .dis-price {
+        font-size: 16px;
+    }
+
+    .section.trendy .swiper-slide.trendy-product .product-info .product-name .sell-price {
+        font-size: 16px;
+    }
+
+    .section.trendy .swiper-slide.trendy-product .product-info .product-name .sel-price {
+        font-size: 12px;
+    }
+
+    .section.trendy .swiper-slide.trendy-product .product-info .wish {
+        display: flex;
+    }
+
+    .section.trendy .swiper-slide.trendy-product .product-info img {
+        width: 24px;
+    }
+
+    /* ***** product-info ***** */
+
+
+
+    /* ----------------------
+TRENDY SLIDER - End
+------------------------- */
 
 }
 

@@ -1,5 +1,120 @@
 'use strict';
 
+
+
+// var swiper = new Swiper(".mySwiper", {
+//   slidesPerView: 5,
+//   spaceBetween: 10,
+//   // autoplay: {
+//   //   delay: 5000, 
+//   //   disableOnInteraction: false, 
+//   // },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     dynamicBullets: true,
+//   },
+
+//   breakpoints: {
+//     "@0.00": {
+//       slidesPerView: 1,
+//       spaceBetween: 10,
+//       grid:{
+//         rows: 1,
+//         fill: "row",
+//       },
+//     },
+//     "@0.75": {
+//       slidesPerView: 2,
+//       spaceBetween: 20,
+//       grid:{
+//         rows: 2,
+//         fill: "row",
+//       },
+//     },
+//     "@1.00": {
+//       slidesPerView: 2,
+//       spaceBetween: 40,
+//       grid:{
+//         rows: 2,
+//         fill: "row",
+//       },
+//     }
+//     ,
+//     "@1.50": {
+//       slidesPerView: 5,
+//       spaceBetween: 35,
+//       grid:{
+//         rows: 2,
+//         fill: "row",
+//       },
+//     },
+//   },
+// });
+
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      grid: {
+        rows: 1,
+        fill: "row",
+      }
+    },
+    "@0.75": {
+      slidesPerView: 3,
+      spaceBetween: 25,
+      grid: {
+        rows: 2,
+        fill: "row",
+      }
+    },
+    "@1.00": {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      grid: {
+        rows: 2,
+        fill: "row",
+      }
+    },
+    "@1.50": {
+      slidesPerView: 5,
+      spaceBetween: 35,
+      grid: {
+        rows: 2,
+        fill: "row",
+      }
+    },
+  },
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* =================================
        BASKET TOGGLE
 ===================================== */
@@ -332,22 +447,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // =============== TRENDY SLIDER - Start ===============
 
-var trendyCat = document.querySelectorAll('.trendy-list a');
-
-trendyCat.forEach(cat => {
-  cat.addEventListener('click', (event) => {
-    event.preventDefault();
-    trendyCat.forEach(category => {
-      category.classList.remove('active');
-    });
-    cat.classList.add('active');
-  });
-});
 
 
-
-
-
+var prodImage = document.querySelectorAll('.trendy-product .product-image img');
 var produtCard = document.querySelectorAll('.trendy-product .product-image');
 var produtAddBtn = document.querySelectorAll('.trendy-product .prod-add');
 
@@ -357,11 +459,15 @@ produtCard.forEach(product => {
     produtAddBtn.forEach(btn => {
       btn.classList.remove('active');
     });
+    var img = product.querySelector('img');
+    img.style.opacity = 0.8;
     product.querySelector('.prod-add').classList.add('active');
   });
 
   product.addEventListener('mouseout', (event) => {
     event.preventDefault();
+    var img = product.querySelector('img');
+    img.style.opacity = 1;
     product.querySelector('.prod-add').classList.remove('active');
   });
 });
@@ -372,15 +478,6 @@ produtCard.forEach(product => {
 
 
 
-// var wishIconBtn = document.querySelectorAll('.trendy-product .wish');
-
-// wishIconBtn.forEach(btn => {
-//   btn.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     btn.classList.toggle('active');
-//   });
-// })
-
 
 
 var wishIconBtn = document.querySelectorAll('.trendy-product .wish');
@@ -388,27 +485,50 @@ var wishIconBtn = document.querySelectorAll('.trendy-product .wish');
 wishIconBtn.forEach(btn => {
   btn.addEventListener('click', (event) => {
     event.preventDefault();
-    var wishImg = btn.querySelector('img'); // wish class'ının içindeki img elementini seç
+    var wishImg = btn.querySelector('img');
 
     if (btn.classList.contains('active')) {
-      // Eğer active class'ı varsa
-      btn.classList.remove('active'); // active class'ını kaldır
-      // İmgenin src'sini değiştir
-      wishImg.src = '/cilent/assets/icons/wish-icon.svg'; // yeni_resim_yolu.png, değiştirmek istediğiniz resmin yoluna uygun olarak değiştirilmeli
+      btn.classList.remove('active');
+      wishImg.src = '/cilent/assets/icons/wish-icon.svg';
     } else {
-      // Eğer active class'ı yoksa
-      btn.classList.add('active'); // active class'ını ekle
-      // İmgenin src'sini değiştir
-      wishImg.src = '/cilent/assets/icons/wish-icon-active.svg'; // eski_resim_yolu.png, geri dönmek istediğiniz resmin yoluna uygun olarak değiştirilmeli
+      btn.classList.add('active');
+      wishImg.src = '/cilent/assets/icons/wish-icon-active.svg';
     }
   });
 });
 
 
 
+var trendyCats = document.querySelectorAll('.trendy-list a');
+var trendySlider = document.querySelectorAll('.trendy .swiper');
+
+trendyCats.forEach(cat => {
+  cat.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    let catName = cat.dataset.name;
+    
+    console.log(catName);
+    trendyCats.forEach(category => {
+      category.classList.remove('active');
+    });
+    cat.classList.add('active');
+
+    
+
+    trendySlider.forEach(slider => {
+      slider.classList.remove('active');
+      if (slider.classList.contains(catName)) {
+        slider.classList.add('active'); 
+      }
+    });
+
+  });
+});
+
+
 
 // =============== TRENDY SLIDER - End ===============
-
 
 
 

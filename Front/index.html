@@ -4,6 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="/cilent/assets/css/swiper-bundle.min.css">
+
     <link rel="stylesheet" href="/cilent/assets/css/index.css">
     <title>Vanguard</title>
 </head>
@@ -478,29 +482,102 @@
         <!-- =============== COLLECTION SLIDER - End =============== -->
 
 
-        <!-- =============== TRENDY SLIDER - Start =============== -->
 
+
+
+
+        <!-- =============== TRENDY SLIDER - Start =============== -->
         <section class="section trendy">
 
-            <div class="trendly-area">
 
-                <div class="trendy-sec-head">
+            <div class="trendy-sec-head">
 
-                    <h2>OUR TRENDY PRODUCTS</h2>
+                <h2>OUR TRENDY PRODUCTS</h2>
+                <ul class="trendy-list">
+                    <li><a data-name="all" class="active" href="#">ALL</a></li>
+                    <li><a data-name="newarrivals" class="" href="#">NEW ARRIVALS</a></li>
+                    <li><a data-name="bestsellers" class="" href="#">BEST SELLERS</a></li>
+                    <li><a data-name="discounted" class="" href="#">DISCOUNTED</a></li>
+                </ul>
 
-                    <ul class="trendy-list">
-                        <li><a class="active" href="#">ALL</a></li>
-                        <li><a class="" href="#">NEW ARRIVALS</a></li>
-                        <li><a class="" href="#">BEST SELLERS</a></li>
-                        <li><a class="" href="#">DISCOUNTED</a></li>
-                    </ul>
-                </div>
-
-
-                <div class="trendy-product-list">
+            </div>
 
 
-                    <div class="trendy-product">
+            <!-- ***** TRENDY * ALL * - Start ***** -->
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper all active">
+
+                <div class="swiper-wrapper trendy-product-list">
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
 
                         <div class="product-image">
                             <a class="prod-img" href="#">
@@ -523,14 +600,112 @@
                             </a>
 
                             <!-- active wish icon -->
-                            <!-- <a class="wish a" href="#">
+                            <!-- <a class="wish active" href="#">
                                 <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
                             </a> -->
                         </div>
 
+
                     </div>
 
-                    <div class="trendy-product">
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-3.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
 
                         <div class="product-image">
                             <a class="prod-img" href="#">
@@ -553,14 +728,16 @@
                             </a>
 
                             <!-- active wish icon -->
-                            <!-- <a class="wish a" href="#">
+                            <!-- <a class="wish active" href="#">
                                 <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
                             </a> -->
                         </div>
 
+
                     </div>
 
-                    <div class="trendy-product">
+                    <div class="swiper-slide trendy-product">
+
 
                         <div class="product-image">
                             <a class="prod-img" href="#">
@@ -574,8 +751,8 @@
                             <div class="product-name">
                                 <a class="prod-cat" href="#">Category</a>
                                 <a class="prod-name" href="#">Product Name</a>
-                                <!-- <span class="dis-price">$80 <del class="sel-price">100</del></span> -->
-                                <span class="sell-price">$80</span>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
                             </div>
 
                             <a class="wish" href="#">
@@ -583,14 +760,16 @@
                             </a>
 
                             <!-- active wish icon -->
-                            <!-- <a class="wish a" href="#">
+                            <!-- <a class="wish active" href="#">
                                 <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
                             </a> -->
                         </div>
 
+
                     </div>
 
-                    <div class="trendy-product">
+                    <div class="swiper-slide trendy-product">
+
 
                         <div class="product-image">
                             <a class="prod-img" href="#">
@@ -604,8 +783,8 @@
                             <div class="product-name">
                                 <a class="prod-cat" href="#">Category</a>
                                 <a class="prod-name" href="#">Product Name</a>
-                                <!-- <span class="dis-price">$80 <del class="sel-price">100</del></span> -->
-                                <span class="sell-price">$80</span>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
                             </div>
 
                             <a class="wish" href="#">
@@ -613,14 +792,48 @@
                             </a>
 
                             <!-- active wish icon -->
-                            <!-- <a class="wish a" href="#">
+                            <!-- <a class="wish active" href="#">
                                 <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
                             </a> -->
                         </div>
 
+
                     </div>
 
-                    <div class="trendy-product">
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
 
                         <div class="product-image">
                             <a class="prod-img" href="#">
@@ -634,8 +847,8 @@
                             <div class="product-name">
                                 <a class="prod-cat" href="#">Category</a>
                                 <a class="prod-name" href="#">Product Name</a>
-                                <!-- <span class="dis-price">$80 <del class="sel-price">100</del></span> -->
-                                <span class="sell-price">$80</span>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
                             </div>
 
                             <a class="wish" href="#">
@@ -643,14 +856,48 @@
                             </a>
 
                             <!-- active wish icon -->
-                            <!-- <a class="wish a" href="#">
+                            <!-- <a class="wish active" href="#">
                                 <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
                             </a> -->
                         </div>
 
+
                     </div>
 
-                    <div class="trendy-product">
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
 
                         <div class="product-image">
                             <a class="prod-img" href="#">
@@ -664,8 +911,8 @@
                             <div class="product-name">
                                 <a class="prod-cat" href="#">Category</a>
                                 <a class="prod-name" href="#">Product Name</a>
-                                <!-- <span class="dis-price">$80 <del class="sel-price">100</del></span> -->
-                                <span class="sell-price">$80</span>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
                             </div>
 
                             <a class="wish" href="#">
@@ -673,14 +920,80 @@
                             </a>
 
                             <!-- active wish icon -->
-                            <!-- <a class="wish a" href="#">
+                            <!-- <a class="wish active" href="#">
                                 <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
                             </a> -->
                         </div>
 
+
                     </div>
 
-                    <div class="trendy-product">
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
 
                         <div class="product-image">
                             <a class="prod-img" href="#">
@@ -694,8 +1007,8 @@
                             <div class="product-name">
                                 <a class="prod-cat" href="#">Category</a>
                                 <a class="prod-name" href="#">Product Name</a>
-                                <!-- <span class="dis-price">$80 <del class="sel-price">100</del></span> -->
-                                <span class="sell-price">$80</span>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
                             </div>
 
                             <a class="wish" href="#">
@@ -703,31 +1016,1750 @@
                             </a>
 
                             <!-- active wish icon -->
-                            <!-- <a class="wish a" href="#">
+                            <!-- <a class="wish active" href="#">
                                 <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
                             </a> -->
                         </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
 
                     </div>
 
 
                 </div>
+                <div class="swiper-pagination"></div>
             </div>
 
+            <!-- ***** TRENDY * ALL * - End ***** -->
+
+            
+            
+
+            <!-- ***** TRENDY * NEW ARRIVALS * - Start ***** -->
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper newarrivals">
+
+                <div class="swiper-wrapper trendy-product-list">
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
 
 
 
-            <div class="trendy-cricle-btn">
-                <div class="cric-btn active"></div>
-                <div class="cric-btn"></div>
-                <div class="cric-btn"></div>
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <!-- <span class="dis-price">$80 <del class="sel-price">100</del></span> -->
+                                <span class="sell-price">$80</span>
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-3.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
+
+            <!-- ***** TRENDY * NEW ARRIVALS * - End ***** -->
+
+
+
+            <!-- ***** TRENDY * BEST SELLER * - Start ***** -->
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper bestsellers">
+
+                <div class="swiper-wrapper trendy-product-list">
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <!-- <span class="dis-price">$80 <del class="sel-price">100</del></span> -->
+                                <span class="sell-price">$80</span>
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-3.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- ***** TRENDY * BEST SELLER * - End ***** -->
+
+
+
+
+            <!-- ***** TRENDY * DISCOUNTED * - Start ***** -->
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper discounted">
+
+                <div class="swiper-wrapper trendy-product-list">
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <!-- <span class="dis-price">$80 <del class="sel-price">100</del></span> -->
+                                <span class="sell-price">$80</span>
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-3.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-slide trendy-product">
+
+
+                        <div class="product-image">
+                            <a class="prod-img" href="#">
+                                <img src="/cilent/assets/images/products/slider.png" alt="">
+                            </a>
+
+                            <a class="prod-add" href="#">ADD TO CART</a>
+                        </div>
+
+                        <div class="product-info">
+                            <div class="product-name">
+                                <a class="prod-cat" href="#">Category</a>
+                                <a class="prod-name" href="#">Product Name</a>
+                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                <!-- <span class="sell-price">$80</span> -->
+                            </div>
+
+                            <a class="wish" href="#">
+                                <img src="/cilent/assets/icons/wish-icon.svg" alt="">
+                            </a>
+
+                            <!-- active wish icon -->
+                            <!-- <a class="wish active" href="#">
+                                <img src="/cilent/assets/icons/wish-icon-active.svg" alt="">
+                            </a> -->
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <!-- ***** TRENDY * DISCOUNTED * - End ***** -->
+
 
 
 
         </section>
 
+
         <!-- =============== TRENDY SLIDER - End =============== -->
+
+
 
     </main>
     <!-- ================================
@@ -834,7 +2866,11 @@
 
     </footer>
 
+    <script src="/cilent/assets/js/swiper-bundle.min.js"></script>
     <script src="/cilent/assets/js/index.js"></script>
+
+    <!-- Link Swiper's CSS -->
+
 </body>
 
 </html>
