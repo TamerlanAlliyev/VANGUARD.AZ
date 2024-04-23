@@ -321,9 +321,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+
+
+
+
+
+
 // =============== TRENDY SLIDER - Start ===============
 
-var trendyList = document.querySelector('.trendy-list');
 var trendyCat = document.querySelectorAll('.trendy-list a');
 
 trendyCat.forEach(cat => {
@@ -335,6 +343,69 @@ trendyCat.forEach(cat => {
     cat.classList.add('active');
   });
 });
+
+
+
+
+
+var produtCard = document.querySelectorAll('.trendy-product .product-image');
+var produtAddBtn = document.querySelectorAll('.trendy-product .prod-add');
+
+produtCard.forEach(product => {
+  product.addEventListener('mouseover', (event) => {
+    event.preventDefault();
+    produtAddBtn.forEach(btn => {
+      btn.classList.remove('active');
+    });
+    product.querySelector('.prod-add').classList.add('active');
+  });
+
+  product.addEventListener('mouseout', (event) => {
+    event.preventDefault();
+    product.querySelector('.prod-add').classList.remove('active');
+  });
+});
+
+
+
+
+
+
+
+// var wishIconBtn = document.querySelectorAll('.trendy-product .wish');
+
+// wishIconBtn.forEach(btn => {
+//   btn.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     btn.classList.toggle('active');
+//   });
+// })
+
+
+
+var wishIconBtn = document.querySelectorAll('.trendy-product .wish');
+
+wishIconBtn.forEach(btn => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+    var wishImg = btn.querySelector('img'); // wish class'ının içindeki img elementini seç
+
+    if (btn.classList.contains('active')) {
+      // Eğer active class'ı varsa
+      btn.classList.remove('active'); // active class'ını kaldır
+      // İmgenin src'sini değiştir
+      wishImg.src = '/cilent/assets/icons/wish-icon.svg'; // yeni_resim_yolu.png, değiştirmek istediğiniz resmin yoluna uygun olarak değiştirilmeli
+    } else {
+      // Eğer active class'ı yoksa
+      btn.classList.add('active'); // active class'ını ekle
+      // İmgenin src'sini değiştir
+      wishImg.src = '/cilent/assets/icons/wish-icon-active.svg'; // eski_resim_yolu.png, geri dönmek istediğiniz resmin yoluna uygun olarak değiştirilmeli
+    }
+  });
+});
+
+
+
 
 // =============== TRENDY SLIDER - End ===============
 
