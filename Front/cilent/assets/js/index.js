@@ -52,7 +52,8 @@
 //   },
 // });
 
-var swiper = new Swiper(".mySwiper", {
+/* TRENDY SWIPER */
+var swiper = new Swiper(".trendy .mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
   pagination: {
@@ -99,11 +100,51 @@ var swiper = new Swiper(".mySwiper", {
     },
   },
 });
+/* TRENDY SWIPER */
 
 
 
 
+/* BLOG SWIPER */
 
+var swiper = new Swiper(".blog .mySwiper", {
+  effect: "coverflow",
+  centeredSlides: true,
+  slidesPerView: 3,
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  coverflowEffect: {
+    rotate: 70,
+    stretch: 0,
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 1,
+    },
+    "@0.75": {
+      slidesPerView: 2,
+    },
+    "@1.00": {
+      slidesPerView: 3,
+    },
+    "@1.50": {
+      slidesPerView: 3,
+    },
+  }
+});
+
+
+/* BLOG SWIPER */
 
 
 
@@ -460,7 +501,7 @@ produtCard.forEach(product => {
       btn.classList.remove('active');
     });
     var img = product.querySelector('img');
-    img.style.opacity = 0.8;
+    img.style.opacity = 0.85;
     product.querySelector('.prod-add').classList.add('active');
   });
 
@@ -480,19 +521,19 @@ produtCard.forEach(product => {
 
 
 
-var wishIconBtn = document.querySelectorAll('.trendy-product .wish');
+var wishIconBtn = document.querySelectorAll('.trendy-product .wsh');
 
 wishIconBtn.forEach(btn => {
   btn.addEventListener('click', (event) => {
     event.preventDefault();
-    var wishImg = btn.querySelector('img');
+
 
     if (btn.classList.contains('active')) {
       btn.classList.remove('active');
-      wishImg.src = '/cilent/assets/icons/wish-icon.svg';
+      btn.src = '/cilent/assets/icons/wish-icon.svg';
     } else {
       btn.classList.add('active');
-      wishImg.src = '/cilent/assets/icons/wish-icon-active.svg';
+      btn.src = '/cilent/assets/icons/wish-icon-active.svg';
     }
   });
 });
@@ -507,19 +548,19 @@ trendyCats.forEach(cat => {
     event.preventDefault();
 
     let catName = cat.dataset.name;
-    
+
     console.log(catName);
     trendyCats.forEach(category => {
       category.classList.remove('active');
     });
     cat.classList.add('active');
 
-    
+
 
     trendySlider.forEach(slider => {
       slider.classList.remove('active');
       if (slider.classList.contains(catName)) {
-        slider.classList.add('active'); 
+        slider.classList.add('active');
       }
     });
 
@@ -546,6 +587,103 @@ trendyCats.forEach(cat => {
 
 
 
+
+
+var swiper = new Swiper(".dealofweek .mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    "@0.75": {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    "@1.00": {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    "@1.50": {
+      slidesPerView: 3,
+      spaceBetween: 50,
+    },
+  },
+});
+
+
+
+
+
+//================ TIME
+const sqlDatetime2 = '2024-04-25 22:29:12.345'; // SQL sorgusundan gelen datetime2 değeri
+
+// String formatındaki datetime2 değerini Date nesnesine dönüştürme
+const jsDate = new Date(sqlDatetime2);
+
+console.log(jsDate);
+
+// 1. Gün, saat, dakika ve saniyeyi ayrı değişkenlere atayın
+const year = jsDate.getFullYear();
+const month = jsDate.getMonth() + 1; // Ay sıfırdan başlar, o yüzden 1 ekliyoruz
+const date = jsDate.getDate();
+const hours = jsDate.getHours();
+const minutes = jsDate.getMinutes();
+const seconds = jsDate.getSeconds();
+
+// 2. İsteğe bağlı: Her bir değeri iki basamaklı hale getirin
+const paddedMonth = month.toString().padStart(2, '0');
+const paddedDate = date.toString().padStart(2, '0');
+const paddedHours = hours.toString().padStart(2, '0');
+const paddedMinutes = minutes.toString().padStart(2, '0');
+const paddedSeconds = seconds.toString().padStart(2, '0');
+
+// 3. Sonuçları istediğiniz şekilde kullanın
+console.log(`Tarih: ${year}-${paddedMonth}-${paddedDate}`);
+console.log(`Saat: ${paddedHours}:${paddedMinutes}:${paddedSeconds}`);
+//================ TIME
+
+
+
+
+
+
+function updateCountdowns() {
+  const offerTimes = document.querySelectorAll('.offer-time');
+
+  offerTimes.forEach(offerTime => {
+      const dataTime = offerTime.getAttribute('data-time');
+
+      const targetDate = new Date(dataTime);
+
+      const now = new Date();
+      const remainingTime = targetDate - now;
+
+      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+
+      const dayElement = offerTime.querySelector('.day .num');
+      const hoursElement = offerTime.querySelector('.hours .num');
+      const minsElement = offerTime.querySelector('.mins .num');
+      const secElement = offerTime.querySelector('.sec .num');
+
+      dayElement.textContent = days;
+      hoursElement.textContent = hours;
+      minsElement.textContent = minutes;
+      secElement.textContent = seconds;
+  });
+}
+
+updateCountdowns();
+setInterval(updateCountdowns, 1000);
 
 
 

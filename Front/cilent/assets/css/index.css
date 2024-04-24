@@ -1736,8 +1736,10 @@ header .header-info .page-list .pages-pc ul {
     max-width: 1280px;
     width: 100%;
     height: 100%;
-    margin: 15% auto 0;
+}
 
+.section {
+    margin: 15% auto 0;
 }
 
 .section:last-child {
@@ -2136,6 +2138,7 @@ TRENDY SLIDER - Start
     width: 100%;
     height: 800px;
     display: none !important;
+    margin-top: 5px;
 }
 
 .section.trendy .swiper.active {
@@ -2145,7 +2148,7 @@ TRENDY SLIDER - Start
 
 .section.trendy .swiper-pagination {
     position: static;
-    top: 0 !important;
+    top: 10px !important;
     height: 100%;
 }
 
@@ -2173,9 +2176,7 @@ TRENDY SLIDER - Start
         height: 330px;
     }
 
-    .section {
-        padding: 0 7%;
-    }
+
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -2295,11 +2296,30 @@ TRENDY SLIDER - Start
     background-color: #9a0101;
 }
 
+.section.trendy .swiper-slide.trendy-product .product-image .offer {
+    top: 3%;
+    left: 5%;
+    display: flex;
+    background: #ffffff;
+    position: absolute;
+    padding: 1% 3%;
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+    /* font-size: 14px; */
+}
 
+.section.trendy .swiper-slide.trendy-product .product-image .offer.dis {
+    color: #fff;
+    background-color: #d90000;
+}
 
-
-
-
+.section.trendy .swiper-slide.trendy-product .product-image .offer.best {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background-color: #000000;
+}
 
 
 
@@ -2358,9 +2378,13 @@ TRENDY SLIDER - Start
 
 .section.trendy .swiper-slide.trendy-product .product-info .wish {
     display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
 }
 
 .section.trendy .swiper-slide.trendy-product .product-info img {
+    display: flex;
     transition: all 0.5s ease;
     width: 18px;
 }
@@ -2401,10 +2425,527 @@ TRENDY SLIDER - End
 
 
 
+/* ----------------------
+BLOG SECTION - Start
+------------------------- */
+
+
+
+/* ********** SWIPER BLOG -Start ********** */
+.section.blog {
+    height: 500px !important;
+}
+
+.section.blog .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    margin-top: 5px;
+    position: static;
+    display: flex !important;
+    flex-direction: column;
+    padding: 0 !important;
+    height: 490px !important;
+}
+
+.section.blog .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 350px;
+    max-height: 400px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.section.blog .swiper-slide img {
+    display: block;
+    width: 100%;
+}
+
+.section.blog .swiper-pagination {
+    position: relative;
+    top: 10px !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    max-height: 50px !important;
+    height: 100%;
+}
+
+
+
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .section.blog .swiper {
+        width: 100%;
+        height: 400px;
+    }
+
+    .section {
+        padding: 0 3%;
+    }
+}
+
+/* ********** SWIPER BLOG - End ********** */
+
+.section.blog {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.section.blog .blog-title {
+    display: flex;
+    justify-content: center;
+}
+
+
+.swiper-slide.blog-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    gap: 2%;
+}
+
+/* ********** BLOG İmage - Start ********** */
+
+.section.blog .blog-image {
+    display: flex;
+    height: 68%;
+}
+
+.section.blog .blog-image img {
+    display: flex;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+/* ********** BLOG İmage - End ********** */
+
+
+
+
+/* ********** BLOG Info - Start ********** */
+
+.section.blog .blog-info {
+    display: flex;
+    flex-direction: column;
+    height: 25%;
+    gap: 5px;
+}
+
+.section.blog .blog-info .blog-head {
+    display: flex;
+    flex-direction: column;
+}
+
+.section.blog .blog-info .blog-head .blog-created {
+    display: flex;
+    color: #444444;
+    width: 100%;
+    gap: 20%;
+    font-size: 12px;
+}
+
+.section.blog .blog-info .blog-head .blog-created a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.section.blog .blog-info .blog-head .blog-name {
+    display: flex;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.section.blog .blog-info .blog-description {
+    display: flex;
+    color: #444444;
+    width: 100%;
+    gap: 20%;
+    font-size: 10px;
+}
+
+
+/* ********** BLOG Info - End ********** */
+
+
+
+
+
+
+
+
+/* ----------------------
+BLOG SECTION - End
+------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ----------------------
+SERVICE SECTION - Start
+------------------------- */
+
+
+
+
+
+
+
+
+
+.section.service {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.section.service .delivery,
+.section.service .support,
+.section.service .guarantee {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.section.service img {
+    height: 30px;
+}
+
+.section.service .delivery h3,
+.section.service .support h3,
+.section.service .guarantee h3 {
+    width: 90%;
+    font-size: 10px;
+}
+
+.section.service .delivery p,
+.section.service .support p,
+.section.service .guarantee p {
+    font-size: 8px;
+}
+
+.section.service .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    text-align: center;
+}
+
+/* ----------------------
+SERVICE SECTION - End
+------------------------- */
+
+
+
+
+
+
+
+
+/* ----------------------
+DEAL OF WEEK    SECTION - End
+------------------------- */
+
+
+
+.dealofweek {
+    width: 100%;
+    height: 100%;
+    padding: 5%;
+    display: flex;
+    margin: 15% auto 0;
+    background-image: url(/cilent/assets/images/settings/section-bg.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.dealofweek .deal-offer {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.dealofweek .deal-products {
+    width: 50%;
+}
+
+
+
+/* ========== deal-offer - Start =========== */
+
+.dealofweek .deal-offer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.dealofweek .deal-offer .deal-title {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    color: #b10505;
+}
+
+.dealofweek .deal-offer .deal-title .arrow {
+    height: 3px;
+    width: 15%;
+    background: #b10505;
+}
+
+.dealofweek .deal-offer .deal-title h5 {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.dealofweek .deal-offer .deal-collection h1 {
+    font-size: 40px;
+    letter-spacing: 10px;
+    word-spacing: 15px;
+    color: #fff;
+
+}
+
+.dealofweek .deal-offer a {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    font-size: 16px;
+    font-weight: 500;
+    max-width: 250px;
+    padding: 16px;
+    border: 2px solid #fff;
+    transition: all 0.5s ease;
+}
+
+.dealofweek .deal-offer a:hover {
+    border: 2px solid transparent;
+    background: #d90000;
+}
+
+.dealofweek .deal-offer a:active {
+    background: #9a0101;
+}
+
+
+
+.offer-time {
+    display: flex;
+    gap: 20px;
+    color: #fff;
+    margin-top: 5%;
+}
+
+.separate {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.offer-time .time {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    gap: 10px;
+}
+
+.offer-time .time .num {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.offer-time .time .nam {
+    font-size: 18px;
+    color: #ffffff9f;
+    font-weight: 400;
+}
+
+/* ========== deal-offer - End =========== */
+
+
+
+/* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
+
+.dealofweek .swiper {
+    width: 50%;
+    height: 100%;
+    background: rgba(183, 175, 175, 0);
+    max-width: 1000px !important;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-top: 5px;
+    display: flex !important;
+    flex-direction: column;
+    padding: 0 !important;
+    height: 400px !important;
+}
+
+.dealofweek .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.dealofweek .swiper-pagination {
+    position: relative;
+    top: 20px !important;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+    max-height: 50px !important;
+    height: 100%;
+}
+
+
+.dealofweek .swiper-pagination {
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-size: 16px;
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
+    --swiper-pagination-bullet-inactive-color: #ffffff;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    --swiper-pagination-top: auto;
+}
+
+
+/* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
+
+
+
+
+
+/* ========== DEALOFWEEK - Products  - Start =========== */
+
+
+
+/* ========== DEALOFWEEK - Products  - End =========== */
+
+
+
+
+
+/* ----------------------
+DEAL OF WEEK    SECTION - End
+------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* =================================
         MAIN    -    END
 ===================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2695,8 +3236,12 @@ TRENDY SLIDER - Start
 
     /* ---------- SWIPER - START ---------- */
 
-    .swiper {
+    .trendy .swiper {
         gap: 5%;
+    }
+
+    .section.trendy .swiper-pagination {
+        top: 0 !important;
     }
 
     /* ---------- SWIPER - End ---------- */
@@ -2731,6 +3276,10 @@ TRENDY SLIDER - Start
         width: 24px;
     }
 
+    .section.trendy .swiper-slide.trendy-product .product-image .offer {
+        font-size: 14px;
+    }
+
     /* ***** product-info ***** */
 
 
@@ -2738,6 +3287,209 @@ TRENDY SLIDER - Start
     /* ----------------------
 TRENDY SLIDER - End
 ------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ----------------------
+BLOG SECTION - Start
+------------------------- */
+
+
+
+    /* ********** SWIPER BLOG -Start ********** */
+    .section.blog {
+        height: 720px !important;
+        /*del*/
+    }
+
+    .section.blog .swiper {
+        width: 100%;
+        padding-top: 50px !important;
+        padding-bottom: 50px !important;
+        width: 100%;
+        margin-top: 5px;
+
+        position: static;
+        display: flex !important;
+        flex-direction: column;
+        /* height: 350px !important; */
+        height: 700px !important;
+        /* padding: 0 !important; */
+
+    }
+
+    .section.blog .swiper-slide {
+        width: 350px;
+        max-height: 550px !important;
+    }
+
+    .section.blog .swiper-slide img {
+        display: block;
+        width: 100%;
+    }
+
+    .section.blog .swiper-pagination {
+        position: relative;
+        top: 20px !important;
+        align-items: center;
+        justify-content: center;
+        padding: 0 !important;
+        max-height: 50px !important;
+        height: 100%;
+        padding: 5px !important;
+    }
+
+
+    /* ********** SWIPER BLOG - End ********** */
+
+    .section.blog {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .section.blog .blog-title {
+        display: flex;
+        justify-content: center;
+    }
+
+
+    .swiper-slide.blog-card {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+        height: 100%;
+        width: 100%;
+        gap: 3.5%;
+        /*del*/
+    }
+
+    /* ********** BLOG İmage - Start ********** */
+
+    .section.blog .blog-image {
+        display: flex;
+        height: 68%;
+        /* height: 68%; */
+    }
+
+    .section.blog .blog-image img {
+        display: flex;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    /* ********** BLOG İmage - End ********** */
+
+
+
+
+    /* ********** BLOG Info - Start ********** */
+
+    .section.blog .blog-info {
+        display: flex;
+        flex-direction: column;
+        height: 25%;
+        gap: 8px;
+        /* justify-content: space-between; */
+    }
+
+    .section.blog .blog-info .blog-head {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section.blog .blog-info .blog-head .blog-created {
+        /* font-size: 12px; */
+        font-size: 14px;
+    }
+
+    .section.blog .blog-info .blog-head .blog-name {
+        font-size: 18px;
+    }
+
+    .section.blog .blog-info .blog-description {
+        /* font-size: 10px; */
+        font-size: 14px;
+    }
+
+
+    /* ********** BLOG Info - End ********** */
+
+
+
+
+
+
+
+
+    /* ----------------------
+BLOG SECTION - End
+------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ----------------------
+SERVICE SECTION - Start
+------------------------- */
+
+    .section.service .delivery,
+    .section.service .support,
+    .section.service .guarantee {
+        gap: 20px;
+    }
+
+    .section.service img {
+        height: 60px;
+    }
+
+    .section.service .delivery h3,
+    .section.service .support h3,
+    .section.service .guarantee h3 {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .section.service .delivery p,
+    .section.service .support p,
+    .section.service .guarantee p {
+        font-size: 14px;
+    }
+
+    .section.service .info {
+        gap: 8px;
+    }
+
+    /* ----------------------
+SERVICE SECTION - End
+------------------------- */
+
+
 
 }
 
