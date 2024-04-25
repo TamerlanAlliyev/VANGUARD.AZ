@@ -1752,8 +1752,10 @@ COLLECTION SLIDER - Start
 ------------------------- */
 
 .collection-area {
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
+    max-height: 700px;
+
 }
 
 .section.collection h1 {
@@ -1781,7 +1783,6 @@ COLLECTION SLIDER - Start
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
-
     padding: 10%;
 }
 
@@ -1850,7 +1851,6 @@ COLLECTION SLIDER - Start
 /* ========== list-two - Start ========== */
 
 .collection-area .list-two {
-    background: #d0c9c9;
     display: flex;
     flex-direction: column;
     gap: 10%;
@@ -2682,13 +2682,12 @@ DEAL OF WEEK    SECTION - End
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    flex-direction: column;
+    /* flex-direction: row; */
+    gap: 20px;
 }
 
-.dealofweek .deal-offer {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-}
+
 
 .dealofweek .deal-products {
     width: 50%;
@@ -2701,7 +2700,12 @@ DEAL OF WEEK    SECTION - End
 .dealofweek .deal-offer {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
+    /* gap: 30px; */
+
+    justify-content: center;
+    width: 100%;
+    /* width: 50%; */
 }
 
 .dealofweek .deal-offer .deal-title {
@@ -2712,22 +2716,37 @@ DEAL OF WEEK    SECTION - End
 }
 
 .dealofweek .deal-offer .deal-title .arrow {
-    height: 3px;
+    height: 2px;
     width: 15%;
+    /* height: 3px; */
     background: #b10505;
 }
 
 .dealofweek .deal-offer .deal-title h5 {
-    font-size: 22px;
+    font-size: 16px;
+    /* font-size: 22px; */
     font-weight: 500;
 }
 
 .dealofweek .deal-offer .deal-collection h1 {
-    font-size: 40px;
+    /* font-size: 40px;
     letter-spacing: 10px;
-    word-spacing: 15px;
+    word-spacing: 15px; */
     color: #fff;
+    font-size: 26px;
+    letter-spacing: 5px;
+    word-spacing: 10px;
+}
 
+.dealofweek .deal-offer .deal-collection h5 {
+    color: #fff;
+    font-weight: 500;
+    /* font-size: 30px;
+    margin-bottom: 20px;
+    margin-top: 10px; */
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
 .dealofweek .deal-offer a {
@@ -2737,12 +2756,14 @@ DEAL OF WEEK    SECTION - End
     align-items: center;
     color: #fff;
 
-    font-size: 16px;
     font-weight: 500;
-    max-width: 250px;
-    padding: 16px;
+    padding: 12px;
     border: 2px solid #fff;
     transition: all 0.5s ease;
+    max-width: 100px;
+    font-size: 12px;
+    /* max-width: 150px; */
+    /* font-size: 16px; */
 }
 
 .dealofweek .deal-offer a:hover {
@@ -2758,13 +2779,15 @@ DEAL OF WEEK    SECTION - End
 
 .offer-time {
     display: flex;
-    gap: 20px;
     color: #fff;
     margin-top: 5%;
+    gap: 10px;
+    /* gap: 20px; */
 }
 
 .separate {
-    font-size: 30px;
+    font-size: 20px;
+    /* font-size: 30px; */
     font-weight: 600;
 }
 
@@ -2773,19 +2796,23 @@ DEAL OF WEEK    SECTION - End
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    gap: 10px;
+    width: 40px;
+    gap: 5px;
+    /* gap: 10px; */
+    /* width: 50px; */
 }
 
 .offer-time .time .num {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 600;
+    /* font-size: 30px; */
 }
 
 .offer-time .time .nam {
-    font-size: 18px;
     color: #ffffff9f;
     font-weight: 400;
+    font-size: 14px;
+    /* font-size: 18px; */
 }
 
 /* ========== deal-offer - End =========== */
@@ -2795,9 +2822,10 @@ DEAL OF WEEK    SECTION - End
 /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
 
 .dealofweek .swiper {
-    width: 50%;
     height: 100%;
     background: rgba(183, 175, 175, 0);
+    align-items: center;
+    justify-content: center;
     max-width: 1000px !important;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -2805,28 +2833,32 @@ DEAL OF WEEK    SECTION - End
     display: flex !important;
     flex-direction: column;
     padding: 0 !important;
-    height: 400px !important;
+    height: 330px !important;
+    width: 100%;
+    /* width: 50%; */
+    /* height: 430px !important; */
 }
 
 .dealofweek .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: #fff;
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
 
 .dealofweek .swiper-pagination {
     position: relative;
-    top: 20px !important;
+    left: 0 !important;
+    transform: translate(0%, -20%) !important;
+    /*del*/
     align-items: center;
     justify-content: center;
     padding: 0 !important;
     max-height: 50px !important;
     height: 100%;
+    top: 12px !important;
+    /* top: 20px !important; */
 }
 
 
@@ -2852,7 +2884,148 @@ DEAL OF WEEK    SECTION - End
 
 /* ========== DEALOFWEEK - Products  - Start =========== */
 
+.dealofweek-prod-info {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 
+.dealofweek-prod-info .prod-img {
+    display: flex;
+    width: 100%;
+    height: 75%;
+    position: relative;
+}
+
+.dealofweek-prod-info .prod-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+
+.dealofweek-prod-info a.dealofweek-basket {
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    text-decoration: none;
+    display: none;
+    color: #000;
+    padding: 3%;
+    background: #fff;
+    transition: all 0.5s ease;
+    font-size: 10px;
+    /* font-size: 14px; */
+}
+
+.dealofweek-prod-info a.dealofweek-basket.active {
+    display: block;
+}
+
+.dealofweek-prod-info .dealofweek-basket:hover {
+    background: #d90000;
+    color: #fff;
+}
+
+.dealofweek-prod-info .dealofweek-basket:active {
+    background: #9a0101;
+}
+
+
+
+.dealofweek-wish {
+    position: absolute;
+    right: 0;
+    bottom: 13%;
+}
+
+.dealofweek-wish img {
+    display: flex;
+    transition: all 0.5s ease;
+    width: 18px;
+    /* width: 22px; */
+}
+
+.dealofweek-wish img:hover {
+    transform: scale(1.15);
+}
+
+.dealofweek-wish img:active {
+    transform: scale(0.9);
+}
+
+.dealofweek-prod-info .offer {
+    top: 3%;
+    left: 5%;
+    display: flex;
+    background: #ffffff;
+    position: absolute;
+    padding: 1% 3%;
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+    /* font-size: 14px; */
+}
+
+.dealofweek-prod-info .offer.dis {
+    color: #fff;
+    background-color: #d90000;
+}
+
+.dealofweek-prod-info .offer.best {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    background-color: #000000;
+}
+
+
+
+
+
+
+
+
+
+.dealofweek-prod-info .prod-info {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    margin-top: 8%;
+    /* height: 8%; */
+}
+
+
+
+.dealofweek-prod-info .prod-info .dis-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fb1212;
+}
+
+.dealofweek-prod-info .prod-info .sell-price {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.dealofweek-prod-info .prod-info .sel-price {
+    font-size: 12px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.prod-name {
+    display: flex;
+    text-decoration: none;
+    color: #f6f6f6;
+    font-size: 12px;
+    /* font-size: 16px; */
+}
 
 /* ========== DEALOFWEEK - Products  - End =========== */
 
@@ -3490,6 +3663,160 @@ SERVICE SECTION - End
 ------------------------- */
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ----------------------
+DEAL OF WEEK    SECTION - End
+------------------------- */
+
+
+
+    .dealofweek {
+        flex-direction: row;
+    }
+
+
+
+
+
+
+    /* ========== deal-offer - Start =========== */
+
+    .dealofweek .deal-offer {
+        gap: 30px;
+        width: 50%;
+    }
+
+
+
+    .dealofweek .deal-offer .deal-title .arrow {
+        height: 3px;
+    }
+
+    .dealofweek .deal-offer .deal-title h5 {
+        font-size: 22px;
+    }
+
+    .dealofweek .deal-offer .deal-collection h1 {
+        font-size: 40px;
+        letter-spacing: 10px;
+        word-spacing: 15px;
+    }
+
+    .dealofweek .deal-offer .deal-collection h5 {
+        font-size: 30px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .dealofweek .deal-offer a {
+        max-width: 150px;
+        font-size: 16px;
+    }
+
+
+    .offer-time {
+        gap: 20px;
+    }
+
+    .separate {
+        font-size: 30px;
+    }
+
+    .offer-time .time {
+        gap: 10px;
+        width: 50px;
+    }
+
+    .offer-time .time .num {
+        font-size: 30px;
+    }
+
+    .offer-time .time .nam {
+        font-size: 18px;
+    }
+
+    /* ========== deal-offer - End =========== */
+
+
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
+
+    .dealofweek .swiper {
+        width: 50%;
+        height: 430px !important;
+    }
+
+    .dealofweek .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+    }
+
+
+
+
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
+
+
+
+
+
+    /* ========== DEALOFWEEK - Products  - Start =========== */
+
+
+    .dealofweek-prod-info a.dealofweek-basket {
+        font-size: 14px;
+    }
+
+    .dealofweek-wish img {
+        width: 22px;
+    }
+
+
+    .dealofweek-prod-info .offer {
+        font-size: 14px;
+    }
+
+
+
+
+
+
+
+    .dealofweek-prod-info .prod-info {
+        height: 8%;
+    }
+
+
+    .prod-name {
+        font-size: 16px;
+    }
+
+    /* ========== DEALOFWEEK - Products  - End =========== */
+
+
+
+
+
+    /* ----------------------
+DEAL OF WEEK    SECTION - End
+------------------------- */
 
 }
 

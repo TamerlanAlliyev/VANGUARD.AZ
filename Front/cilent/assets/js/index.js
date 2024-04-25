@@ -520,23 +520,37 @@ produtCard.forEach(product => {
 
 
 
-
+var wishCnt = document.querySelector('.i-wish sup');
 var wishIconBtn = document.querySelectorAll('.trendy-product .wsh');
 
 wishIconBtn.forEach(btn => {
   btn.addEventListener('click', (event) => {
     event.preventDefault();
 
-
-    if (btn.classList.contains('active')) {
-      btn.classList.remove('active');
-      btn.src = '/cilent/assets/icons/wish-icon.svg';
-    } else {
+    if (!wishCnt) {
+      wishCnt = document.createElement('sup');
+      wishCnt.textContent = '1';
+      document.querySelector('.i-wish').appendChild(wishCnt);
       btn.classList.add('active');
       btn.src = '/cilent/assets/icons/wish-icon-active.svg';
+    } else {
+      if (btn.classList.contains('active')) {
+        btn.classList.remove('active');
+        btn.src = '/cilent/assets/icons/wish-icon.svg';
+        wishCnt.innerText--;
+        if (parseInt(wishCnt.innerText) == 0) {
+          wishCnt.parentNode.removeChild(wishCnt);
+          wishCnt = null;
+        }
+      } else {
+        btn.classList.add('active');
+        btn.src = '/cilent/assets/icons/wish-icon-active.svg';
+        wishCnt.innerText++;
+      }
     }
   });
 });
+
 
 
 
@@ -599,11 +613,11 @@ var swiper = new Swiper(".dealofweek .mySwiper", {
   },
   breakpoints: {
     "@0.00": {
-      slidesPerView: 1,
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     "@0.75": {
-      slidesPerView: 2,
+      slidesPerView: 3,
       spaceBetween: 20,
     },
     "@1.00": {
@@ -621,33 +635,53 @@ var swiper = new Swiper(".dealofweek .mySwiper", {
 
 
 
-//================ TIME
-const sqlDatetime2 = '2024-04-25 22:29:12.345'; // SQL sorgusundan gelen datetime2 değeri
 
-// String formatındaki datetime2 değerini Date nesnesine dönüştürme
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// <!-- =============== DEAL OF WEEK   SECTION - Start =============== -->
+
+//================ TIME
+const sqlDatetime2 = '2024-04-25 22:29:12.345';
+
 const jsDate = new Date(sqlDatetime2);
 
 console.log(jsDate);
 
-// 1. Gün, saat, dakika ve saniyeyi ayrı değişkenlere atayın
 const year = jsDate.getFullYear();
-const month = jsDate.getMonth() + 1; // Ay sıfırdan başlar, o yüzden 1 ekliyoruz
+const month = jsDate.getMonth() + 1;
 const date = jsDate.getDate();
 const hours = jsDate.getHours();
 const minutes = jsDate.getMinutes();
 const seconds = jsDate.getSeconds();
 
-// 2. İsteğe bağlı: Her bir değeri iki basamaklı hale getirin
 const paddedMonth = month.toString().padStart(2, '0');
 const paddedDate = date.toString().padStart(2, '0');
 const paddedHours = hours.toString().padStart(2, '0');
 const paddedMinutes = minutes.toString().padStart(2, '0');
 const paddedSeconds = seconds.toString().padStart(2, '0');
 
-// 3. Sonuçları istediğiniz şekilde kullanın
 console.log(`Tarih: ${year}-${paddedMonth}-${paddedDate}`);
 console.log(`Saat: ${paddedHours}:${paddedMinutes}:${paddedSeconds}`);
 //================ TIME
+
+
+
+
+
+
+
 
 
 
@@ -658,27 +692,27 @@ function updateCountdowns() {
   const offerTimes = document.querySelectorAll('.offer-time');
 
   offerTimes.forEach(offerTime => {
-      const dataTime = offerTime.getAttribute('data-time');
+    const dataTime = offerTime.getAttribute('data-time');
 
-      const targetDate = new Date(dataTime);
+    const targetDate = new Date(dataTime);
 
-      const now = new Date();
-      const remainingTime = targetDate - now;
+    const now = new Date();
+    const remainingTime = targetDate - now;
 
-      const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+    const days = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((remainingTime % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
 
-      const dayElement = offerTime.querySelector('.day .num');
-      const hoursElement = offerTime.querySelector('.hours .num');
-      const minsElement = offerTime.querySelector('.mins .num');
-      const secElement = offerTime.querySelector('.sec .num');
+    const dayElement = offerTime.querySelector('.day .num');
+    const hoursElement = offerTime.querySelector('.hours .num');
+    const minsElement = offerTime.querySelector('.mins .num');
+    const secElement = offerTime.querySelector('.sec .num');
 
-      dayElement.textContent = days;
-      hoursElement.textContent = hours;
-      minsElement.textContent = minutes;
-      secElement.textContent = seconds;
+    dayElement.textContent = days;
+    hoursElement.textContent = hours;
+    minsElement.textContent = minutes;
+    secElement.textContent = seconds;
   });
 }
 
@@ -688,6 +722,38 @@ setInterval(updateCountdowns, 1000);
 
 
 
+var wishCount = document.querySelector('.i-wish sup');
+var wishIconBtn = document.querySelectorAll('.dealofweek-wish .wsh');
+
+wishIconBtn.forEach(btn => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (!wishCount) {
+      wishCount = document.createElement('sup');
+      wishCount.textContent = '1';
+      document.querySelector('.i-wish').appendChild(wishCount);
+      btn.classList.add('active');
+      btn.src = '/cilent/assets/icons/wish-icon-active.svg';
+    } else {
+
+      if (btn.classList.contains('active')) {
+
+        btn.classList.remove('active');
+        btn.src = '/cilent/assets/icons/wish-white.svg';
+        wishCount.innerText--;
+        if (parseInt(wishCount.innerText) == 0) {
+          wishCount.parentNode.removeChild(wishCount);
+          wishCount = null;
+        }
+      } else {
+        btn.classList.add('active');
+        btn.src = '/cilent/assets/icons/wish-icon-active.svg';
+        wishCount.innerText++;
+      }
+    }
+  });
+});
 
 
 
@@ -699,6 +765,73 @@ setInterval(updateCountdowns, 1000);
 
 
 
+
+var basketCount = document.querySelector('.i-basket');
+var addToCart = document.querySelectorAll('.prod-add');
+
+console.log(basketCount);
+
+addToCart.forEach(btn => {
+  btn.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    if (!basketCount.querySelector('.i-basket sup')) {
+      var supElement = document.createElement('sup');
+      supElement.textContent = '1';
+      basketCount.appendChild(supElement);
+    } else {
+      var supElement = basketCount.querySelector('.i-basket sup');
+      var currentValue = parseInt(supElement.textContent);
+      supElement.textContent = currentValue + 1;
+    }
+  });
+});
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+  var dealprodutCard = document.querySelectorAll('.dealofweek-prod-info');
+
+  dealprodutCard.forEach(product => {
+    var productImg = product.querySelector('.prod-img img');
+    var addToCartBtn = product.querySelector('.dealofweek-basket');
+
+    productImg.addEventListener('mouseenter', function (event) {
+      event.preventDefault();
+      console.log("hover");
+      productImg.style.opacity = 0.85;
+      addToCartBtn.classList.add('active');
+    });
+
+    productImg.addEventListener('mouseleave', function (event) {
+      event.preventDefault();
+      productImg.style.opacity = 1;
+      addToCartBtn.classList.remove('active');
+    });
+
+    addToCartBtn.addEventListener('mouseenter', function (event) {
+      event.preventDefault();
+      productImg.style.opacity = 0.85;
+      addToCartBtn.classList.add('active');
+    });
+
+    addToCartBtn.addEventListener('mouseleave', function (event) {
+      event.preventDefault();
+      productImg.style.opacity = 1;
+      addToCartBtn.classList.remove('active');
+    });
+  });
+});
+
+
+
+
+
+
+// <!-- =============== DEAL OF WEEK   SECTION - End =============== -->
 
 
 
