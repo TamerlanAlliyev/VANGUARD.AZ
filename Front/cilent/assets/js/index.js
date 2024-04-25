@@ -231,7 +231,7 @@ document.addEventListener('click', (event) => {
 
 var searchBtn = document.querySelector(".i-search");
 var searchCloseBtn = document.querySelector(".i-search img");
-var searchInput = document.querySelector('.search-list input');
+var searchInput = document.querySelector('.search-list');
 var searchList = document.querySelector(".search-list ul");
 
 let searchToggle = false;
@@ -250,7 +250,7 @@ searchBtn.addEventListener('click', (event) => {
   // event.preventDefault(); 
   event.stopPropagation();
   if (!searchToggle) {
-    searchInput.style.display = "block";
+    searchInput.style.display = "flex";
     searchCloseBtn.src = "/cilent/assets/icons/close-white.svg"
     searchToggle = true;
   }

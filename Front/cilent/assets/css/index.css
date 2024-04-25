@@ -180,9 +180,10 @@ header .header-info .page-list .pages-pc ul {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 4px;
+    top: 2%;
     width: 100%;
-    position: absolute;
+    display: none;
+    position: fixed;
     z-index: 100;
 }
 
@@ -193,7 +194,6 @@ header .header-info .page-list .pages-pc ul {
     border: none;
     padding: 10px 20px;
     outline: none;
-    display: none;
     transition: all 0.5s ease;
     /* <-------------------------   */
 }
@@ -203,13 +203,18 @@ header .header-info .page-list .pages-pc ul {
     width: 80%;
     list-style: none;
     background: #ffffff;
-    max-height: 300px;
+    max-height: 450px;
     overflow-y: scroll;
     overflow-x: hidden;
     padding: 0 14px;
-    display: none;
     transition: all 0.5s ease;
+
     /* <-------------------------   */
+}
+
+.search-list .product-list .prod-name{
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -328,7 +333,7 @@ header .header-info .page-list .pages-pc ul {
     position: fixed;
     top: 0;
     left: 0;
-    width: 80%;
+    width: 60%;
     height: 100%;
     z-index: 999;
     display: flex;
@@ -477,10 +482,24 @@ header .header-info .page-list .pages-pc ul {
 
 
 
+.basket-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 
+.basket-container{
+    max-height: 80%;
+    overflow: scroll;
+}
+
+.basket-view{
+    max-height: 20%;
+}
 
 
 .searchs .basket-list .basket-header {
+    height: 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -509,6 +528,7 @@ header .header-info .page-list .pages-pc ul {
 
 /*     BASKET PRODUCT LIST     */
 .basket-product-list {
+    height: 80%;
     list-style: none;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -545,19 +565,19 @@ header .header-info .page-list .pages-pc ul {
     gap: 10px;
 }
 
-.searchs .basket-list .basket-product-list li a .basket-prod-detail {
+.searchs .basket-list .basket-product-list li  .basket-prod-detail {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
-.searchs .basket-list .basket-product-list li a .basket-prod-detail h1 {
+.searchs .basket-list .basket-product-list li  .basket-prod-detail  .prod-info-name a{
     font-size: 16px;
     font-weight: 600;
     color: #000;
 }
 
-.searchs .basket-list .basket-product-list li a .basket-prod-detail p {
+.searchs .basket-list .basket-product-list li  .basket-prod-detail p {
     font-size: 14px;
     color: #3c3c3c;
 }
@@ -606,7 +626,6 @@ header .header-info .page-list .pages-pc ul {
 .searchs .basket-list .basket-product-list li {
     padding: 18px 0;
     border-bottom: 1px solid #bababa;
-    ;
 }
 
 
@@ -664,45 +683,48 @@ header .header-info .page-list .pages-pc ul {
     gap: 15px;
 }
 
-.searchs .basket-list .basket-view .basket-buttons div {
+.searchs .basket-list .basket-view .basket-buttons a {
     text-decoration: none;
     text-align: center;
     padding: 10px;
-}
-
-.searchs .basket-list .basket-view .basket-buttons div a {
-    text-decoration: none;
+    transition: all 0.5 all;
     font-size: 15px;
     font-weight: 500;
     color: #ffffff;
 }
 
-.searchs .basket-list .basket-view .basket-buttons .basket-checkout {
-    background: #cac9c9;
-    cursor: pointer;
-    color: #000;
-}
-
-.searchs .basket-list .basket-view .basket-buttons .basket-checkout:hover {
-    background: #ffffff;
-    color: #000;
-}
-
-.searchs .basket-list .basket-view .basket-buttons .basket-checkout a {
-    color: #000;
-}
 
 .searchs .basket-list .basket-view .basket-buttons .basket-viewcart {
     cursor: pointer;
-    background-color: #000;
+    color: #000;
+    text-decoration: none;
+    border: 1px solid #000;
     transition: all 0.5s ease;
+
 }
 
 .searchs .basket-list .basket-view .basket-buttons .basket-viewcart:hover {
+    background: #000000;
+    color: #fff;
+}
+.searchs .basket-list .basket-view .basket-buttons .basket-viewcart:active {
     background: #d90000;
 }
 
-.searchs .basket-list .basket-view .basket-buttons .basket-viewcart:active {
+
+
+.searchs .basket-list .basket-view .basket-buttons .basket-checkout {
+    cursor: pointer;
+    background-color: #000;
+    transition: all 0.5s ease;
+
+}
+
+.searchs .basket-list .basket-view .basket-buttons .basket-checkout:hover {
+    background: #d90000;
+}
+
+.searchs .basket-list .basket-view .basket-buttons .basket-checkout:active {
     background: #9a0101;
 }
 
@@ -1260,7 +1282,7 @@ header .header-info .page-list .pages-pc ul {
 
     /* SEARCH-LIST */
     .searchs .search-list {
-        top: 30px;
+        top:5%;
         width: 50%;
         transform: translate(50%);
     }
