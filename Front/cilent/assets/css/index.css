@@ -7,9 +7,13 @@
     font-family: 'Poppins', sans-serif;
 }
 
-/* header {
-    position: relative;
+/* .header-info {
+    background: transparent;
+}
 
+
+.header-info.scrolled {
+    background-color: #000000;
 } */
 
 
@@ -198,14 +202,14 @@ header .header-info .page-list .pages-pc ul {
     padding: 10px 20px;
     outline: none;
     transition: all 0.5s ease;
-    background: #000;
     color: #fff;
-    border: 1px solid #ffffff4c;
-    background-image: url(/cilent/assets/images/settings/background-img.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    /* <-------------------------   */
+    background: #000000b2;
+    border: 1px solid #ffffff69;
+    backdrop-filter: blur(8px);
+}
+
+.searchs .search-list input::placeholder{
+    color: #ffffffb7;
 }
 
 .searchs .search-list ul {
@@ -218,12 +222,10 @@ header .header-info .page-list .pages-pc ul {
     overflow-x: hidden;
     padding: 0 14px;
     transition: all 0.5s ease;
-    background: #000;
-    border: 1px solid #ffffff4c;
-    background-image: url(/cilent/assets/images/settings/background-img.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background: #000000c9;
+    border: 1px solid #ffffff69;
+    backdrop-filter: blur(8px);
+
 
     /* <-------------------------   */
 }
@@ -1284,7 +1286,7 @@ header .header-info .page-list .pages-pc ul {
 
     /* SEARCH-LIST */
     .searchs .search-list {
-        top: 5%;
+        /* top: 5%; */
         width: 50%;
         transform: translate(50%);
     }

@@ -9,6 +9,7 @@ window.addEventListener('scroll', function () {
 /* TRENDY SWIPER */
 var swiper = new Swiper(".trendy .mySwiper", {
   slidesPerView: 1,
+  
   spaceBetween: 10,
   pagination: {
     el: ".swiper-pagination",
