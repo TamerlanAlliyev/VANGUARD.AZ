@@ -10,7 +10,7 @@
 
     <link rel="stylesheet" href="/cilent/assets/css/index.css">
     <link rel="stylesheet" href="/cilent/assets/css/login.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
     <title>Vanguard</title>
 </head>
 
@@ -23,51 +23,51 @@
 
         <div class="header-info">
 
-                <div class="page-list">
+            <div class="page-list">
 
-                    <a class="bur-menu" href="#">
-                        <img src="/cilent/assets/icons/burger-menu.svg" alt="">
+                <a class="bur-menu" href="#">
+                    <img src="/cilent/assets/icons/burger-menu.svg" alt="">
+                </a>
+
+                <nav class="pages-pc">
+                    <ul>
+                        <li><a href="/cilent/index.php">Home</a></li>
+                        <li><a href="/cilent/about.php">About</a></li>
+                        <li><a href="/cilent/contact.php">Blog</a></li>
+                        <li><a href="/cilent/contact.php">Contact</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="brand-logo">
+                <a href="/cilent/index.php">VANGUARD</a>
+            </div>
+
+            <div class="header-icons">
+
+                <a class="i-search" href="#">
+                    <img src="/cilent/assets/icons/search.svg" alt="">
+                </a>
+
+                <div class="arrow"></div>
+
+                <div class="icons-right">
+
+                    <a class="i-user" href="#">
+                        <img src="/cilent/assets/icons/user.svg" alt="">
+                    </a>
+                    <a class="i-basket" href="#">
+                        <img src="/cilent/assets/icons/basket.svg" alt="">
+                        <!-- <sup>0</sup> -->
+                    </a>
+                    <a class="i-wish" href="#">
+                        <img src="/cilent/assets/icons/wish.svg" alt="">
+                        <!-- <sup>0</sup> -->
                     </a>
 
-                    <nav class="pages-pc">
-                        <ul>
-                            <li><a href="/cilent/index.php">Home</a></li>
-                            <li><a href="/cilent/about.php">About</a></li>
-                            <li><a href="/cilent/contact.php">Blog</a></li>
-                            <li><a href="/cilent/contact.php">Contact</a></li>
-                        </ul>
-                    </nav>
-
                 </div>
-
-                <div class="brand-logo">
-                    <a href="/cilent/index.php">VANGUARD</a>
-                </div>
-
-                <div class="header-icons">
-
-                    <a class="i-search" href="#">
-                        <img src="/cilent/assets/icons/search.svg" alt="">
-                    </a>
-
-                    <div class="arrow"></div>
-
-                    <div class="icons-right">
-
-                        <a class="i-user" href="#">
-                            <img src="/cilent/assets/icons/user.svg" alt="">
-                        </a>
-                        <a class="i-basket" href="#">
-                            <img src="/cilent/assets/icons/basket.svg" alt="">
-                            <!-- <sup>0</sup> -->
-                        </a>
-                        <a class="i-wish" href="#">
-                            <img src="/cilent/assets/icons/wish.svg" alt="">
-                            <!-- <sup>0</sup> -->
-                        </a>
-
-                    </div>
-                </div>
+            </div>
 
         </div>
 
@@ -698,7 +698,7 @@
 
 
 
-        <!-- =============== SERVICE SECTION - Start =============== -->
+        <!-- =============== LOGIN SECTION - Start =============== -->
         <section class="login">
 
 
@@ -707,7 +707,7 @@
 
                 <div class="login-content">
                     <div class="login-box">
-                        <i class="ri-user-3-line login-icon"></i>
+                        <i class="fa-regular fa-envelope login-icon"></i>
 
                         <div class="login-box-input">
                             <input type="email" required class="login-input" id="login-email" placeholder=" ">
@@ -716,11 +716,13 @@
                     </div>
 
                     <div class="login-box">
-                        <i class="ri-lock-2-line login-icon"></i>
-
+                        <i class="fa-solid fa-lock login-icon"></i>
                         <div class="login-box-input">
-                            <input type="password" required class="login-input" id="login-pass" placeholder=" ">
-                            <label for="login-pass" class="login-label">Password</label>
+                            <input type="password" required class="login-input"
+                                id="login-confirm-password" placeholder=" ">
+                            <label for="login-confirm-password" class="login-label">Confirm
+                                Password</label>
+                            <i class="fa-regular fa-eye login-eye" id="login-eye"></i>
                         </div>
                     </div>
                 </div>
@@ -731,18 +733,18 @@
                         <label for="login-check" class="login-check-label">Remember me</label>
                     </div>
 
-                    <a href="#" class="login-forgot">Forgot Password?</a>
+                    <a href="/forget-password.html" class="login-forgot">Forgot Password?</a>
                 </div>
 
                 <button type="submit" class="login-button">Login</button>
 
                 <p class="login-register">
-                    Don't have an account? <a href="#">Register</a>
+                    Don't have an account? <a href="/register.html">Register</a>
                 </p>
             </form>
 
         </section>
-        <!-- =============== SERVICE SECTION - End =============== -->
+        <!-- =============== LOGIN SECTION - End =============== -->
 
 
 
