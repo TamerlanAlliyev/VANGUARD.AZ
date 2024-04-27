@@ -42,12 +42,10 @@ document.addEventListener("DOMContentLoaded", function () {
   var searchInput = document.getElementById("searchInput");
   var searchResults = document.getElementById("searchResults");
 
-  // Inputa yazıldığında
   searchInput.addEventListener("input", function () {
     searchResults.style.display = "flex";
   });
 
-  // Input dışına tıklanınca
   document.addEventListener("click", function (event) {
     var isClickInside = searchResults.contains(event.target) || searchInput.contains(event.target);
     if (!isClickInside) {
@@ -100,6 +98,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  var blogElements = document.querySelectorAll(".blog-box-info p");
+  blogElements.forEach(function (blogElement) {
+    var text = blogElement.textContent.trim();
+    if (text.length > 30) {
+      var truncatedText = text.substring(0, 150) + " ...";
+      blogElement.textContent = truncatedText;
+    }
+  });
+});
+
 
 
 
@@ -108,6 +117,26 @@ document.addEventListener("DOMContentLoaded", function () {
 /* Search Video Play */
 
 var searchLists = document.querySelectorAll(".srch-blog");
+
+searchLists.forEach(function (searchList) {
+  searchList.addEventListener("mouseover", function (event) {
+    var video = searchList.querySelector("video");
+    if (video) {
+      video.play();
+    }
+  })
+
+  searchList.addEventListener("mouseleave", function (event) {
+    var video = searchList.querySelector("video");
+    if (video) {
+      video.pause();
+    }
+  })
+});
+
+
+
+var searchLists = document.querySelectorAll(".mItem");
 
 searchLists.forEach(function (searchList) {
   searchList.addEventListener("mouseover", function (event) {
@@ -162,3 +191,14 @@ searchClose.addEventListener('click', function (event) {
 });
 
 
+
+
+
+
+
+
+/* =========== PAGENATION - Start ========== */
+
+
+
+/* =========== PAGENATION - End ========== */
