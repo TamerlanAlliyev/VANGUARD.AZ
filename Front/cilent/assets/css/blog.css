@@ -62,7 +62,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 
@@ -668,7 +668,10 @@ main {
     }
 
 
-
+    .header-news h1 {
+        font-size: 2.5rem;
+    }
+    
 }
 
 
@@ -783,6 +786,7 @@ img {
     display: flex;
     align-items: center;
     gap: 5%;
+    color: #3c3c3c;
 }
 
 .blog-rating img {
