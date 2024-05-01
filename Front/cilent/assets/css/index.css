@@ -295,6 +295,14 @@ header .header-info .page-list .pages-pc ul {
     color: #ffffff;
 }
 
+
+
+
+
+
+
+
+
 .searchs .search-list .product-list {
     display: flex;
     align-items: center;
@@ -610,6 +618,20 @@ header .header-info .page-list .pages-pc ul {
     width: 14px;
     height: 14px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1142,8 +1164,26 @@ header .header-info .page-list .pages-pc ul {
 
 
 
+.sell-price {
+    font-weight: 400 !important;
+    color: #000;
+    font-size: 12px !important;
+}
 
+.sell-price.dis {
+    font-weight: 600 !important;
+    color: #d90000 !important;
+    font-size: 14px !important;
+    /* font-size: 14px; */
+}
 
+ 
+
+ .sell-price.sell {
+    font-weight: 500 !important;
+    color: #000 !important;
+    font-size: 14px !important;
+}
 
 
 
