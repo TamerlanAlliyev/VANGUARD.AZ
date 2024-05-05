@@ -910,6 +910,10 @@ TRENDY SLIDER - Start
     transform: scale(1.15);
 }
 
+.section.trendy .swiper-slide.trendy-product .product-info img:hover + .wish-share span {
+    transform: scale(1.15);
+}
+
 .section.trendy .swiper-slide.trendy-product .product-info img:active {
     transform: scale(0.9);
 }

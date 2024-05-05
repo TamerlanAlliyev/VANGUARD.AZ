@@ -1158,13 +1158,7 @@ ul.order-datas .order-data .order-product-img img {
     height: 100%;
 }
 
-.hover-image.swiper-slide {
-    text-align: center;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+
 
 .hover-image.swiper-slide img {
     display: block;
@@ -1527,3 +1521,8 @@ ul.order-datas .order-data .order-product-img img {
 
 
 }
+
+
+
+
+

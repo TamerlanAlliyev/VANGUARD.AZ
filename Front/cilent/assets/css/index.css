@@ -37,7 +37,25 @@ body {
 
 
 
-
+#loader {
+    position: fixed;
+    display: none;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 10px solid #f3f3f3;
+    border-top: 10px solid #d90000;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
 
 
 
@@ -621,6 +639,9 @@ header .header-info .page-list .pages-pc ul {
 
 
 
+.searchs .basket-list .basket-product-list ul .basket-prod .basket-price-close a{
+    cursor: pointer;
+}
 
 
 
@@ -653,6 +674,8 @@ header .header-info .page-list .pages-pc ul {
     font-weight: 500;
     color: #000;
 }
+
+
 
 .searchs .basket-list .basket-product-list li {
     padding: 18px 0;
@@ -688,7 +711,7 @@ header .header-info .page-list .pages-pc ul {
     font-size: 18px;
     font-weight: 500;
 }
-
+/* 
 .searchs .basket-list .basket-view .bastek-total-price .dis-price {
     font-size: 18px;
     font-weight: 500;
@@ -705,7 +728,7 @@ header .header-info .page-list .pages-pc ul {
     font-size: 14px;
     font-weight: 500;
     color: #000;
-}
+} */
 
 .searchs .basket-list .basket-view .basket-buttons {
     display: flex;
@@ -1168,23 +1191,24 @@ header .header-info .page-list .pages-pc ul {
     font-weight: 400 !important;
     color: #000;
     font-size: 12px !important;
+    display: flex !important;
+    align-items: end !important;
+    margin-left: 5px !important;
 }
 
 .sell-price.dis {
     font-weight: 600 !important;
     color: #d90000 !important;
     font-size: 14px !important;
-    /* font-size: 14px; */
 }
 
- 
 
- .sell-price.sell {
+
+.sell-price.sell {
     font-weight: 500 !important;
     color: #000 !important;
     font-size: 14px !important;
 }
-
 
 
 
@@ -1223,7 +1247,61 @@ header .header-info .page-list .pages-pc ul {
 
 
 
+.basket-prices-count-input .basket-quantity-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #3c3c3c89;
+    padding: 2px;
+    justify-content: space-around;
+    width: 35%;
+    min-width: 80px;
+    /* min-width: 100px; */
+    /* width: 60%; */
 
+}
+
+.basket-prices-count-input input {
+    outline: none;
+    padding: 3px 10px;
+    border: none;
+    text-align: center;
+    background: transparent;
+    width: 60%;
+}
+
+.basket-prices-count-input .basket-quantity {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+}
+
+.basket-prices-count-input input[type="number"]::-webkit-inner-spin-button,
+.basket-prices-count-input input[type="number"]::-webkit-outer-spin-button {
+    display: none;
+}
+
+
+
+.basket-prices-count-input {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+
+.cart-prices {
+    width: 50% !important;
+    display: flex;
+}
+
+.basket-con-inpt{
+    display: flex;
+    width: 50%;
+}
 
 
 

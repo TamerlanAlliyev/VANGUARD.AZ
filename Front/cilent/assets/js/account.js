@@ -6,7 +6,6 @@ accountList.forEach(cat => {
 
         let catName = cat.dataset.name;
 
-        console.log(catName);
 
         // Remove 'active' class from all categories
         accountList.forEach(category => {
@@ -109,7 +108,6 @@ var editBox = document.querySelectorAll('.box-edit');
 editBox.forEach(box => {
 
     var editName = box.closest('.box-edit').querySelector('.data-title p').innerText
-    console.log(editName)
 
     box.closest('.box-edit').querySelector('input').value = editName;
 });
@@ -280,8 +278,12 @@ productItems.forEach(item => {
 
         wishCnt.innerText--;
 
+        if (parseInt(wishCnt.innerText) <= 0) {
+            wishCnt.remove()
+        }
+
         item.remove();
-        
+
         WishContainer();
         SwiperCustom()
     });
@@ -307,3 +309,4 @@ productItems.forEach(item => {
 
 
 
+  

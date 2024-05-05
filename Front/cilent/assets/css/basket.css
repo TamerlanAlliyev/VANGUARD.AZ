@@ -163,7 +163,7 @@ section {
 
 .item-delete {
     position: absolute;
-    z-index: 9999;
+    z-index: 5;
     top: 35%;
     right: 0;
     transform: translate(-50%, -50%);

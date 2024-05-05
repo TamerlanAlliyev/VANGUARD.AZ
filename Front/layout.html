@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div id="loader"></div>
 
     <!-- ================================
         HEADER    -    START
@@ -57,11 +58,11 @@
                 </a>
                 <a class="i-basket" href="#">
                     <img src="/cilent/assets/icons/basket.svg" alt="">
-                    <!-- <sup>0</sup> -->
+                    <sup>0</sup>
                 </a>
                 <a class="i-wish" href="#">
                     <img src="/cilent/assets/icons/wish.svg" alt="">
-                    <!-- <sup>0</sup> -->
+                    <sup>0</sup>
                 </a>
 
             </div>
@@ -78,7 +79,7 @@
 
 
             <div class="basket-header">
-                <h4>SHOPPING BAG <span>( 1 )</span></h4>
+                <h4>SHOPPING BAG ( <span>1</span> )</h4>
                 <a class="basket-close" href="#">
                     <img src="/cilent/assets/icons/close-black.svg" alt="">
                 </a>
@@ -108,13 +109,43 @@
                                         <p>Size: Default</p>
                                     </div>
 
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
+
+                                    <div class="basket-prices-count-input">
+
+                                        <div class="basket-con-inpt">
+
+                                            <div class="basket-quantity-box">
+
+                                                <div class="basket-quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="1">
+
+                                                <div class="basket-quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="cart-prices item">
+                                            <span class="sell-price dis" id="sell-price">$80</span>
+                                            <del class="sell-price dis-price">$100</del>
+
+                                            <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
                             </div>
 
                             <div class="basket-price-close">
-                                <a href="#">
+                                <a>
                                     <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
                                         alt="">
                                 </a>
@@ -146,13 +177,43 @@
                                         <p>Size: Default</p>
                                     </div>
 
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
+
+                                    <div class="basket-prices-count-input">
+
+                                        <div class="basket-con-inpt">
+
+                                            <div class="basket-quantity-box">
+
+                                                <div class="basket-quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="1">
+
+                                                <div class="basket-quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+
+                                        <div class="cart-prices item">
+                                            <span class="sell-price dis" id="sell-price">$80</span>
+                                            <del class="sell-price dis-price">$100</del>
+
+                                            <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                        </div>
+
+                                    </div>
+
                                 </div>
 
                             </div>
 
                             <div class="basket-price-close">
-                                <a href="#">
+                                <a>
                                     <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
                                         alt="">
                                 </a>
@@ -163,6 +224,7 @@
                         </div>
 
                     </li>
+
 
                     <li>
 
@@ -184,51 +246,43 @@
                                         <p>Size: Default</p>
                                     </div>
 
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
 
-                            </div>
+                                    <div class="basket-prices-count-input">
 
-                            <div class="basket-price-close">
-                                <a href="#">
-                                    <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
-                                        alt="">
-                                </a>
+                                        <div class="basket-con-inpt">
 
-                            </div>
+                                            <div class="basket-quantity-box">
+
+                                                <div class="basket-quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="1">
+
+                                                <div class="basket-quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
 
 
-                        </div>
+                                        <div class="cart-prices item">
+                                            <!-- <span class="sell-price dis" id="sell-price">$80</span> -->
+                                            <!-- <del class="sell-price dis-price">$100</del> -->
 
-                    </li>
+                                            <span class="sell-price sell" id="sell-price-sell">$100</span>
+                                        </div>
 
-                    <li>
-
-                        <div class="basket-prod" href="#">
-
-                            <div class="basket-prod-info">
-
-                                <a href="№" class="basket-prod-image">
-                                    <img src="/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                </a>
-
-                                <div class="basket-prod-detail">
-
-                                    <div class="prod-info-name">
-                                        <a href="#">
-                                            Product Name
-                                        </a>
-                                        <p>Color: Default</p>
-                                        <p>Size: Default</p>
                                     </div>
 
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
                                 </div>
 
                             </div>
 
                             <div class="basket-price-close">
-                                <a href="#">
+                                <a>
                                     <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
                                         alt="">
                                 </a>
@@ -240,271 +294,6 @@
 
                     </li>
 
-                    <li>
-
-                        <div class="basket-prod" href="#">
-
-                            <div class="basket-prod-info">
-
-                                <a href="№" class="basket-prod-image">
-                                    <img src="/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                </a>
-
-                                <div class="basket-prod-detail">
-
-                                    <div class="prod-info-name">
-                                        <a href="#">
-                                            Product Name
-                                        </a>
-                                        <p>Color: Default</p>
-                                        <p>Size: Default</p>
-                                    </div>
-
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
-
-                            </div>
-
-                            <div class="basket-price-close">
-                                <a href="#">
-                                    <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
-                                        alt="">
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-                    </li>
-
-                    <li>
-
-                        <div class="basket-prod" href="#">
-
-                            <div class="basket-prod-info">
-
-                                <a href="№" class="basket-prod-image">
-                                    <img src="/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                </a>
-
-                                <div class="basket-prod-detail">
-
-                                    <div class="prod-info-name">
-                                        <a href="#">
-                                            Product Name
-                                        </a>
-                                        <p>Color: Default</p>
-                                        <p>Size: Default</p>
-                                    </div>
-
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
-
-                            </div>
-
-                            <div class="basket-price-close">
-                                <a href="#">
-                                    <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
-                                        alt="">
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-                    </li>
-
-                    <li>
-
-                        <div class="basket-prod" href="#">
-
-                            <div class="basket-prod-info">
-
-                                <a href="№" class="basket-prod-image">
-                                    <img src="/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                </a>
-
-                                <div class="basket-prod-detail">
-
-                                    <div class="prod-info-name">
-                                        <a href="#">
-                                            Product Name
-                                        </a>
-                                        <p>Color: Default</p>
-                                        <p>Size: Default</p>
-                                    </div>
-
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
-
-                            </div>
-
-                            <div class="basket-price-close">
-                                <a href="#">
-                                    <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
-                                        alt="">
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-                    </li>
-
-                    <li>
-
-                        <div class="basket-prod" href="#">
-
-                            <div class="basket-prod-info">
-
-                                <a href="№" class="basket-prod-image">
-                                    <img src="/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                </a>
-
-                                <div class="basket-prod-detail">
-
-                                    <div class="prod-info-name">
-                                        <a href="#">
-                                            Product Name
-                                        </a>
-                                        <p>Color: Default</p>
-                                        <p>Size: Default</p>
-                                    </div>
-
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
-
-                            </div>
-
-                            <div class="basket-price-close">
-                                <a href="#">
-                                    <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
-                                        alt="">
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-                    </li>
-
-                    <li>
-
-                        <div class="basket-prod" href="#">
-
-                            <div class="basket-prod-info">
-
-                                <a href="№" class="basket-prod-image">
-                                    <img src="/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                </a>
-
-                                <div class="basket-prod-detail">
-
-                                    <div class="prod-info-name">
-                                        <a href="#">
-                                            Product Name
-                                        </a>
-                                        <p>Color: Default</p>
-                                        <p>Size: Default</p>
-                                    </div>
-
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
-
-                            </div>
-
-                            <div class="basket-price-close">
-                                <a href="#">
-                                    <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
-                                        alt="">
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-                    </li>
-
-                    <li>
-
-                        <div class="basket-prod" href="#">
-
-                            <div class="basket-prod-info">
-
-                                <a href="№" class="basket-prod-image">
-                                    <img src="/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                </a>
-
-                                <div class="basket-prod-detail">
-
-                                    <div class="prod-info-name">
-                                        <a href="#">
-                                            Product Name
-                                        </a>
-                                        <p>Color: Default</p>
-                                        <p>Size: Default</p>
-                                    </div>
-
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
-
-                            </div>
-
-                            <div class="basket-price-close">
-                                <a href="#">
-                                    <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
-                                        alt="">
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-                    </li>
-
-                    <li>
-
-                        <div class="basket-prod" href="#">
-
-                            <div class="basket-prod-info">
-
-                                <a href="№" class="basket-prod-image">
-                                    <img src="/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                </a>
-
-                                <div class="basket-prod-detail">
-
-                                    <div class="prod-info-name">
-                                        <a href="#">
-                                            Product Name
-                                        </a>
-                                        <p>Color: Default</p>
-                                        <p>Size: Default</p>
-                                    </div>
-
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
-
-                            </div>
-
-                            <div class="basket-price-close">
-                                <a href="#">
-                                    <img class="basket-prod-close" src="/cilent/assets/icons/close-black.svg"
-                                        alt="">
-                                </a>
-
-                            </div>
-
-
-                        </div>
-
-                    </li>
 
 
 
@@ -517,13 +306,21 @@
 
                 <div class="bastek-total-price">
                     <p>SUBTOTAL:</p>
-                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                    <!-- <span class="sell-price">$100</span> -->
+                    <div class="basket-total-prices">
+
+                        <span class="sell-price dis" id="sell-price">$80</span>
+                        <del class="sell-price dis-price">$100</del>
+
+                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                    </div>
                 </div>
 
+
+
+
                 <div class="basket-buttons">
-                    <a class="basket-viewcart" href="#">VIEW CART</a>
-                    <a class="basket-checkout" href="#">CHECKOUT</a>
+                    <a class="basket-viewcart" href="/basket.html">VIEW CART</a>
+                    <a class="basket-checkout" href="/checkout.html">CHECKOUT</a>
                 </div>
             </div>
 
@@ -668,16 +465,16 @@
             <a class="pages-close" href="#"><img src="/cilent/assets/icons/x-button.svg" alt=""></a>
 
             <ul>
-                <li><a href="/cilent/index.php">Home</a></li>
-                <li><a href="/cilent/about.php">About</a></li>
-                <li><a href="/cilent/contact.php">Blog</a></li>
-                <li><a href="/cilent/contact.php">Contact</a></li>
-                <li><a href="/cilent/contact.php">Basket</a></li>
-                <li><a href="/cilent/contact.php">Wish List</a></li>
-                <li><a href="/cilent/contact.php">My Account </a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/about.html">About</a></li>
+                <li><a href="/blog.html">Blog</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+                <li><a href="/basket.html">Basket</a></li>
+                <li><a href="/account.html">Wish List</a></li>
+                <li><a href="/account.html">My Account </a></li>
                 <li><a href="/cilent/contact.php">Log Out</a></li>
-                <li><a href="/cilent/contact.php">Login</a></li>
-                <li><a href="/cilent/contact.php">Register</a></li>
+                <li><a href="/login.html">Login</a></li>
+                <li><a href="/register.html">Register</a></li>
             </ul>
         </nav>
 
@@ -688,7 +485,7 @@
         HEADER    -    END
 ===================================== -->
 
-<section style="height: 100vh;">
+<section style="min-height: 100vh;">
 
 </section>
 
