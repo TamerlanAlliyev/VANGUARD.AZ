@@ -329,10 +329,10 @@ infoBtns.forEach((infoBtn) => {
 var swiper = new Swiper(".related-products .mySwiper", {
   slidesPerView: 1,
   spaceBetween: 10,
-  // autoplay: {
-  //   delay: 5000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: false,
+  },
   // pagination: {
   //   el: ".swiper-pagination",
   //   clickable: true,

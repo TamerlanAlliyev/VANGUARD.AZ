@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="/cilent/assets/css/index.css">
     <link rel="stylesheet" href="/cilent/assets/css/shop.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Vanguard</title>
 </head>
 
@@ -496,9 +497,12 @@
 
         <section class="section">
 
+            
             <ul class="sections filter">
 
-
+                <a class="close-filter">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
 
                 <li class="filter-box">
 
@@ -878,6 +882,14 @@
                                 <li class="srch-tag"><a href="#"># Tag</a></li>
                                 <li class="srch-tag"><a href="#"># Tag</a></li>
                                 <li class="srch-tag"><a href="#"># Tag</a></li>
+                                <li class="srch-tag"><a href="#"># Tag</a></li>
+                                <li class="srch-tag"><a href="#"># Tag</a></li>
+                                <li class="srch-tag"><a href="#"># Tag</a></li>
+                                <li class="srch-tag"><a href="#"># Tag</a></li>
+                                <li class="srch-tag"><a href="#"># Tag</a></li>
+                                <li class="srch-tag"><a href="#"># Tag</a></li>
+                                <li class="srch-tag"><a href="#"># Tag</a></li>
+                                <li class="srch-tag"><a href="#"># Tag</a></li>
 
 
 
@@ -899,6 +911,7 @@
                                         <p>t</p>
                                         <i class="fa-solid fa-xmark"></i></a>
                                     </li>
+                                    
                                 </ul>
 
                             </div>
@@ -928,43 +941,43 @@
                         <div class="custom-wrapper">
 
                             <div class="price-input-container">
-                      
-                              <div class="price-input">
-                      
-                                <div class="price-field">
-                                  <span>Min</span>
-                      
-                                  <div class="inp-box">
-                                    <p>$</p>
-                                    <input type="number" class="min-input" value="0">
-                                  </div>
+
+                                <div class="price-input">
+
+                                    <div class="price-field">
+                                        <span>Min</span>
+
+                                        <div class="inp-box">
+                                            <p>$</p>
+                                            <input type="number" class="min-input" value="0">
+                                        </div>
+                                    </div>
+
+                                    <div class="price-field">
+                                        <span>Max</span>
+                                        <div class="inp-box">
+                                            <p>$</p>
+                                            <input type="number" class="max-input" value="10000">
+                                        </div>
+                                    </div>
+
                                 </div>
-                      
-                                <div class="price-field">
-                                  <span>Max</span>
-                                  <div class="inp-box">
-                                    <p>$</p>
-                                    <input type="number" class="max-input" value="10000">
-                                  </div>
+
+
+
+                                <div class="slider-container">
+                                    <div class="price-slider">
+                                    </div>
                                 </div>
-                      
-                              </div>
-                      
-                      
-               
-                              <div class="slider-container">
-                                <div class="price-slider">
-                                </div>
-                              </div>
                             </div>
-                      
-                      
+
+
                             <!-- Slider -->
                             <div class="range-input">
-                              <input type="range" class="min-range" min="0" max="10000" value="0" step="1">
-                              <input type="range" class="max-range" min="0" max="10000" value="10000" step="1">
+                                <input type="range" class="min-range" min="0" max="10000" value="0" step="1">
+                                <input type="range" class="max-range" min="0" max="10000" value="10000" step="1">
                             </div>
-                          </div>
+                        </div>
                     </div>
 
                 </li>
@@ -973,26 +986,1270 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
             <div class="sections product-container">
 
-                <div class="news">
-                    b
+
+                <div class="news" style="background-image: url(/cilent/assets/images/products/slider-3.webp);">
+
+                    <h2>Plus-Size Styles for Every
+                        Season</h2>
+
+                    <p>Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                        maecenas.</p>
                 </div>
+
+
+
+
+
+
+
 
                 <div class="product-items">
 
 
+
+                    <div class="items-head">
+
+                        <div class="left-box">
+
+                            <p onclick="toggleFilter()">
+                                <i class="bi bi-filter-left"></i>
+                                Filter
+                            </p>
+
+                            <svg class="active" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="10" height="10" fill="black" />
+                                <rect x="15" width="10" height="10" fill="black" />
+                                <rect x="30" width="10" height="10" fill="black" />
+                                <rect y="15" width="10" height="10" fill="black" />
+                                <rect x="15" y="15" width="10" height="10" fill="black" />
+                                <rect x="30" y="15" width="10" height="10" fill="black" />
+                                <rect y="30" width="10" height="10" fill="black" />
+                                <rect x="15" y="30" width="10" height="10" fill="black" />
+                                <rect x="30" y="30" width="10" height="10" fill="black" />
+                            </svg>
+
+                            <svg width="45" height="40" viewBox="0 0 45 40" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="10" height="10" fill="black" />
+                                <rect x="15" width="30" height="10" fill="black" />
+                                <rect x="15" y="15" width="30" height="10" fill="black" />
+                                <rect x="15" y="30" width="30" height="10" fill="black" />
+                                <rect y="15" width="10" height="10" fill="black" />
+                                <rect y="30" width="10" height="10" fill="black" />
+                            </svg>
+
+                            <div>
+
+                                <span class="item-counts">Showing</span>
+                                <span class="page-item">1-12</span>
+                                <span>of</span>
+                                <span class="items-con">23</span>
+                                <span>results</span>
+                            </div>
+                        </div>
+
+
+
+                        <div class="right-box">
+                            <div class="select" tabindex="1">
+                                <input value="popularity" class="selectopt" name="test" type="radio" id="opt1" checked>
+                                <label for="opt1" class="option">Sort by popularity</label>
+                                <input value="rating" class="selectopt" name="test" type="radio" id="opt2">
+                                <label for="opt2" class="option">Sort by average rating</label>
+                                <input value="date" class="selectopt" name="test" type="radio" id="opt3">
+                                <label for="opt3" class="option">Sort by latest</label>
+                                <input value="price" class="selectopt" name="test" type="radio" id="opt4">
+                                <label for="opt4" class="option">Sort by price: low to high</label>
+                                <input value="price-desc" class="selectopt" name="test" type="radio" id="opt5">
+                                <label for="opt5" class="option">Sort by price: high to low</label>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+
+
+                    <ul class="products-cart">
+
+
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div>
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+
+
+
+
+
+
+
+                    </ul>
+
+
+                    <div class="pagenation">
+
+                        <div class="pagenation-box">
+
+                            <a href="#">
+                                <i class="fa-solid fa-arrow-left"></i>
+                            </a>
+
+                            <a href="#" class="num-btn active" data-num="1">1</a>
+                            <a href="#" class="num-btn" data-num="2">2</a>
+                            <a href="#" class="num-btn" data-num="3">3</a>
+                            <a href="#" class="num-btn" data-num="4">4</a>
+                            <span class="point">...</span>
+                            <a href="#" class="num-btn" data-num="10">10</a>
+
+                            <a href="#">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
                 </div>
+
+
 
             </div>
 

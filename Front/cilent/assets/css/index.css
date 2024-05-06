@@ -314,7 +314,10 @@ header .header-info .page-list .pages-pc ul {
 }
 
 
-
+.searchs .cart-prices {
+    width: 50% !important;
+    display: flex;
+}
 
 
 
@@ -653,28 +656,28 @@ header .header-info .page-list .pages-pc ul {
 
 
 
-
-
-
-
-.searchs .basket-list .basket-product-list .basket-prod .dis-price {
-    font-size: 14px;
-    font-weight: 600;
-    color: #d90000;
-}
-
 .searchs .basket-list .basket-product-list .basket-prod .sell-price {
-    font-size: 14px;
-    font-weight: 600;
+    font-weight: 400 !important;
     color: #000;
+    font-size: 12px !important;
+    display: flex !important;
+    align-items: end !important;
+    margin-left: 5px !important;
+}
+.searchs .basket-list .basket-product-list .basket-prod .sell-price.dis {
+    font-weight: 600 !important;
+    color: #d90000 !important;
+    font-size: 14px !important;
+}
+.searchs .basket-list .basket-product-list .basket-prod .sell-price.sell {
+    font-weight: 500 !important;
+    color: #000 !important;
+    font-size: 14px !important;
 }
 
-.searchs .basket-list .basket-product-list .basket-prod .sel-price {
-    font-size: 12px;
-    font-weight: 500;
-    color: #000;
+.searchs .basket-total-prices {
+    display: flex;
 }
-
 
 
 .searchs .basket-list .basket-product-list li {
@@ -1187,27 +1190,27 @@ header .header-info .page-list .pages-pc ul {
 
 
 
-.sell-price {
+.bastek-total-price .sell-price {
     font-weight: 400 !important;
     color: #000;
-    font-size: 12px !important;
+    font-size: 16px !important;
     display: flex !important;
     align-items: end !important;
     margin-left: 5px !important;
 }
 
-.sell-price.dis {
+.bastek-total-price .sell-price.dis {
     font-weight: 600 !important;
     color: #d90000 !important;
-    font-size: 14px !important;
+    font-size: 18px !important;
 }
 
 
 
-.sell-price.sell {
+.bastek-total-price .sell-price.sell {
     font-weight: 500 !important;
     color: #000 !important;
-    font-size: 14px !important;
+    font-size: 18px !important;
 }
 
 
@@ -1293,10 +1296,7 @@ header .header-info .page-list .pages-pc ul {
 }
 
 
-.cart-prices {
-    width: 50% !important;
-    display: flex;
-}
+
 
 .basket-con-inpt{
     display: flex;
