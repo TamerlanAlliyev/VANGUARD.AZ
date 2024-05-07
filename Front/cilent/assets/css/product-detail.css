@@ -458,16 +458,6 @@ main {
 
 
 
-.detail-sizes .size-block:hover {
-    color: #d90000;
-    font-weight: 500;
-    border: 1.5px solid #d90000;
-}
-
-.detail-sizes .size-block.active:hover {
-    color: #fff;
-    border: 1.5px solid transparent;
-}
 
 /*  */
 .detail-sizes .sold-out span {

@@ -497,7 +497,7 @@
 
         <section class="section">
 
-            
+
             <ul class="sections filter">
 
                 <a class="close-filter">
@@ -911,7 +911,7 @@
                                         <p>t</p>
                                         <i class="fa-solid fa-xmark"></i></a>
                                     </li>
-                                    
+
                                 </ul>
 
                             </div>
@@ -1018,7 +1018,7 @@
                                 Filter
                             </p>
 
-                            <svg class="active" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                            <svg data-name="grid" class="active" width="40" height="40" viewBox="0 0 40 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect width="10" height="10" fill="black" />
                                 <rect x="15" width="10" height="10" fill="black" />
@@ -1031,7 +1031,7 @@
                                 <rect x="30" y="30" width="10" height="10" fill="black" />
                             </svg>
 
-                            <svg width="45" height="40" viewBox="0 0 45 40" fill="none"
+                            <svg data-name="detail" width="45" height="40" viewBox="0 0 45 40" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <rect width="10" height="10" fill="black" />
                                 <rect x="15" width="30" height="10" fill="black" />
@@ -1042,7 +1042,6 @@
                             </svg>
 
                             <div>
-
                                 <span class="item-counts">Showing</span>
                                 <span class="page-item">1-12</span>
                                 <span>of</span>
@@ -1073,9 +1072,13 @@
                     </div>
 
 
+                    <!-- Active -->
+                    <!-- <div class="not-found">
+                        <p>No products found...</p>
+                    </div> -->
 
 
-                    <ul class="products-cart">
+                    <ul class="products-cart toggle grid " data-name="grid">
 
 
 
@@ -1136,6 +1139,12 @@
 
                                 </div>
 
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
+                                </div>
+
                             </div>
 
 
@@ -1156,7 +1165,118 @@
                             <div class="product-info-box">
 
                                 <div class="p-inf">
-                                    <div>
+                                    <div class="p-head">
+                                        <h6>Categry</h6>
+                                        <h3>Product Name</h3>
+                                    </div>
+
+                                    <span>Color: Black</span>
+                                </div>
+
+
+
+                                <div class="p-pric">
+                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+
+                            <!-- active -->
+                            <div class="product-image-box ">
+
+
+
+                                <div class="p-images">
+
+                                    <div class="main-image">
+                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                    </div>
+
+                                    <!-- <div class="">
+                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                    </div> -->
+
+                                    <div class="swiper mySwiper hover-image">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                            </div>
+
+                                        </div>
+                                        <div class="swiper-button-next p-btn"></div>
+                                        <div class="swiper-button-prev p-btn"></div>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="p-buttons">
+
+                                    <a class="add-btn ">add to card</a>
+
+                                    <!-- active -->
+                                    <ul class="add-size">
+                                        <li class="btn-size" data-size="S">S</li>
+                                        <li class="btn-size" data-size="M">M</li>
+                                        <li class="btn-size" data-size="L">L</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                        <li class="btn-size" data-size="XL">XL</li>
+                                    </ul>
+
+                                </div>
+
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="product-info-box">
+
+                                <div class="p-inf">
+                                    <div class="p-head">
                                         <h6>Categry</h6>
                                         <h3>Product Name</h3>
                                     </div>
@@ -1240,6 +1360,12 @@
 
                                 </div>
 
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
+                                </div>
+
                             </div>
 
 
@@ -1260,7 +1386,7 @@
                             <div class="product-info-box">
 
                                 <div class="p-inf">
-                                    <div>
+                                    <div class="p-head">
                                         <h6>Categry</h6>
                                         <h3>Product Name</h3>
                                     </div>
@@ -1285,6 +1411,7 @@
                             </div>
 
                         </li>
+
 
                         <li class="product-box">
 
@@ -1343,6 +1470,12 @@
 
                                 </div>
 
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
+                                </div>
+
                             </div>
 
 
@@ -1363,7 +1496,7 @@
                             <div class="product-info-box">
 
                                 <div class="p-inf">
-                                    <div>
+                                    <div class="p-head">
                                         <h6>Categry</h6>
                                         <h3>Product Name</h3>
                                     </div>
@@ -1388,6 +1521,7 @@
                             </div>
 
                         </li>
+
 
                         <li class="product-box">
 
@@ -1446,6 +1580,12 @@
 
                                 </div>
 
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
+                                </div>
+
                             </div>
 
 
@@ -1466,7 +1606,7 @@
                             <div class="product-info-box">
 
                                 <div class="p-inf">
-                                    <div>
+                                    <div class="p-head">
                                         <h6>Categry</h6>
                                         <h3>Product Name</h3>
                                     </div>
@@ -1491,6 +1631,7 @@
                             </div>
 
                         </li>
+
 
                         <li class="product-box">
 
@@ -1549,6 +1690,12 @@
 
                                 </div>
 
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
+                                </div>
+
                             </div>
 
 
@@ -1569,7 +1716,7 @@
                             <div class="product-info-box">
 
                                 <div class="p-inf">
-                                    <div>
+                                    <div class="p-head">
                                         <h6>Categry</h6>
                                         <h3>Product Name</h3>
                                     </div>
@@ -1594,6 +1741,7 @@
                             </div>
 
                         </li>
+
 
                         <li class="product-box">
 
@@ -1652,6 +1800,12 @@
 
                                 </div>
 
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
+                                </div>
+
                             </div>
 
 
@@ -1672,7 +1826,7 @@
                             <div class="product-info-box">
 
                                 <div class="p-inf">
-                                    <div>
+                                    <div class="p-head">
                                         <h6>Categry</h6>
                                         <h3>Product Name</h3>
                                     </div>
@@ -1697,6 +1851,7 @@
                             </div>
 
                         </li>
+
 
                         <li class="product-box">
 
@@ -1755,6 +1910,12 @@
 
                                 </div>
 
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
+                                </div>
+
                             </div>
 
 
@@ -1775,7 +1936,7 @@
                             <div class="product-info-box">
 
                                 <div class="p-inf">
-                                    <div>
+                                    <div class="p-head">
                                         <h6>Categry</h6>
                                         <h3>Product Name</h3>
                                     </div>
@@ -1800,6 +1961,7 @@
                             </div>
 
                         </li>
+
 
                         <li class="product-box">
 
@@ -1858,107 +2020,10 @@
 
                                 </div>
 
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="product-info-box">
-
-                                <div class="p-inf">
-                                    <div>
-                                        <h6>Categry</h6>
-                                        <h3>Product Name</h3>
-                                    </div>
-
-                                    <span>Color: Black</span>
-                                </div>
-
-
-
-                                <div class="p-pric">
-                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
-                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
-
-                                    <div class="cart-prices item">
-                                        <span class="sell-price dis" id="sell-price">$80</span>
-                                        <del class="sell-price dis-price">$100</del>
-
-                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li class="product-box">
-
-
-                            <!-- active -->
-                            <div class="product-image-box ">
-
-
-
-                                <div class="p-images">
-
-                                    <div class="main-image">
-                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
-                                    </div>
-
-                                    <!-- <div class="">
-                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                    </div> -->
-
-                                    <div class="swiper mySwiper hover-image">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-button-next p-btn"></div>
-                                        <div class="swiper-button-prev p-btn"></div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="p-buttons">
-
-                                    <a class="add-btn ">add to card</a>
-
-                                    <!-- active -->
-                                    <ul class="add-size">
-                                        <li class="btn-size" data-size="S">S</li>
-                                        <li class="btn-size" data-size="M">M</li>
-                                        <li class="btn-size" data-size="L">L</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                    </ul>
-
+                                <div class="labels">
+                                    <a class=" new">New</a>
+                                    <!-- <a class="dis" >-20%</a> -->
+                                    <!-- <a class=" best" >Best</a> -->
                                 </div>
 
                             </div>
@@ -1981,213 +2046,7 @@
                             <div class="product-info-box">
 
                                 <div class="p-inf">
-                                    <div>
-                                        <h6>Categry</h6>
-                                        <h3>Product Name</h3>
-                                    </div>
-
-                                    <span>Color: Black</span>
-                                </div>
-
-
-
-                                <div class="p-pric">
-                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
-                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
-
-                                    <div class="cart-prices item">
-                                        <span class="sell-price dis" id="sell-price">$80</span>
-                                        <del class="sell-price dis-price">$100</del>
-
-                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li class="product-box">
-
-
-                            <!-- active -->
-                            <div class="product-image-box ">
-
-
-
-                                <div class="p-images">
-
-                                    <div class="main-image">
-                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
-                                    </div>
-
-                                    <!-- <div class="">
-                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                    </div> -->
-
-                                    <div class="swiper mySwiper hover-image">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-button-next p-btn"></div>
-                                        <div class="swiper-button-prev p-btn"></div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="p-buttons">
-
-                                    <a class="add-btn ">add to card</a>
-
-                                    <!-- active -->
-                                    <ul class="add-size">
-                                        <li class="btn-size" data-size="S">S</li>
-                                        <li class="btn-size" data-size="M">M</li>
-                                        <li class="btn-size" data-size="L">L</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="product-info-box">
-
-                                <div class="p-inf">
-                                    <div>
-                                        <h6>Categry</h6>
-                                        <h3>Product Name</h3>
-                                    </div>
-
-                                    <span>Color: Black</span>
-                                </div>
-
-
-
-                                <div class="p-pric">
-                                    <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
-                                    <!-- <img class="active" src="/cilent/assets/icons/wish-icon.svg" alt=""> -->
-
-                                    <div class="cart-prices item">
-                                        <span class="sell-price dis" id="sell-price">$80</span>
-                                        <del class="sell-price dis-price">$100</del>
-
-                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </li>
-
-                        <li class="product-box">
-
-
-                            <!-- active -->
-                            <div class="product-image-box ">
-
-
-
-                                <div class="p-images">
-
-                                    <div class="main-image">
-                                        <img src="/cilent/assets/images/products/product.jpg" alt="">
-                                    </div>
-
-                                    <!-- <div class="">
-                                        <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                    </div> -->
-
-                                    <div class="swiper mySwiper hover-image">
-                                        <div class="swiper-wrapper">
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/product.jpg" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-                                            <div class="swiper-slide">
-                                                <img src="/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-button-next p-btn"></div>
-                                        <div class="swiper-button-prev p-btn"></div>
-                                    </div>
-
-                                </div>
-
-
-                                <div class="p-buttons">
-
-                                    <a class="add-btn ">add to card</a>
-
-                                    <!-- active -->
-                                    <ul class="add-size">
-                                        <li class="btn-size" data-size="S">S</li>
-                                        <li class="btn-size" data-size="M">M</li>
-                                        <li class="btn-size" data-size="L">L</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                        <li class="btn-size" data-size="XL">XL</li>
-                                    </ul>
-
-                                </div>
-
-                            </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                            <div class="product-info-box">
-
-                                <div class="p-inf">
-                                    <div>
+                                    <div class="p-head">
                                         <h6>Categry</h6>
                                         <h3>Product Name</h3>
                                     </div>
@@ -2222,6 +2081,1662 @@
 
 
                     </ul>
+
+
+
+
+
+
+
+                    <ul class="products-detail-cart toggle detail active" data-name="detail">
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        assumenda nemo veniam reiciendis quae. Tenetur maxime molestias, reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo ve
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vel
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        assumenda nemo veniam reiciendis quae. Tenetur maxime molestias, reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo ve
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vel
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        assumenda nemo veniam reiciendis quae. Tenetur maxime molestias, reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo ve
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vel
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        assumenda nemo veniam reiciendis quae. Tenetur maxime molestias, reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo ve
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vel
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        assumenda nemo veniam reiciendis quae. Tenetur maxime molestias, reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo ve
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vel
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        assumenda nemo veniam reiciendis quae. Tenetur maxime molestias, reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo ve
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vel
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        assumenda nemo veniam reiciendis quae. Tenetur maxime molestias, reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo ve
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vel
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        assumenda nemo veniam reiciendis quae. Tenetur maxime molestias, reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo ve
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vel
+                                        reprehenderit
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+
+                        <li class="product-box">
+
+                            <div class="image-detail">
+
+
+                                <!-- Swiper -->
+                                <div class="swiper mySwiper img-detail">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/product.jpg" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                    <div class="swiper-pagination"></div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <div class="detail-box">
+
+                                <div class="info-detail">
+
+                                    <div class="d-head">
+
+                                        <h3>Lightweight Puffer Jacket With a Hood</h3>
+
+                                        <div class="product-rating">
+                                            <div class="rating-block">
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star checked star_on"></span>
+                                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                                <span class="far fa-star star_on"></span>
+                                            </div>
+                                            <span class="reviews">1000 reviews</span>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="cart-prices item">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+
+                                    <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing
+                                        elit.
+                                        Voluptatibus, magnam
+                                        explicabo, quidem corrupti fuga a incidunt repellat dolore provident nemo vell.
+                                    </p>
+                                </div>
+
+
+                                <div class="prod-added">
+
+                                    <div class="detail-size-box">
+                                        <span class="sizes-head">Sizes</span>
+
+                                        <div class="detail-sizes">
+
+                                            <div class="size-block active">
+                                                <span data-size="blue">S</span>
+                                            </div>
+
+                                            <div class="size-block">
+                                                <span data-size="blue">M</span>
+                                            </div>
+
+                                            <div class="size-block sold-out">
+                                                <span data-size="blue">L</span>
+                                            </div>
+
+
+                                            <div class="size-block">
+                                                <span data-size="blue">XL</span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="detail-buttons">
+
+                                        <div class="cart-qty item">
+                                            <div class="quantity-box">
+
+                                                <div class="quantity minus">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </div>
+
+                                                <input type="number" value="2">
+
+                                                <div class="quantity plus">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </div>
+
+                                            </div>
+                                            <a class="add-cart">ADD TO CART</a>
+                                        </div>
+
+
+                                        <div class="wish-cont">
+
+                                            <div class="wish-share">
+                                                <div class="wish">
+                                                    <a>
+                                                        <img class="" src="/cilent/assets/icons/wish-icon.svg" alt="">
+                                                        <!-- <img class="active" src="/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                                    </a>
+                                                    <span>ADD TO WISHLIST</span>
+                                                </div>
+
+                                                <a href="#" class="share">
+                                                    <i class="fa-solid fa-share"></i>
+                                                    SHARE
+                                                </a>
+
+
+                                            </div>
+
+                                            <div class="product-infos">
+
+                                                <div class="p-info">
+                                                    <span>MODEL: </span>
+                                                    <a href="#">#JACKET2024</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>CATEGORIES: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                                <div class="p-info">
+                                                    <span>TAGS: </span>
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a> ,
+                                                    <a href="#">Fashion</a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                        </li>
+
+
+                    </ul>
+
+
 
 
                     <div class="pagenation">
