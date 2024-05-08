@@ -345,37 +345,6 @@ trendyCats.forEach(cat => {
 
 
 
-var swiper = new Swiper(".dealofweek .mySwiper", {
-  slidesPerView: 1,
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    "@0.00": {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    "@0.75": {
-      slidesPerView: 3,
-      spaceBetween: 20,
-    },
-    "@1.00": {
-      slidesPerView: 3,
-      spaceBetween: 40,
-    },
-    "@1.50": {
-      slidesPerView: 3,
-      spaceBetween: 50,
-    },
-  },
-});
 
 
 
@@ -708,7 +677,7 @@ var swiper = new Swiper(".mySwiper.sub", {
 //          PRODUCT ITEMS
 // =====================================
 
-const wishBtnP = document.querySelectorAll('.p-pric img');
+const wishBtnP = document.querySelectorAll('.trendy .p-pric img');
 
 wishBtnP.forEach(wishBtn => {
 
@@ -812,4 +781,174 @@ productImageBox.forEach(prodBtn => {
 
 // =====================================
 //          PRODUCT ITEMS
+// =====================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =====================================
+//       PRODUCT ITEMS - DEAL OF WEEK
+// =====================================
+
+
+
+
+var swiper = new Swiper(".dealofweek .mySwiper", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+  },
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 2,
+      spaceBetween: 30,
+    },
+    "@0.75": {
+      slidesPerView: 2,
+      spaceBetween: 40,
+    },
+    "@1.00": {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+    "@1.50": {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+  },
+});
+
+
+
+
+
+
+const wishBtnDel = document.querySelectorAll('.dealofweek-prod .p-pric img');
+
+wishBtnDel.forEach(wishBtnD => {
+
+  wishBtnD.addEventListener('click', function (event) {
+    wishBtnD.classList.toggle('active');
+
+    if (wishBtnD.classList.contains('active')) {
+      wishBtnD.src = '/cilent/assets/icons/wish-icon-active.svg';
+      wishCount.innerText = parseInt(wishCount.innerText) + 1;
+    } else {
+      wishBtnD.src = '/cilent/assets/icons/wish-white.svg';
+      wishCount.innerText = parseInt(wishCount.innerText) - 1;
+    }
+  });
+
+});
+
+var swiper = new Swiper(".product-image-b .mySwiper", {
+  autoHeight: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+
+
+const productImageBoxDeal = document.querySelectorAll('.product-image-b');
+
+console.log(productImageBoxDeal)
+productImageBoxDeal.forEach(prodBtn => {
+
+  const productAddBtn = prodBtn.querySelector('.add-btn');
+  const productAddSize = prodBtn.querySelector('.add-size');
+
+  const mainImage = prodBtn.querySelector('.main-image');
+  const hoverImage = prodBtn.querySelector('.hover-image');
+
+
+  const swiperBtns = prodBtn.querySelectorAll('.p-btn');
+
+
+  prodBtn.addEventListener('mouseover', function (event) {
+
+
+    prodBtn.classList.add('active');
+
+    productAddBtn.classList.add('active');
+  });
+
+
+
+
+
+  prodBtn.addEventListener('mouseout', (event) => {
+    if (!prodBtn.contains(event.relatedTarget)) {
+      productAddBtn.classList.remove('active');
+    }
+    prodBtn.classList.remove('active');
+  });
+
+  productAddBtn.addEventListener('click', function (event) {
+    productAddSize.classList.add('active');
+  });
+
+
+
+  productAddSize.addEventListener('click', function (event) {
+    productAddSize.classList.remove('active');
+    basketCounts.innerText = parseInt(basketCounts.innerText) + 1;;
+  });
+
+
+  productAddSize.addEventListener('mouseover', (event) => {
+
+    swiperBtns.forEach(swiperBtn => {
+      swiperBtn.style.display = 'none';
+    });
+
+  });
+
+  productAddSize.addEventListener('mouseout', (event) => {
+
+    if (!productAddSize.contains(event.relatedTarget)) {
+      productAddSize.classList.remove('active');
+      swiperBtns.forEach(swiperBtn => {
+        swiperBtn.style.display = 'block';
+      });
+    }
+
+  });
+
+
+});
+
+// =====================================
+//      PRODUCT ITEMS - DEAL OF WEEK
 // =====================================

@@ -633,6 +633,162 @@ productImageBox.forEach(prodBtn => {
 
 
 
+
+
+
+
+
+// =====================================
+//          DEAL OF WEEK
+// =====================================
+
+
+
+
+
+var swiper = new Swiper(".mySwiper.discounted", {
+    autoHeight: true,
+    spaceBetween: 20,
+    autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const productImageBoxDeal = document.querySelectorAll('.product-image-b');
+const basketCoun = document.querySelector('.i-basket sup');
+
+console.log('asd');
+productImageBox.forEach(prodBtn => {
+
+    const productAddBtn = prodBtn.querySelector('.add-btn');
+    const productAddSize = prodBtn.querySelector('.add-size');
+
+    const mainImage = prodBtn.querySelector('.main-image');
+    const hoverImage = prodBtn.querySelector('.hover-image');
+
+
+    const swiperBtns = prodBtn.querySelectorAll('.p-btn');
+
+
+    prodBtn.addEventListener('mouseover', function (event) {
+        prodBtn.classList.add('active');
+        productAddBtn.classList.add('active');
+    });
+
+
+
+
+
+    prodBtn.addEventListener('mouseout', (event) => {
+        if (!prodBtn.contains(event.relatedTarget)) {
+            hoverImage.classList.remove('active');
+            productAddBtn.classList.remove('active');
+            productAddSize.classList.remove('active');
+        }
+        prodBtn.classList.remove('active');
+    });
+
+
+
+
+
+
+
+    productAddBtn.addEventListener('click', function (event) {
+        productAddSize.classList.add('active');
+    });
+
+
+
+    productAddSize.addEventListener('click', function (event) {
+        productAddSize.classList.remove('active');
+        basketCount.innerText = parseInt(basketCount.innerText) + 1;;
+    });
+
+
+    productAddSize.addEventListener('mouseover', (event) => {
+
+        swiperBtns.forEach(swiperBtn => {
+            swiperBtn.style.display = 'none';
+        });
+
+    });
+
+    productAddSize.addEventListener('mouseout', (event) => {
+
+        if (!productAddSize.contains(event.relatedTarget)) {
+            productAddSize.classList.remove('active');
+            swiperBtns.forEach(swiperBtn => {
+                swiperBtn.style.display = 'block';
+            });
+        }
+
+    });
+
+
+
+
+
+    // prodBtn.addEventListener('mouseover', function (event) {
+    //     productAddBtn.style.display = 'flex';
+    //     hoverImage.style.display = 'flex';
+    //     mainImage.style.display = 'none';
+    // });
+
+    // prodBtn.addEventListener('mouseout', function (event) {
+    //     productAddBtn.style.display = 'none';
+    //     hoverImage.style.display = 'none';
+    //     mainImage.style.display = 'flex';
+    // });
+
+
+
+
+
+});
+
+
+
+// =====================================
+//          DEAL OF WEEK
+// =====================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // =====================================
 //          CLICK PROBLEMS - 1
 // =====================================

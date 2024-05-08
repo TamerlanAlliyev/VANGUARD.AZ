@@ -669,7 +669,37 @@ TRENDY SLIDER - Start
 
 /* ---------- SWIPER - START ---------- */
 
-.section.trendy .swiper.sub{
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+
+.section.trendy .swiper.sub {
     width: 100%;
     display: none;
     margin-top: 5px;
@@ -679,10 +709,12 @@ TRENDY SLIDER - Start
     gap: 3%;
     height: 300px;
     /* height: 850px; */
+    transition: all 0.9s ease;
 }
 
 .section.trendy .swiper.sub.active {
     display: flex !important;
+    animation: fadeIn 0.9s ease;
 }
 
 
@@ -1009,8 +1041,8 @@ TRENDY SLIDER - Start
     /* line-height: 310px; */
 }
 
-.product-image-box  .swiper-button-next::after,
-.product-image-box  .swiper-button-prev::after {
+.product-image-box .swiper-button-next::after,
+.product-image-box .swiper-button-prev::after {
     color: #8d8c8c;
     font-size: 18px;
 
@@ -1071,7 +1103,7 @@ TRENDY SLIDER - Start
 }
 
 
-.product-image-box.active > .p-images .hover-image {
+.product-image-box.active>.p-images .hover-image {
     display: block;
     animation: fadeIn 0.5s ease;
 }
@@ -1284,69 +1316,67 @@ TRENDY SLIDER - Start
 @media screen and (min-width: 768px) {
 
 
-    
 
-/* ----------------------
+
+    /* ----------------------
 TRENDY SLIDER - Start
 ------------------------- */
 
 
 
-.section {
-    padding: 0 3%;
-}
+    .section {
+        padding: 0 3%;
+    }
 
-/* ---------- trendy-sec-head - Start ---------- */
+    /* ---------- trendy-sec-head - Start ---------- */
 
-.trendy .trendy-sec-head {
-    /* gap: 24px; */
-    /* margin-bottom: 2%; */
-}
+    .trendy .trendy-sec-head {
+        /* gap: 24px; */
+        /* margin-bottom: 2%; */
+    }
 
-.trendy .trendy-sec-head h2 {
-    font-size: 18px;
-    /* font-size: 24px; */
-}
-
-
-
-.trendy .trendy-sec-head .trendy-list a {
-    font-size: 12px;
-    /* font-size: 16px; */
-}
-
-/* ---------- trendy-sec-head - End ---------- */
+    .trendy .trendy-sec-head h2 {
+        font-size: 18px;
+        /* font-size: 24px; */
+    }
 
 
+
+    .trendy .trendy-sec-head .trendy-list a {
+        font-size: 12px;
+        /* font-size: 16px; */
+    }
+
+    /* ---------- trendy-sec-head - End ---------- */
 
 
 
 
 
-/* ---------- SWIPER - START ---------- */
-
-.section.trendy .swiper.sub{
-    height: 740px;
-    /* height: 850px; */
-}
 
 
+    /* ---------- SWIPER - START ---------- */
 
-.section.trendy .swiper-pagination.t-a {
-    height: 15%;
-    /* height: 5%; */
-}
-
-.section.trendy .swiper-pagination {
-    /* --swiper-pagination-bullet-size: 16px; */
-    /* --swiper-pagination-bullet-width: 16px; */
-    /* --swiper-pagination-bullet-height: 16px; */
-}
+    .section.trendy .swiper.sub {
+        height: 740px;
+        /* height: 850px; */
+    }
 
 
-/* ---------- SWIPER - END ---------- */
+
+    .section.trendy .swiper-pagination.t-a {
+        height: 15%;
+        /* height: 5%; */
+    }
+
+    .section.trendy .swiper-pagination {
+        /* --swiper-pagination-bullet-size: 16px; */
+        /* --swiper-pagination-bullet-width: 16px; */
+        /* --swiper-pagination-bullet-height: 16px; */
+    }
 
 
+    /* ---------- SWIPER - END ---------- */
 
 
 
@@ -1361,16 +1391,18 @@ TRENDY SLIDER - Start
 
 
 
-/* ==============================================
+
+
+    /* ==============================================
         P R O D U C U T  -  C O N T A I N E R
 =================================================*/
 
 
-/* ***** product-image-box ***** */
+    /* ***** product-image-box ***** */
 
-.product-box .product-image-box {
-    /* height: 78%; */
-}
+    .product-box .product-image-box {
+        /* height: 78%; */
+    }
 
 
 
@@ -1381,43 +1413,43 @@ TRENDY SLIDER - Start
 
 
 
-.product-image-box .p-buttons .add-btn {
-    /***/
-    /* padding: 8px; */
-    /* font-size: 16px; */
-    /* width: 80%; */
+    .product-image-box .p-buttons .add-btn {
+        /***/
+        /* padding: 8px; */
+        /* font-size: 16px; */
+        /* width: 80%; */
 
-}
+    }
 
 
-.product-image-box .p-buttons .add-size {
-    font-size: 12px;
+    .product-image-box .p-buttons .add-size {
+        font-size: 12px;
 
-    /***/
-    /* font-size: 16px; */
-}
+        /***/
+        /* font-size: 16px; */
+    }
 
 
 
-.product-image-box .p-buttons .add-size .btn-size {
-    /***/
-    /* position: relative; */
-    /* z-index: 20; */
-}
+    .product-image-box .p-buttons .add-size .btn-size {
+        /***/
+        /* position: relative; */
+        /* z-index: 20; */
+    }
 
 
 
 
-.product-image-box .labels a {
-    font-weight: 500;
-    padding: 1.5px;
-    font-size: 9px;
+    .product-image-box .labels a {
+        font-weight: 500;
+        padding: 1.5px;
+        font-size: 9px;
 
-    /***/
-    /* font-weight: 600; */
-    /* font-size: 12px; */
-    /* padding: 2px; */
-}
+        /***/
+        /* font-weight: 600; */
+        /* font-size: 12px; */
+        /* padding: 2px; */
+    }
 
 
 
@@ -1431,39 +1463,39 @@ TRENDY SLIDER - Start
 
 
 
-/* **** S W I P E R ***** */
+    /* **** S W I P E R ***** */
 
 
-.product-image-box .swiper {
-    width: 100%;
-    height: 100%;
-}
+    .product-image-box .swiper {
+        width: 100%;
+        height: 100%;
+    }
 
-.product-image-box .swiper .swiper-slide {
-    height: 280px;
-    line-height: 280px;
+    .product-image-box .swiper .swiper-slide {
+        height: 280px;
+        line-height: 280px;
 
-    /**/
-    /* height: 255px; */
-    /* line-height: 255px; */
+        /**/
+        /* height: 255px; */
+        /* line-height: 255px; */
 
 
-    /* height: 310px; */
-    /* line-height: 310px; */
-}
+        /* height: 310px; */
+        /* line-height: 310px; */
+    }
 
-.product-image-box  .swiper-button-next::after,
-.product-image-box  .swiper-button-prev::after {
-    font-size: 20px;
-    font-size: 20px;
+    .product-image-box .swiper-button-next::after,
+    .product-image-box .swiper-button-prev::after {
+        font-size: 20px;
+        font-size: 20px;
 
-    /***/
-    /* font-size: 24px; */
-}
+        /***/
+        /* font-size: 24px; */
+    }
 
 
 
-/* **** S W I P E R ***** */
+    /* **** S W I P E R ***** */
 
 
 
@@ -1471,89 +1503,89 @@ TRENDY SLIDER - Start
 
 
 
-/* ***** product-info-box ***** */
+    /* ***** product-info-box ***** */
 
-.section.trendy .product-box .product-info-box {
-    height: 17%;
+    .section.trendy .product-box .product-info-box {
+        height: 17%;
 
-    /***/
-    /* height: 18%; */
-}
+        /***/
+        /* height: 18%; */
+    }
 
 
-.product-box .product-info-box .p-inf {
-    /***/
-    /* justify-content: space-between !important; */
-}
+    .product-box .product-info-box .p-inf {
+        /***/
+        /* justify-content: space-between !important; */
+    }
 
 
 
-.product-info-box .p-inf div h6 {
-    font-size: 10px;
+    .product-info-box .p-inf div h6 {
+        font-size: 10px;
 
-    /***/
-    /* font-size: 12px; */
-}
+        /***/
+        /* font-size: 12px; */
+    }
 
 
 
-.product-info-box .p-inf div h3 {
-    font-size: 12px;
+    .product-info-box .p-inf div h3 {
+        font-size: 12px;
 
-    /***/
-    /* font-size: 16px; */
-}
+        /***/
+        /* font-size: 16px; */
+    }
 
-.product-info-box .p-inf span {
-    font-size: 12px;
+    .product-info-box .p-inf span {
+        font-size: 12px;
 
-    /***/
-    /* font-size: 14px; */
-}
+        /***/
+        /* font-size: 14px; */
+    }
 
 
 
-.product-info-box .p-pric {
-    width: 30%;
-}
+    .product-info-box .p-pric {
+        width: 30%;
+    }
 
 
-.product-info-box .p-pric img {
-    width: 20px;
-    height: 20px;
+    .product-info-box .p-pric img {
+        width: 20px;
+        height: 20px;
 
-    /***/
-    /* width: 22px; */
-    /* height: 22px; */
-}
+        /***/
+        /* width: 22px; */
+        /* height: 22px; */
+    }
 
-.product-info-box .p-pric .cart-prices .sell-price {
-    font-size: 10px;
+    .product-info-box .p-pric .cart-prices .sell-price {
+        font-size: 10px;
 
-    /***/
-    /* font-size: 12px; */
-}
+        /***/
+        /* font-size: 12px; */
+    }
 
-.product-info-box .p-pric .cart-prices .sell-price.dis {
-    font-size: 12px;
+    .product-info-box .p-pric .cart-prices .sell-price.dis {
+        font-size: 12px;
 
-    /***/
-    /* font-size: 14px; */
-}
+        /***/
+        /* font-size: 14px; */
+    }
 
-.product-info-box .p-pric .cart-prices .sell-price.sell {
-    font-size: 12px;
+    .product-info-box .p-pric .cart-prices .sell-price.sell {
+        font-size: 12px;
 
-    /***/
-    /* font-size: 14px; */
-}
+        /***/
+        /* font-size: 14px; */
+    }
 
 
-/* ***** product-info-box ***** */
+    /* ***** product-info-box ***** */
 
 
 
-/* ==============================================
+    /* ==============================================
         P R O D U C U T  -  C O N T A I N E R
 =================================================*/
 
@@ -1565,72 +1597,72 @@ TRENDY SLIDER - Start
 @media screen and (min-width: 1024px) {
 
 
-    
 
-    
 
-/* ----------------------
+
+
+    /* ----------------------
 TRENDY SLIDER - Start
 ------------------------- */
 
 
 
-/* ---------- trendy-sec-head - Start ---------- */
+    /* ---------- trendy-sec-head - Start ---------- */
 
-.trendy .trendy-sec-head {
-    gap: 24px;
-    margin-bottom: 2%;
-}
+    .trendy .trendy-sec-head {
+        gap: 24px;
+        margin-bottom: 2%;
+    }
 
-.trendy .trendy-sec-head h2 {
-    font-size: 24px;
-}
-
-
-
-.trendy .trendy-sec-head .trendy-list a {
-    font-size: 16px;
-}
-
-/* ---------- trendy-sec-head - End ---------- */
+    .trendy .trendy-sec-head h2 {
+        font-size: 24px;
+    }
 
 
+
+    .trendy .trendy-sec-head .trendy-list a {
+        font-size: 16px;
+    }
+
+    /* ---------- trendy-sec-head - End ---------- */
 
 
 
 
 
-/* ---------- SWIPER - START ---------- */
-
-.section.trendy .swiper.sub{
-    height: 850px;
-}
 
 
+    /* ---------- SWIPER - START ---------- */
 
-.section.trendy .swiper-pagination.t-a {
-    height: 5%;
-}
-
-.section.trendy .swiper-pagination {
-    --swiper-pagination-bullet-size: 16px;
-    --swiper-pagination-bullet-width: 16px;
-    --swiper-pagination-bullet-height: 16px;
-}
+    .section.trendy .swiper.sub {
+        height: 850px;
+    }
 
 
-/* ---------- SWIPER - END ---------- */
 
-/* ==============================================
+    .section.trendy .swiper-pagination.t-a {
+        height: 5%;
+    }
+
+    .section.trendy .swiper-pagination {
+        --swiper-pagination-bullet-size: 16px;
+        --swiper-pagination-bullet-width: 16px;
+        --swiper-pagination-bullet-height: 16px;
+    }
+
+
+    /* ---------- SWIPER - END ---------- */
+
+    /* ==============================================
         P R O D U C U T  -  C O N T A I N E R
 =================================================*/
 
 
-/* ***** product-image-box ***** */
+    /* ***** product-image-box ***** */
 
-.product-box .product-image-box {
-    height: 78%;
-}
+    .product-box .product-image-box {
+        height: 78%;
+    }
 
 
 
@@ -1641,33 +1673,33 @@ TRENDY SLIDER - Start
 
 
 
-.product-image-box .p-buttons .add-btn {
-    padding: 8px;
-    font-size: 16px;
-    width: 80%;
+    .product-image-box .p-buttons .add-btn {
+        padding: 8px;
+        font-size: 16px;
+        width: 80%;
 
-}
+    }
 
 
-.product-image-box .p-buttons .add-size {
-    font-size: 16px;
-}
+    .product-image-box .p-buttons .add-size {
+        font-size: 16px;
+    }
 
 
 
-.product-image-box .p-buttons .add-size .btn-size {
-    position: relative;
-    z-index: 20;
-}
+    .product-image-box .p-buttons .add-size .btn-size {
+        position: relative;
+        z-index: 20;
+    }
 
 
 
 
-.product-image-box .labels a {
-    font-weight: 600;
-    font-size: 12px;
-    padding: 2px;
-}
+    .product-image-box .labels a {
+        font-weight: 600;
+        font-size: 12px;
+        padding: 2px;
+    }
 
 
 
@@ -1681,21 +1713,21 @@ TRENDY SLIDER - Start
 
 
 
-/* **** S W I P E R ***** */
+    /* **** S W I P E R ***** */
 
-.product-image-box .swiper .swiper-slide {
-    height: 310px;
-    line-height: 310px;
-}
+    .product-image-box .swiper .swiper-slide {
+        height: 310px;
+        line-height: 310px;
+    }
 
-.product-image-box  .swiper-button-next::after,
-.product-image-box  .swiper-button-prev::after {
-    font-size: 24px;
-}
+    .product-image-box .swiper-button-next::after,
+    .product-image-box .swiper-button-prev::after {
+        font-size: 24px;
+    }
 
 
 
-/* **** S W I P E R ***** */
+    /* **** S W I P E R ***** */
 
 
 
@@ -1703,59 +1735,59 @@ TRENDY SLIDER - Start
 
 
 
-/* ***** product-info-box ***** */
+    /* ***** product-info-box ***** */
 
-.section.trendy .product-box .product-info-box {
-    height: 18%;
-}
+    .section.trendy .product-box .product-info-box {
+        height: 18%;
+    }
 
 
-.product-box .product-info-box .p-inf {
-    justify-content: space-between !important;
-}
+    .product-box .product-info-box .p-inf {
+        justify-content: space-between !important;
+    }
 
 
 
-.product-info-box .p-inf div h6 {
-    font-size: 12px;
-}
+    .product-info-box .p-inf div h6 {
+        font-size: 12px;
+    }
 
 
 
-.product-info-box .p-inf div h3 {
-    font-size: 16px;
-}
+    .product-info-box .p-inf div h3 {
+        font-size: 16px;
+    }
 
-.product-info-box .p-inf span {
-    font-size: 14px;
-}
+    .product-info-box .p-inf span {
+        font-size: 14px;
+    }
 
 
 
 
-.product-info-box .p-pric img {
-    width: 22px;
-    height: 22px;
-}
+    .product-info-box .p-pric img {
+        width: 22px;
+        height: 22px;
+    }
 
-.product-info-box .p-pric .cart-prices .sell-price {
-    font-size: 12px;
-}
+    .product-info-box .p-pric .cart-prices .sell-price {
+        font-size: 12px;
+    }
 
-.product-info-box .p-pric .cart-prices .sell-price.dis {
-    font-size: 14px;
-}
+    .product-info-box .p-pric .cart-prices .sell-price.dis {
+        font-size: 14px;
+    }
 
-.product-info-box .p-pric .cart-prices .sell-price.sell {
-    font-size: 14px;
-}
+    .product-info-box .p-pric .cart-prices .sell-price.sell {
+        font-size: 14px;
+    }
 
 
-/* ***** product-info-box ***** */
+    /* ***** product-info-box ***** */
 
 
 
-/* ==============================================
+    /* ==============================================
         P R O D U C U T  -  C O N T A I N E R
 =================================================*/
 
@@ -2303,7 +2335,7 @@ SERVICE SECTION - End
 
 
 /* ----------------------
-DEAL OF WEEK    SECTION - End
+DEAL OF WEEK    SECTION - Start
 ------------------------- */
 
 
@@ -2318,18 +2350,22 @@ DEAL OF WEEK    SECTION - End
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    gap: 40px;
     flex-direction: column;
-    /* flex-direction: row; */
-    gap: 20px;
+    /* flex-direction: row;  */
 }
 
 
 
 .dealofweek .deal-products {
-    width: 50%;
+    width: 100%;
+    /* width: 50%; */
 }
 
-
+.dealofweek .dealofweek-prod {
+    width: 100%;
+    /* width: 50% !important; */
+}
 
 /* ========== deal-offer - Start =========== */
 
@@ -2337,11 +2373,10 @@ DEAL OF WEEK    SECTION - End
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* gap: 30px; */
-
     justify-content: center;
     width: 100%;
-    /* width: 50%; */
+    align-items: center;
+    /* align-items: start; */
 }
 
 .dealofweek .deal-offer .deal-title {
@@ -2349,40 +2384,42 @@ DEAL OF WEEK    SECTION - End
     align-items: center;
     gap: 5%;
     color: #b10505;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 .dealofweek .deal-offer .deal-title .arrow {
     height: 2px;
     width: 15%;
-    /* height: 3px; */
     background: #b10505;
 }
 
 .dealofweek .deal-offer .deal-title h5 {
-    font-size: 16px;
-    /* font-size: 22px; */
     font-weight: 500;
+    font-size: 12px;
+    /* font-size: 16px; */
 }
 
 .dealofweek .deal-offer .deal-collection h1 {
-    /* font-size: 40px;
-    letter-spacing: 10px;
-    word-spacing: 15px; */
+
     color: #fff;
-    font-size: 26px;
     letter-spacing: 5px;
     word-spacing: 10px;
+    font-size: 18px;
+    /* font-size: 26px; */
 }
 
 .dealofweek .deal-offer .deal-collection h5 {
     color: #fff;
     font-weight: 500;
-    /* font-size: 30px;
-    margin-bottom: 20px;
-    margin-top: 10px; */
-    font-size: 20px;
-    margin-bottom: 20px;
+
     margin-top: 10px;
+    font-size: 14px;
+    margin-bottom: 5px;
+    text-align: center;
+    /* text-align: start; */
+    /* margin-bottom: 20px; */
+    /* font-size: 20px; */
 }
 
 .dealofweek .deal-offer a {
@@ -2391,20 +2428,23 @@ DEAL OF WEEK    SECTION - End
     justify-content: center;
     align-items: center;
     color: #fff;
-
     font-weight: 500;
-    padding: 12px;
-    border: 2px solid #fff;
     transition: all 0.5s ease;
-    max-width: 100px;
-    font-size: 12px;
-    /* max-width: 150px; */
-    /* font-size: 16px; */
+
+    max-width: 70px;
+    font-size: 10px;
+    border: 1.5px solid #fff;
+    padding: 8px;
+    /* padding: 12px; */
+    /* max-width: 100px; */
+    /* font-size: 12px; */
+    /* border: 2px solid #fff; */
 }
 
 .dealofweek .deal-offer a:hover {
-    border: 2px solid transparent;
     background: #d90000;
+    border: 1.5px solid transparent;
+    /* border: 2px solid transparent; */
 }
 
 .dealofweek .deal-offer a:active {
@@ -2418,13 +2458,12 @@ DEAL OF WEEK    SECTION - End
     color: #fff;
     margin-top: 5%;
     gap: 10px;
-    /* gap: 20px; */
 }
 
 .separate {
-    font-size: 20px;
-    /* font-size: 30px; */
     font-weight: 600;
+    font-size: 16px;
+    /* font-size: 20px; */
 }
 
 .offer-time .time {
@@ -2434,85 +2473,22 @@ DEAL OF WEEK    SECTION - End
     align-items: center;
     width: 40px;
     gap: 5px;
-    /* gap: 10px; */
-    /* width: 50px; */
 }
 
 .offer-time .time .num {
-    font-size: 20px;
     font-weight: 600;
-    /* font-size: 30px; */
+    font-size: 16px;
+    /* font-size: 20px; */
 }
 
 .offer-time .time .nam {
     color: #ffffff9f;
     font-weight: 400;
-    font-size: 14px;
-    /* font-size: 18px; */
+    font-size: 10px;
+    /* font-size: 14px; */
 }
 
 /* ========== deal-offer - End =========== */
-
-
-
-/* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
-
-.dealofweek .swiper {
-    height: 100%;
-    background: rgba(183, 175, 175, 0);
-    align-items: center;
-    justify-content: center;
-    max-width: 1000px !important;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: 5px;
-    display: flex !important;
-    flex-direction: column;
-    padding: 0 !important;
-    height: 330px !important;
-    width: 100%;
-    /* width: 50%; */
-    /* height: 430px !important; */
-}
-
-.dealofweek .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    display: flex;
-}
-
-
-
-.dealofweek .swiper-pagination {
-    position: relative;
-    left: 0 !important;
-    transform: translate(0%, -20%) !important;
-    /*del*/
-    align-items: center;
-    justify-content: center;
-    padding: 0 !important;
-    max-height: 50px !important;
-    height: 100%;
-    top: 12px !important;
-    /* top: 20px !important; */
-}
-
-
-.dealofweek .swiper-pagination {
-    --swiper-pagination-color: red;
-    --swiper-pagination-bullet-size: 16px;
-    --swiper-pagination-bullet-width: 16px;
-    --swiper-pagination-bullet-height: 16px;
-    --swiper-pagination-bullet-inactive-color: #ffffff;
-    --swiper-pagination-bullet-inactive-opacity: 0.2;
-    --swiper-pagination-bullet-opacity: 1;
-    --swiper-pagination-bullet-horizontal-gap: 4px;
-    --swiper-pagination-bullet-vertical-gap: 6px;
-    --swiper-pagination-top: auto;
-}
-
-
-/* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
 
 
 
@@ -2520,20 +2496,383 @@ DEAL OF WEEK    SECTION - End
 
 /* ========== DEALOFWEEK - Products  - Start =========== */
 
-.dealofweek-prod-info {
+
+/* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
+
+.dealofweek .swiper.dealofweek-prod {
+    width: 100%;
+    display: flex;
+    position: static;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3%;
+    height: 300px;
+    /* height: 450px; */
+    /* max-height: 450px; */
+}
+
+
+
+.dealofweek .swiper-pagination.t-a {
+    top: 10px !important;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 10% !important;
+    /* height: 5%; */
+}
+
+.dealofweek .swiper-wrapper.products-carts {
+    height: 87%;
+
+}
+
+.dealofweek .swiper-wrapper.products-carts .swiper-slide.product-boxs {
+    width: 100%;
+}
+
+.dealofweek .swiper-pagination {
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-inactive-color: #ffffff;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    --swiper-pagination-top: auto;
+
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+
+
+    /* --swiper-pagination-bullet-size: 16px; */
+    /* --swiper-pagination-bullet-width: 16px; */
+    /* --swiper-pagination-bullet-height: 16px; */
+
+}
+
+/* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
+
+
+
+
+
+
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+.product-boxs {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    justify-content: space-between;
+    width: 47%;
+    z-index: 99999999;
 }
 
-.dealofweek-prod-info .prod-img {
-    display: flex;
+
+
+
+
+/* ***** product-image-box ***** */
+
+.product-boxs .product-image-b {
     width: 100%;
-    height: 75%;
+
     position: relative;
+    z-index: 30;
+    height: 79%;
+    /* height: 76%; */
+    /* height: 82%; */
 }
 
-.dealofweek-prod-info .prod-img img {
+
+
+
+
+
+
+
+
+.product-image-b .prod-buttons {
+    width: 100%;
+
+    position: absolute;
+    z-index: 25;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+}
+
+
+.product-image-b .prod-buttons .add-btn {
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    background: #ffffff;
+    margin-bottom: 16px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 10px;
+    width: 70%;
+    padding: 4px;
+
+
+
+    /***/
+    /* padding: 8px; */
+    /* font-size: 16px; */
+    /* width: 80%; */
+
+}
+
+
+
+.product-image-b.active .prod-buttons .add-btn.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+
+
+.product-image-b .prod-buttons a:hover {
+    color: #fff;
+    background: #d90000;
+}
+
+.product-image-b .prod-buttons a:active {
+    background: #9a0101;
+}
+
+
+
+
+.product-image-b .prod-buttons .add-size {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 20;
+    bottom: 0;
+    background: #fff;
+    font-size: 10px;
+
+    /***/
+    /* font-size: 16px; */
+}
+
+.product-image-b .prod-buttons .add-size.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.product-image-b .prod-buttons .add-size .btn-size {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+
+
+    /***/
+    /* position: relative; */
+    /* z-index: 20; */
+}
+
+
+
+
+.product-image-b .prod-buttons .add-size .btn-size:hover {
+    background: #000;
+    color: #fff;
+}
+
+.product-image-b .prod-buttons .add-size .btn-size:active {
+    background: #d90000;
+}
+
+
+
+
+
+
+
+
+
+.product-image-b .labels {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    align-items: center;
+    z-index: 20;
+    margin-left: 5px;
+
+    width: 50%;
+    top: 3%;
+    left: 3%;
+
+    /**/
+    /* width: 46%; */
+
+    /***/
+    width: 50%;
+
+}
+
+.product-image-b .labels a {
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 400;
+    padding: 1px;
+    font-size: 7px;
+
+    /**/
+    /* font-weight: 500; */
+    /* padding: 1.5px; */
+    /* font-size: 9px; */
+
+    /***/
+    /* font-weight: 600; */
+    /* font-size: 12px; */
+    /* padding: 2px; */
+
+}
+
+
+.product-image-b .labels .new {
+    color: #000;
+    background: #fff;
+}
+
+.product-image-b .labels .dis {
+    color: #fff;
+    background: #d90000;
+}
+
+.product-image-b .labels .best {
+    color: #fff;
+    background: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* **** S W I P E R ***** */
+
+.product-image-b .swiper {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    animation: fadeIn 0.5s ease;
+
+
+    width: 100%;
+    position: static;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-image-b.active .prod-images .hover-image {
+    display: block !important;
+    animation: fadeIn 0.5s ease;
+
+}
+
+.product-image-b .prod-images .hover-image.swiper {
+    width: 100%;
+    height: 100%;
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.product-image-b.active .prod-images .hover-image.swiper {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.product-image-b.active .prod-images .hover-image {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.product-image-b .swiper .swiper-slide {
+    height: 250px;
+    /* height: 300px; */
+    width: 100%;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.product-image-b .swiper-button-next::after,
+.product-image-b .swiper-button-prev::after {
+    color: #8d8c8c;
+    font-size: 18px;
+
+    /**/
+    /* font-size: 20px; */
+    /* font-size: 20px; */
+
+    /***/
+    /* font-size: 24px; */
+}
+
+.product-image-b .swiper .swiper-slide img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2541,129 +2880,219 @@ DEAL OF WEEK    SECTION - End
 }
 
 
-.dealofweek-prod-info a.dealofweek-basket {
-    position: absolute;
-    top: 68%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-    text-decoration: none;
-    display: none;
-    color: #000;
-    padding: 3%;
-    background: #fff;
-    transition: all 0.5s ease;
-    font-size: 10px;
-    /* font-size: 14px; */
+
+/* **** S W I P E R ***** */
+
+
+
+
+
+.prod-images {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 20;
 }
 
-.dealofweek-prod-info a.dealofweek-basket.active {
+.prod-images .main-image {
+    width: 100%;
+    height: 100%;
     display: block;
+    animation: fadeIn 0.5s ease;
 }
 
-.dealofweek-prod-info .dealofweek-basket:hover {
-    background: #d90000;
-    color: #fff;
-}
-
-.dealofweek-prod-info .dealofweek-basket:active {
-    background: #9a0101;
+.product-image-b.active .prod-images .main-image {
+    display: none;
+    animation: fadeIn 0.5s ease;
 }
 
 
-
-.dealofweek-wish {
-    position: absolute;
-    right: 0;
-    bottom: 13%;
+.prod-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
 }
 
-.dealofweek-wish img {
+
+
+/* H O V E R */
+
+
+
+
+/* ***** product-image-box ***** */
+
+
+
+
+
+
+
+
+
+
+
+/* ***** product-info-box ***** */
+
+.dealofweek .product-boxs .product-info-boxs {
+    width: 100%;
     display: flex;
-    transition: all 0.5s ease;
-    width: 18px;
-    /* width: 22px; */
-}
+    justify-content: space-between;
+    height: 16%;
 
-.dealofweek-wish img:hover {
-    transform: scale(1.15);
-}
+    /**/
+    /* height: 18%; */
 
-.dealofweek-wish img:active {
-    transform: scale(0.9);
-}
-
-.dealofweek-prod-info .offer {
-    top: 3%;
-    left: 5%;
-    display: flex;
-    background: #ffffff;
-    position: absolute;
-    padding: 1% 3%;
-    text-decoration: none;
-    color: #000;
-    font-size: 10px;
-    /* font-size: 14px; */
-}
-
-.dealofweek-prod-info .offer.dis {
-    color: #fff;
-    background-color: #d90000;
-}
-
-.dealofweek-prod-info .offer.best {
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    background-color: #000000;
+    /***/
+    /* height: 18%; */
 }
 
 
-
-
-
-
-
-
-
-.dealofweek-prod-info .prod-info {
+.product-boxs .product-info-boxs .p-inf {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    width: 100%;
-    margin-top: 8%;
-    /* height: 8%; */
+    justify-content: space-between;
+    height: 100%;
+    width: 70% !important;
+
+    /***/
+    /* justify-content: space-between !important; */
 }
 
 
-
-.dealofweek-prod-info .prod-info .dis-price {
-    font-size: 14px;
-    font-weight: 600;
-    color: #fb1212;
-}
-
-.dealofweek-prod-info .prod-info .sell-price {
-    font-size: 14px;
-    font-weight: 600;
-    color: #ffffff;
-}
-
-.dealofweek-prod-info .prod-info .sel-price {
-    font-size: 12px;
-    font-weight: 500;
-    color: #ffffff;
-}
-
-.prod-name {
+.product-info-boxs .p-inf div {
     display: flex;
-    text-decoration: none;
-    color: #f6f6f6;
+    flex-direction: column;
+}
+
+.product-info-boxs .p-inf div h6 {
+    font-weight: 400;
+    color: #c3c1c1;
+    font-size: 8px;
+
+    /**/
+    /* font-size: 10px; */
+
+
+    /***/
+    /* font-size: 12px; */
+}
+
+
+
+.product-info-boxs .p-inf div h3 {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10px;
+
+    /**/
     font-size: 12px;
+
+    /***/
     /* font-size: 16px; */
 }
 
+.product-info-boxs .p-inf span {
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 8px;
+
+    /**/
+    /* font-size: 12px; */
+
+    /***/
+    /* font-size: 14px; */
+}
+
+
+
+.product-info-boxs .p-pric {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 35%;
+
+    /**/
+    /* width: 30%; */
+}
+
+
+.product-info-boxs .p-pric img {
+    width: 14px;
+    height: 14px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+
+    /**/
+    /* width: 20px; */
+    /* height: 20px; */
+
+    /***/
+    /* width: 22px; */
+    /* height: 22px; */
+}
+
+.product-info-boxs .p-pric img:hover {
+    transform: scale(1.15);
+}
+
+.product-info-boxs .p-pric img:active {
+    transform: scale(0.9);
+}
+
+
+
+.product-info-boxs .p-pric .cart-prices {
+    width: 100%;
+    text-align: end;
+}
+
+
+
+.product-info-boxs .p-pric .cart-prices .sell-price {
+    font-weight: 500;
+    color: #d5d3d3;
+    font-size: 8px;
+
+    /**/
+    /* font-size: 10px; */
+
+    /***/
+    /* font-size: 12px; */
+}
+
+.product-info-boxs .p-pric .cart-prices .sell-price.dis {
+    font-weight: 600;
+    color: #d90000;
+    font-size: 10px;
+
+    /**/
+    /* font-size: 12px; */
+
+    /***/
+    /* font-size: 14px; */
+}
+
+.product-info-boxs .p-pric .cart-prices .sell-price.sell {
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 10px;
+
+    /**/
+    /* font-size: 12px; */
+
+    /***/
+    /* font-size: 14px; */
+}
+
+
+/* ***** product-info-box ***** */
+
+
 /* ========== DEALOFWEEK - Products  - End =========== */
+
 
 
 
@@ -2781,7 +3210,517 @@ DEAL OF WEEK    SECTION - End
     .collection-list {
         flex-direction: row;
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ----------------------
+DEAL OF WEEK    SECTION - Start
+------------------------- */
+
+
+
+    .dealofweek {
+
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+
+
+
+    /* ========== deal-offer - Start =========== */
+
+    .dealofweek .deal-offer {
+        align-items: start;
+        justify-content: start;
+        width: 50%;
+        /* width: 40%; */
+    }
+
+    .dealofweek .deal-offer .deal-title {
+        margin-bottom: 10px;
+        /* margin-bottom: 0px; */
+    }
+
+    .dealofweek .deal-offer .deal-title h5 {
+        font-size: 14px;
+        /* font-size: 16px; */
+    }
+
+    .dealofweek .deal-offer .deal-collection h1 {
+        font-size: 20px;
+        /* font-size: 26px; */
+    }
+
+    .dealofweek .deal-offer .deal-collection h5 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        text-align: start;
+        /* margin-bottom: 20px; */
+        /* font-size: 20px; */
+    }
+
+    .dealofweek .deal-offer a {
+        max-width: 80px;
+        border: 2px solid #fff;
+        padding: 10px;
+
+
+        /* padding: 12px; */
+        /* max-width: 100px; */
+        /* font-size: 12px; */
+        /* border: 2px solid #fff; */
+    }
+
+    .dealofweek .deal-offer a:hover {
+        border: 2px solid transparent;
+    }
+
+    .offer-time {
+        display: flex;
+        color: #fff;
+        margin-top: 5%;
+        gap: 10px;
+    }
+
+    .separate {
+        font-size: 18px;
+        /* font-size: 20px; */
+    }
+
+    .offer-time .time .num {
+        font-size: 18px;
+        /* font-size: 20px; */
+    }
+
+    .offer-time .time .nam {
+        font-size: 12px;
+        /* font-size: 14px; */
+    }
+
+    /* ========== deal-offer - End =========== */
+
+
+
+
+
+    /* ========== DEALOFWEEK - Products  - Start =========== */
+
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
+
+    .dealofweek .swiper.dealofweek-prod {
+        display: flex;
+        position: static;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 3%;
+        height: 300px;
+        width: 50%;
+        /* width: 50%; */
+        /* height: 450px; */
+        /* max-height: 450px; */
+    }
+
+
+
+    .dealofweek .swiper-pagination.t-a {
+        height: 5%;
+    }
+
+    .dealofweek .swiper-wrapper.products-carts {
+        height: 87%;
+        /* height: 87%; */
+
+    }
+
+    .dealofweek .swiper-wrapper.products-carts .swiper-slide.product-boxs {
+        width: 100%;
+    }
+
+    .dealofweek .swiper-pagination {
+        --swiper-pagination-color: red;
+        --swiper-pagination-bullet-inactive-color: #ffffff;
+        --swiper-pagination-bullet-inactive-opacity: 0.2;
+        --swiper-pagination-bullet-opacity: 1;
+        --swiper-pagination-bullet-horizontal-gap: 4px;
+        --swiper-pagination-bullet-vertical-gap: 6px;
+        --swiper-pagination-top: auto;
+
+        --swiper-pagination-bullet-size: 12px;
+        --swiper-pagination-bullet-width: 12px;
+        --swiper-pagination-bullet-height: 12px;
+
+
+        /* --swiper-pagination-bullet-size: 16px; */
+        /* --swiper-pagination-bullet-width: 16px; */
+        /* --swiper-pagination-bullet-height: 16px; */
+
+    }
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
+
+
+
+
+
+
+
+
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeOut {
+        from {
+            opacity: 1;
+
+        }
+
+        to {
+            opacity: 0;
+        }
+    }
+
+
+
+
+
+
+
+    .product-boxs {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 47%;
+        z-index: 99999999;
+    }
+
+
+
+
+
+    /* ***** product-image-box ***** */
+
+    .product-boxs .product-image-b {
+        width: 100%;
+
+        position: relative;
+        z-index: 30;
+        height: 79%;
+        /* height: 76%; */
+        /* height: 82%; */
+    }
+
+
+
+
+    .product-image-b .prod-buttons .add-btn {
+        /***/
+        /* padding: 8px; */
+        /* font-size: 16px; */
+        /* width: 80%; */
+
+    }
+
+
+
+
+
+
+    .product-image-b .prod-buttons .add-size {
+
+        /***/
+        /* font-size: 16px; */
+    }
+
+
+
+    .product-image-b .prod-buttons .add-size .btn-size {
+        /***/
+        /* position: relative; */
+        /* z-index: 20; */
+    }
+
+
+
+
+
+    .product-image-b .labels {
+        /**/
+        /* width: 46%; */
+
+        /***/
+        width: 50%;
+
+    }
+
+    .product-image-b .labels a {
+        /**/
+        font-weight: 400;
+        padding: 1.5px;
+        font-size: 9px;
+
+        /***/
+        /* font-weight: 600; */
+        /* font-size: 12px; */
+        /* padding: 2px; */
+
+    }
+
+
+    /* **** S W I P E R ***** */
+
+
+
+    .product-image-b .swiper .swiper-slide {
+        height: 250px;
+        /* height: 300px; */
+        width: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .product-image-b .swiper-button-next::after,
+    .product-image-b .swiper-button-prev::after {
+
+        /***/
+        /* font-size: 24px; */
+    }
+
+
+
+    /* **** S W I P E R ***** */
+
+
+
+
+    /* H O V E R */
+
+
+
+
+    /* ***** product-image-box ***** */
+
+
+
+
+
+
+
+
+
+
+
+    /* ***** product-info-box ***** */
+
+    .dealofweek .product-boxs .product-info-boxs {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        height: 16%;
+
+        /**/
+        /* height: 18%; */
+
+        /***/
+        /* height: 18%; */
+    }
+
+
+    .product-boxs .product-info-boxs .p-inf {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 70% !important;
+
+        /***/
+        /* justify-content: space-between !important; */
+    }
+
+
+    .product-info-boxs .p-inf div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .product-info-boxs .p-inf div h6 {
+        font-weight: 400;
+        color: #c3c1c1;
+        font-size: 8px;
+
+        /**/
+        /* font-size: 10px; */
+
+
+        /***/
+        /* font-size: 12px; */
+    }
+
+
+
+    .product-info-boxs .p-inf div h3 {
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 10px;
+
+        /**/
+        font-size: 12px;
+
+        /***/
+        /* font-size: 16px; */
+    }
+
+    .product-info-boxs .p-inf span {
+        font-weight: 400;
+        color: #ffffff;
+        font-size: 8px;
+
+        /**/
+        /* font-size: 12px; */
+
+        /***/
+        /* font-size: 14px; */
+    }
+
+
+
+    .product-info-boxs .p-pric {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        width: 35%;
+
+        /**/
+        /* width: 30%; */
+    }
+
+
+    .product-info-boxs .p-pric img {
+        width: 14px;
+        height: 14px;
+        transition: all 0.5s ease;
+        cursor: pointer;
+
+        /**/
+        /* width: 20px; */
+        /* height: 20px; */
+
+        /***/
+        /* width: 22px; */
+        /* height: 22px; */
+    }
+
+    .product-info-boxs .p-pric img:hover {
+        transform: scale(1.15);
+    }
+
+    .product-info-boxs .p-pric img:active {
+        transform: scale(0.9);
+    }
+
+
+
+    .product-info-boxs .p-pric .cart-prices {
+        width: 100%;
+        text-align: end;
+    }
+
+
+
+    .product-info-boxs .p-pric .cart-prices .sell-price {
+        font-weight: 500;
+        color: #d5d3d3;
+        font-size: 8px;
+
+        /**/
+        /* font-size: 10px; */
+
+        /***/
+        /* font-size: 12px; */
+    }
+
+    .product-info-boxs .p-pric .cart-prices .sell-price.dis {
+        font-weight: 600;
+        color: #d90000;
+        font-size: 10px;
+
+        /**/
+        /* font-size: 12px; */
+
+        /***/
+        /* font-size: 14px; */
+    }
+
+    .product-info-boxs .p-pric .cart-prices .sell-price.sell {
+        font-weight: 600;
+        color: #ffffff;
+        font-size: 10px;
+
+        /**/
+        /* font-size: 12px; */
+
+        /***/
+        /* font-size: 14px; */
+    }
+
+
+    /* ***** product-info-box ***** */
+
+
+    /* ========== DEALOFWEEK - Products  - End =========== */
+
+
+
+
+
+
+    /* ----------------------
+DEAL OF WEEK    SECTION - End
+------------------------- */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3116,6 +4055,281 @@ TRENDY SLIDER - End
 
 
 
+
+
+
+
+
+
+
+
+    /* ----------------------
+DEAL OF WEEK    SECTION - Start
+------------------------- */
+
+
+
+
+
+
+    /* ========== deal-offer - Start =========== */
+
+    .dealofweek .deal-offer {
+        width: 40%;
+    }
+
+    .dealofweek .deal-offer .deal-title {
+        margin-bottom: 0px;
+    }
+
+    .dealofweek .deal-offer .deal-title h5 {
+        font-size: 16px;
+    }
+
+    .dealofweek .deal-offer .deal-collection h1 {
+        font-size: 26px;
+    }
+
+    .dealofweek .deal-offer .deal-collection h5 {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    .dealofweek .deal-offer a {
+        padding: 12px;
+        max-width: 100px;
+        font-size: 12px;
+        border: 2px solid #fff;
+    }
+
+    .separate {
+        font-size: 20px;
+    }
+
+    .offer-time .time .num {
+        font-size: 20px;
+    }
+
+    .offer-time .time .nam {
+        font-size: 14px;
+    }
+
+    /* ========== deal-offer - End =========== */
+
+
+
+
+
+    /* ========== DEALOFWEEK - Products  - Start =========== */
+
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
+
+    .dealofweek .swiper.dealofweek-prod {
+        width: 50%;
+        height: 360px;
+        max-height: 360px;
+        width: 50%;
+        margin: 0;
+        max-width: 700px;
+    }
+
+
+
+
+
+    .dealofweek .swiper-wrapper.products-carts {
+        height: 87%;
+    }
+
+    .dealofweek .swiper-wrapper.products-carts .swiper-slide.product-boxs {
+        width: 100%;
+    }
+
+    .dealofweek .swiper-pagination {
+        --swiper-pagination-bullet-size: 14px;
+        --swiper-pagination-bullet-width: 14px;
+        --swiper-pagination-bullet-height: 14px;
+
+    }
+
+    /* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
+
+
+
+
+
+    /* ***** product-image-box ***** */
+
+    .product-image-b .prod-buttons .add-btn {
+        /***/
+        padding: 6px;
+        font-size: 14px;
+        width: 80%;
+
+    }
+
+
+
+
+
+
+    .product-image-b .prod-buttons .add-size {
+        font-size: 14px;
+    }
+
+
+
+    .product-image-b .prod-buttons .add-size .btn-size {
+        position: relative;
+        z-index: 20;
+    }
+
+
+
+
+
+
+    .product-image-b .labels a {
+        font-weight: 600;
+        font-size: 10px;
+        padding: 2px;
+
+    }
+
+
+    /* **** S W I P E R ***** */
+
+
+
+    .product-image-b .swiper .swiper-slide {
+        height: 300px;
+    }
+
+    /* **** S W I P E R ***** */
+
+
+
+
+    /* H O V E R */
+
+
+
+
+    /* ***** product-image-box ***** */
+
+
+
+
+
+
+
+
+
+
+
+    /* ***** product-info-box ***** */
+
+    .dealofweek .product-boxs .product-info-boxs {
+        height: 17%;
+    }
+
+
+    .product-boxs .product-info-boxs .p-inf {
+        justify-content: space-between !important;
+    }
+
+
+
+    .product-info-boxs .p-inf span {
+        color: #ffffff;
+        font-size: 10px;
+
+        /**/
+        /* font-size: 12px; */
+
+        /***/
+        /* font-size: 14px; */
+    }
+
+
+
+    .product-info-boxs .p-pric {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        width: 35%;
+
+        /**/
+        /* width: 30%; */
+    }
+
+
+    .product-info-boxs .p-pric img {
+        width: 18px;
+        height: 18px;
+        transition: all 0.5s ease;
+        cursor: pointer;
+    }
+
+
+
+
+    .product-info-boxs .p-pric .cart-prices .sell-price {
+        font-size: 10px;
+    }
+
+    .product-info-boxs .p-pric .cart-prices .sell-price.dis {
+        font-size: 12px;
+
+    }
+
+    .product-info-boxs .p-pric .cart-prices .sell-price.sell {
+
+        font-size: 12px;
+    }
+
+
+    /* ***** product-info-box ***** */
+
+
+    /* ========== DEALOFWEEK - Products  - End =========== */
+
+
+
+
+
+
+    /* ----------------------
+DEAL OF WEEK    SECTION - End
+------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /* ----------------------
 BLOG SECTION - Start
 ------------------------- */
@@ -3333,14 +4547,18 @@ DEAL OF WEEK    SECTION - End
 
     /* ========== deal-offer - Start =========== */
 
-    .dealofweek .deal-offer {
+    /* .dealofweek .deal-offer {
         gap: 30px;
         width: 50%;
-    }
+    } */
+
+    /* .dealofweek {
+        display: flex;
+        flex-direction: row;
+    } */
 
 
-
-    .dealofweek .deal-offer .deal-title .arrow {
+    /* .dealofweek .deal-offer .deal-title .arrow {
         height: 3px;
     }
 
@@ -3385,7 +4603,7 @@ DEAL OF WEEK    SECTION - End
 
     .offer-time .time .nam {
         font-size: 18px;
-    }
+    } */
 
     /* ========== deal-offer - End =========== */
 
@@ -3393,7 +4611,7 @@ DEAL OF WEEK    SECTION - End
 
     /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
 
-    .dealofweek .swiper {
+    /* .dealofweek .swiper {
         width: 50%;
         height: 430px !important;
     }
@@ -3402,7 +4620,7 @@ DEAL OF WEEK    SECTION - End
         text-align: center;
         font-size: 18px;
         display: flex;
-    }
+    } */
 
 
 
@@ -3417,33 +4635,6 @@ DEAL OF WEEK    SECTION - End
     /* ========== DEALOFWEEK - Products  - Start =========== */
 
 
-    .dealofweek-prod-info a.dealofweek-basket {
-        font-size: 14px;
-    }
-
-    .dealofweek-wish img {
-        width: 22px;
-    }
-
-
-    .dealofweek-prod-info .offer {
-        font-size: 14px;
-    }
-
-
-
-
-
-
-
-    .dealofweek-prod-info .prod-info {
-        height: 8%;
-    }
-
-
-    .prod-name {
-        font-size: 16px;
-    }
 
     /* ========== DEALOFWEEK - Products  - End =========== */
 
