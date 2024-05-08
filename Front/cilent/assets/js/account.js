@@ -175,58 +175,295 @@ function WishContainer(params) {
     }
 }
 
-WishContainer();
+// WishContainer();
 
-function SwiperCustom() {
+// function SwiperCustom() {
 
 
-    var swiper = new Swiper(".wish.mySwiper", {
-        slidesPerView: 1,
+//     var swiper = new Swiper(".wish.mySwiper", {
+//         slidesPerView: 1,
+//         spaceBetween: 10,
+//         pagination: {
+//             el: ".swiper-pagination",
+//             clickable: true,
+//             dynamicBullets: true,
+//         },
+//         breakpoints: {
+//             "@0.00": {
+//                 slidesPerView: 2,
+//                 spaceBetween: 10,
+//                 grid: {
+//                     rows: 2,
+//                     fill: "row",
+//                 }
+//             },
+//             "@0.75": {
+//                 slidesPerView: 2,
+//                 spaceBetween: 20,
+//                 grid: {
+//                     rows: 2,
+//                     fill: "row",
+//                 }
+//             },
+//             "@1.00": {
+//                 slidesPerView: 2,
+//                 spaceBetween: 40,
+//                 grid: {
+//                     rows: 2,
+//                     fill: "row",
+//                 }
+//             },
+//             "@1.50": {
+//                 slidesPerView: 4,
+//                 spaceBetween: 35,
+//                 grid: {
+//                     rows: 2,
+//                     fill: "row",
+//                 }
+//             },
+//         },
+//     });
+// }
+
+// SwiperCustom()
+// var swiper = new Swiper(".hover-image .mySwiper", {
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+// });
+
+
+
+
+// var itemImages = document.querySelectorAll('.item-image');
+
+// itemImages.forEach(itemImage => {
+//     let mainImage = itemImage.querySelector('.main-image');
+//     let hoverImage = itemImage.querySelector('.hover-image');
+//     let currentAddBtn = itemImage.querySelector('.add-btn');
+
+//     itemImage.addEventListener('mouseover', (event) => {
+//         if (event.target.classList.contains('main-image')) {
+//             hoverImage.classList.add('active');
+//             mainImage.classList.remove('active');
+//         }
+//         currentAddBtn.classList.add('active');
+//     });
+
+//     itemImage.addEventListener('mouseout', (event) => {
+//         if (event.target.classList.contains('main-image')) {
+//             hoverImage.classList.remove('active');
+//             mainImage.classList.add('active');
+//         }
+//         currentAddBtn.classList.remove('active');
+//     });
+// });
+
+
+
+
+
+
+// var productItems = document.querySelectorAll('.product-item');
+// var wishCnt = document.querySelector('.i-wish sup');
+// var basketCount = document.querySelector('.i-basket');
+
+// productItems.forEach(item => {
+//     var wishIconBtn = item.querySelector('.wish-icon img');
+//     var addToCart = item.querySelector('.add-btn a'); // Değişiklik burada: .add-btn sınıfı hedef alındı.
+
+//     wishIconBtn.addEventListener('click', (event) => {
+//         event.preventDefault();
+
+//         wishCnt.innerText--;
+
+//         if (parseInt(wishCnt.innerText) <= 0) {
+//             wishCnt.remove()
+//         }
+
+//         item.remove();
+
+//         WishContainer();
+//         SwiperCustom()
+//     });
+
+//     addToCart.addEventListener('click', (event) => {
+//         event.preventDefault();
+
+//         if (!basketCount.querySelector('.i-basket sup')) {
+//             var supElement = document.createElement('sup');
+//             supElement.textContent = '1';
+//             basketCount.appendChild(supElement);
+//         } else {
+//             var supElement = basketCount.querySelector('.i-basket sup');
+//             var currentValue = parseInt(supElement.textContent);
+//             supElement.textContent = currentValue + 1;
+//         }
+//     });
+
+//     WishContainer();
+
+// });
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var swiper = new Swiper(".mySwiper.sub", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+   
+    breakpoints: {
+      "@0.00": {
+        slidesPerView: 2,
         spaceBetween: 10,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-            dynamicBullets: true,
-        },
-        breakpoints: {
-            "@0.00": {
-                slidesPerView: 2,
-                spaceBetween: 10,
-                grid: {
-                    rows: 2,
-                    fill: "row",
-                }
-            },
-            "@0.75": {
-                slidesPerView: 2,
-                spaceBetween: 20,
-                grid: {
-                    rows: 2,
-                    fill: "row",
-                }
-            },
-            "@1.00": {
-                slidesPerView: 2,
-                spaceBetween: 40,
-                grid: {
-                    rows: 2,
-                    fill: "row",
-                }
-            },
-            "@1.50": {
-                slidesPerView: 4,
-                spaceBetween: 35,
-                grid: {
-                    rows: 2,
-                    fill: "row",
-                }
-            },
-        },
-    });
-}
+        grid: {
+          rows: 1,
+          fill: "row",
+        }
+      },
+      "@0.75": {
+        slidesPerView: 3,
+        spaceBetween: 25,
+        grid: {
+          rows: 2,
+          fill: "row",
+        }
+      },
+      "@1.00": {
+        slidesPerView: 4,
+        spaceBetween: 20,
+        grid: {
+          rows: 2,
+          fill: "row",
+        }
+      },
+      "@1.50": {
+        slidesPerView: 4,
+        spaceBetween: 45,
+        grid: {
+          rows: 2,
+          fill: "row",
+        }
+      },
+    },
+  });
 
-SwiperCustom()
-var swiper = new Swiper(".hover-image .mySwiper", {
+
+
+
+
+
+
+
+
+
+  // =====================================
+//          PRODUCT ITEMS
+// =====================================
+
+const wishBtnP = document.querySelectorAll('.p-pric img');
+
+const wishCount = document.querySelector('.i-wish sup');
+wishBtnP.forEach(wishBtn => {
+
+    wishBtn.addEventListener('click', function (event) {
+        wishBtn.classList.toggle('active');
+
+        if (wishBtn.classList.contains('active')) {
+            wishBtn.src = '/cilent/assets/icons/wish-icon-active.svg';
+            wishCount.innerText = parseInt(wishCount.innerText) + 1;
+        } else {
+            wishBtn.src = '/cilent/assets/icons/wish-icon.svg';
+            wishCount.innerText = parseInt(wishCount.innerText) - 1;
+        }
+    });
+
+});
+
+
+
+
+// const productImageBox = document.querySelectorAll('.product-image-box');
+// const basketCount = document.querySelector('.i-basket sup');
+
+// productImageBox.forEach(prodBtn => {
+
+//     const productAddBtn = prodBtn.querySelector('.add-btn');
+//     const productAddSize = prodBtn.querySelector('.add-size');
+
+//     const mainImage = prodBtn.querySelector('.main-image');
+//     const hoverImage = prodBtn.querySelector('.hover-image');
+
+//     productAddBtn.addEventListener('click', function (event) {
+//         productAddSize.style.display = 'flex';
+//     });
+
+//     productAddSize.addEventListener('click', function (event) {
+//         productAddSize.style.display = 'none';
+//         basketCount.innerText = parseInt(basketCount.innerText)+1;;
+//     });
+
+
+
+
+//     prodBtn.addEventListener('mouseover', function (event) {
+//         productAddBtn.style.display = 'flex';
+//         hoverImage.style.display = 'flex';
+//         mainImage.style.display = 'none';
+//     });
+
+//     prodBtn.addEventListener('mouseout', function (event) {
+//         productAddBtn.style.display = 'none';
+//         hoverImage.style.display = 'none';
+//         mainImage.style.display = 'flex';
+//     });
+
+
+
+
+
+
+
+// });
+
+
+var swiper = new Swiper(".product-image-box .mySwiper", {
+    autoHeight: true,
+    spaceBetween: 20,
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -236,77 +473,91 @@ var swiper = new Swiper(".hover-image .mySwiper", {
 
 
 
-var itemImages = document.querySelectorAll('.item-image');
 
-itemImages.forEach(itemImage => {
-    let mainImage = itemImage.querySelector('.main-image');
-    let hoverImage = itemImage.querySelector('.hover-image');
-    let currentAddBtn = itemImage.querySelector('.add-btn');
 
-    itemImage.addEventListener('mouseover', (event) => {
-        if (event.target.classList.contains('main-image')) {
-            hoverImage.classList.add('active');
-            mainImage.classList.remove('active');
-        }
-        currentAddBtn.classList.add('active');
+
+
+
+
+
+
+
+
+
+const productImageBox = document.querySelectorAll('.product-image-box');
+const basketCount = document.querySelector('.i-basket sup');
+
+productImageBox.forEach(prodBtn => {
+
+    const productAddBtn = prodBtn.querySelector('.add-btn');
+    const productAddSize = prodBtn.querySelector('.add-size');
+
+    const mainImage = prodBtn.querySelector('.main-image');
+    const hoverImage = prodBtn.querySelector('.hover-image');
+
+
+    const swiperBtns = prodBtn.querySelectorAll('.p-btn');
+
+
+    prodBtn.addEventListener('mouseover', function (event) {
+        prodBtn.classList.add('active');
+        productAddBtn.classList.add('active');
     });
 
-    itemImage.addEventListener('mouseout', (event) => {
-        if (event.target.classList.contains('main-image')) {
+
+
+
+
+    prodBtn.addEventListener('mouseout', (event) => {
+        if (!prodBtn.contains(event.relatedTarget)) {
             hoverImage.classList.remove('active');
-            mainImage.classList.add('active');
+            productAddBtn.classList.remove('active');
+            productAddSize.classList.remove('active');
         }
-        currentAddBtn.classList.remove('active');
-    });
-});
-
-
-
-
-
-
-var productItems = document.querySelectorAll('.product-item');
-var wishCnt = document.querySelector('.i-wish sup');
-var basketCount = document.querySelector('.i-basket');
-
-productItems.forEach(item => {
-    var wishIconBtn = item.querySelector('.wish-icon img');
-    var addToCart = item.querySelector('.add-btn a'); // Değişiklik burada: .add-btn sınıfı hedef alındı.
-
-    wishIconBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-
-        wishCnt.innerText--;
-
-        if (parseInt(wishCnt.innerText) <= 0) {
-            wishCnt.remove()
-        }
-
-        item.remove();
-
-        WishContainer();
-        SwiperCustom()
+        prodBtn.classList.remove('active');
     });
 
-    addToCart.addEventListener('click', (event) => {
-        event.preventDefault();
 
-        if (!basketCount.querySelector('.i-basket sup')) {
-            var supElement = document.createElement('sup');
-            supElement.textContent = '1';
-            basketCount.appendChild(supElement);
-        } else {
-            var supElement = basketCount.querySelector('.i-basket sup');
-            var currentValue = parseInt(supElement.textContent);
-            supElement.textContent = currentValue + 1;
-        }
+
+
+
+
+
+    productAddBtn.addEventListener('click', function (event) {
+        productAddSize.classList.add('active');
     });
 
-    WishContainer();
+
+
+    productAddSize.addEventListener('click', function (event) {
+        productAddSize.classList.remove('active');
+        basketCount.innerText = parseInt(basketCount.innerText) + 1;;
+    });
+
+
+    productAddSize.addEventListener('mouseover', (event) => {
+
+        swiperBtns.forEach(swiperBtn => {
+            swiperBtn.style.display = 'none';
+        });
+
+    });
+
+    productAddSize.addEventListener('mouseout', (event) => {
+
+        if (!productAddSize.contains(event.relatedTarget)) {
+            productAddSize.classList.remove('active');
+            swiperBtns.forEach(swiperBtn => {
+                swiperBtn.style.display = 'block';
+            });
+        }
+
+    });
+
+
 
 });
 
-
-
-
-  
+// =====================================
+//          PRODUCT ITEMS
+// =====================================

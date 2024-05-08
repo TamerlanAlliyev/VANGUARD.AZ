@@ -272,6 +272,7 @@ form .form-submit {
     color: #fff;
     border: none;
     cursor: pointer;
+    min-width: 100px !important;
 }
 
 
@@ -305,7 +306,7 @@ form .form-submit:active {
     padding: 3%;
     width: 100%;
     /* margin-bottom: 50px; */
-    height: 100%;
+    height: auto;
     position: relative;
 }
 
@@ -984,185 +985,367 @@ ul.order-datas .order-data .order-product-img img {
 ===========================*/
 
 
-/* ============ SWIPER ============ */
 
-.product-not-found {
-    font-style: 180px;
-    font-weight: 500;
-    display: none;
+
+/* ---------- SWIPER - START ---------- */
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-.product-not-found.active {
-    display: flex;
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
-.acc.wish.swiper {
-    max-width: 850px;
+
+
+
+
+
+
+
+ .swiper.sub {
     width: 100%;
-    height: 100%;
-    position: static;
-    margin-bottom: 50px;
     display: none;
+    margin-top: 5px;
+    position: static;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3%;
+    height: 300px;
+    transition: all 0.9s ease;
 }
 
-.acc.wish.swiper.active {
-    display: block;
-}
-
-
-.swiper-slide {
-    font-size: 8px;
-    display: flex;
-    height: 320px !important;
-}
-
-
-
-
-.swiper-pagination {
-    z-index: 99999;
-    bottom: 30px !important;
+ .swiper.sub.active {
+    display: flex !important;
+    animation: fadeIn 0.9s ease;
 }
 
 
+ .swiper-pagination.t-a {
+    top: 10px !important;
+    position: relative;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 15%;
+}
 
-.swiper-pagination {
+ .swiper-wrapper.products-cart {
+    height: 100%;
+    height: 90%;
+}
+
+ .swiper-wrapper.products-cart .swiper-slide {
+    width: 100%;
+    
+}
+
+ .swiper-pagination {
     --swiper-pagination-color: red;
-    --swiper-pagination-bullet-size: 16px;
-    --swiper-pagination-bullet-width: 16px;
-    --swiper-pagination-bullet-height: 16px;
-    --swiper-pagination-bullet-inactive-color: #00000061;
-    --swiper-pagination-bullet-inactive-opacity: 0.9;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
     --swiper-pagination-bullet-opacity: 1;
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-vertical-gap: 6px;
     --swiper-pagination-top: auto;
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
 }
 
-/* ============ SWIPER ============ */
+
+/* ---------- SWIPER - END ---------- */
 
 
 
 
 
 
-.product-item {
+
+
+
+
+
+
+
+
+
+
+/* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+
+
+
+
+
+
+.product-box {
     display: flex;
     flex-direction: column;
-    width: 100%;
     justify-content: space-between;
-    position: relative;
+    width: 47%;
+    z-index: 99999999;
 }
 
-.product-item .item-image {
+
+
+
+
+/* ***** product-image-box ***** */
+
+.product-box .product-image-box {
+    width: 100%;
+    position: relative;
+    z-index: 30;
+    height: 80%;
+}
+
+
+
+
+
+.product-image-box .p-buttons {
+    width: 100%;
+    position: absolute;
+    z-index: 25;
+    bottom: 0;
+    left: 0;
     display: flex;
-    width: 100%;
-    height: 70%;
-    position: relative;
-}
-
-.product-item .item-image a.main-image,
-.product-item .item-image a.hover-image {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.product-item .item-image a.main-image {
-    z-index: 1;
-}
-
-.product-item .item-image a.hover-image {
-    opacity: 0;
-}
-
-.product-item .item-image:hover a.main-image {
-    opacity: 0;
-}
-
-.product-item .item-image:hover a.hover-image {
-    opacity: 1;
-}
-
-.product-item .item-image a.main-image.active,
-.product-item .item-image a.hover-image.active {
-    display: block;
+    justify-content: center;
 }
 
 
-
-
-
-.product-item .item-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-}
-
-.add-btn {
-    position: absolute;
-    bottom: 5%;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    z-index: 1;
-    display: none;
-}
-
-.add-btn.active {
-    display: block;
-}
-
-
-.add-btn a {
-    display: inline-block;
-    background: #ffffff;
-    padding: 4px 20px;
-    color: #000;
-    font-weight: 500;
-    text-decoration: none;
-    text-transform: capitalize;
-    transition: all 0.5s ease;
-    font-size: 10px;
-    /* font-size: 12px; */
-}
-
-
-.add-btn a:hover {
-    background: #d90000;
-    color: #fff;
+.product-image-box .p-buttons .add-btn {
+    text-transform: uppercase;
     font-weight: 600;
+    text-decoration: none;
+    color: #000000;
+    background: #ffffff;
+    margin-bottom: 16px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+    cursor: pointer;
+    font-size: 10px;
+    width: 70%;
+    padding: 4px;
 }
 
-.add-btn a:active {
+
+
+.product-image-box.active .p-buttons .add-btn.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+
+
+.product-image-box .p-buttons a:hover {
+    color: #fff;
+    background: #d90000;
+}
+
+.product-image-box .p-buttons a:active {
     background: #9a0101;
 }
 
 
 
-
-/* ========================
-     WISH LIST - END
-===========================*/
-
-
-
-
-
-.hover-image .swiper {
+.product-image-box .p-buttons .add-size {
+    position: absolute;
+    display: none;
+    list-style: none;
     width: 100%;
-    height: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    z-index: 20;
+    bottom: 0;
+    background: #fff;
+    font-size: 10px;
+}
+
+.product-image-box .p-buttons .add-size.active {
+    display: flex;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.product-image-box .p-buttons .add-size .btn-size {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 5px 0;
 }
 
 
 
-.hover-image.swiper-slide img {
+
+.product-image-box .p-buttons .add-size .btn-size:hover {
+    background: #000;
+    color: #fff;
+}
+
+.product-image-box .p-buttons .add-size .btn-size:active {
+    background: #d90000;
+}
+
+
+
+
+
+
+
+
+
+.product-image-box .labels {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    justify-content: start;
+    align-items: center;
+    z-index: 20;
+    margin-left: 5px;
+    left: 3%;
+    top: 3%;
+    width: 50%;
+}
+
+.product-image-box .labels a {
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    padding: 1px;
+    font-size: 7px;
+}
+
+
+.product-image-box .labels .new {
+    color: #000;
+    background: #fff;
+}
+
+.product-image-box .labels .dis {
+    color: #fff;
+    background: #d90000;
+}
+
+.product-image-box .labels .best {
+    color: #fff;
+    background: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* **** S W I P E R ***** */
+
+
+.product-image-box .swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.product-image-box .swiper .swiper-slide {
+    height: 250px;
+    line-height: 250px;
+    width: 100%;
+}
+
+.product-image-box .swiper-button-next::after,
+.product-image-box .swiper-button-prev::after {
+    color: #8d8c8c;
+    font-size: 18px;
+}
+
+
+
+/* **** S W I P E R ***** */
+
+
+
+
+
+
+.p-images {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 20;
+}
+
+.p-images .main-image {
+    width: 100%;
+    height: 100%;
     display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+.product-image-box.active .p-images .main-image {
+    display: none;
+    animation: fadeIn 0.5s ease;
+}
+
+
+.p-images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1171,82 +1354,384 @@ ul.order-datas .order-data .order-product-img img {
 
 
 
+/* H O V E R */
 
-.swiper-button-next::after,
-.swiper-button-prev::after {
-    font-size: 18px;
-    color: #d90000 !important;
-
-}
-
-
-.item-info {
+.p-images .hover-image {
     width: 100%;
-    height: 25%;
-    display: flex;
+    height: 100%;
+    display: none;
+    animation: fadeIn 0.5s ease;
+
 }
 
-.item-info .item-name {
+
+.product-image-box.active>.p-images .hover-image {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+/* ***** product-image-box ***** */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ***** product-info-box ***** */
+
+ .product-box .product-info-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    height: 17%;
+}
+
+
+.product-box .product-info-box .p-inf {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    font-size: 14px;
+    justify-content: space-between;
+    height: 100%;
+    width: 70%;
 }
 
 
-.item-info img {
+.product-info-box .p-inf div {
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info-box .p-inf div h6 {
+    font-weight: 400;
+    color: #3c3c3c;
+    font-size: 8px;
+}
+
+
+
+.product-info-box .p-inf div h3 {
+    font-weight: 600;
+    color: #000000;
+    font-size: 10px;
+}
+
+.product-info-box .p-inf span {
+    font-weight: 400;
+    color: #000000;
+    font-size: 8px;
+}
+
+
+
+.product-info-box .p-pric {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: end;
+    width: 35%;
+}
+
+
+.product-info-box .p-pric img {
+    width: 14px;
+    height: 14px;
     transition: all 0.5s ease;
-    width: 16px;
-    /* width: 18px; */
+    cursor: pointer;
 }
 
-.item-info img:hover {
+.product-info-box .p-pric img:hover {
     transform: scale(1.15);
 }
 
-.item-info img:active {
+.product-info-box .p-pric img:active {
     transform: scale(0.9);
 }
 
 
 
-.prod-cat {
-    text-decoration: none;
-    color: #3c3c3c;
-    font-size: 10px;
-    /* font-size: 12px; */
+.product-info-box .p-pric .cart-prices {
+    width: 100%;
+    text-align: end;
 }
 
-.prod-name {
-    text-decoration: none;
-    color: #000;
+
+
+.product-info-box .p-pric .cart-prices .sell-price {
     font-weight: 500;
-    font-size: 12px;
-    /* font-size: 14px; */
-}
-
-
-
-.prices .sell-price.dis {
-    font-weight: 600;
-    color: #d90000;
-    font-size: 12px;
-    /* font-size: 14px; */
-}
-
-.prices .sell-price {
-    font-weight: 600;
     color: #000;
     font-size: 8px;
-    /* font-size: 10px; */
 }
 
-.prices .sell-price.sell {
-    font-weight: 500;
-    color: #000;
-    font-size: 12px;
-    /* font-size: 14px; */
+.product-info-box .p-pric .cart-prices .sell-price.dis {
+    font-weight: 600;
+    color: #d90000;
+    font-size: 10px;
 }
+
+.product-info-box .p-pric .cart-prices .sell-price.sell {
+    font-weight: 600;
+    color: #000;
+    font-size: 10px;
+}
+
+
+/* ***** product-info-box ***** */
+
+
+
+/* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+
+@media screen and (min-width: 768px) {
+
+    
+    /* ---------- SWIPER - START ---------- */
+
+     .swiper.sub {
+        height: 740px;
+    }
+
+
+
+     .swiper-pagination.t-a {
+        height: 15%;
+    }
+
+
+    /* ---------- SWIPER - END ---------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+    /* ***** product-image-box ***** */
+
+    .product-image-box .p-buttons .add-size {
+        font-size: 12px;
+    }
+
+
+    .product-image-box .labels a {
+        font-weight: 500;
+        padding: 1.5px;
+        font-size: 9px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* **** S W I P E R ***** */
+
+
+    .product-image-box .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .product-image-box .swiper .swiper-slide {
+        height: 280px;
+        line-height: 280px;
+    }
+
+    .product-image-box .swiper-button-next::after,
+    .product-image-box .swiper-button-prev::after {
+        font-size: 20px;
+        font-size: 20px;
+    }
+
+
+
+    /* **** S W I P E R ***** */
+
+
+
+
+
+
+
+    /* ***** product-info-box ***** */
+
+     .product-box .product-info-box {
+        height: 17%;
+    }
+
+    .product-info-box .p-inf div h6 {
+        font-size: 10px;
+    }
+
+
+
+    .product-info-box .p-inf div h3 {
+        font-size: 12px;
+    }
+
+    .product-info-box .p-inf span {
+        font-size: 12px;
+    }
+
+
+
+    .product-info-box .p-pric {
+        width: 30%;
+    }
+
+
+    .product-info-box .p-pric img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price {
+        font-size: 10px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price.dis {
+        font-size: 12px;
+    }
+
+    .product-info-box .p-pric .cart-prices .sell-price.sell {
+        font-size: 12px;
+    }
+
+
+    /* ***** product-info-box ***** */
+
+
+
+    /* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+}
+
+
+
+
+
+
+
+@media screen and (min-width: 1024px) {
+
+
+    /* ---------- SWIPER - START ---------- */
+
+     .swiper.sub {
+        height: 750px;
+    }
+
+   
+
+     .swiper-pagination.t-a {
+        height: 5%;
+    }
+
+ 
+
+    /* ---------- SWIPER - END ---------- */
+
+    /* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+
+    /* ***** product-image-box ***** */
+
+    .product-box .product-image-box {
+        height: 78%;
+    }
+
+
+
+
+    /* **** S W I P E R ***** */
+
+    .product-image-box .swiper .swiper-slide {
+        height: 255px;
+        object-fit: cover;
+    }
+
+    .product-image-box .swiper-button-next::after,
+    .product-image-box .swiper-button-prev::after {
+        font-size: 24px;
+    }
+
+
+
+    /* **** S W I P E R ***** */
+
+
+    /* ***** product-info-box ***** */
+
+     .product-box .product-info-box {
+        height: 18%;
+    }
+
+
+
+
+    /* ***** product-info-box ***** */
+
+
+
+    /* ==============================================
+        P R O D U C U T  -  C O N T A I N E R
+=================================================*/
+
+}
+
+/* ========================
+     WISH LIST - END
+===========================*/
 
 
 
@@ -1278,6 +1763,9 @@ ul.order-datas .order-data .order-product-img img {
         border: 1.5px solid rgb(174, 173, 173);
     }
 
+    .account-container {
+        width: 75% !important;
+    }
 
 
 

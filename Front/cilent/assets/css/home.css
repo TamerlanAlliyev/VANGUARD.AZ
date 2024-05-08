@@ -189,8 +189,6 @@
     align-items: center;
     gap: 10px;
     position: absolute;
-    /* bottom: 5%;
-    left: 50%; */
     bottom: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -228,25 +226,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .section {
     display: flex;
     flex-direction: column;
@@ -264,307 +243,266 @@
 }
 
 
+
 /* ----------------------
 COLLECTION SLIDER - Start
 ------------------------- */
 
-.collection-area {
-    /* height: 100vh; */
+.section.collection {
     display: flex;
+    flex-direction: column;
+    width: 100%;
     max-height: 700px;
-
+    height: 100%;
 }
 
 .section.collection h1 {
-    text-align: center;
     margin: 0 auto 5%;
-    color: #000;
-    font-size: 16px;
+    text-align: center;
+    font-size: 18px;
 }
 
-
-.collection-list {
+.section.collection .collection-area {
     display: flex;
-    flex-direction: column;
-    gap: 5%;
     width: 100%;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 700px;
 }
-
-
-
-/* ========== list-one - Start ========== */
 
 .collection-area .list-one {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: top center;
+    display: flex;
     background-repeat: no-repeat;
-    padding: 10%;
-}
-
-
-.list-one-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+    background-position: top center;
+    background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 37%;
 }
 
-.list-one-card {
-    display: flex;
-    gap: 7%;
-}
-
-.list-one-card .list-one-info p {
-    font-size: 10px;
-    color: #000;
-}
-
-.list-one-card .list-one-info a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-}
-
-.list-one-card .one-btn a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 10px;
-    border: 1px solid #000;
-    padding: 2%;
-    transition: all 0.5s ease;
-}
-
-
-.list-one-card .one-btn a:hover {
-    background-color: #d90000;
-    border: none;
-    border: 1px solid transparent;
-    text-align: center;
-    color: #fff;
-}
-
-.list-one-card .one-btn a:active {
-    text-decoration: none;
-    background-color: #9a0101;
-    text-align: center;
-}
-
-
-/* ========== list-one - End ========== */
-
-
-
-
-
-
-
-
-
-/* ========== list-two - Start ========== */
 
 .collection-area .list-two {
     display: flex;
     flex-direction: column;
-    gap: 10%;
+    justify-content: space-between;
     width: 100%;
-    height: 100%;
+    height: 58%;
+    gap: 8%;
 }
 
 
+
+.collection-area .list-two .list-two-gift {
+    display: flex;
+    width: 100%;
+    height: 28%;
+    padding: 5%;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .collection-area .list-two .list-two-product {
+    display: flex;
     width: 100%;
-    height: 70%;
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
+    height: 65%;
 
-    padding: 10%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
-.list-two-card {
+
+/* list-one */
+
+.collection-area .list-one .list-one-card {
+    width: 100%;
+    display: flex;
+    padding: 8%;
+    gap: 3%;
+    align-items: end;
+    justify-content: space-between;
+}
+
+
+.list-one .list-one-card .list-one-info a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+
+.list-one .list-one-card .list-one-info p {
+    font-weight: 400;
+    text-decoration: none;
+    color: #000;
+    font-size: 10px;
+}
+
+
+
+
+.list-one .list-one-card .one-btn {
+    display: flex;
+}
+
+.list-one .list-one-card .one-btn a {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    border: 1px solid #000;
+    font-weight: 400;
+    padding: 8px;
+}
+
+.list-one .list-one-card .one-btn a:hover {
+    background: #d90000;
+    border: 1px solid transparent;
+    color: #fff;
+}
+
+.list-one .list-one-card .one-btn a:active {
+    background: #9a0101;
+}
+
+
+
+/* list-one */
+
+
+
+
+
+/* list-two-card */
+.list-two .list-two-product .list-two-card {
+    height: 100%;
+    padding: 5%;
+    gap: 3%;
+    width: 100%;
+    display: flex;
+    padding: 8%;
+    gap: 3%;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.list-two-product .list-two-card .list-two-info {
     display: flex;
     flex-direction: column;
-    justify-content: end;
-    width: 100%;
-    height: 100%;
-    gap: 7%;
+    justify-content: space-between;
+    gap: 3%;
 }
 
 
-
-
+.list-two-card .list-two-info a {
+    font-weight: 600;
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
 
 
 .list-two-card .list-two-info p {
+    font-weight: 400;
+    text-decoration: none;
     color: #000;
     font-size: 10px;
 }
 
-.list-two-card .list-two-info a {
-    color: #000;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
 
+
+
+.list-two-card .two-btn {
+    display: flex;
 }
 
 .list-two-card .two-btn a {
-    color: #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
     text-decoration: none;
-    font-weight: 500;
-    font-size: 10px;
+    color: #000;
+    font-size: 12px;
     border: 1px solid #000;
-    padding: 2%;
-    transition: all 0.5s ease;
-
+    font-weight: 400;
+    padding: 8px;
 }
 
-
 .list-two-card .two-btn a:hover {
-    background-color: #d90000;
-    border: none;
+    background: #d90000;
     border: 1px solid transparent;
-    text-align: center;
     color: #fff;
 }
 
 .list-two-card .two-btn a:active {
-    text-decoration: none;
-    background-color: #9a0101;
-    text-align: center;
-}
-
-/* ========== list-two - End ========== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ========== list-two-gift - Start ========== */
-
-
-.collection-area .list-two .list-two-gift {
-    width: 100%;
-    height: 30%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background: #9a0101;
 }
 
 
+/* list-two-card */
 
 
 
 
+/* list-two-gift  */
 
-
-.list-two-gift {
+.list-two .list-two-gift {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    gap: 5%;
     color: #fff;
-    padding: 10%;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
 }
 
-.list-two-gift .gift-info {
+.gift-info {
     display: flex;
     flex-direction: column;
-    color: #000;
-}
-
-.list-two-gift .gift-info a {
-    display: flex;
-    color: #fff;
-    text-decoration: none;
-}
-
-.list-two-gift .gift-info a:first-child {
-    color: #ffffff;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-.list-two-gift .gift-info a:last-child {
-    color: #ffffff;
-    font-size: 12px;
-}
-
-
-
-.list-two-gift .shop-btn {
-    width: 105px;
-    display: flex;
-    align-items: center;
+    height: 100%;
     justify-content: center;
-    color: #ffffff;
-    text-decoration: none;
-    background-color: #d90000;
+    gap: 5%;
+    width: 70%;
+}
+
+.list-two .list-two-gift .gift-info a:nth-child(1) {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.list-two .list-two-gift .gift-info a:nth-child(2) {
     font-weight: 500;
-    font-size: 10px;
-    padding: 2%;
-    transition: all 0.5s ease;
+    font-size: 14px;
 }
 
-.list-two-gift .shop-btn:active {
-    background-color: #9a0101;
+
+.list-two .shop-btn {
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    border: 1px solid #fff;
+    font-weight: 400;
+    padding: 8px;
 }
 
-/* ========== list-two-gift - End ========== */
+.list-two .shop-btn:hover {
+    background: #d90000;
+}
+
+.list-two .shop-btn:active {
+    background: #9a0101;
+    border: 1px solid transparent;
+}
+
+/* list-two-gift  */
+
+
 
 
 
 /* ----------------------
 COLLECTION SLIDER - End
 ------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -596,8 +534,6 @@ TRENDY SLIDER - Start
     flex-direction: column;
     margin-bottom: 4%;
     gap: 12px;
-    /* gap: 24px; */
-    /* margin-bottom: 2%; */
 }
 
 .trendy .trendy-sec-head h2 {
@@ -605,7 +541,6 @@ TRENDY SLIDER - Start
     justify-content: center;
     text-align: center;
     font-size: 18px;
-    /* font-size: 24px; */
 }
 
 .trendy .trendy-sec-head .trendy-list {
@@ -622,7 +557,6 @@ TRENDY SLIDER - Start
     cursor: pointer;
     font-weight: 500;
     font-size: 12px;
-    /* font-size: 16px; */
 }
 
 .trendy .trendy-sec-head .trendy-list a.active {
@@ -708,7 +642,6 @@ TRENDY SLIDER - Start
     justify-content: space-between;
     gap: 3%;
     height: 300px;
-    /* height: 850px; */
     transition: all 0.9s ease;
 }
 
@@ -725,11 +658,10 @@ TRENDY SLIDER - Start
     text-align: center;
     justify-content: center;
     height: 15%;
-    /* height: 5%; */
 }
 
 .section.trendy .swiper-wrapper.products-cart {
-    height: 100%;
+    height: 88%;
 }
 
 .section.trendy .swiper-wrapper.products-cart .swiper-slide {
@@ -744,16 +676,9 @@ TRENDY SLIDER - Start
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-vertical-gap: 6px;
     --swiper-pagination-top: auto;
-
     --swiper-pagination-bullet-size: 12px;
     --swiper-pagination-bullet-width: 12px;
     --swiper-pagination-bullet-height: 12px;
-
-
-    /* --swiper-pagination-bullet-size: 16px; */
-    /* --swiper-pagination-bullet-width: 16px; */
-    /* --swiper-pagination-bullet-height: 16px; */
-
 }
 
 
@@ -820,16 +745,10 @@ TRENDY SLIDER - Start
 
 .product-box .product-image-box {
     width: 100%;
-
     position: relative;
     z-index: 30;
     height: 80%;
-    /* height: 78%; */
 }
-
-
-
-
 
 
 
@@ -837,7 +756,6 @@ TRENDY SLIDER - Start
 
 .product-image-box .p-buttons {
     width: 100%;
-
     position: absolute;
     z-index: 25;
     bottom: 0;
@@ -859,18 +777,9 @@ TRENDY SLIDER - Start
     align-items: center;
     transition: all 0.5s ease;
     cursor: pointer;
-
     font-size: 10px;
     width: 70%;
     padding: 4px;
-
-
-
-    /***/
-    /* padding: 8px; */
-    /* font-size: 16px; */
-    /* width: 80%; */
-
 }
 
 
@@ -893,7 +802,6 @@ TRENDY SLIDER - Start
 
 
 
-
 .product-image-box .p-buttons .add-size {
     position: absolute;
     display: none;
@@ -905,9 +813,6 @@ TRENDY SLIDER - Start
     bottom: 0;
     background: #fff;
     font-size: 10px;
-
-    /***/
-    /* font-size: 16px; */
 }
 
 .product-image-box .p-buttons .add-size.active {
@@ -924,11 +829,6 @@ TRENDY SLIDER - Start
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 5px 0;
-
-
-    /***/
-    /* position: relative; */
-    /* z-index: 20; */
 }
 
 
@@ -972,20 +872,9 @@ TRENDY SLIDER - Start
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-weight: 400;
     padding: 1px;
     font-size: 7px;
-
-    /**/
-    /* font-weight: 500; */
-    /* padding: 1.5px; */
-    /* font-size: 9px; */
-
-    /***/
-    /* font-weight: 600; */
-    /* font-size: 12px; */
-    /* padding: 2px; */
 }
 
 
@@ -1031,27 +920,12 @@ TRENDY SLIDER - Start
     height: 250px;
     line-height: 250px;
     width: 100%;
-
-    /**/
-    /* height: 255px; */
-    /* line-height: 255px; */
-
-
-    /* height: 310px; */
-    /* line-height: 310px; */
 }
 
 .product-image-box .swiper-button-next::after,
 .product-image-box .swiper-button-prev::after {
     color: #8d8c8c;
     font-size: 18px;
-
-    /**/
-    /* font-size: 20px; */
-    /* font-size: 20px; */
-
-    /***/
-    /* font-size: 24px; */
 }
 
 
@@ -1143,12 +1017,6 @@ TRENDY SLIDER - Start
     display: flex;
     justify-content: space-between;
     height: 17%;
-
-    /**/
-    /* height: 18%; */
-
-    /***/
-    /* height: 18%; */
 }
 
 
@@ -1158,9 +1026,6 @@ TRENDY SLIDER - Start
     justify-content: space-between;
     height: 100%;
     width: 70%;
-
-    /***/
-    /* justify-content: space-between !important; */
 }
 
 
@@ -1173,13 +1038,6 @@ TRENDY SLIDER - Start
     font-weight: 400;
     color: #3c3c3c;
     font-size: 8px;
-
-    /**/
-    /* font-size: 10px; */
-
-
-    /***/
-    /* font-size: 12px; */
 }
 
 
@@ -1188,24 +1046,12 @@ TRENDY SLIDER - Start
     font-weight: 600;
     color: #000000;
     font-size: 10px;
-
-    /**/
-    /* font-size: 12px; */
-
-    /***/
-    /* font-size: 16px; */
 }
 
 .product-info-box .p-inf span {
     font-weight: 400;
     color: #000000;
     font-size: 8px;
-
-    /**/
-    /* font-size: 12px; */
-
-    /***/
-    /* font-size: 14px; */
 }
 
 
@@ -1216,9 +1062,6 @@ TRENDY SLIDER - Start
     justify-content: space-between;
     align-items: end;
     width: 35%;
-
-    /**/
-    /* width: 30%; */
 }
 
 
@@ -1227,14 +1070,6 @@ TRENDY SLIDER - Start
     height: 14px;
     transition: all 0.5s ease;
     cursor: pointer;
-
-    /**/
-    /* width: 20px; */
-    /* height: 20px; */
-
-    /***/
-    /* width: 22px; */
-    /* height: 22px; */
 }
 
 .product-info-box .p-pric img:hover {
@@ -1258,36 +1093,18 @@ TRENDY SLIDER - Start
     font-weight: 500;
     color: #000;
     font-size: 8px;
-
-    /**/
-    /* font-size: 10px; */
-
-    /***/
-    /* font-size: 12px; */
 }
 
 .product-info-box .p-pric .cart-prices .sell-price.dis {
     font-weight: 600;
     color: #d90000;
     font-size: 10px;
-
-    /**/
-    /* font-size: 12px; */
-
-    /***/
-    /* font-size: 14px; */
 }
 
 .product-info-box .p-pric .cart-prices .sell-price.sell {
     font-weight: 600;
     color: #000;
     font-size: 10px;
-
-    /**/
-    /* font-size: 12px; */
-
-    /***/
-    /* font-size: 14px; */
 }
 
 
@@ -1316,6 +1133,156 @@ TRENDY SLIDER - Start
 @media screen and (min-width: 768px) {
 
 
+    /* ----------------------
+COLLECTION SLIDER - Start
+------------------------- */
+
+    .section.collection {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-height: 70vh;
+        height: 100%;
+    }
+
+    .section.collection h1 {
+        font-size: 20px;
+    }
+
+    .section.collection .collection-area {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 70vh;
+        flex-direction: row;
+    }
+
+    .collection-area .list-one {
+        width: 100%;
+        height: auto;
+        width: 43%;
+    }
+
+
+    .collection-area .list-two {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 50%;
+        height: auto;
+        gap: 0;
+    }
+
+
+
+    /* list-one */
+
+    .collection-area .list-one .list-one-card {
+        width: 100%;
+        display: flex;
+        padding: 8%;
+        gap: 3%;
+        align-items: end;
+        justify-content: space-between;
+    }
+
+
+    .list-one .list-one-card .list-one-info a {
+        font-size: 14px;
+    }
+
+    .list-one .list-one-card .list-one-info p {
+        font-size: 12px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+    .list-one .list-one-card .one-btn {
+        display: flex;
+    }
+
+    .list-one .list-one-card .one-btn a {
+        font-size: 14px;
+    }
+
+    /* list-one */
+
+
+    /* list-two-card */
+
+
+
+
+    .list-two-card .list-two-info a {
+        font-size: 16px;
+    }
+
+
+    .list-two-card .list-two-info p {
+        font-size: 12px;
+    }
+
+
+
+
+
+
+    .list-two-card .two-btn {
+        display: flex;
+    }
+
+    .list-two-card .two-btn a {
+        font-size: 14px;
+    }
+
+    /* list-two-card */
+
+
+
+
+
+
+
+
+    /* list-two-gift  */
+
+    .list-two .shop-btn {
+        font-size: 14px;
+    }
+
+    .list-two .shop-btn:active {
+        border: 1px solid transparent;
+    }
+
+    /* list-two-gift  */
+
+
+
+
+
+    /* ----------------------
+COLLECTION SLIDER - End
+------------------------- */
+
+
+
+
+
+
+
+
+
+
 
 
     /* ----------------------
@@ -1329,22 +1296,14 @@ TRENDY SLIDER - Start
     }
 
     /* ---------- trendy-sec-head - Start ---------- */
-
-    .trendy .trendy-sec-head {
-        /* gap: 24px; */
-        /* margin-bottom: 2%; */
-    }
-
     .trendy .trendy-sec-head h2 {
         font-size: 18px;
-        /* font-size: 24px; */
     }
 
 
 
     .trendy .trendy-sec-head .trendy-list a {
         font-size: 12px;
-        /* font-size: 16px; */
     }
 
     /* ---------- trendy-sec-head - End ---------- */
@@ -1359,20 +1318,12 @@ TRENDY SLIDER - Start
 
     .section.trendy .swiper.sub {
         height: 740px;
-        /* height: 850px; */
     }
 
 
 
     .section.trendy .swiper-pagination.t-a {
         height: 15%;
-        /* height: 5%; */
-    }
-
-    .section.trendy .swiper-pagination {
-        /* --swiper-pagination-bullet-size: 16px; */
-        /* --swiper-pagination-bullet-width: 16px; */
-        /* --swiper-pagination-bullet-height: 16px; */
     }
 
 
@@ -1400,55 +1351,15 @@ TRENDY SLIDER - Start
 
     /* ***** product-image-box ***** */
 
-    .product-box .product-image-box {
-        /* height: 78%; */
-    }
-
-
-
-
-
-
-
-
-
-
-    .product-image-box .p-buttons .add-btn {
-        /***/
-        /* padding: 8px; */
-        /* font-size: 16px; */
-        /* width: 80%; */
-
-    }
-
-
     .product-image-box .p-buttons .add-size {
         font-size: 12px;
-
-        /***/
-        /* font-size: 16px; */
     }
-
-
-
-    .product-image-box .p-buttons .add-size .btn-size {
-        /***/
-        /* position: relative; */
-        /* z-index: 20; */
-    }
-
-
 
 
     .product-image-box .labels a {
         font-weight: 500;
         padding: 1.5px;
         font-size: 9px;
-
-        /***/
-        /* font-weight: 600; */
-        /* font-size: 12px; */
-        /* padding: 2px; */
     }
 
 
@@ -1472,25 +1383,14 @@ TRENDY SLIDER - Start
     }
 
     .product-image-box .swiper .swiper-slide {
-        height: 280px;
-        line-height: 280px;
-
-        /**/
-        /* height: 255px; */
-        /* line-height: 255px; */
-
-
-        /* height: 310px; */
-        /* line-height: 310px; */
+        height: 250px;
+        line-height: 250px;
     }
 
     .product-image-box .swiper-button-next::after,
     .product-image-box .swiper-button-prev::after {
         font-size: 20px;
         font-size: 20px;
-
-        /***/
-        /* font-size: 24px; */
     }
 
 
@@ -1507,40 +1407,20 @@ TRENDY SLIDER - Start
 
     .section.trendy .product-box .product-info-box {
         height: 17%;
-
-        /***/
-        /* height: 18%; */
     }
-
-
-    .product-box .product-info-box .p-inf {
-        /***/
-        /* justify-content: space-between !important; */
-    }
-
-
 
     .product-info-box .p-inf div h6 {
         font-size: 10px;
-
-        /***/
-        /* font-size: 12px; */
     }
 
 
 
     .product-info-box .p-inf div h3 {
         font-size: 12px;
-
-        /***/
-        /* font-size: 16px; */
     }
 
     .product-info-box .p-inf span {
         font-size: 12px;
-
-        /***/
-        /* font-size: 14px; */
     }
 
 
@@ -1553,31 +1433,18 @@ TRENDY SLIDER - Start
     .product-info-box .p-pric img {
         width: 20px;
         height: 20px;
-
-        /***/
-        /* width: 22px; */
-        /* height: 22px; */
     }
 
     .product-info-box .p-pric .cart-prices .sell-price {
         font-size: 10px;
-
-        /***/
-        /* font-size: 12px; */
     }
 
     .product-info-box .p-pric .cart-prices .sell-price.dis {
         font-size: 12px;
-
-        /***/
-        /* font-size: 14px; */
     }
 
     .product-info-box .p-pric .cart-prices .sell-price.sell {
         font-size: 12px;
-
-        /***/
-        /* font-size: 14px; */
     }
 
 
@@ -1635,7 +1502,7 @@ TRENDY SLIDER - Start
     /* ---------- SWIPER - START ---------- */
 
     .section.trendy .swiper.sub {
-        height: 850px;
+        height: 950px;
     }
 
 
@@ -1650,7 +1517,6 @@ TRENDY SLIDER - Start
         --swiper-pagination-bullet-height: 16px;
     }
 
-
     /* ---------- SWIPER - END ---------- */
 
     /* ==============================================
@@ -1663,12 +1529,6 @@ TRENDY SLIDER - Start
     .product-box .product-image-box {
         height: 78%;
     }
-
-
-
-
-
-
 
 
 
@@ -1693,23 +1553,11 @@ TRENDY SLIDER - Start
     }
 
 
-
-
     .product-image-box .labels a {
         font-weight: 600;
         font-size: 12px;
         padding: 2px;
     }
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1728,11 +1576,6 @@ TRENDY SLIDER - Start
 
 
     /* **** S W I P E R ***** */
-
-
-
-
-
 
 
     /* ***** product-info-box ***** */
@@ -1793,10 +1636,6 @@ TRENDY SLIDER - Start
 
 
 
-
-
-
-
 }
 
 
@@ -1831,255 +1670,6 @@ TRENDY SLIDER - Start
 
 
 
-
-
-
-/* @media only screen and (max-width: 480px) {
-    .section.trendy .swiper {
-        width: 100%;
-        height: 330px;
-    }
-
-
-}
-
-@media only screen and (min-width: 481px) and (max-width: 768px) {
-    .section.trendy .swiper {
-        width: 100%;
-        height: 700px;
-    }
-
-    .section {
-        padding: 0 3%;
-    }
-} */
-
-
-/* ---------- SWIPER Pagenation - START ---------- */
-/* 
-.swiper-pagination {
-    --swiper-pagination-color: red;
-    --swiper-pagination-bullet-size: 16px;
-    --swiper-pagination-bullet-width: 16px;
-    --swiper-pagination-bullet-height: 16px;
-    --swiper-pagination-bullet-inactive-color: #000;
-    --swiper-pagination-bullet-inactive-opacity: 0.2;
-    --swiper-pagination-bullet-opacity: 1;
-    --swiper-pagination-bullet-horizontal-gap: 4px;
-    --swiper-pagination-bullet-vertical-gap: 6px;
-    --swiper-pagination-top: auto;
-}
- */
-
-/* ---------- SWIPER Pagenation - END ---------- */
-
-
-
-/* ---------- SWIPER - End ---------- */
-
-
-
-
-
-
-
-
-
-
-
-/* ---------- trendy-product - Start ---------- */
-
-/* ***** product-image ***** */
-
-
-/* 
-.section.trendy .swiper-slide.trendy-product {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image {
-    display: flex;
-    width: 100%;
-    height: 77%;
-    transition: all 0.9s ease;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-img {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-img img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-    transition: all 0.5s ease;
-}
-
-
-
-
-
-
-
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-add {
-    position: absolute;
-    bottom: 22%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: none;
-
-    text-align: center;
-    width: 70%;
-    text-decoration: none;
-    font-size: 14px;
-    color: #000;
-    background: #fff;
-    padding: 3% 12%;
-    transition: all 0.5s ease;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-add.active {
-    display: block;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-add:hover {
-    background-color: #d90000;
-    color: #fff;
-    font-weight: 500;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .prod-add:active {
-    background-color: #9a0101;
-} */
-
-.section.trendy .swiper-slide.trendy-product .product-image .offer {
-    /* top: 3%;
-    left: 5%;
-    display: flex;
-    background: #ffffff;
-    position: absolute;
-    padding: 1% 3%;
-    text-decoration: none;
-    color: #000;
-    font-size: 10px; */
-    /* font-size: 14px; */
-}
-
-/* 
-.section.trendy .swiper-slide.trendy-product .product-image .offer.dis {
-    color: #fff;
-    background-color: #d90000;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-image .offer.best {
-    display: flex;
-    align-items: center;
-    color: #ffffff;
-    background-color: #000000;
-}
- */
-
-
-
-/* ***** product-image ***** */
-
-
-
-/* ***** product-info ***** */
-/* 
-.section.trendy .swiper-slide.trendy-product .product-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
-    width: 100%;
-    height: 20%;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name {
-    display: flex;
-    flex-direction: column;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-cat {
-    text-decoration: none;
-    color: #292929;
-    margin-top: 2%;
-    font-size: 10px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-name {
-    text-decoration: none;
-    font-weight: 500;
-    color: #000;
-    margin-bottom: 4%;
-    font-size: 14px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .dis-price {
-    font-weight: 600;
-    color: #d90000;
-    font-size: 14px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .sell-price {
-    font-weight: 600;
-    color: #000;
-    font-size: 14px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .product-name .sel-price {
-    font-weight: 500;
-    color: #000;
-    font-size: 10px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info .wish {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 10px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info img {
-    display: flex;
-    transition: all 0.5s ease;
-    width: 18px;
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info img:hover {
-    transform: scale(1.15);
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info img:hover + .wish-share span {
-    transform: scale(1.15);
-}
-
-.section.trendy .swiper-slide.trendy-product .product-info img:active {
-    transform: scale(0.9);
-}
- */
-
-
-
-
-
-/* ***** product-info ***** */
-
-
-/* ---------- trendy-product - End ---------- */
-
-
-
-/* ----------------------
-TRENDY SLIDER - End
-------------------------- */
 
 
 
@@ -2139,9 +1729,17 @@ BLOG SECTION - Start
     padding: 0 !important;
     max-height: 50px !important;
     height: 100%;
+    --swiper-pagination-color: red;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+    --swiper-pagination-top: auto;
+    --swiper-pagination-bullet-size: 16px;
+    --swiper-pagination-bullet-width: 16px;
+    --swiper-pagination-bullet-height: 16px;
 }
-
-
 
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
@@ -2352,14 +1950,12 @@ DEAL OF WEEK    SECTION - Start
     background-size: cover;
     gap: 40px;
     flex-direction: column;
-    /* flex-direction: row;  */
 }
 
 
 
 .dealofweek .deal-products {
     width: 100%;
-    /* width: 50%; */
 }
 
 .dealofweek .dealofweek-prod {
@@ -2376,7 +1972,6 @@ DEAL OF WEEK    SECTION - Start
     justify-content: center;
     width: 100%;
     align-items: center;
-    /* align-items: start; */
 }
 
 .dealofweek .deal-offer .deal-title {
@@ -2397,7 +1992,6 @@ DEAL OF WEEK    SECTION - Start
 .dealofweek .deal-offer .deal-title h5 {
     font-weight: 500;
     font-size: 12px;
-    /* font-size: 16px; */
 }
 
 .dealofweek .deal-offer .deal-collection h1 {
@@ -2406,7 +2000,6 @@ DEAL OF WEEK    SECTION - Start
     letter-spacing: 5px;
     word-spacing: 10px;
     font-size: 18px;
-    /* font-size: 26px; */
 }
 
 .dealofweek .deal-offer .deal-collection h5 {
@@ -2417,9 +2010,6 @@ DEAL OF WEEK    SECTION - Start
     font-size: 14px;
     margin-bottom: 5px;
     text-align: center;
-    /* text-align: start; */
-    /* margin-bottom: 20px; */
-    /* font-size: 20px; */
 }
 
 .dealofweek .deal-offer a {
@@ -2430,21 +2020,15 @@ DEAL OF WEEK    SECTION - Start
     color: #fff;
     font-weight: 500;
     transition: all 0.5s ease;
-
     max-width: 70px;
     font-size: 10px;
     border: 1.5px solid #fff;
     padding: 8px;
-    /* padding: 12px; */
-    /* max-width: 100px; */
-    /* font-size: 12px; */
-    /* border: 2px solid #fff; */
 }
 
 .dealofweek .deal-offer a:hover {
     background: #d90000;
     border: 1.5px solid transparent;
-    /* border: 2px solid transparent; */
 }
 
 .dealofweek .deal-offer a:active {
@@ -2463,7 +2047,6 @@ DEAL OF WEEK    SECTION - Start
 .separate {
     font-weight: 600;
     font-size: 16px;
-    /* font-size: 20px; */
 }
 
 .offer-time .time {
@@ -2478,14 +2061,12 @@ DEAL OF WEEK    SECTION - Start
 .offer-time .time .num {
     font-weight: 600;
     font-size: 16px;
-    /* font-size: 20px; */
 }
 
 .offer-time .time .nam {
     color: #ffffff9f;
     font-weight: 400;
     font-size: 10px;
-    /* font-size: 14px; */
 }
 
 /* ========== deal-offer - End =========== */
@@ -2507,8 +2088,6 @@ DEAL OF WEEK    SECTION - Start
     justify-content: space-between;
     gap: 3%;
     height: 300px;
-    /* height: 450px; */
-    /* max-height: 450px; */
 }
 
 
@@ -2520,7 +2099,6 @@ DEAL OF WEEK    SECTION - Start
     text-align: center;
     justify-content: center;
     height: 10% !important;
-    /* height: 5%; */
 }
 
 .dealofweek .swiper-wrapper.products-carts {
@@ -2540,15 +2118,9 @@ DEAL OF WEEK    SECTION - Start
     --swiper-pagination-bullet-horizontal-gap: 4px;
     --swiper-pagination-bullet-vertical-gap: 6px;
     --swiper-pagination-top: auto;
-
     --swiper-pagination-bullet-size: 12px;
     --swiper-pagination-bullet-width: 12px;
     --swiper-pagination-bullet-height: 12px;
-
-
-    /* --swiper-pagination-bullet-size: 16px; */
-    /* --swiper-pagination-bullet-width: 16px; */
-    /* --swiper-pagination-bullet-height: 16px; */
 
 }
 
@@ -2605,12 +2177,9 @@ DEAL OF WEEK    SECTION - Start
 
 .product-boxs .product-image-b {
     width: 100%;
-
     position: relative;
     z-index: 30;
     height: 79%;
-    /* height: 76%; */
-    /* height: 82%; */
 }
 
 
@@ -2623,7 +2192,6 @@ DEAL OF WEEK    SECTION - Start
 
 .product-image-b .prod-buttons {
     width: 100%;
-
     position: absolute;
     z-index: 25;
     bottom: 0;
@@ -2648,13 +2216,6 @@ DEAL OF WEEK    SECTION - Start
     font-size: 10px;
     width: 70%;
     padding: 4px;
-
-
-
-    /***/
-    /* padding: 8px; */
-    /* font-size: 16px; */
-    /* width: 80%; */
 
 }
 
@@ -2690,9 +2251,6 @@ DEAL OF WEEK    SECTION - Start
     bottom: 0;
     background: #fff;
     font-size: 10px;
-
-    /***/
-    /* font-size: 16px; */
 }
 
 .product-image-b .prod-buttons .add-size.active {
@@ -2709,11 +2267,6 @@ DEAL OF WEEK    SECTION - Start
     cursor: pointer;
     transition: all 0.3s ease;
     padding: 5px 0;
-
-
-    /***/
-    /* position: relative; */
-    /* z-index: 20; */
 }
 
 
@@ -2744,17 +2297,10 @@ DEAL OF WEEK    SECTION - Start
     align-items: center;
     z-index: 20;
     margin-left: 5px;
-
     width: 50%;
     top: 3%;
     left: 3%;
-
-    /**/
-    /* width: 46%; */
-
-    /***/
     width: 50%;
-
 }
 
 .product-image-b .labels a {
@@ -2765,21 +2311,9 @@ DEAL OF WEEK    SECTION - Start
     display: flex;
     justify-content: center;
     align-items: center;
-
     font-weight: 400;
     padding: 1px;
     font-size: 7px;
-
-    /**/
-    /* font-weight: 500; */
-    /* padding: 1.5px; */
-    /* font-size: 9px; */
-
-    /***/
-    /* font-weight: 600; */
-    /* font-size: 12px; */
-    /* padding: 2px; */
-
 }
 
 
@@ -2818,8 +2352,6 @@ DEAL OF WEEK    SECTION - Start
     object-fit: cover;
     object-position: top center;
     animation: fadeIn 0.5s ease;
-
-
     width: 100%;
     position: static;
     flex-direction: column;
@@ -2853,7 +2385,6 @@ DEAL OF WEEK    SECTION - Start
 
 .product-image-b .swiper .swiper-slide {
     height: 250px;
-    /* height: 300px; */
     width: 100%;
     object-fit: cover;
     object-position: top center;
@@ -2863,13 +2394,6 @@ DEAL OF WEEK    SECTION - Start
 .product-image-b .swiper-button-prev::after {
     color: #8d8c8c;
     font-size: 18px;
-
-    /**/
-    /* font-size: 20px; */
-    /* font-size: 20px; */
-
-    /***/
-    /* font-size: 24px; */
 }
 
 .product-image-b .swiper .swiper-slide img {
@@ -2940,12 +2464,6 @@ DEAL OF WEEK    SECTION - Start
     display: flex;
     justify-content: space-between;
     height: 16%;
-
-    /**/
-    /* height: 18%; */
-
-    /***/
-    /* height: 18%; */
 }
 
 
@@ -2955,9 +2473,6 @@ DEAL OF WEEK    SECTION - Start
     justify-content: space-between;
     height: 100%;
     width: 70% !important;
-
-    /***/
-    /* justify-content: space-between !important; */
 }
 
 
@@ -2970,13 +2485,6 @@ DEAL OF WEEK    SECTION - Start
     font-weight: 400;
     color: #c3c1c1;
     font-size: 8px;
-
-    /**/
-    /* font-size: 10px; */
-
-
-    /***/
-    /* font-size: 12px; */
 }
 
 
@@ -2984,25 +2492,13 @@ DEAL OF WEEK    SECTION - Start
 .product-info-boxs .p-inf div h3 {
     font-weight: 600;
     color: #ffffff;
-    font-size: 10px;
-
-    /**/
     font-size: 12px;
-
-    /***/
-    /* font-size: 16px; */
 }
 
 .product-info-boxs .p-inf span {
     font-weight: 400;
     color: #ffffff;
     font-size: 8px;
-
-    /**/
-    /* font-size: 12px; */
-
-    /***/
-    /* font-size: 14px; */
 }
 
 
@@ -3013,9 +2509,6 @@ DEAL OF WEEK    SECTION - Start
     justify-content: space-between;
     align-items: end;
     width: 35%;
-
-    /**/
-    /* width: 30%; */
 }
 
 
@@ -3024,14 +2517,6 @@ DEAL OF WEEK    SECTION - Start
     height: 14px;
     transition: all 0.5s ease;
     cursor: pointer;
-
-    /**/
-    /* width: 20px; */
-    /* height: 20px; */
-
-    /***/
-    /* width: 22px; */
-    /* height: 22px; */
 }
 
 .product-info-boxs .p-pric img:hover {
@@ -3055,36 +2540,18 @@ DEAL OF WEEK    SECTION - Start
     font-weight: 500;
     color: #d5d3d3;
     font-size: 8px;
-
-    /**/
-    /* font-size: 10px; */
-
-    /***/
-    /* font-size: 12px; */
 }
 
 .product-info-boxs .p-pric .cart-prices .sell-price.dis {
     font-weight: 600;
     color: #d90000;
     font-size: 10px;
-
-    /**/
-    /* font-size: 12px; */
-
-    /***/
-    /* font-size: 14px; */
 }
 
 .product-info-boxs .p-pric .cart-prices .sell-price.sell {
     font-weight: 600;
     color: #ffffff;
     font-size: 10px;
-
-    /**/
-    /* font-size: 12px; */
-
-    /***/
-    /* font-size: 14px; */
 }
 
 
@@ -3101,38 +2568,6 @@ DEAL OF WEEK    SECTION - Start
 /* ----------------------
 DEAL OF WEEK    SECTION - End
 ------------------------- */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3164,66 +2599,7 @@ DEAL OF WEEK    SECTION - End
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* @media screen and (min-width: 600px) { */
-
-
 @media screen and (min-width: 768px) {
-    .list-two-gift {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .list-two-gift .shop-btn {
-        width: 40%;
-    }
-
-    .collection-list {
-        flex-direction: row;
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -3235,7 +2611,7 @@ DEAL OF WEEK    SECTION - Start
 
     .dealofweek {
 
-        justify-content: space-between;
+        justify-content: center;
         flex-direction: row;
     }
 
@@ -3248,42 +2624,30 @@ DEAL OF WEEK    SECTION - Start
         align-items: start;
         justify-content: start;
         width: 50%;
-        /* width: 40%; */
     }
 
     .dealofweek .deal-offer .deal-title {
         margin-bottom: 10px;
-        /* margin-bottom: 0px; */
     }
 
     .dealofweek .deal-offer .deal-title h5 {
         font-size: 14px;
-        /* font-size: 16px; */
     }
 
     .dealofweek .deal-offer .deal-collection h1 {
         font-size: 20px;
-        /* font-size: 26px; */
     }
 
     .dealofweek .deal-offer .deal-collection h5 {
         font-size: 16px;
         margin-bottom: 10px;
         text-align: start;
-        /* margin-bottom: 20px; */
-        /* font-size: 20px; */
     }
 
     .dealofweek .deal-offer a {
         max-width: 80px;
         border: 2px solid #fff;
         padding: 10px;
-
-
-        /* padding: 12px; */
-        /* max-width: 100px; */
-        /* font-size: 12px; */
-        /* border: 2px solid #fff; */
     }
 
     .dealofweek .deal-offer a:hover {
@@ -3299,17 +2663,14 @@ DEAL OF WEEK    SECTION - Start
 
     .separate {
         font-size: 18px;
-        /* font-size: 20px; */
     }
 
     .offer-time .time .num {
         font-size: 18px;
-        /* font-size: 20px; */
     }
 
     .offer-time .time .nam {
         font-size: 12px;
-        /* font-size: 14px; */
     }
 
     /* ========== deal-offer - End =========== */
@@ -3331,9 +2692,6 @@ DEAL OF WEEK    SECTION - Start
         gap: 3%;
         height: 300px;
         width: 50%;
-        /* width: 50%; */
-        /* height: 450px; */
-        /* max-height: 450px; */
     }
 
 
@@ -3344,7 +2702,6 @@ DEAL OF WEEK    SECTION - Start
 
     .dealofweek .swiper-wrapper.products-carts {
         height: 87%;
-        /* height: 87%; */
 
     }
 
@@ -3360,16 +2717,9 @@ DEAL OF WEEK    SECTION - Start
         --swiper-pagination-bullet-horizontal-gap: 4px;
         --swiper-pagination-bullet-vertical-gap: 6px;
         --swiper-pagination-top: auto;
-
         --swiper-pagination-bullet-size: 12px;
         --swiper-pagination-bullet-width: 12px;
         --swiper-pagination-bullet-height: 12px;
-
-
-        /* --swiper-pagination-bullet-size: 16px; */
-        /* --swiper-pagination-bullet-width: 16px; */
-        /* --swiper-pagination-bullet-height: 16px; */
-
     }
 
     /* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
@@ -3425,68 +2775,21 @@ DEAL OF WEEK    SECTION - Start
 
     .product-boxs .product-image-b {
         width: 100%;
-
         position: relative;
         z-index: 30;
         height: 79%;
-        /* height: 76%; */
-        /* height: 82%; */
     }
-
-
-
-
-    .product-image-b .prod-buttons .add-btn {
-        /***/
-        /* padding: 8px; */
-        /* font-size: 16px; */
-        /* width: 80%; */
-
-    }
-
-
-
-
-
-
-    .product-image-b .prod-buttons .add-size {
-
-        /***/
-        /* font-size: 16px; */
-    }
-
-
-
-    .product-image-b .prod-buttons .add-size .btn-size {
-        /***/
-        /* position: relative; */
-        /* z-index: 20; */
-    }
-
-
 
 
 
     .product-image-b .labels {
-        /**/
-        /* width: 46%; */
-
-        /***/
         width: 50%;
-
     }
 
     .product-image-b .labels a {
-        /**/
         font-weight: 400;
         padding: 1.5px;
         font-size: 9px;
-
-        /***/
-        /* font-weight: 600; */
-        /* font-size: 12px; */
-        /* padding: 2px; */
-
     }
 
 
@@ -3496,27 +2799,15 @@ DEAL OF WEEK    SECTION - Start
 
     .product-image-b .swiper .swiper-slide {
         height: 250px;
-        /* height: 300px; */
         width: 100%;
         object-fit: cover;
         object-position: top center;
     }
 
-    .product-image-b .swiper-button-next::after,
-    .product-image-b .swiper-button-prev::after {
-
-        /***/
-        /* font-size: 24px; */
-    }
-
-
-
     /* **** S W I P E R ***** */
 
 
 
-
-    /* H O V E R */
 
 
 
@@ -3540,12 +2831,6 @@ DEAL OF WEEK    SECTION - Start
         display: flex;
         justify-content: space-between;
         height: 16%;
-
-        /**/
-        /* height: 18%; */
-
-        /***/
-        /* height: 18%; */
     }
 
 
@@ -3555,9 +2840,6 @@ DEAL OF WEEK    SECTION - Start
         justify-content: space-between;
         height: 100%;
         width: 70% !important;
-
-        /***/
-        /* justify-content: space-between !important; */
     }
 
 
@@ -3570,13 +2852,6 @@ DEAL OF WEEK    SECTION - Start
         font-weight: 400;
         color: #c3c1c1;
         font-size: 8px;
-
-        /**/
-        /* font-size: 10px; */
-
-
-        /***/
-        /* font-size: 12px; */
     }
 
 
@@ -3584,25 +2859,13 @@ DEAL OF WEEK    SECTION - Start
     .product-info-boxs .p-inf div h3 {
         font-weight: 600;
         color: #ffffff;
-        font-size: 10px;
-
-        /**/
         font-size: 12px;
-
-        /***/
-        /* font-size: 16px; */
     }
 
     .product-info-boxs .p-inf span {
         font-weight: 400;
         color: #ffffff;
         font-size: 8px;
-
-        /**/
-        /* font-size: 12px; */
-
-        /***/
-        /* font-size: 14px; */
     }
 
 
@@ -3613,9 +2876,6 @@ DEAL OF WEEK    SECTION - Start
         justify-content: space-between;
         align-items: end;
         width: 35%;
-
-        /**/
-        /* width: 30%; */
     }
 
 
@@ -3624,14 +2884,6 @@ DEAL OF WEEK    SECTION - Start
         height: 14px;
         transition: all 0.5s ease;
         cursor: pointer;
-
-        /**/
-        /* width: 20px; */
-        /* height: 20px; */
-
-        /***/
-        /* width: 22px; */
-        /* height: 22px; */
     }
 
     .product-info-boxs .p-pric img:hover {
@@ -3655,36 +2907,18 @@ DEAL OF WEEK    SECTION - Start
         font-weight: 500;
         color: #d5d3d3;
         font-size: 8px;
-
-        /**/
-        /* font-size: 10px; */
-
-        /***/
-        /* font-size: 12px; */
     }
 
     .product-info-boxs .p-pric .cart-prices .sell-price.dis {
         font-weight: 600;
         color: #d90000;
         font-size: 10px;
-
-        /**/
-        /* font-size: 12px; */
-
-        /***/
-        /* font-size: 14px; */
     }
 
     .product-info-boxs .p-pric .cart-prices .sell-price.sell {
         font-weight: 600;
         color: #ffffff;
         font-size: 10px;
-
-        /**/
-        /* font-size: 12px; */
-
-        /***/
-        /* font-size: 14px; */
     }
 
 
@@ -3806,17 +3040,6 @@ DEAL OF WEEK    SECTION - End
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     .section {
         margin: 10% auto 0;
     }
@@ -3826,117 +3049,137 @@ DEAL OF WEEK    SECTION - End
     }
 
 
-    /* ----------------------
-COLLECTION SLIDER - Start
-------------------------- */
 
-    .collection-area {
-        height: 80vh;
+
+
+
+    /* ----------------------
+    COLLECTION SLIDER - Start
+    ------------------------- */
+
+    .section.collection {
+        max-height: 800px;
+
     }
 
     .section.collection h1 {
-        margin: 0 auto 3%;
         font-size: 24px;
     }
 
+    .section.collection .collection-area {
+        height: 800px;
+    }
 
-
-
-
-    /* ========== list-one - Start ========== */
-
-    .collection-area .list-one {
-        padding: 5%;
+    .collection-area .list-two {
+        width: 53%;
     }
 
 
-    .list-one-card {
-        gap: 5%;
+
+    /* list-one */
+
+    .collection-area .list-one .list-one-card {
+        align-items: start;
+        justify-content: end;
+        flex-direction: column;
     }
 
-    .list-one-card .list-one-info p {
+
+    .list-one .list-one-card .list-one-info a {
+        font-size: 20px;
+    }
+
+    .list-one .list-one-card .list-one-info p {
         font-size: 16px;
     }
 
-    .list-one-card .list-one-info a {
-        font-size: 24px;
-    }
 
-    .list-one-card .one-btn a {
+    .list-one .list-one-card .one-btn a {
+        padding: 10px;
+        font-weight: 500;
+        border: 2px solid #000;
         font-size: 16px;
     }
 
-
-    /* ========== list-one - End ========== */
-
-
-
-
-
-
-
-
-
-    /* ========== list-two - Start ========== */
-
-
-
-    .collection-area .list-two .list-two-product {
-        padding: 10%;
+    .list-one .list-one-card .one-btn a:hover {
+        border: 2px solid transparent;
     }
 
-    .list-two-card {
-        gap: 5%;
+
+
+    /* list-one */
+
+
+
+
+
+    /* list-two-card */
+    .list-two .list-two-product .list-two-card {
+        align-items: start;
+        justify-content: end;
+        flex-direction: column;
     }
 
 
 
 
+    .list-two-card .list-two-info a {
+        font-size: 20px;
+    }
 
 
     .list-two-card .list-two-info p {
         font-size: 16px;
     }
 
-    .list-two-card .list-two-info a {
-        font-size: 24px;
-    }
 
     .list-two-card .two-btn a {
+        padding: 10px;
+        font-weight: 500;
+        border: 2px solid #000;
         font-size: 16px;
     }
 
-
-    /* ========== list-two - End ========== */
-
-
-
-
-    /* ========== list-two-gift - Start ========== */
-
-    .list-two-gift {
-        padding: 10%;
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 5%;
+    .list-two-card .two-btn a:hover {
+        border: 2px solid transparent;
     }
 
-    .list-two-gift .gift-info a:first-child {
-        font-size: 24px;
+
+
+    /* list-two-card */
+
+
+
+
+
+
+
+
+    /* list-two-gift  */
+
+    .list-two .list-two-gift .gift-info a:nth-child(1) {
+        font-size: 20px;
     }
 
-    .list-two-gift .gift-info a:last-child {
+    .list-two .list-two-gift .gift-info a:nth-child(2) {
+        font-size: 18px;
+    }
+
+
+    .list-two .shop-btn {
+        padding: 10px;
+        font-weight: 500;
+        border: 2px solid #ffffff;
         font-size: 16px;
     }
 
-
-
-    .list-two-gift .shop-btn {
-        width: 150px;
-        font-size: 16px;
+    .list-two .shop-btn:active {
+        border: 2px solid transparent;
     }
 
-    /* ========== list-two-gift - End ========== */
+    /* list-two-gift  */
+
+
 
 
 
@@ -3948,94 +3191,6 @@ COLLECTION SLIDER - End
 
 
 
-
-
-
-
-
-
-    /* ----------------------
-TRENDY SLIDER - Start
-------------------------- */
-
-    /* 
-    .section {
-        padding: 0;
-    }
-
-    .trendy .trendy-sec-head {
-        gap: 12px;
-        margin-bottom: 1.5%;
-    }
-
-    .trendy .trendy-sec-head h2 {
-        font-size: 24px;
-        gap: 8px;
-    }
-
-    .trendy .trendy-sec-head .trendy-list {
-        font-size: 16px;
-    }
-
-    .trendy .trendy-sec-head .trendy-list a {
-        text-decoration: none;
-        color: #444444;
-    } */
-
-
-    /* ---------- SWIPER - START ---------- */
-    /* 
-    .trendy .swiper {
-        gap: 5%;
-    }
-
-    .section.trendy .swiper-pagination {
-        top: 0 !important;
-    } */
-
-    /* ---------- SWIPER - End ---------- */
-
-    /* 
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-cat {
-        font-size: 12px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .prod-name {
-        margin-bottom: 2%;
-        font-size: 16px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .dis-price {
-        font-size: 16px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .sell-price {
-        font-size: 16px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info .product-name .sel-price {
-        font-size: 12px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info .wish {
-        display: flex;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-info img {
-        width: 24px;
-    }
-
-    .section.trendy .swiper-slide.trendy-product .product-image .offer {
-        font-size: 14px;
-    } */
-
-    /* ***** product-info ***** */
-
-
-
-    /* ----------------------
-TRENDY SLIDER - End
-------------------------- */
 
 
 
@@ -4162,7 +3317,6 @@ DEAL OF WEEK    SECTION - Start
     /* ***** product-image-box ***** */
 
     .product-image-b .prod-buttons .add-btn {
-        /***/
         padding: 6px;
         font-size: 14px;
         width: 80%;
@@ -4194,7 +3348,6 @@ DEAL OF WEEK    SECTION - Start
         font-weight: 600;
         font-size: 10px;
         padding: 2px;
-
     }
 
 
@@ -4244,12 +3397,6 @@ DEAL OF WEEK    SECTION - Start
     .product-info-boxs .p-inf span {
         color: #ffffff;
         font-size: 10px;
-
-        /**/
-        /* font-size: 12px; */
-
-        /***/
-        /* font-size: 14px; */
     }
 
 
@@ -4260,9 +3407,6 @@ DEAL OF WEEK    SECTION - Start
         justify-content: space-between;
         align-items: end;
         width: 35%;
-
-        /**/
-        /* width: 30%; */
     }
 
 
@@ -4339,7 +3483,6 @@ BLOG SECTION - Start
     /* ********** SWIPER BLOG -Start ********** */
     .section.blog {
         height: 720px !important;
-        /*del*/
     }
 
     .section.blog .swiper {
@@ -4348,13 +3491,10 @@ BLOG SECTION - Start
         padding-bottom: 50px !important;
         width: 100%;
         margin-top: 5px;
-
         position: static;
         display: flex !important;
         flex-direction: column;
-        /* height: 350px !important; */
         height: 700px !important;
-        /* padding: 0 !important; */
 
     }
 
@@ -4397,11 +3537,9 @@ BLOG SECTION - Start
     .swiper-slide.blog-card {
         display: flex;
         flex-direction: column;
-        /* justify-content: space-between; */
         height: 100%;
         width: 100%;
         gap: 3.5%;
-        /*del*/
     }
 
     /* ********** BLOG İmage - Start ********** */
@@ -4409,7 +3547,6 @@ BLOG SECTION - Start
     .section.blog .blog-image {
         display: flex;
         height: 68%;
-        /* height: 68%; */
     }
 
     .section.blog .blog-image img {
@@ -4431,7 +3568,6 @@ BLOG SECTION - Start
         flex-direction: column;
         height: 25%;
         gap: 8px;
-        /* justify-content: space-between; */
     }
 
     .section.blog .blog-info .blog-head {
@@ -4440,7 +3576,6 @@ BLOG SECTION - Start
     }
 
     .section.blog .blog-info .blog-head .blog-created {
-        /* font-size: 12px; */
         font-size: 14px;
     }
 
@@ -4449,7 +3584,6 @@ BLOG SECTION - Start
     }
 
     .section.blog .blog-info .blog-description {
-        /* font-size: 10px; */
         font-size: 14px;
     }
 
@@ -4519,17 +3653,6 @@ SERVICE SECTION - End
 
 
 
-
-
-
-
-
-
-
-
-
-
-
     /* ----------------------
 DEAL OF WEEK    SECTION - End
 ------------------------- */
@@ -4539,106 +3662,6 @@ DEAL OF WEEK    SECTION - End
     .dealofweek {
         flex-direction: row;
     }
-
-
-
-
-
-
-    /* ========== deal-offer - Start =========== */
-
-    /* .dealofweek .deal-offer {
-        gap: 30px;
-        width: 50%;
-    } */
-
-    /* .dealofweek {
-        display: flex;
-        flex-direction: row;
-    } */
-
-
-    /* .dealofweek .deal-offer .deal-title .arrow {
-        height: 3px;
-    }
-
-    .dealofweek .deal-offer .deal-title h5 {
-        font-size: 22px;
-    }
-
-    .dealofweek .deal-offer .deal-collection h1 {
-        font-size: 40px;
-        letter-spacing: 10px;
-        word-spacing: 15px;
-    }
-
-    .dealofweek .deal-offer .deal-collection h5 {
-        font-size: 30px;
-        margin-bottom: 20px;
-        margin-top: 10px;
-    }
-
-    .dealofweek .deal-offer a {
-        max-width: 150px;
-        font-size: 16px;
-    }
-
-
-    .offer-time {
-        gap: 20px;
-    }
-
-    .separate {
-        font-size: 30px;
-    }
-
-    .offer-time .time {
-        gap: 10px;
-        width: 50px;
-    }
-
-    .offer-time .time .num {
-        font-size: 30px;
-    }
-
-    .offer-time .time .nam {
-        font-size: 18px;
-    } */
-
-    /* ========== deal-offer - End =========== */
-
-
-
-    /* ========== DEALOFWEEK - SWIPER OFFER  - Start =========== */
-
-    /* .dealofweek .swiper {
-        width: 50%;
-        height: 430px !important;
-    }
-
-    .dealofweek .swiper-slide {
-        text-align: center;
-        font-size: 18px;
-        display: flex;
-    } */
-
-
-
-
-
-    /* ========== DEALOFWEEK - SWIPER OFFER  - End =========== */
-
-
-
-
-
-    /* ========== DEALOFWEEK - Products  - Start =========== */
-
-
-
-    /* ========== DEALOFWEEK - Products  - End =========== */
-
-
 
 
 
