@@ -6,57 +6,55 @@ window.addEventListener('scroll', function () {
 });
 
 
-/* TRENDY SWIPER */
-var swiper = new Swiper(".trendy .mySwiper", {
-  slidesPerView: 1,
-  
-  spaceBetween: 10,
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
-    dynamicBullets: true,
-  },
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false,
-  },
-  breakpoints: {
-    "@0.00": {
-      slidesPerView: 2,
-      spaceBetween: 10,
-      grid: {
-        rows: 1,
-        fill: "row",
-      }
-    },
-    "@0.75": {
-      slidesPerView: 3,
-      spaceBetween: 25,
-      grid: {
-        rows: 2,
-        fill: "row",
-      }
-    },
-    "@1.00": {
-      slidesPerView: 4,
-      spaceBetween: 20,
-      grid: {
-        rows: 2,
-        fill: "row",
-      }
-    },
-    "@1.50": {
-      slidesPerView: 5,
-      spaceBetween: 35,
-      grid: {
-        rows: 2,
-        fill: "row",
-      }
-    },
-  },
-});
-/* TRENDY SWIPER */
+// /* TRENDY SWIPER */
+// var swiper = new Swiper(".trendy .mySwiper", {
+//   slidesPerView: 1,
 
+//   spaceBetween: 10,
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//     dynamicBullets: true,
+//   },
+//   // autoplay: {
+//   //   delay: 5000,
+//   //   disableOnInteraction: false,
+//   // },
+//   breakpoints: {
+//     "@0.00": {
+//       slidesPerView: 2,
+//       spaceBetween: 10,
+//       grid: {
+//         rows: 1,
+//         fill: "row",
+//       }
+//     },
+//     "@0.75": {
+//       slidesPerView: 3,
+//       spaceBetween: 25,
+//       grid: {
+//         rows: 2,
+//         fill: "row",
+//       }
+//     },
+//     "@1.00": {
+//       slidesPerView: 4,
+//       spaceBetween: 20,
+//       grid: {
+//         rows: 2,
+//         fill: "row",
+//       }
+//     },
+//     "@1.50": {
+//       slidesPerView: 5,
+//       spaceBetween: 35,
+//       grid: {
+//         rows: 2,
+//         fill: "row",
+//       }
+//     },
+//   },
+// });
 
 
 
@@ -308,7 +306,6 @@ trendyCats.forEach(cat => {
 
     let catName = cat.dataset.name;
 
-    console.log(catName);
     trendyCats.forEach(category => {
       category.classList.remove('active');
     });
@@ -406,7 +403,6 @@ const sqlDatetime2 = '2024-04-25 22:29:12.345';
 
 const jsDate = new Date(sqlDatetime2);
 
-console.log(jsDate);
 
 const year = jsDate.getFullYear();
 const month = jsDate.getMonth() + 1;
@@ -421,8 +417,6 @@ const paddedHours = hours.toString().padStart(2, '0');
 const paddedMinutes = minutes.toString().padStart(2, '0');
 const paddedSeconds = seconds.toString().padStart(2, '0');
 
-console.log(`Tarih: ${year}-${paddedMonth}-${paddedDate}`);
-console.log(`Saat: ${paddedHours}:${paddedMinutes}:${paddedSeconds}`);
 //================ TIME
 
 
@@ -518,7 +512,6 @@ wishIconBtn.forEach(btn => {
 var basketCount = document.querySelector('.i-basket');
 var addToCart = document.querySelectorAll('.prod-add');
 
-console.log(basketCount);
 
 addToCart.forEach(btn => {
   btn.addEventListener('click', (event) => {
@@ -639,3 +632,184 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+
+
+
+// /* TRENDY SWIPER */
+
+var swiper = new Swiper(".mySwiper.sub", {
+  slidesPerView: 1,
+  spaceBetween: 10,
+  autoplay: {
+    delay: 7000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+ 
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 2,
+      spaceBetween: 10,
+      grid: {
+        rows: 1,
+        fill: "row",
+      }
+    },
+    "@0.75": {
+      slidesPerView: 3,
+      spaceBetween: 25,
+      grid: {
+        rows: 2,
+        fill: "row",
+      }
+    },
+    "@1.00": {
+      slidesPerView: 4,
+      spaceBetween: 20,
+      grid: {
+        rows: 2,
+        fill: "row",
+      }
+    },
+    "@1.50": {
+      slidesPerView: 4,
+      spaceBetween: 45,
+      grid: {
+        rows: 2,
+        fill: "row",
+      }
+    },
+  },
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// =====================================
+//          PRODUCT ITEMS
+// =====================================
+
+const wishBtnP = document.querySelectorAll('.p-pric img');
+
+wishBtnP.forEach(wishBtn => {
+
+  wishBtn.addEventListener('click', function (event) {
+    wishBtn.classList.toggle('active');
+
+    if (wishBtn.classList.contains('active')) {
+      wishBtn.src = '/cilent/assets/icons/wish-icon-active.svg';
+      wishCount.innerText = parseInt(wishCount.innerText) + 1;
+    } else {
+      wishBtn.src = '/cilent/assets/icons/wish-icon.svg';
+      wishCount.innerText = parseInt(wishCount.innerText) - 1;
+    }
+  });
+
+});
+
+
+var swiper = new Swiper(".product-image-box .mySwiper.hover-image", {
+  autoHeight: true,
+  spaceBetween: 20,
+  autoplay: {
+    delay: 2000,
+    disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
+
+
+
+const productImageBox = document.querySelectorAll('.product-image-box');
+const basketCounts = document.querySelector('.i-basket sup');
+
+productImageBox.forEach(prodBtn => {
+
+  const productAddBtn = prodBtn.querySelector('.add-btn');
+  const productAddSize = prodBtn.querySelector('.add-size');
+
+  const mainImage = prodBtn.querySelector('.main-image');
+  const hoverImage = prodBtn.querySelector('.hover-image');
+
+
+  const swiperBtns = prodBtn.querySelectorAll('.p-btn');
+
+
+  prodBtn.addEventListener('mouseover', function (event) {
+    prodBtn.classList.add('active');
+    productAddBtn.classList.add('active');
+  });
+
+
+
+
+
+  prodBtn.addEventListener('mouseout', (event) => {
+    if (!prodBtn.contains(event.relatedTarget)) {
+      hoverImage.classList.remove('active');
+      productAddBtn.classList.remove('active');
+      productAddSize.classList.remove('active');
+    }
+    prodBtn.classList.remove('active');
+  });
+
+  productAddBtn.addEventListener('click', function (event) {
+    productAddSize.classList.add('active');
+  });
+
+
+
+  productAddSize.addEventListener('click', function (event) {
+    productAddSize.classList.remove('active');
+    basketCounts.innerText = parseInt(basketCounts.innerText) + 1;;
+  });
+
+
+  productAddSize.addEventListener('mouseover', (event) => {
+
+    swiperBtns.forEach(swiperBtn => {
+      swiperBtn.style.display = 'none';
+    });
+
+  });
+
+  productAddSize.addEventListener('mouseout', (event) => {
+
+    if (!productAddSize.contains(event.relatedTarget)) {
+      productAddSize.classList.remove('active');
+      swiperBtns.forEach(swiperBtn => {
+        swiperBtn.style.display = 'block';
+      });
+    }
+
+  });
+
+
+});
+
+// =====================================
+//          PRODUCT ITEMS
+// =====================================

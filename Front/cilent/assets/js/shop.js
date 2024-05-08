@@ -1,7 +1,15 @@
-window.addEventListener('scroll', function () {
-    var header = document.querySelector('.header-info');
-    header.classList.toggle('scrolled', window.scrollY > 0);
-});
+// const filterContainer = document.querySelector('.filter');
+// const productContainer = document.querySelector('.product-container');
+
+// productContainer.addEventListener('scroll', () => {
+//   // Calculate how much to translate the filter container based on how far 
+//   // the product container has been scrolled
+//   const translationY = Math.min(0, productContainer.scrollTop);
+
+//   // Apply the calculated translation to the filter container
+//   filterContainer.style.transform = `translateY(${translationY}px)`;
+// });
+
 
 
 
@@ -442,7 +450,51 @@ wishBtnP.forEach(wishBtn => {
 
 
 
-var swiper = new Swiper(".mySwiper.hover-image", {
+// const productImageBox = document.querySelectorAll('.product-image-box');
+// const basketCount = document.querySelector('.i-basket sup');
+
+// productImageBox.forEach(prodBtn => {
+
+//     const productAddBtn = prodBtn.querySelector('.add-btn');
+//     const productAddSize = prodBtn.querySelector('.add-size');
+
+//     const mainImage = prodBtn.querySelector('.main-image');
+//     const hoverImage = prodBtn.querySelector('.hover-image');
+
+//     productAddBtn.addEventListener('click', function (event) {
+//         productAddSize.style.display = 'flex';
+//     });
+
+//     productAddSize.addEventListener('click', function (event) {
+//         productAddSize.style.display = 'none';
+//         basketCount.innerText = parseInt(basketCount.innerText)+1;;
+//     });
+
+
+
+
+//     prodBtn.addEventListener('mouseover', function (event) {
+//         productAddBtn.style.display = 'flex';
+//         hoverImage.style.display = 'flex';
+//         mainImage.style.display = 'none';
+//     });
+
+//     prodBtn.addEventListener('mouseout', function (event) {
+//         productAddBtn.style.display = 'none';
+//         hoverImage.style.display = 'none';
+//         mainImage.style.display = 'flex';
+//     });
+
+
+
+
+
+
+
+// });
+
+
+var swiper = new Swiper(".mySwiper", {
     autoHeight: true,
     spaceBetween: 20,
     autoplay: {
@@ -454,6 +506,17 @@ var swiper = new Swiper(".mySwiper.hover-image", {
         prevEl: ".swiper-button-prev",
     },
 });
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -491,6 +554,12 @@ productImageBox.forEach(prodBtn => {
         prodBtn.classList.remove('active');
     });
 
+
+
+
+
+
+
     productAddBtn.addEventListener('click', function (event) {
         productAddSize.classList.add('active');
     });
@@ -523,240 +592,30 @@ productImageBox.forEach(prodBtn => {
     });
 
 
+
+
+
+    // prodBtn.addEventListener('mouseover', function (event) {
+    //     productAddBtn.style.display = 'flex';
+    //     hoverImage.style.display = 'flex';
+    //     mainImage.style.display = 'none';
+    // });
+
+    // prodBtn.addEventListener('mouseout', function (event) {
+    //     productAddBtn.style.display = 'none';
+    //     hoverImage.style.display = 'none';
+    //     mainImage.style.display = 'flex';
+    // });
+
+
+
+
+
 });
 
 // =====================================
 //          PRODUCT ITEMS
 // =====================================
-
-
-
-// =====================================
-//          PRODUCT ITEMS DETAIL
-// =====================================
-
-const ItemHead = document.querySelectorAll('.items-head .left-box svg')
-const productsCart = document.querySelectorAll('.product-items .toggle');
-const notFound = document.querySelector('.not-found');
-
-ItemHead.forEach(itemHead => {
-    itemHead.addEventListener('click', function (event) {
-
-        let name = itemHead.getAttribute('data-name');
-
-        productsCart.forEach(productCart => {
-            if (productCart.getAttribute('data-name') === name) {
-                console.log(productCart);
-                productCart.classList.add('active');
-            } else {
-                productCart.classList.remove('active');
-            }
-
-            // const productLiElements = productCart.querySelectorAll('.product-box');
-            // console.log(productLiElements.length);
-            // if (productLiElements.length == 0) {
-            //     notFound.classList.add('active');
-            // } else {
-            //     notFound.classList.remove('active');
-            // }
-
-        });
-    });
-});
-// =====================================
-//          PRODUCT ITEMS DETAIL
-// =====================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// ===========================================================
-//   P R O D U C U T   D E T A I L    -    C O N T A I N E R
-// ===========================================================
-
-const prodContainer = document.querySelector('.product-box');
-
-let swiperDetail = new Swiper(".mySwiper.img-detail", {
-    spaceBetween: 30,
-    hashNavigation: {
-        watchState: true,
-    },
-    pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-        dynamicBullets: true,
-    },
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-    },
-});
-
-
-
-
-var descriptionElement = document.querySelectorAll('.product-description');
-
-descriptionElement.forEach((descriptionElement) => {
-
-    if (descriptionElement) {
-        var text = descriptionElement.textContent.trim();
-        if (text.length > 200) {
-            var shortenedText = text.substring(0, 400) + ' ...';
-            descriptionElement.textContent = shortenedText;
-        }
-    }
-});
-
-
-
-// Sizes
-
-const sizes = document.querySelectorAll('.size-block');
-
-sizes.forEach((size) => {
-    size.addEventListener('click', function () {
-        if (!size.classList.contains('sold-out')) {
-            sizes.forEach((size) => {
-                size.classList.remove('active');
-            });
-            this.classList.add('active');
-        }
-    });
-});
-
-// Sizes
-
-// Add to cart
-
-
-const detailButtons = document.querySelectorAll('.detail-buttons');
-
-detailButtons.forEach((detailButton) => {
-
-    const input = detailButton.querySelector('.detail-buttons input');
-    const plusBtn = detailButton.querySelector('.detail-buttons .plus');
-    const minusBtn = detailButton.querySelector('.detail-buttons .minus');
-
-    plusBtn.addEventListener('click', (event) => {
-
-        var value = parseFloat(input.value);
-        input.value = value + 1;
-    });
-    minusBtn.addEventListener('click', (event) => {
-        var value = parseFloat(input.value);
-        if (value > 1) {
-            input.value = value - 1;
-        }
-    });
-
-    const AddBasket = detailButton.querySelector('.detail-buttons .add-cart');
-    let BasketValue = document.querySelector('.i-basket sup');
-
-
-    AddBasket.addEventListener('click', (event) => {
-
-        BasketValue.innerText = parseInt(BasketValue.innerText) + parseInt(input.value);
-    });
-
-
-});
-
-
-
-
-
-
-
-
-
-
-// Wish
-
-const wishBtn = document.querySelectorAll('.wish-share img');
-
-wishBtn.forEach((wishBtn) => {
-
-    wishBtn.addEventListener('click', (event) => {
-        event.preventDefault();
-        if (wishBtn.classList.contains('active')) {
-            wishBtn.classList.remove('active');
-            wishBtn.src = '/cilent/assets/icons/wish-icon.svg';
-            wishCount.innerText = parseInt(wishCount.innerText) - 1;
-        } else {
-            wishBtn.classList.add('active');
-            wishBtn.src = '/cilent/assets/icons/wish-icon-active.svg';
-            wishCount.innerText = parseInt(wishCount.innerText) + 1;
-        }
-    });
-
-
-    const wishspan = document.querySelector('.wish-share span');
-
-    wishspan.addEventListener('click', (event) => {
-        wishBtn.click()
-    });
-
-})
-
-
-
-
-
-
-const swpBox = document.querySelectorAll('.image-detail .mySwiper.img-detail');
-
-swpBox.forEach((swpBox) => {
-    const nextBtns = swpBox.querySelector('.swiper-button-next');
-    const PrevBtns = swpBox.querySelector('.swiper-button-prev');
-
-
-
-    swpBox.addEventListener('mouseover', (event) => {
-        if (nextBtns) {
-            nextBtns.style.display = 'block';
-        }
-        if (PrevBtns) {
-            PrevBtns.style.display = 'block';
-        }
-    });
-
-    swpBox.addEventListener('mouseout', (event) => {
-        if (nextBtns) {
-            nextBtns.style.display = 'none';
-        }
-        if (PrevBtns) {
-            PrevBtns.style.display = 'none';
-        }
-    });
-
-});
-
-// ===========================================================
-//   P R O D U C U T   D E T A I L    -    C O N T A I N E R
-// ===========================================================
-
-
-
-
-
-
-
-
-
 
 
 
