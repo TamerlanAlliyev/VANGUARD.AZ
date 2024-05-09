@@ -1297,6 +1297,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 75%;
     /* height: 82%; */
 }
+
 /********************************************************************************/
 
 .product-image-box .p-buttons {
@@ -1456,17 +1457,17 @@ input[type="range"]::-webkit-slider-thumb {
 /* **** S W I P E R ***** */
 
 
-.swiper {
+.products-cart .swiper {
     width: 100%;
     height: 100%;
 }
 
-.swiper-slide {
+.products-cart .swiper-slide {
     text-align: center;
     font-size: 18px;
 }
 
-.swiper .swiper-slide {
+.products-cart .swiper .swiper-slide {
     height: 175px;
     line-height: 175px;
     /* height: 350px; */
@@ -1771,6 +1772,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 100%;
     display: none;
 }
+
 .products-detail-cart.active {
     display: flex;
 }
@@ -1785,7 +1787,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 
 .products-detail-cart .image-detail {
-    height: 440px;
+    height: 400px;
     width: 100%;
     /* width: 33%; */
 }
@@ -1817,7 +1819,7 @@ input[type="range"]::-webkit-slider-thumb {
 
 .image-detail .swiper .swiper-slide {
     width: 100%;
-    height: 97%;
+    height: 400px;
     /* height: 92%; */
 }
 
@@ -3305,18 +3307,18 @@ input[type="number"]::-webkit-outer-spin-button {
     /* **** S W I P E R ***** */
 
 
-    .swiper {
+    .products-cart .swiper {
         width: 100%;
         height: 100%;
     }
 
-    .swiper-slide {
+    .products-cart .swiper-slide {
         text-align: center;
         font-size: 18px;
         background: #f02323;
     }
 
-    .swiper .swiper-slide {
+    .products-cart .swiper .swiper-slide {
         /**/
         height: 255px;
         line-height: 255px;
@@ -3574,7 +3576,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .products-detail-cart .detail-box {
         width: 56%;
-    justify-content: space-between;
+        justify-content: space-between;
 
         gap: 25px;
         /* width: 60%; */
@@ -3598,7 +3600,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .image-detail .swiper .swiper-slide {
         width: 100%;
-        height: 100%;
+        height: 400px;
         /* height: 92%; */
     }
 
@@ -4346,7 +4348,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
     /* **** S W I P E R ***** */
 
-    .swiper .swiper-slide {
+    .products-cart .swiper .swiper-slide {
         height: 350px;
         line-height: 350px;
     }
@@ -4460,7 +4462,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 
-        /* =======================================================
+    /* =======================================================
    P R O D U C U T   D E T A I L    -    C O N T A I N E R
 ==========================================================*/
 
@@ -4468,86 +4470,86 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 
-.products-detail-cart .image-detail {
-    height: 440px;
-    width: 33%;
-}
+    .products-detail-cart .image-detail {
+        height: 440px;
+        width: 33%;
+    }
 
-.products-detail-cart .detail-box {
-    width: 60%;
-}
+    .products-detail-cart .detail-box {
+        width: 60%;
+    }
 
 
 
 
-/* ================ SWIPER ================ */
+    /* ================ SWIPER ================ */
 
 
-.image-detail .swiper .swiper-slide {
-    height: 92%;
-}
+    .image-detail .swiper .swiper-slide {
+        height: 440px;
+    }
 
-.image-detail .swiper .swiper-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-}
+    .image-detail .swiper .swiper-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
 
 
 
-.image-detail .swiper-button-next,
-.image-detail .swiper-button-prev {
-    top: 47% !important;
+    .image-detail .swiper-button-next,
+    .image-detail .swiper-button-prev {
+        top: 47% !important;
 
-}
+    }
 
-.swiper-pagination {
-    display: block;
-}
+    .swiper-pagination {
+        display: block;
+    }
 
 
-/* ================ SWIPER ================ */
+    /* ================ SWIPER ================ */
 
 
 
 
 
-/* ================ DETAIL ================ */
+    /* ================ DETAIL ================ */
 
-.info-detail {
-    gap: 15px;
-}
+    .info-detail {
+        gap: 15px;
+    }
 
 
-.detail-box .d-head h3 {
-    font-size: 20px;
-}
+    .detail-box .d-head h3 {
+        font-size: 20px;
+    }
 
 
-.product-rating {
-    font-size: 8px;
-    gap: 10px;
-}
+    .product-rating {
+        font-size: 8px;
+        gap: 10px;
+    }
 
 
 
 
-.detail-box .cart-prices .sell-price {
-    font-size: 14px;
-}
+    .detail-box .cart-prices .sell-price {
+        font-size: 14px;
+    }
 
-.detail-box .cart-prices .sell-price.dis {
-    font-size: 16px;
-}
+    .detail-box .cart-prices .sell-price.dis {
+        font-size: 16px;
+    }
 
-.detail-box .cart-prices .sell-price.sell {
-    font-size: 16px;
-}
+    .detail-box .cart-prices .sell-price.sell {
+        font-size: 16px;
+    }
 
-.detail-box .product-description{
-    font-size: 14px;
-}
+    .detail-box .product-description {
+        font-size: 14px;
+    }
 
 
 
@@ -4556,39 +4558,39 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 
-/* Sizes */
+    /* Sizes */
 
-.prod-added {
-    gap: 25px;
-}
+    .prod-added {
+        gap: 25px;
+    }
 
-.detail-size-box {
-    gap: 30px;
-}
+    .detail-size-box {
+        gap: 30px;
+    }
 
-.detail-sizes {
-    gap: 14px;
-    row-gap: 14px;
-}
+    .detail-sizes {
+        gap: 14px;
+        row-gap: 14px;
+    }
 
-.detail-sizes .size-block {
-    width: 30px;
-    height: 30px;
-}
+    .detail-sizes .size-block {
+        width: 30px;
+        height: 30px;
+    }
 
 
-.detail-sizes .size-block span {
-    font-size: 12px;
-}
+    .detail-sizes .size-block span {
+        font-size: 12px;
+    }
 
 
 
-.detail-size-box .sizes-head {
-    font-size: 16px;
-}
+    .detail-size-box .sizes-head {
+        font-size: 16px;
+    }
 
 
-/* Sizes */
+    /* Sizes */
 
 
 
@@ -4600,60 +4602,60 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 
-/* detail-button */
+    /* detail-button */
 
-.detail-buttons {
-    gap: 15px;
-}
+    .detail-buttons {
+        gap: 15px;
+    }
 
-.detail-buttons .add-cart {
-    height: 35px;
-    font-size: 14px;
-}
+    .detail-buttons .add-cart {
+        height: 35px;
+        font-size: 14px;
+    }
 
-.cart-qty .quantity-box {
-    min-width: 80px;
+    .cart-qty .quantity-box {
+        min-width: 80px;
 
-}
+    }
 
-.cart-qty input {
-    font-size: 14px;
-}
+    .cart-qty input {
+        font-size: 14px;
+    }
 
-.cart-qty .quantity {
-    font-size: 14px;
-}
+    .cart-qty .quantity {
+        font-size: 14px;
+    }
 
 
-.cart-prod-total {
-    font-size: 14px;
-}
+    .cart-prod-total {
+        font-size: 14px;
+    }
 
 
 
 
 
 
-.wish-share {
-    font-size: 10px; 
-}
+    .wish-share {
+        font-size: 10px;
+    }
 
 
 
 
-.product-infos {
-    font-size: 10px;
-}
+    .product-infos {
+        font-size: 10px;
+    }
 
 
 
 
-/* detail-button */
+    /* detail-button */
 
-/* ================ DETAIL ================ */
+    /* ================ DETAIL ================ */
 
 
-/* =======================================================
+    /* =======================================================
    P R O D U C U T   D E T A I L    -    C O N T A I N E R
 ==========================================================*/
 

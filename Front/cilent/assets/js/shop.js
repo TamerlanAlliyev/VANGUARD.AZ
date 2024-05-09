@@ -1,17 +1,14 @@
-// const filterContainer = document.querySelector('.filter');
-// const productContainer = document.querySelector('.product-container');
-
-// productContainer.addEventListener('scroll', () => {
-//   // Calculate how much to translate the filter container based on how far 
-//   // the product container has been scrolled
-//   const translationY = Math.min(0, productContainer.scrollTop);
-
-//   // Apply the calculated translation to the filter container
-//   filterContainer.style.transform = `translateY(${translationY}px)`;
-// });
+window.addEventListener('scroll', function () {
+    var header = document.querySelector('.header-info');
+    header.classList.toggle('scrolled', window.scrollY > 0);
+});
 
 
 
+
+// =====================================
+//          FILETER - START
+// =====================================
 
 
 
@@ -415,6 +412,163 @@ function toggleFilter() {
         filterContainer.style.display = 'none';
     }
 }
+// =====================================
+//          FILETER - END
+// =====================================
+
+
+
+
+
+
+
+
+
+
+// =====================================
+//          PRODUCT Detail
+// =====================================
+
+const leftBoxSvg = document.querySelectorAll('.left-box svg');
+const productsCart = document.querySelectorAll('.product-items .toggle');
+leftBoxSvg.forEach(Svg => {
+    Svg.addEventListener('click', function (event) {
+        leftBoxSvg.forEach(svg => {
+            svg.classList.toggle('active');
+        })
+        let catname = Svg.getAttribute('data-name');
+
+
+        productsCart.forEach(cart => {
+            if (cart.classList.contains(catname)) {
+                cart.classList.add('active');
+            } else {
+                cart.classList.remove('active');
+            }
+        })
+    });
+})
+
+
+
+const sizes = document.querySelectorAll('.size-block');
+
+sizes.forEach((size) => {
+    size.addEventListener('click', function () {
+        if (!size.classList.contains('sold-out')) {
+            sizes.forEach((size) => {
+                size.classList.remove('active');
+            });
+            this.classList.add('active');
+        }
+    });
+});
+
+
+
+
+
+const DetailCart = document.querySelectorAll('.products-detail-cart .product-box');
+let BasketValue = document.querySelector('.i-basket sup');
+let wishC = document.querySelector('.i-wish sup');
+
+
+DetailCart.forEach((cart) => {
+    const input = cart.querySelector('.detail-buttons input');
+    const plusBtn = cart.querySelector('.detail-buttons .plus');
+    const minusBtn = cart.querySelector('.detail-buttons .minus');
+
+    plusBtn.addEventListener('click', (event) => {
+
+        var value = parseFloat(input.value);
+        input.value = value + 1;
+    });
+    minusBtn.addEventListener('click', (event) => {
+        var value = parseFloat(input.value);
+        if (value > 1) {
+            input.value = value - 1;
+        }
+    });
+
+
+    const AddBasket = cart.querySelector('.detail-buttons .add-cart');
+
+    AddBasket.addEventListener('click', (event) => {
+
+        BasketValue.innerText = parseInt(BasketValue.innerText) + parseInt(input.value);
+    });
+
+
+
+
+
+
+
+
+
+    const wishBtn = cart.querySelector('.wish-share img');
+
+
+    wishBtn.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (wishBtn.classList.contains('active')) {
+            wishBtn.classList.remove('active');
+            wishBtn.src = '/cilent/assets/icons/wish-icon.svg';
+            wishC.innerText = parseInt(wishC.innerText) - 1;
+        } else {
+            wishBtn.classList.add('active');
+            wishBtn.src = '/cilent/assets/icons/wish-icon-active.svg';
+            wishC.innerText = parseInt(wishC.innerText) + 1;
+        }
+    });
+
+
+    const wishspan = cart.querySelector('.wish-share span');
+
+    wishspan.addEventListener('click', (event) => {
+        wishBtn.click()
+    });
+
+
+
+
+
+    const productImage = cart.querySelector(".img-detail img"); // More specific
+    const productName = cart.querySelector(".d-head h3");
+    const productDescription = cart.querySelector(".product-description");
+    
+    const shareData = {
+        title: productName.innerText,
+        text: productDescription.innerText,  // Assumes description is plain text
+        url: window.location.href
+    };
+    
+    // Ensure an image exists before adding it
+    if (productImage) {
+        shareData.image = productImage.src; // Use 'src' directly
+    }
+    
+    const shareButton = cart.querySelector(".share");
+    
+    shareButton.addEventListener("click", async () => {
+        try {
+            await navigator.share(shareData);
+        } catch (err) {
+            console.error("Sharing Error:", err);  // Log the error
+            alert("Sharing failed. Please try again."); // User notification
+        }
+    });
+    
+
+});
+// =====================================
+//          PRODUCT Detail
+// =====================================
+
+
+
+
+
 
 
 
@@ -590,22 +744,6 @@ productImageBox.forEach(prodBtn => {
         }
 
     });
-
-
-
-
-
-    // prodBtn.addEventListener('mouseover', function (event) {
-    //     productAddBtn.style.display = 'flex';
-    //     hoverImage.style.display = 'flex';
-    //     mainImage.style.display = 'none';
-    // });
-
-    // prodBtn.addEventListener('mouseout', function (event) {
-    //     productAddBtn.style.display = 'none';
-    //     hoverImage.style.display = 'none';
-    //     mainImage.style.display = 'flex';
-    // });
 
 
 

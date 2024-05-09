@@ -161,14 +161,10 @@ minusBtn.addEventListener('click', (event) => {
 
 const AddBasket = document.querySelector('.detail-buttons .add-cart');
 
-// console.log(parseInt(basketSup.innerText)+parseInt(HeaderBasaketCount.innerText))
-
-// console.log(parseInt(input.value))
 
 
 let BasketValue = document.querySelector('.i-basket sup');
 
-console.log(parseInt(BasketValue.innerText) + parseInt(input.value))
 AddBasket.addEventListener('click', (event) => {
 
   BasketValue.innerText = parseInt(BasketValue.innerText) + parseInt(input.value);
@@ -203,7 +199,6 @@ wishBtn.addEventListener('click', (event) => {
 
 const wishspan = document.querySelector('.wish-share span');
 
-console.log(wishspan)
 wishspan.addEventListener('click', (event) => {
   wishBtn.click()
 });
