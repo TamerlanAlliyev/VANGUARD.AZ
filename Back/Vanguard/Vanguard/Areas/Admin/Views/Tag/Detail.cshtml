@@ -1,0 +1,77 @@
+﻿
+@model Tag
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Tag</a></li>
+                <li class="breadcrumb-item"><a onclick="javascript:void(0)">Detail</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tag Detail</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <td class="left strong">@Model.Name</td>
+                                        <td class="left strong"></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td class="left">Status :</td>
+                                        <td class="left strong ">
+
+                                            @if (Model.IsDeleted)
+                                            {
+                                                <span class="badge badge-sm light badge-danger">Deleted</span>
+                                            }
+                                            else
+                                            {
+                                                <span class="badge badge-sm light badge-success">Active</span>
+                                            }
+
+                                        </td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <td class="left">Created By :</td>
+                                        <td class="left strong">@Model.CreatedBy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">Created Date :</td>
+                                        <td class="left strong">@Model.CreatedDate</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">Modified By :</td>
+                                        <td class="left strong">@Model.ModifiedBy</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="left">Modified Date :</td>
+                                        <td class="left strong">@Model.ModifiedDate</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script {
+    <script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+}

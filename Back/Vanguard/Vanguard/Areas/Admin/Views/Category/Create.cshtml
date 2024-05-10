@@ -1,0 +1,86 @@
+﻿@model CategoryCreatVM
+
+@section style{
+    <link rel="stylesheet" href="~/admin/vendor/select2/css/select2.min.css">
+    <link href="~/admin/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+}
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Tag</a></li>
+                <li class="breadcrumb-item"><a onclick="javascript:void(0)">Create</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tag Create</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form method="post" class="needs-validation" novalidate="">
+                                <div class="row">
+                                    <!-- First Section -->
+                                    <div  class="col-xl-12">
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Tag Name
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input asp-for="Name" type="text" class="form-control" id="validationCustom01" placeholder="Enter a username.." required="">
+                                                <div class="invalid-feedback">
+                                                    Please enter a Tag Name.
+                                                </div>
+                                                <span class="text-danger" asp-validation-for="Name"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Second Section -->
+                                    <div class="col-xl-12">
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Select State
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <select asp-items="@ViewBag.Categories" asp-for="ParentCategoryId" class="form-select" id="single-select" required>
+                                                    <option selected disabled>Select Parent Category</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please select a State.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <!-- Submit Button -->
+                                    <div class="col-xl-12">
+                                        <div class="mb-3 row">
+                                            <div class="col-lg-6 offset-lg-4">
+                                                <button type="submit" class="btn btn-primary">Submit</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section script {
+    <script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
+    <script src="~/admin/vendor/global/global.min.js"></script>
+    <script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="~/admin/vendor/select2/js/select2.full.min.js"></script>
+    <script src="~/admin/js/plugins-init/select2-init.js"></script>
+}

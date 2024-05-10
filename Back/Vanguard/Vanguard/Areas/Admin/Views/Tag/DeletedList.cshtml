@@ -1,0 +1,139 @@
+﻿@model List<Tag>
+
+@section style {
+    <link href="~/admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Tag</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Deleted List</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Tag Deleted List</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display " style="min-width: 545px">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Created Date</th>
+                                        <th>Deleted Date</th>
+                                        <th class="d-flex justify-content-center">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var tag in Model)
+                                    {
+                                        <tr>
+                                            <td>@tag.Name</td>
+                                            <td>@tag.CreatedDate</td>
+                                            <td>@tag.ModifiedDate</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <a title="Detail" asp-action="Detail" asp-controller="tag" asp-area="Admin" asp-route-id="@tag.Id" class="btn btn-primary shadow btn-xs sharp me-1"><i class="bi bi-eye"></i></a>
+                                                    <a title="Recover" data-id="@tag.Id" class="btn btn-success shadow btn-xs sharp me-1 recover"><i class="bi bi-arrow-clockwise"></i></a>
+                                                    <a title="Hard-Delete" class="btn btn-danger shadow btn-xs sharp preview" data-id="@tag.Id"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script {
+    <script src="~/admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/admin/js/plugins-init/datatables.init.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const trashButtons = document.querySelectorAll('.preview');
+            const recoverBtn = document.querySelectorAll('.recover');
+            trashButtons.forEach(trashButton => {
+                trashButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    let dataId = this.getAttribute('data-id');
+                    console.log(dataId)
+                    swal({
+                        title: "Are you sure?",
+                        text: "Once this tag is deleted it cannot be restored!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    }).then((willDelete) => {
+                        if (willDelete) {
+                            let tr = this.closest('tr');
+
+                            fetch('HardDeleted/' + dataId)
+                                .then(response => {
+                                    if (response.ok) {
+                                        toastr["success"]("Tag deleted successfully");
+                                        tr.remove();
+                                    } else {
+                                        toastr["error"]("An error occurred while deleting the tag");
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                    toastr["error"]("An error occurred while deleting the tag");
+                                });
+                        } else {
+                            swal("Tag not deleted!");
+                        }
+                    });
+                });
+            });
+
+
+
+
+
+            recoverBtn.forEach(recBtn => {
+                recBtn.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    let dataId = this.getAttribute('data-id');
+                    console.log(dataId);
+
+                    let tr = this.closest('tr');
+
+                    fetch('Recover/' + dataId)
+                        .then(response => {
+                            if (response.ok) {
+                                toastr["success"]("Tag recovered successfully");
+                                tr.remove();
+                            } else {
+                                toastr["error"]("An error occurred while recovering the tag");
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            toastr["error"]("An error occurred while recovering the tag");
+                        });
+                });
+            });
+
+
+
+        });
+    </script>
+}
+

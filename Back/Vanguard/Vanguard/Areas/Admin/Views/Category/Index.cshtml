@@ -1,0 +1,111 @@
+﻿@model List<Category>
+
+@section style {
+    <link href="~/admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Category</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">List</a></li>
+            </ol>
+
+
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Category List</h4>
+                        <a asp-action="create" asp-area="Admin" asp-controller="Category" class="btn btn-primary">Create Category</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display " style="min-width: 545px">
+                                <thead>
+                                    <tr>
+                                        <th class="w-25">Name</th>
+                                        <th class="w-50">Created Date</th>
+                                        <th class="w-25">Parent Category</th>
+                                        <th class="w-25">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var category in Model)
+                                    {
+                                        <tr style="@(category.ParentCategoryId == null ? "color:#17a2b8":"")">
+                                            <td>@category.Name</td>
+                                            <td>@category.CreatedDate</td>
+                                            <td>@(category.ParentCategory != null ? category.ParentCategory.Name : "")</td>
+
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a asp-action="Detail" asp-route-id="@category.Id" asp-controller="Category" asp-area="Admin" class="btn btn-primary shadow btn-xs sharp me-1" ><i class="bi bi-eye"></i></a>
+                                                    <a asp-action="Edit" asp-route-id="@category.Id" asp-controller="Category" asp-area="Admin" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a class="btn btn-danger shadow btn-xs sharp preview" data-id="@category.Id"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script {
+    <script src="~/admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/admin/js/plugins-init/datatables.init.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const trashButtons = document.querySelectorAll('.preview');
+
+            trashButtons.forEach(trashButton => {
+                trashButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    let dataId = this.getAttribute('data-id');
+
+                    swal({
+                        title: "Are you sure?",
+                        text: "This tag can be restored after deletion!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    }).then((willDelete) => {
+                        if (willDelete) {
+                            let tr = this.closest('tr');
+                            fetch('Tag/SoftDelete/' + dataId)
+                                .then(response => {
+                                    if (response.ok) {
+                                        toastr["success"]("Tag deleted successfully");
+                                        tr.remove();
+                                    } else {
+                                        toastr["error"]("An error occurred while deleting the tag");
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                    toastr["error"]("An error occurred while deleting the tag");
+                                });
+                        } else {
+                            swal("Tag not deleted!");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+}
+

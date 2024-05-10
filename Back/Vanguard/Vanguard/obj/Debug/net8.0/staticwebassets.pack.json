@@ -1,0 +1,1489 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\avasta\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\avasta\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\avasta\\fonts\\avasta.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\avasta\\fonts\\avasta.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\avasta\\fonts\\avasta.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\avasta\\fonts\\avasta.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\avasta\\fonts\\avasta.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\avasta\\fonts\\avasta.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\avasta\\fonts\\avasta.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\avasta\\fonts\\avasta.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\avasta\\fonts\\avasta.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\avasta\\fonts\\avasta.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\bootstrap-icons\\font\\bootstrap-icons.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\bootstrap-icons\\font\\bootstrap-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-icons.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-icons.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-icons.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\bootstrap-icons\\font\\fonts\\bootstrap-icons.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\brand\\brand-icon.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\brand\\brand-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon\\Flaticon-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon\\Flaticon-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon\\Flaticon.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon\\Flaticon.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon\\Flaticon.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon\\Flaticon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon\\Flaticon.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon\\Flaticon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon\\Flaticon.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon\\Flaticon.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon\\flaticon.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon\\flaticon.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon_1\\Flaticon_1-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon_1\\Flaticon_1-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon_1\\Flaticon_1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon_1\\Flaticon_1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon_1\\Flaticon_1.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon_1\\Flaticon_1.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon_1\\Flaticon_1.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon_1\\Flaticon_1.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon_1\\Flaticon_1.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon_1\\Flaticon_1.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon_1\\Flaticon_1.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon_1\\Flaticon_1.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\flaticon_1\\flaticon_1.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\flaticon_1\\flaticon_1.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\css\\all.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\font-awesome\\webfonts\\fa-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\icomoon\\fonts\\icomoon.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\icomoon\\fonts\\icomoon.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\icomoon\\fonts\\icomoon.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\icomoon\\fonts\\icomoon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\icomoon\\fonts\\icomoon.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\icomoon\\fonts\\icomoon.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\icomoon\\fonts\\icomoon.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\icomoon\\fonts\\icomoon.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\icomoon\\icomoon.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\icomoon\\icomoon.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\css\\line-awesome.min.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\css\\line-awesome.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-brands-400-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-brands-400-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-brands-400.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-brands-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-brands-400.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-brands-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-brands-400.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-brands-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-brands-400.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-brands-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-brands-400.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-brands-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-regular-400-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-regular-400-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-regular-400.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-regular-400.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-regular-400.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-regular-400.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-regular-400.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-regular-400.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-regular-400.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-regular-400.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-regular-400.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-regular-400.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-solid-900-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-solid-900-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-solid-900.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-solid-900.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-solid-900.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-solid-900.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-solid-900.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-solid-900.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-solid-900.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-solid-900.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\line-awesome\\fonts\\la-solid-900.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\line-awesome\\fonts\\la-solid-900.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\material-design-iconic-font\\css\\materialdesignicons.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont-1.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\material-design-iconic-font\\fonts\\materialdesignicons-webfont.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\simple-line-icons\\css\\simple-line-icons.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\simple-line-icons\\css\\simple-line-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.woff2",
+      "PackagePath": "staticwebassets\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Icons4c82.woff2"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Iconsd41d.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\simple-line-icons\\fonts\\Simple-Line-Iconsd41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\themify-icons\\css\\themify-icons.css",
+      "PackagePath": "staticwebassets\\admin\\icons\\themify-icons\\css\\themify-icons.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\themify-icons\\fonts\\themify.ttf",
+      "PackagePath": "staticwebassets\\admin\\icons\\themify-icons\\fonts\\themify.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\themify-icons\\fonts\\themify.woff",
+      "PackagePath": "staticwebassets\\admin\\icons\\themify-icons\\fonts\\themify.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\themify-icons\\fonts\\themify9f24.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\themify-icons\\fonts\\themify9f24.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\themify-icons\\fonts\\themify9f24.svg",
+      "PackagePath": "staticwebassets\\admin\\icons\\themify-icons\\fonts\\themify9f24.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\icons\\themify-icons\\fonts\\themifyd41d.eot",
+      "PackagePath": "staticwebassets\\admin\\icons\\themify-icons\\fonts\\themifyd41d.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\avatar\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\avatar\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\avatar\\1.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatar\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\avatar\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\avatar\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\avatar\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\avatar\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\avatar\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\avatar\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\avatar\\5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\avatar\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\avatar\\5.png",
+      "PackagePath": "staticwebassets\\admin\\images\\avatar\\5.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big-wind.png",
+      "PackagePath": "staticwebassets\\admin\\images\\big-wind.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big\\img1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\big\\img1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big\\img2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\big\\img2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big\\img3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\big\\img3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big\\img4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\big\\img4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big\\img5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\big\\img5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big\\img6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\big\\img6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big\\img7.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\big\\img7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\big\\img8.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\big\\img8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\card\\1.png",
+      "PackagePath": "staticwebassets\\admin\\images\\card\\1.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\card\\2.png",
+      "PackagePath": "staticwebassets\\admin\\images\\card\\2.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\card\\3.png",
+      "PackagePath": "staticwebassets\\admin\\images\\card\\3.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\chart.png",
+      "PackagePath": "staticwebassets\\admin\\images\\chart.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\circle-hunt.png",
+      "PackagePath": "staticwebassets\\admin\\images\\circle-hunt.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\contacts\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\contacts\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\contacts\\pic11.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\contacts\\pic11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\contacts\\pic22.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\contacts\\pic22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\contacts\\pic222.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\contacts\\pic222.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\contacts\\pic33.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\contacts\\pic33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\customers\\11.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\customers\\11.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\customers\\22.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\customers\\22.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\customers\\33.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\customers\\33.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\customers\\44.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\customers\\44.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\customers\\55.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\customers\\55.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\favicon - Copy (2).png",
+      "PackagePath": "staticwebassets\\admin\\images\\favicon - Copy (2).png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\group\\g1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\group\\g1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\group\\g2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\group\\g2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\group\\g3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\group\\g3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\group\\g4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\group\\g4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\like.png",
+      "PackagePath": "staticwebassets\\admin\\images\\like.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\logo-full.png",
+      "PackagePath": "staticwebassets\\admin\\images\\logo-full.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\logo.png",
+      "PackagePath": "staticwebassets\\admin\\images\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\pattern\\pattern5.png",
+      "PackagePath": "staticwebassets\\admin\\images\\pattern\\pattern5.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\pic1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\pic1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\pic2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\pic2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\pic3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\pic3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\pic4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\pic4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\pic5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\pic5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\pic6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\pic6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\product\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\product\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\product\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\product\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\product\\5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\product\\6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\product\\7.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\product\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\7.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\8.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\9.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\cover.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\cover.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\profile.png",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\profile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic10.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic10.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic5.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic5.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic6.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic7.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic7.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic8.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic8.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\profile\\small\\pic9.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\profile\\small\\pic9.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\qr.png",
+      "PackagePath": "staticwebassets\\admin\\images\\qr.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\svg\\check.svg",
+      "PackagePath": "staticwebassets\\admin\\images\\svg\\check.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\tab\\1.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\tab\\1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\tab\\2.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\tab\\2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\tab\\3.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\tab\\3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\tab\\4.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\tab\\4.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\images\\user.jpg",
+      "PackagePath": "staticwebassets\\admin\\images\\user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\custom.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\custom.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\dashboard\\dashboard-1.js",
+      "PackagePath": "staticwebassets\\admin\\js\\dashboard\\dashboard-1.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\demo.js",
+      "PackagePath": "staticwebassets\\admin\\js\\demo.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\dlabnav-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\dlabnav-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\bs-daterange-picker-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\bs-daterange-picker-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\calendar.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\calendar.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\chartist-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\chartist-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\chartjs-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\chartjs-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\clock-picker-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\clock-picker-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\datatables.init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\datatables.init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\flot-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\flot-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\fullcalendar-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\fullcalendar-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\jquery-asColorPicker.init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\jquery-asColorPicker.init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\jquery.validate-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\jquery.validate-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\jqvmap-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\jqvmap-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\material-date-picker-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\material-date-picker-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\morris-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\morris-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\nestable-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\nestable-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\nouislider-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\nouislider-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\pickadate-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\pickadate-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\piety-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\piety-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\select2-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\select2-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\sparkline-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\sparkline-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\sweetalert.init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\sweetalert.init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\toastr-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\toastr-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\plugins-init\\widgets-script-init.js",
+      "PackagePath": "staticwebassets\\admin\\js\\plugins-init\\widgets-script-init.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\js\\styleSwitcher.js",
+      "PackagePath": "staticwebassets\\admin\\js\\styleSwitcher.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\animate\\animate.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\animate\\animate.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\aos\\css\\aos.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\aos\\css\\aos.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\apexchart\\apexchart.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\apexchart\\apexchart.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\bootstrap-daterangepicker\\daterangepicker.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\bootstrap-daterangepicker\\daterangepicker.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\bootstrap-daterangepicker\\daterangepicker.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\bootstrap-daterangepicker\\daterangepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\bootstrap-material-datetimepicker\\css\\bootstrap-material-datetimepicker.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\bootstrap-material-datetimepicker\\css\\bootstrap-material-datetimepicker.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\bootstrap-material-datetimepicker\\js\\bootstrap-material-datetimepicker.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\bootstrap-material-datetimepicker\\js\\bootstrap-material-datetimepicker.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\bootstrap-select\\dist\\css\\bootstrap-select.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\bootstrap-select\\dist\\css\\bootstrap-select.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\bootstrap-select\\dist\\js\\bootstrap-select.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\bootstrap-select\\dist\\js\\bootstrap-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\chart.js\\Chart.bundle.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\chart.js\\Chart.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\chartist-plugin-tooltips\\js\\chartist-plugin-tooltip.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\chartist-plugin-tooltips\\js\\chartist-plugin-tooltip.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\chartist\\css\\chartist.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\chartist\\css\\chartist.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\chartist\\js\\chartist.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\chartist\\js\\chartist.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\ckeditor\\ckeditor.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\ckeditor\\ckeditor.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\clockpicker\\css\\bootstrap-clockpicker.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\clockpicker\\css\\bootstrap-clockpicker.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\clockpicker\\js\\bootstrap-clockpicker.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\clockpicker\\js\\bootstrap-clockpicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\datatables\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\datatables\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\datatables\\images\\sort_asc.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\datatables\\images\\sort_asc.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\datatables\\images\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\datatables\\images\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\datatables\\images\\sort_both.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\datatables\\images\\sort_both.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\datatables\\images\\sort_desc.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\datatables\\images\\sort_desc.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\datatables\\images\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\datatables\\images\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\datatables\\js\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\datatables\\js\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\draggable\\draggable.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\draggable\\draggable.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\dropzone\\dist\\dropzone.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\dropzone\\dist\\dropzone.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\dropzone\\dist\\dropzone.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\dropzone\\dist\\dropzone.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\flot-spline\\jquery.flot.spline.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\flot-spline\\jquery.flot.spline.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\flot\\jquery.flot.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\flot\\jquery.flot.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\flot\\jquery.flot.pie.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\flot\\jquery.flot.pie.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\flot\\jquery.flot.resize.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\flot\\jquery.flot.resize.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\fullcalendar\\css\\main.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\css\\main.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\fullcalendar\\js\\main.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\fullcalendar\\js\\main.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\global\\global.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\global\\global.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\highlightjs\\highlight.pack.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\highlightjs\\highlight.pack.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-asColorPicker\\css\\asColorPicker.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-asColorPicker\\css\\asColorPicker.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-asColorPicker\\images\\alpha.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-asColorPicker\\images\\alpha.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-asColorPicker\\images\\hue.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-asColorPicker\\images\\hue.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-asColorPicker\\images\\saturation.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-asColorPicker\\images\\saturation.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-asColorPicker\\images\\transparent.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-asColorPicker\\images\\transparent.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-asColorPicker\\js\\jquery-asColorPicker.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-asColorPicker\\js\\jquery-asColorPicker.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-asColor\\jquery-asColor.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-asColor\\jquery-asColor.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-asGradient\\jquery-asGradient.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-asGradient\\jquery-asGradient.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-nice-select\\css\\nice-select.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-nice-select\\css\\nice-select.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-nice-select\\js\\jquery.nice-select.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-nice-select\\js\\jquery.nice-select.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-smartwizard\\dist\\css\\smart_wizard.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-smartwizard\\dist\\css\\smart_wizard.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-smartwizard\\dist\\js\\jquery.smartWizard.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-smartwizard\\dist\\js\\jquery.smartWizard.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-sparkline\\jquery.sparkline.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-sparkline\\jquery.sparkline.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-steps\\build\\jquery.steps.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-steps\\build\\jquery.steps.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jquery-validation\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jquery-validation\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jqvmap\\css\\jqvmap.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jqvmap\\css\\jqvmap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jqvmap\\js\\jquery.vmap.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jqvmap\\js\\jquery.vmap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jqvmap\\js\\jquery.vmap.usa.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jqvmap\\js\\jquery.vmap.usa.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\jqvmap\\js\\jquery.vmap.world.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\jqvmap\\js\\jquery.vmap.world.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\css\\lightgallery.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\css\\lightgallery.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\fonts\\lg-1.eot",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\fonts\\lg-1.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\fonts\\lg.eot",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\fonts\\lg.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\fonts\\lg.svg",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\fonts\\lg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\fonts\\lg.ttf",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\fonts\\lg.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\fonts\\lg.woff",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\fonts\\lg.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\img\\loading.gif",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\img\\loading.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\img\\video-play.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\img\\video-play.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\img\\vimeo-play.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\img\\vimeo-play.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\img\\youtube-play.png",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\img\\youtube-play.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\lightgallery\\js\\lightgallery-all.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\lightgallery\\js\\lightgallery-all.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\metismenu\\css\\metisMenu.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\metismenu\\css\\metisMenu.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\moment\\moment.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\moment\\moment.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\morris\\morris.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\morris\\morris.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\nestable2\\css\\jquery.nestable.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\nestable2\\css\\jquery.nestable.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\nestable2\\js\\jquery.nestable.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\nestable2\\js\\jquery.nestable.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\nouislider\\nouislider.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\nouislider\\nouislider.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\nouislider\\nouislider.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\nouislider\\nouislider.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\owl-carousel\\owl.carousel.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\owl-carousel\\owl.carousel.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\owl-carousel\\owl.carousel.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\owl-carousel\\owl.carousel.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\peity\\jquery.peity.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\peity\\jquery.peity.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\perfect-scrollbar\\css\\perfect-scrollbar.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\perfect-scrollbar\\css\\perfect-scrollbar.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\pickadate\\picker.date.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\pickadate\\picker.date.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\pickadate\\picker.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\pickadate\\picker.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\pickadate\\picker.time.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\pickadate\\picker.time.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\pickadate\\themes\\default.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\pickadate\\themes\\default.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\pickadate\\themes\\default.date.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\pickadate\\themes\\default.date.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\raphael\\raphael.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\raphael\\raphael.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\select2\\css\\select2.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\select2\\css\\select2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\select2\\js\\select2.full.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\select2\\js\\select2.full.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\star-rating\\jquery.star-rating-svg.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\star-rating\\jquery.star-rating-svg.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\star-rating\\star-rating-svg.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\star-rating\\star-rating-svg.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\svganimation\\svg.animation.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\svganimation\\svg.animation.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\svganimation\\vivus.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\svganimation\\vivus.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\sweetalert2\\dist\\sweetalert2.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\sweetalert2\\dist\\sweetalert2.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\sweetalert2\\dist\\sweetalert2.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\sweetalert2\\dist\\sweetalert2.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\toastr\\css\\toastr.min.css",
+      "PackagePath": "staticwebassets\\admin\\vendor\\toastr\\css\\toastr.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\toastr\\js\\toastr.min.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\toastr\\js\\toastr.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\vendor\\wnumb\\wNumb.js",
+      "PackagePath": "staticwebassets\\admin\\vendor\\wnumb\\wNumb.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\about.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\about.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\account.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\account.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\basket.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\basket.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\blog-detail.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\blog-detail.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\blog.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\blog.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\contact.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\contact.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\forget-password.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\forget-password.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\home.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\home.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\index.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\index.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\login.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\login.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\product-detail.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\product-detail.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\register.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\register.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\shop.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\shop.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\cilent\\assets\\css\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\a.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\a.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\basket-black.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\basket-black.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\basket.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\basket.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\burger-menu.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\burger-menu.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\clock.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\clock.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\close-black.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\close-black.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\close-white.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\close-white.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\comment.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\comment.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\delivery.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\delivery.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\facebook.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\facebook.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\flame.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\flame.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\grid-detail.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\grid-detail.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\guarantee.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\guarantee.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\instagram.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\instagram.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\linkedin.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\linkedin.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\location.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\location.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\mail.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\mail.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\master.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\master.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\phone.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\phone.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\photo.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\photo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\search-black.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\search-black.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\search.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\search.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\slide-left-active.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\slide-left-active.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\slide-left.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\slide-left.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\slide-right-active.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\slide-right-active.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\slide-right.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\slide-right.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\small-logo.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\small-logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\star_3916591.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\star_3916591.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\support.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\support.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\twitter-x.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\twitter-x.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\user-profil.png",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\user-profil.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\user.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\user.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\view.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\view.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\visa.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\visa.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\whatsapp.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\whatsapp.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\wish-icon-active.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\wish-icon-active.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\wish-icon.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\wish-icon.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\wish-white.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\wish-white.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\wish.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\wish.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\icons\\x-button.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\icons\\x-button.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\products\\product.jpg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\products\\product.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\products\\slider-2.webp",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\products\\slider-2.webp"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\products\\slider-3.webp",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\products\\slider-3.webp"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\products\\slider.png",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\products\\slider.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\products\\slider01 1.png",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\products\\slider01 1.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\settings\\background-img.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\settings\\background-img.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\settings\\bg-2.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\settings\\bg-2.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\settings\\bg-3.png",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\settings\\bg-3.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\settings\\section-bg.svg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\settings\\section-bg.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\settings\\user-profil.png",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\settings\\user-profil.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\about.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\about.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\account.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\account.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\basket.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\basket.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\blog-detail.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\blog-detail.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\blog.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\blog.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\contact.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\contact.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\forget-password.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\forget-password.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\home.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\home.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\index.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\login.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\login.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\product-detail.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\product-detail.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\register.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\register.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\shop.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\shop.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\js\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\cilent\\assets\\js\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\videos\\Untitled video - Made with Clipchamp (1).mp4",
+      "PackagePath": "staticwebassets\\cilent\\assets\\videos\\Untitled video - Made with Clipchamp (1).mp4"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Vanguard.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Vanguard.props",
+      "PackagePath": "build\\Vanguard.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Vanguard.props",
+      "PackagePath": "buildMultiTargeting\\Vanguard.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Vanguard.props",
+      "PackagePath": "buildTransitive\\Vanguard.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
