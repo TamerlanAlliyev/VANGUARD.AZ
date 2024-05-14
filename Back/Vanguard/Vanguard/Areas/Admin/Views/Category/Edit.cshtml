@@ -49,6 +49,7 @@
                                             <div class="col-lg-6">
                                                 <select asp-items="@ViewBag.Categories" asp-for="ParentCategoryId" class="form-select" id="single-select" required>
                                                     <option selected disabled>Select Parent Category</option>
+                                                    <option value="">Delete Category</option>
                                                 </select>
                                                 <div class="invalid-feedback">
                                                     Please select a State.

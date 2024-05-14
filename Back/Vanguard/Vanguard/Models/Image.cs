@@ -9,4 +9,6 @@ public class Image : BaseAuditable
     public bool IsHover { get; set; }
     public int ProductId { get; set; }
     public Product? Product { get; set; }
+
+
 }

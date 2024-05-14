@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Vanguard.Areas.Admin.Services;
 using Vanguard.Areas.Admin.ViewModels.TagViewModels;
 using Vanguard.Data;
+using Vanguard.Exceptions;
 
 namespace Vanguard.Areas.Admin.Controllers;
 [Area("Admin")]
@@ -39,11 +40,16 @@ public class TagController : Controller
     {
         if (!ModelState.IsValid) return View(vm);
 
-        var Create = await _tagService.CreateAsync(vm);
-
-        if (Create == null) return View("Error");
-
-        return RedirectToAction(nameof(Index));
+        try
+        {
+            var Create = await _tagService.CreateAsync(vm);
+            return RedirectToAction("Index");
+        }
+        catch (UnprocessableEntityException ex)
+        {
+            ModelState.AddModelError("", ex.Message);
+            return View(vm);
+        }
     }
 
 
@@ -61,11 +67,18 @@ public class TagController : Controller
     {
         if (!ModelState.IsValid) return View(vm);
 
-        var Edit = await _tagService.EditAsync(id, vm);
+        try
+        {
+            var Edit = await _tagService.EditAsync(id, vm);
+            if (Edit == null) return View("Error");
+            return RedirectToAction(nameof(Index));
 
-        if(Edit == null) return View("Error");
-
-        return RedirectToAction(nameof(Index));
+        }
+        catch (UnprocessableEntityException ex)
+        {
+            ModelState.AddModelError("", ex.Message);
+            return View(vm);
+        }
     }
 
     public async Task<IActionResult> SoftDelete(int? id)

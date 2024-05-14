@@ -23,7 +23,7 @@ public class CategoryService : ICategoryService
 
     public async Task<List<Category>> GetAllAsync()
     {
-        var categories = await _context.Categories.Where(c => !c.IsDeleted).Include(c => c.ProductCategory).ToListAsync();
+        var categories = await _context.Categories.Where(c => !c.IsDeleted).OrderByDescending(t => t.Id).Include(c => c.ProductCategory).ToListAsync();
         return categories;
     }
 
@@ -35,6 +35,13 @@ public class CategoryService : ICategoryService
                             .Include(c => c.ProductCategory)
                             .Include(c => c.ParentCategory)
                             .FirstOrDefaultAsync();
+        return category;
+    }
+
+    public async Task<Category?> GetByIdDeletedAsync(int? id)
+    {
+        if (id < 1 || id == null) return null;
+        var category = await _context.Categories.Where(c => c.Id == id && c.IsDeleted).FirstOrDefaultAsync();
         return category;
     }
 
@@ -149,5 +156,45 @@ public class CategoryService : ICategoryService
         return new OkResult();
     }
 
+    public async Task<List<Category>> DeletedListAllAsync()
+    {
+        var category = await _context.Categories.Where(c => c.IsDeleted).ToListAsync();
+        return category;
+    }
+
+    public async Task<IActionResult?> SoftDeleteAsync(int? id)
+    {
+        var category = await GetByIdAsync(id);
+        if (category == null) return null;
+
+        category.IsDeleted = true;
+        await _context.SaveChangesAsync();
+
+        return new OkResult();
+    }
+
+
+    public async Task<IActionResult?> HardDeleteAsync(int? id)
+    {
+        var category = await GetByIdDeletedAsync(id);
+        if (category == null) return null;
+
+        _context.Categories.Remove(category);
+        await _context.SaveChangesAsync();
+
+        return new OkResult();
+    }
+
+
+    public async Task<IActionResult?> RecoverAsync(int? id)
+    {
+        if (id == null || id < 0) return null;
+        var category = await _context.Categories.FirstOrDefaultAsync(t => t.Id == id && t.IsDeleted);
+        if (category == null) return null;
+        category.IsDeleted = false;
+        await _context.SaveChangesAsync();
+
+        return new OkResult();
+    }
 
 }

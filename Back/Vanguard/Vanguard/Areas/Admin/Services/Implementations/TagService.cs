@@ -4,17 +4,20 @@ using Microsoft.EntityFrameworkCore;
 using Vanguard.Areas.Admin.Services;
 using Vanguard.Areas.Admin.ViewModels.TagViewModels;
 using Vanguard.Data;
+using Vanguard.Exceptions;
 using Vanguard.Models;
 
 namespace Vanguard.Areas.Admin.Services;
 
-public class TagService:ITagService
+public class TagService : ITagService
 {
     readonly VanguardContext _context;
+    readonly IHttpContextAccessor _httpContextAccessor;
 
-    public TagService(VanguardContext context)
+    public TagService(VanguardContext context, IHttpContextAccessor httpContextAccessor)
     {
         _context = context;
+        _httpContextAccessor = httpContextAccessor;
     }
 
     public async Task<List<Tag>> GetAllAsync()
@@ -25,7 +28,19 @@ public class TagService:ITagService
 
     public async Task<IActionResult?> CreateAsync(TagCreateVM? vm)
     {
-        if (vm==null)  return null;
+        if (vm == null) return null;
+
+        bool created = await TagNameCheckAsync(vm);
+
+        if (created)
+        {
+            if (_httpContextAccessor?.HttpContext != null)
+            {
+                _httpContextAccessor.HttpContext.Response.StatusCode = 422;
+            }
+
+            throw new UnprocessableEntityException("Tag already exists.");
+        }
 
         Tag tag = new Tag
         {
@@ -42,13 +57,34 @@ public class TagService:ITagService
 
 
 
+
+
+    public async Task<bool> TagNameCheckAsync(TagCreateVM vm)
+    {
+        var category = await GetByNameAsync(vm.Name);
+        if (category != null) return true;
+        return false;
+    }
+
+
+    public async Task<Tag?> GetByNameAsync(string? name)
+    {
+        if (name == null) return null;
+        var tag = await _context.Tags.FirstOrDefaultAsync(c => c.Name == name);
+        if (tag == null) return null;
+
+        return tag;
+    }
+
+
+
     public async Task<Tag?> GetByIdAsync(int? id)
     {
         if (id == null || id < 1) return null;
-        
+
         var Tag = await _context.Tags.FirstOrDefaultAsync(t => t.Id == id && !t.IsDeleted);
 
-        if(Tag == null) return null;
+        if (Tag == null) return null;
         return Tag;
     }
 
@@ -59,7 +95,7 @@ public class TagService:ITagService
     {
         var oldTag = await GetByIdAsync(id);
 
-        if (oldTag==null) return null;
+        if (oldTag == null) return null;
 
         TagCreateVM tag = new TagCreateVM
         {
@@ -70,12 +106,27 @@ public class TagService:ITagService
     }
 
 
+
     public async Task<IActionResult?> EditAsync(int? id, TagCreateVM vm)
     {
-        if (id!=vm.Id) return new BadRequestObjectResult("Invalid request. Ids do not match.");
+        if (id != vm.Id) return new BadRequestObjectResult("Invalid request. Ids do not match.");
         var oldTag = await GetByIdAsync(id);
 
         if (oldTag == null) return null;
+
+        if(oldTag.Name != vm.Name){
+            bool created = await TagNameCheckAsync(vm);
+
+            if (created)
+            {
+                if (_httpContextAccessor?.HttpContext != null)
+                {
+                    _httpContextAccessor.HttpContext.Response.StatusCode = 422;
+                }
+
+                throw new UnprocessableEntityException("Tag already exists.");
+            }
+        }
 
         oldTag.Name = vm.Name;
 
@@ -94,7 +145,7 @@ public class TagService:ITagService
     public async Task<IActionResult?> SoftDeleteAsync(int? id)
     {
         var tag = await GetByIdAsync(id);
-        if (tag == null)  return null;
+        if (tag == null) return null;
 
         tag.IsDeleted = true;
         await _context.SaveChangesAsync();
@@ -128,5 +179,12 @@ public class TagService:ITagService
 
         return new OkResult();
     }
+
+
+
+
+ 
+
+
 
 }

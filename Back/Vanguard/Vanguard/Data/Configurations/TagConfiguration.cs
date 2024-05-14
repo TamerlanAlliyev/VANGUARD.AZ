@@ -13,7 +13,7 @@ public class TagConfiguration:BaseEntityConfiguratiion<Tag>
 
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Name).HasColumnType("nvarchar").HasMaxLength(50).IsRequired(true);
+        builder.Property(x => x.Name).HasColumnType("nvarchar").HasMaxLength(50).IsUnicode(true).IsRequired(true);
 
         builder.ToTable("Tags");
     }

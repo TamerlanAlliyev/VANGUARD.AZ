@@ -16,7 +16,6 @@ public class VanguardContext : DbContext
 
     public DbSet<Product> Products { get; set; } = null!;
     public DbSet<Size> Sizes { get; set; }
-    public DbSet<Information> Informations { get; set; }
     public DbSet<ProductSize> ProductSizes { get; set; }
     public DbSet<Image> Images { get; set; }
     public DbSet<ProductColor> ProductColor { get; set; }

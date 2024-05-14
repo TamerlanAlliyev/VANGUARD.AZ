@@ -58,6 +58,7 @@ namespace Vanguard.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
+                        .IsUnicode(true)
                         .HasColumnType("nvarchar");
 
                     b.Property<int?>("ParentCategoryId")
@@ -179,62 +180,6 @@ namespace Vanguard.Migrations
                     b.ToTable("Images", (string)null);
                 });
 
-            modelBuilder.Entity("Vanguard.Models.Information", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("Dimensions")
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar");
-
-                    b.Property<string>("IPAddress")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("varchar");
-
-                    b.Property<bool>("IsDeleted")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
-
-                    b.Property<string>("ModifiedBy")
-                        .HasMaxLength(70)
-                        .HasColumnType("nvarchar");
-
-                    b.Property<DateTime?>("ModifiedDate")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SizeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Weight")
-                        .HasMaxLength(50)
-                        .HasColumnType("varchar");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("SizeId");
-
-                    b.ToTable("Informations", (string)null);
-                });
-
             modelBuilder.Entity("Vanguard.Models.Product", b =>
                 {
                     b.Property<int>("Id")
@@ -255,7 +200,6 @@ namespace Vanguard.Migrations
                         .HasColumnType("datetime");
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasMaxLength(450)
                         .HasColumnType("nvarchar");
 
@@ -289,8 +233,9 @@ namespace Vanguard.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal");
 
-                    b.Property<string>("Storage")
-                        .HasMaxLength(50)
+                    b.Property<string>("ShortDescription")
+                        .IsRequired()
+                        .HasMaxLength(200)
                         .HasColumnType("nvarchar");
 
                     b.HasKey("Id");
@@ -418,6 +363,10 @@ namespace Vanguard.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime");
 
+                    b.Property<string>("Dimensions")
+                        .HasMaxLength(50)
+                        .HasColumnType("varchar");
+
                     b.Property<string>("IPAddress")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -437,6 +386,11 @@ namespace Vanguard.Migrations
 
                     b.Property<string>("Name")
                         .IsRequired()
+                        .HasMaxLength(50)
+                        .IsUnicode(true)
+                        .HasColumnType("varchar");
+
+                    b.Property<string>("Weight")
                         .HasMaxLength(50)
                         .HasColumnType("varchar");
 
@@ -481,6 +435,7 @@ namespace Vanguard.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasMaxLength(50)
+                        .IsUnicode(true)
                         .HasColumnType("nvarchar");
 
                     b.HasKey("Id");
@@ -490,11 +445,11 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Category", b =>
                 {
-                    b.HasOne("Vanguard.Models.Category", "ParentCategories")
+                    b.HasOne("Vanguard.Models.Category", "ParentCategory")
                         .WithMany("ChildCategories")
                         .HasForeignKey("ParentCategoryId");
 
-                    b.Navigation("ParentCategories");
+                    b.Navigation("ParentCategory");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Image", b =>
@@ -506,25 +461,6 @@ namespace Vanguard.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
-                });
-
-            modelBuilder.Entity("Vanguard.Models.Information", b =>
-                {
-                    b.HasOne("Vanguard.Models.Product", "Product")
-                        .WithMany("Informations")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Vanguard.Models.Size", "Size")
-                        .WithMany("Informations")
-                        .HasForeignKey("SizeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("Size");
                 });
 
             modelBuilder.Entity("Vanguard.Models.ProductCategory", b =>
@@ -619,8 +555,6 @@ namespace Vanguard.Migrations
                 {
                     b.Navigation("Images");
 
-                    b.Navigation("Informations");
-
                     b.Navigation("ProductCategory");
 
                     b.Navigation("ProductColors");
@@ -632,8 +566,6 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Size", b =>
                 {
-                    b.Navigation("Informations");
-
                     b.Navigation("ProductSizes");
                 });
 

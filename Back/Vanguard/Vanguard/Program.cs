@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Vanguard.Areas.Admin.Services;
+using Vanguard.Areas.Admin.Services.Implementations;
+using Vanguard.Areas.Admin.Services.Interfaces;
 using Vanguard.Data;
 
 namespace Vanguard
@@ -21,6 +23,7 @@ namespace Vanguard
 
             builder.Services.AddScoped<ITagService, TagService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
+            builder.Services.AddScoped<IProductService, ProductService>();
 
             var app = builder.Build();
             app.UseHttpsRedirection();

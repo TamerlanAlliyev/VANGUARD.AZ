@@ -3,80 +3,56 @@
   "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\interfaces\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\implementations\\categoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\implementations\\tagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\implementations\\tagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\interfaces\\icategoryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\viewmodels\\errorviewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\viewmodels\\errorviewmodels\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\exceptions\\unprocessableentityexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\exceptions\\unprocessableentityexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\models\\size.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\models\\size.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\interfaces\\itagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\interfaces\\itagservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\viewmodels\\productviewmodels\\productcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\viewmodels\\productviewmodels\\productcreatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\viewmodels\\categoryviewmodels\\categoryselectionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\viewmodels\\categoryviewmodels\\categoryselectionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\viewmodels\\categoryviewmodels\\categorycreatvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\viewmodels\\categoryviewmodels\\categorycreatvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\category\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\category\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\viewmodels\\tagviewmodels\\tagselectionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\viewmodels\\tagviewmodels\\tagselectionvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\tag\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\tag\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\tag\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\tag\\detail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\code academy\\projects\\final project\\vanguard.az\\back\\vanguard\\vanguard\\models\\producttag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\models\\producttag.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -86,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 154,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -98,28 +74,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Controller\\HomeController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Controller\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Controller\\HomeController.cs",
-              "RelativeToolTip": "Vanguard\\Controller\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "CategoryService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\CategoryService.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Implementations\\CategoryService.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\CategoryService.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Implementations\\CategoryService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T22:19:52.168Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\ErrorViewModels\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\ViewModels\\ErrorViewModels\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\ErrorViewModels\\ErrorViewModel.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\ViewModels\\ErrorViewModels\\ErrorViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T21:57:09.076Z",
+              "WhenOpened": "2024-05-14T15:37:42.295Z",
               "EditorCaption": ""
             },
             {
@@ -130,217 +93,152 @@
               "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Interfaces\\ICategoryService.cs",
               "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Interfaces\\ICategoryService.cs",
               "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Interfaces\\ICategoryService.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAYwA8AAAAuAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:50:05.421Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\CategoryController.cs",
-              "ViewState": "AQIAAE0AAAAAAAAAAAAtwGQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:13:58.004Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CategoryService.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\CategoryService.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Implementations\\CategoryService.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\CategoryService.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Implementations\\CategoryService.cs",
-              "ViewState": "AQIAAHIAAAAAAAAAAAAswJgAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:13:39.524Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TagService.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\TagService.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Implementations\\TagService.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\TagService.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Implementations\\TagService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAAWAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:15:13.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Edit.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
-              "ViewState": "AQIAACoAAAAAAAAAAAAiwD4AAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T20:28:03.247Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:13:55.475Z",
+              "WhenOpened": "2024-05-14T21:46:04.935Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Category\\Create.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Category\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Category\\Create.cshtml",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Category\\Create.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAADwvzgAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T20:27:45.892Z",
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Interfaces\\IProductService.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Interfaces\\IProductService.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Interfaces\\IProductService.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Interfaces\\IProductService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAABDAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T21:44:01.306Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "UnprocessableEntityException.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Exceptions\\UnprocessableEntityException.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Exceptions\\UnprocessableEntityException.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Exceptions\\UnprocessableEntityException.cs",
-              "RelativeToolTip": "Vanguard\\Exceptions\\UnprocessableEntityException.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "TagService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\TagService.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Implementations\\TagService.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\TagService.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Implementations\\TagService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABgAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T21:50:44.237Z",
+              "WhenOpened": "2024-05-14T21:42:42.918Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 2,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
+              "ViewState": "AQIAAEMAAAAAAAAAAAAkwEkAAAADAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:36:34.077Z",
+              "WhenOpened": "2024-05-14T21:41:23.205Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Size.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Models\\Size.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Models\\Size.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Models\\Size.cs",
+              "RelativeToolTip": "Vanguard\\Models\\Size.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T20:34:25.307Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
-              "Title": "TagController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\TagController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\TagController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\TagController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\TagController.cs",
-              "ViewState": "AQIAADgAAAAAAAAAAAAswEEAAAAYAAAA",
+              "Title": "ProductTag.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Models\\ProductTag.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Models\\ProductTag.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Models\\ProductTag.cs",
+              "RelativeToolTip": "Vanguard\\Models\\ProductTag.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAXAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:16:35.097Z",
+              "WhenOpened": "2024-05-14T18:27:50.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA8AAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:03:10.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CategorySelectionVM.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\CategoryViewModels\\CategorySelectionVM.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\ViewModels\\CategoryViewModels\\CategorySelectionVM.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\CategoryViewModels\\CategorySelectionVM.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\ViewModels\\CategoryViewModels\\CategorySelectionVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T19:11:24.224Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "TagSelectionVM.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\TagViewModels\\TagSelectionVM.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\ViewModels\\TagViewModels\\TagSelectionVM.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\TagViewModels\\TagSelectionVM.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\ViewModels\\TagViewModels\\TagSelectionVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T15:46:49.83Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-14T15:04:26.909Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 10,
-              "Title": "ITagService.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Interfaces\\ITagService.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Interfaces\\ITagService.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Interfaces\\ITagService.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Interfaces\\ITagService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:40:56.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
               "Title": "CategoryCreatVM.cs",
               "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\CategoryViewModels\\CategoryCreatVM.cs",
               "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\ViewModels\\CategoryViewModels\\CategoryCreatVM.cs",
               "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\CategoryViewModels\\CategoryCreatVM.cs",
               "RelativeToolTip": "Vanguard\\Areas\\Admin\\ViewModels\\CategoryViewModels\\CategoryCreatVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:40:17.818Z",
+              "WhenOpened": "2024-05-14T15:01:33.43Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Tag\\Create.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Tag\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Tag\\Create.cshtml",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Tag\\Create.cshtml",
-              "ViewState": "AQIAABAAAAAAAAAAAAAmwC8AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T20:27:34.274Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Category\\Index.cshtml",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAmwG8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T20:12:52.54Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Category\\Detail.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Category\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Category\\Detail.cshtml",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Category\\Detail.cshtml",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB4AAABAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T20:11:57.014Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Category.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Models\\Category.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Models\\Category.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Models\\Category.cs",
-              "RelativeToolTip": "Vanguard\\Models\\Category.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
+              "DocumentIndex": 8,
+              "Title": "ProductCreateVM.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\ProductViewModels\\ProductCreateVM.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\ViewModels\\ProductViewModels\\ProductCreateVM.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\ViewModels\\ProductViewModels\\ProductCreateVM.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\ViewModels\\ProductViewModels\\ProductCreateVM.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAA2wBkAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-10T20:10:56.218Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Detail.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Tag\\Detail.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Tag\\Detail.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Tag\\Detail.cshtml",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Tag\\Detail.cshtml",
-              "ViewState": "AQIAABQAAAAAAAAAAAAwwCkAAAAtAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-10T19:58:35.931Z",
+              "WhenOpened": "2024-05-14T15:00:31.84Z",
               "EditorCaption": ""
             }
           ]

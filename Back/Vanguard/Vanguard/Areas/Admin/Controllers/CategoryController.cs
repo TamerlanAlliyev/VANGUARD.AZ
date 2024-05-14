@@ -83,7 +83,6 @@ public class CategoryController : Controller
     {
         if (id == null || id < 1) return View("Error");
 
-
         try
         {
             await _categoryService.EditAsync(id, vm);
@@ -97,4 +96,32 @@ public class CategoryController : Controller
         }
 
     }
+
+
+    public async Task<IActionResult> SoftDelete(int? id)
+    {
+        var category =await _categoryService.SoftDeleteAsync(id);
+        if (category == null) return View("Error");
+        return Ok();
+    }
+
+    public async Task<IActionResult> HardDeleted(int? id)
+    {
+        var category = await _categoryService.HardDeleteAsync(id);
+        if (category == null) return View("Error");
+        return Ok();
+    }
+    public async Task<IActionResult> RecoverAsync(int? id)
+    {
+        var category = await _categoryService.RecoverAsync(id);
+        if (category == null) return View("Error");
+        return Ok();
+    }
+
+    public async Task<IActionResult> DeletedList()
+    {
+        var category = await _context.Categories.Where(c=>c.IsDeleted).ToListAsync();
+        return View(category);
+    }
+
 }
