@@ -1,0 +1,549 @@
+﻿@model ShopVM
+
+
+<div id="productContainer">
+
+
+
+    @if (Model.Product == null)
+    {
+        <!-- Active -->
+        <li class="not-found active" style="width:100%">
+            <p>No products found...</p>
+        </li>
+    }
+    else
+    {
+
+        <ul class="products-cart toggle grid @(Model.Grid?"active":"")" data-name="grid">
+
+
+            @foreach (var prod in Model.Product)
+            {
+
+
+                <li class="product-box">
+
+                    <!-- active -->
+                    <div class="product-image-box">
+
+
+
+                        <div class="p-images">
+
+                            <div class="main-image">
+                                <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
+                            </div>
+
+                            <!-- <div class="">
+                                <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                            </div> -->
+
+                            <div class="swiper mySwiper hover-image">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
+                                    </div>
+
+                                    @if (prod.AdditionalImagesURL != null)
+                                    {
+
+                                        foreach (var img in prod.AdditionalImagesURL)
+                                        {
+                                            <div class="swiper-slide">
+                                                <img src="~/cilent/assets/images/products/@img" alt="">
+                                            </div>
+                                        }
+                                    }
+
+                                </div>
+                                <div class="swiper-button-next p-btn"></div>
+                                <div class="swiper-button-prev p-btn"></div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="p-buttons">
+
+                            <a class="add-btn ">add to card</a>
+
+                            <!-- active -->
+                            <ul class="add-size">
+                                <li class="btn-size" data-size="S">S</li>
+
+                                @if (prod.Informations != null && prod.Informations.Any())
+                                {
+                                    foreach (var size in prod.Informations)
+                                    {
+                                        <li class="btn-size" data-size="@size.Size">@size.Size.Name</li>
+                                    }
+                                }
+
+
+
+                            </ul>
+
+                        </div>
+
+                        <div class="labels">
+                            <a class=" new">New</a>
+                            <!-- <a class="dis" >-20%</a> -->
+                            <!-- <a class=" best" >Best</a> -->
+                        </div>
+
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div class="product-info-box">
+
+                        <div class="p-inf">
+                            <div class="p-head">
+                                <h6>
+                                    @foreach (var cat in prod.Categories)
+                                    {
+                                        @cat
+
+                                        @(cat != prod.Categories.Last() ? " , " : "")
+                                    }
+                                </h6>
+                                <h3>@prod.Product.Name</h3>
+                            </div>
+
+                            <span>Color: @prod.Color</span>
+                        </div>
+
+
+
+                        <div class="p-pric">
+                            <img class="" src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                            <!-- <img class="active" src="~/cilent/assets/icons/wish-icon.svg" alt=""> -->
+
+                            <div class="cart-prices item">
+                                @if (prod.Product.DiscountPrice != null && prod.Product.DiscountPrice > 0)
+                                {
+
+                                    <span class="sell-price dis" id="sell-price">$@prod.Product.DiscountPrice</span>
+                                    <del class="sell-price dis-price">$@prod.Product.SellPrice</del>
+                                }
+                                else
+                                {
+                                    <span class="sell-price sell" id="sell-price">$@prod.Product.SellPrice </span>
+
+                                }
+                            </div>
+                        </div>
+
+                    </div>
+
+                </li>
+
+            }
+
+
+
+
+
+
+
+        </ul>
+
+
+
+
+
+        <ul class="products-detail-cart toggle detail @(Model.Grid?"":"active")" data-name="detail">
+
+
+            @foreach (var prod in Model.Product)
+            {
+
+                <li class="product-box">
+
+                    <div class="image-detail">
+
+
+                        <!-- Swiper -->
+                        <div class="swiper mySwiper img-detail">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="~/cilent/assets/images/products/@prod.HoverImageURL" alt="">
+                                </div>
+
+
+                                @if (prod.AdditionalImagesURL != null)
+                                {
+                                    foreach (var img in prod.AdditionalImagesURL)
+                                    {
+                                        <div class="swiper-slide">
+                                            <img src="~/cilent/assets/images/products/@img" alt="">
+                                        </div>
+                                    }
+                                }
+
+                            </div>
+                            <div class="swiper-button-next p-btn"></div>
+                            <div class="swiper-button-prev p-btn"></div>
+                            <div class="swiper-pagination"></div>
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="detail-box">
+
+                        <div class="info-detail">
+
+                            <div class="d-head">
+
+                                <h3>@prod.Product.Name</h3>
+
+                                <div class="product-rating">
+                                    <div class="rating-block">
+                                        <span class="fas fa-star checked star_on"></span>
+                                        <span class="fas fa-star checked star_on"></span>
+                                        <span class="fas fa-star checked star_on"></span>
+                                        <span class="fas fa-star-half-alt checked star_on"></span>
+                                        <span class="far fa-star star_on"></span>
+                                    </div>
+                                    <span class="reviews">1000 reviews</span>
+                                </div>
+
+                            </div>
+
+                            <div class="cart-prices item">
+                                @if (prod.Product.DiscountPrice != null && prod.Product.DiscountPrice > 0)
+                                {
+                                    <span class="sell-price dis" id="sell-price">$@prod.Product.DiscountPrice</span>
+                                    <del class="sell-price dis-price">$@prod.Product.SellPrice</del>
+                                }
+                                else
+                                {
+                                    <span class="sell-price sell" id="sell-price">$@prod.Product.SellPrice </span>
+                                }
+                            </div>
+
+                            <p class="product-description">
+                                @prod.Product.ShortDescription
+                            </p>
+                        </div>
+
+
+                        <div class="prod-added">
+
+                            <div class="detail-size-box">
+                                <span class="sizes-head">Sizes</span>
+
+                                <div class="detail-sizes">
+
+                                    @if (prod.Informations != null && prod.Informations.Any())
+                                    {
+                                        foreach (var size in prod.Informations)
+                                        {
+                                            <div class="size-block  @(size.Count==0?"sold-out":"") @(size == prod.Informations.First() ? "active" : size.Count == 0 ? "sold-out" : "")">
+                                                <span data-size="@size.Size.Id">@size.Size.Name</span>
+                                            </div>
+                                        }
+                                    }
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="detail-buttons">
+
+                                <div class="cart-qty item">
+                                    <div class="quantity-box">
+
+                                        <div class="quantity minus">
+                                            <i class="fa-solid fa-minus"></i>
+                                        </div>
+
+                                        <input type="number" value="1">
+
+                                        <div class="quantity plus">
+                                            <i class="fa-solid fa-plus"></i>
+                                        </div>
+
+                                    </div>
+                                    <a class="add-cart">ADD TO CART</a>
+                                </div>
+
+
+                                <div class="wish-cont">
+
+                                    <div class="wish-share">
+                                        <div class="wish">
+                                            <a>
+                                                <img class="" src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                                                <!-- <img class="active" src="~/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                                            </a>
+                                            <span>ADD TO WISHLIST</span>
+                                        </div>
+
+                                        <a href="#" class="share">
+                                            <i class="fa-solid fa-share"></i>
+                                            SHARE
+                                        </a>
+
+
+                                    </div>
+
+                                    <div class="product-infos">
+
+                                        <div class="p-info">
+                                            <span>MODEL: </span>
+                                            <a href="#">@prod.Product.Model</a>
+                                        </div>
+
+                                        <div class="p-info">
+                                            <span>CATEGORIES: </span>
+                                            @foreach (var cat in prod.Categories)
+                                            {
+                                                <a>@cat@(cat == prod.Categories.Last() ? "" : ", ")</a>
+                                            }
+
+                                        </div>
+
+                                        <div class="p-info">
+                                            <span>TAGS: </span>
+                                            @foreach (var tag in prod.Tags)
+                                            {
+                                                <a>@tag@(tag == prod.Tags.Last() ? "" : ", ")</a>
+                                            }
+                                        </div>
+
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                </li>
+
+            }
+
+
+        </ul>
+
+    }
+
+    <div class="pagenation">
+        <div class="pagenation-box">
+            <a style="cursor:pointer" id="prevPage" onclick="prevPage()">
+                <i class="fa-solid fa-arrow-left"></i>
+            </a>
+
+            @for (int i = 1; i <= Model.PageInfo.TotalPages; i++)
+            {
+                <a style="cursor:pointer" class="num-btn @(i == Model.PageInfo.CurrentPage ? "active" : "")" data-num="@i" onclick="goToPage(@i)">@i</a>
+            }
+
+            <a style="cursor:pointer" id="nextPage" onclick="nextPage()">
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+
+
+</div>
+
+@* 
+ <script>
+    const sendFilterRequest = async (page) => {
+        window.location.href= `/Shop/Index?page=${page}&pageSize=2`
+ 
+    };
+
+    const initializePagination = () => {
+        const prevPageLink = document.getElementById('prevPage');
+        const nextPageLink = document.getElementById('nextPage');
+        const numBtns = document.querySelectorAll('.num-btn');
+
+        if (prevPageLink && nextPageLink && numBtns.length > 0) {
+            prevPageLink.addEventListener('click', prevPage);
+            nextPageLink.addEventListener('click', nextPage);
+
+            numBtns.forEach(btn => {
+                btn.addEventListener('click', goToPage.bind(null, parseInt(btn.dataset.num)));
+            });
+        } else {
+            console.error('Error: Required elements not found.');
+        }
+    };
+
+    const prevPage = (event) => {
+        if (event) {
+            event.preventDefault();
+        }
+        const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
+        if (currentPage > 1) {
+            sendFilterRequest(currentPage - 1);
+        }
+    };
+
+    const nextPage = (event) => {
+        if (event) {
+            event.preventDefault();
+        }
+        const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
+        const totalPages = parseInt(document.querySelectorAll('.num-btn').length);
+        if (currentPage < totalPages) {
+            sendFilterRequest(currentPage + 1);
+        }
+    };
+
+    const goToPage = (pageNum) => {
+        event.preventDefault();
+        sendFilterRequest(pageNum);
+    };
+
+    document.addEventListener('DOMContentLoaded', initializePagination);
+</script>
+ *@
+@* 
+ <script src="~/cilent/assets/js/shop.js"></script>
+
+ <script>
+    // Sayfalama işlemi sonrasında JavaScript kodlarını yeniden yükle
+    function reloadShopScript() {
+        const scriptElement = document.createElement('script');
+        scriptElement.src = '~/cilent/assets/js/shop.js';
+        document.head.appendChild(scriptElement);
+    }
+
+    function initializePagination() {
+        const container = document.getElementById('productContainer');
+        const paginationContainer = document.querySelector('.pagenation-box');
+
+        if (container && paginationContainer) {
+            const observer = new MutationObserver(mutations => {
+                mutations.forEach(mutation => {
+                    if (mutation.type === 'childList') {
+                        sendPaginationClickEventListeners();
+                    }
+                });
+            });
+
+            const config = { childList: true, subtree: true };
+            observer.observe(paginationContainer, config);
+        }
+
+        sendPaginationClickEventListeners();
+        bindLayoutCartEventListeners();
+
+    }
+
+    function sendPaginationClickEventListeners() {
+        const prevPageLink = document.getElementById('prevPage');
+        const nextPageLink = document.getElementById('nextPage');
+        const numBtns = document.querySelectorAll('.num-btn');
+
+        if (prevPageLink && nextPageLink && numBtns.length > 0) {
+            prevPageLink.addEventListener('click', prevPage);
+            nextPageLink.addEventListener('click', nextPage);
+
+            numBtns.forEach(btn => {
+                btn.addEventListener('click', goToPage.bind(null, parseInt(btn.dataset.num)));
+            });
+        } else {
+            console.error('Error: Required elements not found.');
+        }
+    }
+
+    function prevPage(event) {
+        if (event) {
+            event.preventDefault();
+        }
+        const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
+        if (currentPage > 1) {
+            sendFilterRequest(currentPage - 1);
+        }
+    }
+
+    function nextPage(event) {
+        if (event) {
+            event.preventDefault();
+        }
+        const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
+        const totalPages = parseInt(document.querySelectorAll('.num-btn').length);
+        if (currentPage < totalPages) {
+            sendFilterRequest(currentPage + 1);
+        }
+    }
+
+    function goToPage(pageNum) {
+        event.preventDefault();
+        sendFilterRequest(pageNum);
+    }
+
+    function sendFilterRequest(page) {
+        fetch(`/Shop/Filter?page=${page}&pageSize=2`)
+            .then(response => response.text())
+            .then(html => {
+                const container = document.getElementById('productContainer');
+                if (container) {
+                    container.innerHTML = html;
+                    reloadShopScript();
+                } else {
+                    console.error('Error: productContainer element not found.');
+                }
+            })
+            .catch(error => console.error('Error:', error));
+    }
+
+    const container = document.getElementById('productContainer');
+    const paginationContainer = document.querySelector('.pagenation-box');
+
+    if (container && paginationContainer) {
+        const observer = new MutationObserver(mutations => {
+            mutations.forEach(mutation => {
+                if (mutation.type === 'childList') {
+                    initializePagination();
+                }
+            });
+        });
+
+        const config = { childList: true, subtree: true };
+        observer.observe(paginationContainer, config);
+    }
+
+    initializePagination();
+
+
+    function addbtn() {
+
+    }
+
+</script> *@

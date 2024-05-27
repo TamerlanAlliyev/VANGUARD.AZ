@@ -4,6 +4,17 @@ window.addEventListener('scroll', function () {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elements = document.querySelectorAll('.p-inf div h3');
+
+    elements.forEach(function(element) {
+        var text = element.textContent;
+console.log(text);
+        if (text.length > 22) {
+            element.textContent = text.substring(0, 22) + '...';
+        }
+    });
+});
 
 
 // =====================================
@@ -451,16 +462,21 @@ leftBoxSvg.forEach(Svg => {
 
 
 
-const sizes = document.querySelectorAll('.size-block');
 
-sizes.forEach((size) => {
-    size.addEventListener('click', function () {
-        if (!size.classList.contains('sold-out')) {
-            sizes.forEach((size) => {
-                size.classList.remove('active');
-            });
-            this.classList.add('active');
-        }
+const productBoxes = document.querySelectorAll('.product-box');
+
+productBoxes.forEach((productBox) => {
+    const sizes = productBox.querySelectorAll('.size-block');
+
+    sizes.forEach((size) => {
+        size.addEventListener('click', function () {
+            if (!size.classList.contains('sold-out')) {
+                sizes.forEach((size) => {
+                    size.classList.remove('active');
+                });
+                this.classList.add('active');
+            }
+        });
     });
 });
 
@@ -533,19 +549,18 @@ DetailCart.forEach((cart) => {
 
 
 
-    const productImage = cart.querySelector(".img-detail img"); // More specific
+    const productImage = cart.querySelector(".img-detail img");
     const productName = cart.querySelector(".d-head h3");
     const productDescription = cart.querySelector(".product-description");
     
     const shareData = {
         title: productName.innerText,
-        text: productDescription.innerText,  // Assumes description is plain text
+        text: productDescription.innerText,  
         url: window.location.href
     };
     
-    // Ensure an image exists before adding it
     if (productImage) {
-        shareData.image = productImage.src; // Use 'src' directly
+        shareData.image = productImage.src; 
     }
     
     const shareButton = cart.querySelector(".share");
@@ -603,49 +618,6 @@ wishBtnP.forEach(wishBtn => {
 
 
 
-
-// const productImageBox = document.querySelectorAll('.product-image-box');
-// const basketCount = document.querySelector('.i-basket sup');
-
-// productImageBox.forEach(prodBtn => {
-
-//     const productAddBtn = prodBtn.querySelector('.add-btn');
-//     const productAddSize = prodBtn.querySelector('.add-size');
-
-//     const mainImage = prodBtn.querySelector('.main-image');
-//     const hoverImage = prodBtn.querySelector('.hover-image');
-
-//     productAddBtn.addEventListener('click', function (event) {
-//         productAddSize.style.display = 'flex';
-//     });
-
-//     productAddSize.addEventListener('click', function (event) {
-//         productAddSize.style.display = 'none';
-//         basketCount.innerText = parseInt(basketCount.innerText)+1;;
-//     });
-
-
-
-
-//     prodBtn.addEventListener('mouseover', function (event) {
-//         productAddBtn.style.display = 'flex';
-//         hoverImage.style.display = 'flex';
-//         mainImage.style.display = 'none';
-//     });
-
-//     prodBtn.addEventListener('mouseout', function (event) {
-//         productAddBtn.style.display = 'none';
-//         hoverImage.style.display = 'none';
-//         mainImage.style.display = 'flex';
-//     });
-
-
-
-
-
-
-
-// });
 
 
 var swiper = new Swiper(".mySwiper", {

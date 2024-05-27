@@ -7,7 +7,7 @@ using Vanguard.Exceptions;
 
 namespace Vanguard.Areas.Admin.Controllers;
 [Area("Admin")]
-public class TagController : Controller
+public class TagController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;
     readonly ITagService _tagService;

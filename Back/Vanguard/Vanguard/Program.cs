@@ -1,8 +1,13 @@
+using Microsoft.AspNetCore.Identity;
+using Microsoft.CodeAnalysis.Options;
 using Microsoft.EntityFrameworkCore;
 using Vanguard.Areas.Admin.Services;
 using Vanguard.Areas.Admin.Services.Implementations;
 using Vanguard.Areas.Admin.Services.Interfaces;
 using Vanguard.Data;
+using Vanguard.Models;
+using Vanguard.Services.Implementations;
+using Vanguard.Services.Interfaces;
 
 namespace Vanguard
 {
@@ -24,8 +29,26 @@ namespace Vanguard
             builder.Services.AddScoped<ITagService, TagService>();
             builder.Services.AddScoped<ICategoryService, CategoryService>();
             builder.Services.AddScoped<IProductService, ProductService>();
+            builder.Services.AddTransient<IEmailService,EmailService>();
+
+            builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
+            {
+                opt.User.RequireUniqueEmail = true;
+                opt.Password.RequireUppercase = true;
+                opt.Password.RequireDigit = true;
+                opt.Password.RequiredLength = 8;
+                opt.Password.RequireNonAlphanumeric = true;
+                opt.SignIn.RequireConfirmedEmail = false;
+            }).AddEntityFrameworkStores<VanguardContext>().AddDefaultTokenProviders();
 
             var app = builder.Build();
+
+            if (!app.Environment.IsDevelopment())
+            {
+                app.UseExceptionHandler("/Home/Error500");
+                app.UseHsts();
+            }
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 

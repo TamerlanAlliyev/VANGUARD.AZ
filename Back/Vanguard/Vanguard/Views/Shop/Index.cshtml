@@ -1,0 +1,670 @@
+﻿@model ShopVM
+@section style {
+    <link rel="stylesheet" href="~/cilent/assets/css/shop.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+}
+
+
+<main>
+
+    <div class="head-url">
+        <span><a href="">Home </a></span> /
+        <span> Shop</span>
+    </div>
+    <section class="section">
+
+
+        <ul class="sections filter">
+            <form id="Form" method="post" asp-controller="Shop" asp-action="Index">
+                <a class="close-filter">
+                    <i class="fa-solid fa-xmark"></i>
+                </a>
+
+
+
+                @if (Model.CategorySelecting != null && Model.CategorySelecting.Count() > 0)
+                {
+                <li class="filter-box @(Model.CategorySelecting.Any(s => s.IsSelected) ? "active" : "")">
+
+
+                    <div class="box-head">
+                        <h3>Categories</h3>
+                        <a class="open-close">
+                            <i class="fa-solid fa-angle-down"></i>
+                        </a>
+                    </div>
+
+
+                    <ul class="filter-container ">
+
+
+                            @foreach (var cat in Model.CategorySelecting)
+                            {
+
+                                if (cat.Category.ParentCategory == null && cat.Category.ChildCategories != null)
+                                {
+
+                                <li class="sub-category full ">
+
+                                    <div class="parent-cat">
+
+                                        <div class="checkbox-wrapper-33">
+                                            <label class="checkbox">
+                                                <input data-id="@cat.Category.Id" data-select="@cat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == cat.Category.Id) ? "checked" : "") />
+
+                                                <span class="checkbox__symbol">
+                                                    <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                                         viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4 14l8 7L24 7"></path>
+                                                    </svg>
+                                                </span>
+                                                <p class="checkbox__textwrapper">@cat.Category.Name</p>
+                                            </label>
+
+                                        </div>
+
+
+                                        <a class="open-close">
+                                            <i class="fa-solid fa-angle-down"></i>
+                                        </a>
+                                    </div>
+
+
+                                    <ul class="child-cat ">
+                                            @foreach (var childCat in Model.CategorySelecting)
+                                            {
+                                                if (childCat.Category.ParentCategory == cat.Category)
+                                                {
+
+                                                <li>
+                                                    <div class="checkbox-wrapper-33">
+                                                        <label class="checkbox">
+                                                            <input data-id="@childCat.Category.Id" data-select="@childCat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == childCat.Category.Id) ? "checked" : "") />
+                                                            <span class="checkbox__symbol">
+                                                                <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                                                     viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                                                    <path d="M4 14l8 7L24 7"></path>
+                                                                </svg>
+                                                            </span>
+                                                            <p class="checkbox__textwrapper"> @childCat.Category.Name </p>
+                                                        </label>
+
+                                                    </div>
+                                                </li>
+                                                }
+
+                                            }
+
+                                    </ul>
+
+
+                                </li>
+                                }
+                                else if (cat.Category.ParentCategory == null && cat.Category.ChildCategories == null)
+                                {
+
+                                <!-- Don't Parent -->
+                                <li class="sub-category">
+
+                                    <div class="parent-cat">
+
+                                        <div class="checkbox-wrapper-33">
+                                            <label class="checkbox">
+                                                <input data-id="@cat.Category.Id" data-select="@cat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == cat.Category.Id) ? "checked" : "") />
+                                                <span class="checkbox__symbol">
+                                                    <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                                         viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4 14l8 7L24 7"></path>
+                                                    </svg>
+                                                </span>
+                                                <p class="checkbox__textwrapper">@cat.Category.Name</p>
+                                            </label>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </li>
+                                <!-- Don't Parent -->
+                                }
+
+                            }
+
+                    </ul>
+
+                </li>
+
+                }
+
+
+
+            <li class="filter-box colors">
+
+                <div class="box-head">
+                    <h3>Colors</h3>
+                    <a class="open-close">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                </div>
+
+
+                <ul class="filter-container">
+
+                    <li class="color-box">
+
+                        <label>
+                            <div class="color">
+                                <p style="background-color: #398510;"></p>
+                            </div>
+
+                            <div class="color-name">
+                                Hakki
+                            </div>
+
+                            <input type="checkbox" id="#398510" hidden>
+                        </label>
+
+                    </li>
+
+                    <li class="color-box">
+
+                        <label>
+                            <div class="color">
+                                <p style="background-color: #ff0000;"></p>
+                            </div>
+
+                            <div class="color-name">
+                                Red
+                            </div>
+
+                            <input type="checkbox" id="#ff0000" hidden>
+                        </label>
+
+                    </li>
+
+
+                    <li class="color-box">
+
+                        <label>
+                            <div class="color">
+                                <p style="background-color: #3458ea;"></p>
+                            </div>
+
+                            <div class="color-name">
+                                Blue
+                            </div>
+
+                            <input type="checkbox" id="#3458ea" hidden>
+                        </label>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+
+
+            <li class="filter-box sizes">
+
+                <div class="box-head">
+                    <h3>Sizes</h3>
+                    <a class="open-close">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                </div>
+
+
+                <ul class="filter-container size">
+
+                    <li class="size-box">
+                        <label>
+                            <span>S</span>
+                            <input type="checkbox" id="s" hidden>
+                        </label>
+                    </li>
+
+
+                    <li class="size-box active">
+                        <label>
+                            <span>M</span>
+                            <input type="checkbox" id="m" hidden>
+                        </label>
+                    </li>
+
+
+                    <li class="size-box">
+                        <label>
+                            <span>L</span>
+                            <input type="checkbox" id="l" hidden>
+                        </label>
+                    </li>
+
+                    <li class="size-box">
+                        <label>
+                            <span>XL</span>
+                            <input type="checkbox" id="XL" hidden>
+                        </label>
+                    </li>
+
+                    <li class="size-box">
+                        <label>
+                            <span>XXL</span>
+                            <input type="checkbox" id="XXL" hidden>
+                        </label>
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+
+
+
+
+
+            <li class="filter-box genders">
+
+                <div class="box-head">
+                    <h3>Gender</h3>
+                    <a class="open-close">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                </div>
+
+
+                <ul class="filter-container gender">
+
+                    <li class="checkbox-wrapper-33">
+                        <label class="checkbox">
+                            <input class="checkbox__trigger visuallyhidden" type="checkbox" />
+                            <span class="checkbox__symbol">
+                                <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                     viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 14l8 7L24 7"></path>
+                                </svg>
+                            </span>
+                            <p class="checkbox__textwrapper">Men</p>
+                        </label>
+
+                    </li>
+                    <li class="checkbox-wrapper-33">
+                        <label class="checkbox">
+                            <input class="checkbox__trigger visuallyhidden" type="checkbox" />
+                            <span class="checkbox__symbol">
+                                <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                     viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 14l8 7L24 7"></path>
+                                </svg>
+                            </span>
+                            <p class="checkbox__textwrapper">Woman</p>
+                        </label>
+
+                    </li>
+
+                </ul>
+
+            </li>
+
+
+
+
+
+
+
+
+
+
+            <li class="filter-box tags">
+
+                <div class="box-head">
+                    <h3>Tags</h3>
+                    <a class="open-close">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                </div>
+
+
+                <ul class="filter-container tag">
+
+                    <div class="searchs-container">
+                        <input id="searchInput" type="text" placeholder="Search...">
+
+
+                        <ul id="searchResults">
+
+                            <!-- <span>Search not found ...</span> -->
+
+
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+                            <li class="srch-tag"><a href="#"># Tag</a></li>
+
+
+
+                        </ul>
+
+                        <div class="selected-tags">
+                            <ul class="selected-tags-list">
+                                <li>
+                                    <p>tag-1</p>
+
+                                    <i class="fa-solid fa-xmark"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <p>tag-2</p>
+                                    <i class="fa-solid fa-xmark"></i></a>
+                                </li>
+                                <li>
+                                    <p>t</p>
+                                    <i class="fa-solid fa-xmark"></i></a>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+                </ul>
+
+            </li>
+
+
+
+            <li class="filter-box prices">
+
+                <div class="box-head">
+                    <h3>Prices</h3>
+                    <a class="open-close">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                </div>
+
+
+                <div class="filter-container price">
+
+
+                    <div class="custom-wrapper">
+
+                        <div class="price-input-container">
+
+                            <div class="price-input">
+
+                                <div class="price-field">
+                                    <span>Min</span>
+
+                                    <div class="inp-box">
+                                        <p>$</p>
+                                        <input type="number" class="min-input" value="0">
+                                    </div>
+                                </div>
+
+                                <div class="price-field">
+                                    <span>Max</span>
+                                    <div class="inp-box">
+                                        <p>$</p>
+                                        <input type="number" class="max-input" value="10000">
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                            <div class="slider-container">
+                                <div class="price-slider">
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Slider -->
+                        <div class="range-input">
+                            <input type="range" class="min-range" min="0" max="10000" value="0" step="1">
+                            <input type="range" class="max-range" min="0" max="10000" value="10000" step="1">
+                        </div>
+                    </div>
+                </div>
+
+            </li>
+            <div class="buttons-filter">
+
+                <button class="submit" type="submit">Filter</button>
+                <button class="reset" type="reset">Clear</button>
+            </div>
+            </form>
+        </ul>
+
+
+
+        <div class="sections product-container">
+
+
+            <div class="news" style="background-image: url('@Url.Content("~/cilent/assets/images/products/slider-3.webp")');">
+
+                <h2>
+                    Plus-Size Styles for Every
+                    Season
+                </h2>
+
+                <p>
+                    Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
+                    maecenas.
+                </p>
+            </div>
+
+
+
+
+
+
+
+
+            <div class="product-items">
+
+
+
+                <div class="items-head">
+
+                    <div class="left-box">
+
+                        <p onclick="toggleFilter()">
+                            <i class="bi bi-filter-left"></i>
+                            Filter
+                        </p>
+
+                        <svg data-name="grid" class="@(Model.Grid?"active":"") grid" width="40" height="40" viewBox="0 0 40 40" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect width="10" height="10" fill="black" />
+                            <rect x="15" width="10" height="10" fill="black" />
+                            <rect x="30" width="10" height="10" fill="black" />
+                            <rect y="15" width="10" height="10" fill="black" />
+                            <rect x="15" y="15" width="10" height="10" fill="black" />
+                            <rect x="30" y="15" width="10" height="10" fill="black" />
+                            <rect y="30" width="10" height="10" fill="black" />
+                            <rect x="15" y="30" width="10" height="10" fill="black" />
+                            <rect x="30" y="30" width="10" height="10" fill="black" />
+                        </svg>
+
+                        <svg data-name="detail" class="@(Model.Grid?"":"active") " width="45" height="40" viewBox="0 0 45 40" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <rect width="10" height="10" fill="black" />
+                            <rect x="15" width="30" height="10" fill="black" />
+                            <rect x="15" y="15" width="30" height="10" fill="black" />
+                            <rect x="15" y="30" width="30" height="10" fill="black" />
+                            <rect y="15" width="10" height="10" fill="black" />
+                            <rect y="30" width="10" height="10" fill="black" />
+                        </svg>
+
+                        <div>
+                            <span class="item-counts">Showing</span>
+                            <span class="page-item">1-12</span>
+                            <span>of</span>
+                            <span class="items-con">@Model.Product.Count()</span>
+                            <span>results</span>
+                        </div>
+                    </div>
+
+
+
+                    <div class="right-box">
+                        <div class="select" tabindex="1">
+                            <input value="popularity" class="selectopt" name="test" type="radio" id="opt1" checked>
+                            <label for="opt1" class="option">Sort by popularity</label>
+                            <input value="rating" class="selectopt" name="test" type="radio" id="opt2">
+                            <label for="opt2" class="option">Sort by average rating</label>
+                            <input value="date" class="selectopt" name="test" type="radio" id="opt3">
+                            <label for="opt3" class="option">Sort by latest</label>
+                            <input value="price" class="selectopt" name="test" type="radio" id="opt4">
+                            <label for="opt4" class="option">Sort by price: low to high</label>
+                            <input value="price-desc" class="selectopt" name="test" type="radio" id="opt5">
+                            <label for="opt5" class="option">Sort by price: high to low</label>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                @await Html.PartialAsync("_ProductPartialView", Model)
+
+
+            </div>
+
+
+
+        </div>
+
+
+    </section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+
+@section script {
+    <script src="~/cilent/assets/js/shop.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('Form');
+            const catSelectCheckboxes = document.querySelectorAll('.cat-select');
+            const prevPageLink = document.getElementById('prevPage');
+            const nextPageLink = document.getElementById('nextPage');
+            const numBtns = document.querySelectorAll('.num-btn');
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                let formData = new FormData(form);
+
+                const selectedCats = Array.from(catSelectCheckboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
+
+                selectedCats.forEach(catId => {
+                    formData.append('SelectedCategories', catId.toString());
+                });
+                console.log(selectedCats)
+                console.log(formData)
+                const queryString = new URLSearchParams(formData).toString();
+                window.location.href = `/Shop/Index?${queryString}`;
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData
+                    });
+
+                    if (response.ok) {
+                        console.log('The form has been sent successfully!');
+                    } else {
+                        console.error('An error occurred while submitting the form:', response.statusText);
+                    }
+                } catch (error) {
+                    console.error('An error occurred while submitting the form:', error);
+                }
+            });
+
+            if (prevPageLink && nextPageLink && numBtns.length > 0) {
+                prevPageLink.addEventListener('click', prevPage);
+                nextPageLink.addEventListener('click', nextPage);
+
+                numBtns.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        goToPage(parseInt(btn.dataset.num));
+                    });
+                });
+            } else {
+                console.error('Required elements for pagination were not found.');
+            }
+        });
+
+        function sendFilterRequest(page) {
+            const form = document.getElementById('Form');
+            const formData = new FormData(form);
+
+            formData.append('PageInfo.CurrentPage', page);
+            formData.append('PageInfo.ItemsPerPage', 2);
+            formData.append('Grid', document.querySelector('.grid').classList.contains('active'));
+
+            const queryString = new URLSearchParams(formData).toString();
+            window.location.href = `/Shop/Index?${queryString}`;
+        }
+
+        function prevPage(event) {
+            event.preventDefault();
+            const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
+            if (currentPage > 1) {
+                sendFilterRequest(currentPage - 1);
+            }
+        }
+
+        function nextPage(event) {
+            event.preventDefault();
+            const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
+            const totalPages = parseInt(document.querySelectorAll('.num-btn').length);
+            if (currentPage < totalPages) {
+                sendFilterRequest(currentPage + 1);
+            }
+        }
+
+        function goToPage(pageNum) {
+            sendFilterRequest(pageNum);
+        }
+
+
+
+
+    </script>
+}
+

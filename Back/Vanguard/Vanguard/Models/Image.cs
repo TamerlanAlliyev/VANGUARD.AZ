@@ -8,7 +8,7 @@ public class Image : BaseAuditable
     public bool IsMain { get; set; }
     public bool IsHover { get; set; }
     public int ProductId { get; set; }
+    public int? ColorId { get; set; }
     public Product? Product { get; set; }
-
-
+    public Color? Color { get; set; }
 }

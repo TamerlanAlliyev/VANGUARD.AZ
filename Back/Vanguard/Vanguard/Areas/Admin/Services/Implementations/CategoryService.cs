@@ -23,7 +23,12 @@ public class CategoryService : ICategoryService
 
     public async Task<List<Category>> GetAllAsync()
     {
-        var categories = await _context.Categories.Where(c => !c.IsDeleted).OrderByDescending(t => t.Id).Include(c => c.ProductCategory).ToListAsync();
+        var categories = await _context.Categories
+        .Where(c => !c.IsDeleted)
+        .OrderByDescending(t => t.Id)
+        .Include(c => c.ProductCategory != null ? c.ProductCategory : null)
+        .ToListAsync();
+
         return categories;
     }
 

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Vanguard.csproj": {}
+    "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\GitHub\\Final-Project\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Vanguard.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Vanguard.csproj": {
+    "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\GitHub\\Final-Project\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Vanguard.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Vanguard.csproj",
+        "projectUniqueName": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\GitHub\\Final-Project\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Vanguard.csproj",
         "projectName": "Vanguard",
-        "projectPath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\Vanguard.csproj",
+        "projectPath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\GitHub\\Final-Project\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Vanguard.csproj",
         "packagesPath": "C:\\Users\\ROG\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\Vanguard.az\\Back\\Vanguard\\Vanguard\\obj\\",
+        "outputPath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\GitHub\\Final-Project\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[8.0.4, )"
             },
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
@@ -67,6 +71,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.4, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",

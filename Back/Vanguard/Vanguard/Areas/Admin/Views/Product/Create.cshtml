@@ -5,6 +5,14 @@
 
 
 <style>
+    .ca-title {
+        width: 30%;
+    }
+
+    .ca-container {
+        width: 70%;
+    }
+
     input[type="color"] {
         -webkit-appearance: none;
         appearance: none;
@@ -202,14 +210,14 @@
         padding: 5px;
     }
 
-    .color-list-table thead tr th:first-child,
+    thead tr th:first-child,
     .color-list-table thead tr th:last-child {
         display: flex;
         align-items: center;
         justify-content: center;
     }
 
-    .color-list-table tbody tr .color-list-cricle {
+    .color-list-cricle {
         text-align: center;
         display: flex;
         align-items: center;
@@ -217,10 +225,10 @@
         background: #000;
     }
 
-    .color-list-table .color-list-cricle:hover {
-        background: #545454 !important;
-        cursor: pointer;
-    }
+        .color-list-cricle:hover {
+            background: #545454 !important;
+            cursor: pointer;
+        }
 
     .color-list-cricle {
         width: 35px;
@@ -232,19 +240,19 @@
         transition: all 0.3s ease;
     }
 
-    .color-list-table .color-list-cricle:active {
-        transform: scale(0.85);
-    }
+        .color-list-cricle:active {
+            transform: scale(0.85);
+        }
 
-    .color-list-table .close-b {
+    .close-b {
         display: none;
     }
 
-    .color-list-table .color-list-cricle:hover .close-b {
+    .color-list-cricle:hover .close-b {
         display: flex;
     }
 
-    .color-list-table .add-size-btn {
+    .add-size-btn {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -254,7 +262,7 @@
         cursor: pointer;
     }
 
-        .color-list-table .add-size-btn i {
+        .add-size-btn i {
             transition: all 0.3s ease;
             display: flex;
             align-items: center;
@@ -262,18 +270,150 @@
             border-radius: 50%;
         }
 
-            .color-list-table .add-size-btn i:active {
+            .add-size-btn i:active {
                 transform: scale(0.95);
                 background: #ffffff;
                 color: #000;
             }
 
+
+
+
+    .add-upload-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        cursor: pointer;
+        color: red;
+    }
+
+        .add-upload-btn i {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+            .add-upload-btn i:active {
+                transform: scale(0.95);
+            }
+
+
+
+    .sec-img {
+        display: none;
+    }
+
+
+        .sec-img.active {
+            display: inherit;
+        }
+
     /* ========== Image ========= */
+    .color-img-body {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .sec-img {
+        width: 100%;
+        padding: 0rem 1rem 1rem 1rem;
+    }
+
+    .select-color {
+        padding: 1rem;
+    }
+
+    .select-color-head {
+        width: 100%;
+        display: flex;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .sec-hed {
+        color: #fff;
+        /* text-align: center; */
+    }
+
+        .sec-hed:nth-child(1) {
+            width: 15%;
+        }
+
+        .sec-hed:nth-child(2) {
+            width: 30%;
+        }
+
+        .sec-hed:nth-child(3) {
+            width: 25%;
+        }
+
+
+        .sec-hed:nth-child(4) {
+            width: 15%;
+            text-align: center;
+        }
+
+        .sec-hed:nth-child(5) {
+            width: 15%;
+            text-align: center;
+        }
+
+
+
+    .sec-body {
+        color: #fff;
+        width: 20%;
+    }
+
+
+    .color-box {
+        width: 100%;
+        padding: 1.5rem 1rem 1rem 1rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    .col-body {
+        display: flex;
+    }
+
+
+        .col-body:nth-child(1) {
+            width: 15%;
+        }
+
+        .col-body:nth-child(2) {
+            width: 30%;
+        }
+
+        .col-body:nth-child(3) {
+            width: 25%;
+        }
+
+        .col-body:nth-child(4) {
+            width: 15%;
+        }
+
+        .col-body:nth-child(5) {
+            justify-content: center;
+            width: 15%;
+        }
+
     .img-container {
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 500px;
+        height: 400px;
         flex-direction: column;
         gap: 10px;
     }
@@ -309,6 +449,7 @@
         .label-image:active {
             transform: scale(0.9);
         }
+
     /* ========== Image ========= */
 
 
@@ -320,6 +461,11 @@
         flex-direction: column;
         gap: 10px;
         height: auto !important;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .im-conta {
+        padding: 0;
     }
 
     .additional-image {
@@ -400,6 +546,7 @@
     .add-container.add-img-box:hover .remove-img {
         display: flex;
     }
+
     /* ========== Image File ========= */
 
 
@@ -485,6 +632,7 @@
             opacity: 1;
             animation: slideIn 0.5s ease-in-out;
         }
+
     /* ========== Categories ========= */
 
 
@@ -567,6 +715,7 @@
             opacity: 1;
             animation: slideIn 0.5s ease-in-out;
         }
+
     /* ========== Categories ========= */
 
 
@@ -642,12 +791,115 @@
         .selected-tag-box .tag-box:active {
             transform: scale(0.9);
         }
+
     /* ========== Tags ========= */
 
+    .color-img-body {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
 
-    /* ========== Tags And Categories ========= */
+    .sec-img {
+        width: 100%;
+        padding: 0rem 1rem 1rem 1rem;
+    }
 
+    .select-color {
+        padding: 1rem;
+    }
+
+    .select-color-head {
+        width: 100%;
+        display: flex;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .sec-hed {
+        color: #fff;
+        /* text-align: center; */
+    }
+
+        .sec-hed:nth-child(1) {
+            width: 15%;
+        }
+
+        .sec-hed:nth-child(2) {
+            width: 30%;
+        }
+
+        .sec-hed:nth-child(3) {
+            width: 25%;
+        }
+
+
+        .sec-hed:nth-child(4) {
+            width: 15%;
+            text-align: center;
+        }
+
+        .sec-hed:nth-child(5) {
+            width: 15%;
+            text-align: center;
+        }
+
+
+
+    .sec-body {
+        color: #fff;
+        width: 20%;
+    }
+
+
+    .color-box {
+        width: 100%;
+        padding: 1.5rem 1rem 1rem 1rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    .col-body {
+        display: flex;
+    }
+
+
+        .col-body:nth-child(1) {
+            width: 15%;
+        }
+
+        .col-body:nth-child(2) {
+            width: 30%;
+        }
+
+        .col-body:nth-child(3) {
+            width: 25%;
+        }
+
+        .col-body:nth-child(4) {
+            width: 15%;
+        }
+
+        .col-body:nth-child(5) {
+            justify-content: center;
+            width: 15%;
+        }
 </style>
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -656,7 +908,7 @@
         <div class="row page-titles">
             <ol class="breadcrumb">
                 <li class="breadcrumb-item active"><a href="javascript:void(0)">Product</a></li>
-                <li class="breadcrumb-item"><a href="javascript:void(0)">Create</a></li>
+                <li class="breadcrumb-item"><a sty href="javascript:void(0)">Create</a></li>
             </ol>
         </div>
         <!-- row -->
@@ -680,47 +932,50 @@
                                 <div class="row">
 
 
-                                    <div class="col-xl-6 ">
+                                    <div class="col-xl-7 ">
 
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label w-25"
+                                            <label class="col-lg-4 col-form-label ca-title"
                                                    for="validationCustom01">
                                                 Product Name
                                                 <span class="text-danger">*</span>
                                             </label>
-                                            <div class="col-lg-8 w-75" style="padding-right: 10%;">
-                                                <input asp-for="Name" type="text" class="form-control" id="validationCustom01" required=""
+                                            <div class="col-lg-8 ca-container" style="padding-right: 10%;">
+                                                <input asp-for="Name" type="text" class="form-control"
+                                                       id="validationCustom01"
                                                        placeholder="Enter a Product Name..">
                                                 <span asp-validation-for="Name" class="text-danger"></span>
                                             </div>
                                         </div>
 
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label w-25"
+                                            <label class="col-lg-4 col-form-label ca-title"
                                                    for="validationCustom02">
                                                 Short Description <span class="text-danger">*</span>
                                             </label>
-                                            <div class="col-lg-8 w-75" style="padding-right: 10%; ">
+                                            <div class="col-lg-8 ca-container" style="padding-right: 10%; ">
 
-                                                <textarea asp-for="ShortDescription" style="min-height: 100px;" class="form-control" required=""
-                                                          id="validationCustom02" rows="5"
+                                                <textarea asp-for="ShortDescription" style="min-height: 100px;"
+                                                          class="form-control" id="validationCustom02" rows="5"
                                                           placeholder="Enter a Product Description..."></textarea>
-                                                <span asp-validation-for="ShortDescription" class="text-danger"></span>
+                                                <span asp-validation-for="ShortDescription"
+                                                      class="text-danger"></span>
 
                                             </div>
                                         </div>
 
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label w-25"
+                                            <label class="col-lg-4 col-form-label ca-title"
                                                    for="validationCustom03">
                                                 Detailed Description <span class="text-danger">*</span>
                                             </label>
-                                            <div class="col-lg-8 w-75" style="padding-right: 10%; ">
+                                            <div class="col-lg-8 ca-container" style="padding-right: 10%; ">
 
-                                                <textarea asp-for="Description" style="min-height: 200px;" class="form-control" required=""
-                                                          id="validationCustom03" rows="5"
+                                                <textarea asp-for="Description" style="min-height: 200px;"
+                                                          class="form-control" id="validationCustom03" rows="5"
                                                           placeholder="Enter a Product Description..."></textarea>
-                                                <span asp-validation-for="Description" class="text-danger"></span>
+                                                <span asp-validation-for="Description"
+                                                      class="text-danger"></span>
 
                                             </div>
                                         </div>
@@ -730,19 +985,31 @@
                                     </div>
 
 
-                                    <div class="col-xl-6">
+                                    <div class="col-xl-5">
 
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label " for="validationCustom03">
+                                                Product Model
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6 ">
+                                                <input asp-for="Model" type="text" class="form-control"
+                                                       id="validationCustom01"
+                                                       placeholder="Product Model...">
+                                                <span asp-validation-for="Model" class="text-danger"></span>
+                                            </div>
+                                        </div>
 
 
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label "
-                                                   for="validationCustom03">
+                                            <label class="col-lg-4 col-form-label " for="validationCustom03">
                                                 Price
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6 ">
-                                                <input asp-for="SellPrice" type="number" class="form-control price"
-                                                       id="validationCustom03" placeholder="$00.0">
+                                                <input asp-for="SellPrice" type="number"
+                                                       class="form-control price" id="validationCustom03"
+                                                       placeholder="$00.0">
 
                                                 <span asp-validation-for="SellPrice" class="text-danger"></span>
 
@@ -750,22 +1017,21 @@
                                         </div>
 
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label "
-                                                   for="validationCustom04">
+                                            <label class="col-lg-4 col-form-label " for="validationCustom04">
                                                 Discount Price
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-6 ">
-                                                <input asp-for="DiscountPrice" type="number" class="form-control discount"
-                                                       id="validationCustom04" placeholder="$00.0">
+                                                <input asp-for="DiscountPrice" type="number"
+                                                       class="form-control discount" id="validationCustom04"
+                                                       placeholder="$00.0">
 
                                             </div>
                                         </div>
 
 
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label "
-                                                   for="validationCustom05">
+                                            <label class="col-lg-4 col-form-label " for="validationCustom05">
                                                 Offer
                                                 <span class="text-danger">*</span>
                                             </label>
@@ -818,7 +1084,10 @@
 
                                         <div class="mb-3 row">
 
-                                            <label class="col-lg-4 col-form-label " style="width: 28%;"
+
+
+
+                                            <label class="col-lg-4 col-form-label " style="width: 37%;"
                                                    for="validationCustom01">
                                                 Selet Categories
                                                 <span class="text-danger">*</span>
@@ -828,7 +1097,7 @@
 
 
 
-                                            <div class="select-col-category">
+                                            <div class="select-col-category " style="width: 63%;">
 
                                                 <span class="select-btn-category">Select Categories</span>
 
@@ -838,19 +1107,21 @@
 
                                                     <div class="category-list">
 
-                                                        @if (Model.CategorySelection != null)
+                                                        @foreach (var cat in Model.CategorySelection)
                                                         {
-                                                            foreach (var cat in Model.CategorySelection)
-                                                            {
-                                                                <label class="list-categ" data-id="@cat.Id"
-                                                                       for="@cat.Id">
-                                                                    <input type="checkbox" class="checkbox" id="@cat.Id" hidden />
-                                                                    <span class="cat-name"> @cat.Name</span>
-                                                                    <span class="par-name">@(cat.Parent != null ? $"({cat.Parent})" : "")</span>
-                                                                </label>
-                                                            }
 
+                                                            <label class="list-categ" data-id="@cat.Id"
+                                                                   for="@cat.Id">
+                                                                <input type="checkbox" class="checkbox" id="@cat.Id"
+                                                                       hidden />
+                                                                <span class="cat-name"> @cat.Name</span>
+                                                                <span class="par-name">
+                                                                    @(cat.Parent != null ?
+                                                                        $"({cat.Parent})" : "")
+                                                                </span>
+                                                            </label>
                                                         }
+
 
                                                     </div>
                                                 </div>
@@ -865,7 +1136,7 @@
 
                                         <div class="mb-3 row">
 
-                                            <label class="col-lg-4 col-form-label " style="width: 28%;"
+                                            <label class="col-lg-4 col-form-label " style="width: 37%;"
                                                    for="validationCustom01">
                                                 Selet Tags
                                                 <span class="text-danger">*</span>
@@ -875,7 +1146,7 @@
 
 
 
-                                            <div class="select-col-tag">
+                                            <div class="select-col-tag" style="width: 63%;">
 
                                                 <span class="select-btn-tag">Select Tags</span>
 
@@ -890,7 +1161,8 @@
                                                             @foreach (var tag in Model.TagSelections)
                                                             {
                                                                 <label class="list-tag" data-id="@tag.Id" for="@tag.Id">
-                                                                    <input type="checkbox" class="checkbox" id="@tag.Id" hidden />
+                                                                    <input type="checkbox" class="checkbox" id="@tag.Id"
+                                                                           hidden />
                                                                     <span class="tag-name">@tag.Name</span>
                                                                 </label>
                                                             }
@@ -920,16 +1192,17 @@
 
                                         <div class="mb-3 row">
 
-                                            <label class="col-lg-3 col-form-label "
+                                            <label class="col-lg-3 col-form-label " style="width: 32%;"
                                                    for="validationCustom06">
                                                 Selected Categories
                                                 <span class="text-danger">*</span>
                                             </label>
 
 
-                                            <ul class="col-lg-9 form-control p-3 selected-category-box">
+                                            <ul class="col-lg-9 form-control p-3 selected-category-box"
+                                                style="width: 66%;">
 
-                                                @*             <li class="category-box">
+                                                @* <li class="category-box">
                                                 <span class="cat-name-selected">Fashion</span>
                                                 <a data-id="Fashion" class="cat-remove">
                                                 <i class="fa-solid fa-xmark"></i>
@@ -938,6 +1211,7 @@
                                                 </li>
                                                 *@
 
+                                                <span asp-validation-for="SelectedCategoryIds" class="text-danger"></span>
                                             </ul>
 
 
@@ -948,16 +1222,17 @@
 
                                         <div class="mb-3 row">
 
-                                            <label class="col-lg-3 col-form-label "
+                                            <label class="col-lg-3 col-form-label " style="width: 32%;"
                                                    for="validationCustom06">
                                                 Selected Tags
                                                 <span class="text-danger">*</span>
                                             </label>
 
 
-                                            <ul class="col-lg-9 form-control p-3 selected-tag-box">
+                                            <ul class="col-lg-9 form-control p-3 selected-tag-box"
+                                                style="width: 66%;">
 
-                                                @*             <li class="tag-box">
+                                                @* <li class="tag-box">
                                                 <span data-id="5" class="tag-name">Fashion</span>
                                                 <a class="tag-remove">
                                                 <i class="fa-solid fa-xmark"></i>
@@ -994,95 +1269,147 @@
 
 
 
+                <div class="row">
 
-                <!-- ==========================================
-                         Color Create && Selected Colors
-                ===============================================-->
-                <div class="col-lg-12">
-                    <div class="row">
-
-
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title text-center d-flex justify-content-center w-100">
-                                        Add Measurements
-                                    </h4>
-                                </div>
-
-                                <div class="card-body">
-                                    <div class="form-validation">
-                                        <div class="row">
+                    <!-- ==========================================
+                             Color Create && Selected Colors
+                    ===============================================-->
+                    <div class="col-lg-5">
+                        <div class="row">
 
 
+                            <div class="col-lg-12">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title text-center d-flex justify-content-center w-100">
+                                            Color Create & Select
+                                        </h4>
+                                    </div>
 
-                                            <div class="mb-3 row">
-                                                <label class="col-lg-4 col-form-label w-25"
-                                                       for="validationCustom09">
-                                                    Select Color
-                                                    <span class="text-danger">*</span>
-                                                </label>
+                                    <div class="card-body">
+                                        <div class="form-validation">
+                                            <div class="row">
 
 
 
-                                                <div class="select-col">
+                                                <div class="mb-3 row">
+                                                    <label class="col-lg-4 col-form-label w-25"
+                                                           for="validationCustom09">
+                                                        Select Color
+                                                        <span class="text-danger">*</span>
+                                                    </label>
 
-                                                    <span class="select-butn">Select Colors</span>
 
-                                                    <div class="col-container ">
-                                                        <input class="color-search" type="text"
-                                                               placeholder="Search Color...">
 
-                                                        <div class="col-list">
+                                                    <div class="select-col">
 
-                                                            <label class="list-c" data-hexcode="#ffffff"
-                                                                   for="#ffffff">
+                                                        <span class="select-butn">Select Colors</span>
+
+                                                        <div class="col-container ">
+                                                            <input class="color-search" type="text"
+                                                                   placeholder="Search Color...">
+
+                                                            <div class="col-list">
+
+                                                                @if (Model.Colors != null)
+                                                                {
+                                                                    foreach (var color in Model.Colors)
+                                                                    {
+                                                                        <label class="list-c"
+                                                                               data-hexcode="@color.HexCode"
+                                                                               for="@color.HexCode">
+                                                                            <input type="checkbox" class="checkbox"
+                                                                                   id="@color.HexCode" hidden
+                                                                                   name="@color.HexCode" />
+                                                                            <span class="col-nam-c">@color.Name</span>
+                                                                            <span> (@color.HexCode)</span>
+                                                                        </label>
+                                                                    }
+                                                                }
+
+                                                                @* <label class="list-c" data-hexcode="#00ff00"
+                                                                for="#00ff00">
                                                                 <input type="checkbox" class="checkbox"
-                                                                       id="#ffffff" hidden name="#ffffff" />
-                                                                <span>White (#ffffff)</span>
-                                                            </label>
+                                                                id="#00ff00" hidden name="#00ff00" />
+                                                                <span class="col-nam-c">Green</span> <span>
+                                                                (#00ff00)</span>
+                                                                </label> *@
 
-                                                            <label class="list-c" data-hexcode="#000000"
-                                                                   for="#000000">
-                                                                <input type="checkbox" class="checkbox"
-                                                                       id="#000000" hidden name="#000000" />
-                                                                <span>Black (#000000)</span>
-                                                            </label>
 
-                                                            <label class="list-c" data-hexcode="#ff0000"
-                                                                   for="#ff0000">
-                                                                <input type="checkbox" class="checkbox"
-                                                                       id="#ff0000" hidden name="#ff0000" />
-                                                                <span>Red (#ff0000)</span>
-                                                            </label>
-
-                                                            <label class="list-c" data-hexcode="#00ff00"
-                                                                   for="#00ff00">
-                                                                <input type="checkbox" class="checkbox"
-                                                                       id="#00ff00" hidden name="#00ff00" />
-                                                                <span>Green (#00ff00)</span>
-                                                            </label>
-
-                                                            <label class="list-c" data-hexcode="#0000ff"
-                                                                   for="#0000ff">
-                                                                <input type="checkbox" class="checkbox"
-                                                                       id="#0000ff" hidden name="#0000ff" />
-                                                                <span>Blue (#0000ff)</span>
-                                                            </label>
-
+                                                            </div>
 
                                                         </div>
 
                                                     </div>
 
+                                                    <span class=" btn btn-primary color-new-btn "
+                                                          style="width: 20%;">
+                                                        Create New
+                                                        Color
+                                                    </span>
+
+
+
                                                 </div>
 
-                                                <span class=" btn btn-primary color-new-btn "
-                                                      style="width: 20%;">
-                                                    Create New
-                                                    Color
-                                                </span>
 
+
+
+
+
+
+
+
+                                                <div class="mb-3 row new-color mt-5 h-100">
+
+                                                    <label style="padding: 0;"
+                                                           class="col-lg-4 col-form-label w-25"
+                                                           for="validationCustom09">
+                                                        Create Color
+                                                        <span class="text-danger">*</span>
+                                                    </label>
+
+                                                    <div class="col-lg-8   w-75">
+
+                                                        <div class="bclr d-flex w-100"
+                                                             style="justify-content: space-between !important;">
+
+                                                            <div class="color-box-c "
+                                                                 style="display: flex; flex-direction: column; width: 45%;  justify-content: start;">
+
+                                                                <div style="width: 45%;"
+                                                                     class="col-xl-4 example form-control p-0 d-flex w-100 justify-content-between align-items-center overflow-hidden">
+                                                                    <input type="text" class="hexKod"
+                                                                           value="#000000"
+                                                                           style="width: 55%; height: 100%; padding: 10px; background: transparent; border: none; color: #ffff;">
+                                                                    <input style="width: 45%;" id="color"
+                                                                           value="#000000" type="color"
+                                                                           class="w-50 h-100 c-inp">
+                                                                </div>
+
+                                                            </div>
+
+
+
+                                                            <div class="color-box-c "
+                                                                 style="display: flex; flex-direction: column; width: 50%; justify-content: end; ">
+
+                                                                <div class="inp-box form-control d-flex align-items-center justify-content-between p-0 overflow-hidden">
+                                                                    <input type="text"
+                                                                           style="height: 100%; background: transparent; color:#ffff; width: 70%; padding-left: 10px; border: none;"
+                                                                           class="col-xl-4 color-nam"
+                                                                           id="validationCustom01"
+                                                                           placeholder="Color Name..">
+                                                                    <span class="btn btn-success color-crt-btn"
+                                                                          style="height: 100%; border-radius: 0; width: 30%; padding: 0; display: flex; justify-content: center;align-items: center;font-size:10px; font-weight: 500;">Create</span>
+                                                                </div>
+
+                                                            </div>
+                                                        </div>
+                                                        
+                                                    </div>
+                                                </div>
+                                                <span class="text-info">Not!... Once all colors are selected you can upload images </span>
 
 
                                             </div>
@@ -1095,143 +1422,204 @@
 
 
 
-                                            <div class="mb-3 row new-color mt-5">
-
-                                                <label class="col-lg-4 col-form-label w-25"
-                                                       for="validationCustom09">
-                                                    Create Color
-                                                    <span class="text-danger">*</span>
-                                                </label>
-
-                                                <div class="col-lg-8   w-75">
-
-                                                    <div class="bclr d-flex w-100"
-                                                         style="justify-content: space-between !important;">
-
-                                                        <div class="color-box "
-                                                             style="display: flex; flex-direction: column; width: 45%;  justify-content: start;">
-
-                                                            <div style="width: 45%;"
-                                                                 class="col-xl-4 example form-control p-0 d-flex w-100 justify-content-between align-items-center overflow-hidden">
-                                                                <input type="text" class="hexKod"
-                                                                       value="#000000"
-                                                                       style="width: 55%; height: 100%; padding: 10px; background: transparent; border: none; color: #ffff;">
-                                                                <input style="width: 45%;" id="color"
-                                                                       value="#000000" type="color"
-                                                                       class="w-50 h-100 c-inp">
-                                                            </div>
-
-                                                            <!-- <span class="text-danger"></span> -->
-                                                        </div>
 
 
 
-                                                        <div class="color-box "
-                                                             style="display: flex; flex-direction: column; width: 50%; justify-content: end; ">
 
-                                                            <div class="inp-box form-control d-flex align-items-center justify-content-between p-0 overflow-hidden">
-                                                                <input type="text"
-                                                                       style="height: 100%; background: transparent; color:#ffff; width: 70%; padding-left: 10px; border: none;"
-                                                                       class="col-xl-4 color-nam"
-                                                                       id="validationCustom01"
-                                                                       placeholder="Color Name.." required="">
-                                                                <span class="btn btn-success color-crt-btn"
-                                                                      style="height: 100%; border-radius: 0; width: 30%; padding: 0; display: flex; justify-content: center;align-items: center; font-weight: 500;">Create</span>
-                                                            </div>
-                                                            <!-- <span class="text-danger"></span> -->
 
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
 
 
                                         </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
+
+
+                            <!-- <div class="col-lg-6">
+                                <div class="card">
+                                    <div class="card-header">
+                                        <h4 class="card-title text-center d-flex justify-content-center w-100">
+                                            Selected Colors
+                                        </h4>
+                                    </div>
+
+                                    <table class="table header-border table-hover verticle-middle color-list-table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col"></th>
+                                                <th scope="col">Color</th>
+                                                <th scope="col">Name</th>
+                                                <th scope="col">Hex Code</th>
+                                                <th scope="col">Add Size</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="color-list-box">
+
+                                            <tr data-id="#000000" class="color-box">
+                                                <td></td>
+                                                <td>
+                                                    <div class="color-list-cricle" style="background: #000000;">
+                                                        <i class="bi bi-x close-b" style="font-size: 25px;"></i>
+                                                    </div>
+                                                </td>
+                                                <td class="color-list-name">White</td>
+                                                <td>#ffffff</td>
+                                                <td>
+                                                    <div class="add-size-btn">
+                                                        <i class="bi bi-plus-circle"></i>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div> -->
+
                         </div>
 
 
-                        <div class="col-lg-6">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h4 class="card-title text-center d-flex justify-content-center w-100">
-                                        Selected Colors
-                                    </h4>
-                                </div>
-
-                                <table class="table header-border table-hover verticle-middle color-list-table">
-                                    <thead>
-                                        <tr>
-                                            <th scope="col"></th>
-                                            <th scope="col">Color</th>
-                                            <th scope="col">Name</th>
-                                            <th scope="col">Hex Code</th>
-                                            <th scope="col">Add Size</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="color-list-box">
-                                        <tr data-id="#000000" class="color-box">
-                                            <!-- <td class="num">1</td> -->
-                                            <td></td>
-                                            <td>
-                                                <div class="color-list-cricle" style="background: #000000;">
-                                                    <i class="bi bi-x close-b" style="font-size: 25px;"></i>
-                                                </div>
-                                            </td>
-                                            <td class="color-list-name">White</td>
-                                            <td>#ffffff</td>
-                                            <td>
-                                                <div class="add-size-btn">
-                                                    <i class="bi bi-plus-circle"></i>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
 
                     </div>
 
 
 
+                    <!-- ==========================================
+                             Select Color List
+                    ===============================================-->
+                    <!-- ==========================================
+                             Select Color List
+                    ===============================================-->
+
+
+                    <div class="col-lg-7">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title text-center d-flex justify-content-center w-100">
+                                    Selected Colors & Image Upload
+                                </h4>
+                            </div>
+
+
+
+
+
+
+
+                            <div class="select-color">
+
+                                <div class="select-color-head">
+                                    <a class="sec-hed">Color</a>
+                                    <a class="sec-hed">Name</a>
+                                    <a class="sec-hed">Hex Code</a>
+                                    <a class="sec-hed">Upload Images</a>
+                                    <a class="sec-hed">Add Size</a>
+                                </div>
+
+                                <div class="color-list-box">
+
+                                    @*
+                                    <div data-id="#000000" class="color-img-body">
+
+                                    <div data-id="#000000" class="color-box">
+                                    <a class="col-body">
+                                    <div class="color-list-cricle" style="background: #000000;">
+                                    <i class="bi bi-x close-b" style="font-size: 25px;"></i>
+                                    </div>
+                                    </a>
+                                    <a class="color-list-name col-body">Black</a>
+                                    <a class="col-body">#000000</a>
+                                    <a class="col-body">
+                                    <div class="add-upload-btn">
+                                    <i class="bi bi-cloud-arrow-up"></i>
+                                    </div>
+                                    </a>
+                                    <a class="col-body">
+                                    <div class="add-size-btn">
+                                    <i class="bi bi-plus-circle"></i>
+                                    </div>
+                                    </a>
+
+                                    </div>
+                                    <div class="sec-img active">
+                                    <div class="card-body im-conta">
+                                    <div class="row " style="flex-direction: column;">
+                                    <div class="">
+                                    <div class="row im-container">
+                                    <div class="col-xl-6 img-container">
+                                    <span>Main Image <span
+                                    class="text-danger">*</span></span>
+                                    <label class="label-image">
+                                    <input type="file" class="mainImage" hidden>
+                                    <img class="main-img selected-img"
+                                    src="~/admin/icons/plus.svg" alt="">
+                                    </label>
+                                    <span class="text-danger"></span>
+                                    </div>
+                                    <div class="col-xl-6 img-container">
+                                    <span>Hover Image <span
+                                    class="text-danger">*</span></span>
+                                    <label class="label-image">
+                                    <input type="file" class="hoverImage"
+                                    hidden>
+                                    <img class="hover-img selected-img"
+                                    src="~/admin/icons/plus.svg" alt="">
+                                    </label>
+                                    <span class="text-danger"></span>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="add-files">
+                                    <div>
+                                    <span>Additional Image <span
+                                    class="text-danger">*</span></span>
+                                    </div>
+                                    <div class="im-container">
+                                    <div class="col-xl-12 additional-image">
+                                    <div class="add-container">
+                                    <label class="add-label-image">
+                                    <input type="file"
+                                    class="add-AdditionalImages"
+                                    multiple hidden>
+                                    <img class="hover-img-selected"
+                                    src="~/admin/icons/plus.svg" alt="">
+                                    </label>
+                                    </div>
+                                    </div>
+                                    <input type="file" class="AdditionalImages" multiple
+                                    hidden>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    *@
+
+
+
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
                 </div>
 
 
 
 
-
-
-
                 <!-- ==========================================
-                         Select Sizes
+                         Add Measurements
                 ===============================================-->
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-header">
                             <h4 class="card-title text-center d-flex justify-content-center w-100">
-                                Select Sizes
+                                Add Measurements
                             </h4>
                         </div>
 
@@ -1253,37 +1641,42 @@
                                 </tr>
                             </thead>
                             <tbody class="prod-size-list-container">
-                                <tr>
-                                    <th></th>
-                                    <td>
-                                        <div class="color-list-cricle" style="background: #000000;">
-                                        </div>
-                                    </td>
-                                    <td class="prod-col">Black</td>
-                                    <td class="prod-size">
 
-                                        <input type="texxt" class="size-input form-control"
-                                               id="validationCustom" placeholder="Add Size..." required="">
+                                @*                     <tr data-hexcode="#000000">
+                                <th></th>
+                                <td>
+                                <div class="color-list-cricle" style="background: #000000;">
+                                </div>
+                                </td>
+                                <td class="prod-col">Black</td>
+                                <td class="prod-size">
 
-                                    </td>
-                                    <td class="prod-count">
-                                        <input type="number" class="form-control" id="validationCustom"
-                                               placeholder="Add Count..." required="">
-                                    </td>
-                                    <td class="prod-count">
-                                        <input type="number" class="form-control" id="validationCustom"
-                                               placeholder="Add Weight (kq)...">
-                                    </td>
-                                    <td class="prod-count">
-                                        <input type="text" class="form-control" id="validationCustom"
-                                               placeholder="Add Dimensions...">
-                                    </td>
-                                    <td class="prod-del">
-                                        <div class="del-btn btn">
-                                            <i class="fa-regular fa-trash-can"></i>
-                                        </div>
-                                    </td>
-                                </tr>
+                                <input type="texxt" class="size-input form-control"
+                                id="validationCustom" placeholder="Add Size...">
+
+                                </td>
+                                <td class="prod-count">
+                                <input type="number" class="form-control count-input"
+                                id="validationCustom" placeholder="Add Count...">
+                                </td>
+                                <td class="prod-weight">
+                                <input type="number" class="form-control weight-input"
+                                id="validationCustom" placeholder="Add Weight (kq)...">
+                                </td>
+                                <td class="prod-dimensions">
+                                <input type="text" class="form-control dimensions-input"
+                                id="validationCustom" placeholder="Add Dimensions...">
+                                </td>
+                                <td class="prod-del">
+                                <div class="del-btn btn">
+                                <i class="fa-regular fa-trash-can"></i>
+                                </div>
+                                </td>
+
+                                </tr> *@
+
+
+
 
                             </tbody>
                         </table>
@@ -1297,8 +1690,8 @@
 
 
 
-
                     </div>
+                        <span class="text-danger text-center" asp-validation-for="ColorSizeVM"></span>
                 </div>
 
 
@@ -1308,101 +1701,11 @@
 
 
 
-                <!-- ==========================================
-                              Image Upload
-                ===============================================-->
                 <div class="col-lg-12">
-
-
                     <div class="card">
-
-                        <div class="card-header card">
-                            <h4 class="card-title">Images Upload</h4>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="row">
-
-
-                                <div class="col-xl-6 ">
-                                    <div class="row im-container">
-                                        <div class="col-xl-6 img-container">
-                                            <span>Main Image <span class="text-danger">*</span></span>
-                                            <label for="mainImage" class="label-image">
-                                                <input asp-for="MainImage" type="file" id="mainImage" name="mainImage" hidden required="">
-                                                <img class="main-img selected-img" src="~/admin/icons/plus.svg" alt="">
-                                            </label>
-                                            <span asp-validation-for="MainImage" class="text-danger"></span>
-
-                                        </div>
-                                        <div class="col-xl-6 img-container">
-                                            <span>Hover Image <span class="text-danger">*</span></span>
-                                            <label for="hoverImage" class="label-image">
-                                                <input asp-for="HoverImage" type="file" id="hoverImage" name="hoverImage" hidden required="werhtgnbfvdawdqascd">
-                                                <img class="hover-img selected-img" src="~/admin/icons/plus.svg"
-                                                     alt="">
-                                            </label>
-                                            <span asp-validation-for="HoverImage" class="text-danger"></span>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-
-                                <div class="col-xl-6 add-files ">
-                                    <div>
-                                        <span>Additional Image <span class="text-danger">*</span></span>
-                                    </div>
-                                    <div class=" im-container">
-
-                                        <div class="col-xl-12 additional-image">
-
-                                            <!-- <div class="add-container add-img-box">
-                                                <label data-file="fileName" class="add-label-image">
-                                                    <img class="hover-img-selected" src="/images/1.jpg" alt="">
-                                                    <a class="remove-img">
-                                                        <i class="fa-regular fa-trash-can"></i>
-                                                    </a>
-
-                                                </label>
-                                            </div> -->
-
-                                            <div class="add-container">
-                                                <label for="add-AdditionalImages" class="add-label-image">
-                                                    <input id="add-AdditionalImages" type="file"
-                                                           class="form-control" multiple hidden>
-                                                    <img class="hover-img-selected" src="~/admin/icons/plus.svg"
-                                                         alt="">
-                                                </label>
-                                            </div>
-
-
-                                        </div>
-
-                                        <input asp-for="AdditionalImages" id="AdditionalImages" type="file" class="form-control" multiple hidden>
-
-
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
+                        <div asp-validation-summary="ModelOnly"></div>
                     </div>
-
-
-
-
-
-
-
-
                 </div>
-
-
-
 
 
 
@@ -1415,7 +1718,6 @@
                     </div>
                 </div>
 
-
             </form>
 
         </div>
@@ -1423,7 +1725,6 @@
 
 
 </div>
-
 
 
 
@@ -1452,123 +1753,148 @@
 
 
     <script>
+        // ============================ IMAGE =================
+        function imageToggle() {
+            const colorBoxL = document.querySelectorAll('.color-list-box .color-img-body')
 
-        //=================== Main && Hover Image
+            colorBoxL.forEach(list => {
+                const UploadBtn = list.querySelector('.add-upload-btn')
+                const secImg = list.querySelector('.sec-img')
 
-        const mainImageInput = document.getElementById('mainImage');
-        const hoverImageInput = document.getElementById('hoverImage');
-        const mainImage = document.querySelector('.main-img');
-        const hoverImage = document.querySelector('.hover-img');
+                UploadBtn.addEventListener('click', () => {
+                    secImg.classList.toggle('active')
+                });
+            })
+        }
+        imageToggle()
 
-        mainImageInput.addEventListener('change', (event) => {
-            displayImage(event, mainImage);
-        });
+        function checkImage() {
+            const colorBoxL = document.querySelectorAll('.color-list-box .color-img-body')
 
-        hoverImageInput.addEventListener('change', (event) => {
-            displayImage(event, hoverImage);
-        });
-
-        function displayImage(event, imgElement) {
-            const selectedFile = event.target.files[0];
-
-            if (selectedFile) {
-                const reader = new FileReader();
-
-                reader.onload = function (e) {
-                    imgElement.src = e.target.result;
-                    imgElement.style.width = '100%';
-                    imgElement.style.height = '100%';
-                    imgElement.style.objectFit = 'cover';
-                    imgElement.style.objectPosition = 'top center';
-
-                };
-
-                if (selectedFile.type.match('image.*')) {
-                    reader.readAsDataURL(selectedFile);
-                } else {
-                    alert("Please select an image file!");
-                    event.target.value = "";
+            colorBoxL.forEach(list => {
+                const UploadBtn = list.querySelector('.add-upload-btn');
+                const mainImage = list.querySelector('.mainImage');
+                const hoverImage = list.querySelector('.hoverImage');
+                if (hoverImage.files.length > 0 && mainImage.files.length > 0) {
+                    UploadBtn.style.color = 'green';
                 }
-            }
+            });
+        }
+        checkImage()
+        setInterval(checkImage, 1000);
+
+        function ImageUpload() {
+            const colorImgBodies = document.querySelectorAll('.color-img-body');
+
+            colorImgBodies.forEach((colorImgBody) => {
+                const mainImageInput = colorImgBody.querySelector('.mainImage');
+                const hoverImageInput = colorImgBody.querySelector('.hoverImage');
+                const mainImage = colorImgBody.querySelector('.main-img');
+                const hoverImage = colorImgBody.querySelector('.hover-img');
+                const addAdditionalImagesInput = colorImgBody.querySelector('.add-AdditionalImages');
+                const additionalImagesInput = colorImgBody.querySelector('.AdditionalImages');
+                const additionalImageContainer = colorImgBody.querySelector('.additional-image');
+
+                mainImageInput.addEventListener('change', (event) => {
+                    displayImage(event, mainImage);
+                });
+
+                hoverImageInput.addEventListener('change', (event) => {
+                    displayImage(event, hoverImage);
+                });
+
+                addAdditionalImagesInput.addEventListener('change', () => {
+                    if (addAdditionalImagesInput.files.length > 0) {
+                        const existingFiles = Array.from(additionalImagesInput.files || []);
+                        const newFiles = Array.from(addAdditionalImagesInput.files);
+                        const allFiles = [...existingFiles, ...newFiles];
+
+                        const dt = new DataTransfer();
+                        allFiles.forEach(file => dt.items.add(file));
+                        additionalImagesInput.files = dt.files;
+
+                        for (const file of newFiles) {
+                            const reader = new FileReader();
+                            reader.onload = (e) => {
+                                if (file.type.match('image.*')) {
+                                    const imageBoxDiv = document.createElement('div');
+                                    imageBoxDiv.classList.add('add-container', 'add-img-box');
+
+                                    const label = document.createElement('label');
+                                    label.classList.add('add-label-image');
+                                    label.dataset.file = file.name;
+
+                                    const img = document.createElement('img');
+                                    img.classList.add('hover-img-selected');
+                                    img.src = e.target.result;
+                                    img.alt = file.name;
+
+                                    const removeLink = document.createElement('a');
+                                    removeLink.classList.add('remove-img');
+                                    removeLink.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
+
+                                    label.appendChild(removeLink);
+                                    label.appendChild(img);
+                                    imageBoxDiv.appendChild(label);
+                                    additionalImageContainer.insertBefore(imageBoxDiv, additionalImageContainer.lastChild);
+                                } else {
+                                    alert("Please select an image file!");
+                                    addAdditionalImagesInput.value = "";
+                                }
+                            };
+                            reader.readAsDataURL(file);
+                        }
+
+                        addAdditionalImagesInput.value = '';
+                    }
+                });
+
+                additionalImageContainer.addEventListener('click', (event) => {
+                    if (event.target.classList.contains('fa-trash-can')) {
+                        const label = event.target.closest('.add-label-image');
+                        const fileNameToRemove = label.dataset.file;
+
+                        const dt = new DataTransfer();
+                        for (const file of additionalImagesInput.files) {
+                            if (file.name !== fileNameToRemove) {
+                                dt.items.add(file);
+                            }
+                        }
+                        additionalImagesInput.files = dt.files;
+
+                        label.closest('.add-img-box').remove();
+                    }
+                });
+
+                function displayImage(event, imgElement) {
+                    const selectedFile = event.target.files[0];
+
+                    if (selectedFile) {
+                        const reader = new FileReader();
+
+                        reader.onload = function (e) {
+                            imgElement.src = e.target.result;
+                            imgElement.style.width = '100%';
+                            imgElement.style.height = '100%';
+                            imgElement.style.objectFit = 'cover';
+                            imgElement.style.objectPosition = 'top center';
+                        };
+
+                        if (selectedFile.type.match('image.*')) {
+                            reader.readAsDataURL(selectedFile);
+                        } else {
+                            alert("Please select an image file!");
+                            event.target.value = "";
+                        }
+                    }
+                }
+            });
         }
 
 
         document.addEventListener('DOMContentLoaded', () => {
-            const addAdditionalImagesInput = document.getElementById('add-AdditionalImages');
-            const additionalImagesInput = document.getElementById('AdditionalImages');
-            const additionalImageContainer = document.querySelector('.additional-image');
-
-            addAdditionalImagesInput.addEventListener('change', () => {
-                if (addAdditionalImagesInput.files.length > 0) {
-                    const existingFiles = Array.from(additionalImagesInput.files || []);
-                    const newFiles = Array.from(addAdditionalImagesInput.files);
-                    const allFiles = [...existingFiles, ...newFiles];
-
-                    const dt = new DataTransfer();
-                    allFiles.forEach(file => dt.items.add(file));
-                    additionalImagesInput.files = dt.files;
-
-                    for (const file of newFiles) {
-                        const reader = new FileReader();
-                        reader.onload = (e) => {
-                            if (file.type.match('image.*')) {
-                                const imageBoxDiv = document.createElement('div');
-                                imageBoxDiv.classList.add('add-container', 'add-img-box');
-
-                                const label = document.createElement('label');
-                                label.classList.add('add-label-image');
-                                label.dataset.file = file.name;
-
-                                const img = document.createElement('img');
-                                img.classList.add('hover-img-selected');
-                                img.src = e.target.result;
-                                img.alt = file.name;
-
-                                const removeLink = document.createElement('a');
-                                removeLink.classList.add('remove-img');
-                                removeLink.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
-
-                                label.appendChild(removeLink);
-                                label.appendChild(img);
-                                imageBoxDiv.appendChild(label);
-                                additionalImageContainer.insertBefore(imageBoxDiv, additionalImageContainer.lastChild);
-                            } else {
-                                alert("Please select an image file!");
-                                addAdditionalImagesInput.value = "";
-                            }
-                        };
-                        reader.readAsDataURL(file);
-                    }
-
-                    addAdditionalImagesInput.value = '';
-                }
-            });
-
-            additionalImageContainer.addEventListener('click', (event) => {
-                if (event.target.classList.contains('fa-trash-can')) {
-                    const label = event.target.closest('.add-label-image');
-                    const fileNameToRemove = label.dataset.file;
-
-                    const dt = new DataTransfer();
-                    for (const file of additionalImagesInput.files) {
-                        if (file.name !== fileNameToRemove) {
-                            dt.items.add(file);
-                        }
-                    }
-                    additionalImagesInput.files = dt.files;
-
-                    label.closest('.add-img-box').remove();
-                }
-            });
+            ImageUpload();
         });
-
-
-
-
-
-
-
-
 
         //=================== CATEGORY
 
@@ -1592,7 +1918,7 @@
                         item.style.display = 'none';
                     }
                 });
-                // AddCategory()
+    
 
             });
         });
@@ -1620,28 +1946,36 @@
 
             listItemsCat.forEach(item => {
                 let name = item.querySelector('.cat-name').textContent;
-                let id = parseInt(item.getAttribute('data-id'), 10); // Get data-id directly
+                let id = parseInt(item.getAttribute('data-id'), 10); 
 
                 item.addEventListener('mousedown', (event) => {
                     const SelectedCategories = document.querySelector('.selected-category-box');
                     const catList = SelectedCategories.querySelectorAll('.category-box');
 
                     if (item.classList.contains('btn-primary')) {
-                        // Remove category (same logic as before)
-                        // ...
+                        item.classList.remove('btn-primary')
+
+                        catList.forEach(list => {
+                            const listName = list.querySelector('.cat-name-selected').textContent
+                            console.log(listName)
+
+                            if (listName === name) {
+                                list.remove()
+                            }
+                        })
                     } else {
                         item.classList.add('btn-primary');
 
                         SelectedCategories.innerHTML += `
-                                                            <li data-id="${id}" class="category-box">
-                                                                <span class="cat-name-selected">${name}</span>
-                                                                <a data-id="${id}" class="cat-remove">
-                                                                    <i class="fa-solid fa-xmark"></i>
-                                                                    <input value="${name}" type="text" hidden>
-                                                                </a>
-                                                            </li>
-                                                        `;
-                        RemoveCategory(); // Update event listeners
+                                                                                                    <li data-id="${id}" class="category-box">
+                                                                                                        <span class="cat-name-selected">${name}</span>
+                                                                                                        <a data-id="${id}" class="cat-remove">
+                                                                                                            <i class="fa-solid fa-xmark"></i>
+                                                                                                            <input value="${name}" type="text" hidden>
+                                                                                                        </a>
+                                                                                                    </li>
+                                                                                                `;
+                        RemoveCategory();
                     }
                 });
             });
@@ -1660,7 +1994,6 @@
             catList.forEach(list => {
                 const delBtn = list.querySelector('.cat-remove')
                 const catName = list.querySelector('.cat-name-selected').textContent
-                // console.log(delBtn)
                 delBtn.addEventListener('click', () => {
                     list.remove()
 
@@ -1717,7 +2050,6 @@
                         item.style.display = 'none';
                     }
                 });
-                // AddCategory()
 
             });
         });
@@ -1773,14 +2105,14 @@
 
                         SelectedTag.innerHTML +=
                             `
-                                                                                    <li data-id="${id}" class="tag-box">
-                                                                                       <span class="tag-name">${name}</span>
-                                                                                       <a data-id="${name}" class="tag-remove">
-                                                                                          <i class="fa-solid fa-xmark"></i>
-                                                                                          <input asp-for="Tags.Name" value="${name}" type="text" hidden>
-                                                                                       </a>
-                                                                                    </li>
-                                                                                    `
+                                                                                                                            <li data-id="${id}" class="tag-box">
+                                                                                                                               <span class="tag-name">${name}</span>
+                                                                                                                               <a data-id="${name}" class="tag-remove">
+                                                                                                                                  <i class="fa-solid fa-xmark"></i>
+                                                                                                                                  <input asp-for="Tags.Name" value="${name}" type="text" hidden>
+                                                                                                                               </a>
+                                                                                                                            </li>
+                                                                                                                            `
                         RemoveTag()
                     }
                 })
@@ -1799,7 +2131,6 @@
             tagList.forEach(list => {
                 const delBtn = list.querySelector('.tag-remove')
                 const tagName = list.querySelector('.tag-name').textContent
-                // console.log(delBtn)
                 delBtn.addEventListener('click', () => {
                     list.remove()
 
@@ -1830,58 +2161,110 @@
 
 
 
-        // Submit Form
-        // Submit Form
-        const form = document.getElementById('Form');
 
-        form.addEventListener('submit', (event) => {
-            event.preventDefault();
 
-            // =========== Tag Submission ===========
 
-            const selectedTagBox = document.querySelector('.selected-tag-box');
-            const tagBoxes = selectedTagBox.querySelectorAll('.tag-box');
 
-            let selectedTagIds = [];
-            tagBoxes.forEach(tagBox => {
-                const id = parseInt(tagBox.getAttribute('data-id'), 10);
-                selectedTagIds.push(id);
-            });
 
-            selectedTagIds.forEach((tagId, index) => {
-                createHiddenInput('SelectedTagIds', index, tagId);
-            });
 
-            // =========== Category Submission ===========
 
-            const selectedCategoryBox = document.querySelector('.selected-category-box');
-            const categoryBoxes = selectedCategoryBox.querySelectorAll('.category-box');
 
-            let selectedCategoryIds = [];
-            categoryBoxes.forEach(categoryBox => {
-                if (categoryBox && categoryBox.getAttribute('data-id')) { // Check if categoryBox and data-id exist
-                    const id = parseInt(categoryBox.getAttribute('data-id'), 10);
-                    selectedCategoryIds.push(id);
-                } else {
-                    console.error("Error: Category box or data-id is missing.");
+
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('Form');
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+
+                // Tag Submission
+                const selectedTagBox = document.querySelector('.selected-tag-box');
+                const tagBoxes = selectedTagBox.querySelectorAll('.tag-box');
+                let selectedTagIds = Array.from(tagBoxes).map(tagBox => parseInt(tagBox.getAttribute('data-id'), 10));
+                selectedTagIds.forEach((tagId, index) => {
+                    formData.append(`SelectedTagIds[${index}]`, tagId);
+                });
+
+                // Category Submission
+                const selectedCategoryBox = document.querySelector('.selected-category-box');
+                const categoryBoxes = selectedCategoryBox.querySelectorAll('.category-box');
+                let selectedCategoryIds = Array.from(categoryBoxes).map(categoryBox => parseInt(categoryBox.getAttribute('data-id'), 10));
+                selectedCategoryIds.forEach((categoryId, index) => {
+                    formData.append(`SelectedCategoryIds[${index}]`, categoryId);
+                });
+
+                // Color & Size Submission
+                const colorSizeData = [];
+                const colorImgBodies = document.querySelectorAll('.color-img-body');
+                colorImgBodies.forEach((colorImgBody, colorIndex) => {
+                    const hexCode = colorImgBody.getAttribute('data-id');
+                    const colorName = colorImgBody.querySelector('.color-list-name').innerText;
+
+                    const sizes = [];
+                    const sizeRows = document.querySelectorAll(`.prod-size-list-container tr[data-hexcode="${hexCode}"]`);
+                    sizeRows.forEach((row, sizeIndex) => {
+                        const size = row.querySelector('.size-input').value;
+                        const count = row.querySelector('.count-input').value;
+                        const weight = row.querySelector('.weight-input').value;
+                        const dimensions = row.querySelector('.dimensions-input').value;
+                        sizes.push({ size, count, weight, dimensions });
+
+                        formData.append(`ColorSizeVM[${colorIndex}].Sizes[${sizeIndex}].size`, size);
+                        formData.append(`ColorSizeVM[${colorIndex}].Sizes[${sizeIndex}].count`, count);
+                        formData.append(`ColorSizeVM[${colorIndex}].Sizes[${sizeIndex}].weight`, weight);
+                        formData.append(`ColorSizeVM[${colorIndex}].Sizes[${sizeIndex}].dimensions`, dimensions);
+                    });
+
+                    const mainImage = colorImgBody.querySelector('.mainImage').files[0];
+                    const hoverImage = colorImgBody.querySelector('.hoverImage').files[0];
+                    const additionalImages = Array.from(colorImgBody.querySelectorAll('.AdditionalImages')).map(input => Array.from(input.files)).flat();
+
+                    const images = {
+                        mainImage: mainImage ? mainImage.name : null,
+                        hoverImage: hoverImage ? hoverImage.name : null,
+                        additionalImages: additionalImages.map(file => file.name)
+                    };
+
+                    colorSizeData.push({ colorName, hexCode, sizes, images });
+
+                    formData.append(`ColorSizeVM[${colorIndex}].HexCode`, hexCode);
+                    formData.append(`ColorSizeVM[${colorIndex}].ColorName`, colorName);
+
+                    if (mainImage) formData.append(`ColorSizeVM[${colorIndex}].Images.MainImage`, mainImage);
+                    if (hoverImage) formData.append(`ColorSizeVM[${colorIndex}].Images.HoverImage`, hoverImage);
+                    additionalImages.forEach((file, fileIndex) => {
+                        formData.append(`ColorSizeVM[${colorIndex}].Images.AdditionalImages`, file);
+                    });
+                });
+
+                formData.append('ColorSizeData', JSON.stringify(colorSizeData));
+
+                try {
+                    const response = await fetch('Create', {
+                        method: form.method,
+                        body: formData,
+                    });
+
+                    if (response.redirected) {
+                        window.location.href = response.url;
+                    } else {
+                        form.submit();
+                    }
+                } catch (error) {
+                    console.error('Error:', error);
                 }
-            });
 
-            selectedCategoryIds.forEach((categoryId, index) => {
-                createHiddenInput('SelectedCategoryIds', index, categoryId);
-            });
 
-            form.submit();
+
+            });
         });
 
-        function createHiddenInput(name, index, value) {
-            let hiddenInput = document.createElement('input');
-            hiddenInput.setAttribute('type', 'hidden');
-            hiddenInput.setAttribute('name', `${name}[${index}]`);
-            hiddenInput.setAttribute('value', value);
 
-            form.appendChild(hiddenInput);
-        }
 
 
 
@@ -1926,6 +2309,7 @@
 
 
         // Color
+
         const colorSelect = document.getElementById("color");
         const hexKod = document.querySelector(".hexKod");
 
@@ -1989,58 +2373,81 @@
 
         const ColorBox = document.querySelector('.color-list-box')
 
+        const inputValues = {};
 
         function AddSize() {
-            const sizeContainerBox = document.querySelector('.prod-size-list-container')
-            const ColorBoxList = document.querySelectorAll('.color-list-box tr')
+            const sizeContainerBox = document.querySelector('.prod-size-list-container');
+            const ColorBoxList = document.querySelectorAll('.color-list-box .color-img-body');
 
-
-            ColorBoxList.forEach(colList => {
-                const addSize = colList.querySelector('.add-size-btn')
-
-                let hexCode = colList.getAttribute('data-id')
-                let ColorName = colList.querySelector('.color-list-name').innerText
-
-
+            ColorBoxList.forEach((colList, colorIndex) => {
+                const addSize = colList.querySelector('.add-size-btn');
+                const hexCode = colList.getAttribute('data-id');
+                const ColorName = colList.querySelector('.color-list-name').innerText;
 
                 addSize.addEventListener('click', () => {
-                    sizeContainerBox.innerHTML +=
-                        `
-                                                            <tr>
-                                                                <th></th>
-                                                                <td>
-                                                                    <div class="color-list-cricle" style="background: ${hexCode};">
-                                                                    </div>
-                                                                </td>
-                                                                <td class="prod-col">${ColorName}</td>
-                                                                <td class="prod-size">
-                                                                    <input type="texxt" class="size-input form-control"
-                                                                        id="validationCustom" placeholder="Add Size..." required="">
-                                                                </td>
-                                                                <td class="prod-count">
-                                                                    <input type="number" class="form-control" id="validationCustom"
-                                                                        placeholder="Add Count..." required="">
-                                                                </td>
-                                                                <td class="prod-count">
-                                                                    <input  type="number" class="form-control" id="validationCustom"
-                                                                        placeholder="Add Weight (kq)...">
-                                                                </td>
-                                                                <td class="prod-count">
-                                                                    <input  type="text" class="form-control" id="validationCustom"
-                                                                        placeholder="Add Dimensions...">
-                                                                </td>
-                                                                <td class="prod-del">
-                                                                    <div class="del-btn btn">
-                                                                        <i class="fa-regular fa-trash-can"></i>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
+                    const newTr = document.createElement("tr");
+                    newTr.dataset.hexcode = hexCode;
+                    const trIndex = sizeContainerBox.children.length;
 
-                                        `
-                })
+                    newTr.innerHTML = `
+                                                        <th></th>
+                                                        <td>
+                                                            <div class="color-list-cricle" style="background: ${hexCode};"></div>
+                                                        </td>
+                                                        <td class="prod-col">${ColorName}</td>
+                                                        <td class="prod-size">
+                                                            <input type="text" class="size-input form-control" placeholder="Add Size..." >
+                                                        </td>
+                                                        <td class="prod-count">
+                                                             <input type="number" class="form-control count-input" id="validationCustom"
+                                                                    placeholder="Add Count..." >
+                                                         </td>
+                                                                 <td class="prod-weight">
+                                                             <input type="number" class="form-control weight-input" id="validationCustom"
+                                                                    placeholder="Add Weight (kq)...">
+                                                         </td>
+                                                         <td class="prod-dimensions">
+                                                             <input type="text" class="form-control dimensions-input" id="validationCustom"
+                                                                    placeholder="Add Dimensions...">
+                                                         </td>
+                                                        <td class="prod-del">
+                                                            <div class="del-btn btn">
+                                                                <i class="fa-regular fa-trash-can"></i>
+                                                            </div>
+                                                        </td>
+                                                    `;
+                    newTr.querySelectorAll('input').forEach(input => {
+                        input.addEventListener('input', function () {
+                            if (this.type === 'number' && this.value < 1) {
+                                this.value = 1;
+                            }
 
-            })
+
+                            inputValues[inputKey] = {
+                                ...inputValues[inputKey],
+                                [this.className]: this.value
+                            };
+                        });
+                    });
+                    const inputKey = `${colorIndex}-${trIndex}`;
+                    if (inputValues[inputKey]) {
+                        newTr.querySelector('.size-input').value = inputValues[inputKey].size || "";
+                    }
+
+                    newTr.querySelectorAll('input').forEach(input => {
+                        input.addEventListener('input', function () {
+                            inputValues[inputKey] = {
+                                ...inputValues[inputKey],
+                                [this.className]: this.value
+                            };
+                        });
+                    });
+
+                    sizeContainerBox.appendChild(newTr);
+                });
+            });
         }
+
         AddSize();
 
 
@@ -2064,80 +2471,127 @@
 
 
 
-        colorList.forEach(list => {
-            list.addEventListener('click', (event) => {
-                let colorExsist = true;
-
-                if (!event.target.matches('input')) {
-                    const name = list.querySelector('span');
-                    let hexCode = list.getAttribute('data-hexcode');
 
 
 
 
-                    const SelectedColors = document.querySelectorAll('.color-list-box tr')
-
-                    SelectedColors.forEach(cols => {
-
-                        let hcod = cols.dataset.id;
-                        let cName = cols.querySelector('.color-list-name').innerText
 
 
+        document.addEventListener('DOMContentLoaded', () => {
+            const colorList = document.querySelectorAll('.list-c');
 
-                        if (hcod === hexCode.value || name.innerText === cName) {
-                            alert(`This color is already selected`)
-                            colorExsist = false;
-                            return;
-                        }
+            colorList.forEach(list => {
+                list.addEventListener('click', (event) => {
+                    let colorExists = true;
 
-                    });
+                    if (!event.target.matches('input')) {
+                        const name = list.querySelector('.col-nam-c');
+                        let hexCode = list.getAttribute('data-hexcode');
 
-                    // const colorBoxes = document.querySelectorAll('.color-list-box .num');
-                    // const lastColorBox = colorBoxes[colorBoxes.length - 1];
+                        const selectedColors = document.querySelectorAll('.color-list-box .color-img-body');
+                        console.log(selectedColors);
 
-                    // let orderNum = parseInt(lastColorBox.innerText)
-                    // let order = orderNum + 1
+                        selectedColors.forEach(cols => {
+                            let hcod = cols.getAttribute('data-id');
+                            let cName = cols.querySelector('.color-list-name').innerText;
 
-                    // console.log(colorBoxes)
+                            if (hcod === hexCode || name.innerText === cName) {
+                                alert(`This color is already selected`);
+                                colorExists = false;
+                                return;
+                            }
+                        });
 
-                    if (colorExsist == true) {
+                        const colorBox = document.querySelector('.color-list-box');
 
-                        ColorBox.innerHTML +=
-                            `
-                                                    <tr  class="color-box" data-id="${hexCode}">
-                                                        <td></td>
-                                                        <td>
+                        if (colorExists) {
+                            colorBox.innerHTML += `
+                                                <div data-id="${hexCode}" class="color-img-body">
+                                                    <div data-id="${hexCode}" class="color-box">
+                                                        <a class="col-body">
                                                             <div class="color-list-cricle" style="background: ${hexCode};">
                                                                 <i class="bi bi-x close-b" style="font-size: 25px;"></i>
                                                             </div>
-                                                        </td>
-                                                        <td class="color-list-name">${name.innerText}</td>
-                                                        <td>${hexCode}</td>
-                                                        <td>
+                                                        </a>
+                                                        <a class="color-list-name col-body">${name.innerText}</a>
+                                                        <a class="col-body">${hexCode}</a>
+                                                        <a class="col-body">
+                                                            <div class="add-upload-btn">
+                                                                <i class="bi bi-cloud-arrow-up"></i>
+                                                            </div>
+                                                        </a>
+                                                        <a class="col-body">
                                                             <div class="add-size-btn">
                                                                 <i class="bi bi-plus-circle"></i>
                                                             </div>
-                                                        </td>
-                                                    </tr>
-                                                               `;
-                        SizeDelete()
-                        AddSize();
-                        ColorRemove();
-                        list.style.background = "#886CC0";
-                        list.style.color = "#ffffff";
+                                                        </a>
+                                                    </div>
+                                                    <div class="sec-img">
+                                                        <div class="card-body im-conta">
+                                                            <div class="row" style="flex-direction: column;">
+                                                                <div class="">
+                                                                    <div class="row im-container">
+                                                                        <div class="col-xl-6 img-container">
+                                                                            <span>Main Image <span class="text-danger">*</span></span>
+                                                                            <label class="label-image">
+                                                                                <input type="file" class="mainImage" hidden>
+                                                                                <img class="main-img selected-img" src="~/admin/icons/plus.svg" alt="">
+                                                                            </label>
+                                                                            <span class="text-danger"></span>
+                                                                        </div>
+                                                                        <div class="col-xl-6 img-container">
+                                                                            <span>Hover Image <span class="text-danger">*</span></span>
+                                                                            <label class="label-image">
+                                                                                <input type="file" class="hoverImage" hidden>
+                                                                                <img class="hover-img selected-img" src="~/admin/icons/plus.svg" alt="">
+                                                                            </label>
+                                                                            <span class="text-danger"></span>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="add-files">
+                                                                    <div>
+                                                                        <span>Additional Image <span class="text-danger">*</span></span>
+                                                                    </div>
+                                                                    <div class="im-container">
+                                                                        <div class="col-xl-12 additional-image">
+                                                                            <div class="add-container">
+                                                                                <label class="add-label-image">
+                                                                                    <input type="file" class="add-AdditionalImages" multiple hidden>
+                                                                                    <img class="hover-img-selected" src="~/admin/icons/plus.svg" alt="">
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <input type="file" class="AdditionalImages" multiple hidden>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            `;
+                            SizeDelete();
+                            AddSize();
+                            ColorRemove();
+                            imageToggle();
+                            checkImage();
+                            ImageUpload();
+
+                            list.style.background = "#886CC0";
+                            list.style.color = "#ffffff";
+                        }
                     }
-
-
-
-
-
-                }
+                });
             });
         });
 
 
+
+
+
+
         function ColorRemove() {
-            const SelectedColors = document.querySelectorAll('.color-list-box tr')
+            const SelectedColors = document.querySelectorAll('.color-list-box .color-img-body')
             let nam = "";
             SelectedColors.forEach(color => {
                 let colorBox = color.querySelector('.color-list-cricle')
@@ -2190,91 +2644,121 @@
 
 
         //=================== COLOR CREATE
-        const colorCreateBtn = document.querySelector('.color-crt-btn')
+        document.addEventListener('DOMContentLoaded', () => {
+            const colorCreateBtn = document.querySelector('.color-crt-btn');
 
+            colorCreateBtn.addEventListener('click', () => {
+                const colorNameInput = document.querySelector('.color-nam');
+                const hexCodeInput = document.querySelector(".c-inp");
 
+                let colorExists = true;
 
-        colorCreateBtn.addEventListener('click', () => {
-            const ColorNameIn = document.querySelector('.color-nam')
-
-            const hexCod = document.querySelector(".c-inp");
-
-
-            let colorExsist = true;
-
-
-            if (ColorNameIn.value === "") {
-                alert("Please enter color name");
-                colorExsist = false;
-            }
-
-
-
-            const colorList = document.querySelectorAll('.list-c');
-
-            colorList.forEach(list => {
-                let ListhexCode = list.getAttribute('data-hexcode');
-                let ListColName = list.querySelector('span').innerText;
-
-                if (hexCod.value === ListhexCode || ColorNameIn.value === ListColName) {
-                    alert(`You cannot create the existing color! If you want to choose this color, you can choose from the "${ListhexCode}-${ListColName}" color options...`);
-                    colorExsist = false;
+                if (colorNameInput.value.trim() === "") {
+                    alert("Please enter color name");
+                    colorExists = false;
                 }
-            });
 
+                const colorList = document.querySelectorAll('.list-c');
 
+                colorList.forEach(list => {
+                    let listHexCode = list.getAttribute('data-hexcode');
+                    let listColorName = list.querySelector('span').innerText.trim();
 
+                    if (hexCodeInput.value === listHexCode || colorNameInput.value.trim() === listColorName) {
+                        alert(`You cannot create the existing color! If you want to choose this color, you can choose from the "${listHexCode}-${listColorName}" color options...`);
+                        colorExists = false;
+                    }
+                });
 
-            const SelectedCols = document.querySelectorAll('.color-list-table .color-box')
-            console.log(SelectedCols)
+                const selectedColors = document.querySelectorAll('.color-list-box .color-img-body');
 
-            SelectedCols.forEach(cols => {
+                selectedColors.forEach(cols => {
+                    let hcod = cols.getAttribute('data-id');
+                    let cName = cols.querySelector('.color-list-name').innerText.trim();
 
-                let hcod = cols.dataset.id;
-                let cName = cols.querySelector('.color-list-name').innerText
-                console.log(cName)
+                    if (hcod === hexCodeInput.value || colorNameInput.value.trim() === cName) {
+                        alert(`This color is already selected`);
+                        colorExists = false;
+                    }
+                });
 
-                if (hcod === hexCod.value || ColorNameIn.value === cName) {
-                    alert(`This color is already selected`)
-                    colorExsist = false;
-                }
-                console.log(colorExsist)
+                if (colorExists) {
+                    const colorsBox = document.querySelector('.color-list-box');
 
-            });
-
-
-            if (colorExsist == true) {
-                const ColorsBox = document.querySelector('.color-list-box')
-
-                console.log(ColorsBox)
-
-                ColorsBox.innerHTML +=
-                    `
-                                                    <tr  class="color-box" data-id="${hexCod.value}">
-                                                        <td></td>
-
-                                            <td>
-                                                <div class="color-list-cricle" style="background: ${hexCod.value};">
-                                                    <i class="bi bi-x close-b" style="font-size: 25px;"></i>
+                    colorsBox.innerHTML +=
+                        `
+                                        <div data-id="${hexCodeInput.value}" class="color-img-body">
+                                            <div data-id="${hexCodeInput.value}" class="color-box">
+                                                <a class="col-body">
+                                                    <div class="color-list-cricle" style="background: ${hexCodeInput.value};">
+                                                        <i class="bi bi-x close-b" style="font-size: 25px;"></i>
+                                                    </div>
+                                                </a>
+                                                <a class="color-list-name col-body">${colorNameInput.value.trim()}</a>
+                                                <a class="col-body">${hexCodeInput.value}</a>
+                                                <a class="col-body">
+                                                    <div class="add-upload-btn">
+                                                        <i class="bi bi-cloud-arrow-up"></i>
+                                                    </div>
+                                                </a>
+                                                <a class="col-body">
+                                                    <div class="add-size-btn">
+                                                        <i class="bi bi-plus-circle"></i>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                            <div class="sec-img">
+                                                <div class="card-body im-conta">
+                                                    <div class="row" style="flex-direction: column;">
+                                                        <div class="">
+                                                            <div class="row im-container">
+                                                                <div class="col-xl-6 img-container">
+                                                                    <span>Main Image <span class="text-danger">*</span></span>
+                                                                    <label class="label-image">
+                                                                        <input type="file" class="mainImage" hidden>
+                                                                        <img class="main-img selected-img" src="~/admin/icons/plus.svg" alt="">
+                                                                    </label>
+                                                                    <span class="text-danger"></span>
+                                                                </div>
+                                                                <div class="col-xl-6 img-container">
+                                                                    <span>Hover Image <span class="text-danger">*</span></span>
+                                                                    <label class="label-image">
+                                                                        <input type="file" class="hoverImage" hidden>
+                                                                        <img class="hover-img selected-img" src="~/admin/icons/plus.svg" alt="">
+                                                                    </label>
+                                                                    <span class="text-danger"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="add-files">
+                                                            <div>
+                                                                <span>Additional Image <span class="text-danger">*</span></span>
+                                                            </div>
+                                                            <div class="im-container">
+                                                                <div class="col-xl-12 additional-image">
+                                                                    <div class="add-container">
+                                                                        <label class="add-label-image">
+                                                                            <input type="file" class="add-AdditionalImages" multiple hidden>
+                                                                            <img class="hover-img-selected" src="~/admin/icons/plus.svg" alt="">
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                                <input type="file" class="AdditionalImages" multiple hidden>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </td>
-                                            <td class="color-list-name">${ColorNameIn.value}</td>
-                                            <td>${hexCod.value}</td>
-                                            <td>
-                                                <div class="add-size-btn">
-                                                    <i class="bi bi-plus-circle"></i>
-                                                </div>
-                                            </td>
-                                        </tr>
+                                            </div>
+                                        </div>
                                         `;
-                AddSize();
-                ColorRemove();
-            }
-
-        })
-
-
-
+                    AddSize();
+                    ColorRemove();
+                    imageToggle();
+                    checkImage();
+                    ImageUpload();
+                }
+            });
+        });
 
 
 
@@ -2319,54 +2803,80 @@
             const price = parseFloat(priceInput.value) || 0;
             let discountPrice = parseFloat(discountInput.value) || 0;
 
+            if (!isNaN(price) && !isNaN(discountPrice)) {
+                discountPrice = Math.max(0, Math.min(price, discountPrice));
+                let offer = ((price - discountPrice) / price) * 100;
+                offerInput.value = offer;
 
-            discountPrice = Math.max(0, Math.min(price, discountPrice));
-
-            let offer = ((price - discountPrice) / price) * 100;
-            offerInput.value = Math.max(0, Math.min(100, offer));
-            discountInput.value = discountPrice.toFixed(1);
+                discountInput.value = discountPrice === 0 ? "NaN" : discountPrice;
+            } else {
+                discountInput.value = "NaN";
+                offerInput.value = "NaN";
+            }
         }
 
         function calculateOffer() {
-
             let offer = parseFloat(offerInput.value) || 0;
             const price = parseFloat(priceInput.value) || 0;
 
-            if (price != 0) {
-
-                offer = Math.max(0, Math.min(100, offer));
-                offerInput.value = offer;
-
-                let discountPrice = price * (1 - (offer / 100));
-                discountInput.value = discountPrice.toFixed(1);
+            if (!isNaN(price) && !isNaN(offer)) {
+                if (price > 0) {
+                    offer = Math.max(0, Math.min(100, offer));
+                    offerInput.value = offer;
+                    let discountPrice = price * (1 - (offer / 100));
+                    discountInput.value = discountPrice;
+                } else {
+                    offerInput.value = "0.0";
+                    discountInput.value = "0.0";
+                }
             } else {
-                offerInput.value = 0
-                discountInput.value = 0
+                offerInput.value = "NaN";
+                discountInput.value = "NaN";
             }
-
         }
-
 
         function calculatePrice() {
             let offer = parseFloat(offerInput.value) || 0;
             let discountPrice = parseFloat(discountInput.value) || 0;
 
-            if (discountPrice >= 0) {
-                price = discountPrice / (1 - (offer / 100));
-
+            if (!isNaN(offer) && !isNaN(discountPrice) && offer >= 0 && offer <= 100) {
+                const price = discountPrice / (1 - (offer / 100));
+                priceInput.value = price;
             }
         }
 
-
         discountInput.addEventListener('input', calculateDiscount);
         offerInput.addEventListener('input', calculateOffer);
-        // Price Calculator
+
+        priceInput.addEventListener('input', () => {
+            const price = parseFloat(priceInput.value) || 0;
+            if (price === 0) {
+                discountInput.value = "NaN";
+                offerInput.value = "NaN";
+            } else {
+                calculateDiscount();
+            }
+        });
+
+        discountInput.addEventListener('keydown', (event) => {
+            if (event.key === 'Backspace' && discountInput.value.length === 1) {
+                discountInput.value = "NaN";
+                offerInput.value = "NaN";
+            }
+        });
+
+
+
+
+
 
 
 
 
 
     </script>
+
+
 
 
 

@@ -1,0 +1,399 @@
+﻿@model ProductDetailVM
+
+@section style {
+    <style>
+        .mainImage {
+            width: 100%;
+            height: 550px;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .info-container {
+            width: 60%;
+        }
+
+        .image-container {
+            width: 40%;
+            padding: 2rem;
+        }
+
+
+
+
+        .table-max th,
+        .table-max td {
+            padding: 1rem 0.5rem;
+        }
+
+        .table-max th {
+            width: 30%;
+        }
+
+        .col {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .color {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+        }
+        .im-cart {
+            position: relative;
+        }
+
+        .im-title {
+            position: absolute;
+            top: -25px;
+            left: 14px;
+        }
+    </style>
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Product</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">Detail</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+
+
+
+
+          
+            <div class="col-lg-12 w-100">
+
+
+                <div class="card">
+
+                    <div class="card-header card">
+                        <h4 class="card-title">Main Informations</h4>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <div class="row">
+
+                                <div class="image-container">
+
+                                    <div class=" row">
+                                        <img class="mainImage" src="~/cilent/assets/images/products/@Model.MainImageURL" alt="">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="info-container">
+
+
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <div class="table-responsive">
+                                                <table class="table table-hover table-max main">
+                                                    <tbody>
+                                                        <tr>
+                                                            <th class="text-primary">Name :</th>
+                                                            <td>@Model.Product!.Name</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">Model :</th>
+                                                            <td>@Model.Product.Model</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">Sell Price :</th>
+                                                            <td>@Model.Product.SellPrice</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">Discount Price :</th>
+                                                            <td>@Model.Product.DiscountPrice</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">Offer :</th>
+                                                            <td>@Model.Offer</td>
+
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">Color :</th>
+                                                            <td> @Model.Color </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">Color HexCode :</th>
+                                                            <td class="col"><span class="color" style="background: @(Model.HexCode);"></span> @Model.HexCode </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th class="text-primary">Created By :</th>
+                                                            <td>
+                                                                @Model.Product.CreatedBy <span style="padding-left: 30px;">
+                                                                    @Model.Product.CreatedDate
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">Modified By :</th>
+                                                            <td>
+                                                                @Model.Product.ModifiedBy<span style="padding-left: 30px;">
+                                                                    @Model.Product.ModifiedDate
+                                                                </span>
+                                                            </td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <th class="text-primary">Status :</th>
+                                                            @if (!Model.Product.IsDeleted)
+                                                            {
+                                                                <td>
+                                                                    <span class="badge light badge-success">Active</span>
+                                                                </td>
+                                                            }
+                                                            else
+                                                            {
+                                                                <td><span class="badge light badge-danger">Deactive</span> </td>
+                                                            }
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">In Stock :</th>
+                                                            @if (Model.InStock)
+                                                            {
+                                                                <td>
+                                                                    <span class="badge light badge-success">Available</span>
+                                                                </td>
+                                                            }
+                                                            else
+                                                            {
+                                                                <td><span class="badge light badge-danger">Not Available</span> </td>
+                                                            }
+                                                        </tr>
+
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="col-lg-12">
+                <div class="row">
+
+
+                    <div class="col-lg-7">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title text-center d-flex justify-content-center w-100">
+                                    Other Informations
+                                </h4>
+                            </div>
+
+                            <div class="card-body">
+
+
+                                <table class="table table-hover table-max ">
+                                    <tbody>
+                                        <tr>
+                                            <th class="text-primary">View Count :</th>
+                                            <td>@Model.Product.ClicketCount</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-primary">Number Added to Cart :</th>
+                                            <td>January 22</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-primary">Number Added to Wish List :</th>
+                                            <td>January 22</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-primary">Total Sales Count :</th>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-primary">Categories :</th>
+                                            <td>
+                                                @if (Model.Categories != null && Model.Categories.Any())
+                                                {
+                                                    for (int i = 0; i < Model.Categories.Count; i++)
+                                                    {
+                                                        <span>@Model.Categories[i]@(i < Model.Categories.Count - 1 ? ", " : "")</span>
+                                                    }
+                                                }
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-primary">Tags :</th>
+                                            <td>
+                                                @if (Model.Tags != null && Model.Tags.Any())
+                                                {
+                                                    for (int i = 0; i < Model.Tags.Count; i++)
+                                                    {
+                                                        <span>@Model.Tags[i]@(i < Model.Tags.Count - 1 ? ", " : "")</span>
+                                                    }
+                                                }
+
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-primary">Total Sales Count :</th>
+                                            <td>500</td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-primary">Short Description :</th>
+                                            <td>
+                                                @Model.Product.ShortDescription
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th class="text-primary">Detailed Description :</th>
+                                            <td style="font-size: 12px;">
+                                                @Model.Product.Description
+                                            </td>
+                                        </tr>
+
+
+
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-5">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title text-center d-flex justify-content-center w-100">
+                                    Add Measurements
+                                </h4>
+                            </div>
+
+                            <div class="card-body">
+
+                                <table class="table  table-striped verticle-middle ">
+                                    <thead>
+                                        <tr>
+                                            <th class="text-primary" scope="col">Size</th>
+                                            <th class="text-primary" scope="col">Count</th>
+                                            <th class="text-primary" scope="col">Weight</th>
+                                            <th class="text-primary" scope="col">Dimensions</th>
+                                            <th class="text-primary" scope="col">Sales Count</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        @foreach (var info in Model.Informations)
+                                        {
+
+                                            <tr>
+                                                <td>@info.Size.Name</td>
+                                                <td>@info.Count</td>
+                                                <td>@info.Weight</td>
+                                                <td>@info.Dimensions</td>
+                                                <td>50</td>
+                                            </tr>
+                                        }
+
+
+                                    </tbody>
+                                </table>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title text-center w-100">Product Images</h4>
+                    </div>
+                    <div class="card-body pb-1">
+                        <div id="lightgallery" class="row">
+
+                            @if (Model.MainImageURL != null)
+                            {
+
+                                <a href="~/cilent/assets/images/products/@Model.MainImageURL" data-exthumbimage="~/cilent/assets/images/products/@Model.MainImageURL"
+                                   data-src="~/cilent/assets/images/products/@Model.MainImageURL" class="col-lg-3 col-md-6 mb-4 im-cart">
+                                    <span class="im-title">Main Image</span>
+                                    <img src="~/cilent/assets/images/products/@Model.MainImageURL" alt=""
+                                         style="width:100%; height: 350px; object-fit: cover;object-position: top center; ">
+                                </a>
+                            }
+
+                            @if (Model.HoverImageURL != null)
+                            {
+
+                                <a href="~/cilent/assets/images/products/@Model.HoverImageURL" data-exthumbimage="~/cilent/assets/images/products/@Model.HoverImageURL"
+                                   data-src="~/cilent/assets/images/products/@Model.HoverImageURL" class="col-lg-3 col-md-6 mb-4 im-cart">
+                                    <span class="im-title">Hover Image</span>
+                                    <img src="~/cilent/assets/images/products/@Model.HoverImageURL" alt=""
+                                         style="width:100%; height: 350px; object-fit: cover;object-position: top center; ">
+                                </a>
+                            }
+
+                            @if (Model.AdditionalImagesURL != null)
+                            {
+                                @foreach (var image in Model.AdditionalImagesURL)
+                                {
+                                    <a href="~/cilent/assets/images/products/@image" data-exthumbimage="~/cilent/assets/images/products/@image"
+                                       data-src="~/cilent/assets/images/products/@image" class="col-lg-3 col-md-6 mb-4">
+                                        <span> </span>
+                                        <img src="~/cilent/assets/images/products/@image" alt=""
+                                             style="width:100%; height: 350px; object-fit: cover;object-position: top center; ">
+                                    </a>
+                                }
+                            }
+
+                       
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+</div>

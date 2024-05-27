@@ -1,11 +1,12 @@
 ﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Vanguard.Models;
 using Vanguard.Models.BaseEntitys;
 
 namespace Vanguard.Data;
 
-public class VanguardContext : DbContext
+public class VanguardContext : IdentityDbContext<AppUser>
 {
     private readonly IHttpContextAccessor? _accessor;
 
@@ -16,20 +17,23 @@ public class VanguardContext : DbContext
 
     public DbSet<Product> Products { get; set; } = null!;
     public DbSet<Size> Sizes { get; set; }
-    public DbSet<ProductSize> ProductSizes { get; set; }
     public DbSet<Image> Images { get; set; }
-    public DbSet<ProductColor> ProductColor { get; set; }
     public DbSet<Color> Colors { get; set; }
-    public DbSet<Category> Categories{ get; set; }
+    public DbSet<Category> Categories { get; set; }
     public DbSet<ProductCategory> ProductCategory { get; set; }
     public DbSet<ProductTag> ProductTag { get; set; }
     public DbSet<Tag> Tags { get; set; }
+    public DbSet<Information> Informations { get; set; }
+    public DbSet<ProductColor> ProductColor { get; set; }
+
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
+        modelBuilder.Entity<IdentityUser>().HasKey(u => u.Id);
         modelBuilder.ApplyConfigurationsFromAssembly(typeof(VanguardContext).Assembly);
     }
+
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {

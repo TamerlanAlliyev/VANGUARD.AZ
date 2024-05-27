@@ -44,10 +44,13 @@
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="~/cilent/assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="~/cilent/assets/css/index.css">
-    <link rel="stylesheet" href="~/cilent/assets/css/home.css">
+    @await RenderSectionAsync("style", false)
     <!-- Favicon -->
     <link rel="icon" href="~/cilent/assets/icons/small-logo.svg" sizes="192x192" type="image/x-icon" />
     <title>Vanguard</title>
+    <script>
+        sendPaginationClickEventListeners();
+    </script>
 </head>
 <body>
 
@@ -66,8 +69,8 @@
 
                 <nav class="pages-pc">
                     <ul>
-                        <li><a href="~/index.html">Home</a></li>
-                        <li><a href="~/shop.html">Shop</a></li>
+                        <li><a asp-controller="Home" asp-action="Index" >Home</a></li>
+                        <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
                         <li><a href="~/about.html">About</a></li>
                         <li><a href="~/blog.html">Blog</a></li>
                         <li><a href="~/contact.html">Contact</a></li>
@@ -77,7 +80,7 @@
             </div>
 
             <div class="brand-logo">
-                <a href="~/index.html">VANGUARD</a>
+                <a asp-controller="Home" asp-action="Index">VANGUARD</a>
             </div>
 
             <div class="header-icons">
@@ -521,7 +524,6 @@
     <!-- ================================
             HEADER    -    END
     ===================================== -->
-
     @RenderBody()
 
     <!-- ================================
@@ -650,8 +652,7 @@
     <!-- Link Swiper's CSS -->
     <script src="~/cilent/assets/js/swiper-bundle.min.js"></script>
     <script src="~/cilent/assets/js/index.js"></script>
-    <script src="~/cilent/assets/js/home.js"></script>
-
+    @await RenderSectionAsync("script", false)
 </body>
 
 </html>

@@ -38,4 +38,16 @@ public static class ImageFileExtension
         return false;
     }
 
+    public static void DeleteImagesService(string path, string fileName)
+    {
+
+        if (!string.IsNullOrEmpty(fileName))
+        {
+            var oldImagePath = Path.Combine(path, fileName);
+            if (File.Exists(oldImagePath))
+            {
+                File.Delete(oldImagePath);
+            }
+        }
+    }
 }

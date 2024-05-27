@@ -15,6 +15,7 @@ public class ProductConfiguration:BaseEntityConfiguratiion<Product>
         builder.HasKey(p => p.Id);
 
         builder.Property(p => p.Name).HasColumnType("nvarchar").HasMaxLength(150).IsRequired(true);
+        builder.Property(p => p.Model).HasColumnType("nvarchar").HasMaxLength(50).IsRequired(true);
         builder.Property(p=>p.ShortDescription).HasColumnType("nvarchar").HasMaxLength(200).IsRequired(true);
         builder.Property(i => i.Description).HasColumnType("nvarchar").HasMaxLength(450).IsRequired(false);
         builder.Property(p => p.SellPrice).HasColumnType("decimal").HasPrecision(18, 2).IsRequired(true);

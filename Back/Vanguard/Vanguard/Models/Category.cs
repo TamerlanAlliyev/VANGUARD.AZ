@@ -8,5 +8,5 @@ public class Category : BaseAuditable
     public int? ParentCategoryId { get; set; }
     public Category? ParentCategory { get; set; }
     public ICollection<Category>? ChildCategories { get; set; }
-    public List<ProductCategory> ProductCategory { get; set; } = null!;
+    public List<ProductCategory>? ProductCategory { get; set; }
 }

@@ -12,7 +12,7 @@ using Vanguard.Models;
 namespace Vanguard.Areas.Admin.Controllers;
 
 [Area("Admin")]
-public class CategoryController : Controller
+public class CategoryController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;
     readonly ICategoryService _categoryService;

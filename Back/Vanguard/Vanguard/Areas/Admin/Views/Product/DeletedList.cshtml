@@ -1,0 +1,173 @@
+﻿@model List<Product>
+
+@section style {
+    <link href="~/admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Product</a></li>
+                <li class="breadcrumb-item"><a onclick="javascript:void(0)">List</a></li>
+            </ol>
+        </div>
+
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Profile Datatable</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display" style="min-width: 845px">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Name</th>
+                                        <th>Model</th>
+                                        <th>Price</th>
+                                        <th>Discounted</th>
+                                        <th>color</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    @foreach (var product in Model)
+                                    {
+                                        <tr class="product">
+                                            <td><img width="70" height="90" style="object-fit:cover" src="~/cilent/assets/images/products/@(product.Images.Where(p=>!p.IsDeleted).FirstOrDefault(p=>p.IsMain)?.Url)" alt=""></td>
+                                            <td>@product.Name</td>
+                                            <td>@product.Model</td>
+                                            <td>$@product.SellPrice</td>
+                                            <td class="text-danger">@(product.DiscountPrice != null ? "$" + product.DiscountPrice : "")</td>
+                                            <td>@product.ProductColors.Color.Name</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a title="Detail" asp-action="Detail" asp-controller="Product" asp-area="Admin" asp-route-id="@product.Id" class="btn btn-primary shadow btn-xs sharp me-1"><i class="bi bi-eye"></i></a>
+                                                    <a title="Recover" data-id="@product.Id" class="btn btn-success shadow btn-xs sharp me-1 recover"><i class="bi bi-arrow-clockwise"></i></a>
+                                                    <a title="Hard-Delete" data-id="@product.Id" class="btn btn-danger shadow btn-xs sharp preview del-btn"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section script {
+    <!-- Datatable -->
+    <script src="~/admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/admin/js/plugins-init/datatables.init.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        function attachEventListeners(selector, eventType, handler) {
+            const elements = document.querySelectorAll(selector);
+            elements.forEach(element => {
+                element.addEventListener(eventType, handler);
+            });
+        }
+
+        function handleDeleteClick(event) {
+            event.preventDefault();
+            let dataId = this.getAttribute('data-id');
+
+            swal({
+                title: "Are you sure?",
+                text: "This product will be permanently deleted!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            }).then((willDelete) => {
+                if (willDelete) {
+                    fetch(`/Admin/Product/HardDelete/${dataId}`, {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                    })
+                        .then(response => {
+                            if (response.ok) {
+                                toastr["success"]("Product deleted successfully");
+                                let tr = this.closest('tr');
+                                tr.remove();
+                            } else {
+                                toastr["error"]("An error occurred while deleting the product");
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            toastr["error"]("An error occurred while deleting the product");
+                        });
+                } else {
+                    swal("Product not deleted!");
+                }
+            });
+        }
+
+        function handleRecoverClick(event) {
+            event.preventDefault();
+            let dataId = this.getAttribute('data-id');
+
+            fetch(`/Admin/Product/Recover/${dataId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+            }).then(response => {
+                if (response.ok) {
+                    toastr["success"]("Product recovered successfully");
+                    let tr = this.closest('tr');
+                    tr.remove();
+                } else {
+                    toastr["error"]("An error occurred while recovering the product");
+                }
+            })
+                .catch(error => {
+                    console.error('Error:', error);
+                    toastr["error"]("An error occurred while recovering the product");
+                });
+        }
+
+        attachEventListeners('.del-btn', 'click', handleDeleteClick);
+        attachEventListeners('.recover', 'click', handleRecoverClick);
+
+        const tableBody = document.querySelector('#example3 tbody');
+        const observer = new MutationObserver(mutations => {
+            for (const mutation of mutations) {
+                if (mutation.type === 'childList') {
+                    attachEventListeners('.del-btn', 'click', handleDeleteClick);
+                    attachEventListeners('.recover', 'click', handleRecoverClick);
+                }
+            }
+        });
+
+        observer.observe(tableBody, { childList: true });
+    </script>
+
+
+}
