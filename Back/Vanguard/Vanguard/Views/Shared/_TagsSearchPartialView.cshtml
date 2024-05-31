@@ -1,0 +1,46 @@
+﻿@{
+    var tags = ViewData["TagsSearch"] as List<Tag> ?? new List<Tag>();
+}
+
+@if (tags.Count() > 0)
+{
+    foreach (var tag in tags)
+    {
+        <li onclick="tagselecSearch()" data-id="@tag.Id" class="srch-tag"><a href="#"># @tag.Name</a></li>
+    }
+}
+else
+{
+    <span style="background-color: #fff; color: #000; font-size: 12px; padding: 10px 8px;">Search not found ...</span>
+}
+
+
+
+<script>
+    function tagselecSearch() {
+
+        const searchbtn = document.querySelectorAll('.searchs-container #searchResults li');
+        const tagList = document.querySelector('.searchs-container .selected-tags-list');
+
+        searchbtn.forEach(search => {
+            search.addEventListener('click', function (event) {
+                event.preventDefault();
+                let id = search.getAttribute('data-id');
+                let searchText = search.textContent.trim().replace('#', '');
+                if (!tagList.querySelector(`li[data-id="${id}"]`)) {
+                    const tagElement = document.createElement('li');
+                    tagElement.classList.add('select-tag');
+                    tagElement.setAttribute('data-id', id);
+                    tagElement.innerHTML = `
+                            <p>${searchText}</p>
+                            <i class="fa-solid fa-xmark"></i>
+                        `;
+
+                    // Append tag to tagList
+                    tagList.appendChild(tagElement);
+                }
+            });
+        });
+    }
+    tagselecSearch()
+</script>

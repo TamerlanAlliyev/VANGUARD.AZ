@@ -1,0 +1,61 @@
+﻿@using Vanguard.Areas.Admin.ViewModels.Admin
+@model EmployeeCreatVM
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Product</a></li>
+                <li class="breadcrumb-item"><a sty href="javascript:void(0)">Create</a></li>
+            </ol>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <form id="Form" method="post" enctype="multipart/form-data">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Employee Information</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-validation">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">Employee Email <span class="text-danger">*</span></label>
+                                            <div class="col-lg-8">
+                                                <input asp-for="Email" type="email" class="form-control" id="validationCustom01" placeholder="Enter Employee Email">
+                                                <span asp-validation-for="Email" class="text-danger"></span>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom05">Roles <span class="text-danger">*</span></label>
+                                            <div class="col-lg-8">
+                                                <select asp-for="RoleId" class="default-select wide form-control select-roles" id="validationCustom05">
+                                                    <option value="">Select Role</option>
+                                                    @if (Model.Roles != null)
+                                                    {
+                                                        foreach (var rol in Model.Roles)
+                                                        {
+                                                            <option value="@rol.Id">@rol.Name</option>
+                                                        }
+                                                    }
+                                                </select>
+                                                <span asp-validation-for="RoleId" class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center mt-3">
+                        <div class="col-md-6 text-center w-7">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,6 +12,8 @@ public class Product : BaseAuditable
     public decimal SellPrice { get; set; }
     public decimal? DiscountPrice { get; set; }
     public int? ClicketCount { get; set; } = default;
+    public int GenderId { get; set; }
+    public Gender? Gender { get; set; }
     public List<Image> Images { get; set; } = null!;
     public List<ProductCategory> ProductCategory { get; set; } = null!;
     public List<ProductTag> ProductTag { get; set; } = null!;
@@ -22,6 +24,6 @@ public class Product : BaseAuditable
     [NotMapped]
     public IFormFile HoverImage { get; set; } = null!;
     [NotMapped]
-    public List<IFormFile>? AdditionalImages { get; set; } 
+    public List<IFormFile>? AdditionalImages { get; set; }
     public List<Information> Information { get; set; } = null!;
 }

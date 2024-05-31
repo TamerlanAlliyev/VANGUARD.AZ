@@ -6,11 +6,14 @@ using Vanguard.Areas.Admin.ViewModels.ProductViewModels;
 using Vanguard.Data;
 using Vanguard.Helpers;
 using Vanguard.Models;
+using YourNamespace.Filters;
 
 
 namespace Vanguard.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[ServiceFilter(typeof(AdminAuthorizationFilter))]
+
 public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;
@@ -70,7 +73,8 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
             {
                 CategorySelection = await _productService.CategorySelectionsAsync(),
                 TagSelections = await _productService.TagSelectionsAsync(),
-                Colors = await _context.Colors.Where(c => !c.IsDeleted).ToListAsync()
+                Colors = await _context.Colors.Where(c => !c.IsDeleted).ToListAsync(),
+                Gender = await _context.Genders.ToListAsync(),
             };
             return View(vm);
         }
@@ -85,20 +89,21 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
     [HttpPost]
     public async Task<IActionResult> Create(ProductCreateVM vm)
     {
-        ModelState.Clear();
-
-        ValidationHelper.ValidateProductCreate(vm, ModelState);
-
-        if (!ModelState.IsValid)
-        {
-            vm.CategorySelection = await _productService.CategorySelectionsAsync();
-            vm.TagSelections = await _productService.TagSelectionsAsync();
-            vm.Colors = await _context.Colors.Where(c => !c.IsDeleted).ToListAsync();
-            return View(vm);
-        }
-
         try
         {
+            ModelState.Clear();
+
+            ValidationHelper.ValidateProductCreate(vm, ModelState);
+
+            if (!ModelState.IsValid)
+            {
+                vm.CategorySelection = await _productService.CategorySelectionsAsync();
+                vm.TagSelections = await _productService.TagSelectionsAsync();
+                vm.Colors = await _context.Colors.Where(c => !c.IsDeleted).ToListAsync();
+                vm.Gender = await _context.Genders.ToListAsync();
+                return View(vm);
+            }
+
             await _productService.CreateAsync(vm);
         }
         catch (KeyNotFoundException ex)
@@ -172,7 +177,7 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                 vm.SelectedTags = edVM.SelectedTags;
                 vm.CategorySelection = await _productService.CategorySelectionsAsync();
                 vm.TagSelections = await _productService.TagSelectionsAsync();
-                vm.Colors = await _context.Colors.Where(c => !c.IsDeleted).ToListAsync();
+                //vm.Colors = await _context.Colors.Where(c => !c.IsDeleted).ToListAsync();
                 return View(vm);
             }
 
@@ -184,6 +189,8 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
             return View("Error500", new ServiceResult(false, ex.Message, 500));
         }
     }
+
+
 
 
 

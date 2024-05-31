@@ -39,7 +39,7 @@
                                 <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
                             </div> -->
 
-                            <div class="swiper mySwiper hover-image">
+                            <a asp-action="Detail" asp-route-id="@prod.Product.Id" class="swiper mySwiper hover-image">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
@@ -59,7 +59,7 @@
                                 </div>
                                 <div class="swiper-button-next p-btn"></div>
                                 <div class="swiper-button-prev p-btn"></div>
-                            </div>
+                            </a>
 
                         </div>
 
@@ -87,9 +87,15 @@
                         </div>
 
                         <div class="labels">
+                            @if(prod.IsNew){
                             <a class=" new">New</a>
-                            <!-- <a class="dis" >-20%</a> -->
-                            <!-- <a class=" best" >Best</a> -->
+                            }
+                            @if(prod.IsDiscounted){
+                            <a class="dis">-@prod.Offer%</a> 
+                            }
+                            @if(prod.IsBest){
+                             <a class=" best" >Best</a> 
+                            }
                         </div>
 
                     </div>

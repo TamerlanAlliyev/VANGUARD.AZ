@@ -1,0 +1,106 @@
+﻿@model List<Gender>
+
+@section style {
+    <link href="~/admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Gender</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">List</a></li>
+            </ol>
+
+
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">gender List</h4>
+                        <a asp-action="create" asp-area="Admin" asp-controller="gender" class="btn btn-primary">Create Gender</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display " style="min-width: 545px">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Created Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var gender in Model)
+                                    {
+                                        <tr>
+                                            <td>@gender.Name</td>
+                                            <td>@gender.CreatedDate</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a title="Detail" asp-action="Detail" asp-controller="Gender" asp-area="Admin" asp-route-id="@gender.Id" class="btn btn-primary shadow btn-xs sharp me-1"><i class="bi bi-eye"></i></a>
+                                                    <a title="Edit" asp-action="Edit" asp-controller="Gender" asp-area="Admin" asp-route-id="@gender.Id" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a title="Delete" class="btn btn-danger shadow btn-xs sharp preview" data-id="@gender.Id"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script {
+    <script src="~/admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/admin/js/plugins-init/datatables.init.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+            const trashButtons = document.querySelectorAll('.preview');
+
+            trashButtons.forEach(trashButton => {
+                trashButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    let dataId = this.getAttribute('data-id');
+
+                    swal({
+                        title: "Are you sure?",
+                        text: "This gender can be restored after deletion!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    }).then((willDelete) => {
+                        if (willDelete) {
+                            let tr = this.closest('tr');
+                            fetch('Gender/Delete/' + dataId)
+                                .then(response => {
+                                    if (response.ok) {
+                                        toastr["success"]("gender deleted successfully");
+                                        tr.remove();
+                                    } else {
+                                        toastr["error"]("An error occurred while deleting the Gender");
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                    toastr["error"]("An error occurred while deleting the Gender");
+                                });
+                        } else {
+                            swal("Gender not deleted!");
+                        }
+                    });
+                });
+            });
+    </script>
+}
+

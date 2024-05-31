@@ -1,4 +1,5 @@
-﻿@model ProductCreateVM
+﻿@using Vanguard.Areas.Admin.ViewModels.Admin
+@model ProductCreateVM
 
 
 
@@ -413,7 +414,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 400px;
+        height: 600px;
         flex-direction: column;
         gap: 10px;
     }
@@ -482,7 +483,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 216px;
+        height: 316px;
         flex-direction: column;
         gap: 10px;
         width: 30%;
@@ -899,10 +900,6 @@
 
 
 
-
-
-
-
 <div class="content-body">
     <div class="container-fluid">
         <div class="row page-titles">
@@ -1042,7 +1039,26 @@
                                             </div>
                                         </div>
 
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom05">
+                                                Gender
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <select class="default-select wide form-control select-gender" id="validationCustom05">
+                                                    <option data-display="Select Gender">Select Gender</option>
+                                                    @if (Model.Gender != null)
+                                                    {
+                                                        foreach (var gen in Model.Gender)
+                                                        {
+                                                            <option value="@gen.Id">@gen.Name</option>
+                                                        }
+                                                    }
 
+                                                </select>
+                                                <span class="text-danger" asp-validation-for="SelectedGender"></span>
+                                            </div>
+                                        </div>
 
                                     </div>
 
@@ -1106,20 +1122,23 @@
                                                            placeholder="Search Categories...">
 
                                                     <div class="category-list">
-
-                                                        @foreach (var cat in Model.CategorySelection)
+                                                        @if (Model.CategorySelection != null)
                                                         {
 
-                                                            <label class="list-categ" data-id="@cat.Id"
-                                                                   for="@cat.Id">
-                                                                <input type="checkbox" class="checkbox" id="@cat.Id"
-                                                                       hidden />
-                                                                <span class="cat-name"> @cat.Name</span>
-                                                                <span class="par-name">
-                                                                    @(cat.Parent != null ?
-                                                                        $"({cat.Parent})" : "")
-                                                                </span>
-                                                            </label>
+                                                            @foreach (var cat in Model.CategorySelection)
+                                                            {
+
+                                                                <label class="list-categ" data-id="@cat.Id"
+                                                                       for="@cat.Id">
+                                                                    <input type="checkbox" class="checkbox" id="@cat.Id"
+                                                                           hidden />
+                                                                    <span class="cat-name"> @cat.Name</span>
+                                                                    <span class="par-name">
+                                                                        @(cat.Parent != null ?
+                                                                            $"({cat.Parent})" : "")
+                                                                    </span>
+                                                                </label>
+                                                            }
                                                         }
 
 
@@ -1406,7 +1425,7 @@
 
                                                             </div>
                                                         </div>
-                                                        
+
                                                     </div>
                                                 </div>
                                                 <span class="text-info">Not!... Once all colors are selected you can upload images </span>
@@ -1691,7 +1710,7 @@
 
 
                     </div>
-                        <span class="text-danger text-center" asp-validation-for="ColorSizeVM"></span>
+                    <span class="text-danger text-center" asp-validation-for="ColorSizeVM"></span>
                 </div>
 
 
@@ -1918,7 +1937,7 @@
                         item.style.display = 'none';
                     }
                 });
-    
+
 
             });
         });
@@ -1946,7 +1965,7 @@
 
             listItemsCat.forEach(item => {
                 let name = item.querySelector('.cat-name').textContent;
-                let id = parseInt(item.getAttribute('data-id'), 10); 
+                let id = parseInt(item.getAttribute('data-id'), 10);
 
                 item.addEventListener('mousedown', (event) => {
                     const SelectedCategories = document.querySelector('.selected-category-box');
@@ -1967,14 +1986,14 @@
                         item.classList.add('btn-primary');
 
                         SelectedCategories.innerHTML += `
-                                                                                                    <li data-id="${id}" class="category-box">
-                                                                                                        <span class="cat-name-selected">${name}</span>
-                                                                                                        <a data-id="${id}" class="cat-remove">
-                                                                                                            <i class="fa-solid fa-xmark"></i>
-                                                                                                            <input value="${name}" type="text" hidden>
-                                                                                                        </a>
-                                                                                                    </li>
-                                                                                                `;
+                                                                                                            <li data-id="${id}" class="category-box">
+                                                                                                                <span class="cat-name-selected">${name}</span>
+                                                                                                                <a data-id="${id}" class="cat-remove">
+                                                                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                                                                    <input value="${name}" type="text" hidden>
+                                                                                                                </a>
+                                                                                                            </li>
+                                                                                                        `;
                         RemoveCategory();
                     }
                 });
@@ -2105,14 +2124,14 @@
 
                         SelectedTag.innerHTML +=
                             `
-                                                                                                                            <li data-id="${id}" class="tag-box">
-                                                                                                                               <span class="tag-name">${name}</span>
-                                                                                                                               <a data-id="${name}" class="tag-remove">
-                                                                                                                                  <i class="fa-solid fa-xmark"></i>
-                                                                                                                                  <input asp-for="Tags.Name" value="${name}" type="text" hidden>
-                                                                                                                               </a>
-                                                                                                                            </li>
-                                                                                                                            `
+                                                                                                                                    <li data-id="${id}" class="tag-box">
+                                                                                                                                       <span class="tag-name">${name}</span>
+                                                                                                                                       <a data-id="${name}" class="tag-remove">
+                                                                                                                                          <i class="fa-solid fa-xmark"></i>
+                                                                                                                                          <input asp-for="Tags.Name" value="${name}" type="text" hidden>
+                                                                                                                                       </a>
+                                                                                                                                    </li>
+                                                                                                                                    `
                         RemoveTag()
                     }
                 })
@@ -2198,6 +2217,13 @@
                     formData.append(`SelectedCategoryIds[${index}]`, categoryId);
                 });
 
+                //Gender
+                var selectElement = document.querySelector('.default-select');
+                var selectedValue = selectElement.value;
+                formData.append('SelectedGender', selectedValue);
+                console.log('Selected Value:', selectedValue);
+
+
                 // Color & Size Submission
                 const colorSizeData = [];
                 const colorImgBodies = document.querySelectorAll('.color-img-body');
@@ -2250,14 +2276,11 @@
                         body: formData,
                     });
 
-                    if (response.redirected) {
-                        window.location.href = response.url;
-                    } else {
-                        form.submit();
-                    }
+                    window.location.href = response.url;
                 } catch (error) {
                     console.error('Error:', error);
                 }
+
 
 
 
@@ -2390,32 +2413,32 @@
                     const trIndex = sizeContainerBox.children.length;
 
                     newTr.innerHTML = `
-                                                        <th></th>
-                                                        <td>
-                                                            <div class="color-list-cricle" style="background: ${hexCode};"></div>
-                                                        </td>
-                                                        <td class="prod-col">${ColorName}</td>
-                                                        <td class="prod-size">
-                                                            <input type="text" class="size-input form-control" placeholder="Add Size..." >
-                                                        </td>
-                                                        <td class="prod-count">
-                                                             <input type="number" class="form-control count-input" id="validationCustom"
-                                                                    placeholder="Add Count..." >
-                                                         </td>
-                                                                 <td class="prod-weight">
-                                                             <input type="number" class="form-control weight-input" id="validationCustom"
-                                                                    placeholder="Add Weight (kq)...">
-                                                         </td>
-                                                         <td class="prod-dimensions">
-                                                             <input type="text" class="form-control dimensions-input" id="validationCustom"
-                                                                    placeholder="Add Dimensions...">
-                                                         </td>
-                                                        <td class="prod-del">
-                                                            <div class="del-btn btn">
-                                                                <i class="fa-regular fa-trash-can"></i>
-                                                            </div>
-                                                        </td>
-                                                    `;
+                                                                <th></th>
+                                                                <td>
+                                                                    <div class="color-list-cricle" style="background: ${hexCode};"></div>
+                                                                </td>
+                                                                <td class="prod-col">${ColorName}</td>
+                                                                <td class="prod-size">
+                                                                    <input type="text" class="size-input form-control" placeholder="Add Size..." >
+                                                                </td>
+                                                                <td class="prod-count">
+                                                                     <input type="number" class="form-control count-input" id="validationCustom"
+                                                                            placeholder="Add Count..." >
+                                                                 </td>
+                                                                         <td class="prod-weight">
+                                                                     <input type="number" class="form-control weight-input" id="validationCustom"
+                                                                            placeholder="Add Weight (kq)...">
+                                                                 </td>
+                                                                 <td class="prod-dimensions">
+                                                                     <input type="text" class="form-control dimensions-input" id="validationCustom"
+                                                                            placeholder="Add Dimensions...">
+                                                                 </td>
+                                                                <td class="prod-del">
+                                                                    <div class="del-btn btn">
+                                                                        <i class="fa-regular fa-trash-can"></i>
+                                                                    </div>
+                                                                </td>
+                                                            `;
                     newTr.querySelectorAll('input').forEach(input => {
                         input.addEventListener('input', function () {
                             if (this.type === 'number' && this.value < 1) {
@@ -2506,70 +2529,71 @@
 
                         if (colorExists) {
                             colorBox.innerHTML += `
-                                                <div data-id="${hexCode}" class="color-img-body">
-                                                    <div data-id="${hexCode}" class="color-box">
-                                                        <a class="col-body">
-                                                            <div class="color-list-cricle" style="background: ${hexCode};">
-                                                                <i class="bi bi-x close-b" style="font-size: 25px;"></i>
-                                                            </div>
-                                                        </a>
-                                                        <a class="color-list-name col-body">${name.innerText}</a>
-                                                        <a class="col-body">${hexCode}</a>
-                                                        <a class="col-body">
-                                                            <div class="add-upload-btn">
-                                                                <i class="bi bi-cloud-arrow-up"></i>
-                                                            </div>
-                                                        </a>
-                                                        <a class="col-body">
-                                                            <div class="add-size-btn">
-                                                                <i class="bi bi-plus-circle"></i>
-                                                            </div>
-                                                        </a>
-                                                    </div>
-                                                    <div class="sec-img">
-                                                        <div class="card-body im-conta">
-                                                            <div class="row" style="flex-direction: column;">
-                                                                <div class="">
-                                                                    <div class="row im-container">
-                                                                        <div class="col-xl-6 img-container">
-                                                                            <span>Main Image <span class="text-danger">*</span></span>
-                                                                            <label class="label-image">
-                                                                                <input type="file" class="mainImage" hidden>
-                                                                                <img class="main-img selected-img" src="~/admin/icons/plus.svg" alt="">
-                                                                            </label>
-                                                                            <span class="text-danger"></span>
-                                                                        </div>
-                                                                        <div class="col-xl-6 img-container">
-                                                                            <span>Hover Image <span class="text-danger">*</span></span>
-                                                                            <label class="label-image">
-                                                                                <input type="file" class="hoverImage" hidden>
-                                                                                <img class="hover-img selected-img" src="~/admin/icons/plus.svg" alt="">
-                                                                            </label>
-                                                                            <span class="text-danger"></span>
-                                                                        </div>
+                                                        <div data-id="${hexCode}" class="color-img-body">
+                                                            <div data-id="${hexCode}" class="color-box">
+                                                                <a class="col-body">
+                                                                    <div class="color-list-cricle" style="background: ${hexCode};">
+                                                                        <i class="bi bi-x close-b" style="font-size: 25px;"></i>
                                                                     </div>
-                                                                </div>
-                                                                <div class="add-files">
-                                                                    <div>
-                                                                        <span>Additional Image <span class="text-danger">*</span></span>
+                                                                </a>
+                                                                <a class="color-list-name col-body">${name.innerText}</a>
+                                                                <a class="col-body">${hexCode}</a>
+                                                                <a class="col-body">
+                                                                    <div class="add-upload-btn">
+                                                                        <i class="bi bi-cloud-arrow-up"></i>
                                                                     </div>
-                                                                    <div class="im-container">
-                                                                        <div class="col-xl-12 additional-image">
-                                                                            <div class="add-container">
-                                                                                <label class="add-label-image">
-                                                                                    <input type="file" class="add-AdditionalImages" multiple hidden>
-                                                                                    <img class="hover-img-selected" src="~/admin/icons/plus.svg" alt="">
-                                                                                </label>
+                                                                </a>
+                                                                <a class="col-body">
+                                                                    <div class="add-size-btn">
+                                                                        <i class="bi bi-plus-circle"></i>
+                                                                    </div>
+                                                                </a>
+                                                            </div>
+                                                            <div class="sec-img">
+                                                                <div class="card-body im-conta">
+                                                                    <div class="row" style="flex-direction: column;">
+                                                                        <div class="">
+                                                                            <div class="row im-container">
+                                                                                <div class="col-xl-6 img-container">
+                                                                                    <span>Main Image <span class="text-danger">*</span></span>
+                                                                                    <label class="label-image">
+                                                                                        <input type="file" class="mainImage" hidden>
+                                                                                                        <img class="main-img selected-img" src="@Url.Content("~/admin/icons/plus.svg")" alt="">
+                                                                                    </label>
+                                                                                    <span class="text-danger"></span>
+                                                                                </div>
+                                                                                <div class="col-xl-6 img-container">
+                                                                                    <span>Hover Image <span class="text-danger">*</span></span>
+                                                                                    <label class="label-image">
+                                                                                        <input type="file" class="hoverImage" hidden>
+                                                                                                                <img class="hover-img selected-img" src="@Url.Content("~/admin/icons/plus.svg")" alt="">
+                                                                                    </label>
+                                                                                    <span class="text-danger"></span>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
-                                                                        <input type="file" class="AdditionalImages" multiple hidden>
+                                                                        <div class="add-files">
+                                                                            <div>
+                                                                                <span>Additional Image <span class="text-danger">*</span></span>
+                                                                            </div>
+                                                                            <div class="im-container">
+                                                                                <div class="col-xl-12 additional-image">
+                                                                                    <div class="add-container">
+                                                                                        <label class="add-label-image">
+                                                                                            <input type="file" class="add-AdditionalImages" multiple hidden>
+                                                                                    <img class="hover-img-selected" src="@Url.Content("~/admin/icons/plus.svg")" alt="">
+
+                                                                                        </label>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <input type="file" class="AdditionalImages" multiple hidden>
+                                                                            </div>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                </div>
-                                            `;
+                                                    `;
                             SizeDelete();
                             AddSize();
                             ColorRemove();
@@ -2687,70 +2711,70 @@
 
                     colorsBox.innerHTML +=
                         `
-                                        <div data-id="${hexCodeInput.value}" class="color-img-body">
-                                            <div data-id="${hexCodeInput.value}" class="color-box">
-                                                <a class="col-body">
-                                                    <div class="color-list-cricle" style="background: ${hexCodeInput.value};">
-                                                        <i class="bi bi-x close-b" style="font-size: 25px;"></i>
-                                                    </div>
-                                                </a>
-                                                <a class="color-list-name col-body">${colorNameInput.value.trim()}</a>
-                                                <a class="col-body">${hexCodeInput.value}</a>
-                                                <a class="col-body">
-                                                    <div class="add-upload-btn">
-                                                        <i class="bi bi-cloud-arrow-up"></i>
-                                                    </div>
-                                                </a>
-                                                <a class="col-body">
-                                                    <div class="add-size-btn">
-                                                        <i class="bi bi-plus-circle"></i>
-                                                    </div>
-                                                </a>
-                                            </div>
-                                            <div class="sec-img">
-                                                <div class="card-body im-conta">
-                                                    <div class="row" style="flex-direction: column;">
-                                                        <div class="">
-                                                            <div class="row im-container">
-                                                                <div class="col-xl-6 img-container">
-                                                                    <span>Main Image <span class="text-danger">*</span></span>
-                                                                    <label class="label-image">
-                                                                        <input type="file" class="mainImage" hidden>
-                                                                        <img class="main-img selected-img" src="~/admin/icons/plus.svg" alt="">
-                                                                    </label>
-                                                                    <span class="text-danger"></span>
-                                                                </div>
-                                                                <div class="col-xl-6 img-container">
-                                                                    <span>Hover Image <span class="text-danger">*</span></span>
-                                                                    <label class="label-image">
-                                                                        <input type="file" class="hoverImage" hidden>
-                                                                        <img class="hover-img selected-img" src="~/admin/icons/plus.svg" alt="">
-                                                                    </label>
-                                                                    <span class="text-danger"></span>
-                                                                </div>
+                                                <div data-id="${hexCodeInput.value}" class="color-img-body">
+                                                    <div data-id="${hexCodeInput.value}" class="color-box">
+                                                        <a class="col-body">
+                                                            <div class="color-list-cricle" style="background: ${hexCodeInput.value};">
+                                                                <i class="bi bi-x close-b" style="font-size: 25px;"></i>
                                                             </div>
-                                                        </div>
-                                                        <div class="add-files">
-                                                            <div>
-                                                                <span>Additional Image <span class="text-danger">*</span></span>
+                                                        </a>
+                                                        <a class="color-list-name col-body">${colorNameInput.value.trim()}</a>
+                                                        <a class="col-body">${hexCodeInput.value}</a>
+                                                        <a class="col-body">
+                                                            <div class="add-upload-btn">
+                                                                <i class="bi bi-cloud-arrow-up"></i>
                                                             </div>
-                                                            <div class="im-container">
-                                                                <div class="col-xl-12 additional-image">
-                                                                    <div class="add-container">
-                                                                        <label class="add-label-image">
-                                                                            <input type="file" class="add-AdditionalImages" multiple hidden>
-                                                                            <img class="hover-img-selected" src="~/admin/icons/plus.svg" alt="">
-                                                                        </label>
+                                                        </a>
+                                                        <a class="col-body">
+                                                            <div class="add-size-btn">
+                                                                <i class="bi bi-plus-circle"></i>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                    <div class="sec-img">
+                                                        <div class="card-body im-conta">
+                                                            <div class="row" style="flex-direction: column;">
+                                                                <div class="">
+                                                                    <div class="row im-container">
+                                                                        <div class="col-xl-6 img-container">
+                                                                            <span>Main Image <span class="text-danger">*</span></span>
+                                                                            <label class="label-image">
+                                                                                <input type="file" class="mainImage" hidden>
+                                                                                <img class="main-img selected-img" src="~/admin/icons/plus.svg" alt="">
+                                                                            </label>
+                                                                            <span class="text-danger"></span>
+                                                                        </div>
+                                                                        <div class="col-xl-6 img-container">
+                                                                            <span>Hover Image <span class="text-danger">*</span></span>
+                                                                            <label class="label-image">
+                                                                                <input type="file" class="hoverImage" hidden>
+                                                                                <img class="hover-img selected-img" src="~/admin/icons/plus.svg" alt="">
+                                                                            </label>
+                                                                            <span class="text-danger"></span>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
-                                                                <input type="file" class="AdditionalImages" multiple hidden>
+                                                                <div class="add-files">
+                                                                    <div>
+                                                                        <span>Additional Image <span class="text-danger">*</span></span>
+                                                                    </div>
+                                                                    <div class="im-container">
+                                                                        <div class="col-xl-12 additional-image">
+                                                                            <div class="add-container">
+                                                                                <label class="add-label-image">
+                                                                                    <input type="file" class="add-AdditionalImages" multiple hidden>
+                                                                                    <img class="hover-img-selected" src="~/admin/icons/plus.svg" alt="">
+                                                                                </label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <input type="file" class="AdditionalImages" multiple hidden>
+                                                                    </div>
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                        </div>
-                                        `;
+                                                `;
                     AddSize();
                     ColorRemove();
                     imageToggle();

@@ -18,7 +18,17 @@ var swiper2 = new Swiper(".product-detail-images .mySwiper2", {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  var elements = document.querySelectorAll('.info-box .left-box h3');
 
+  elements.forEach(function (element) {
+      var text = element.textContent;
+      console.log(text);
+      if (text.length > 22) {
+          element.textContent = text.substring(0, 22) + '...';
+      }
+  });
+});
 
 
 

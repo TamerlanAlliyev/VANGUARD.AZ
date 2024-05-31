@@ -399,7 +399,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 550px;
+        height: 750px;
         flex-direction: column;
         gap: 10px;
     }
@@ -468,7 +468,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 240px;
+        height: 340px;
         flex-direction: column;
         gap: 10px;
         width: 30%;
@@ -1045,6 +1045,30 @@
                                             </div>
                                         </div>
 
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom05">
+                                                Gender
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <select class="default-select wide form-control select-gender" id="validationCustom05">
+                                                    <option selected value="@Model.prodGenId" data-display="@Model.prodGen">@Model.prodGen</option>
+                                                    @if (Model.Genders != null)
+                                                    {
+
+                                                        foreach (var gen in Model.Genders)
+                                                        {
+                                                            if (gen.Id != Model.prodGenId)
+                                                            {
+                                                                <option value="@gen.Id">@gen.Name</option>
+                                                            }
+                                                        }
+                                                    }
+
+                                                </select>
+                                                <span class="text-danger" asp-validation-for="SelectedGender"></span>
+                                            </div>
+                                        </div>
 
 
                                     </div>
@@ -1662,7 +1686,7 @@
                     if (event.target.classList.contains('fa-trash-can')) {
                         const label = event.target.closest('.add-label-image');
                         const fileNameToRemove = label.dataset.file;
-                        let url = label.dataset.url; 
+                        let url = label.dataset.url;
 
                         const dt = new DataTransfer();
                         for (const file of additionalImagesInput.files) {
@@ -1782,7 +1806,7 @@
 
             listItemsCat.forEach(item => {
                 let name = item.querySelector('.cat-name').textContent;
-                let id = parseInt(item.getAttribute('data-id'), 10); 
+                let id = parseInt(item.getAttribute('data-id'), 10);
 
                 item.addEventListener('mousedown', (event) => {
                     const SelectedCategories = document.querySelector('.selected-category-box');
@@ -1803,14 +1827,14 @@
                         item.classList.add('btn-primary');
 
                         SelectedCategories.innerHTML += `
-                                                                                                                                                                    <li data-id="${id}" class="category-box">
-                                                                                                                                                                        <span class="cat-name-selected">${name}</span>
-                                                                                                                                                                        <a data-prod="${@Model.Id}" data-id="${id}" class="cat-remove">
-                                                                                                                                                                            <i class="fa-solid fa-xmark"></i>
-                                                                                                                                                                            <input value="${name}" type="text" hidden>
-                                                                                                                                                                        </a>
-                                                                                                                                                                    </li>
-                                                                                                                                                                `;
+                                                                                                                                                                            <li data-id="${id}" class="category-box">
+                                                                                                                                                                                <span class="cat-name-selected">${name}</span>
+                                                                                                                                                                                <a data-prod="${@Model.Id}" data-id="${id}" class="cat-remove">
+                                                                                                                                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                                                                                                                                    <input value="${name}" type="text" hidden>
+                                                                                                                                                                                </a>
+                                                                                                                                                                            </li>
+                                                                                                                                                                        `;
                         RemoveCategory();
                     }
                 });
@@ -1969,13 +1993,13 @@
 
                         SelectedTag.innerHTML +=
                             `
-                                                                                                                                                                                            <li data-id="${id}" class="tag-box">
-                                                                                                                                                                                               <span class="tag-name">${name}</span>
-                                                                                                                                                                                                       <a data-prod="${@Model.Id}" data-id="${id}" class="tag-remove">
-                                                                                                                                                                                                  <i class="fa-solid fa-xmark"></i>
-                                                                                                                                                                                               </a>
-                                                                                                                                                                                            </li>
-                                                                                                                                                                                            `
+                                                                                                                                                                                                    <li data-id="${id}" class="tag-box">
+                                                                                                                                                                                                       <span class="tag-name">${name}</span>
+                                                                                                                                                                                                               <a data-prod="${@Model.Id}" data-id="${id}" class="tag-remove">
+                                                                                                                                                                                                          <i class="fa-solid fa-xmark"></i>
+                                                                                                                                                                                                       </a>
+                                                                                                                                                                                                    </li>
+                                                                                                                                                                                                    `
                         RemoveTag()
                     }
                 })
@@ -2079,6 +2103,11 @@
                 selectedCategoryIds.forEach((categoryId, index) => {
                     formData.append(`SelectedCategoryIds[${index}]`, categoryId);
                 });
+
+                // Append Selected Gender
+                const selectedGenderOption = document.querySelector('.select-gender option:checked');
+                const selectedGenderId = selectedGenderOption.value;
+                formData.append('SelectedGender', selectedGenderId);
 
                 // Color & Size Submission
                 const colorImgBodies = document.querySelectorAll('.color-img-body');
@@ -2203,32 +2232,32 @@
                     const trIndex = sizeContainerBox.children.length;
 
                     newTr.innerHTML = `
-                                                                                                                        <th></th>
-                                                                                                                        <td>
-                                                                                                                            <div class="color-list-cricle" style="background: ${hexCode};"></div>
-                                                                                                                        </td>
-                                                                                                                        <td class="prod-col">${ColorName}</td>
-                                                                                                                        <td class="prod-size">
-                                                                                                                            <input type="text" class="size-input form-control" placeholder="Add Size..." >
-                                                                                                                        </td>
-                                                                                                                        <td class="prod-count">
-                                                                                                                             <input type="number" class="form-control count-input" id="validationCustom"
-                                                                                                                                    placeholder="Add Count..." >
-                                                                                                                         </td>
-                                                                                                                                 <td class="prod-weight">
-                                                                                                                             <input type="number" class="form-control weight-input" id="validationCustom"
-                                                                                                                                    placeholder="Add Weight (kq)...">
-                                                                                                                         </td>
-                                                                                                                         <td class="prod-dimensions">
-                                                                                                                             <input type="text" class="form-control dimensions-input" id="validationCustom"
-                                                                                                                                    placeholder="Add Dimensions...">
-                                                                                                                         </td>
-                                                                                                                        <td class="prod-del">
-                                                                                                                            <div class="del-btn btn">
-                                                                                                                                <i class="fa-regular fa-trash-can"></i>
-                                                                                                                            </div>
-                                                                                                                        </td>
-                                                                                                                    `;
+                                                                                                                                <th></th>
+                                                                                                                                <td>
+                                                                                                                                    <div class="color-list-cricle" style="background: ${hexCode};"></div>
+                                                                                                                                </td>
+                                                                                                                                <td class="prod-col">${ColorName}</td>
+                                                                                                                                <td class="prod-size">
+                                                                                                                                    <input type="text" class="size-input form-control" placeholder="Add Size..." >
+                                                                                                                                </td>
+                                                                                                                                <td class="prod-count">
+                                                                                                                                     <input type="number" class="form-control count-input" id="validationCustom"
+                                                                                                                                            placeholder="Add Count..." >
+                                                                                                                                 </td>
+                                                                                                                                         <td class="prod-weight">
+                                                                                                                                     <input type="number" class="form-control weight-input" id="validationCustom"
+                                                                                                                                            placeholder="Add Weight (kq)...">
+                                                                                                                                 </td>
+                                                                                                                                 <td class="prod-dimensions">
+                                                                                                                                     <input type="text" class="form-control dimensions-input" id="validationCustom"
+                                                                                                                                            placeholder="Add Dimensions...">
+                                                                                                                                 </td>
+                                                                                                                                <td class="prod-del">
+                                                                                                                                    <div class="del-btn btn">
+                                                                                                                                        <i class="fa-regular fa-trash-can"></i>
+                                                                                                                                    </div>
+                                                                                                                                </td>
+                                                                                                                            `;
                     newTr.querySelectorAll('input').forEach(input => {
                         input.addEventListener('input', function () {
                             if (this.type === 'number' && this.value < 1) {

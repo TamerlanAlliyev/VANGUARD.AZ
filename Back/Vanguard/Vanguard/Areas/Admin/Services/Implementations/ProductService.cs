@@ -225,7 +225,7 @@ public class ProductService : IProductService
     public async Task<ProductEditVM> EditViewModelAsync(int? id)
     {
 
-        var product = await _context.Products.Where(p => !p.IsDeleted).FirstOrDefaultAsync(p => p.Id == id);
+        var product = await _context.Products.Where(p => !p.IsDeleted).Include(p=>p.Gender).FirstOrDefaultAsync(p => p.Id == id);
         if (product == null) return null;
 
 
@@ -265,9 +265,12 @@ public class ProductService : IProductService
                                                .Where(pc => pc.ProductId == product.Id)
                                                .Include(pc => pc.Category)
                                                .ToListAsync(),
-            Colors = await _context.Colors
-                                   .Where(c => !c.IsDeleted)
-                                   .ToListAsync(),
+            Genders = await _context.Genders.ToListAsync(),
+            prodGenId = product.GenderId,
+            prodGen=product.Gender.Name,
+            //Colors = await _context.Colors
+            //                       .Where(c => !c.IsDeleted)
+            //                       .ToListAsync(),
             ColorSizeVM = colorSize,
         };
 
@@ -357,9 +360,9 @@ public class ProductService : IProductService
         foreach (var tag in tagIds)
         {
 
-            if (!productTagsDel.Any(pt=>pt.TagId==tag))
+            if (!productTagsDel.Any(pt => pt.TagId == tag))
             {
-                if (!await _context.ProductTag.AnyAsync(pt=>pt.Id==tag))
+                if (!await _context.ProductTag.AnyAsync(pt => pt.Id == tag))
                 {
                     ProductTag productTag = new ProductTag
                     {
@@ -416,6 +419,7 @@ public class ProductService : IProductService
         product.Description = vm.Description;
         product.SellPrice = vm.SellPrice;
         product.DiscountPrice = vm.DiscountPrice;
+        product.GenderId = vm.SelectedGender;
 
         //Category Selects
         List<ProductCategory> productCategories = new List<ProductCategory>();
@@ -578,6 +582,7 @@ public class ProductService : IProductService
 
 
 
+
     public async Task<ServiceResult> CreateAsync(ProductCreateVM vm)
     {
 
@@ -624,6 +629,7 @@ public class ProductService : IProductService
                 Description = vm.Description,
                 SellPrice = vm.SellPrice,
                 DiscountPrice = vm.DiscountPrice,
+                GenderId = vm.SelectedGender
             };
             products.Add(product);
 
@@ -726,7 +732,7 @@ public class ProductService : IProductService
                         {
                             Product = product,
                             Color = color,
-                            Size = size,
+                            SizeId = size.Id,
                             Count = siz.Count,
                             Dimensions = siz.Dimensions,
                             Weight = siz.Weight
@@ -752,7 +758,6 @@ public class ProductService : IProductService
                         size = new Size
                         {
                             Name = siz.Size,
-
                         };
                         sizes.Add(size);
 
@@ -794,6 +799,15 @@ public class ProductService : IProductService
         return ServiceResult.Ok("Product Creat successfully.");
     }
 
+
+
+
+
+
+
+
+
+
     public async Task<Product?> ProductGetDetailAsync(int? id)
     {
 
@@ -801,6 +815,7 @@ public class ProductService : IProductService
                                                  .Include(p => p.ProductColors)
                                                     .ThenInclude(pc => pc.Color)
                                                  .Include(i => i.Images)
+                                                 .Include(g=>g.Gender)
                                                  .Include(i => i.Information)
                                                     .ThenInclude(s => s.Size)
                                                  .Include(p => p.ProductCategory)
@@ -814,11 +829,11 @@ public class ProductService : IProductService
 
     public async Task<ProductDetailVM> DetailAsync(int? id)
     {
-        if (id == null || id <= 1)  ServiceResult.BadRequest("Invalid product ID.");
+        if (id == null || id <= 1) ServiceResult.BadRequest("Invalid product ID.");
 
         Product? product = await ProductGetDetailAsync(id);
 
-        if (product == null)  ServiceResult.NotFound("Product not found.");
+        if (product == null) ServiceResult.NotFound("Product not found.");
 
         var color = product!.ProductColors.Color;
         var images = product!.Images;
@@ -873,3 +888,16 @@ public class ProductService : IProductService
 
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -16,4 +16,6 @@ public class Information:BaseAuditable
     public Product Product { get; set; } = null!;
     public Size Size { get; set; } = null!;
     public Color Color { get; set; } = null!;
+
+    public int? OrderCount { get; set; } = default;
 }

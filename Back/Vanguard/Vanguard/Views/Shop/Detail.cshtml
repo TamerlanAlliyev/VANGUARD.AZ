@@ -1,0 +1,586 @@
+﻿@model ShopDetailVM
+@section style {
+    <link rel="stylesheet" href="~/cilent/assets/css/product-detail.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+
+    <link href="https://cdnis.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .detail-color-box a {
+            text-decoration: none;
+            color: #000;
+        }
+        .section:nth-child(3) {
+            margin: 5% 0;
+            padding: 0 2%;
+        }
+    </style>
+}
+
+
+
+
+<main>
+    <div class="head-url">
+        <span><a asp-action="index" asp-controller="Home">Home </a></span> /
+        <span><a asp-action="index" asp-controller="Shop">Shop </a></span> /
+        <span> Detail</span>
+    </div>
+    <!-- =============================================
+                P R O D U C T  -  D E T A I L
+    ================================================== -->
+    <section class="section product-detail">
+
+        <div class="product-detail-images">
+            <!-- Swiper -->
+
+            <div class="swiper mySwiper2">
+
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide main-image">
+                        <img src="~/cilent/assets/images/products/@Model.MainImageURL" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="~/cilent/assets/images/products/@Model.HoverImageURL" />
+                    </div>
+
+                    @if (Model.AdditionalImagesURL != null)
+                    {
+                        foreach (var img in Model.AdditionalImagesURL)
+                        {
+                            <div class="swiper-slide">
+                                <img src="~/cilent/assets/images/products/@img" />
+                            </div>
+                        }
+
+                    }
+
+
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div thumbsSlider="" class="swiper mySwiper">
+
+                <div class="swiper-wrapper">
+
+
+                    <div class="swiper-slide">
+                        <img src="~/cilent/assets/images/products/@Model.MainImageURL" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="~/cilent/assets/images/products/@Model.HoverImageURL" />
+                    </div>
+
+
+                    @if (Model.AdditionalImagesURL != null)
+                    {
+                        foreach (var img in Model.AdditionalImagesURL)
+                        {
+                            <div class="swiper-slide">
+                                <img src="~/cilent/assets/images/products/@img" />
+                            </div>
+                        }
+
+                    }
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+
+
+        <div class="product-details">
+
+            <div class="detail-infos">
+
+                <h1>@Model.Product.Name</h1>
+
+                <div class="product-rating">
+                    <div class="rating-block">
+                        <span class="fas fa-star checked star_on"></span>
+                        <span class="fas fa-star checked star_on"></span>
+                        <span class="fas fa-star checked star_on"></span>
+                        <span class="fas fa-star-half-alt checked star_on"></span>
+                        <span class="far fa-star star_on"></span>
+                    </div>
+                    <span class="reviews">1000 reviews</span>
+                </div>
+
+                <div class="cart-prices item">
+
+                    @if (Model.Product.DiscountPrice != null && Model.Product.DiscountPrice > 0)
+                    {
+                        <span class="sell-price dis" id="sell-price">$@Model.Product.DiscountPrice</span>
+                        <del class="sell-price dis-price">$@Model.Product.SellPrice</del>
+                    }
+                    else
+                    {
+                        <span class="sell-price sell" id="sell-price">$@Model.Product.SellPrice </span>
+                    }
+                </div>
+
+                <p class="product-description">
+                    @Model.Product.ShortDescription
+                </p>
+
+            </div>
+
+
+
+            <div class="detail-selects">
+
+                <div class="detail-color-box">
+                    <span class="colors-head">Colors</span>
+
+
+
+                    <!-- Swiper -->
+                    <div class="swiper-container">
+                        <div class="swiper mySwiper">
+                            <div class="swiper-wrapper">
+                                @if (Model.Colors != null)
+                                {
+                                    foreach (var col in Model.Colors)
+                                    {
+                                        <a asp-action="Detail" asp-route-id="@col.Id" class="swiper-slide @(col.totalCount<1?"sold-out":"") @(col.Id==Model.Product.Id?"active":"")">
+                                            <img src="~/cilent/assets/images/products/@col.Url" />
+                                            <span>@col.Color</span>
+                                        </a>
+                                    }
+                                }
+
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="detail-size-box">
+                    <span class="sizes-head">Sizes</span>
+
+                    <div class="detail-sizes">
+                        @if (Model.Product.Information != null)
+                        {
+                            var foundActive = false;
+                            for (int i = 0; i < Model.Product.Information.Count; i++)
+                            {
+                                var size = Model.Product.Information[i];
+                                <div class="size-block
+                    @(i == 0 && Model.Product.Information[i].Count > 0 && !foundActive ? "active" : "")
+                    @(Model.Product.Information[i].Count == 0 ? "sold-out" : "")">
+                                    <span data-size="@size.SizeId">@size.Size.Name</span>
+                                </div>
+
+                                if (Model.Product.Information[i].Count > 0 && !foundActive)
+                                {
+                                    foundActive = true;
+                                }
+                            }
+                        }
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <div class="detail-buttons">
+                <div class="cart-qty item">
+                    <div class="quantity-box">
+
+                        <div class="quantity minus">
+                            <i class="fa-solid fa-minus"></i>
+                        </div>
+
+                        <input type="number" min="1" value="1">
+
+                        <div class="quantity plus">
+                            <i class="fa-solid fa-plus"></i>
+                        </div>
+
+                    </div>
+                    <a href="#" class="add-cart">ADD TO CART</a>
+                </div>
+
+                <div class="wish-share">
+                    <div class="wish">
+                        <a>
+                            <img class="" src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                            <!-- <img class="active" src="~/cilent/assets/icons/wish-icon-active.svg" alt=""> -->
+                        </a>
+                        <span>ADD TO WISHLIST</span>
+                    </div>
+
+                    <a href="#" class="share">
+                        <i class="fa-solid fa-share"></i>
+                        SHARE
+                    </a>
+
+
+                </div>
+
+            </div>
+
+            <!-- <div class="share-modal">
+
+            </div> -->
+
+
+
+            <div class="product-infos">
+
+                <div class="p-info">
+                    <span>MODEL: </span>
+                    <a href="#">@Model.Product.Model</a>
+                </div>
+
+                <div class="p-info">
+                    <span>CATEGORIES: </span>
+                    @foreach (var cat in Model.Product.ProductCategory.Select(p => p.Category.Name).ToList())
+                    {
+                        <a>@cat@(cat == Model.Product.ProductCategory.Select(p => p.Category.Name).ToList().Last() ? "" : ", ")</a>
+                    }
+                </div>
+
+                <div class="p-info">
+                    <span>TAGS: </span>
+                    @foreach (var tag in Model.Product.ProductTag.Select(p => p.Tag.Name).ToList())
+                    {
+                        <a>@tag@(tag == Model.Product.ProductTag.Select(p => p.Tag.Name).ToList().Last() ? "" : ", ")</a>
+                    }
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+    <!-- =============================================
+                P R O D U C T  -  D E T A I L
+    ================================================== -->
+    <!-- ===============================================
+                    I N F O R M A T I O N S
+    ================================================== -->
+    <section class="section information">
+
+
+        <ul class="information-reviews-list">
+            <li>
+                <a data-name="information" class="active">ADDITIONAL INFORMATION</a>
+            </li>
+            <li>
+                <a data-name="reviews">REVIEWS (2)</a>
+            </li>
+        </ul>
+
+
+        <div class="list-box information active">
+
+
+            <div class="info-block">
+                <h3>Mansument</h3>
+
+
+                <table style="width: 70%; ">
+                    <thead>
+                        <tr style="background-color: black; color: #fff;">
+                            <th style=" padding: 8px;">Size</th>
+                            <th style=" padding: 8px;">Weight</th>
+                            <th style=" padding: 8px;">Dimension</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var inf in Model.Information)
+                        {
+
+                            <tr>
+                                <th style="border-bottom: 1px solid #494747; padding: 5px; font-weight: 500;">@inf.Size.Name</th>
+                                <th style="border-bottom: 1px solid #494747; padding: 5px; font-weight: 500;">@inf.Weight kq</th>
+                                <th style="border-bottom: 1px solid #494747; padding: 5px; font-weight: 500;">@inf.Dimensions cm</th>
+                            </tr>
+                        }
+
+                    </tbody>
+                </table>
+
+            </div>
+
+            <div class="info-block">
+                <h3>Colors:</h3>
+                <p>
+
+                    @if (Model.Colors != null)
+                    {
+                        foreach (var col in Model.Colors)
+                        {
+                            @($"{col.Color}{(col == Model.Colors.Last() ? "" : " , ")}")
+                        }
+                    }
+
+                </p>
+
+            </div>
+            @if (Model.Product.Description != null)
+            {
+                <div class="info-block">
+                    <h3>Description</h3>
+                    <p> @Model.Product.Description</p>
+                </div>
+            }
+
+        </div>
+
+
+
+        <div class="list-box reviews ">
+
+            <ul class="review-list">
+
+                <li class="user-box">
+
+                    <div class="user-profil-img">
+                        <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                    </div>
+
+                    <div class="com-user-info">
+                        <span class="comment-date">Date</span>
+
+                        <span class="product-rating">
+                            <h5>User Name </h5>
+                            <div class="rating-block">
+                                <span class="fas fa-star checked star_on"></span>
+                                <span class="fas fa-star checked star_on"></span>
+                                <span class="fas fa-star checked star_on"></span>
+                                <span class="fas fa-star-half-alt checked star_on"></span>
+                                <span class="far fa-star star_on"></span>
+                            </div>
+                        </span>
+
+
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Consequuntur
+                            error maxime, rem neque totam fugiat culpa dolore odit dolorem quis
+                            nesciunt aspernatur perferendis est sunt ab quas porro molestiae
+                            excepturi?
+                        </p>
+                    </div>
+
+                </li>
+
+
+                <li class="user-box">
+
+                    <div class="user-profil-img">
+                        <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                    </div>
+
+                    <div class="com-user-info">
+                        <span class="comment-date">Date</span>
+                        <h5>User Name</h5>
+
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                            Consequuntur
+                            error maxime, rem neque totam fugiat culpa dolore odit dolorem quis
+                            nesciunt aspernatur perferendis est sunt ab quas porro molestiae
+                            excepturi?
+                        </p>
+                    </div>
+
+                </li>
+
+            </ul>
+            <!-- Eger rating bildiribdirse -->
+            <!-- <form action="" class="rating-true"> -->
+            <form action="" class="bought">
+
+
+                <div class="stars-rating-block">
+                    <span>Your rating</span>
+                    <input type="radio" id="star1" name="rating" value="1" />
+                    <input type="radio" id="star2" name="rating" value="2" />
+                    <input type="radio" id="star3" name="rating" value="3" />
+                    <input type="radio" id="star4" name="rating" value="4" />
+                    <input type="radio" id="star5" name="rating" value="5" />
+
+                    <label for="star1">
+                        <i class="fa-regular fa-star"></i>
+                    </label>
+                    <label for="star2">
+                        <i class="fa-regular fa-star"></i>
+                    </label>
+                    <label for="star3">
+                        <i class="fa-regular fa-star"></i>
+                    </label>
+                    <label for="star4">
+                        <i class="fa-regular fa-star"></i>
+                    </label>
+                    <label for="star5">
+                        <i class="fa-regular fa-star"></i>
+                    </label>
+                </div>
+
+
+                <textarea placeholder="Enter your comment" name="" id=""></textarea>
+                <button type="submit">SUBMIT</button>
+            </form>
+
+        </div>
+
+
+
+
+    </section>
+    <!-- ===============================================
+                    I N F O R M A T I O N S
+    ================================================== -->
+    <!-- ===============================================
+            R E L A T E D  -  P R O D U C T S
+    ================================================== -->
+    @if (Model.RelatedProducts != null)
+    {
+
+        <section class="section related-products">
+
+            <h2 class="related-head">RELATED PRODUCTS</h2>
+
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+
+
+                    @foreach(var prod in Model.RelatedProducts)
+                    {
+                        <div class="swiper-slide">
+
+                            <div class="image-box">
+
+                                <a href="#" class="main-image im active">
+                                    <img src="~/cilent/assets/images/products/@prod.Images.Where(i=>!i.IsDeleted&&i.IsMain).FirstOrDefault()!.Url" alt="asd">
+                                </a>
+
+
+                                <a href="#" class="hover-image im active">
+                                    <!-- Swiper -->
+                                    <div class="swiper mySwiper">
+                                        <div class="swiper-wrapper">
+
+                                            <div class="swiper-slide">
+                                                <img src="~/cilent/assets/images/products/@prod.Images.Where(i=>!i.IsDeleted&&i.IsHover).FirstOrDefault()!.Url" alt="">
+                                            </div>
+
+                                            @if (prod.Images.Where(i => !i.IsDeleted && !i.IsMain && !i.IsHover).ToList() != null)
+                                            {
+                                                foreach (var img in prod.Images.Where(i => !i.IsDeleted && !i.IsMain && !i.IsHover).ToList())
+                                                {
+                                                    <div class="swiper-slide">
+                                                        <img src="~/cilent/assets/images/products/@img.Url" alt="">
+                                                    </div>
+                                                }
+                                            }
+                                     
+
+                                        </div>
+                                        <div class="swiper-button-prev"></div>
+                                        <div class="swiper-button-next"></div>
+                                    </div>
+
+                                </a>
+
+                                <div class="add-btn-box">
+                                    <a class="add-btn ">ADD TO CART</a>
+
+                                    <ul class="add-size ">
+
+                                        @foreach(var siz in Model.Information)
+                                        {
+                                            if (siz.Count>0)
+                                            {
+                                                <li class="btn-size" data-size="@siz.Size.Id">@siz.Size.Name</li>
+                                            }
+                                        }
+                      
+
+                                    </ul>
+                                </div>
+
+                            </div>
+
+
+                            <div class="info-box">
+
+                                <div class="left-box">
+                                    <span>
+                                        @foreach (var cat in Model.Product.ProductCategory)
+                                        {
+                                            <a>@cat.Category.Name@(cat == Model.Product.ProductCategory.Last() ? "" : ", ")</a>
+                                        }
+                                    </span>
+                                    <h3>@prod.Name</h3>
+                                    <p>Color : @prod.ProductColors.Color.Name</p>
+                                </div>
+
+
+
+                                <div class="right-box">
+                                    <!-- <a class="wish-btn active"> -->
+                                    <a class="wish-btn">
+                                        <img src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                                    </a>
+
+                                    <div class="cart-prices">
+                                        <span class="sell-price dis" id="sell-price">$80</span>
+                                        <del class="sell-price dis-price">$100</del>
+
+                                        <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    }
+                    
+
+
+
+                </div>
+                <!-- <div class="swiper-pagination"></div> -->
+            </div>
+
+        </section>
+    }
+
+    <!-- ===============================================
+            R E L A T E D  -  P R O D U C T S
+    ================================================== -->
+</main>
+
+@section script {
+    <script src="~/cilent/assets/js/product-detail.js"></script>
+
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"
+            nonce="1010314584091002"></script>
+
+}

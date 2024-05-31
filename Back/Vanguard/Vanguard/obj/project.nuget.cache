@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3rVK9fbZxOCPM4hDIJxRGISrqgpudkAnyyyW3lZw8K+NoPhWd/lHBYwCUh5JNR8uXj4dcbwlHo/m47U6NtUOAw==",
+  "dgSpecHash": "rFXX4CAITjw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\CODE ACADEMY\\Projects\\Final Project\\GitHub\\Final-Project\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Vanguard.csproj",
+  "projectFilePath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Vanguard.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ROG\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\ROG\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

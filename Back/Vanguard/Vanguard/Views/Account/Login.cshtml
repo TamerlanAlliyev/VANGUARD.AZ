@@ -1,0 +1,74 @@
+﻿@using Vanguard.ViewModels.Account
+@model LoginVM
+@section style{
+    <link rel="stylesheet" href="~/cilent/assets/css/login.css">
+}
+
+<main>
+
+
+
+
+    <!-- =============== LOGIN SECTION - Start =============== -->
+    <section class="login">
+
+
+        <form method="post" class="login-form">
+            <h1 class="login-title">Login</h1>
+
+            <div class="login-content">
+                <div class="login-box">
+                    <i class="fa-regular fa-envelope login-icon"></i>
+
+                    <div class="login-box-input">
+                        <input asp-for="Email" type="email" required class="login-input" id="login-email" placeholder=" ">
+                        <label for="login-email" class="login-label">Email</label>
+                    </div>
+                </div>
+                <span asp-validation-for="Email"></span>
+
+                <div class="login-box">
+                    <i class="fa-solid fa-lock login-icon"></i>
+                    <div class="login-box-input">
+                        <input asp-for="Password" type="password" required class="login-input"
+                               id="login-confirm-password" placeholder=" ">
+                        <label for="login-confirm-password" class="login-label">
+                            Password
+                        </label>
+                        <i class="fa-regular fa-eye login-eye" id="login-eye"></i>
+                    </div>
+                </div>
+                <span asp-validation-for="Password"></span>
+
+            </div>
+
+
+            <div class="login-check">
+                <div class="login-check-group">
+                    <input asp-for="RememberMe" type="checkbox" class="login-check-input" id="login-check">
+                    <label for="login-check" class="login-check-label">Remember me</label>
+                </div>
+
+                <a asp-action="ForgotPassword" class="login-forgot">Forgot Password?</a>
+            </div>
+            <div asp-validation-summary="ModelOnly" style="margin: 0 0 20px;color:red" ></div>
+            <button type="submit" class="login-button">Login</button>
+
+            <p class="login-register">
+                Don't have an account? <a asp-action="Register">Register</a>
+            </p>
+        </form>
+
+    </section>
+    <!-- =============== LOGIN SECTION - End =============== -->
+
+
+
+
+
+
+</main>
+
+@section script{
+    <script src="~/cilent/assets/js/login.js"></script>
+}

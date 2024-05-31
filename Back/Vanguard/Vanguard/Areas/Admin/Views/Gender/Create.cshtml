@@ -1,0 +1,59 @@
+﻿@model GenderVM
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Gender</a></li>
+                <li class="breadcrumb-item"><a onclick="javascript:void(0)">Create</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Gender Create</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form method="post" class="needs-validation" novalidate="">
+                                <div class="row">
+                                    <div class="col-xl-12">
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Gender Name
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input asp-for="Name" type="text" class="form-control" id="validationCustom01" placeholder="Enter a username.." required="">
+                                                <div class="invalid-feedback">
+                                                    Please enter a Gender Name.
+                                                </div>
+                                            </div>
+                                            <span class="text-danger" asp-validation-for="Name"></span>
+                                        </div>
+                                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row ">
+                                    <div class="mb-3 row">
+                                        <div class=" ms-auto">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script {
+    <script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+}

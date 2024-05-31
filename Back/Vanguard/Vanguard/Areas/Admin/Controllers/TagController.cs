@@ -4,9 +4,12 @@ using Vanguard.Areas.Admin.Services;
 using Vanguard.Areas.Admin.ViewModels.TagViewModels;
 using Vanguard.Data;
 using Vanguard.Exceptions;
+using YourNamespace.Filters;
 
 namespace Vanguard.Areas.Admin.Controllers;
 [Area("Admin")]
+[ServiceFilter(typeof(AdminAuthorizationFilter))]
+
 public class TagController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;

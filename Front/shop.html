@@ -923,22 +923,11 @@
 
                                 <ul id="searchResults">
 
-                                    <!-- <span>Search not found ...</span> -->
+                                    <span style="background-color: #fff; color: #000; font-size: 12px; padding: 10px 8px;">Search not found ...</span>
 
 
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
-                                    <li class="srch-tag"><a href="#"># Tag</a></li>
+                                    <li data-id="1" class="srch-tag"><a href="#"># Tag</a></li>
+                           
 
 
 
@@ -998,7 +987,7 @@
 
                                             <div class="inp-box">
                                                 <p>$</p>
-                                                <input type="number" class="min-input" value="0">
+                                                <input type="number" class="min-input" min="0" max="499" value="0">
                                             </div>
                                         </div>
 
@@ -1006,7 +995,7 @@
                                             <span>Max</span>
                                             <div class="inp-box">
                                                 <p>$</p>
-                                                <input type="number" class="max-input" value="10000">
+                                                <input type="number" class="max-input" min="1" max="500" value="500">
                                             </div>
                                         </div>
 
@@ -1023,8 +1012,8 @@
 
                                 <!-- Slider -->
                                 <div class="range-input">
-                                    <input type="range" class="min-range" min="0" max="10000" value="0" step="1">
-                                    <input type="range" class="max-range" min="0" max="10000" value="10000" step="1">
+                                    <input type="range" class="min-range" min="0" max="499" value="0" step="1">
+                                    <input type="range" class="max-range" min="1" max="500" value="500" step="1">
                                 </div>
                             </div>
                         </div>

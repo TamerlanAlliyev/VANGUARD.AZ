@@ -52,6 +52,14 @@ main {
     /* padding: 120px 0; */
 }
 
+
+
+.head-url {
+    display: none;
+}
+
+
+
 .section {
     max-width: 1280px;
     width: 100%;
@@ -1143,7 +1151,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .related-products .swiper {
     width: 100%;
     height: 100%;
-    height: 300px;
+    height: 330px;
     /* height: 450px; */
 }
 
@@ -1158,6 +1166,7 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
     /* height: 450px; */
     height: 100%;
+    justify-content: space-between;
     gap: 5px;
 }
 
@@ -1408,7 +1417,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 .add-size .btn-size {
-    width: 20%;
+    width: 25%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1453,7 +1462,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .info-box {
     display: flex;
     justify-content: space-between;
-    height: 16%;
+    height: 17%;
     position: relative;
     z-index: 10;
 }
@@ -1469,7 +1478,7 @@ input[type="number"]::-webkit-outer-spin-button {
 .info-box .left-box span {
     color: #3c3c3c;
     text-transform: capitalize;
-    font-size: 10px;
+    font-size: 8px;
     /* font-size: 14px; */
 }
 
@@ -1477,8 +1486,7 @@ input[type="number"]::-webkit-outer-spin-button {
     color: #000000;
     text-transform: capitalize;
     font-weight: 550;
-    margin-bottom: 8px;
-    font-size: 12px;
+    font-size: 10px;
     /* font-size: 16px; */
 }
 
@@ -1486,7 +1494,7 @@ input[type="number"]::-webkit-outer-spin-button {
     color: #000000;
     text-transform: capitalize;
     font-weight: 400;
-    font-size: 10px;
+    font-size: 8px;
     /* font-size: 14px; */
 }
 
@@ -1504,8 +1512,8 @@ input[type="number"]::-webkit-outer-spin-button {
     cursor: pointer;
     position: absolute;
     z-index: 10;
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     top: 0;
     right: 0;
     /* width: 28px;
@@ -1531,27 +1539,29 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 
-
+.cart-prices{
+    display: flex;
+}
 
  .cart-prices .dis-price {
     color: #000000 !important;
     font-weight: 400 !important;
     text-decoration: line-through !important;
-    font-size: 10px !important;
+    font-size: 8px !important;
     /* font-size: 14px !important; */
 }
 
  .cart-prices .dis {
     color: #d90000 !important;
     font-weight: 600 !important;
-    font-size: 12px !important;
+    font-size: 10px !important;
     /* font-size: 16px !important; */
 }
 
  .cart-prices .sell {
     color: #000000 !important;
     font-weight: 600 !important;
-    font-size: 12px !important;
+    font-size: 10px !important;
     /* font-size: 16px !important; */
 }
 
@@ -1576,16 +1586,32 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 
-@media screen and (min-width: 600px) {}
-
-
-
-
 
 
 
 @media screen and (min-width: 1024px) {
-
+    main {
+        padding: 4% 0;
+    }
+    .head-url {
+        display: flex;
+        width: 100%;
+        max-width: 1280px;
+        margin: 20px 0;
+        padding: 14px;
+        color: #fff;
+        background: #000;
+        font-size: 14px;
+    }
+    
+    .head-url a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .head-url span {
+        margin: 0 10px;
+    }
 
     .section {
         /* max-width: 1280px;
@@ -1600,11 +1626,11 @@ input[type="number"]::-webkit-outer-spin-button {
     }
 
     .section {
-        margin: 5% auto 0;
+        margin:  0;
     }
 
     .section:last-child {
-        margin: 5% auto 10%;
+        margin: 0;
     }
 
 
@@ -2348,21 +2374,21 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 .info-box .left-box span {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 .info-box .left-box h3 {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .info-box .left-box p {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 
 .info-box .right-box a {
-    width: 28px;
-    height: 28px;
+    width: 22px;
+    height: 22px;
 }
 
 
@@ -2370,15 +2396,15 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 .right-box .cart-prices .dis-price {
-    font-size: 14px !important;
+    font-size: 12px !important;
 }
 
 .right-box .cart-prices .dis {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 .right-box .cart-prices .sell {
-    font-size: 16px !important;
+    font-size: 14px !important;
 }
 
 

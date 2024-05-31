@@ -4,7 +4,7 @@
     <style>
         .mainImage {
             width: 100%;
-            height: 550px;
+            height: 700px;
             object-fit: cover;
             object-position: top center;
         }
@@ -118,6 +118,10 @@
                                                             <th class="text-primary">Offer :</th>
                                                             <td>@Model.Offer</td>
 
+                                                        </tr>
+                                                        <tr>
+                                                            <th class="text-primary">Gender :</th>
+                                                            <td> @Model.Product.Gender?.Name </td>
                                                         </tr>
                                                         <tr>
                                                             <th class="text-primary">Color :</th>
@@ -351,7 +355,7 @@
                                    data-src="~/cilent/assets/images/products/@Model.MainImageURL" class="col-lg-3 col-md-6 mb-4 im-cart">
                                     <span class="im-title">Main Image</span>
                                     <img src="~/cilent/assets/images/products/@Model.MainImageURL" alt=""
-                                         style="width:100%; height: 350px; object-fit: cover;object-position: top center; ">
+                                         style="width:100%; height: 450px; object-fit: cover;object-position: top center; ">
                                 </a>
                             }
 
@@ -362,7 +366,7 @@
                                    data-src="~/cilent/assets/images/products/@Model.HoverImageURL" class="col-lg-3 col-md-6 mb-4 im-cart">
                                     <span class="im-title">Hover Image</span>
                                     <img src="~/cilent/assets/images/products/@Model.HoverImageURL" alt=""
-                                         style="width:100%; height: 350px; object-fit: cover;object-position: top center; ">
+                                         style="width:100%; height: 450px; object-fit: cover;object-position: top center; ">
                                 </a>
                             }
 
@@ -374,7 +378,7 @@
                                        data-src="~/cilent/assets/images/products/@image" class="col-lg-3 col-md-6 mb-4">
                                         <span> </span>
                                         <img src="~/cilent/assets/images/products/@image" alt=""
-                                             style="width:100%; height: 350px; object-fit: cover;object-position: top center; ">
+                                             style="width:100%; height: 450px; object-fit: cover;object-position: top center; ">
                                     </a>
                                 }
                             }

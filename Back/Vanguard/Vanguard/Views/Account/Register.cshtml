@@ -1,0 +1,175 @@
+﻿@using Vanguard.ViewModels.Account
+@model RegisterVM
+@section style {
+    <link rel="stylesheet" href="~/cilent/assets/css/register.css">
+
+}
+
+
+<main>
+
+
+
+
+    <!-- =============== LOGIN SECTION - Start =============== -->
+    <section class="register">
+
+
+        <form method="post" enctype="multipart/form-data" class="register-form">
+            <h1 class="register-title">Register</h1>
+
+
+
+            <div class="form-container">
+
+                <div class="container-left">
+
+                    <div class="full-name">
+
+                        <div class="register-box">
+                            <i class="fa-regular fa-user register-icon"></i>
+                            <div class="register-box-input">
+                                <input asp-for="Name" type="text" required class="register-input" id="register-name"
+                                       placeholder=" ">
+                                <label for="register-name" class="register-label">Name</label>
+                            </div>
+                        </div>
+                                
+
+                        <div class="register-box">
+                            <i class="fa-regular fa-user register-icon"></i>
+                            <div class="register-box-input">
+                                <input asp-for="Surname" type="text" required class="register-input" id="register-surname"
+                                       placeholder=" ">
+                                <label for="register-surname" class="register-label">Surname</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <span asp-validation-for="Name"></span>
+                    <span asp-validation-for="Surname"></span>
+                    <div class="box">
+                        <span for="register-name">
+                            <!--  -->
+                        </span>
+                        <span for="register-surname">
+                            <!--  -->
+                        </span>
+                    </div>
+
+
+                    <div class="box">
+                        <div class="register-box">
+                            <i class="fa-regular fa-envelope register-icon"></i>
+                            <div class="register-box-input">
+                                <input asp-for="Email" type="email" required class="register-input" id="register-email"
+                                       placeholder=" ">
+                                <label for="register-email" class="register-label">Email</label>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Email"></span>
+
+                    </div>
+
+
+                    <div class="register-box">
+                        <i class="fa-solid fa-phone register-icon"></i>
+                        <div class="register-box-input">
+                            <input asp-for="PhoneNumber" type="tel"  class="register-input" id="register-phone" placeholder=" ">
+                            <label for="register-phone" class="register-label">Phone</label>
+                            <i class="ri-eye-off-line login-eye" id="login-eye"></i>
+                        </div>
+                    </div>
+                    <span asp-validation-for="PhoneNumber"></span>
+
+                    <div class="box">
+
+                        <div class="register-box">
+                            <i class="fa-solid fa-lock register-icon"></i>
+
+                            <div class="register-box-input">
+                                <input asp-for="Password" type="password" required class="register-input" id="register-pass"
+                                       placeholder=" ">
+                                <label for="register-pass" class="register-label">Password</label>
+                                <i class="fa-regular fa-eye register-eye" id="register-eye"></i>
+                            </div>
+                        </div>
+                        <span asp-validation-for="Password"></span>
+
+                    </div>
+
+
+
+                </div>
+
+
+
+                <div class="container-right">
+
+                    <div class="profile-img">
+
+                        <div class="image">
+                            <img src="~/cilent/assets/images/settings/user-profil.png" alt="">
+                            <div class="photo">
+                                <img src="~/cilent/assets/icons/photo.svg" alt="">
+                            </div>
+                        </div>
+
+                        <div class="img-file">
+                            <label id="label" for="image-file">Upload Image</label>
+                            <input asp-for="ImageFile" id="image-file" type="file">
+                        </div>
+
+                    </div>
+
+                    <div class="box">
+                        <div class="register-box">
+                            <i class="fa-solid fa-lock register-icon"></i>
+                            <div class="register-box-input">
+                                <input asp-for="ConfirmPassword" type="password" required class="register-input"
+                                       id="register-confirm-password" placeholder=" ">
+                                <label for="register-confirm-password" class="register-label">
+                                    Confirm
+                                    Password
+                                </label>
+                                <i class="fa-regular fa-eye register-eye" id="register-eye"></i>
+                            </div>
+                        </div>
+                        <span asp-validation-for="ConfirmPassword"></span>
+
+                    </div>
+
+
+                </div>
+                <div asp-validation-summary="ModelOnly">sfd</div>
+
+            </div>
+
+
+
+
+            <button type="submit" class="register-button">Register</button>
+
+            <div class="box validations">
+                <!-- Validations -->
+            </div>
+
+            <p class="login-register">
+                Have an account already? <a asp-action="Login">Login</a>
+            </p>
+        </form>
+
+    </section>
+    <!-- =============== LOGIN SECTION - End =============== -->
+
+
+
+
+
+
+</main>
+
+@section script {
+    <script src="~/cilent/assets/js/register.js"></script>
+
+}

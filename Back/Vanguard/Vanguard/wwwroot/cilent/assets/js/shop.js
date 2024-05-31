@@ -4,12 +4,12 @@ window.addEventListener('scroll', function () {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     var elements = document.querySelectorAll('.p-inf div h3');
 
-    elements.forEach(function(element) {
+    elements.forEach(function (element) {
         var text = element.textContent;
-console.log(text);
+        console.log(text);
         if (text.length > 22) {
             element.textContent = text.substring(0, 22) + '...';
         }
@@ -247,6 +247,8 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function () {
     var tagElements = document.querySelectorAll(".srch-tag a");
     tagElements.forEach(function (tagElement) {
@@ -283,17 +285,25 @@ const searchbtn = document.querySelectorAll('.searchs-container #searchResults l
 const tagList = document.querySelector('.searchs-container .selected-tags-list');
 
 searchbtn.forEach(search => {
-    let searchText = "";
     search.addEventListener('click', function (event) {
-        searchText = search.innerText.replace('# ', '').trim();
-
-        tagList.innerHTML += `
-            <li>
+        event.preventDefault();
+        let id = search.getAttribute('data-id');
+        let searchText = search.textContent.trim().replace('#', ''); 
+        if (!tagList.querySelector(`li[data-id="${id}"]`)) {
+            const tagElement = document.createElement('li');
+            tagElement.classList.add('select-tag');
+            tagElement.setAttribute('data-id', id);
+            tagElement.innerHTML = `
                 <p>${searchText}</p>
                 <i class="fa-solid fa-xmark"></i>
-            </li>`;
+            `;
+
+            // Append tag to tagList
+            tagList.appendChild(tagElement);
+        }
     });
 });
+
 
 tagList.addEventListener('click', function (event) {
     if (event.target.classList.contains('fa-solid') && event.target.classList.contains('fa-xmark')) {
@@ -312,91 +322,65 @@ tagList.addEventListener('click', function (event) {
 
 
 
-const rangevalue =
-    document.querySelector(".slider-container .price-slider");
-const rangeInputvalue =
-    document.querySelectorAll(".range-input input");
+const rangeValue = document.querySelector(".slider-container .price-slider");
+const rangeInputs = document.querySelectorAll(".range-input input");
+const priceInputs = document.querySelectorAll(".price-input input");
 
-let priceGap = 500;
+priceInputs.forEach(input => {
+    input.addEventListener("input", e => {
+        let minPrice = parseInt(priceInputs[0].value);
+        let maxPrice = parseInt(priceInputs[1].value);
 
-const priceInputvalue =
-    document.querySelectorAll(".price-input input");
-for (let i = 0; i < priceInputvalue.length; i++) {
-    priceInputvalue[i].addEventListener("input", e => {
-
-        let minp = parseInt(priceInputvalue[0].value);
-        let maxp = parseInt(priceInputvalue[1].value);
-        let diff = maxp - minp
-
-        if (minp < 0) {
-            alert("minimum price cannot be less than 0");
-            priceInputvalue[0].value = 0;
-            minp = 0;
+        if (minPrice < 0) {
+            alert("Minimum price cannot be less than 0");
+            priceInputs[0].value = 0;
+            minPrice = 0;
         }
 
-        if (maxp > 10000) {
-            alert("maximum price cannot be greater than 10000");
-            priceInputvalue[1].value = 10000;
-            maxp = 10000;
+        if (maxPrice > 10000) {
+            alert("Maximum price cannot be greater than 10000");
+            priceInputs[1].value = 10000;
+            maxPrice = 10000;
         }
 
-        if (minp > maxp - priceGap) {
-            priceInputvalue[0].value = maxp - priceGap;
-            minp = maxp - priceGap;
-
-            if (minp < 0) {
-                priceInputvalue[0].value = 0;
-                minp = 0;
+        if (minPrice >= maxPrice) {
+            if (e.target.classList.contains("min-input")) {
+                priceInputs[0].value = maxPrice - 1;
+            } else {
+                priceInputs[1].value = minPrice + 1;
             }
         }
 
-        if (diff >= priceGap && maxp <= rangeInputvalue[1].max) {
-            if (e.target.className === "min-input") {
-                rangeInputvalue[0].value = minp;
-                let value1 = rangeInputvalue[0].max;
-                rangevalue.style.left = `${(minp / value1) * 100}%`;
-            }
-            else {
-                rangeInputvalue[1].value = maxp;
-                let value2 = rangeInputvalue[1].max;
-                rangevalue.style.right =
-                    `${100 - (maxp / value2) * 100}%`;
-            }
-        }
+        rangeInputs[0].value = priceInputs[0].value;
+        rangeInputs[1].value = priceInputs[1].value;
+        updateSlider(minPrice, maxPrice);
     });
+});
 
-    for (let i = 0; i < rangeInputvalue.length; i++) {
-        rangeInputvalue[i].addEventListener("input", e => {
-            let minVal =
-                parseInt(rangeInputvalue[0].value);
-            let maxVal =
-                parseInt(rangeInputvalue[1].value);
+rangeInputs.forEach(input => {
+    input.addEventListener("input", e => {
+        let minRange = parseInt(rangeInputs[0].value);
+        let maxRange = parseInt(rangeInputs[1].value);
 
-            let diff = maxVal - minVal
-
-            if (diff < priceGap) {
-
-                if (e.target.className === "min-range") {
-                    rangeInputvalue[0].value = maxVal - priceGap;
-                }
-                else {
-                    rangeInputvalue[1].value = minVal + priceGap;
-                }
+        if (minRange >= maxRange) {
+            if (e.target.classList.contains("min-range")) {
+                rangeInputs[0].value = maxRange - 1;
+            } else {
+                rangeInputs[1].value = minRange + 1;
             }
-            else {
+        }
 
-                priceInputvalue[0].value = minVal;
-                priceInputvalue[1].value = maxVal;
-                rangevalue.style.left =
-                    `${(minVal / rangeInputvalue[0].max) * 100}%`;
-                rangevalue.style.right =
-                    `${100 - (maxVal / rangeInputvalue[1].max) * 100}%`;
-            }
-        });
-    }
+        priceInputs[0].value = rangeInputs[0].value;
+        priceInputs[1].value = rangeInputs[1].value;
+        updateSlider(minRange, maxRange);
+    });
+});
+
+function updateSlider(min, max) {
+    const maxRange = parseInt(rangeInputs[1].max);
+    rangeValue.style.left = `${(min / maxRange) * 100}%`;
+    rangeValue.style.right = `${100 - (max / maxRange) * 100}%`;
 }
-
-
 
 
 
@@ -552,19 +536,19 @@ DetailCart.forEach((cart) => {
     const productImage = cart.querySelector(".img-detail img");
     const productName = cart.querySelector(".d-head h3");
     const productDescription = cart.querySelector(".product-description");
-    
+
     const shareData = {
         title: productName.innerText,
-        text: productDescription.innerText,  
+        text: productDescription.innerText,
         url: window.location.href
     };
-    
+
     if (productImage) {
-        shareData.image = productImage.src; 
+        shareData.image = productImage.src;
     }
-    
+
     const shareButton = cart.querySelector(".share");
-    
+
     shareButton.addEventListener("click", async () => {
         try {
             await navigator.share(shareData);
@@ -573,7 +557,7 @@ DetailCart.forEach((cart) => {
             alert("Sharing failed. Please try again."); // User notification
         }
     });
-    
+
 
 });
 // =====================================

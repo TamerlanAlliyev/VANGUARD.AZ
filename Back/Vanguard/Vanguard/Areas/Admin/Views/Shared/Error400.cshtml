@@ -37,13 +37,8 @@
                     <div class="form-input-content text-center error-page">
                         <h1 class="error-text fw-bold">400</h1>
                         <h4><i class="fa fa-thumbs-down text-danger"></i> Bad Request</h4>
-                        @if(Model.Message!=null){
-                            <p>@Model.Message</p>
-                        }
-                        else
-                        {
                             <p>Your Request resulted in an error</p>
-                        }
+                            <p>@Model.Message</p>
                         <div>
                             <a class="btn btn-primary" asp-area="Admin" asp-controller="Home" asp-action="Index">Back to Home</a>
                         </div>

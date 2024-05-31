@@ -15,7 +15,7 @@ public class ProductEditVM
     public string? Description { get; set; }
     public decimal SellPrice { get; set; }
     public decimal? DiscountPrice { get; set; }
-    public List<Color>? Colors { get; set; }
+    //public List<Color>? Colors { get; set; }
 
     public List<TagSelectionVM>? TagSelections { get; set; }
     public List<ProductTag>? SelectedTags { get; set; }
@@ -32,8 +32,13 @@ public class ProductEditVM
     public List<SizeVM>? SizeVMs { get; set; }
 
 
+    public List<Vanguard.Models.Gender> Genders { get; set; } = null!;
+    public int SelectedGender { get; set; }
+    public int prodGenId { get; set; }
+    public string prodGen { get; set; }=null!;
 
 
+    
     //[NotMapped]
     //public IFormFile MainImage { get; set; } = null!;
     //[NotMapped]

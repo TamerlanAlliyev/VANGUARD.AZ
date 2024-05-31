@@ -29,5 +29,6 @@ public class ProductCreateVM
 
     public List<ColorSizeVM> ColorSizeVM { get; set; } = null!;
 
-
+    public List<Vanguard.Models.Gender> Gender { get; set; } = null!;
+    public int SelectedGender { get; set; }
 }

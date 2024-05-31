@@ -23,5 +23,9 @@ public class ProductConfiguration:BaseEntityConfiguratiion<Product>
         builder.Property(p=>p.ClicketCount).HasColumnType("int").IsRequired(false);
 
         builder.ToTable("Products");
-    }
+
+		//builder.HasOne(g => g.Gender)
+		//	.WithMany(g => g.Products)
+		//	.HasForeignKey(g => g.GenderId);
+	}
 }

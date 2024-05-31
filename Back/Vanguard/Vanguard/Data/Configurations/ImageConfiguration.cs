@@ -13,7 +13,7 @@ public class ImageConfiguration: BaseEntityConfiguratiion<Image>
 
         builder.HasKey(i => i.Id);
 
-        builder.Property(i=>i.Url).HasColumnType("varchar").HasMaxLength(150).IsRequired(true);
+        builder.Property(i=>i.Url).HasColumnType("varchar").HasMaxLength(250).IsRequired(true);
         builder.Property(i=>i.IsMain).HasColumnType("bit").HasDefaultValue(true).IsRequired(true);
         builder.Property(i=>i.IsHover).HasColumnType("bit").HasDefaultValue(true).IsRequired(true);
 

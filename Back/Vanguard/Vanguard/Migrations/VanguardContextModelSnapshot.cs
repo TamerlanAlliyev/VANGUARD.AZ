@@ -207,12 +207,47 @@ namespace Vanguard.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Vanguard.Models.AllowedEmployee", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AccessCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId")
+                        .IsUnique()
+                        .HasFilter("[AppUserId] IS NOT NULL");
+
+                    b.ToTable("AllowedEmployees");
+                });
+
             modelBuilder.Entity("Vanguard.Models.AppUser", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("AllowedEmployeeId")
                         .HasColumnType("int");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -229,6 +264,9 @@ namespace Vanguard.Migrations
                     b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ImageId")
+                        .HasColumnType("int");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -257,6 +295,9 @@ namespace Vanguard.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("ProfilImage")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("SecurityStamp")
                         .HasColumnType("nvarchar(max)");
 
@@ -267,11 +308,18 @@ namespace Vanguard.Migrations
                     b.Property<bool>("TwoFactorEnabled")
                         .HasColumnType("bit");
 
+                    b.Property<int?>("UserAddressId")
+                        .HasColumnType("int");
+
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ImageId")
+                        .IsUnique()
+                        .HasFilter("[ImageId] IS NOT NULL");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
@@ -281,7 +329,43 @@ namespace Vanguard.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
+                    b.HasIndex("UserAddressId")
+                        .IsUnique()
+                        .HasFilter("[UserAddressId] IS NOT NULL");
+
                     b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Vanguard.Models.Basket", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Count")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SizeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("SizeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Baskets");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Category", b =>
@@ -381,6 +465,49 @@ namespace Vanguard.Migrations
                     b.ToTable("Colors", (string)null);
                 });
 
+            modelBuilder.Entity("Vanguard.Models.Gender", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("IPAddress")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("ModifiedBy")
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Gender", (string)null);
+                });
+
             modelBuilder.Entity("Vanguard.Models.Image", b =>
                 {
                     b.Property<int>("Id")
@@ -388,6 +515,9 @@ namespace Vanguard.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("AppUserId")
+                        .HasColumnType("int");
 
                     b.Property<int?>("ColorId")
                         .HasColumnType("int");
@@ -427,12 +557,12 @@ namespace Vanguard.Migrations
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime");
 
-                    b.Property<int>("ProductId")
+                    b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
                     b.Property<string>("Url")
                         .IsRequired()
-                        .HasMaxLength(150)
+                        .HasMaxLength(250)
                         .HasColumnType("varchar");
 
                     b.HasKey("Id");
@@ -487,6 +617,9 @@ namespace Vanguard.Migrations
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime");
 
+                    b.Property<int?>("OrderCount")
+                        .HasColumnType("int");
+
                     b.Property<int>("ProductId")
                         .HasColumnType("int");
 
@@ -535,6 +668,9 @@ namespace Vanguard.Migrations
                         .HasPrecision(18, 2)
                         .HasColumnType("decimal");
 
+                    b.Property<int>("GenderId")
+                        .HasColumnType("int");
+
                     b.Property<string>("IPAddress")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -572,6 +708,8 @@ namespace Vanguard.Migrations
                         .HasColumnType("nvarchar");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("GenderId");
 
                     b.ToTable("Products", (string)null);
                 });
@@ -740,6 +878,71 @@ namespace Vanguard.Migrations
                     b.ToTable("Tags", (string)null);
                 });
 
+            modelBuilder.Entity("Vanguard.Models.UserAddress", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("AppUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("City")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("Country")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("HomeAddress")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("PostalCode")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("UserAddresses");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.Wish", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SizeId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ProductId");
+
+                    b.HasIndex("SizeId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Wishs");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
@@ -791,6 +994,58 @@ namespace Vanguard.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Vanguard.Models.AllowedEmployee", b =>
+                {
+                    b.HasOne("Vanguard.Models.AppUser", "AppUser")
+                        .WithOne("AllowedEmployee")
+                        .HasForeignKey("Vanguard.Models.AllowedEmployee", "AppUserId");
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.AppUser", b =>
+                {
+                    b.HasOne("Vanguard.Models.Image", "Image")
+                        .WithOne("AppUser")
+                        .HasForeignKey("Vanguard.Models.AppUser", "ImageId");
+
+                    b.HasOne("Vanguard.Models.UserAddress", "UserAddress")
+                        .WithOne("AppUser")
+                        .HasForeignKey("Vanguard.Models.AppUser", "UserAddressId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.Navigation("Image");
+
+                    b.Navigation("UserAddress");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.Basket", b =>
+                {
+                    b.HasOne("Vanguard.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Vanguard.Models.Size", "Size")
+                        .WithMany()
+                        .HasForeignKey("SizeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Vanguard.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Size");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Vanguard.Models.Category", b =>
                 {
                     b.HasOne("Vanguard.Models.Category", "ParentCategory")
@@ -808,9 +1063,7 @@ namespace Vanguard.Migrations
 
                     b.HasOne("Vanguard.Models.Product", "Product")
                         .WithMany("Images")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProductId");
 
                     b.Navigation("Color");
 
@@ -842,6 +1095,17 @@ namespace Vanguard.Migrations
                     b.Navigation("Product");
 
                     b.Navigation("Size");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.Product", b =>
+                {
+                    b.HasOne("Vanguard.Models.Gender", "Gender")
+                        .WithMany("Products")
+                        .HasForeignKey("GenderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Gender");
                 });
 
             modelBuilder.Entity("Vanguard.Models.ProductCategory", b =>
@@ -901,6 +1165,38 @@ namespace Vanguard.Migrations
                     b.Navigation("Tag");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.Wish", b =>
+                {
+                    b.HasOne("Vanguard.Models.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Vanguard.Models.Size", "Size")
+                        .WithMany()
+                        .HasForeignKey("SizeId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Vanguard.Models.AppUser", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Product");
+
+                    b.Navigation("Size");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.AppUser", b =>
+                {
+                    b.Navigation("AllowedEmployee");
+                });
+
             modelBuilder.Entity("Vanguard.Models.Category", b =>
                 {
                     b.Navigation("ChildCategories");
@@ -915,6 +1211,16 @@ namespace Vanguard.Migrations
                     b.Navigation("Information");
 
                     b.Navigation("ProductColors");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.Gender", b =>
+                {
+                    b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.Image", b =>
+                {
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Product", b =>
@@ -939,6 +1245,12 @@ namespace Vanguard.Migrations
             modelBuilder.Entity("Vanguard.Models.Tag", b =>
                 {
                     b.Navigation("ProductTag");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.UserAddress", b =>
+                {
+                    b.Navigation("AppUser")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

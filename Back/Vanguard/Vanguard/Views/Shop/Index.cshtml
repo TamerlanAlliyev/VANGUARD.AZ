@@ -7,6 +7,7 @@
 }
 
 
+
 <main>
 
     <div class="head-url">
@@ -24,125 +25,124 @@
 
 
 
-                @if (Model.CategorySelecting != null && Model.CategorySelecting.Count() > 0)
-                {
-                <li class="filter-box @(Model.CategorySelecting.Any(s => s.IsSelected) ? "active" : "")">
+            <li class="filter-box @(Model.SelectedCats!=null&&Model.SelectedCats.Count()>0? "active" : "")">
 
 
-                    <div class="box-head">
-                        <h3>Categories</h3>
-                        <a class="open-close">
-                            <i class="fa-solid fa-angle-down"></i>
-                        </a>
-                    </div>
+                <div class="box-head">
+                    <h3>Categories</h3>
+                    <a class="open-close">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </a>
+                </div>
 
 
-                    <ul class="filter-container ">
+                <ul class="filter-container ">
 
 
-                            @foreach (var cat in Model.CategorySelecting)
+                        @foreach (var cat in Model.ReadyCategory!)
+                        {
+
+                            if (cat.Category.ParentCategory == null && cat.Category.ChildCategories != null)
                             {
 
-                                if (cat.Category.ParentCategory == null && cat.Category.ChildCategories != null)
-                                {
+                            <li class="sub-category full ">
+                                    @* @(Model.SelectedCats != null && Model.SelectedCats.Count() > 0 ? "active" : "")"> *@
 
-                                <li class="sub-category full ">
+                                <div class="parent-cat">
 
-                                    <div class="parent-cat">
+                                    <div class="checkbox-wrapper-33">
+                                        <label class="checkbox">
+                                            <input data-id="@cat.Category.Id" data-select="@cat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == cat.Category.Id) ? "checked" : "") />
 
-                                        <div class="checkbox-wrapper-33">
-                                            <label class="checkbox">
-                                                <input data-id="@cat.Category.Id" data-select="@cat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == cat.Category.Id) ? "checked" : "") />
+                                            <span class="checkbox__symbol">
+                                                <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                                     viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4 14l8 7L24 7"></path>
+                                                </svg>
+                                            </span>
+                                            <p class="checkbox__textwrapper">@cat.Category.Name</p>
+                                        </label>
 
-                                                <span class="checkbox__symbol">
-                                                    <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
-                                                         viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 14l8 7L24 7"></path>
-                                                    </svg>
-                                                </span>
-                                                <p class="checkbox__textwrapper">@cat.Category.Name</p>
-                                            </label>
-
-                                        </div>
-
-
-                                        <a class="open-close">
-                                            <i class="fa-solid fa-angle-down"></i>
-                                        </a>
                                     </div>
 
 
-                                    <ul class="child-cat ">
-                                            @foreach (var childCat in Model.CategorySelecting)
+                                    <a class="open-close">
+                                        <i class="fa-solid fa-angle-down"></i>
+                                    </a>
+                                </div>
+
+
+                                <ul class="child-cat ">
+                                        @foreach (var childCat in Model.ReadyCategory)
+                                        {
+                                            if (childCat.Category.ParentCategory == cat.Category)
                                             {
-                                                if (childCat.Category.ParentCategory == cat.Category)
-                                                {
 
-                                                <li>
-                                                    <div class="checkbox-wrapper-33">
-                                                        <label class="checkbox">
-                                                            <input data-id="@childCat.Category.Id" data-select="@childCat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == childCat.Category.Id) ? "checked" : "") />
-                                                            <span class="checkbox__symbol">
-                                                                <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
-                                                                     viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
-                                                                    <path d="M4 14l8 7L24 7"></path>
-                                                                </svg>
-                                                            </span>
-                                                            <p class="checkbox__textwrapper"> @childCat.Category.Name </p>
-                                                        </label>
+                                            <li>
+                                                <div class="checkbox-wrapper-33">
+                                                    <label class="checkbox">
+                                                        <input data-id="@childCat.Category.Id" data-select="@childCat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == childCat.Category.Id) ? "checked" : "") />
+                                                        <span class="checkbox__symbol">
+                                                            <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                                                 viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M4 14l8 7L24 7"></path>
+                                                            </svg>
+                                                        </span>
+                                                        <p class="checkbox__textwrapper"> @childCat.Category.Name </p>
+                                                    </label>
 
-                                                    </div>
-                                                </li>
-                                                }
-
+                                                </div>
+                                            </li>
                                             }
 
-                                    </ul>
+                                        }
+
+                                </ul>
 
 
-                                </li>
-                                }
-                                else if (cat.Category.ParentCategory == null && cat.Category.ChildCategories == null)
-                                {
+                            </li>
+                            }
+                            else if (cat.Category.ParentCategory == null && cat.Category.ChildCategories == null)
+                            {
 
-                                <!-- Don't Parent -->
-                                <li class="sub-category">
+                            <!-- Don't Parent -->
+                            <li class="sub-category">
 
-                                    <div class="parent-cat">
+                                <div class="parent-cat">
 
-                                        <div class="checkbox-wrapper-33">
-                                            <label class="checkbox">
-                                                <input data-id="@cat.Category.Id" data-select="@cat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == cat.Category.Id) ? "checked" : "") />
-                                                <span class="checkbox__symbol">
-                                                    <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
-                                                         viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 14l8 7L24 7"></path>
-                                                    </svg>
-                                                </span>
-                                                <p class="checkbox__textwrapper">@cat.Category.Name</p>
-                                            </label>
-
-                                        </div>
+                                    <div class="checkbox-wrapper-33">
+                                        <label class="checkbox">
+                                            <input data-id="@cat.Category.Id" data-select="@cat.IsSelected" class="checkbox__trigger visuallyhidden cat-select" type="checkbox" @(Model.SelectedCats != null && Model.SelectedCats.Any(c => c.catId == cat.Category.Id) ? "checked" : "") />
+                                            <span class="checkbox__symbol">
+                                                <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                                     viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M4 14l8 7L24 7"></path>
+                                                </svg>
+                                            </span>
+                                            <p class="checkbox__textwrapper">@cat.Category.Name</p>
+                                        </label>
 
                                     </div>
 
+                                </div>
 
 
-                                </li>
-                                <!-- Don't Parent -->
-                                }
 
+                            </li>
+                            <!-- Don't Parent -->
                             }
 
-                    </ul>
+                        }
 
-                </li>
+                </ul>
 
-                }
+            </li>
 
 
 
-            <li class="filter-box colors">
+
+
+            <li class="filter-box colors @(Model.SelectedColors!=null&&Model.SelectedColors.Count()>0? "active" : "")">
 
                 <div class="box-head">
                     <h3>Colors</h3>
@@ -154,54 +154,26 @@
 
                 <ul class="filter-container">
 
-                    <li class="color-box">
+                        @foreach (var color in Model.ReadyColors)
+                        {
+                        <li class="color-box @(Model.SelectedColors != null && Model.SelectedColors.Any(c => c.colorId == color.Color.Id) ? "active" : "")">
 
-                        <label>
-                            <div class="color">
-                                <p style="background-color: #398510;"></p>
-                            </div>
+                            <label>
+                                <div class="color " style=" @(Model.SelectedColors != null && Model.SelectedColors.Any(c => c.colorId == color.Color.Id) ? "border: 2px solid rgb(217, 0, 0);" : "") ">
+                                    <p style="background-color: @color.Color.HexCode;"></p>
+                                </div>
 
-                            <div class="color-name">
-                                Hakki
-                            </div>
+                                <div class="color-name ">
+                                        @color.Color.Name
 
-                            <input type="checkbox" id="#398510" hidden>
-                        </label>
+                                </div>
 
-                    </li>
+                                <input type="checkbox" class="color-box-id" data-id="@color.Color.Id" hidden @(Model.SelectedColors != null && Model.SelectedColors.Any(c => c.colorId == color.Color.Id) ? "checked" : "") />
+                            </label>
 
-                    <li class="color-box">
+                        </li>
+                        }
 
-                        <label>
-                            <div class="color">
-                                <p style="background-color: #ff0000;"></p>
-                            </div>
-
-                            <div class="color-name">
-                                Red
-                            </div>
-
-                            <input type="checkbox" id="#ff0000" hidden>
-                        </label>
-
-                    </li>
-
-
-                    <li class="color-box">
-
-                        <label>
-                            <div class="color">
-                                <p style="background-color: #3458ea;"></p>
-                            </div>
-
-                            <div class="color-name">
-                                Blue
-                            </div>
-
-                            <input type="checkbox" id="#3458ea" hidden>
-                        </label>
-
-                    </li>
 
                 </ul>
 
@@ -210,7 +182,8 @@
 
 
 
-            <li class="filter-box sizes">
+
+            <li class="filter-box sizes @(Model.SelectedSizes!=null&&Model.SelectedSizes.Count()>0? "active" : "")">
 
                 <div class="box-head">
                     <h3>Sizes</h3>
@@ -220,45 +193,22 @@
                 </div>
 
 
-                <ul class="filter-container size">
-
-                    <li class="size-box">
-                        <label>
-                            <span>S</span>
-                            <input type="checkbox" id="s" hidden>
-                        </label>
-                    </li>
+                <ul class="filter-container size ">
 
 
-                    <li class="size-box active">
-                        <label>
-                            <span>M</span>
-                            <input type="checkbox" id="m" hidden>
-                        </label>
-                    </li>
+                        @if (Model.ReadySizes != null)
+                        {
 
-
-                    <li class="size-box">
-                        <label>
-                            <span>L</span>
-                            <input type="checkbox" id="l" hidden>
-                        </label>
-                    </li>
-
-                    <li class="size-box">
-                        <label>
-                            <span>XL</span>
-                            <input type="checkbox" id="XL" hidden>
-                        </label>
-                    </li>
-
-                    <li class="size-box">
-                        <label>
-                            <span>XXL</span>
-                            <input type="checkbox" id="XXL" hidden>
-                        </label>
-                    </li>
-
+                            @foreach (var size in Model.ReadySizes)
+                            {
+                            <li class="size-box @(Model.SelectedSizes != null && Model.SelectedSizes.Any(c => c.sizeId == size.Size.Id) ? "active" : "")">
+                                <label>
+                                    <span>@size.Size.Name</span>
+                                    <input class="size-check" type="checkbox" data-id="@size.Size.Id" id="@size.Size.Name" hidden @(Model.SelectedSizes != null && Model.SelectedSizes.Any(c => c.sizeId == size.Size.Id) ? "checked" : "")>
+                                </label>
+                            </li>
+                            }
+                        }
 
                 </ul>
 
@@ -281,32 +231,29 @@
 
                 <ul class="filter-container gender">
 
-                    <li class="checkbox-wrapper-33">
-                        <label class="checkbox">
-                            <input class="checkbox__trigger visuallyhidden" type="checkbox" />
-                            <span class="checkbox__symbol">
-                                <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
-                                     viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 14l8 7L24 7"></path>
-                                </svg>
-                            </span>
-                            <p class="checkbox__textwrapper">Men</p>
-                        </label>
 
-                    </li>
-                    <li class="checkbox-wrapper-33">
-                        <label class="checkbox">
-                            <input class="checkbox__trigger visuallyhidden" type="checkbox" />
-                            <span class="checkbox__symbol">
-                                <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
-                                     viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 14l8 7L24 7"></path>
-                                </svg>
-                            </span>
-                            <p class="checkbox__textwrapper">Woman</p>
-                        </label>
+                        @if (Model.ReadyGender != null)
+                        {
+                            foreach (var gen in Model.ReadyGender)
+                            {
 
-                    </li>
+                            <li class="checkbox-wrapper-33">
+                                <label class="checkbox">
+                                    <input class="checkbox__trigger visuallyhidden select-gender" type="checkbox" data-id="@gen.Gender.Id" @(Model.SelectedGenders != null && Model.SelectedGenders.Any(c => c.genId == gen.Gender.Id) ? "checked" : "")>
+                                    <span class="checkbox__symbol">
+                                        <svg aria-hidden="true" class="icon-checkbox" width="28px" height="28px"
+                                             viewBox="0 0 28 28" version="1" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 14l8 7L24 7"></path>
+                                        </svg>
+                                    </span>
+                                    <p class="checkbox__textwrapper">@gen.Gender.Name</p>
+                                </label>
+
+                            </li>
+                            }
+                        }
+
+
 
                 </ul>
 
@@ -340,42 +287,28 @@
                         <ul id="searchResults">
 
                             <!-- <span>Search not found ...</span> -->
+                                @* @await Component.InvokeAsync("SearchsTagViewComponent") *@
 
-
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-                            <li class="srch-tag"><a href="#"># Tag</a></li>
-
-
+                                @await Html.PartialAsync("_TagsSearchPartialView")
 
                         </ul>
 
                         <div class="selected-tags">
                             <ul class="selected-tags-list">
-                                <li>
-                                    <p>tag-1</p>
 
-                                    <i class="fa-solid fa-xmark"></i>
-                                    </a>
-                                </li>
-                                <li>
-                                    <p>tag-2</p>
-                                    <i class="fa-solid fa-xmark"></i></a>
-                                </li>
-                                <li>
-                                    <p>t</p>
-                                    <i class="fa-solid fa-xmark"></i></a>
-                                </li>
+                                    @if (Model.SelectedTags != null)
+                                    {
+                                        foreach (var tag in Model.SelectedTags)
+                                        {
+
+                                        <li class="select-tag" data-id="@tag.Id">
+                                            <p>@tag.Name</p>
+
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </li>
+                                        }
+
+                                    }
 
                             </ul>
 
@@ -390,7 +323,9 @@
 
 
 
-            <li class="filter-box prices">
+
+
+            <li class="filter-box prices @(Model.CurrrentMaxPrice!=null||Model.CurrrentMinPrice!=null?"active":"")">
 
                 <div class="box-head">
                     <h3>Prices</h3>
@@ -414,7 +349,7 @@
 
                                     <div class="inp-box">
                                         <p>$</p>
-                                        <input type="number" class="min-input" value="0">
+                                        <input type="number" class="min-input" min="0" max="@Model.MaxPrice" value="@(Model.CurrrentMinPrice!=null?Model.CurrrentMinPrice:0)">
                                     </div>
                                 </div>
 
@@ -422,13 +357,11 @@
                                     <span>Max</span>
                                     <div class="inp-box">
                                         <p>$</p>
-                                        <input type="number" class="max-input" value="10000">
+                                        <input type="number" class="max-input" min="0" max="@Model.MaxPrice" value="@(Model.CurrrentMaxPrice!=null?Model.CurrrentMaxPrice:Model.MaxPrice)">
                                     </div>
                                 </div>
 
                             </div>
-
-
 
                             <div class="slider-container">
                                 <div class="price-slider">
@@ -437,15 +370,19 @@
                         </div>
 
 
+
+
                         <!-- Slider -->
                         <div class="range-input">
-                            <input type="range" class="min-range" min="0" max="10000" value="0" step="1">
-                            <input type="range" class="max-range" min="0" max="10000" value="10000" step="1">
+                            <input type="range" class="min-range" min="0" max="@Model.MaxPrice" value="@(Model.CurrrentMinPrice!=null?Model.CurrrentMinPrice:0)" step="1">
+                            <input type="range" class="max-range" min="0" max="@Model.MaxPrice" value="@(Model.CurrrentMaxPrice!=null?Model.CurrrentMaxPrice:Model.MaxPrice)" step="1">
                         </div>
                     </div>
                 </div>
 
             </li>
+
+
             <div class="buttons-filter">
 
                 <button class="submit" type="submit">Filter</button>
@@ -517,9 +454,9 @@
 
                         <div>
                             <span class="item-counts">Showing</span>
-                            <span class="page-item">1-12</span>
+                            <span class="page-item">@(Model.PageInfo.CurrentPage)-@(Model.PageInfo.TotalItems < 9 ? Model.PageInfo.TotalItems : Model.PageInfo.ItemsPerPage)</span>
                             <span>of</span>
-                            <span class="items-con">@Model.Product.Count()</span>
+                            <span class="items-con">@Model.PageInfo.TotalItems</span>
                             <span>results</span>
                         </div>
                     </div>
@@ -528,24 +465,43 @@
 
                     <div class="right-box">
                         <div class="select" tabindex="1">
-                            <input value="popularity" class="selectopt" name="test" type="radio" id="opt1" checked>
-                            <label for="opt1" class="option">Sort by popularity</label>
-                            <input value="rating" class="selectopt" name="test" type="radio" id="opt2">
-                            <label for="opt2" class="option">Sort by average rating</label>
-                            <input value="date" class="selectopt" name="test" type="radio" id="opt3">
-                            <label for="opt3" class="option">Sort by latest</label>
-                            <input value="price" class="selectopt" name="test" type="radio" id="opt4">
-                            <label for="opt4" class="option">Sort by price: low to high</label>
-                            <input value="price-desc" class="selectopt" name="test" type="radio" id="opt5">
-                            <label for="opt5" class="option">Sort by price: high to low</label>
-                        </div>
+                            <input data-id="1" value="Featured" class="selectopt" name="test" type="radio" id="opt1" checked>
+                            <label for="opt1" class="option">Featured</label>
 
+                            <input data-id="2" value="Best Sellers" class="selectopt" name="test" type="radio" id="opt2">
+                            <label for="opt2" class="option">Best Sellers</label>
+
+                            <input data-id="3" value="Newest Arrivals" class="selectopt" name="test" type="radio" id="opt3">
+                            <label for="opt3" class="option">Newest Arrivals</label>
+
+                            <input data-id="4" value="Discount Percentage" class="selectopt" name="test" type="radio" id="opt4">
+                            <label for="opt4" class="option">Discount Percentage</label>
+
+                            <input data-id="5" value="Highest Price" class="selectopt" name="test" type="radio" id="opt5">
+                            <label for="opt5" class="option">Highest Price</label>
+
+                            <input data-id="6" value="Lowest Price" class="selectopt" name="test" type="radio" id="opt6">
+                            <label for="opt6" class="option">Lowest Price</label>
+                        </div>
 
                     </div>
 
                 </div>
 
-                @await Html.PartialAsync("_ProductPartialView", Model)
+
+                <!-- Active -->
+                @if (Model.Product.Count() > 0 && Model.Product != null)
+                {
+                    @await Html.PartialAsync("_ProductPartialView", Model)
+
+                }
+                else
+                {
+                    <div class="not-found active">
+                        <p>No products found...</p>
+                    </div>
+                }
+
 
 
             </div>
@@ -573,29 +529,102 @@
 @section script {
     <script src="~/cilent/assets/js/shop.js"></script>
 
-
     <script>
+
         document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('Form');
             const catSelectCheckboxes = document.querySelectorAll('.cat-select');
+            const colorSelectCheckboxes = document.querySelectorAll('.color-box-id');
+            const sizeSelectCheckboxes = document.querySelectorAll('.size-check');
+            const genderSelectCheckboxes = document.querySelectorAll('.select-gender');
+
+
+            const minPrice = document.querySelector('.min-input');
+            const maxPrice = document.querySelector('.max-input');
             const prevPageLink = document.getElementById('prevPage');
             const nextPageLink = document.getElementById('nextPage');
             const numBtns = document.querySelectorAll('.num-btn');
+
+            form.addEventListener('reset', async (event) => {
+                let formData = new FormData(form);
+                const queryString = new URLSearchParams(formData).toString();
+                window.location.href = `/Shop/Index?${queryString}`;
+            })
 
             form.addEventListener('submit', async (event) => {
                 event.preventDefault();
 
                 let formData = new FormData(form);
 
+                //Category
                 const selectedCats = Array.from(catSelectCheckboxes)
                     .filter(checkbox => checkbox.checked)
                     .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
 
                 selectedCats.forEach(catId => {
-                    formData.append('SelectedCategories', catId.toString());
+                    formData.append('SentCategories', catId.toString());
                 });
-                console.log(selectedCats)
-                console.log(formData)
+
+                //Gender
+                const selectedGens = Array.from(genderSelectCheckboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
+
+                selectedGens.forEach(genId => {
+                    formData.append('SentGenders', genId.toString());
+                });
+
+
+                //Color
+                const selectedColor = Array.from(colorSelectCheckboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
+
+                selectedColor.forEach(colorId => {
+                    formData.append('SentColors', colorId.toString());
+                });
+
+                //Size
+                const selectedSize = Array.from(sizeSelectCheckboxes)
+                    .filter(checkbox => checkbox.checked)
+                    .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
+
+                selectedSize.forEach(colorId => {
+                    formData.append('SentSizes', colorId.toString());
+                });
+
+
+                //Price
+                formData.append('MinPrice', minPrice.value);
+                formData.append('MaxPrice', maxPrice.value);
+
+
+                //Tags
+                const tagSelectCheckboxes = document.querySelectorAll('.select-tag');
+
+                let selectedTags = [];
+                tagSelectCheckboxes.forEach(tag => {
+                    selectedTags.push(tag.getAttribute('data-id'));
+                });
+
+                selectedTags.forEach(tagId => {
+                    formData.append('SentTag', tagId.toString());
+                });
+
+
+
+                //Order
+                const radios = document.querySelectorAll('.selectopt');
+                const checkedRadio = Array.from(radios).find(radio => radio.checked);
+                const orderId = checkedRadio.getAttribute('data-id');
+                formData.append('OrderBy', orderId);
+
+
+
+                //Grid
+                formData.append('Grid', document.querySelector('.grid').classList.contains('active'));
+
+
                 const queryString = new URLSearchParams(formData).toString();
                 window.location.href = `/Shop/Index?${queryString}`;
 
@@ -615,7 +644,7 @@
                 }
             });
 
-            if (prevPageLink && nextPageLink && numBtns.length > 0) {
+            if (prevPageLink && nextPageLink && numBtns.length > 1) {
                 prevPageLink.addEventListener('click', prevPage);
                 nextPageLink.addEventListener('click', nextPage);
 
@@ -629,12 +658,116 @@
             }
         });
 
+
+
+
+
+
+        let radios = document.querySelectorAll('.selectopt');
+
+
+        radios.forEach(rad => {
+            rad.addEventListener('click', () => {
+                const form = document.getElementById('Form');
+                const formData = new FormData(form)
+
+                const checkedRadio = Array.from(radios).find(radio => radio.checked);
+                const orderId = checkedRadio.getAttribute('data-id');
+
+
+                formData.append('OrderBy', orderId);
+
+                const queryString = new URLSearchParams(formData).toString();
+                window.location.href = `/Shop/Index?${queryString}`;
+            })
+        })
+
+
+
+
+
+
+
+
+
+
         function sendFilterRequest(page) {
             const form = document.getElementById('Form');
             const formData = new FormData(form);
 
+            // Categories
+            const catSelectCheckboxes = document.querySelectorAll('.cat-select');
+            const selectedCats = Array.from(catSelectCheckboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
+
+            selectedCats.forEach(catId => {
+                formData.append('SentCategories', catId.toString());
+            });
+
+            //Genders
+            const genderSelectCheckboxes = document.querySelectorAll('.select-gender');
+            const selectedGens = Array.from(genderSelectCheckboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
+
+            selectedGens.forEach(genId => {
+                formData.append('SentGenders', genId.toString());
+            });
+
+            // Color
+            const colorSelectCheckboxes = document.querySelectorAll('.color-box-id');
+
+            const selectedColor = Array.from(colorSelectCheckboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
+
+            selectedColor.forEach(colorId => {
+                formData.append('SentColors', colorId.toString());
+            });
+
+
+            //Size
+            const sizeSelectCheckboxes = document.querySelectorAll('.size-check');
+
+            const selectedSize = Array.from(sizeSelectCheckboxes)
+                .filter(checkbox => checkbox.checked)
+                .map(checkbox => parseInt(checkbox.getAttribute('data-id')));
+
+            selectedSize.forEach(colorId => {
+                formData.append('SentSizes', colorId.toString());
+            });
+
+            //Tags
+            const tagSelectCheckboxes = document.querySelectorAll('.select-tag');
+
+            let selectedTags = [];
+            tagSelectCheckboxes.forEach(tag => {
+                selectedTags.push(tag.getAttribute('data-id'));
+            });
+
+            selectedTags.forEach(tagId => {
+                formData.append('SentTag', tagId.toString());
+            });
+
+            //Order
+            const radios = document.querySelectorAll('.selectopt');
+            const checkedRadio = Array.from(radios).find(radio => radio.checked);
+            const orderId = checkedRadio.getAttribute('data-id');
+            formData.append('OrderBy', orderId);
+
+
+            //Price
+            const minPrice = document.querySelector('.min-input');
+            const maxPrice = document.querySelector('.max-input');
+
+            formData.append('MinPrice', minPrice.value);
+            formData.append('MaxPrice', maxPrice.value);
+
+
+
             formData.append('PageInfo.CurrentPage', page);
-            formData.append('PageInfo.ItemsPerPage', 2);
+            formData.append('PageInfo.ItemsPerPage', 9);
             formData.append('Grid', document.querySelector('.grid').classList.contains('active'));
 
             const queryString = new URLSearchParams(formData).toString();
@@ -662,9 +795,30 @@
             sendFilterRequest(pageNum);
         }
 
-
+        document.addEventListener("DOMContentLoaded", function () {
+            var searchInput = document.getElementById("searchInput");
+            searchInput.addEventListener("input", function () {
+                let text = searchInput.value.toString().trim();
+                fetch(`/Shop/TagsSearch?text=${text}`)
+                    .then(res => res.text())
+                    .then(res => {
+                        let search = document.getElementById('searchResults');
+                        search.innerHTML = res;
+                    })
+                    .catch(e => console.error(e));
+            });
+        });
 
 
     </script>
+
+    <script>
+
+    </script>
+
 }
+
+
+
+
 

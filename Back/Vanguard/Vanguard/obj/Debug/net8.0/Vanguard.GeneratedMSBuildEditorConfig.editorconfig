@@ -17,131 +17,199 @@ build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Vanguard
 build_property.RootNamespace = Vanguard
-build_property.ProjectDir = C:\Users\ROG\Desktop\Tamerlan\CODE ACADEMY\Projects\Final Project\GitHub\Final-Project\VANGUARD.AZ\Back\Vanguard\Vanguard\
+build_property.ProjectDir = C:\Users\ROG\Desktop\Tamerlan\VANGUARD.AZ\Back\Vanguard\Vanguard\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\ROG\Desktop\Tamerlan\CODE ACADEMY\Projects\Final Project\GitHub\Final-Project\VANGUARD.AZ\Back\Vanguard\Vanguard
+build_property.MSBuildProjectDirectory = C:\Users\ROG\Desktop\Tamerlan\VANGUARD.AZ\Back\Vanguard\Vanguard
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/Register.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/AccessCode.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxBY2Nlc3NDb2RlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/Create.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/AdminAccess/EnterPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5BY2Nlc3NcRW50ZXJQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Admin/EmployeeCreat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cRW1wbG95ZWVDcmVhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Admin/EmployeeList.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRtaW5cRW1wbG95ZWVMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/DeletedList.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/DeletedList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRGVsZXRlZExpc3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/Detail.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRGV0YWlsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/Edit.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/Index.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Home/Index.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Gender/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2VuZGVyXENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Gender/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcR2VuZGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/Create.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/DeletedList.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/DeletedList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxEZWxldGVkTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/Detail.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/Edit.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/Index.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Error400.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Error400.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yNDAwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Error404.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Error403.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yNDAzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Error404.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yNDA0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Error500.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Error500.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yNTAwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/_Layout.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/Create.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/DeletedList.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/DeletedList.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXERlbGV0ZWRMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/Detail.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXERldGFpbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/Edit.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/Index.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Tag/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcVGFnXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/_ViewImports.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/_ViewStart.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Home/Index.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Account/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Account/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/ShopProductViewComponents/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2hvcFByb2R1Y3RWaWV3Q29tcG9uZW50c1xEZWZhdWx0LmNzaHRtbA==
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/SearchsTagViewComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoc1RhZ1ZpZXdDb21wb25lbnRcRGVmYXVsdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/_Layout.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/SearchTag/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoVGFnXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/TagSearch/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVGFnU2VhcmNoXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Error403.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yNDAzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/_ProductPartialView.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/_ProductPartialView.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Qcm9kdWN0UGFydGlhbFZpZXcuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shop/Index.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/_TagsSearchPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9UYWdzU2VhcmNoUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shop/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxEZXRhaWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shop/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hvcFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/_ViewImports.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/CODE ACADEMY/Projects/Final Project/GitHub/Final-Project/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/_ViewStart.cshtml]
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

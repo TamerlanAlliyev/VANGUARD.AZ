@@ -8,10 +8,12 @@ using Vanguard.Areas.Admin.ViewModels.ErrorsViewModel;
 using Vanguard.Data;
 using Vanguard.Exceptions;
 using Vanguard.Models;
+using YourNamespace.Filters;
 
 namespace Vanguard.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[ServiceFilter(typeof(AdminAuthorizationFilter))]
 public class CategoryController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;
