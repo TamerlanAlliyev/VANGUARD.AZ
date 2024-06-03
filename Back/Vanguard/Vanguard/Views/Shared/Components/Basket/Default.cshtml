@@ -1,0 +1,134 @@
+﻿@using Vanguard.ViewModels.Basket
+@model BasketListVM
+
+
+<div class="basket-header">
+    <h4>SHOPPING BAG ( <span>@Model.TotalCount</span> )</h4>
+    <a class="basket-close" href="#">
+        <img src="~/cilent/assets/icons/close-black.svg" alt="">
+    </a>
+</div>
+
+<div class="basket-product-list">
+
+    <ul>
+
+        @if (Model.BasketItems != null)
+        {
+            @foreach (var prod in Model.BasketItems)
+            {
+                <li data-id="@prod.Id" class="product-item">
+
+                    <div class="basket-prod" href="#">
+
+                        <div class="basket-prod-info">
+
+                            <a asp-area="" asp-controller="Shop" asp-action="Detail" asp-route-Id="@prod.ProductId" class="basket-prod-image">
+                                <img src="~/cilent/assets/images/products/@prod.Image" alt="product.jpg">
+                            </a>
+
+                            <div class="basket-prod-detail">
+
+                                <div class="prod-info-name">
+                                    <a href="#">
+                                        @prod.Name
+
+                                    </a>
+                                    <p>Color: @prod.Color</p>
+                                    <p>Size: @prod.Size</p>
+                                </div>
+
+
+                                <div class="basket-prices-count-input">
+
+                                    <div class="basket-con-inpt">
+
+                                        <div data-total="@prod.ItemCount" class="basket-quantity-box">
+
+                                            <div class="basket-quantity minus">
+                                                <i class="fa-solid fa-minus"></i>
+                                            </div>
+
+                                            <input class="quantity-input" type="number" value="@prod.Quantity">
+
+                                            <div class="basket-quantity plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="basket-price-close">
+
+                            <a onclick="CloseMenu();">
+                                <img class="basket-prod-close" src="~/cilent/assets/icons/close-black.svg"
+                                     alt="">
+                            </a>
+                            <div class="cart-prices item">
+
+                                @if (prod.DiscountPrice != null || prod.DiscountPrice > 0 || prod.DiscountPrice < prod.SellPrice)
+                                {
+
+                                    <span class="sell-price dis" id="dis-price">$@prod.DiscountPrice</span>
+                                    <del class="sell-price dis-price" id="sell-price">$@prod.SellPrice</del>
+                                }
+                                else
+                                {
+                                    <span class="sell-price sell" id="sell-price">$@prod.SellPrice </span>
+                                }
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </li>
+            }
+        }
+
+
+
+
+
+    </ul>
+
+</div>
+
+
+<div class="basket-view">
+
+    <div class="bastek-total-price">
+        <p>SUBTOTAL:</p>
+        <div class="basket-total-prices">
+            @if (Model.TotalDiscountPrice > 0 || Model.TotalDiscountPrice < Model.TotalSellPrice)
+            {
+                <span class="sell-price dis" id="dis-price">$@Model.TotalDiscountPrice</span>
+                <del class="sell-price dis-price" id="sell-price">$@Model.TotalSellPrice</del>
+            }
+            else
+            {
+                <span class="sell-price sell" id="sell-price">$@Model.TotalSellPrice </span>
+            }
+
+        </div>
+    </div>
+
+
+
+
+    <div class="basket-buttons">
+        <a class="basket-viewcart" asp-controller="Basket" asp-action="Index">VIEW CART</a>
+        <a class="basket-checkout" href="~/checkout.html">CHECKOUT</a>
+    </div>
+</div>
+

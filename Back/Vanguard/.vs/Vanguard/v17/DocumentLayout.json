@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\adminauthorizationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\adminauthorizationfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\controller\\settingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\controller\\settingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\viewmodels\\setting\\userinfoupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\viewmodels\\setting\\userinfoupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\gendercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\gendercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\tagcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\viewmodels\\setting\\settingfiltervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\viewmodels\\setting\\settingfiltervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,6 +24,19 @@
           "DockedWidth": 200,
           "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SettingFilterVM.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\ViewModels\\Setting\\SettingFilterVM.cs",
+              "RelativeDocumentMoniker": "Vanguard\\ViewModels\\Setting\\SettingFilterVM.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\ViewModels\\Setting\\SettingFilterVM.cs",
+              "RelativeToolTip": "Vanguard\\ViewModels\\Setting\\SettingFilterVM.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T14:08:38.096Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
@@ -58,105 +51,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TagController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\TagController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\TagController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\TagController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\TagController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentIndex": 1,
+              "Title": "UserInfoUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\ViewModels\\Setting\\UserInfoUpdate.cs",
+              "RelativeDocumentMoniker": "Vanguard\\ViewModels\\Setting\\UserInfoUpdate.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\ViewModels\\Setting\\UserInfoUpdate.cs",
+              "RelativeToolTip": "Vanguard\\ViewModels\\Setting\\UserInfoUpdate.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:51:09.677Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Program.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Program.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Program.cs",
-              "RelativeToolTip": "Vanguard\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:39:43.704Z",
+              "WhenOpened": "2024-06-03T14:06:53.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AdminAuthorizationFilter.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\AdminAuthorizationFilter.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\AdminAuthorizationFilter.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\AdminAuthorizationFilter.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\AdminAuthorizationFilter.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAAAAAA",
+              "Title": "SettingController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\SettingController.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Controller\\SettingController.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\SettingController.cs",
+              "RelativeToolTip": "Vanguard\\Controller\\SettingController.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAAQwDgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:32:41.895Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GenderController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\GenderController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\GenderController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\GenderController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\GenderController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:33:10.465Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:33:10.477Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AdminController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\AdminController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\AdminController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\AdminController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\AdminController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:33:10.55Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\AccountController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:33:10.561Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-31T19:35:47.879Z",
+              "WhenOpened": "2024-06-03T13:19:07.243Z",
               "EditorCaption": ""
             }
           ]

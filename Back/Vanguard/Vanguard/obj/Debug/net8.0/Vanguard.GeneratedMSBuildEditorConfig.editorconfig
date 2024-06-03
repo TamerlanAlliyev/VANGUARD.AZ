@@ -30,12 +30,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxBY2Nlc3NDb2RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/ForgotPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxGb3Jnb3RQYXNzd29yZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/ResetPassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/AdminAccess/EnterPassword.cshtml]
@@ -102,6 +110,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Components/UserInfo/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXENvbXBvbmVudHNcVXNlckluZm9cRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Error400.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yNDAwLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -166,20 +178,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZXNldFBhc3N3b3JkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Basket/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFza2V0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/SearchsTagViewComponent/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoc1RhZ1ZpZXdDb21wb25lbnRcRGVmYXVsdC5jc2h0bWw=
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Setting/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2V0dGluZ1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/SearchTag/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoVGFnXERlZmF1bHQuY3NodG1s
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/Basket/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmFza2V0XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/TagSearch/Default.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVGFnU2VhcmNoXERlZmF1bHQuY3NodG1s
+[C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/User/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVXNlclxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/Desktop/Tamerlan/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Error403.cshtml]

@@ -1,35 +1,32 @@
-var accountList = document.querySelectorAll('.account-list a');
+//var accountList = document.querySelectorAll('.account-list a');
 
-accountList.forEach(cat => {
-    cat.addEventListener('click', (event) => {
-        event.preventDefault();
+//accountList.forEach(cat => {
+//    cat.addEventListener('click', (event) => {
+//        event.preventDefault();
 
-        let catName = cat.dataset.name;
+//        let catName = cat.dataset.name;
 
 
-        // Remove 'active' class from all categories
-        accountList.forEach(category => {
-            category.classList.remove('active');
-        });
-        // Add 'active' class to the clicked category
-        cat.classList.add('active');
+//        accountList.forEach(category => {
+//            category.classList.remove('active');
+//        });
+//        // Add 'active' class to the clicked category
+//        cat.classList.add('active');
 
-        var accountContainers = document.querySelectorAll('.account-container');
+//        var accountContainers = document.querySelectorAll('.account-container');
 
-        // Close all containers
-        accountContainers.forEach(container => {
-            container.querySelectorAll('.acc').forEach(acc => {
-                acc.classList.remove('active');
-            });
-        });
+//        accountContainers.forEach(container => {
+//            container.querySelectorAll('.acc').forEach(acc => {
+//                acc.classList.remove('active');
+//            });
+//        });
 
-        // Open the container associated with the clicked category
-        var containerToOpen = document.querySelector('.account-container .' + catName);
-        if (containerToOpen) {
-            containerToOpen.classList.add('active');
-        }
-    });
-});
+//        var containerToOpen = document.querySelector('.account-container .' + catName);
+//        if (containerToOpen) {
+//            containerToOpen.classList.add('active');
+//        }
+//    });
+//});
 
 
 
@@ -175,141 +172,7 @@ function WishContainer(params) {
     }
 }
 
-// WishContainer();
 
-// function SwiperCustom() {
-
-
-//     var swiper = new Swiper(".wish.mySwiper", {
-//         slidesPerView: 1,
-//         spaceBetween: 10,
-//         pagination: {
-//             el: ".swiper-pagination",
-//             clickable: true,
-//             dynamicBullets: true,
-//         },
-//         breakpoints: {
-//             "@0.00": {
-//                 slidesPerView: 2,
-//                 spaceBetween: 10,
-//                 grid: {
-//                     rows: 2,
-//                     fill: "row",
-//                 }
-//             },
-//             "@0.75": {
-//                 slidesPerView: 2,
-//                 spaceBetween: 20,
-//                 grid: {
-//                     rows: 2,
-//                     fill: "row",
-//                 }
-//             },
-//             "@1.00": {
-//                 slidesPerView: 2,
-//                 spaceBetween: 40,
-//                 grid: {
-//                     rows: 2,
-//                     fill: "row",
-//                 }
-//             },
-//             "@1.50": {
-//                 slidesPerView: 4,
-//                 spaceBetween: 35,
-//                 grid: {
-//                     rows: 2,
-//                     fill: "row",
-//                 }
-//             },
-//         },
-//     });
-// }
-
-// SwiperCustom()
-// var swiper = new Swiper(".hover-image .mySwiper", {
-//     navigation: {
-//         nextEl: ".swiper-button-next",
-//         prevEl: ".swiper-button-prev",
-//     },
-// });
-
-
-
-
-// var itemImages = document.querySelectorAll('.item-image');
-
-// itemImages.forEach(itemImage => {
-//     let mainImage = itemImage.querySelector('.main-image');
-//     let hoverImage = itemImage.querySelector('.hover-image');
-//     let currentAddBtn = itemImage.querySelector('.add-btn');
-
-//     itemImage.addEventListener('mouseover', (event) => {
-//         if (event.target.classList.contains('main-image')) {
-//             hoverImage.classList.add('active');
-//             mainImage.classList.remove('active');
-//         }
-//         currentAddBtn.classList.add('active');
-//     });
-
-//     itemImage.addEventListener('mouseout', (event) => {
-//         if (event.target.classList.contains('main-image')) {
-//             hoverImage.classList.remove('active');
-//             mainImage.classList.add('active');
-//         }
-//         currentAddBtn.classList.remove('active');
-//     });
-// });
-
-
-
-
-
-
-// var productItems = document.querySelectorAll('.product-item');
-// var wishCnt = document.querySelector('.i-wish sup');
-// var basketCount = document.querySelector('.i-basket');
-
-// productItems.forEach(item => {
-//     var wishIconBtn = item.querySelector('.wish-icon img');
-//     var addToCart = item.querySelector('.add-btn a'); // Değişiklik burada: .add-btn sınıfı hedef alındı.
-
-//     wishIconBtn.addEventListener('click', (event) => {
-//         event.preventDefault();
-
-//         wishCnt.innerText--;
-
-//         if (parseInt(wishCnt.innerText) <= 0) {
-//             wishCnt.remove()
-//         }
-
-//         item.remove();
-
-//         WishContainer();
-//         SwiperCustom()
-//     });
-
-//     addToCart.addEventListener('click', (event) => {
-//         event.preventDefault();
-
-//         if (!basketCount.querySelector('.i-basket sup')) {
-//             var supElement = document.createElement('sup');
-//             supElement.textContent = '1';
-//             basketCount.appendChild(supElement);
-//         } else {
-//             var supElement = basketCount.querySelector('.i-basket sup');
-//             var currentValue = parseInt(supElement.textContent);
-//             supElement.textContent = currentValue + 1;
-//         }
-//     });
-
-//     WishContainer();
-
-// });
-
-
-
-
-  
 
 
 

@@ -40,6 +40,7 @@ namespace Vanguard
                 opt.Password.RequiredLength = 8;
                 opt.Password.RequireNonAlphanumeric = true;
                 opt.SignIn.RequireConfirmedEmail = false;
+
             }).AddEntityFrameworkStores<VanguardContext>().AddDefaultTokenProviders();
 
             var app = builder.Build();

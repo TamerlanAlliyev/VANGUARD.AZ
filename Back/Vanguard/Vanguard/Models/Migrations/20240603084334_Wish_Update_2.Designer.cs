@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Vanguard.Data;
 
@@ -11,9 +12,11 @@ using Vanguard.Data;
 namespace Vanguard.Migrations
 {
     [DbContext(typeof(VanguardContext))]
-    partial class VanguardContextModelSnapshot : ModelSnapshot
+    [Migration("20240603084334_Wish_Update_2")]
+    partial class Wish_Update_2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -228,13 +231,15 @@ namespace Vanguard.Migrations
 
                     b.Property<string>("RoleId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("AppUserId")
                         .IsUnique()
                         .HasFilter("[AppUserId] IS NOT NULL");
+
+                    b.HasIndex("RoleId");
 
                     b.ToTable("AllowedEmployees");
                 });
@@ -344,26 +349,26 @@ namespace Vanguard.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("Count")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SizeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
+                    b.Property<string>("AppUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("InformationId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("InformationId");
+
                     b.HasIndex("ProductId");
-
-                    b.HasIndex("SizeId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Baskets");
                 });
@@ -922,23 +927,18 @@ namespace Vanguard.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SizeId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("UserId")
+                    b.Property<string>("AppUserId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("AppUserId");
+
                     b.HasIndex("ProductId");
-
-                    b.HasIndex("SizeId");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Wishs");
                 });
@@ -1000,7 +1000,15 @@ namespace Vanguard.Migrations
                         .WithOne("AllowedEmployee")
                         .HasForeignKey("Vanguard.Models.AllowedEmployee", "AppUserId");
 
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", "Role")
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("AppUser");
+
+                    b.Navigation("Role");
                 });
 
             modelBuilder.Entity("Vanguard.Models.AppUser", b =>
@@ -1021,29 +1029,25 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Basket", b =>
                 {
-                    b.HasOne("Vanguard.Models.Product", "Product")
+                    b.HasOne("Vanguard.Models.AppUser", "AppUser")
                         .WithMany()
-                        .HasForeignKey("ProductId")
+                        .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Vanguard.Models.Size", "Size")
+                    b.HasOne("Vanguard.Models.Information", "Information")
                         .WithMany()
-                        .HasForeignKey("SizeId")
+                        .HasForeignKey("InformationId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Vanguard.Models.AppUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.HasOne("Vanguard.Models.Product", null)
+                        .WithMany("BasketList")
+                        .HasForeignKey("ProductId");
 
-                    b.Navigation("Product");
+                    b.Navigation("AppUser");
 
-                    b.Navigation("Size");
-
-                    b.Navigation("User");
+                    b.Navigation("Information");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Category", b =>
@@ -1167,29 +1171,21 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Wish", b =>
                 {
+                    b.HasOne("Vanguard.Models.AppUser", "AppUser")
+                        .WithMany()
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("Vanguard.Models.Product", "Product")
                         .WithMany()
                         .HasForeignKey("ProductId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Vanguard.Models.Size", "Size")
-                        .WithMany()
-                        .HasForeignKey("SizeId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("Vanguard.Models.AppUser", "User")
-                        .WithMany()
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                    b.Navigation("AppUser");
 
                     b.Navigation("Product");
-
-                    b.Navigation("Size");
-
-                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Vanguard.Models.AppUser", b =>
@@ -1225,6 +1221,8 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Product", b =>
                 {
+                    b.Navigation("BasketList");
+
                     b.Navigation("Images");
 
                     b.Navigation("Information");

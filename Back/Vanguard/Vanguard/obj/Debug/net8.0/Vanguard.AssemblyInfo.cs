@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vanguard")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56d8a2140c9507de8a80d3d1f3e18d0981e00107")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4e1a8eb031cf66b77a162fc0c8dc6d3d40088f31")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vanguard")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vanguard")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

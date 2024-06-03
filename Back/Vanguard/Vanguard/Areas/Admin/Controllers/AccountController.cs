@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Vanguard.Areas.Admin.ViewModels.Account;
 using Vanguard.Data;
 using Vanguard.Extensions;
@@ -9,7 +8,6 @@ using Vanguard.Helpers;
 using Vanguard.Models;
 using Vanguard.Services.Interfaces;
 using Vanguard.ViewModels.Account;
-using YourNamespace.Filters;
 
 namespace Vanguard.Areas.Admin.Controllers;
 
@@ -40,8 +38,16 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
 
 
 
-    public IActionResult Login()
+    public async Task<IActionResult> Login()
     {
+        if (TempData["accCode"] == null)
+        {
+            return View("Error404");
+        }
+        var checkEmail = await _context.AllowedEmployees.FirstOrDefaultAsync(a => a.AccessCode == TempData["accCode"]!.ToString());
+
+        TempData["accCode"] = TempData["accCode"];
+        ViewData["Email"] = checkEmail!.Email;
         return View();
     }
 
@@ -73,12 +79,19 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
         {
             return Redirect(ReturnUrl);
         }
+
+        var allowedEmp = await _context.AllowedEmployees.FirstOrDefaultAsync(a => a.Email == vm.Email);
+        user.AllowedEmployee = allowedEmp;
+        user.AllowedEmployeeId = allowedEmp!.Id;
+
+        await _context.SaveChangesAsync();
         return RedirectToAction("Index", "Home");
     }
 
 
     public IActionResult AccessCode()
     {
+        _signInManager.SignOutAsync();
         return View();
     }
 
@@ -89,6 +102,8 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
 
         var checkUser = await _context.AllowedEmployees.FirstOrDefaultAsync(a => a.AccessCode == vm.Code);
 
+        TempData["accCode"] = vm.Code;
+
         if (checkUser == null)
         {
             ModelState.AddModelError("", "Invalid access code.");
@@ -96,33 +111,43 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
         }
         if (checkUser.AppUserId != null)
         {
-			return RedirectToAction(nameof(Login));
-		}
+            return RedirectToAction(nameof(Login));
+        }
         else
         {
-			TempData["accCode"] = vm.Code;
-			return RedirectToAction(nameof(Register));
-		}
+            return RedirectToAction(nameof(Register));
+        }
     }
 
-    public IActionResult Register()
+    public async Task<IActionResult> Register()
     {
         if (TempData["accCode"] == null)
         {
-            return View("Error404"); 
+            return View("Error404");
         }
+        var checkEmail = await _context.AllowedEmployees.FirstOrDefaultAsync(a => a.AccessCode == TempData["accCode"]!.ToString());
+
         TempData["accCode"] = TempData["accCode"];
+        ViewData["Email"] = checkEmail.Email;
         return View();
     }
 
     [HttpPost]
     public async Task<IActionResult> Register(RegisterVM vm)
     {
-      
+
 
         ModelState.Clear();
 
         ValidationHelper.ValidateRegister(vm, ModelState);
+
+        var allowedEmp = await _context.AllowedEmployees.FirstOrDefaultAsync(a => a.Email == vm.Email);
+
+        if (allowedEmp!.Email != vm.Email)
+        {
+            ModelState.AddModelError("Email", "You cannot register with an authorized email...!");
+            return View(vm);
+        }
 
         if (!ModelState.IsValid)
         {
@@ -134,11 +159,12 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
             return View("Error404");
         }
 
-        var role = TempData["accCode"]!.ToString()!;
+        var acc = TempData["accCode"]!.ToString()!;
 
-        var userRole = await _context.AllowedEmployees.FirstOrDefaultAsync(a => a.AccessCode == role);
 
-        var selectedRole = await _roleManager.FindByIdAsync(userRole!.RoleId);
+
+        var selectedRole = await _roleManager.FindByIdAsync(allowedEmp!.RoleId);
+        TempData["Email"] = allowedEmp.Email;
 
         string userName;
         AppUser exsistUserName;
@@ -169,13 +195,14 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
             Email = vm.Email,
             UserName = userName,
             PhoneNumber = vm.PhoneNumber,
+            AllowedEmployee = allowedEmp
         };
 
-		userRole.AppUser = user;
-		_context.AllowedEmployees.Update(userRole);
+        allowedEmp.AppUser = user;
+        _context.AllowedEmployees.Update(allowedEmp);
 
 
-		var result = await _userManager.CreateAsync(user, vm.Password);
+        var result = await _userManager.CreateAsync(user, vm.Password);
 
         if (!result.Succeeded)
         {
@@ -202,7 +229,6 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
         _emailService.Send(user.Email, "Email Confirmation", $"<a href='{link}'>Confirm</a>", true);
 
 
-        Image image = new Image();
 
         if (vm.ImageFile != null)
         {
@@ -216,18 +242,16 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
             }
             var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "images", "account");
             var fileName = await vm.ImageFile.SaveToAsync(path);
-            image = new Image
+
+            Image image = new Image
             {
                 Url = fileName,
                 AppUser = user
             };
 
+            await _context.Images.AddAsync(image);
         }
-
-        await _context.Images.AddAsync(image);
-    
         await _context.SaveChangesAsync();
-
         return RedirectToAction("Login");
     }
 
@@ -244,7 +268,7 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
-        return Redirect("AccessCode");
+        return RedirectToAction("AccessCode", "Account");
     }
 
 
@@ -252,6 +276,61 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
     {
         return View();
     }
+
+    [HttpPost]
+    public async Task<IActionResult> ForgotPassword(ForgotPasswordVM passwordVM)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(passwordVM);
+        }
+        var userEmail = await _userManager.FindByEmailAsync(passwordVM.Email);
+        if (userEmail == null)
+        {
+            ModelState.AddModelError("", "Email not found");
+            return View(userEmail);
+        }
+
+
+        var user = await _userManager.FindByIdAsync(userEmail.Id);
+
+        if (user == null)
+        {
+            ModelState.AddModelError("", "User not found");
+            return View(passwordVM);
+        }
+
+        var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+        var link = Url.Action("ResetPassword", "Account", new { token = token, user = user }, Request.Scheme);
+        _emailService.Send(user.Email, "Reset Password", $"<a href='{link}'>Password Reset</a>", true);
+
+        return RedirectToAction(nameof(Login));
+    }
+
+
+    public IActionResult ResetPassword(string token, string user)
+    {
+        if (String.IsNullOrWhiteSpace(token) || String.IsNullOrWhiteSpace(user))
+            return BadRequest(ModelState);
+
+
+        ResetPasswordVM reset = new ResetPasswordVM
+        {
+            user = user
+        };
+        return View(reset);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> ResetPassword(ResetPasswordVM resetPassword)
+    {
+        var user = await _userManager.FindByNameAsync(resetPassword.user);
+
+        await _userManager.ResetPasswordAsync(user, resetPassword.token, resetPassword.Password);
+
+        return RedirectToAction("Login");
+    }
+
 
     //public async Task CreateRoles()
     //{

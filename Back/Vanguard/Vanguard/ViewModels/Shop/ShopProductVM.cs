@@ -16,4 +16,5 @@ public class ShopProductVM
     public bool IsDiscounted { get; set; }
     public bool IsBest { get; set; }
     public int? Offer { get; set; }
+    public bool IsWish {  get; set; }
 }

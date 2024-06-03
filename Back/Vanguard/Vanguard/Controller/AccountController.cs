@@ -1,13 +1,16 @@
-﻿
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
+using Newtonsoft.Json;
 using Vanguard.Data;
 using Vanguard.Extensions;
 using Vanguard.Helpers;
 using Vanguard.Models;
 using Vanguard.Services.Interfaces;
 using Vanguard.ViewModels.Account;
+using Vanguard.ViewModels.Basket;
 
 namespace Vanguard.Controller;
 
@@ -69,6 +72,37 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
         {
             return Redirect(ReturnUrl);
         }
+
+
+
+
+        var basket = HttpContext.Request.Cookies["basket"];
+        if (basket != null)
+        {
+
+            List<BasketVM> basketItems = basket == null ? new List<BasketVM>() : JsonConvert.DeserializeObject<List<BasketVM>>(basket);
+
+            List<Basket> bskList = new List<Basket>();
+
+            foreach (var item in basketItems)
+            {
+                Basket bsk = new Basket
+                {
+                    InformationId = item.Id,
+                    Quantity = item.Count,
+                    AppUserId = user.Id,
+                    AppUser = user,
+                };
+                bskList.Add(bsk);
+
+            }
+            HttpContext.Response.Cookies.Delete("basket");
+
+            await _context.Baskets.AddRangeAsync(bskList);
+            await _context.SaveChangesAsync();
+        }
+
+
         return RedirectToAction("Index", "Home");
     }
 
@@ -169,10 +203,10 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
                 Url = fileName,
                 AppUser = user
             };
-			await _context.Images.AddAsync(image);
-		}
+            await _context.Images.AddAsync(image);
+        }
 
-		await _context.SaveChangesAsync();
+        await _context.SaveChangesAsync();
 
         return RedirectToAction("Login");
     }
@@ -192,9 +226,8 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
     public async Task<IActionResult> Logout()
     {
         await _signInManager.SignOutAsync();
-        return Redirect("Login");
+        return RedirectToAction("Login");
     }
-
 
     public IActionResult ForgotPassword()
     {

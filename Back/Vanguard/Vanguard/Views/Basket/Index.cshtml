@@ -1,0 +1,672 @@
+﻿@using Vanguard.ViewModels.Basket
+@model BasketListVM
+@section style {
+    <link rel="stylesheet" href="~/cilent/assets/css/basket.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+}
+
+
+<main>
+
+    <section>
+
+
+        <div class="cart-container">
+            @* <h1>@Model.Count()</h1> *@
+            <div class="cart-title">
+                <h2>Shopping Cart</h2>
+                <p> <span>3</span> Item</p>
+            </div>
+
+
+            <div class="cart-table">
+
+                <div class="cart-table-header">
+                    <p>Product</p>
+                    <p>Price</p>
+                    <p>Quantity</p>
+                    <p>Total</p>
+                    <p></p>
+                </div>
+
+                <ul class="cart-table-container">
+
+                    @if (Model.BasketItems.Count() > 0 && Model.BasketItems != null)
+                    {
+                        foreach (var prod in Model.BasketItems)
+                        {
+                            <li data-id="@prod.Id" class="cart-table-box">
+
+                                <div class="cart-prod item">
+
+                                    <div class="cart-prod-img">
+                                        <img src="~/cilent/assets/images/products/@prod.Image" alt="">
+                                    </div>
+
+                                    <div class="cart-prod-info">
+                                        <h3>Product @prod.Name</h3>
+                                        <p>Color: @prod.Color</p>
+                                        <p>Size: @prod.Size</p>
+                                    </div>
+
+                                </div>
+
+
+
+                                <div class="c-prices">
+
+                                    <div class="cart-prices item">
+                                        <span class="price-inf">Price:</span>
+
+
+                                        @if (prod.DiscountPrice != null || prod.DiscountPrice > 0 || prod.DiscountPrice < prod.SellPrice)
+                                        {
+                                            <span class="sell-price dis" id="sell-price">$@prod.DiscountPrice</span>
+                                            <del class="sell-price dis-price" id="dis-price">$@prod.SellPrice</del>
+
+                                            @*   <span class="sell-price dis" id="dis-price">$@prod.DiscountPrice</span>
+                                <del class="sell-price dis-price" id="sell-price">$@prod.SellPrice</del> *@
+                                        }
+                                        else
+                                        {
+                                            <span class="sell-price sell" id="sell-price">$@prod.SellPrice </span>
+                                        }
+                                    </div>
+
+
+                                    <div class="cart-qty item">
+                                        <div class="quantity-box">
+
+                                            <div class="quantity minus">
+                                                <i class="fa-solid fa-minus"></i>
+                                            </div>
+
+                                            <input type="number" value="@prod.Quantity">
+
+
+                                            <div class="quantity plus">
+                                                <i class="fa-solid fa-plus"></i>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="cart-prod-total item">
+                                        <span class="price-inf">Total:</span>
+
+                                        <span class="tot-price">$100</span>
+                                    </div>
+
+                                </div>
+
+
+                                <div class="item-delete item">
+                                    <a>
+                                        <i class="fa-solid fa-trash"></i>
+                                    </a>
+                                </div>
+                            </li>
+                        }
+
+                    }
+
+                </ul>
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <div class="cart-info">
+            <div class="cart-info-top">
+
+                <h2>CART TOTALS</h2>
+
+                <div class="cart-info-container">
+
+                    <div class="cart-info-box subtotal">
+                        <h5>Subtotal </h5>
+                        <span>$100</span>
+                    </div>
+
+                    <div class="cart-info-box discount">
+                        <h5>Discount Amount</h5>
+                        <span>$100</span>
+                    </div>
+
+                    <div class="cart-info-box items">
+                        <h5>Total items</h5>
+                        <span>10</span>
+                    </div>
+
+                    <div class="cart-info-box">
+                        <h5>Shipping </h5>
+                        <span>Free</span>
+                    </div>
+
+                    <div class="cart-info-cupon">
+                        <h5>Cupon Code</h5>
+                        <div class="cart-input-box">
+                            <div class="info-input">
+                                <input type="text" placeholder="Entery code...">
+                                <a>Apply</a>
+                            </div>
+                            <!-- <span class="confirm">30% discount applied</span> -->
+                            <span class="invalid">invalid coupon</span>
+                        </div>
+                    </div>
+
+                    <div class="cart-total-box">
+
+                        <div class="cupon-offer active">
+                            <h5>Subtotal</h5>
+                            <span>$100</span>
+                        </div>
+
+                        <div class="cart-total">
+                            <h5>Total </h5>
+                            <span>$100</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart-info-bottom">
+                <a href="#">CHECKOUT</a>
+            </div>
+        </div>
+
+
+
+    </section>
+
+</main>
+
+
+
+@section script {
+    <script src="~/cilent/assets/js/basket.js"></script>
+
+
+
+    <script>
+        const prodListItem = document.querySelectorAll('.cart-table-container li');
+        const subTotal = document.querySelector('.cart-info-box.subtotal span');
+        const discountAmount = document.querySelector('.cart-info-box.discount span');
+        const cartTotal = document.querySelector('.cart-total span');
+        const cartTotalItem = document.querySelector('.cart-info-box.items span');
+        const cartTotalHeadItem = document.querySelector('.cart-title span');
+        const basketSup = document.querySelector('.i-basket sup');
+
+        let totalPrice = 0;
+        let disAmount = 0;
+        let total = 0;
+        let totalItem = 0;
+
+        function updateBasketSup() {
+            basketSup.innerText = totalItem;
+        }
+
+        prodListItem.forEach(items => {
+            const input = items.querySelector('input[type="number"]');
+            const plus = items.querySelector('.plus');
+            const minus = items.querySelector('.minus');
+            const itemTotal = items.querySelector('.cart-prod-total.item .tot-price');
+            const DeleteBtn = items.querySelector('.item-delete');
+            const sellPrice = items.querySelector('#sell-price');
+            const disPrice = items.querySelector('.dis-price');
+
+            let itemTotalfixed = itemTotal.innerText.replace('$', '').trim();
+            let currentQuantity = parseFloat(input.value);
+            let sellPricefixed = sellPrice.innerText.replace('$', '').trim();
+
+            itemTotal.innerText = '$' + `${(input.value) * parseFloat(sellPricefixed)}`;
+            if (disPrice != null) {
+                let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                totalPrice += disPricefixed * input.value
+            } else {
+                totalPrice += parseFloat(sellPricefixed) * input.value
+            }
+            subTotal.innerText = '$' + totalPrice;
+
+            if (disPrice != null) {
+                let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                disAmount += (disPricefixed - parseFloat(sellPricefixed)) * input.value;
+                discountAmount.innerText = '$' + disAmount;
+            }
+            cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+            totalItem += parseInt(input.value);
+            cartTotalItem.innerText = totalItem;
+            cartTotalHeadItem.innerText = totalItem;
+            updateBasketSup();
+
+            plus.addEventListener('click', () => {
+                var value = parseFloat(input.value);
+                input.value = value + 1;
+
+                itemTotal.innerText = '$' + `${(value + 1) * parseFloat(sellPricefixed)}`;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    totalPrice += disPricefixed
+                } else {
+                    totalPrice += parseFloat(sellPricefixed)
+                }
+
+                subTotal.innerText = '$' + totalPrice;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    disAmount += (disPricefixed - parseFloat(sellPricefixed));
+                    discountAmount.innerText = '$' + disAmount;
+                }
+                cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+                ++totalItem;
+                cartTotalItem.innerText = totalItem;
+                cartTotalHeadItem.innerText = totalItem;
+                updateBasketSup();
+                let id = items.getAttribute('data-id');
+
+
+                fetch(`/Basket/IncreaseBasket/${id}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            });
+
+            minus.addEventListener('click', () => {
+                var value = parseFloat(input.value);
+                if (value > 1) {
+                    input.value = value - 1;
+                    itemTotal.innerText = '$' + `${(value - 1) * parseFloat(sellPricefixed)}`;
+
+                    if (disPrice != null) {
+                        let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                        totalPrice -= disPricefixed
+                    } else {
+                        totalPrice -= parseFloat(sellPricefixed)
+                    }
+
+                    subTotal.innerText = '$' + totalPrice;
+
+                    if (disPrice != null) {
+                        let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                        disAmount -= (disPricefixed - parseFloat(sellPricefixed));
+                        discountAmount.innerText = '$' + disAmount;
+                    }
+                    cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+                    --totalItem;
+                    cartTotalItem.innerText = totalItem;
+                    cartTotalHeadItem.innerText = totalItem;
+                    updateBasketSup();
+                    let id = items.getAttribute('data-id');
+
+                    fetch(`/Basket/DecreaseBasket/${id}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('There has been a problem with your fetch operation:', error);
+                        });
+                }
+            });
+
+            DeleteBtn.addEventListener('click', () => {
+                let sellPricefixed = parseFloat(sellPrice.innerText.replace('$', '').trim());
+                let itemQuantity = parseFloat(input.value);
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    totalPrice -= disPricefixed * itemQuantity;
+                } else {
+                    totalPrice -= parseFloat(sellPricefixed) * itemQuantity;
+                }
+
+                subTotal.innerText = '$' + totalPrice;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    disAmount -= (disPricefixed - parseFloat(sellPricefixed)) * itemQuantity;
+                    discountAmount.innerText = '$' + disAmount;
+                }
+
+                cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+                totalItem -= parseInt(input.value);
+                cartTotalItem.innerText = totalItem;
+                cartTotalHeadItem.innerText = totalItem;
+                updateBasketSup();
+
+                let id = items.getAttribute('data-id');
+                items.remove();
+
+                fetch(`/Basket/DeleteBasket/${id}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            });
+
+            input.addEventListener('input', () => {
+                let newValue = parseInt(input.value);
+                if (isNaN(newValue) || newValue < 1) {
+                    input.value = 1;
+                    newValue = 1;
+                }
+                const maxQuantity = parseInt(items.dataset.total);
+                const currentCount = parseInt(cartTotalHeadItem.innerText);
+                const oldValue = parseInt(input.getAttribute('data-old-value')) || currentQuantity;
+
+                if (newValue > maxQuantity) {
+                    input.value = maxQuantity;
+                }
+
+                const actualNewValue = parseInt(input.value);
+                const difference = actualNewValue - oldValue;
+                cartTotalHeadItem.innerText = currentCount + difference;
+                cartTotalItem.innerText = currentCount + difference;
+
+                itemTotal.innerText = '$' + `${actualNewValue * parseFloat(sellPricefixed)}`;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    totalPrice += difference * disPricefixed;
+                } else {
+                    totalPrice += difference * parseFloat(sellPricefixed);
+                }
+                subTotal.innerText = '$' + totalPrice;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    disAmount += difference * (disPricefixed - parseFloat(sellPricefixed));
+                    discountAmount.innerText = '$' + disAmount;
+                }
+
+                cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+                input.setAttribute('data-old-value', actualNewValue);
+                let id = items.getAttribute('data-id');
+
+
+
+                fetch(`/Basket/ChangeBasket?id=${id}&count=${actualNewValue}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            });
+        });
+    </script>
+
+
+
+}
+
+
+@*     <script>
+        const prodListItem = document.querySelectorAll('.cart-table-container li');
+        const subTotal = document.querySelector('.cart-info-box.subtotal span');
+        const discountAmount = document.querySelector('.cart-info-box.discount span');
+        const cartTotal = document.querySelector('.cart-total span');
+        const cartTotalItem = document.querySelector('.cart-info-box.items span');
+        const cartTotalHeadItem = document.querySelector('.cart-title span');
+
+        let totalPrice = 0;
+        let disAmount = 0;
+        let total = 0;
+        let totalItem = 0;
+
+        prodListItem.forEach(items => {
+            const input = items.querySelector('input[type="number"]');
+            const plus = items.querySelector('.plus');
+            const minus = items.querySelector('.minus');
+            const itemTotal = items.querySelector('.cart-prod-total.item .tot-price');
+            const DeleteBtn = items.querySelector('.item-delete');
+            const sellPrice = items.querySelector('#sell-price');
+            const disPrice = items.querySelector('.dis-price');
+
+            let itemTotalfixed = itemTotal.innerText.replace('$', '').trim();
+            let currentQuantity = parseFloat(input.value);
+            let sellPricefixed = sellPrice.innerText.replace('$', '').trim();
+
+            itemTotal.innerText = '$' + `${(input.value) * parseFloat(sellPricefixed)}`;
+            if (disPrice != null) {
+                let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                totalPrice += disPricefixed * input.value
+            } else {
+                totalPrice += parseFloat(sellPricefixed) * input.value
+            }
+            subTotal.innerText = '$' + totalPrice;
+
+            if (disPrice != null) {
+                let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                disAmount += (disPricefixed - parseFloat(sellPricefixed)) * input.value;
+                discountAmount.innerText = '$' + disAmount;
+            }
+            cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+            totalItem += parseInt(input.value);
+            cartTotalItem.innerText = totalItem;
+            cartTotalHeadItem.innerText = totalItem;
+
+            plus.addEventListener('click', () => {
+                var value = parseFloat(input.value);
+                input.value = value + 1;
+
+                itemTotal.innerText = '$' + `${(value + 1) * parseFloat(sellPricefixed)}`;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    totalPrice += disPricefixed
+                } else {
+                    totalPrice += parseFloat(sellPricefixed)
+                }
+
+                subTotal.innerText = '$' + totalPrice;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    disAmount += (disPricefixed - parseFloat(sellPricefixed));
+                    discountAmount.innerText = '$' + disAmount;
+                }
+                cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+                ++totalItem;
+                cartTotalItem.innerText = totalItem;
+                cartTotalHeadItem.innerText = totalItem;
+
+                fetch(`/Basket/IncreaseBasket/${items.getAttribute('data-id')}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            });
+
+            minus.addEventListener('click', () => {
+                var value = parseFloat(input.value);
+                if (value > 1) {
+                    input.value = value - 1;
+                    itemTotal.innerText = '$' + `${(value - 1) * parseFloat(sellPricefixed)}`;
+
+                    if (disPrice != null) {
+                        let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                        totalPrice -= disPricefixed
+                    } else {
+                        totalPrice -= parseFloat(sellPricefixed)
+                    }
+
+                    subTotal.innerText = '$' + totalPrice;
+
+                    if (disPrice != null) {
+                        let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                        disAmount -= (disPricefixed - parseFloat(sellPricefixed));
+                        discountAmount.innerText = '$' + disAmount;
+                    }
+                    cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+                    --totalItem;
+                    cartTotalItem.innerText = totalItem;
+                    cartTotalHeadItem.innerText = totalItem;
+
+                    fetch(`/Basket/DecreaseBasket/${items.getAttribute('data-id')}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('There has been a problem with your fetch operation:', error);
+                        });
+                }
+            });
+
+            DeleteBtn.addEventListener('click', () => {
+                let sellPricefixed = parseFloat(sellPrice.innerText.replace('$', '').trim());
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    totalPrice -= disPricefixed * input.value;
+                } else {
+                    totalPrice -= parseFloat(sellPricefixed) * input.value;
+                }
+
+                subTotal.innerText = '$' + totalPrice;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    disAmount -= (disPricefixed - parseFloat(sellPricefixed)) * input.value;
+                    discountAmount.innerText = '$' + disAmount;
+                }
+
+                cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+                totalItem -= parseInt(input.value);
+                cartTotalItem.innerText = totalItem;
+                cartTotalHeadItem.innerText = totalItem;
+                let id = items.getAttribute('data-id')
+
+                items.remove();
+
+
+                fetch(`/Basket/RemoveBasket/${id}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            });
+
+            // Input ++++++++++++++++++
+            input.addEventListener('input', () => {
+                let newValue = parseInt(input.value);
+                if (isNaN(newValue) || newValue < 1) {
+                    input.value = 1;
+                    newValue = 1;
+                }
+                const maxQuantity = parseInt(items.dataset.total);
+                const currentCount = parseInt(cartTotalHeadItem.innerText);
+                const oldValue = parseInt(input.getAttribute('data-old-value')) || currentQuantity;
+
+                if (newValue > maxQuantity) {
+                    input.value = maxQuantity;
+                }
+
+                const actualNewValue = parseInt(input.value);
+                const difference = actualNewValue - oldValue;
+                cartTotalHeadItem.innerText = currentCount + difference;
+                cartTotalItem.innerText = currentCount + difference;
+
+                itemTotal.innerText = '$' + `${actualNewValue * parseFloat(sellPricefixed)}`;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    totalPrice += difference * disPricefixed;
+                } else {
+                    totalPrice += difference * parseFloat(sellPricefixed);
+                }
+                subTotal.innerText = '$' + totalPrice;
+
+                if (disPrice != null) {
+                    let disPricefixed = parseFloat(disPrice.innerText.replace('$', '').trim());
+                    disAmount += difference * (disPricefixed - parseFloat(sellPricefixed));
+                    discountAmount.innerText = '$' + disAmount;
+                }
+
+                cartTotal.innerText = '$' + (totalPrice - disAmount);
+
+                input.setAttribute('data-old-value', actualNewValue);
+
+                fetch(`/Basket/ChangeBasket?id=${items.getAttribute('data-id')}&count=${actualNewValue}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            });
+        });
+    </script> *@

@@ -2640,6 +2640,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\admin\images\svg\check.svg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\admin\images\svg\world-svgrepo-com.svg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Vanguard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Vanguard</BasePath>
+      <RelativePath>admin/images/svg/world-svgrepo-com.svg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\admin\images\svg\world-svgrepo-com.svg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\admin\images\tab\1.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Vanguard</SourceId>
@@ -5504,6 +5520,22 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\03ede4d6-7905-47e3-be5c-1c7be894a9f0_profil.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\04f5bba8-802b-469a-894f-69f55a7b1a2b_profil.jpg))">
+      <SourceType>Package</SourceType>
+      <SourceId>Vanguard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Vanguard</BasePath>
+      <RelativePath>cilent/assets/images/account/04f5bba8-802b-469a-894f-69f55a7b1a2b_profil.jpg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\04f5bba8-802b-469a-894f-69f55a7b1a2b_profil.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\0e19fe9e-4492-47d3-82c7-219d913f61ad_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Vanguard</SourceId>
@@ -5568,6 +5600,38 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\2d929b5d-e3c3-4cfb-b8a5-bccc50e79576_profil.jpg))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\4c9fc9e6-f64c-4444-b1bf-80b7f8e670cd_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Vanguard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Vanguard</BasePath>
+      <RelativePath>cilent/assets/images/account/4c9fc9e6-f64c-4444-b1bf-80b7f8e670cd_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\4c9fc9e6-f64c-4444-b1bf-80b7f8e670cd_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\a3772903-b203-4eaa-83f4-92ce54bd9492_Screenshot 2024-05-25 003439.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Vanguard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Vanguard</BasePath>
+      <RelativePath>cilent/assets/images/account/a3772903-b203-4eaa-83f4-92ce54bd9492_Screenshot 2024-05-25 003439.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\a3772903-b203-4eaa-83f4-92ce54bd9492_Screenshot 2024-05-25 003439.png))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\a45edde4-4c3c-4e04-87d3-e55da0cf83cc_profil.jpg))">
       <SourceType>Package</SourceType>
       <SourceId>Vanguard</SourceId>
@@ -5599,6 +5663,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\addc8056-03a2-4f40-af70-cc107ed3ae7e_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\aff1adb1-053e-4c3a-9fe9-fab593511ac9_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Vanguard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Vanguard</BasePath>
+      <RelativePath>cilent/assets/images/account/aff1adb1-053e-4c3a-9fe9-fab593511ac9_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\aff1adb1-053e-4c3a-9fe9-fab593511ac9_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\da7fb412-17c5-46ad-b426-739ca68f05d8_profil.jpg))">
       <SourceType>Package</SourceType>
@@ -5647,6 +5727,22 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\fb50d720-7c3f-439c-83c1-fe50c73c1173_profil.jpg))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\user-profil.png))">
+      <SourceType>Package</SourceType>
+      <SourceId>Vanguard</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/Vanguard</BasePath>
+      <RelativePath>cilent/assets/images/account/user-profil.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\account\user-profil.png))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath($(MSBuildThisFileDirectory)..\staticwebassets\cilent\assets\images\products\0365280d-f77b-4dec-ae64-7b83f6a8f036_00304416737-a4.jpg))">
       <SourceType>Package</SourceType>

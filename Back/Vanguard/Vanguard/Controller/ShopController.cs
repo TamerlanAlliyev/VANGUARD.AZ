@@ -1,11 +1,15 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Newtonsoft.Json;
+using System.Security.Claims;
 using Vanguard.Data;
 using Vanguard.Helpers;
 using Vanguard.Models;
 using Vanguard.Services.Interfaces;
 using Vanguard.ViewModels.Shop;
 using Vanguard.ViewModels.Shop.AdditionVMs;
+using Vanguard.ViewModels.Wish;
 
 namespace Vanguard.Controller;
 
@@ -13,11 +17,13 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;
     readonly IShopService _shopService;
+    private readonly UserManager<AppUser> _userManager;
 
-    public ShopController(VanguardContext context, IShopService shopService)
+    public ShopController(VanguardContext context, IShopService shopService, UserManager<AppUser> userManager)
     {
         _context = context;
         _shopService = shopService;
+        _userManager = userManager;
     }
 
     public async Task<IActionResult> Index(ShopVM shopVM)
@@ -70,7 +76,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
 
             query = query.Where(p => validGenders.Contains(p.GenderId));
         }
-  
+
 
 
 
@@ -97,7 +103,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
 
             query = query.Where(p => validColorIds.Contains(p.ProductColors.ColorId));
         }
- 
+
 
 
         //Size
@@ -117,7 +123,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
             var selectedSizeIds = sizesLi.Select(c => c.sizeId).ToList();
             query = query.Where(p => p.Information.Any(pc => selectedSizeIds.Contains(pc.SizeId)));
         }
-   
+
 
         //Tags
         List<Tag> selectedTags = new List<Tag>();
@@ -127,7 +133,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
 
             query = query.Where(p => p.ProductTag.Any(pc => shopVM.SentTag.Contains(pc.TagId)));
         }
-     
+
 
 
 
@@ -189,7 +195,22 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
                .ToListAsync();
 
 
+        List<WishVM> wishesVM = new List<WishVM>();
+        List<Wish> wishes = new List<Wish>();
 
+        if (!User.Identity!.IsAuthenticated)
+        {
+            if (HttpContext.Request.Cookies["wish"] != null)
+                wishesVM = JsonConvert.DeserializeObject<List<WishVM>>(HttpContext.Request.Cookies["wish"]);
+        }
+        else
+        {
+            var user = await _userManager.GetUserAsync((ClaimsPrincipal)User);
+            wishes = await _context.Wishs.Where(w => w.AppUserId == user!.Id).ToListAsync();
+            wishesVM = wishes.Select(w => new WishVM { Id = w.ProductId }).ToList();
+        }
+
+        List<int> wishProductIds = wishesVM.Select(w => w.Id).ToList();
 
         var shopProductVMs = products.Select(p => new ShopProductVM
         {
@@ -207,7 +228,8 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
             IsNew = p.CreatedDate >= (DateTime.UtcNow.AddDays(-5).AddHours(4)),
             IsDiscounted = p.DiscountPrice > 0,
             IsBest = p.Information.Sum(p => p.OrderCount) >= 50,
-            Offer = p.DiscountPrice > 0 ? (int)(((p.SellPrice - p.DiscountPrice) / p.SellPrice) * 100) : 0
+            Offer = p.DiscountPrice > 0 ? (int)(((p.SellPrice - p.DiscountPrice) / p.SellPrice) * 100) : 0,
+            IsWish = wishProductIds.Contains(p.Id)
         }).ToList();
 
 

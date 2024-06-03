@@ -26,4 +26,8 @@ public class Product : BaseAuditable
     [NotMapped]
     public List<IFormFile>? AdditionalImages { get; set; }
     public List<Information> Information { get; set; } = null!;
+
+    public ICollection<Basket>? BasketList { get; set; }
+    public ICollection<Wish>? Wishes { get; set; }
+
 }

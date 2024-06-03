@@ -1,4 +1,5 @@
-﻿@* @model List<Product> *@
+﻿@using Vanguard.Areas.Admin.ViewModels.Admin
+ @model List<EmployeeListVM>
 
 @section style {
     <link href="~/admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
@@ -12,7 +13,7 @@
 
         <div class="row page-titles">
             <ol class="breadcrumb">
-                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Product</a></li>
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Employee</a></li>
                 <li class="breadcrumb-item"><a onclick="javascript:void(0)">List</a></li>
             </ol>
         </div>
@@ -24,8 +25,8 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Product List</h4>
-                        <a asp-action="create" asp-area="Admin" asp-controller="Product" class="btn btn-primary">Create New Product</a>
+                        <h4 class="card-title">Employee List</h4>
+                        <a asp-action="EmployeeCreat" asp-area="Admin" asp-controller="Admin" class="btn btn-primary">Create New Product</a>
                     </div>
 
                     <div class="card-body">
@@ -33,37 +34,41 @@
                             <table id="example3" class="display" style="min-width: 845px">
                                 <thead>
                                     <tr>
-                                        <th>Image</th>
+                                        <th></th>
                                         <th>Full Name</th>
                                         <th>Position</th>
-                                        <th>Crealted</th>
-                                        <th>Discounted</th>
-                                        <th>color</th>
-                                        <th>Action</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Register Status</th>
+
                                     </tr>
                                 </thead>
                                 <tbody>
 
 
-                        @*             @foreach (var product in Model)
+                                    @foreach (var emp in Model)
                                     {
                                         <tr class="product">
-                                            <td><img width="70" height="90" style="object-fit:cover" src="~/cilent/assets/images/products/@(product.Images.Where(p=>!p.IsDeleted).FirstOrDefault(p=>p.IsMain)?.Url)" alt=""></td>
-                                            <td>@product.Name</td>
-                                            <td>@product.Model</td>
-                                            <td>$@product.SellPrice</td>
-                                            <td class="text-danger">@(product.DiscountPrice != null ? "$" + product.DiscountPrice : "")</td>
-                                            <td>@product.ProductColors.Color.Name</td>
+                                            <td><img width="70" height="70" style="object-fit:cover; border-radius:50%; overflow:hidden" src="~/cilent/assets/images/account/@(emp.Image!=null?emp.Image:"user-profil.png")" alt=""></td>
+                                            <td>@emp.FullName</td>
+                                            <td>@emp.Position</td>
+                                            <td>@emp.Email</td>
+                                            <td>@emp.PhoneNumber</td>
                                             <td>
-                                                <div class="d-flex">
-                                                    <a asp-area="Admin" asp-controller="Product" asp-action="Detail" asp-route-id="@product.Id" class="btn btn-primary shadow btn-xs sharp me-1" title="Detail"><i class="bi bi-eye"></i></a>
-                                                    <a asp-area="Admin" asp-controller="Product" asp-action="Edit" asp-route-id="@product.Id" class="btn btn-primary shadow btn-xs sharp me-1" title="Edit"><i class="fas fa-pencil-alt"></i></a>
-                                                    <a class="btn btn-danger shadow btn-xs sharp del-btn" data-id="@product.Id" title="Soft Delete"><i class="fa fa-trash"></i></a>
+                                                @if(emp.IsRegister){
+                                                    <span class="badge light badge-success">Registered</span>
+                                                }
+                                                else
+                                                {
+                                                    <span class="badge light badge-danger">Not Registered</span>
+                                                }
+                                            </td>
+                                            <td>
+                                                    <a class="btn btn-danger shadow btn-xs sharp del-btn" data-id="@emp.Id" title="Soft Delete"><i class="fa fa-trash"></i></a>
 
-                                                </div>
                                             </td>
                                         </tr>
-                                    } *@
+                                    }
 
 
                                 </tbody>
@@ -105,13 +110,13 @@
 
                 swal({
                     title: "Are you sure?",
-                    text: "This product will be permanently deleted!",
+                    text: "This Employee will be permanently deleted!",
                     icon: "warning",
                     buttons: true,
                     dangerMode: true,
                 }).then((willDelete) => {
                     if (willDelete) {
-                        fetch(`/Admin/Product/SoftDelete/${dataId}`, {
+                        fetch(`/Admin/Admin/EmployeeRemove/${dataId}`, {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
@@ -119,19 +124,19 @@
                         })
                             .then(response => {
                                 if (response.ok) {
-                                    toastr["success"]("Product deleted successfully");
+                                    toastr["success"]("Employee deleted successfully");
                                     let tr = this.closest('tr');
                                     tr.remove();
                                 } else {
-                                    toastr["error"]("An error occurred while deleting the product");
+                                    toastr["error"]("An error occurred while deleting the Employee");
                                 }
                             })
                             .catch(error => {
                                 console.error('Error:', error);
-                                toastr["error"]("An error occurred while deleting the product");
+                                toastr["error"]("An error occurred while deleting the Employee");
                             });
                     } else {
-                        swal("Product not deleted!");
+                        swal("Employee not deleted!");
                     }
                 });
             }

@@ -25,78 +25,7 @@ namespace Vanguard.Controllers
             return View();
         }
 
-        public async Task<IActionResult> AddCart(int id)
-        {
-            if (!User.Identity.IsAuthenticated)
-            {
-                var product = await _context.Products
-                    .Where(p => !p.IsDeleted)
-                    .FirstOrDefaultAsync(p => p.Id == id);
-
-                if (product == null)
-                {
-                    return NotFound();
-                }
-
-                var basket = HttpContext.Request.Cookies["basket"];
-                List<BasketVM> basketItems;
-
-                if (basket == null)
-                {
-                    basketItems = new List<BasketVM>();
-                }
-                else
-                {
-                    basketItems = JsonConvert.DeserializeObject<List<BasketVM>>(basket);
-                }
-
-                var item = basketItems.SingleOrDefault(i => i.Id == id);
-                if (item == null)
-                {
-                    item = new BasketVM
-                    {
-                        Id = id,
-                        Count = 1
-                    };
-                    basketItems.Add(item);
-                }
-                else
-                {
-                    item.Count++;
-                }
-
-                HttpContext.Response.Cookies.Append("basket", JsonConvert.SerializeObject(basketItems));
-            }
-            else
-            {
-                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
-
-                var existingBasket = await _context.Baskets
-                    .FirstOrDefaultAsync(b => b.ProductId == id);
-
-                if (existingBasket != null)
-                {
-                    existingBasket.Count++;
-                    existingBasket.UserId = userId;
-                }
-                else
-                {
-                    var newBasket = new Basket
-                    {
-                        Count = 1,
-                        ProductId = id,
-                        UserId = userId
-                    };
-
-                    _context.Baskets.Add(newBasket);
-                }
-
-                await _context.SaveChangesAsync();
-            }
-
-            return Ok();
-        }
-
+     
 
         public IActionResult Forbidden()
         {

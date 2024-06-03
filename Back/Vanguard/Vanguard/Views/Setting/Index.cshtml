@@ -1,0 +1,886 @@
+﻿@using Vanguard.ViewModels.Setting
+@model SettingFilterVM
+@section style {
+    <link rel="stylesheet" href="~/cilent/assets/css/account.css">
+}
+
+
+
+<main>
+
+    <section class="section account">
+
+        <div class="account-menu">
+
+            <div class="acc-title">
+                <h1>MY ACCOUNT</h1>
+            </div>
+
+            <div class="user-profile">
+
+                @await Component.InvokeAsync("User")
+
+
+                <ul class="account-list">
+                    @if (Model.IsAuthenticated)
+                    {
+                        <li><a asp-controller="Setting" asp-action="Index" asp-route-id="1" class=" @(Model.IsSetting?"active":"") @(!Model.IsWish&&!Model.IsOrder?"active":"")" data-name="settings">Settings</a></li>
+                        <li><a asp-controller="Setting" asp-action="Index" asp-route-id="2" class="@(Model.IsOrder?"active":"")" data-name="order">Order History </a></li>
+                    }
+
+                    <li><a asp-controller="Setting" asp-action="Index" asp-route-id="3" class="@(Model.IsWish?"active":"")" data-name="wish">Wish List</a></li>
+                    @if (Model.IsAuthenticated)
+                    {
+                        <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
+                    }
+                    else
+                    {
+                        <li><a asp-controller="Account" asp-action="Login">Login</a></li>
+                        <li><a asp-controller="Account" asp-action="Register">Register</a></li>
+                    }
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <div class="account-container">
+
+
+            <form method="post" class="acc settings @(Model.IsSetting?"active":"") @(!Model.IsWish&&!Model.IsOrder?"active":"")">
+
+
+                <div class="profile-img">
+
+                    <div class="image">
+                        <img src="~/cilent/assets/images/settings/user-profil.png" alt="">
+                        <div class="photo">
+                            <img src="~/cilent/assets/icons/photo.svg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="img-file">
+                        <label id="label" for="image-file">Upload Image</label>
+                        <input id="image-file" type="file">
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="box-edit">
+
+                    <div class="box-title">
+                        <div class="data-title">
+                            <a>Name : </a>
+                            <p>User Name</p>
+                        </div>
+                        <a class="edit"> <i class="fa-regular fa-pen-to-square"></i> </a>
+                    </div>
+
+                    <div class="box">
+
+                        <div class="form-box-box">
+                            <i class="fa-regular fa-user form-box-icon"></i>
+                            <div class="form-box-box-input">
+                                <input type="text" required class="form-box-input" id="form-box-Name"
+                                       value="User Name" placeholder=" ">
+                                <label for="form-box-Name" class="form-box-label">Name</label>
+                            </div>
+                        </div>
+
+                        <span for="form-box-Name">
+                            <!--  -->
+                        </span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="box-edit">
+
+                    <div class="box-title">
+                        <div class="data-title">
+                            <a>Surname : </a>
+                            <p>User Surname</p>
+                        </div>
+                        <a class="edit"> <i class="fa-regular fa-pen-to-square"></i> </a>
+                    </div>
+
+                    <div class="box">
+
+                        <div class="form-box-box">
+                            <i class="fa-regular fa-user form-box-icon"></i>
+                            <div class="form-box-box-input">
+                                <input type="text" required class="form-box-input" id="form-box-Surname" value=""
+                                       placeholder=" ">
+                                <label for="form-box-Surname" class="form-box-label">Surname</label>
+                            </div>
+                        </div>
+
+                        <span for="form-box-Surname">
+                            <!--  -->
+                        </span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="box-edit">
+
+                    <div class="box-title">
+                        <div class="data-title">
+                            <a>Phone : </a>
+                            <p>+994505000005</p>
+                        </div>
+                        <a class="edit"> <i class="fa-regular fa-pen-to-square"></i> </a>
+                    </div>
+
+                    <div class="box">
+
+                        <div class="form-box-box">
+                            <i class="bi bi-telephone form-box-icon"></i>
+                            <div class="form-box-box-input">
+                                <input type="tel" required class="form-box-input" id="form-box-Phone" value=""
+                                       placeholder=" ">
+                                <label for="form-box-Phone" class="form-box-label">Phone</label>
+                            </div>
+                        </div>
+
+                        <span for="form-box-Phone">
+                            <!--  -->
+                        </span>
+                    </div>
+
+                </div>
+
+
+
+
+                <div class="box-edit">
+
+                    <div class="box-title">
+                        <div class="data-title">
+                            <a>Email : </a>
+                            <p>mail@com</p>
+                        </div>
+                        <a class="edit"> <i class="fa-regular fa-pen-to-square"></i> </a>
+                    </div>
+
+                    <div class="box">
+
+                        <div class="form-box-box">
+                            <i class="fa-regular fa-envelope form-box-icon"></i>
+                            <div class="form-box-box-input">
+                                <input type="email" required class="form-box-input" id="form-box-Email" value=""
+                                       placeholder=" ">
+                                <label for="form-box-Email" class="form-box-label">Email</label>
+                            </div>
+                        </div>
+
+                        <span for="form-box-Email">
+                            <!--  -->
+                        </span>
+                    </div>
+
+                </div>
+
+
+
+
+
+                <div class="box-edit address">
+
+                    <div class="box-title">
+                        <div class="data-title">
+                            <a>Address : </a>
+                            <div class="box-address">
+                                <p class="country">Azerbaijan</p>
+                                <p class="city">Baku</p>
+                                <p class="postal">1111</p>
+                                <p class="home-address">Lorem ipsum dolor sit erüfevd amet.</p>
+                            </div>
+                        </div>
+                        <a class="edit"> <i class="fa-regular fa-pen-to-square"></i> </a>
+                    </div>
+
+                    <div class="box active " id="address">
+
+                        <div class="form-b-inputs country">
+                            <div class="form-box-box">
+                                <i class="fa-solid fa-globe form-box-icon"></i>
+                                <div class="form-box-box-input">
+                                    <input type="text" required class="form-box-input" id="form-box-Country"
+                                           value="" placeholder=" ">
+                                    <label for="form-box-Country" class="form-box-label">Country</label>
+                                </div>
+                            </div>
+                            <span for="form-box-Country">
+                                <!--  -->
+                            </span>
+                        </div>
+
+                        <div class="form-b-inputs city">
+                            <div class="form-box-box">
+                                <i class="fa-solid fa-city form-box-icon"></i>
+                                <div class="form-box-box-input">
+                                    <input type="text" required class="form-box-input" id="form-box-City" value=""
+                                           placeholder=" ">
+                                    <label for="form-box-City" class="form-box-label">City</label>
+                                </div>
+                            </div>
+                            <span for="form-box-City">
+                                <!--  -->
+                            </span>
+                        </div>
+
+                        <div class="form-b-inputs postal">
+                            <div class="form-box-box">
+                                <i class="bi bi-mailbox form-box-icon"></i>
+                                <div class="form-box-box-input">
+                                    <input type="text" required class="form-box-input" id="form-box-Postal" value=""
+                                           placeholder=" ">
+                                    <label for="form-box-Postal" class="form-box-label">Postal</label>
+                                </div>
+                            </div>
+                            <span for="form-box-Postal">
+                                <!--  -->
+                            </span>
+                        </div>
+
+
+                        <div class="form-b-inputs homeAddress">
+                            <div class="form-box-box">
+                                <i class="fa-solid fa-location-dot form-box-icon"></i>
+                                <div class="form-box-box-input">
+                                    <input type="text" required class="form-box-input" id="form-box-Home-Address"
+                                           value="" placeholder=" ">
+                                    <label for="form-box-Home-Address" class="form-box-label">Home Address</label>
+                                </div>
+                            </div>
+                            <span for="form-box-Home-Address">
+                                <!--  -->
+                            </span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+
+                <a class="forgot-password" asp-area="" asp-controller="Account" asp-action="ForgotPassword">Forgot Password?</a>
+
+                <div class="form-btn-box">
+                    <button class="form-submit" type="submit">Submit</button>
+                </div>
+            </form>
+
+
+
+            <div class="acc order @(Model.IsOrder?"active":"")">
+
+
+                <ul class="order-list">
+
+                    <li class="order-box">
+
+                        <ul class="order-datas">
+
+                            <div class="order-title">
+
+                                <div class="order-code">
+                                    <a>Order ID : </a>
+                                    <p>123456</p>
+                                </div>
+
+                                <div class="order-time-address">
+                                    <div class="order-time sec">
+                                        <P>Order date:</P>
+                                        <P>2021-01-01</P>
+                                    </div>
+
+                                    <div class="order-address sec">
+                                        <p>Address:</p>
+                                        <p>Azerbaijan, Baku ,1111,lor sit erüfevd erüfevderüfevd amet.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <li class="order-data">
+
+
+                                <div class="order-product-img">
+                                    <img src="~/cilent/assets/images/products/product.jpg" alt="">
+                                </div>
+
+
+
+                                <div class="order-product-info">
+
+                                    <div class="pro-info-detail">
+                                        <div class="p-detail">
+                                            <p>Product Name:</p>
+                                            <p>T-shirt</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Product Code:</p>
+                                            <p>789987</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Color:</p>
+                                            <p>White</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Size:</p>
+                                            <p>M</p>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="p-price">
+                                        <div>
+
+                                            <p> Qty : 2 </p>
+                                            <p>
+                                                Total Price
+                                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                                <!-- <span class="sell-price">$80</span> -->
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                            </li>
+
+
+                            <li class="order-data">
+
+
+                                <div class="order-product-img">
+                                    <img src="~/cilent/assets/images/products/product.jpg" alt="">
+                                </div>
+
+
+
+                                <div class="order-product-info">
+
+                                    <div class="pro-info-detail">
+                                        <div class="p-detail">
+                                            <p>Product Name:</p>
+                                            <p>T-shirt</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Product Code:</p>
+                                            <p>789987</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Color:</p>
+                                            <p>White</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Size:</p>
+                                            <p>M</p>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="p-price">
+                                        <div>
+
+                                            <p> Qty : 2 </p>
+                                            <p>
+                                                Total Price
+                                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                                <!-- <span class="sell-price">$80</span> -->
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                            </li>
+
+                            <div class="oreder-totals">
+                                <div class="or-total">
+                                    <p>Subtotal :</p>
+                                    <p>$500</p>
+                                </div>
+
+                                <div class="or-total">
+                                    <p>Shiping :</p>
+                                    <p>$0</p>
+                                </div>
+
+                                <div class="or-total">
+                                    <p>Append Cupon :</p>
+                                    <p>$50</p>
+                                    <!-- <p>None</p> -->
+                                    <!-- <p>10%</p> -->
+                                </div>
+
+                                <div class="or-total">
+                                    <p>Discount :</p>
+                                    <p>10% $50</p>
+                                </div>
+
+                                <div class="or-total">
+                                    <p>Total :</p>
+                                    <p>$450</p>
+                                </div>
+                            </div>
+
+                        </ul>
+
+
+
+                    </li>
+
+
+                    <li class="order-box">
+
+                        <ul class="order-datas">
+
+                            <div class="order-title">
+
+                                <div class="order-code">
+                                    <a>Order ID : </a>
+                                    <p>123456</p>
+                                </div>
+
+                                <div class="order-time-address">
+                                    <div class="order-time sec">
+                                        <P>Order date:</P>
+                                        <P>2021-01-01</P>
+                                    </div>
+
+                                    <div class="order-address sec">
+                                        <p>Address:</p>
+                                        <p>Azerbaijan, Baku ,1111,lor sit erüfevd erüfevderüfevd amet.</p>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <li class="order-data">
+
+
+                                <div class="order-product-img">
+                                    <img src="~/cilent/assets/images/products/product.jpg" alt="">
+                                </div>
+
+
+
+                                <div class="order-product-info">
+
+                                    <div class="pro-info-detail">
+                                        <div class="p-detail">
+                                            <p>Product Name:</p>
+                                            <p>T-shirt</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Product Code:</p>
+                                            <p>789987</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Color:</p>
+                                            <p>White</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Size:</p>
+                                            <p>M</p>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="p-price">
+                                        <div>
+
+                                            <p> Qty : 2 </p>
+                                            <p>
+                                                Total Price
+                                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                                <!-- <span class="sell-price">$80</span> -->
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                            </li>
+
+
+                            <li class="order-data">
+
+
+                                <div class="order-product-img">
+                                    <img src="~/cilent/assets/images/products/product.jpg" alt="">
+                                </div>
+
+
+
+                                <div class="order-product-info">
+
+                                    <div class="pro-info-detail">
+                                        <div class="p-detail">
+                                            <p>Product Name:</p>
+                                            <p>T-shirt</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Product Code:</p>
+                                            <p>789987</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Color:</p>
+                                            <p>White</p>
+                                        </div>
+
+                                        <div class="p-detail">
+                                            <p>Size:</p>
+                                            <p>M</p>
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <div class="p-price">
+                                        <div>
+
+                                            <p> Qty : 2 </p>
+                                            <p>
+                                                Total Price
+                                                <span class="dis-price">$80 <del class="sel-price">100</del></span>
+                                                <!-- <span class="sell-price">$80</span> -->
+                                            </p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+
+
+                            </li>
+
+                            <div class="oreder-totals">
+                                <div class="or-total">
+                                    <p>Subtotal :</p>
+                                    <p>$500</p>
+                                </div>
+
+                                <div class="or-total">
+                                    <p>Shiping :</p>
+                                    <p>$0</p>
+                                </div>
+
+                                <div class="or-total">
+                                    <p>Append Cupon :</p>
+                                    <p>$50</p>
+                                    <!-- <p>None</p> -->
+                                    <!-- <p>10%</p> -->
+                                </div>
+
+                                <div class="or-total">
+                                    <p>Discount :</p>
+                                    <p>10% $50</p>
+                                </div>
+
+                                <div class="or-total">
+                                    <p>Total :</p>
+                                    <p>$450</p>
+                                </div>
+                            </div>
+
+                        </ul>
+
+
+
+                    </li>
+
+                </ul>
+
+
+
+            </div>
+
+
+
+
+
+
+            <div class="acc wish  swiper mySwiper  sub @(Model.IsWish?"active":"")">
+
+                <div class="swiper-wrapper products-cart">
+
+
+                    @if (Model.Products != null && Model.Products.Count() > 0)
+                    {
+
+                        foreach (var prod in Model.Products)
+                        {
+                            <div class="swiper-slide product-box product-item" id="product-item">
+
+
+                                <!-- active -->
+                                <div class="product-image-box">
+
+
+                                    <div class="p-images">
+
+                                        <div class="main-image">
+                                            <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
+                                        </div>
+
+                                        <!-- <div class="">
+                                            <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                                        </div> -->
+
+                                        <div class="swiper mySwiper hover-image">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="~/cilent/assets/images/products/@prod.HoverImageURL" alt="">
+                                                </div>
+
+                                                @if ((prod.AdditionalImagesURL != null && prod.AdditionalImagesURL.Count() > 0))
+                                                {
+                                                    foreach (var img in prod.AdditionalImagesURL)
+                                                    {
+                                                        <div class="swiper-slide">
+                                                            <img src="~/cilent/assets/images/products/@img" alt="">
+                                                        </div>
+                                                    }
+                                                }
+
+
+                                            </div>
+                                            <div class="swiper-button-next p-btn"></div>
+                                            <div class="swiper-button-prev p-btn"></div>
+                                        </div>
+
+                                    </div>
+
+
+                                    <div class="p-buttons">
+
+                                        <a class="add-btn ">add to card</a>
+
+                                        <!-- active -->
+                                        <ul class="add-size">
+                                            @if (prod.Informations != null && prod.Informations.Any())
+                                            {
+                                                foreach (var size in prod.Informations)
+                                                {
+                                                    <li class="btn-size" data-size="@size.Id">@size.Size.Name</li>
+                                                }
+                                            }
+
+
+
+                                        </ul>
+
+                                    </div>
+
+                                    <div class="labels">
+                                        @if (prod.IsNew)
+                                        {
+                                            <a class=" new">New</a>
+                                        }
+                                        @if (prod.IsDiscounted)
+                                        {
+                                            <a class="dis">-@prod.Offer%</a>
+                                        }
+                                        @if (prod.IsBest)
+                                        {
+                                            <a class=" best">Best</a>
+                                        }
+                                    </div>
+
+
+                                </div>
+
+
+
+
+
+                                <div class="product-info-box">
+
+                                    <div class="p-inf">
+                                        <div class="p-head">
+                                            <h6>
+                                                @foreach (var cat in prod.Categories)
+                                                {
+                                                    @cat
+
+                                                    @(cat != prod.Categories.Last() ? " , " : "")
+                                                }
+                                            </h6>
+                                            <h3>@prod.Product.Name</h3>
+                                        </div>
+
+                                        <span>Color: @prod.Color</span>
+                                    </div>
+
+
+
+                                    <div class="p-pric wish-icon">
+                                        <a data-id="@prod.Product.Id" class="wish-btn">
+                                            <img class="bskt active" src="~/cilent/assets/icons/wish-icon-active.svg" alt="">
+                                            <!-- <img class="active" src="~/cilent/assets/icons/wish-icon.svg" alt=""> -->
+                                        </a>
+                                        <div class="cart-prices item">
+                                            @if (prod.Product.DiscountPrice != null && prod.Product.DiscountPrice > 0)
+                                            {
+
+                                                <span class="sell-price dis" id="sell-price">$@prod.Product.DiscountPrice</span>
+                                                <del class="sell-price dis-price">$@prod.Product.SellPrice</del>
+                                            }
+                                            else
+                                            {
+                                                <span class="sell-price sell" id="sell-price">$@prod.Product.SellPrice </span>
+
+                                            }
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        }
+
+                    }
+
+
+
+
+                </div>
+                <div class="swiper-pagination t-a"></div>
+            </div>
+
+
+
+
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+    </section>
+
+</main>
+
+
+@section script {
+    <script src="~/cilent/assets/js/account.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sizes = document.querySelectorAll('.btn-size');
+            sizes.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    let id = btn.getAttribute('data-size');
+                    console.log(id);
+
+                    fetch(`/Basket/AddBasket/${id}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('There has been a problem with your fetch operation:', error);
+                        });
+                });
+            });
+
+            const products = document.querySelectorAll('.product-item');
+            products.forEach(prod => {
+                const wishBtn = prod.querySelector('.p-pric .wish-btn');
+                if (wishBtn) {
+
+                    wishBtn.addEventListener('click', () => {
+                        let id = wishBtn.getAttribute('data-id');
+
+                        fetch(`/Setting/AddWish/${id}`)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                console.log(data);
+                            })
+                            .catch(error => {
+                                console.error('There has been a problem with your fetch operation:', error);
+                            });
+                        prod.remove()
+
+                    });
+                }
+            });
+        });
+    </script>
+}

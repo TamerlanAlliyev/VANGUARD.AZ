@@ -1,0 +1,15 @@
+﻿@using Vanguard.Areas.Admin.ViewModels.Account
+@model UserVM
+
+@if (Model!=null)
+{
+    <div class="user-data">
+        <div class="user-img">
+            <img src="~/cilent/assets/images/account/@(Model.Image!=null?Model.Image:"user-profil.png")" alt="user-img">
+        </div>
+
+        <p class="user-name">
+            @(Model.FullName != null ? Model.FullName : "Guest")
+        </p>
+    </div>
+}

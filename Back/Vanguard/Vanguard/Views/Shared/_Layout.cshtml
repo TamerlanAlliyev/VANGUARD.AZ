@@ -2,6 +2,9 @@
 @inject UserManager<Vanguard.Models.AppUser> UserManager
 @{
     var user = UserManager.GetUserAsync(User).Result;
+    var basketCount = TempData["BasketItemCount"] != null ? TempData["BasketItemCount"].ToString() : "0";
+    var wishCount = TempData["WishItemCount"] != null ? TempData["WishItemCount"].ToString() : "0";
+
 }
 
 <!DOCTYPE html>
@@ -53,7 +56,41 @@
     @await RenderSectionAsync("style", false)
     <!-- Favicon -->
     <link rel="icon" href="~/cilent/assets/icons/small-logo.svg" sizes="192x192" type="image/x-icon" />
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
     <title>Vanguard</title>
+
+    <style>
+        .basket-prices-count-input {
+            display: flex;
+            align-items: center;
+            flex-direction:inherit;
+            justify-content: space-between;
+        }
+
+        .searchs .basket-list .basket-product-list ul .basket-prod .basket-price-close {
+            display: flex;
+            flex-direction: column;
+            align-items: inherit; 
+            justify-content: space-between;
+        }
+
+            .searchs .basket-list .basket-product-list ul .basket-prod .basket-price-close a {
+                cursor: pointer;
+                display: flex;
+                justify-content: end;
+            }
+
+        .basket-prices-count-input {
+            display: flow;
+        }
+
+        .searchs .basket-list {
+            width: 40%;
+            padding: 24px 36px;
+        }
+    </style>
+
     <script>
         sendPaginationClickEventListeners();
     </script>
@@ -102,13 +139,13 @@
                     <a class="i-user" href="#">
                         <img src="~/cilent/assets/icons/user.svg" alt="">
                     </a>
-                    <a class="i-basket" href="#">
+                    <a class="i-basket" >
                         <img src="~/cilent/assets/icons/basket.svg" alt="">
-                        <sup>0</sup>
+                        <sup>@basketCount</sup>
                     </a>
-                    <a class="i-wish" href="#">
+                    <a class="i-wish" asp-controller="Setting" asp-action="Index" asp-route-id="3">
                         <img src="~/cilent/assets/icons/wish.svg" alt="">
-                        <sup>0</sup>
+                        <sup>@wishCount</sup>
                     </a>
 
                 </div>
@@ -120,257 +157,10 @@
 
         <div class="searchs">
 
-
             <div class="basket-list">
-
-
-                <div class="basket-header">
-                    <h4>SHOPPING BAG ( <span>1</span> )</h4>
-                    <a class="basket-close" href="#">
-                        <img src="~/cilent/assets/icons/close-black.svg" alt="">
-                    </a>
-                </div>
-
-                <div class="basket-product-list">
-
-                    <ul>
-
-                        <li>
-
-                            <div class="basket-prod" href="#">
-
-                                <div class="basket-prod-info">
-
-                                    <a href="№" class="basket-prod-image">
-                                        <img src="~/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                    </a>
-
-                                    <div class="basket-prod-detail">
-
-                                        <div class="prod-info-name">
-                                            <a href="#">
-                                                Product Name
-                                            </a>
-                                            <p>Color: Default</p>
-                                            <p>Size: Default</p>
-                                        </div>
-
-
-                                        <div class="basket-prices-count-input">
-
-                                            <div class="basket-con-inpt">
-
-                                                <div class="basket-quantity-box">
-
-                                                    <div class="basket-quantity minus">
-                                                        <i class="fa-solid fa-minus"></i>
-                                                    </div>
-
-                                                    <input type="number" value="1">
-
-                                                    <div class="basket-quantity plus">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="cart-prices item">
-                                                <span class="sell-price dis" id="sell-price">$80</span>
-                                                <del class="sell-price dis-price">$100</del>
-
-                                                <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="basket-price-close">
-                                    <a>
-                                        <img class="basket-prod-close" src="~/cilent/assets/icons/close-black.svg"
-                                             alt="">
-                                    </a>
-
-                                </div>
-
-
-                            </div>
-
-                        </li>
-
-                        <li>
-
-                            <div class="basket-prod" href="#">
-
-                                <div class="basket-prod-info">
-
-                                    <a href="№" class="basket-prod-image">
-                                        <img src="~/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                    </a>
-
-                                    <div class="basket-prod-detail">
-
-                                        <div class="prod-info-name">
-                                            <a href="#">
-                                                Product Name
-                                            </a>
-                                            <p>Color: Default</p>
-                                            <p>Size: Default</p>
-                                        </div>
-
-
-                                        <div class="basket-prices-count-input">
-
-                                            <div class="basket-con-inpt">
-
-                                                <div class="basket-quantity-box">
-
-                                                    <div class="basket-quantity minus">
-                                                        <i class="fa-solid fa-minus"></i>
-                                                    </div>
-
-                                                    <input type="number" value="1">
-
-                                                    <div class="basket-quantity plus">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="cart-prices item">
-                                                <span class="sell-price dis" id="sell-price">$80</span>
-                                                <del class="sell-price dis-price">$100</del>
-
-                                                <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="basket-price-close">
-                                    <a>
-                                        <img class="basket-prod-close" src="~/cilent/assets/icons/close-black.svg"
-                                             alt="">
-                                    </a>
-
-                                </div>
-
-
-                            </div>
-
-                        </li>
-
-
-                        <li>
-
-                            <div class="basket-prod" href="#">
-
-                                <div class="basket-prod-info">
-
-                                    <a href="№" class="basket-prod-image">
-                                        <img src="~/cilent/assets/images/products/product.jpg" alt="product.jpg">
-                                    </a>
-
-                                    <div class="basket-prod-detail">
-
-                                        <div class="prod-info-name">
-                                            <a href="#">
-                                                Product Name
-                                            </a>
-                                            <p>Color: Default</p>
-                                            <p>Size: Default</p>
-                                        </div>
-
-
-                                        <div class="basket-prices-count-input">
-
-                                            <div class="basket-con-inpt">
-
-                                                <div class="basket-quantity-box">
-
-                                                    <div class="basket-quantity minus">
-                                                        <i class="fa-solid fa-minus"></i>
-                                                    </div>
-
-                                                    <input type="number" value="1">
-
-                                                    <div class="basket-quantity plus">
-                                                        <i class="fa-solid fa-plus"></i>
-                                                    </div>
-
-                                                </div>
-
-                                            </div>
-
-
-                                            <div class="cart-prices item">
-                                                <!-- <span class="sell-price dis" id="sell-price">$80</span> -->
-                                                <!-- <del class="sell-price dis-price">$100</del> -->
-
-                                                <span class="sell-price sell" id="sell-price-sell">$100</span>
-                                            </div>
-
-                                        </div>
-
-                                    </div>
-
-                                </div>
-
-                                <div class="basket-price-close">
-                                    <a>
-                                        <img class="basket-prod-close" src="~/cilent/assets/icons/close-black.svg"
-                                             alt="">
-                                    </a>
-
-                                </div>
-
-
-                            </div>
-
-                        </li>
-
-
-
-
-                    </ul>
-
-                </div>
-
-
-                <div class="basket-view">
-
-                    <div class="bastek-total-price">
-                        <p>SUBTOTAL:</p>
-                        <div class="basket-total-prices">
-
-                            <span class="sell-price dis" id="sell-price">$80</span>
-                            <del class="sell-price dis-price">$100</del>
-
-                            <!-- <span class="sell-price sell" id="sell-price">$100 </span> -->
-                        </div>
-                    </div>
-
-
-
-
-                    <div class="basket-buttons">
-                        <a class="basket-viewcart" href="~/basket.html">VIEW CART</a>
-                        <a class="basket-checkout" href="~/checkout.html">CHECKOUT</a>
-                    </div>
-                </div>
-
+                @await Component.InvokeAsync("Basket")
             </div>
+
 
             <div class="user-info">
 
@@ -387,7 +177,7 @@
                         </ul>
                         @if (await UserManager.IsInRoleAsync(user, "Admin"))
                         {
-                            <h4><a class="go-admin" asp-area="Admin" asp-action="Index" asp-controller="Home">Go To Admin</a></h4>
+                            <h4><a class="go-admin" asp-area="Admin" asp-action="Index" asp-controller="Home">Go Dashboard</a></h4>
                         }
                     }
                     else
@@ -530,16 +320,16 @@
                 <a class="pages-close" href="#"><img src="~/cilent/assets/icons/x-button.svg" alt=""></a>
 
                 <ul>
-                    <li><a href="~/index.html">Home</a></li>
-                    <li><a href="~/about.html">About</a></li>
-                    <li><a href="~/blog.html">Blog</a></li>
-                    <li><a href="~/contact.html">Contact</a></li>
-                    <li><a href="~/basket.html">Basket</a></li>
-                    <li><a href="~/account.html">Wish List</a></li>
-                    <li><a href="~/account.html">My Account </a></li>
-                    <li><a href="~/cilent/contact.php">Log Out</a></li>
-                    <li><a href="~/login.html">Login</a></li>
-                    <li><a href="~/register.html">Register</a></li>
+                    <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                    <li><a asp-action="Index" asp-controller="About">About</a></li>
+                    <li><a asp-action="Index" asp-controller="Blog">Blog</a></li>
+                    <li><a asp-action="Index" asp-controller="Contact">Contact</a></li>
+                    <li><a asp-action="Index" asp-controller="Basket">Basket</a></li>
+                    <li><a asp-action="Index" asp-controller="Wish">Wish List</a></li>
+                    <li><a asp-action="Index" asp-controller="Account">My Account </a></li>
+                    <li><a asp-action="Index" asp-controller="Account">Log Out</a></li>
+                    <li><a asp-action="Login" asp-controller="Account">Login</a></li>
+                    <li><a asp-action="Register" asp-controller="Account">Register</a></li>
                 </ul>
             </nav>
 
@@ -678,6 +468,415 @@
     <script src="~/cilent/assets/js/swiper-bundle.min.js"></script>
     <script src="~/cilent/assets/js/index.js"></script>
     @await RenderSectionAsync("script", false)
+    <script>
+        function addListenersToViewComponent() {
+            const productItems = document.querySelectorAll('.basket-product-list .product-item');
+            let BasketHeaderCount = document.querySelector('.basket-header span');
+            let bskCount = document.querySelector('.i-basket sup')
+            productItems.forEach(productItem => {
+
+                let id = productItem.getAttribute('data-id')
+                console.log(id)
+                let quantity = productItem.querySelector('.basket-quantity-box');
+                let removeItem = productItem.querySelector('.basket-price-close a');
+                let input = quantity.querySelector('.quantity-input');
+                let minus = quantity.querySelector('.minus');
+                let plus = quantity.querySelector('.plus');
+                let totalItem = parseInt(quantity.getAttribute('data-total'));
+
+                let subSellPrice = document.querySelector('.basket-total-prices #sell-price');
+                let subDisPrice = document.querySelector('.basket-total-prices #dis-price');
+
+                let hasDisPrice = productItem.querySelector('#dis-price') !== null;
+
+                function updatePrices(sell, dis, multiplier) {
+                    let SellPrice = parseFloat(sell.innerText.replace('$', '').trim());
+                    subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) + SellPrice * multiplier).toFixed(2);
+                    subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) + (dis ? parseFloat(dis.innerText.replace('$', '').trim()) : SellPrice) * multiplier).toFixed(2);
+                }
+
+
+                //Increase
+                plus.addEventListener('click', () => {
+                    if (totalItem > parseInt(input.value)) {
+                        input.value = parseInt(input.value) + 1;
+                        BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) + 1;
+
+                        let sell = productItem.querySelector('#sell-price');
+                        let dis = hasDisPrice ? productItem.querySelector('#dis-price') : null;
+                        updatePrices(sell, dis, 1);
+
+
+                        bskCount.innerText = parseInt(bskCount.innerText)+1
+
+
+                        fetch(`/Basket/IncreaseBasket/${id}`)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                console.log(data);
+                            })
+                            .catch(error => {
+                                console.error('There has been a problem with your fetch operation:', error);
+                            });
+                    }
+                });
+
+                //Decrease
+                minus.addEventListener('click', () => {
+                    if (parseInt(input.value) > 1) {
+                        input.value = parseInt(input.value) - 1;
+                        BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) - 1;
+
+                        bskCount.innerText = parseInt(bskCount.innerText) - 1;
+
+
+                        let sell = productItem.querySelector('#sell-price');
+                        let dis = hasDisPrice ? productItem.querySelector('#dis-price') : null;
+                        updatePrices(sell, dis, -1);
+
+                        fetch(`/Basket/DecreaseBasket/${id}`)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                console.log(data);
+                            })
+                            .catch(error => {
+                                console.error('There has been a problem with your fetch operation:', error);
+                            });
+                    }
+                });
+
+                function updateTotalCount() {
+                    let totalCount = 0;
+                    document.querySelectorAll('.quantity-input').forEach(input => {
+                        totalCount += parseInt(input.value) || 0;
+                    });
+                    BasketHeaderCount.innerText = totalCount;
+                }
+
+
+                //INPUT
+                input.addEventListener('input', () => {
+                    let newValue = parseInt(input.value);
+                    if (isNaN(newValue) || newValue < 1) {
+                        input.value = 1;
+                        newValue = 1;
+                    }
+                    const maxQuantity = parseInt(quantity.dataset.total);
+                    const currentCount = parseInt(BasketHeaderCount.innerText);
+                    const oldValue = parseInt(input.getAttribute('data-old-value')) || 1;
+
+                    if (newValue > maxQuantity) {
+                        input.value = maxQuantity;
+                    }
+
+                    const actualNewValue = parseInt(input.value);
+                    const difference = actualNewValue - oldValue;
+                    BasketHeaderCount.innerText = currentCount + difference;
+                    bskCount.innerText = currentCount + difference
+
+
+                    let sell = productItem.querySelector('#sell-price');
+                    let dis = hasDisPrice ? productItem.querySelector('#dis-price') : null;
+                    updatePrices(sell, dis, difference);
+
+                    fetch(`/Basket/ChangeBasket?id=${id}&count=${newValue}`)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error('Network response was not ok');
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                console.log(data);
+                            })
+                            .catch(error => {
+                                console.error('There has been a problem with your fetch operation:', error);
+                            });
+
+                    input.setAttribute('data-old-value', actualNewValue);
+                });
+
+                input.setAttribute('data-old-value', input.value);
+
+
+                //REMOVE
+                removeItem.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    productItem.style.display = "none";
+
+                    BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) - parseInt(input.value);
+
+                    let sell = productItem.querySelector('#sell-price');
+                    let dis = productItem.querySelector('#dis-price');
+                    updatePrices(sell, dis, -parseInt(input.value));
+
+                    fetch(`/Basket/DeleteBasket/${id}`)
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('There has been a problem with your fetch operation:', error);
+                        });
+                });
+                const basketClose = document.querySelector('.basket-close');
+
+                basketClose.addEventListener('click', () => {
+                    basketList.classList.remove('show');
+                    console.log(basketClose)
+
+                });
+
+                document.addEventListener('click', (event) => {
+                    const clickedElement = event.target;
+                    if (!basketList.contains(clickedElement) && !basaketIcon.contains(clickedElement)) {
+                        basketList.classList.remove('show');
+                    }
+                });
+
+                updateTotalCount();
+            });
+        }
+
+        var basaketIcon = document.querySelector('.i-basket');
+        var basketList = document.querySelector('.basket-list');
+
+        basaketIcon.addEventListener('click', (event) => {
+            event.stopPropagation();
+            basketList.classList.add('show');
+
+            fetch('/Basket/Getbasket')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.text();
+                })
+                .then(html => {
+                    basketList.innerHTML = html;
+                    addListenersToViewComponent();
+                    CloseMenu();
+
+                })
+                .catch(error => {
+                    console.error('There was a problem with the fetch operation:', error);
+                });
+        });
+
+
+        const CloseMenu = () => {
+            var basketClose = document.querySelector('.basket-close');
+
+            basketClose.addEventListener('click', () => {
+                basketList.classList.remove('show');
+                console.log(basketClose)
+
+            });
+
+            document.addEventListener('click', (event) => {
+                const clickedElement = event.target;
+                if (!basketList.contains(clickedElement) && !basaketIcon.contains(clickedElement)) {
+                    basketList.classList.remove('show');
+                }
+            });
+        }
+        CloseMenu();
+    </script>
+
+
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*  <script>
+    function addListenersToViewComponent() {
+        const productItems = document.querySelectorAll('.basket-product-list .product-item');
+        let BasketHeaderCount = document.querySelector('.basket-header span');
+
+
+
+
+
+
+        productItems.forEach(productItem => {
+            let quantity = productItem.querySelector('.basket-quantity-box');
+            let close = productItem.querySelector('.basket-price-close a');
+            let input = quantity.querySelector('.quantity-input');
+            let minus = quantity.querySelector('.minus');
+            let plus = quantity.querySelector('.plus');
+            let totalItem = parseInt(quantity.getAttribute('data-total'));
+
+
+            let subSellPrice = document.querySelector('.basket-total-prices #sell-price');
+            let subDisPrice = document.querySelector('.basket-total-prices #dis-price');
+
+
+            // let subTot = document.querySelector('.basket-total-prices');
+
+            let hasDisPrice = productItem.querySelector('#dis-price') !== null;
+
+            console.log(`subTot içinde #dis-price elementi var mı: ${hasDisPrice}`);
+
+
+
+
+            plus.addEventListener('click', () => {
+                if (totalItem > parseInt(input.value)) {
+                    input.value = parseInt(input.value) + 1;
+                    BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) + 1;
+
+                    let sell = productItem.querySelector('#sell-price');
+                    if (hasDisPrice) {
+                        let dis = productItem.querySelector('#dis-price');
+
+                        let SellPrice = parseFloat(sell.innerText.replace('$', '').trim())
+                        let DisPrice = parseFloat(dis.innerText.replace('$', '').trim())
+
+                        subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) + SellPrice).toFixed(2);
+                        subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) + DisPrice).toFixed(2);
+
+                    }
+                    else {
+                        let SellPrice = parseFloat(sell.innerText.replace('$', '').trim())
+
+                        subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) + SellPrice).toFixed(2);
+                        subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) + SellPrice).toFixed(2);
+                    }
+
+                }
+            });
+
+            minus.addEventListener('click', () => {
+                if (parseInt(input.value) > 1) {
+                    input.value = parseInt(input.value) - 1;
+                    BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) - 1;
+
+                    let sell = productItem.querySelector('#sell-price');
+                    if (hasDisPrice) {
+                        let dis = productItem.querySelector('#dis-price');
+
+                        let SellPrice = parseFloat(sell.innerText.replace('$', '').trim())
+                        let DisPrice = parseFloat(dis.innerText.replace('$', '').trim())
+
+                        subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) - SellPrice).toFixed(2);
+                        subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) - DisPrice).toFixed(2);
+
+                    }
+                    else {
+                        let SellPrice = parseFloat(sell.innerText.replace('$', '').trim())
+
+                        subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) - SellPrice).toFixed(2);
+                        subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) - SellPrice).toFixed(2);
+                    }
+
+                }
+            });
+
+
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+
+            function updateTotalCount() {
+                let totalCount = 0;
+                quantityInputs.forEach(input => {
+                    totalCount += parseInt(input.value) || 0;
+                });
+                BasketHeaderCount.innerText = totalCount;
+            }
+
+            updateTotalCount();
+
+            quantityInputs.forEach(input => {
+                input.addEventListener('input', () => {
+                    const newValue = parseInt(input.value);
+                    const maxQuantity = parseInt(input.closest('.basket-quantity-box').dataset.total);
+                    const currentCount = parseInt(BasketHeaderCount.innerText);
+
+                    if (newValue > maxQuantity) {
+                        input.value = maxQuantity;
+                    } else if (newValue < 1) {
+                        input.value = 1;
+                    }
+
+                    updateTotalCount();
+                });
+            });
+
+
+            close.addEventListener('click', (e) => {
+                e.preventDefault();
+                productItem.style.display = "none";
+
+                // SHOPPING Bag
+                BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) - parseInt(input.value);
+
+                // SUBTOTAL
+                input.closest('.basket-quantity-box').dataset.initialQuantity = currentQuantity;
+
+                updateTotalCount();
+            });
+        });
+    }
+
+    var basaketIcon = document.querySelector('.i-basket');
+    var basketList = document.querySelector('.basket-list');
+    var basketClose = document.querySelector('.basket-close');
+
+    basaketIcon.addEventListener('click', (event) => {
+        event.stopPropagation();
+        basketList.classList.add('show');
+
+        fetch('/Basket/Getbasket')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.text();
+            })
+            .then(html => {
+                basketList.innerHTML = html;
+                addListenersToViewComponent();
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
+            });
+    });
+
+    basketClose.addEventListener('click', (event) => {
+        event.stopPropagation();
+        basketList.classList.remove('show');
+    });
+
+    document.addEventListener('click', (event) => {
+        const clickedElement = event.target;
+        if (!basketList.contains(clickedElement) && !basaketIcon.contains(clickedElement)) {
+            basketList.classList.remove('show');
+        }
+    });
+</script> *@

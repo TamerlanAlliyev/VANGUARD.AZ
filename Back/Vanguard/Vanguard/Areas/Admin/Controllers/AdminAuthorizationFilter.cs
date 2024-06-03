@@ -1,18 +1,21 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace YourNamespace.Filters
 {
-    public class AdminAuthorizationFilter : IAuthorizationFilter
+    public class AdminAuthorizationFilter : IAsyncAuthorizationFilter 
     {
-        public void OnAuthorization(AuthorizationFilterContext context)
+        public async Task OnAuthorizationAsync(AuthorizationFilterContext context) 
         {
 
             if (!context.HttpContext.User.Identity.IsAuthenticated)
             {
                 context.Result = new RedirectToActionResult("AccessCode", "Account", new { area = "Admin" });
-                return;
+                return; 
             }
+          
 
             if (context.HttpContext.User.IsInRole("Customer"))
             {
