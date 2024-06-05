@@ -31,7 +31,7 @@ public static class ImageFileExtension
 
     public static bool FileSize(this IFormFile file, int size)
     {
-        if (file.Length < 5 * 1024 * 1024)
+        if (file.Length < size * 1024 * 1024)
         {
             return true;
         }

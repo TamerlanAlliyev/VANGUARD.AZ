@@ -9,4 +9,6 @@ public class Category : BaseAuditable
     public Category? ParentCategory { get; set; }
     public ICollection<Category>? ChildCategories { get; set; }
     public List<ProductCategory>? ProductCategory { get; set; }
+    public List<BlogCategory> Categories { get; set; } = null!;
+
 }

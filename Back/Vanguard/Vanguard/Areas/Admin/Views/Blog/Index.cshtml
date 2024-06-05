@@ -1,0 +1,163 @@
+﻿@using Vanguard.Areas.Admin.ViewModels.Blog
+@model List<BlogVM>
+
+@section style {
+    <link href="~/admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Blog</a></li>
+                <li class="breadcrumb-item"><a onclick="javascript:void(0)">List</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+
+
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Blog List</h4>
+                        <a asp-action="create" asp-area="Admin" asp-controller="Blog" class="btn btn-primary">Create New Blog</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display" style="min-width: 845px">
+
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>Author</th>
+                                        <th>Created </th>
+                                        <th>Views</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    @foreach (var blog in Model)
+                                    {
+                                        <tr class="blog">
+                                            @if (blog.IsViedo)
+                                            {
+                                                <td>
+                                                    <video width="90" style="object-fit:cover" height="70" src="~/cilent/assets/blogs/@blog.Image"></video>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td><img width="90" height="70" style="object-fit:cover" src="~/cilent/assets/blogs/@blog.Image" alt=""></td>
+                                            }
+                                            <td>@blog.Title</td>
+                                            <td>@blog.User</td>
+                                            <td>@blog.CreateDate</td>
+                                            <td>@blog.Clicked</td>
+
+
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a asp-area="Admin" asp-controller="blog" asp-action="Detail" asp-route-id="@blog.Id" class="btn btn-primary shadow btn-xs sharp me-1" title="Detail"><i class="bi bi-eye"></i></a>
+                                                    <a asp-area="Admin" asp-controller="blog" asp-action="Edit" asp-route-id="@blog.Id" class="btn btn-primary shadow btn-xs sharp me-1" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a class="btn btn-danger shadow btn-xs sharp del-btn" data-id="@blog.Id" title="Soft Delete"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section script {
+    <!-- Datatable -->
+    <script src="~/admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/admin/js/plugins-init/datatables.init.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to attach event listeners dynamically
+            function attachEventListeners(selector, eventType, handler) {
+                const elements = document.querySelectorAll(selector);
+                elements.forEach(element => {
+                    element.addEventListener(eventType, handler);
+                });
+            }
+
+            // Handle delete button clicks
+            function handleDeleteClick(event) {
+                event.preventDefault();
+                let dataId = this.getAttribute('data-id');
+
+                swal({
+                    title: "Are you sure?",
+                    text: "This blog will be permanently deleted!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                }).then((willDelete) => {
+                    if (willDelete) {
+
+                        fetch(`/Admin/Blog/SoftDelete/${dataId}`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                        })
+                        .then(response => {
+                                if (response.ok) {
+                                    toastr["success"]("blog deleted successfully");
+                                    let tr = this.closest('tr');
+                                    tr.remove();
+                                } else {
+                                    toastr["error"]("An error occurred while deleting the blog");
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                toastr["error"]("An error occurred while deleting the blog");
+                            });
+                    } else {
+                        swal("blog not deleted!");
+                    }
+                });
+            }
+
+            attachEventListeners('.del-btn', 'click', handleDeleteClick);
+
+            const tableBody = document.querySelector('#example3 tbody');
+            const observer = new MutationObserver(mutations => {
+                for (const mutation of mutations) {
+                    if (mutation.type === 'childList') {
+                        attachEventListeners('.del-btn', 'click', handleDeleteClick);
+                    }
+                }
+            });
+
+            observer.observe(tableBody, { childList: true });
+        });
+    </script>
+}

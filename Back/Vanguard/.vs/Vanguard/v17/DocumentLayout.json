@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\controller\\settingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\controller\\settingcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\viewmodels\\setting\\userinfoupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\viewmodels\\setting\\userinfoupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\viewmodels\\setting\\settingfiltervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\viewmodels\\setting\\settingfiltervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,21 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SettingFilterVM.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\ViewModels\\Setting\\SettingFilterVM.cs",
-              "RelativeDocumentMoniker": "Vanguard\\ViewModels\\Setting\\SettingFilterVM.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\ViewModels\\Setting\\SettingFilterVM.cs",
-              "RelativeToolTip": "Vanguard\\ViewModels\\Setting\\SettingFilterVM.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T14:08:38.096Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
@@ -51,28 +30,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserInfoUpdate.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\ViewModels\\Setting\\UserInfoUpdate.cs",
-              "RelativeDocumentMoniker": "Vanguard\\ViewModels\\Setting\\UserInfoUpdate.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\ViewModels\\Setting\\UserInfoUpdate.cs",
-              "RelativeToolTip": "Vanguard\\ViewModels\\Setting\\UserInfoUpdate.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAArAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T14:06:53.368Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "SettingController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\SettingController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Controller\\SettingController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\SettingController.cs",
-              "RelativeToolTip": "Vanguard\\Controller\\SettingController.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAQwDgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-03T13:19:07.243Z",
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Vanguard\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Vanguard\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAANcAAAAAAAAAAAAAAOwAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-05T18:39:30.912Z",
               "EditorCaption": ""
             }
           ]

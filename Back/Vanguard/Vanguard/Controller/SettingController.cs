@@ -5,7 +5,8 @@ using Newtonsoft.Json;
 using System.Linq;
 using System.Security.Claims;
 using Vanguard.Data;
-using Vanguard.Migrations;
+using Vanguard.Extensions;
+using Vanguard.Helpers;
 using Vanguard.Models;
 using Vanguard.Services.Interfaces;
 using Vanguard.ViewModels.Basket;
@@ -22,13 +23,15 @@ namespace Vanguard.Controller
         private readonly UserManager<AppUser> _userManager;
         private readonly IHttpContextAccessor _contextAccessor;
         readonly IShopService _shopService;
+        readonly IWebHostEnvironment _environment;
 
-        public SettingController(VanguardContext context, UserManager<AppUser> userManager, IHttpContextAccessor contextAccessor, IShopService shopService)
+        public SettingController(VanguardContext context, UserManager<AppUser> userManager, IHttpContextAccessor contextAccessor, IShopService shopService, IWebHostEnvironment environment)
         {
             _context = context;
             _userManager = userManager;
             _contextAccessor = contextAccessor;
             _shopService = shopService;
+            _environment = environment;
         }
 
         [Route("Index/{id?}")]
@@ -51,10 +54,22 @@ namespace Vanguard.Controller
                 wishes = await _context.Wishs.Where(w => w.AppUserId == user!.Id).ToListAsync();
                 wishesVM = wishes.Select(w => new WishVM { Id = w.ProductId }).ToList();
 
-                //user
-                vm.User.Id = user!.Id;
-                //vm.
 
+                var exsistUser = await _context.Users.Include(u => u.UserAddress).Include(U => U.Image).FirstOrDefaultAsync(u => u.Id == user.Id);
+                UserInfoUpdate upUser = new UserInfoUpdate
+                {
+                    Id = exsistUser!.Id,
+                    Name = exsistUser.Name,
+                    SurName = exsistUser.Surname,
+                    Email = exsistUser.Email!,
+                    Phone = exsistUser.PhoneNumber,
+                    Country = exsistUser.UserAddress?.Country,
+                    City = exsistUser.UserAddress?.City,
+                    Postal = exsistUser.UserAddress?.PostalCode,
+                    HomeAddress = exsistUser.UserAddress?.HomeAddress,
+                    Image = exsistUser.Image?.Url
+                };
+                vm.User = upUser;
             }
 
             switch (id)
@@ -70,7 +85,7 @@ namespace Vanguard.Controller
                     break;
             }
 
-         
+
 
             List<int> wishProductIds = wishesVM.Select(w => w.Id).ToList();
 
@@ -109,6 +124,86 @@ namespace Vanguard.Controller
 
 
 
+
+        public async Task<IActionResult> UserUpdate(SettingFilterVM vm)
+        {
+            if (vm.User == null)
+            {
+                return NotFound();
+            }
+
+            ModelState.Clear();
+
+            ValidationHelper.ValidateUserInfoUpdate(vm.User, ModelState);
+
+            var exsisUser = await _context.Users.Include(u => u.UserAddress).Include(u=>u.Image).FirstOrDefaultAsync(u => u.Id == vm.User!.Id);
+
+            exsisUser.Name = vm.User!.Name;
+            exsisUser.Surname = vm.User.SurName;
+            exsisUser.PhoneNumber = vm.User.Phone;
+            exsisUser.Email = vm.User.Email;
+
+            if (exsisUser.UserAddress == null)
+            {
+                if (vm.User.Country != null ||
+                    vm.User.City != null ||
+                    vm.User.Postal != null ||
+                    vm.User.HomeAddress != null)
+                {
+                    UserAddress address = new UserAddress
+                    {
+                        Country = vm.User.Country,
+                        City = vm.User.City,
+                        PostalCode = vm.User.Postal,
+                        HomeAddress = vm.User.HomeAddress,
+                        AppUser = exsisUser,
+                    };
+                    await _context.UserAddresses.AddAsync(address);
+                }
+            }
+            else
+            {
+                exsisUser.UserAddress.Country = vm.User.Country;
+                exsisUser.UserAddress.City = vm.User.City;
+                exsisUser.UserAddress.PostalCode = vm.User.Postal;
+                exsisUser.UserAddress.HomeAddress = vm.User.HomeAddress;
+            }
+
+            Image image = new Image();
+
+            if (vm.User.ProfilImage != null)
+            {
+                if (!vm.User.ProfilImage.FileSize(5) || !vm.User.ProfilImage.FileTypeAsync("image/"))
+                {
+                    ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
+                    return View(vm);
+                }
+                if (!vm.User.ProfilImage.FileTypeAsync("image"))
+                {
+                    ModelState.AddModelError("ProfilImage", "Files must be 'Image' type!.");
+                    return View(vm);
+                }
+                var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "images", "account");
+                var fileName = await vm.User.ProfilImage.SaveToAsync(path);
+
+                if (exsisUser.Image!=null)
+                {
+                    ImageFileExtension.DeleteImagesService(path, exsisUser.Image.Url);
+                }
+
+                image = new Image
+                {
+                    Url = fileName,
+                    AppUser = exsisUser
+                };
+                await _context.Images.AddAsync(image);
+            }
+
+
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", new { id = 1 });
+        }
 
 
 

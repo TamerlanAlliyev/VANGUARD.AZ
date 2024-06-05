@@ -7,6 +7,6 @@ public class UserAddress
     public string? City { get; set; }
     public string? PostalCode { get; set; }
     public string? HomeAddress { get; set; }
-    public int AppUserId { get; set; }
+    public string? AppUserId { get; set; }
     public AppUser AppUser { get; set; } = null!;
 }

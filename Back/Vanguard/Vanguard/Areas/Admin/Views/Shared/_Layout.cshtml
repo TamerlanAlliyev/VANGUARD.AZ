@@ -823,7 +823,18 @@
 							<li><a asp-action="EmployeeCreat" asp-controller="Admin" asp-area="Admin">Creat New Employee</a></li>
 						</ul>
 					</li>
-
+					<li>
+						<a class="has-arrow " onclick="javascript:void()" aria-expanded="false">
+							<i class="fa-solid fa-shirt"></i>
+							<span class="nav-text">Blog</span>
+						</a>
+						<ul aria-expanded="false">
+							<span style="font-size:16px; margin-left:15%;font-weight:600;">Blog</span>
+							<li><a asp-action="Index" asp-controller="Blog" asp-area="Admin">List</a></li>
+							<li><a asp-action="Create" asp-controller="Blog" asp-area="Admin">Create</a></li>
+							<li><a asp-action="DeletedList" asp-controller="Blog" asp-area="Admin">Deleted List</a></li>
+						</ul>
+					</li>
 
 					<li>
 						<a class="has-arrow " onclick="javascript:void()" aria-expanded="false">

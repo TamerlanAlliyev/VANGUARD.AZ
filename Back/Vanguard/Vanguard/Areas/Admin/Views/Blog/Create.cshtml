@@ -1,0 +1,1782 @@
+﻿@using Vanguard.Areas.Admin.ViewModels.Blog
+@model BlogCreateVM
+
+<style>
+    .ca-title {
+        width: 30%;
+    }
+
+    .ca-container {
+        width: 70%;
+    }
+
+    input[type="color"] {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 100px;
+    }
+
+        input[type="color"]::-webkit-color-swatch-wrapper {
+            padding: 0;
+        }
+
+        input[type="color"]::-webkit-color-swatch {
+            border: none;
+        }
+
+    .select2-selection__choice {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 30px !important;
+        margin-top: 5px !important;
+    }
+
+
+    .new-color {
+        display: none;
+    }
+
+        .new-color.active {
+            display: flex;
+        }
+
+    .prod-size input,
+    .prod-count input {
+        width: 90%;
+        height: 45px !important;
+        padding: 8px;
+    }
+
+    .del-btn {
+        background-color: transparent;
+        border: none;
+        position: relative;
+        color: #ffff;
+        height: 45px;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none !important;
+    }
+
+        .del-btn:hover {
+            background-color: #dc3545;
+            color: #ffff;
+        }
+
+    .select-col {
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+        margin: 0 !important;
+    }
+
+    .select-butn {
+        padding: 0.75rem 1rem;
+        background: #161717;
+        border-color: #2B2B2B;
+        border-radius: 1rem;
+        cursor: pointer;
+        animation: bounce 0.3s ease-in-out;
+    }
+
+        .select-butn.active {
+            border-radius: 1rem 1rem 0 0;
+        }
+
+    .color-search {
+        background: #c8c8c8;
+        border: none;
+        width: 100%;
+        padding: 6px 12px;
+    }
+
+    .col-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #161717;
+        max-height: 200px;
+        border-radius: 0 0 1rem 1rem;
+        overflow-y: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+
+        .col-list label {
+            margin: 0 !important;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+            .col-list label:hover {
+                background: #373939;
+            }
+
+        .col-list::-webkit-scrollbar {
+            width: 8px;
+            border-radius: 8px;
+        }
+
+        .col-list::-webkit-scrollbar-thumb {
+            background: #373939c3;
+            border-radius: 8px;
+        }
+
+    .col-container {
+        display: none;
+        flex-direction: column;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+        .col-container.active {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+    @@keyframes bounce {
+
+        0%,
+        20%,
+        50%,
+        80%,
+        100% {
+            transform: translateY(0);
+        }
+
+        40% {
+            transform: translateY(-5px);
+        }
+
+        60% {
+            transform: translateY(-3px);
+        }
+    }
+
+    @@keyframes slideIn {
+        from {
+            transform: translateY(-10px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes slideIn {
+        from {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @@keyframes slideOut {
+
+        from {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        to {
+            transform: translateY(10px);
+            opacity: 0;
+        }
+    }
+
+    .color-new-btn {
+        border-radius: 10px;
+        height: 40px;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        font-size: 14px;
+        width: 28% !important;
+        padding: 5px;
+    }
+
+    thead tr th:first-child,
+    .color-list-table thead tr th:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .color-list-cricle {
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #000;
+    }
+
+        .color-list-cricle:hover {
+            background: #545454 !important;
+            cursor: pointer;
+        }
+
+    .color-list-cricle {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+        .color-list-cricle:active {
+            transform: scale(0.85);
+        }
+
+    .close-b {
+        display: none;
+    }
+
+    .color-list-cricle:hover .close-b {
+        display: flex;
+    }
+
+    .add-size-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+        .add-size-btn i {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+            .add-size-btn i:active {
+                transform: scale(0.95);
+                background: #ffffff;
+                color: #000;
+            }
+
+
+
+
+    .add-upload-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 24px;
+        cursor: pointer;
+        color: red;
+    }
+
+        .add-upload-btn i {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+            .add-upload-btn i:active {
+                transform: scale(0.95);
+            }
+
+
+
+    .sec-img {
+        display: none;
+    }
+
+
+        .sec-img.active {
+            display: inherit;
+        }
+
+    /* ========== Image ========= */
+    .color-img-body {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .sec-img {
+        width: 100%;
+        padding: 0rem 1rem 1rem 1rem;
+    }
+
+    .select-color {
+        padding: 1rem;
+    }
+
+    .select-color-head {
+        width: 100%;
+        display: flex;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .sec-hed {
+        color: #fff;
+        /* text-align: center; */
+    }
+
+        .sec-hed:nth-child(1) {
+            width: 15%;
+        }
+
+        .sec-hed:nth-child(2) {
+            width: 30%;
+        }
+
+        .sec-hed:nth-child(3) {
+            width: 25%;
+        }
+
+
+        .sec-hed:nth-child(4) {
+            width: 15%;
+            text-align: center;
+        }
+
+        .sec-hed:nth-child(5) {
+            width: 15%;
+            text-align: center;
+        }
+
+
+
+    .sec-body {
+        color: #fff;
+        width: 20%;
+    }
+
+
+    .color-box {
+        width: 100%;
+        padding: 1.5rem 1rem 1rem 1rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    .col-body {
+        display: flex;
+    }
+
+
+        .col-body:nth-child(1) {
+            width: 15%;
+        }
+
+        .col-body:nth-child(2) {
+            width: 30%;
+        }
+
+        .col-body:nth-child(3) {
+            width: 25%;
+        }
+
+        .col-body:nth-child(4) {
+            width: 15%;
+        }
+
+        .col-body:nth-child(5) {
+            justify-content: center;
+            width: 15%;
+        }
+
+    .img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 600px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .label-image img {
+        width: 35%;
+        height: 35%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .label-image.active img {
+        width: 35%;
+        height: 35%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .label-image {
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        border: 3px solid #b4b4b4;
+        border-radius: 1rem;
+        transition: all 0.3s ease-out;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .label-image:active {
+            transform: scale(0.9);
+        }
+
+    /* ========== Image ========= */
+
+
+    /* ========== Image File ========= */
+
+    .add-files {
+        /* padding: 0 16px 0 90px; */
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        height: auto !important;
+        padding: 2rem 1rem 1rem 1rem;
+    }
+
+    .im-conta {
+        padding: 0;
+    }
+
+    .additional-image {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5%;
+        row-gap: 5%;
+        width: 100%;
+        row-gap: 30px;
+        max-height: auto !important;
+    }
+
+    .add-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 316px;
+        flex-direction: column;
+        gap: 10px;
+        width: 30%;
+    }
+
+    .hover-img-selected {
+        width: 50%;
+        height: 50%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+
+    .add-label-image {
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease-out;
+        cursor: pointer;
+        border: 3px solid #b4b4b4;
+        border-radius: 1rem;
+        transition: all 0.3s ease-out;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+        .add-label-image:active {
+            transform: scale(0.9);
+        }
+
+    .add-container.add-img-box {
+        transition: all 0.5s ease;
+    }
+
+        .add-container.add-img-box .remove-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #202020;
+            background: #ffffff79;
+            padding: 10px;
+            font-size: 50px;
+            display: none;
+            transition: all 0.5s ease;
+        }
+
+    .add-img-box .add-label-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top center;
+    }
+
+    .add-container.add-img-box:hover .remove-img {
+        display: flex;
+    }
+
+    /* ========== Image File ========= */
+
+
+    /* ========== Tags And Categories ========= */
+
+    /* ========== Categories ========= */
+
+    .select-col-category {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 !important;
+    }
+
+    .select-btn-category {
+        padding: 0.75rem 1rem;
+        background: #161717;
+        border-color: #2B2B2B;
+        border-radius: 1rem;
+        cursor: pointer;
+        animation: bounce 0.3s ease-in-out;
+    }
+
+        .select-btn-category.active {
+            border-radius: 1rem 1rem 0 0;
+        }
+
+    .category-search {
+        background: #c8c8c8;
+        border: none;
+        width: 100%;
+        padding: 6px 18px;
+    }
+
+    .category-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #161717;
+        max-height: 200px;
+        border-radius: 0 0 1rem 1rem;
+        overflow-y: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+
+        .category-list label {
+            margin: 0 !important;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+            .category-list label:hover {
+                background: #373939;
+            }
+
+            .category-list label.btn-primary span {
+                color: #fff;
+            }
+
+
+        .category-list::-webkit-scrollbar {
+            width: 8px;
+            border-radius: 8px;
+        }
+
+        .category-list::-webkit-scrollbar-thumb {
+            background: #373939c3;
+            border-radius: 8px;
+        }
+
+    .col-container-category {
+        display: none;
+        flex-direction: column;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+        .col-container-category.active {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+    /* ========== Categories ========= */
+
+
+    /* ========== Categories ========= */
+
+    .select-col-tag {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 !important;
+    }
+
+    .select-btn-tag {
+        padding: 0.75rem 1rem;
+        background: #161717;
+        border-color: #2B2B2B;
+        border-radius: 1rem;
+        cursor: pointer;
+        animation: bounce 0.3s ease-in-out;
+    }
+
+        .select-btn-tag.active {
+            border-radius: 1rem 1rem 0 0;
+        }
+
+    .tag-search {
+        background: #c8c8c8;
+        border: none;
+        width: 100%;
+        padding: 6px 18px;
+    }
+
+    .tag-list {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        background: #161717;
+        max-height: 200px;
+        border-radius: 0 0 1rem 1rem;
+        overflow-y: auto;
+        transition: all 0.5s ease-in-out;
+    }
+
+
+        .tag-list label {
+            margin: 0 !important;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+            .tag-list label:hover {
+                background: #373939;
+            }
+
+            .tag-list label.btn-primary span {
+                color: #fff;
+            }
+
+        .tag-list::-webkit-scrollbar {
+            width: 8px;
+            border-radius: 8px;
+        }
+
+        .tag-list::-webkit-scrollbar-thumb {
+            background: #373939c3;
+            border-radius: 8px;
+        }
+
+    .col-container-tag {
+        display: none;
+        flex-direction: column;
+        transition: all 0.5s ease-in-out;
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+        .col-container-tag.active {
+            display: flex;
+            transform: translateY(0);
+            opacity: 1;
+            animation: slideIn 0.5s ease-in-out;
+        }
+
+    /* ========== Categories ========= */
+
+
+    /* ========== Tags ========= */
+
+    .selected-category-box {
+        display: flex;
+        min-height: 124px;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 73%;
+        row-gap: 1rem;
+        height: auto;
+    }
+
+        .selected-category-box .category-box {
+            background: #202020;
+            padding: 6px 12px;
+            height: max-content;
+            color: #f5f5f5;
+            border-radius: 1rem;
+            border: 0.5px solid #828690;
+            transition: all 0.3s ease-out;
+        }
+
+        .selected-category-box .cat-name {
+            padding-right: 6px;
+        }
+
+        .selected-category-box .cat-remove {
+            padding-left: 6px;
+            border-left: 1px solid #828690;
+            cursor: pointer;
+        }
+
+        .selected-category-box .category-box:active {
+            transform: scale(0.9);
+        }
+
+
+
+
+    .selected-tag-box {
+        display: flex;
+        min-height: 124px;
+        gap: 1rem;
+        flex-wrap: wrap;
+        width: 73%;
+        row-gap: 1rem;
+        height: auto;
+    }
+
+        .selected-tag-box .tag-box {
+            background: #202020;
+            padding: 6px 12px;
+            height: max-content;
+            color: #f5f5f5;
+            border-radius: 1rem;
+            border: 0.5px solid #828690;
+            transition: all 0.3s ease-out;
+        }
+
+        .selected-tag-box .tag-name {
+            padding-right: 6px;
+        }
+
+        .selected-tag-box .tag-remove {
+            padding-left: 6px;
+            border-left: 1px solid #828690;
+            cursor: pointer;
+        }
+
+        .selected-tag-box .tag-box:active {
+            transform: scale(0.9);
+        }
+
+    /* ========== Tags ========= */
+
+    .color-img-body {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+
+    .sec-img {
+        width: 100%;
+        padding: 0rem 1rem 1rem 1rem;
+    }
+
+    .select-color {
+        padding: 1rem;
+    }
+
+    .select-color-head {
+        width: 100%;
+        display: flex;
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .sec-hed {
+        color: #fff;
+        /* text-align: center; */
+    }
+
+        .sec-hed:nth-child(1) {
+            width: 15%;
+        }
+
+        .sec-hed:nth-child(2) {
+            width: 30%;
+        }
+
+        .sec-hed:nth-child(3) {
+            width: 25%;
+        }
+
+
+        .sec-hed:nth-child(4) {
+            width: 15%;
+            text-align: center;
+        }
+
+        .sec-hed:nth-child(5) {
+            width: 15%;
+            text-align: center;
+        }
+
+
+
+    .sec-body {
+        color: #fff;
+        width: 20%;
+    }
+
+
+    .color-box {
+        width: 100%;
+        padding: 1.5rem 1rem 1rem 1rem;
+        height: 80px;
+        display: flex;
+        align-items: center;
+    }
+
+    .image-box {
+        width: 100%;
+    }
+
+    .col-body {
+        display: flex;
+    }
+
+
+        .col-body:nth-child(1) {
+            width: 15%;
+        }
+
+        .col-body:nth-child(2) {
+            width: 30%;
+        }
+
+        .col-body:nth-child(3) {
+            width: 25%;
+        }
+
+        .col-body:nth-child(4) {
+            width: 15%;
+        }
+
+        .col-body:nth-child(5) {
+            justify-content: center;
+            width: 15%;
+        }
+</style>
+
+
+
+
+
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="~/admin/javascript:void(0)">Blog</a></li>
+                <li class="breadcrumb-item"><a href="~/admin/javascript:void(0)">Create</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <form id="Form" method="post" enctype="multipart/form-data" >
+
+
+
+                <!-- ==========================================
+                               Product Informations
+                ===============================================-->
+                <div class="col-lg-12">
+
+
+                    <div class="card">
+
+                        <div class="card-header card">
+                            <h4 class="card-title">Blog Informations</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="form-validation">
+                                <div class="row">
+
+                                    <div class="col-xl-12 ">
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label w-25"
+                                                   for="validationCustom01">
+                                                Blog Title
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-10 w-75" style="padding-right: 10%;">
+                                                <input asp-for="Title" type="text" class="form-control" id="validationCustom01"
+                                                       placeholder="Enter a Title..." required="">
+                                                <span asp-validation-for="Title" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label w-25"
+                                                   for="validationCustom04">
+                                                Main Description <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8 w-75" style="padding-right: 10%; ">
+
+                                                <textarea asp-for="@Model.MainDescription" id="MainDescription"></textarea>
+                                                <span asp-validation-for="@Model.MainDescription" class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label w-25"
+                                                   for="validationCustom05">
+                                                Main Description <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8 w-75" style="padding-right: 10%; ">
+
+                                                <textarea asp-for="@Model.AddinationDescription" class="form-control" id="AddinationDescription"></textarea>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+                <!-- ==========================================
+                              Tags and Categories
+                ===============================================-->
+                <div class="col-lg-12">
+
+
+                    <div class="card">
+
+                        <div class="card-header card">
+                            <h4 class="card-title">Tags and Categories</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="form-validation">
+                                <div class="row">
+
+
+
+
+                                    <div class="col-xl-5 ">
+
+                                        <div class="mb-3 row">
+
+
+
+
+                                            <label class="col-lg-4 col-form-label " style="width: 37%;"
+                                                   for="validationCustom01">
+                                                Selet Categories
+                                                <span class="text-danger">*</span>
+                                            </label>
+
+
+
+
+
+                                            <div class="select-col-category " style="width: 63%;">
+
+                                                <span class="select-btn-category">Select Categories</span>
+
+                                                <div class="col-container-category">
+                                                    <input class="category-search" type="text"
+                                                           placeholder="Search Categories...">
+
+                                                    <div class="category-list">
+                                                        @if (Model.CategorySelection != null)
+                                                        {
+
+                                                            @foreach (var cat in Model.CategorySelection)
+                                                            {
+
+                                                                <label class="list-categ" data-id="@cat.Id"
+                                                                       for="@cat.Id">
+                                                                    <input type="checkbox" class="checkbox" id="@cat.Id"
+                                                                           hidden />
+                                                                    <span class="cat-name"> @cat.Name</span>
+                                                                    <span class="par-name">
+                                                                        @(cat.Parent != null ?
+                                                                            $"({cat.Parent})" : "")
+                                                                    </span>
+                                                                </label>
+                                                            }
+                                                        }
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+                                        </div>
+
+
+
+
+                                        <div class="mb-3 row">
+
+                                            <label class="col-lg-4 col-form-label " style="width: 37%;"
+                                                   for="validationCustom01">
+                                                Selet Tags
+                                                <span class="text-danger">*</span>
+                                            </label>
+
+
+
+
+
+                                            <div class="select-col-tag" style="width: 63%;">
+
+                                                <span class="select-btn-tag">Select Tags</span>
+
+                                                <div class="col-container-tag">
+                                                    <input class="tag-search" type="text"
+                                                           placeholder="Search Color...">
+
+                                                    <div class="tag-list">
+
+                                                        @if (Model.TagSelections != null)
+                                                        {
+                                                            @foreach (var tag in Model.TagSelections)
+                                                            {
+                                                                <label class="list-tag" data-id="@tag.Id" for="@tag.Id">
+                                                                    <input type="checkbox" class="checkbox" id="@tag.Id"
+                                                                           hidden />
+                                                                    <span class="tag-name">@tag.Name</span>
+                                                                </label>
+                                                            }
+                                                        }
+
+
+
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+
+                                    <div class="col-xl-7">
+
+
+
+                                        <div class="mb-3 row">
+
+                                            <label class="col-lg-3 col-form-label " style="width: 32%;"
+                                                   for="validationCustom06">
+                                                Selected Categories
+                                                <span class="text-danger">*</span>
+                                            </label>
+
+
+                                            <ul class="col-lg-9 form-control p-3 selected-category-box"
+                                                style="width: 66%;">
+
+                                                @* <li class="category-box">
+                                                <span class="cat-name-selected">Fashion</span>
+                                                <a data-id="Fashion" class="cat-remove">
+                                                <i class="fa-solid fa-xmark"></i>
+                                                </a>
+                                                <input value="Fashion" type="text" hidden>
+                                                </li>
+                                                *@
+
+                                                <span asp-validation-for="SelectedCategoryIds" class="text-danger"></span>
+                                            </ul>
+
+
+
+                                        </div>
+
+
+
+                                        <div class="mb-3 row">
+
+                                            <label class="col-lg-3 col-form-label " style="width: 32%;"
+                                                   for="validationCustom06">
+                                                Selected Tags
+                                                <span class="text-danger">*</span>
+                                            </label>
+
+
+                                            <ul class="col-lg-9 form-control p-3 selected-tag-box"
+                                                style="width: 66%;">
+
+                                                @* <li class="tag-box">
+                                                <span data-id="5" class="tag-name">Fashion</span>
+                                                <a class="tag-remove">
+                                                <i class="fa-solid fa-xmark"></i>
+                                                <input value="Fashion" type="text" hidden>
+                                                </a>
+                                                </li> *@
+
+                                            </ul>
+
+
+                                        </div>
+
+
+                                    </div>
+
+
+
+
+
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+
+
+                <!-- ==========================================
+                              Image Upload
+                ===============================================-->
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-header card">
+                            <h4 class="card-title">Add Upload</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="main-hover ">
+                                    <div class="row im-container " style="width: 100%;">
+                                        <div class="col-xl-12 img-container">
+                                            <label for="mainImage">Main Image/Video <span class="text-danger">*</span></label>
+                                            <label for="mainImage" class="label-image">
+                                                <input asp-for="MainFile" type="file" id="mainImage" hidden>
+                                                <img class="main-img selected-media" src="~/admin//icons/plus.svg" alt="">
+                                                <video class="main-video selected-media" style="display:none;" controls></video>
+                                            </label>
+                                        </div>
+                                        <span asp-validation-for="MainFile"></span>
+
+                                    </div>
+                                </div>
+
+                                <div class="add-files">
+                                    <div>
+                                        <span>Additional Image/Video <span class="text-danger">*</span></span>
+                                    </div>
+                                    <div class="im-container">
+                                        <div class="col-xl-12 additional-image">
+                                      
+                                            <div class="add-container">
+                                                <label for="add-AdditionalImages" class="add-label-image">
+                                                    <input id="add-AdditionalImages" type="file" class="form-control" multiple hidden>
+                                                    <img class="hover-img-selected" src="~/admin//icons/plus.svg" alt="">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <input asp-for="AddinationFile" id="AdditionalImages" type="file" class="form-control" multiple hidden>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="d-flex row justify-content-center">
+                    <div class="d-flex row justify-content-center">
+                        <button type="submit" class="btn btn-primary w-25">Submit</button>
+                    </div>
+                </div>
+
+
+            </form>
+
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section script {
+    <script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+@*     <script src="~/admin/ckeditor/ckeditor.js"></script>
+    <script src="~/admin/ckeditor/build-config.js"></script>
+    <script src="~/admin/ckeditor/config.js"></script>
+    <script>
+        CKEDITOR.replace("MainDescription");
+        CKEDITOR.replace("AddinationDescription");
+    </script> *@
+
+
+    <script>
+
+        //============ SUBMIT
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('Form');
+
+            form.addEventListener('submit', async (event) => {
+                event.preventDefault();
+
+                const formData = new FormData(form);
+
+                // Tag Submission
+                const selectedTagBox = document.querySelector('.selected-tag-box');
+                const tagBoxes = selectedTagBox.querySelectorAll('.tag-box');
+                let selectedTagIds = Array.from(tagBoxes).map(tagBox => parseInt(tagBox.getAttribute('data-id'), 10));
+                selectedTagIds.forEach((tagId, index) => {
+                    formData.append(`SelectedTagIds[${index}]`, tagId);
+                });
+
+                // Category Submission
+                const selectedCategoryBox = document.querySelector('.selected-category-box');
+                const categoryBoxes = selectedCategoryBox.querySelectorAll('.category-box');
+                let selectedCategoryIds = Array.from(categoryBoxes).map(categoryBox => parseInt(categoryBox.getAttribute('data-id'), 10));
+                selectedCategoryIds.forEach((categoryId, index) => {
+                    formData.append(`SelectedCategoryIds[${index}]`, categoryId);
+                });
+
+
+                try {
+                    const response = await fetch('Create', {
+                        method: form.method,
+                        body: formData,
+                    });
+
+                    window.location.href = response.url;
+                } catch (error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+
+
+        //=================== Main && Hover Image/Video
+        const mainImageInput = document.getElementById('mainImage');
+        const mainImage = document.querySelector('.main-img');
+        const mainVideo = document.querySelector('.main-video');
+
+        mainImageInput.addEventListener('change', (event) => {
+            displayMedia(event, mainImage, mainVideo);
+        });
+
+
+
+        function displayMedia(event, imgElement, videoElement) {
+            const selectedFile = event.target.files[0];
+
+            if (selectedFile) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    if (selectedFile.type.match('image.*')) {
+                        imgElement.src = e.target.result;
+                        imgElement.style.display = 'block';
+                        videoElement.style.display = 'none';
+                    } else if (selectedFile.type.match('video.*')) {
+                        videoElement.src = e.target.result;
+                        videoElement.style.display = 'block';
+                        imgElement.style.display = 'none';
+                    } else {
+                        alert("Please select an image or video file!");
+                        event.target.value = "";
+                    }
+                };
+
+                reader.readAsDataURL(selectedFile);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const addAdditionalImagesInput = document.getElementById('add-AdditionalImages');
+            const additionalImagesInput = document.getElementById('AdditionalImages');
+            const additionalImageContainer = document.querySelector('.additional-image');
+
+            addAdditionalImagesInput.addEventListener('change', () => {
+                if (addAdditionalImagesInput.files.length > 0) {
+                    const existingFiles = Array.from(additionalImagesInput.files || []);
+                    const newFiles = Array.from(addAdditionalImagesInput.files);
+                    const allFiles = [...existingFiles, ...newFiles];
+
+                    const dt = new DataTransfer();
+                    allFiles.forEach(file => dt.items.add(file));
+                    additionalImagesInput.files = dt.files;
+
+                    for (const file of newFiles) {
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            const mediaBoxDiv = document.createElement('div');
+                            mediaBoxDiv.classList.add('add-container', 'add-img-box');
+
+                            const label = document.createElement('label');
+                            label.classList.add('add-label-image');
+                            label.dataset.file = file.name;
+
+                            let media;
+                            if (file.type.match('image.*')) {
+                                media = document.createElement('img');
+                                media.classList.add('hover-img-selected');
+                                media.src = e.target.result;
+                                media.alt = file.name;
+                            } else if (file.type.match('video.*')) {
+                                media = document.createElement('video');
+                                media.classList.add('hover-img-selected');
+                                media.src = e.target.result;
+                                media.controls = true;
+                            }
+
+                            const removeLink = document.createElement('a');
+                            removeLink.classList.add('remove-img');
+                            removeLink.innerHTML = '<i class="fa-regular fa-trash-can"></i>';
+
+                            label.appendChild(removeLink);
+                            label.appendChild(media);
+                            mediaBoxDiv.appendChild(label);
+                            additionalImageContainer.insertBefore(mediaBoxDiv, additionalImageContainer.lastChild);
+                        };
+
+                        reader.readAsDataURL(file);
+                    }
+
+                    addAdditionalImagesInput.value = '';
+                }
+            });
+
+            additionalImageContainer.addEventListener('click', (event) => {
+                const removeIcon = event.target.closest('.remove-img');
+
+                if (removeIcon) {
+                    const mediaBox = removeIcon.closest('.add-img-box');
+                    const label = mediaBox.querySelector('.add-label-image');
+                    const fileNameToRemove = label.dataset.file;
+
+                    event.preventDefault();
+                    event.stopPropagation();
+
+                    const dt = new DataTransfer();
+                    for (const file of additionalImagesInput.files) {
+                        if (file.name !== fileNameToRemove) {
+                            dt.items.add(file);
+                        }
+                    }
+                    additionalImagesInput.files = dt.files;
+
+                    mediaBox.remove();
+                }
+            });
+        });
+
+
+
+        //=================== CATEGORY
+
+
+        //******* Search
+        document.addEventListener('DOMContentLoaded', () => {
+            const categorySearch = document.querySelector('.category-search');
+            const categoryList = document.querySelector('.category-list');
+            const listItemsCat = categoryList.querySelectorAll('.list-categ');
+
+            categorySearch.addEventListener('input', () => {
+                const searchTerm = categorySearch.value.trim().toLowerCase();
+
+                listItemsCat.forEach(item => {
+                    const categoryName = item.querySelector('.cat-name').textContent.trim().toLowerCase();
+                    const parentName = item.querySelector('.par-name').textContent.trim().toLowerCase();
+
+                    if (categoryName.includes(searchTerm) || parentName.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+
+            });
+        });
+
+
+
+        //******* Close-Togle
+        const CatselectBtn = document.querySelector('.select-btn-category')
+        const CatLiContainer = document.querySelector('.col-container-category')
+
+        CatselectBtn.addEventListener('click', () => {
+            if (!CatselectBtn.classList.contains('active')) {
+                CatselectBtn.classList.add('active')
+                CatLiContainer.classList.add('active')
+            } else {
+                CatselectBtn.classList.remove('active')
+                CatLiContainer.classList.remove('active')
+            }
+        })
+
+
+        //******* Add
+        function AddCategory() {
+            const listItemsCat = document.querySelectorAll('.list-categ');
+
+            listItemsCat.forEach(item => {
+                let name = item.querySelector('.cat-name').textContent;
+                let id = parseInt(item.getAttribute('data-id'), 10);
+
+                item.addEventListener('mousedown', (event) => {
+                    const SelectedCategories = document.querySelector('.selected-category-box');
+                    const catList = SelectedCategories.querySelectorAll('.category-box');
+
+                    if (item.classList.contains('btn-primary')) {
+                        item.classList.remove('btn-primary')
+
+                        catList.forEach(list => {
+                            const listName = list.querySelector('.cat-name-selected').textContent
+                            console.log(listName)
+
+                            if (listName === name) {
+                                list.remove()
+                            }
+                        })
+                    } else {
+                        item.classList.add('btn-primary');
+
+                        SelectedCategories.innerHTML += `
+                                                                                                                                            <li data-id="${id}" class="category-box">
+                                                                                                                                                <span class="cat-name-selected">${name}</span>
+                                                                                                                                                <a data-id="${id}" class="cat-remove">
+                                                                                                                                                    <i class="fa-solid fa-xmark"></i>
+                                                                                                                                                    <input value="${name}" type="text" hidden>
+                                                                                                                                                </a>
+                                                                                                                                            </li>
+                                                                                                                                        `;
+                        RemoveCategory();
+                    }
+                });
+            });
+        }
+
+        AddCategory();
+
+
+
+
+        //******* Remove
+        function RemoveCategory() {
+            const SelectedCategories = document.querySelector('.selected-category-box')
+            const catList = SelectedCategories.querySelectorAll('.category-box')
+
+            catList.forEach(list => {
+                const delBtn = list.querySelector('.cat-remove')
+                const catName = list.querySelector('.cat-name-selected').textContent
+                delBtn.addEventListener('click', () => {
+                    list.remove()
+
+
+                    const listItemsCat = document.querySelectorAll('.list-categ');
+
+
+                    listItemsCat.forEach(item => {
+                        let name = item.querySelector('.cat-name').textContent
+                        console.log(name)
+                        console.log(catName)
+
+                        if (name == catName) {
+                            item.classList.remove('btn-primary')
+                        }
+
+                    })
+
+                })
+
+            })
+
+
+        }
+
+
+        RemoveCategory()
+
+
+
+
+
+
+
+
+        //=================== TAG
+
+
+        // //******* Search
+        document.addEventListener('DOMContentLoaded', () => {
+            const tagSearch = document.querySelector('.tag-search');
+            const tagList = document.querySelector('.tag-list');
+            const listItemsTag = tagList.querySelectorAll('.list-tag');
+
+            tagSearch.addEventListener('input', () => {
+                const searchTerm = tagSearch.value.trim().toLowerCase();
+
+                listItemsTag.forEach(item => {
+                    const tagName = item.querySelector('.tag-name').textContent.trim().toLowerCase();
+
+                    if (tagName.includes(searchTerm)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+            });
+        });
+
+
+
+        // //******* Close-Togle
+        const TagselectBtn = document.querySelector('.select-btn-tag')
+        const TagLiContainer = document.querySelector('.col-container-tag')
+
+        TagselectBtn.addEventListener('click', () => {
+            if (!TagselectBtn.classList.contains('active')) {
+                TagselectBtn.classList.add('active')
+                TagLiContainer.classList.add('active')
+            } else {
+                TagselectBtn.classList.remove('active')
+                TagLiContainer.classList.remove('active')
+            }
+        })
+
+
+        //******* Add
+        function AddTag() {
+            const listItemsTag = document.querySelectorAll('.list-tag');
+
+
+            listItemsTag.forEach(item => {
+                let name = item.querySelector('.tag-name').textContent
+                let id = item.getAttribute('data-id');
+
+
+                item.addEventListener('mousedown', (event) => {
+                    const SelectedTag = document.querySelector('.selected-tag-box')
+                    const tagList = SelectedTag.querySelectorAll('.tag-box')
+
+                    if (item.classList.contains('btn-primary')) {
+                        item.classList.remove('btn-primary')
+
+                        tagList.forEach(list => {
+                            const listName = list.querySelector('.tag-name').textContent
+                            console.log(listName)
+
+                            if (listName === name) {
+                                list.remove()
+                            }
+                        })
+
+                    } else {
+                        item.classList.add('btn-primary')
+
+                        console.log(tagList)
+
+
+                        SelectedTag.innerHTML +=
+                            `
+                                                                                                                                                                    <li data-id="${id}" class="tag-box">
+                                                                                                                                                                       <span class="tag-name">${name}</span>
+                                                                                                                                                                       <a data-id="${name}" class="tag-remove">
+                                                                                                                                                                          <i class="fa-solid fa-xmark"></i>
+                                                                                                                                                                          <input asp-for="Tags.Name" value="${name}" type="text" hidden>
+                                                                                                                                                                       </a>
+                                                                                                                                                                    </li>
+                                                                                                                                                                    `
+                        RemoveTag()
+                    }
+                })
+
+            })
+        }
+
+        AddTag()
+
+
+        // //******* Remove
+        function RemoveTag() {
+            const SelectedTag = document.querySelector('.selected-tag-box')
+            const tagList = SelectedTag.querySelectorAll('.tag-box')
+
+            tagList.forEach(list => {
+                const delBtn = list.querySelector('.tag-remove')
+                const tagName = list.querySelector('.tag-name').textContent
+                delBtn.addEventListener('click', () => {
+                    list.remove()
+
+
+                    const listItemsTag = document.querySelectorAll('.list-tag');
+
+
+                    listItemsTag.forEach(item => {
+                        let name = item.querySelector('.tag-name').textContent
+                        console.log(name)
+                        console.log(tagName)
+
+                        if (name == tagName) {
+                            item.classList.remove('btn-primary')
+                        }
+
+                    })
+
+                })
+
+            })
+
+
+        }
+
+
+        RemoveTag()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+}

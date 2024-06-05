@@ -30,6 +30,9 @@ public class VanguardContext : IdentityDbContext<AppUser>
 	public DbSet<Basket> Baskets{ get; set; }
 	public DbSet<Wish> Wishs { get; set; }
     public DbSet<AllowedEmployee> AllowedEmployees { get; set; }
+	public DbSet<Blog> Blogs { get; set; }
+	public DbSet<BlogCategory> BlogCategory { get; set; }
+	public DbSet<BlogTag> BlogTag { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{

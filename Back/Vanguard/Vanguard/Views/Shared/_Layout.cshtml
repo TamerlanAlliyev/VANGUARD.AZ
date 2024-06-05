@@ -114,9 +114,9 @@
                     <ul>
                         <li><a asp-controller="Home" asp-action="Index">Home</a></li>
                         <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
-                        <li><a href="~/about.html">About</a></li>
-                        <li><a href="~/blog.html">Blog</a></li>
-                        <li><a href="~/contact.html">Contact</a></li>
+                        <li><a asp-controller="About" asp-action="Index">About</a></li>
+                        <li><a asp-controller="Blog" asp-action="Index" asp-area="">Blog</a></li>
+                        <li><a asp-controller="Contact" asp-action="Index">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -215,6 +215,7 @@
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a class="product-list" href="#">
                             <div class="search-prod-img">
@@ -231,6 +232,7 @@
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a class="product-list" href="#">
                             <div class="search-prod-img">
@@ -247,6 +249,7 @@
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a class="product-list" href="#">
                             <div class="search-prod-img">
@@ -263,6 +266,7 @@
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a class="product-list" href="#">
                             <div class="search-prod-img">
@@ -279,6 +283,7 @@
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a class="product-list" href="#">
                             <div class="search-prod-img">
@@ -295,6 +300,7 @@
                             </div>
                         </a>
                     </li>
+
                     <li>
                         <a class="product-list" href="#">
                             <div class="search-prod-img">
@@ -325,9 +331,9 @@
                     <li><a asp-action="Index" asp-controller="Blog">Blog</a></li>
                     <li><a asp-action="Index" asp-controller="Contact">Contact</a></li>
                     <li><a asp-action="Index" asp-controller="Basket">Basket</a></li>
-                    <li><a asp-action="Index" asp-controller="Wish">Wish List</a></li>
-                    <li><a asp-action="Index" asp-controller="Account">My Account </a></li>
-                    <li><a asp-action="Index" asp-controller="Account">Log Out</a></li>
+                    <li><a asp-controller="Setting" asp-action="Index" asp-route-id="3">Wish List</a></li>
+                    <li><a asp-controller="Setting" asp-action="Index" asp-route-id="1">My Account </a></li>
+                    <li><a asp-action="Logout" asp-controller="Account">Log Out</a></li>
                     <li><a asp-action="Login" asp-controller="Account">Login</a></li>
                     <li><a asp-action="Register" asp-controller="Account">Register</a></li>
                 </ul>
@@ -411,9 +417,9 @@
                         HELP</h1>
 
                         <ul>
-                            <li><a href="#">My Account</a></li>
+                            <li><a asp-controller="Setting" asp-action="Index" asp-route-id="1">My Account</a></li>
                             <li><a href="#">Find a Store</a></li>
-                            <li><a href="#">Blog</a></li>
+                            <li><a asp-controller="Shop" asp-action="Blog" asp-area="">Blog</a></li>
                             <li><a href="#">Legal & Privacy</a></li>
                             <li><a href="#">Contact</a></li>
                             <li><a href="#">Gift Card</a></li>

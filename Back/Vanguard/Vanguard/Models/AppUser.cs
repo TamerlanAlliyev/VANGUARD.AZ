@@ -18,6 +18,8 @@ public class AppUser : IdentityUser
     public int? ImageId { get; set; }
     public Image? Image { get; set; }
 
-    public int? AllowedEmployeeId { get; set; } 
+    public int? AllowedEmployeeId { get; set; }
     public AllowedEmployee? AllowedEmployee { get; set; }
+
+    public ICollection<Blog>? Blogs { get; set; }
 }

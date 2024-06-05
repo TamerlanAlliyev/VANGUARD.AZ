@@ -1,6 +1,1814 @@
 {
   "Files": [
     {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\CHANGES.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\CHANGES.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\LICENSE.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\README.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\SECURITY.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\SECURITY.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\adapters\\jquery.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\adapters\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\bender-runner.config.json",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\bender-runner.config.json"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\build-config.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\build-config.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\ckeditor.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\ckeditor.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\config.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\config.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\contents.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\contents.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\af.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ar.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\az.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\az.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\bn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\bn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\bs.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\bs.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ca.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\da.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\de-ch.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\de-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\de.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\el.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\en-au.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\en-ca.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\en-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\en-gb.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\en.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\es-mx.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\es-mx.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\es.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\et.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\eu.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\fo.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\fo.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\fr-ca.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\gl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\gu.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\gu.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\he.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\hi.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\hu.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\id.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\is.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\is.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\it.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ja.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ka.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ka.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\km.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ko.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ku.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ku.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\lt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\lv.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\mk.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\mn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\mn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ms.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ms.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\no.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\oc.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\oc.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\pt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ro.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ru.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\si.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\si.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\sk.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\sl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\sq.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\sr-latn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\sr-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\sr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\sv.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\th.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\tt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\tt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\lang\\zh.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\lang\\zh.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\a11yhelp.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\a11yhelp.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\af.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ar.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\az.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\az.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ca.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\da.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de-ch.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\el.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en-au.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en-gb.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es-mx.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es-mx.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\et.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eu.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fo.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fo.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr-ca.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\gl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\gu.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\gu.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\he.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hi.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hi.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hu.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\id.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\it.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ja.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\km.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ko.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ku.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ku.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\lt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\lv.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mk.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mk.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\mn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\no.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\oc.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\oc.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ro.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ru.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\si.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\si.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sk.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sq.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sr-latn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sr-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sv.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\th.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\tt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\tt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\a11yhelp\\dialogs\\lang\\zh.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\about\\dialogs\\about.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\about\\dialogs\\about.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\about\\dialogs\\hidpi\\logo_ckeditor.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\about\\dialogs\\hidpi\\logo_ckeditor.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\about\\dialogs\\logo_ckeditor.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\clipboard\\dialogs\\paste.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\clipboard\\dialogs\\paste.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\colordialog\\dialogs\\colordialog.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\copyformatting\\cursors\\cursor-disabled.svg",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\copyformatting\\cursors\\cursor-disabled.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\copyformatting\\cursors\\cursor.svg",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\copyformatting\\cursors\\cursor.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\copyformatting\\styles\\copyformatting.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\copyformatting\\styles\\copyformatting.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\dialog\\dialogDefinition.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\dialog\\dialogDefinition.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\dialog\\styles\\dialog.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\dialog\\styles\\dialog.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\div\\dialogs\\div.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\div\\dialogs\\div.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\LICENSE.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\README.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\plugindefinition.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\plugindefinition.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\_helpers\\tools.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\_helpers\\tools.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\authentication.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\authentication.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\exportpdf.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\exportpdf.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\configfilename.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\configfilename.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\configfilename.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\configfilename.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\emptyeditor.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\emptyeditor.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\emptyeditor.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\emptyeditor.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integration.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integration.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integration.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integration.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integrations\\easyimage.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integrations\\easyimage.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integrations\\easyimage.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\integrations\\easyimage.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notifications.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notifications.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notifications.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notifications.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notificationsasync.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notificationsasync.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notificationsasync.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\notificationsasync.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\paperformat.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\paperformat.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\paperformat.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\paperformat.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\readonly.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\readonly.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\readonly.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\readonly.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\stylesheets.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\stylesheets.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\stylesheets.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\stylesheets.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenfetching.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenfetching.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenfetching.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenfetching.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorscorrect.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorscorrect.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorscorrect.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorscorrect.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorswrong.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorswrong.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorswrong.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokentwoeditorswrong.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenwithouturl.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenwithouturl.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenwithouturl.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\tokenwithouturl.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\wrongendpoint.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\wrongendpoint.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\wrongendpoint.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\manual\\wrongendpoint.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\notification.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\notification.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\resourcespaths.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\resourcespaths.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\statistics.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\statistics.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\exportpdf\\tests\\stylesheets.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\exportpdf\\tests\\stylesheets.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\find\\dialogs\\find.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\find\\dialogs\\find.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\dialogs\\button.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\dialogs\\button.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\dialogs\\checkbox.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\dialogs\\checkbox.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\dialogs\\form.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\dialogs\\form.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\dialogs\\hiddenfield.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\dialogs\\hiddenfield.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\dialogs\\radio.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\dialogs\\radio.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\dialogs\\select.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\dialogs\\select.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\dialogs\\textarea.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\dialogs\\textarea.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\dialogs\\textfield.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\dialogs\\textfield.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\forms\\images\\hiddenfield.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\forms\\images\\hiddenfield.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\icons.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\icons.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\icons_hidpi.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\icons_hidpi.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\iframe\\dialogs\\iframe.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\iframe\\dialogs\\iframe.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\iframe\\images\\placeholder.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\iframe\\images\\placeholder.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\image\\dialogs\\image.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\image\\dialogs\\image.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\image\\images\\noimage.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\image\\images\\noimage.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\link\\dialogs\\anchor.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\link\\dialogs\\anchor.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\link\\dialogs\\link.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\link\\dialogs\\link.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\link\\images\\anchor.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\link\\images\\anchor.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\link\\images\\hidpi\\anchor.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\link\\images\\hidpi\\anchor.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\liststyle\\dialogs\\liststyle.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\liststyle\\dialogs\\liststyle.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon-rtl.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon-rtl.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\magicline\\images\\hidpi\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\magicline\\images\\icon-rtl.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\magicline\\images\\icon-rtl.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\magicline\\images\\icon.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\magicline\\images\\icon.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\pagebreak\\images\\pagebreak.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\pagebreak\\images\\pagebreak.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\pastefromgdocs\\filter\\default.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\pastefromgdocs\\filter\\default.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\pastefromlibreoffice\\filter\\default.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\pastefromlibreoffice\\filter\\default.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\pastefromword\\filter\\default.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\pastefromword\\filter\\default.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\pastetools\\filter\\common.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\pastetools\\filter\\common.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\pastetools\\filter\\image.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\pastetools\\filter\\image.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\preview\\images\\pagebreak.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\preview\\images\\pagebreak.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\preview\\preview.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\preview\\preview.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\preview\\styles\\screen.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\preview\\styles\\screen.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\scayt\\CHANGELOG.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\scayt\\CHANGELOG.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\scayt\\LICENSE.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\scayt\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\scayt\\README.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\scayt\\README.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\scayt\\dialogs\\dialog.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\scayt\\dialogs\\dialog.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\scayt\\dialogs\\options.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\scayt\\dialogs\\options.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\scayt\\dialogs\\toolbar.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\scayt\\skins\\moono-lisa\\scayt.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\scayt\\skins\\moono-lisa\\scayt.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_address.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_address.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_blockquote.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_blockquote.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_div.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_div.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h1.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h1.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h2.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h2.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h3.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h3.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h4.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h4.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h5.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h5.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h6.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_h6.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_p.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_p.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\showblocks\\images\\block_pre.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\showblocks\\images\\block_pre.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\dialogs\\smiley.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\dialogs\\smiley.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\angel_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\angel_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\angel_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\angel_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\angry_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\angry_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\angry_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\angry_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\broken_heart.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\broken_heart.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\broken_heart.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\broken_heart.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\confused_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\confused_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\confused_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\confused_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\cry_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\cry_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\cry_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\cry_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\devil_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\devil_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\devil_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\devil_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\embaressed_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\embaressed_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\embarrassed_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\envelope.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\envelope.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\envelope.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\envelope.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\heart.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\heart.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\heart.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\kiss.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\kiss.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\kiss.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\kiss.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\lightbulb.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\lightbulb.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\lightbulb.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\lightbulb.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\omg_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\omg_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\omg_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\omg_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\regular_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\regular_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\regular_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\regular_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\sad_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\sad_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\sad_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\sad_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\shades_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\shades_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\shades_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\shades_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\teeth_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\teeth_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\teeth_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\teeth_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\thumbs_down.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\thumbs_down.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\thumbs_down.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\thumbs_down.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\thumbs_up.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\thumbs_up.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\thumbs_up.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\thumbs_up.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\tongue_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\tongue_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\tongue_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\tongue_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\tounge_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\tounge_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\whatchutalkingabout_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\wink_smile.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\wink_smile.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\smiley\\images\\wink_smile.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\smiley\\images\\wink_smile.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\_translationstatus.txt",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\_translationstatus.txt"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\af.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\af.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ar.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ar.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\az.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\az.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\bg.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\bg.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ca.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ca.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\cs.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\cs.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\cy.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\cy.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\da.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\da.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\de-ch.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\de-ch.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\de.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\de.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\el.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\el.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-au.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-au.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-ca.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-gb.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en-gb.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\en.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eo.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eo.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\es-mx.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\es-mx.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\es.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\es.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\et.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\et.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eu.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\eu.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fa.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fa.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fi.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fi.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fr-ca.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fr-ca.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\fr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\gl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\gl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\he.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\he.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hu.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\hu.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\id.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\id.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\it.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\it.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ja.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ja.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\km.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\km.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ko.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ko.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ku.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ku.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\lt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\lt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\lv.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\lv.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\nb.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\nb.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\nl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\nl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\no.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\no.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\oc.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\oc.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pt-br.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pt-br.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\pt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ro.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ro.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ru.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ru.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\si.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\si.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sk.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sk.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sl.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sl.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sq.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sq.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sr-latn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sr-latn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sv.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\sv.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\th.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\th.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\tr.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\tr.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\tt.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\tt.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ug.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\ug.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\uk.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\uk.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\vi.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\vi.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh-cn.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh-cn.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\lang\\zh.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\specialchar\\dialogs\\specialchar.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\table\\dialogs\\table.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\table\\dialogs\\table.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\tableselection\\styles\\tableselection.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\tableselection\\styles\\tableselection.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\tabletools\\dialogs\\tableCell.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\templates\\dialogs\\templates.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\templates\\dialogs\\templates.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\templates\\dialogs\\templates.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\templates\\dialogs\\templates.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\templates\\templatedefinition.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\templates\\templatedefinition.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\templates\\templates\\default.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\templates\\templates\\default.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\templates\\templates\\images\\template1.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\templates\\templates\\images\\template1.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\templates\\templates\\images\\template2.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\templates\\templates\\images\\template2.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\templates\\templates\\images\\template3.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\templates\\templates\\images\\template3.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\plugins\\widget\\images\\handle.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\plugins\\widget\\images\\handle.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\css\\samples.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\css\\samples.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\img\\github-top.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\img\\github-top.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\img\\header-bg.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\img\\header-bg.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\img\\header-separator.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\img\\header-separator.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\img\\logo.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\img\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\img\\logo.svg",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\img\\logo.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\img\\navigation-tip.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\img\\navigation-tip.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\index.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\js\\sample.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\js\\sample.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\js\\sf.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\js\\sf.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\ajax.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\ajax.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\api.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\api.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\appendto.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\appendto.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\assets\\inlineall\\logo.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\assets\\inlineall\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\assets\\outputxhtml\\outputxhtml.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\assets\\outputxhtml\\outputxhtml.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\assets\\posteddata.php",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\assets\\posteddata.php"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\assets\\sample.jpg",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\assets\\sample.jpg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\assets\\uilanguages\\languages.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\assets\\uilanguages\\languages.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\datafiltering.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\datafiltering.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\dialog\\assets\\my_dialog.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\dialog\\assets\\my_dialog.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\dialog\\dialog.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\dialog\\dialog.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\divreplace.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\divreplace.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\enterkey\\enterkey.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\enterkey\\enterkey.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\htmlwriter\\outputhtml.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\htmlwriter\\outputhtml.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\index.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\inlineall.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\inlineall.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\inlinebycode.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\inlinebycode.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\inlinetextarea.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\inlinetextarea.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\jquery.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\jquery.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\magicline\\magicline.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\magicline\\magicline.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\readonly.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\readonly.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\replacebyclass.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\replacebyclass.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\replacebycode.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\replacebycode.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\sample.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\sample.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\sample.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\sample.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\sample_posteddata.php",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\sample_posteddata.php"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\tabindex.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\tabindex.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\toolbar\\toolbar.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\toolbar\\toolbar.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\uicolor.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\uicolor.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\uilanguages.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\uilanguages.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\wysiwygarea\\fullpage.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\wysiwygarea\\fullpage.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\old\\xhtmlstyle.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\old\\xhtmlstyle.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\css\\fontello.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\css\\fontello.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\config.json",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\config.json"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.eot",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.eot"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.svg",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.svg"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.ttf",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.ttf"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.woff",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\font\\fontello.woff"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\index.html",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\js\\abstracttoolbarmodifier.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\js\\abstracttoolbarmodifier.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\js\\fulltoolbareditor.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\js\\fulltoolbareditor.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\js\\toolbarmodifier.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\js\\toolbarmodifier.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\js\\toolbartextmodifier.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\js\\toolbartextmodifier.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\LICENSE",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\codemirror.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\codemirror.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\codemirror.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\codemirror.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\javascript.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\javascript.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\neo.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\neo.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\show-hint.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\show-hint.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\show-hint.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\samples\\toolbarconfigurator\\lib\\codemirror\\show-hint.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\dialog.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\dialog.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\dialog_ie.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\dialog_ie.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\dialog_ie8.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\dialog_ie8.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\dialog_iequirks.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\dialog_iequirks.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\editor.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\editor.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\editor_gecko.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\editor_gecko.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\editor_ie.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\editor_ie.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\editor_ie8.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\editor_ie8.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\editor_iequirks.css",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\editor_iequirks.css"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\icons.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\icons.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\icons_hidpi.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\icons_hidpi.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\arrow.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\close.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\close.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\lock-open.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\lock-open.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\lock.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\lock.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\refresh.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\hidpi\\refresh.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\lock-open.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\lock-open.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\lock.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\lock.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\refresh.png",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\refresh.png"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\images\\spinner.gif",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\images\\spinner.gif"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\skins\\moono-lisa\\readme.md",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\skins\\moono-lisa\\readme.md"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\styles.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\styles.js"
+    },
+    {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\ckeditor\\vendor\\promise.js",
+      "PackagePath": "staticwebassets\\admin\\ckeditor\\vendor\\promise.js"
+    },
+    {
       "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\admin\\css\\style.css",
       "PackagePath": "staticwebassets\\admin\\css\\style.css"
     },
@@ -1161,6 +2969,10 @@
       "PackagePath": "staticwebassets\\admin\\vendor\\wnumb\\wNumb.js"
     },
     {
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\blogs\\05aa5a69-09a3-4533-8981-80712262e2d1_WhatsApp Image 2024-06-04 at 11.33.32_cb5c994a.jpg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\blogs\\05aa5a69-09a3-4533-8981-80712262e2d1_WhatsApp Image 2024-06-04 at 11.33.32_cb5c994a.jpg"
+    },
+    {
       "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\css\\about.css",
       "PackagePath": "staticwebassets\\cilent\\assets\\css\\about.css"
     },
@@ -1377,60 +3189,8 @@
       "PackagePath": "staticwebassets\\cilent\\assets\\icons\\x-button.svg"
     },
     {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\03ede4d6-7905-47e3-be5c-1c7be894a9f0_profil.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\03ede4d6-7905-47e3-be5c-1c7be894a9f0_profil.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\04f5bba8-802b-469a-894f-69f55a7b1a2b_profil.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\04f5bba8-802b-469a-894f-69f55a7b1a2b_profil.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\0e19fe9e-4492-47d3-82c7-219d913f61ad_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\0e19fe9e-4492-47d3-82c7-219d913f61ad_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\0e2405be-8c6b-41c6-a89a-38437a2298f8_profil.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\0e2405be-8c6b-41c6-a89a-38437a2298f8_profil.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\25634719-49a4-458e-9264-0c127a39b6d4_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\25634719-49a4-458e-9264-0c127a39b6d4_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\2d929b5d-e3c3-4cfb-b8a5-bccc50e79576_profil.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\2d929b5d-e3c3-4cfb-b8a5-bccc50e79576_profil.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\4c9fc9e6-f64c-4444-b1bf-80b7f8e670cd_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\4c9fc9e6-f64c-4444-b1bf-80b7f8e670cd_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\a3772903-b203-4eaa-83f4-92ce54bd9492_Screenshot 2024-05-25 003439.png",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\a3772903-b203-4eaa-83f4-92ce54bd9492_Screenshot 2024-05-25 003439.png"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\a45edde4-4c3c-4e04-87d3-e55da0cf83cc_profil.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\a45edde4-4c3c-4e04-87d3-e55da0cf83cc_profil.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\addc8056-03a2-4f40-af70-cc107ed3ae7e_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\addc8056-03a2-4f40-af70-cc107ed3ae7e_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\aff1adb1-053e-4c3a-9fe9-fab593511ac9_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\aff1adb1-053e-4c3a-9fe9-fab593511ac9_bc9f6ed0-4566-11ee-9da6-67f52cef4465.png"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\da7fb412-17c5-46ad-b426-739ca68f05d8_profil.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\da7fb412-17c5-46ad-b426-739ca68f05d8_profil.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\f823f242-56c4-44ea-9484-716079b16e95_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\f823f242-56c4-44ea-9484-716079b16e95_45543d582ab571bc9e60f60f7002d8d3-2259127251_2_2_0.jpg"
-    },
-    {
-      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\fb50d720-7c3f-439c-83c1-fe50c73c1173_profil.jpg",
-      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\fb50d720-7c3f-439c-83c1-fe50c73c1173_profil.jpg"
+      "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\4d98237f-0073-434e-b1ca-e70aaa399ca8_WhatsApp Image 2024-06-04 at 11.33.32_cb5c994a.jpg",
+      "PackagePath": "staticwebassets\\cilent\\assets\\images\\account\\4d98237f-0073-434e-b1ca-e70aaa399ca8_WhatsApp Image 2024-06-04 at 11.33.32_cb5c994a.jpg"
     },
     {
       "Id": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\cilent\\assets\\images\\account\\user-profil.png",

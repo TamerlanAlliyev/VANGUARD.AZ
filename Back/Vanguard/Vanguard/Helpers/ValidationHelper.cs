@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using System.Text.RegularExpressions;
+using Vanguard.Areas.Admin.ViewModels.Blog;
 using Vanguard.Areas.Admin.ViewModels.ProductViewModels;
 using Vanguard.ViewModels.Account;
+using Vanguard.ViewModels.Setting;
 
 namespace Vanguard.Helpers;
 
@@ -23,13 +26,6 @@ public static class ValidationHelper
 
         if (model.DiscountPrice >= model.SellPrice)
             modelState.AddModelError("DiscountPrice", "The discounted price cannot be greater than or equal to the sales price!");
-
-        //if (model.SelectedCategoryIds == null || model.SelectedCategoryIds.Length == 0)
-        //    modelState.AddModelError("SelectedCategoryIds", "Please select at least one Category.");
-
-        //if (model.ColorSizeVM.Sizes.Count() == 0)
-        //    modelState.AddModelError("ColorSizeVM.Sizes", "Measurement cannot be empty...!");
-
 
     }
 
@@ -55,10 +51,6 @@ public static class ValidationHelper
         if (model.SelectedCategoryIds == null || model.SelectedCategoryIds.Length == 0)
             modelState.AddModelError("SelectedCategoryIds", "Please select at least one Category.");
 
-        //if ( model.ColorSizeVM==null)
-        //{
-        //    modelState.AddModelError("ColorSizeVM", "Please choose color, picture and size...!");
-        //}
 
         if (model.SelectedGender == null)
         {
@@ -79,8 +71,10 @@ public static class ValidationHelper
 
         if (string.IsNullOrEmpty(vm.Email))
             modelState.AddModelError("Email", "Email is required.");
+
         else if (!IsValidEmail(vm.Email))
             modelState.AddModelError("Email", "Invalid email format.");
+
 
         if (string.IsNullOrEmpty(vm.Password))
             modelState.AddModelError("Password", "Password is required.");
@@ -96,6 +90,46 @@ public static class ValidationHelper
                 modelState.AddModelError("PhoneNumber", "Invalid phone number format.");
         }
 
+    }
+
+    public static void ValidateUserInfoUpdate(UserInfoUpdate model, ModelStateDictionary modelState)
+    {
+        if (string.IsNullOrEmpty(model.Name))
+            modelState.AddModelError("Name", "Name is required.");
+
+        if (string.IsNullOrEmpty(model.SurName))
+            modelState.AddModelError("SurName", "Surname is required.");
+
+        if (string.IsNullOrEmpty(model.Email))
+            modelState.AddModelError("Email", "Email is required.");
+        else if (!IsValidEmail(model.Email))
+            modelState.AddModelError("Email", "Invalid email format.");
+
+        if (!string.IsNullOrEmpty(model.Phone))
+        {
+            if (!IsValidPhoneNumber(model.Phone))
+                modelState.AddModelError("Phone", "Invalid phone number format.");
+        }
+
+        if (!string.IsNullOrEmpty(model.Postal))
+        {
+            if (!IsValidPostalCode(model.Postal))
+                modelState.AddModelError("Postal", "Invalid postal code format.");
+        }
+    }
+
+
+
+    public static void ValidateBlogCreate(BlogCreateVM model, ModelStateDictionary modelState)
+    {
+        if (string.IsNullOrEmpty(model.Title))
+            modelState.AddModelError("Title", "Blog title is required.");
+
+        if (string.IsNullOrEmpty(model.MainDescription))
+            modelState.AddModelError("MainDescription", "Main Description is required.");
+
+        if (model.MainFile == null)
+            modelState.AddModelError("MainFile", "Main File is required.");
     }
 
     private static bool IsValidEmail(string email)
@@ -115,5 +149,13 @@ public static class ValidationHelper
     {
         return System.Text.RegularExpressions.Regex.IsMatch(phoneNumber, @"^\+[0-9]+$");
     }
+
+
+
+    private static bool IsValidPostalCode(string postalCode)
+    {
+        return Regex.IsMatch(postalCode, @"^\d{5}(-\d{4})?$");
+    }
+
 
 }
