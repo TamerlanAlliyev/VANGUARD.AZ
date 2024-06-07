@@ -26,7 +26,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
         _userManager = userManager;
     }
 
-    public async Task<IActionResult> Index(ShopVM shopVM)
+    public async Task<IActionResult> Index(int? tagId,ShopVM shopVM)
     {
         var query = _shopService.ProductgetQuery();
 
@@ -134,6 +134,10 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
             query = query.Where(p => p.ProductTag.Any(pc => shopVM.SentTag.Contains(pc.TagId)));
         }
 
+        if (tagId!=null)
+        {
+            query = query.Where(p=>p.ProductTag.Any(t=>t.TagId==tagId));
+        }
 
 
 
@@ -153,13 +157,6 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
         }
 
 
-
-        // 1. Featured
-        // 2. Best Sellers
-        // 3. Newest Arrivals
-        // 4. Discount Percentage
-        // 5. Highest Price
-        // 6. Lowest Price
 
         if (shopVM.OrderBy == 2)
         {

@@ -30,8 +30,12 @@ namespace Vanguard
             builder.Services.AddScoped<IProductService, ProductService>();
             builder.Services.AddScoped<IShopService, ShopService>();
             builder.Services.AddScoped<IBlogService, BlogService>();
+            builder.Services.AddScoped<IHomeSliderService, HomeSliderService>();
             builder.Services.AddTransient<IEmailService, EmailService>();
             builder.Services.AddScoped<AdminAuthorizationFilter>();
+
+            builder.Services.AddScoped<IHomeService, HomeService>();
+
 
             builder.Services.AddIdentity<AppUser, IdentityRole>(opt =>
             {

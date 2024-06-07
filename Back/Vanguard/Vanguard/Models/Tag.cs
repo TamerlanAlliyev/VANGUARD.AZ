@@ -8,4 +8,7 @@ public class Tag:BaseAuditable
     public List<ProductTag> ProductTag { get; set; }=null!;
     public List<BlogTag> Tags { get; set; } = null!;
 
+    public int? HomeSliderId { get; set; }
+    public List<HomeSlider>? HomeSliders { get; set; }
+
 }

@@ -12,8 +12,10 @@ public class Image : BaseAuditable
     public int? ColorId { get; set; }
     public int? BlogId { get; set; }
     public string? AppUserId { get; set; }
+    public int? HomeSliderId { get; set; }
     public Product? Product { get; set; }
     public Color? Color { get; set; }
     public AppUser? AppUser { get; set; }
     public Blog? Blog { get; set; }
+    public HomeSlider? HomeSlider { get; set; }
 }

@@ -5,32 +5,60 @@ using Newtonsoft.Json;
 using System.Security.Claims;
 using Vanguard.Data;
 using Vanguard.Models;
-using Vanguard.ViewModels.Basket;
+using Vanguard.Services.Interfaces;
+using Vanguard.ViewModels.Blog;
+using Vanguard.ViewModels.Home;
+using Vanguard.ViewModels.Shop;
+using Vanguard.ViewModels.Wish;
 
-namespace Vanguard.Controllers
+public class HomeController : Microsoft.AspNetCore.Mvc.Controller
 {
-    public class HomeController : Microsoft.AspNetCore.Mvc.Controller
+    readonly VanguardContext _context;
+    readonly UserManager<AppUser> _userManager;
+    readonly IShopService _shopService;
+    readonly IHomeService _homeService;
+    public HomeController(VanguardContext context, UserManager<AppUser> userManager, IShopService shopService, IHomeService homeService)
     {
-        readonly VanguardContext _context;
-        readonly UserManager<AppUser> _userManager;
+        _context = context;
+        _userManager = userManager;
+        _shopService = shopService;
+        _homeService = homeService;
+    }
 
-        public HomeController(VanguardContext context, UserManager<AppUser> userManager)
+    public async Task<IActionResult> Index()
+    {
+        var lastBlogs = await _context.Blogs.Where(b=>!b.IsDeleted)
+                                             .OrderByDescending(b=>b.CreatedDate)
+                                             .Take(10)
+                                             .Include(b => b.Images)
+                                             .Include(b => b.AppUser)
+                                             .ThenInclude(b => b.AllowedEmployee!.Role)
+                                             .Include(b => b.Categories)
+                                             .ThenInclude(bc => bc.Category)
+                                             .Select(b => new BlogAllVM
+                                             {
+                                                 Id = b.Id,
+                                                 Title = b.Title,
+                                                 Clicked = b.Clickeds,
+                                                 Image = b.Images.FirstOrDefault(i => !i.IsDeleted && i.IsMain).Url,
+                                                 IsVideo = b.Images.FirstOrDefault(i => !i.IsDeleted && i.IsMain).IsVideo,
+                                                 Created = b.CreatedDate,
+                                                 CreatedBy = b.AppUser.FullName!,
+                                                 Descripton = b.MainDescription
+                                             }).ToListAsync();
+
+        HomeVM vm = new HomeVM
         {
-            _context = context;
-            _userManager = userManager;
-        }
+            TrendyVM = await _homeService.TrendySelectedAsync(),
+            LastBlogs = lastBlogs,
+            Sliders = await _context.HomeSliders.Include(s=>s.Image).Include(s=>s.Tag).ToListAsync(),
+        };
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
-     
-
-        public IActionResult Forbidden()
-        {
-            return View("Error403");
-        }
+        return View(vm);
+    }
+    public IActionResult Forbidden()
+    {
+        return View("Error403");
     }
 }
 

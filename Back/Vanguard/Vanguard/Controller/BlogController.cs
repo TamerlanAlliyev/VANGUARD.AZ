@@ -20,7 +20,6 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
     public async Task<IActionResult> Index(BlogViewVM postMV)
     {
         var blogs = await _context.Blogs
-
             .Where(b => !b.IsDeleted)
             .Include(b => b.Images)
             .Include(b => b.AppUser)
@@ -109,6 +108,9 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
             Blog = blog,
             Categories = categories,
         };
+        blog.Clickeds = blog.Clickeds == 0 || blog.Clickeds == null ? 1 : blog.Clickeds + 1;
+        await _context.SaveChangesAsync();
+
         return View(vm);
     }
 }

@@ -28,6 +28,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\cilent\assets\blogs\" />
+    <Folder Include="wwwroot\cilent\assets\settings\slider\" />
   </ItemGroup>
 
 </Project>

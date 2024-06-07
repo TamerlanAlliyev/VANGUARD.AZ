@@ -34,6 +34,7 @@ public class VanguardContext : IdentityDbContext<AppUser>
 	public DbSet<BlogCategory> BlogCategory { get; set; }
 	public DbSet<BlogTag> BlogTag { get; set; }
 
+	public DbSet<HomeSlider> HomeSliders {  get; set; } 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		base.OnModelCreating(modelBuilder);

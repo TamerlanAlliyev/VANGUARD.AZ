@@ -1,0 +1,152 @@
+﻿@model List<HomeSlider>
+
+@section style {
+    <link href="~/admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Slider</a></li>
+                <li class="breadcrumb-item"><a onclick="javascript:void(0)">List</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+
+
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">slider List</h4>
+                        <a asp-action="SliderCreate" asp-area="Admin" asp-controller="SettingHome" class="btn btn-primary">Create New slider</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display" style="min-width: 845px">
+                                <thead>
+                                    <tr>
+                                        <th>Image</th>
+                                        <th>Title</th>
+                                        <th>Tag</th>
+                                        <th>Created Date</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+
+                                    @foreach (var slider in Model)
+                                    {
+                                        <tr class="slider">
+                                            <td><img width="250" height="150" style="object-fit:cover" src="~/cilent/assets/settings/slider/@(slider.Image!=null?slider.Image.Url:"")" alt=""></td>
+                                            <td>@slider.Title</td>
+                                            <td>@slider.Tag.Name</td>
+                                            <td>@slider.CreatedDate</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a asp-area="Admin" asp-controller="SettingHome" asp-action="SliderEdit" asp-route-id="@slider.Id" class="btn btn-primary shadow btn-xs sharp me-1" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a class="btn btn-danger shadow btn-xs sharp del-btn" data-id="@slider.Id" title="Soft Delete"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+@section script {
+    <!-- Datatable -->
+    <script src="~/admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/admin/js/plugins-init/datatables.init.js"></script>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Function to attach event listeners dynamically
+            function attachEventListeners(selector, eventType, handler) {
+                const elements = document.querySelectorAll(selector);
+                elements.forEach(element => {
+                    element.addEventListener(eventType, handler);
+                });
+            }
+
+            // Handle delete button clicks
+            function handleDeleteClick(event) {
+                event.preventDefault();
+                let dataId = this.getAttribute('data-id');
+
+                swal({
+                    title: "Are you sure?",
+                    text: "This slider will be permanently deleted!",
+                    icon: "warning",
+                    buttons: true,
+                    dangerMode: true,
+                }).then((willDelete) => {
+                    if (willDelete) {
+                        fetch(`/Admin/SettingHome/SliderDelete/${dataId}`, {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                        })
+                            .then(response => {
+                                if (response.ok) {
+                                    toastr["success"]("slider deleted successfully");
+                                    let tr = this.closest('tr');
+                                    tr.remove();
+                                } else {
+                                    toastr["error"]("An error occurred while deleting the slider");
+                                }
+                            })
+                            .catch(error => {
+                                console.error('Error:', error);
+                                toastr["error"]("An error occurred while deleting the slider");
+                            });
+                    } else {
+                        swal("slider not deleted!");
+                    }
+                });
+            }
+
+            attachEventListeners('.del-btn', 'click', handleDeleteClick);
+
+            const tableBody = document.querySelector('#example3 tbody');
+            const observer = new MutationObserver(mutations => {
+                for (const mutation of mutations) {
+                    if (mutation.type === 'childList') {
+                        attachEventListeners('.del-btn', 'click', handleDeleteClick);
+                    }
+                }
+            });
+
+            observer.observe(tableBody, { childList: true });
+        });
+    </script>
+
+
+
+
+
+}

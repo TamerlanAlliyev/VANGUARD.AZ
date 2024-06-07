@@ -1,0 +1,709 @@
+﻿@using Vanguard.ViewModels.Home
+@model TrendyProductVM
+
+<section class="section trendy">
+
+
+    <div class="trendy-sec-head">
+
+        <h2>OUR TRENDY PRODUCTS</h2>
+        <ul class="trendy-list">
+            <li><a data-name="all" class="active">ALL</a></li>
+            <li><a data-name="newarrivals" class="">NEW ARRIVALS</a></li>
+            <li><a data-name="bestsellers" class="">BEST SELLERS</a></li>
+            <li><a data-name="discounted" class="">DISCOUNTED</a></li>
+        </ul>
+
+    </div>
+
+
+
+
+
+
+    <!-- ***** TRENDY * ALL * - Start ***** -->
+    <!-- Swiper -->
+    @if (Model.AllProduct != null)
+    {
+
+        <div class="swiper mySwiper all active sub">
+
+            <div class="swiper-wrapper products-cart">
+
+
+                @foreach (var prod in Model.AllProduct)
+                {
+
+                    <div class="swiper-slide product-box">
+
+
+                        <!-- active -->
+                        <div class="product-image-box ">
+
+
+                            <div class="p-images">
+
+                                <div class="main-image">
+                                    <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
+                                </div>
+
+                                <!-- <div class="">
+                                    <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                                </div> -->
+
+                                <div class="swiper mySwiper hover-image">
+                                    <div class="swiper-wrapper">
+
+
+                                        @if (prod.AdditionalImagesURL != null)
+                                        {
+                                            <div class="swiper-slide">
+                                                <img src="~/cilent/assets/images/products/@prod.HoverImageURL" alt="">
+                                            </div>
+
+                                            @foreach (var img in prod.AdditionalImagesURL)
+                                            {
+                                                <div class="swiper-slide">
+                                                    <img src="~/cilent/assets/images/products/@img" alt="">
+                                                </div>
+                                            }
+                                        }
+
+
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="p-buttons">
+
+                                <a class="add-btn ">add to card</a>
+
+                                <!-- active -->
+                                <ul class="add-size">
+                                    @if (prod.Informations != null && prod.Informations.Any())
+                                    {
+                                        foreach (var size in prod.Informations)
+                                        {
+                                            <li class="btn-size" data-size="@size.Id">@size.Size.Name</li>
+                                        }
+                                    }
+                                </ul>
+
+                            </div>
+
+                            <div class="labels">
+                                @if (prod.IsNew)
+                                {
+                                    <a class=" new">New</a>
+                                }
+                                @if (prod.IsDiscounted)
+                                {
+                                    <a class="dis">-@prod.Offer%</a>
+                                }
+                                @if (prod.IsBest)
+                                {
+                                    <a class=" best">Best</a>
+                                }
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+                        <div class="product-info-box">
+
+                            <div class="p-inf">
+                                <div class="p-head">
+                                    <h6>
+                                        @foreach (var cat in prod.Categories)
+                                        {
+                                            @cat
+
+                                            @(cat != prod.Categories.Last() ? " , " : "")
+                                        }
+                                    </h6>
+                                    <h3>@prod.Product.Name</h3>
+                                </div>
+
+                                <span>Color: @prod.Color</span>
+                            </div>
+
+
+
+                            <div class="p-pric">
+                                <a data-id="@prod.Product.Id" class="wish-btn">
+                                    @if (prod.IsWish)
+                                    {
+                                        <img class="active" src="~/cilent/assets/icons/wish-icon-active.svg" alt="">
+                                    }
+                                    else
+                                    {
+                                        <img class="" src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                                    }
+                                </a>
+
+                                <div class="cart-prices item">
+                                    @if (prod.Product.DiscountPrice != null && prod.Product.DiscountPrice > 0)
+                                    {
+
+                                        <span class="sell-price dis" id="sell-price">$@prod.Product.DiscountPrice</span>
+                                        <del class="sell-price dis-price">$@prod.Product.SellPrice</del>
+                                    }
+                                    else
+                                    {
+                                        <span class="sell-price sell" id="sell-price">$@prod.Product.SellPrice </span>
+
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                }
+
+
+            </div>
+            <div class="swiper-pagination t-a"></div>
+        </div>
+
+    }
+
+
+    <!-- ***** TRENDY * ALL * - End ***** -->
+    <!-- ***** TRENDY * NEW ARRIVALS * - Start ***** -->
+    <!-- Swiper -->
+    @if (Model.NewProduct != null)
+    {
+
+        <div class="swiper mySwiper newarrivals sub">
+
+            <div class="swiper-wrapper products-cart">
+
+                @foreach (var prod in Model.NewProduct)
+                {
+
+                    <div class="swiper-slide product-box">
+
+
+                        <!-- active -->
+                        <div class="product-image-box ">
+
+
+                            <div class="p-images">
+
+                                <div class="main-image">
+                                    <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
+                                </div>
+
+                                <!-- <div class="">
+                                    <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                                </div> -->
+
+                                <div class="swiper mySwiper hover-image">
+                                    <div class="swiper-wrapper">
+
+
+                                        @if (prod.AdditionalImagesURL != null)
+                                        {
+                                            <div class="swiper-slide">
+                                                <img src="~/cilent/assets/images/products/@prod.HoverImageURL" alt="">
+                                            </div>
+
+                                            @foreach (var img in prod.AdditionalImagesURL)
+                                            {
+                                                <div class="swiper-slide">
+                                                    <img src="~/cilent/assets/images/products/@img" alt="">
+                                                </div>
+                                            }
+                                        }
+
+
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="p-buttons">
+
+                                <a class="add-btn ">add to card</a>
+
+                                <!-- active -->
+                                <ul class="add-size">
+                                    @if (prod.Informations != null && prod.Informations.Any())
+                                    {
+                                        foreach (var size in prod.Informations)
+                                        {
+                                            <li class="btn-size" data-size="@size.Id">@size.Size.Name</li>
+                                        }
+                                    }
+                                </ul>
+
+                            </div>
+
+                            <div class="labels">
+                                @if (prod.IsNew)
+                                {
+                                    <a class=" new">New</a>
+                                }
+                                @if (prod.IsDiscounted)
+                                {
+                                    <a class="dis">-@prod.Offer%</a>
+                                }
+                                @if (prod.IsBest)
+                                {
+                                    <a class=" best">Best</a>
+                                }
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+                        <div class="product-info-box">
+
+                            <div class="p-inf">
+                                <div class="p-head">
+                                    <h6>
+                                        @foreach (var cat in prod.Categories)
+                                        {
+                                            @cat
+
+                                            @(cat != prod.Categories.Last() ? " , " : "")
+                                        }
+                                    </h6>
+                                    <h3>@prod.Product.Name</h3>
+                                </div>
+
+                                <span>Color: @prod.Color</span>
+                            </div>
+
+
+
+                            <div class="p-pric">
+                                <a data-id="@prod.Product.Id" class="wish-btn">
+                                    @if (prod.IsWish)
+                                    {
+                                        <img class="active" src="~/cilent/assets/icons/wish-icon-active.svg" alt="">
+                                    }
+                                    else
+                                    {
+                                        <img class="" src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                                    }
+                                </a>
+
+                                <div class="cart-prices item">
+                                    @if (prod.Product.DiscountPrice != null && prod.Product.DiscountPrice > 0)
+                                    {
+
+                                        <span class="sell-price dis" id="sell-price">$@prod.Product.DiscountPrice</span>
+                                        <del class="sell-price dis-price">$@prod.Product.SellPrice</del>
+                                    }
+                                    else
+                                    {
+                                        <span class="sell-price sell" id="sell-price">$@prod.Product.SellPrice </span>
+
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                }
+
+
+
+
+
+            </div>
+            <div class="swiper-pagination t-a"></div>
+        </div>
+    }
+
+    <!-- ***** TRENDY * NEW ARRIVALS * - End ***** -->
+    <!-- ***** TRENDY * BEST SELLER * - Start ***** -->
+    <!-- Swiper -->
+    @if (Model.BestProduct != null)
+    {
+        <div class="swiper mySwiper bestsellers sub">
+
+            <div class="swiper-wrapper products-cart">
+
+
+                @foreach (var prod in Model.BestProduct)
+                {
+
+                    <div class="swiper-slide product-box">
+
+
+                        <!-- active -->
+                        <div class="product-image-box ">
+
+
+                            <div class="p-images">
+
+                                <div class="main-image">
+                                    <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
+                                </div>
+
+                                <!-- <div class="">
+                                    <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                                </div> -->
+
+                                <div class="swiper mySwiper hover-image">
+                                    <div class="swiper-wrapper">
+
+
+                                        @if (prod.AdditionalImagesURL != null)
+                                        {
+                                            <div class="swiper-slide">
+                                                <img src="~/cilent/assets/images/products/@prod.HoverImageURL" alt="">
+                                            </div>
+
+                                            @foreach (var img in prod.AdditionalImagesURL)
+                                            {
+                                                <div class="swiper-slide">
+                                                    <img src="~/cilent/assets/images/products/@img" alt="">
+                                                </div>
+                                            }
+                                        }
+
+
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="p-buttons">
+
+                                <a class="add-btn ">add to card</a>
+
+                                <!-- active -->
+                                <ul class="add-size">
+                                    @if (prod.Informations != null && prod.Informations.Any())
+                                    {
+                                        foreach (var size in prod.Informations)
+                                        {
+                                            <li class="btn-size" data-size="@size.Id">@size.Size.Name</li>
+                                        }
+                                    }
+                                </ul>
+
+                            </div>
+
+                            <div class="labels">
+                                @if (prod.IsNew)
+                                {
+                                    <a class=" new">New</a>
+                                }
+                                @if (prod.IsDiscounted)
+                                {
+                                    <a class="dis">-@prod.Offer%</a>
+                                }
+                                @if (prod.IsBest)
+                                {
+                                    <a class=" best">Best</a>
+                                }
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+                        <div class="product-info-box">
+
+                            <div class="p-inf">
+                                <div class="p-head">
+                                    <h6>
+                                        @foreach (var cat in prod.Categories)
+                                        {
+                                            @cat
+
+                                            @(cat != prod.Categories.Last() ? " , " : "")
+                                        }
+                                    </h6>
+                                    <h3>@prod.Product.Name</h3>
+                                </div>
+
+                                <span>Color: @prod.Color</span>
+                            </div>
+
+
+
+                            <div class="p-pric">
+                                <a data-id="@prod.Product.Id" class="wish-btn">
+                                    @if (prod.IsWish)
+                                    {
+                                        <img class="active" src="~/cilent/assets/icons/wish-icon-active.svg" alt="">
+                                    }
+                                    else
+                                    {
+                                        <img class="" src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                                    }
+                                </a>
+
+                                <div class="cart-prices item">
+                                    @if (prod.Product.DiscountPrice != null && prod.Product.DiscountPrice > 0)
+                                    {
+
+                                        <span class="sell-price dis" id="sell-price">$@prod.Product.DiscountPrice</span>
+                                        <del class="sell-price dis-price">$@prod.Product.SellPrice</del>
+                                    }
+                                    else
+                                    {
+                                        <span class="sell-price sell" id="sell-price">$@prod.Product.SellPrice </span>
+
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                }
+
+
+            </div>
+            <div class="swiper-pagination t-a"></div>
+        </div>
+    }
+    <!-- ***** TRENDY * BEST SELLER * - End ***** -->
+    <!-- ***** TRENDY * DISCOUNTED * - Start ***** -->
+    <!-- Swiper -->
+    @if (Model.DiscountedProduct != null)
+    {
+        <div class="swiper mySwiper discounted sub">
+
+            <div class="swiper-wrapper products-cart">
+
+                @foreach (var prod in Model.DiscountedProduct)
+                {
+                    <div class="swiper-slide product-box">
+
+
+                        <!-- active -->
+                        <div class="product-image-box ">
+
+
+                            <div class="p-images">
+
+                                <div class="main-image">
+                                    <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
+                                </div>
+
+                                <!-- <div class="">
+                                    <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                                </div> -->
+
+                                <div class="swiper mySwiper hover-image">
+                                    <div class="swiper-wrapper">
+
+
+                                        @if (prod.AdditionalImagesURL != null)
+                                        {
+                                            <div class="swiper-slide">
+                                                <img src="~/cilent/assets/images/products/@prod.HoverImageURL" alt="">
+                                            </div>
+
+                                            @foreach (var img in prod.AdditionalImagesURL)
+                                            {
+                                                <div class="swiper-slide">
+                                                    <img src="~/cilent/assets/images/products/@img" alt="">
+                                                </div>
+                                            }
+                                        }
+
+
+
+                                    </div>
+                                    <div class="swiper-button-next p-btn"></div>
+                                    <div class="swiper-button-prev p-btn"></div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="p-buttons">
+
+                                <a class="add-btn ">add to card</a>
+
+                                <!-- active -->
+                                <ul class="add-size">
+                                    @if (prod.Informations != null && prod.Informations.Any())
+                                    {
+                                        foreach (var size in prod.Informations)
+                                        {
+                                            <li class="btn-size" data-size="@size.Id">@size.Size.Name</li>
+                                        }
+                                    }
+                                </ul>
+
+                            </div>
+
+                            <div class="labels">
+                                @if (prod.IsNew)
+                                {
+                                    <a class=" new">New</a>
+                                }
+                                @if (prod.IsDiscounted)
+                                {
+                                    <a class="dis">-@prod.Offer%</a>
+                                }
+                                @if (prod.IsBest)
+                                {
+                                    <a class=" best">Best</a>
+                                }
+                            </div>
+
+
+                        </div>
+
+
+
+
+
+
+                        <div class="product-info-box">
+
+                            <div class="p-inf">
+                                <div class="p-head">
+                                    <h6>
+                                        @foreach (var cat in prod.Categories)
+                                        {
+                                            @cat
+
+                                            @(cat != prod.Categories.Last() ? " , " : "")
+                                        }
+                                    </h6>
+                                    <h3>@prod.Product.Name</h3>
+                                </div>
+
+                                <span>Color: @prod.Color</span>
+                            </div>
+
+
+
+                            <div class="p-pric">
+                                <a data-id="@prod.Product.Id" class="wish-btn">
+                                    @if (prod.IsWish)
+                                    {
+                                        <img class="active" src="~/cilent/assets/icons/wish-icon-active.svg" alt="">
+                                    }
+                                    else
+                                    {
+                                        <img class="" src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                                    }
+                                </a>
+
+                                <div class="cart-prices item">
+                                    @if (prod.Product.DiscountPrice != null && prod.Product.DiscountPrice > 0)
+                                    {
+
+                                        <span class="sell-price dis" id="sell-price">$@prod.Product.DiscountPrice</span>
+                                        <del class="sell-price dis-price">$@prod.Product.SellPrice</del>
+                                    }
+                                    else
+                                    {
+                                        <span class="sell-price sell" id="sell-price">$@prod.Product.SellPrice </span>
+
+                                    }
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                }
+
+            </div>
+            <div class="swiper-pagination t-a"></div>
+        </div>
+    }
+    <!-- ***** TRENDY * DISCOUNTED * - End ***** -->
+
+
+
+
+</section>
+
+
+ <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sizes = document.querySelectorAll('.btn-size');
+        sizes.forEach(btn => {
+            btn.addEventListener('click', () => {
+                let id = btn.getAttribute('data-size');
+                console.log(id);
+
+                fetch(`/Basket/AddBasket/${id}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            });
+        });
+
+        const wishsBtn = document.querySelectorAll('.p-pric .wish-btn')
+        console.log(wishsBtn)
+        wishsBtn.forEach(btn => {
+            btn.addEventListener('click', () => {
+                let id = btn.getAttribute('data-id');
+                console.log(id);
+
+                fetch(`/Setting/AddWish/${id}`)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log(data);
+                    })
+                    .catch(error => {
+                        console.error('There has been a problem with your fetch operation:', error);
+                    });
+            });
+        })
+    });
+
+
+</script>

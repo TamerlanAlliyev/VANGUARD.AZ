@@ -623,6 +623,58 @@ namespace Vanguard.Migrations
                     b.ToTable("Gender", (string)null);
                 });
 
+            modelBuilder.Entity("Vanguard.Models.HomeSlider", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("IPAddress")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TagId")
+                        .IsUnicode(false)
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("HomeSliders", (string)null);
+                });
+
             modelBuilder.Entity("Vanguard.Models.Image", b =>
                 {
                     b.Property<int>("Id")
@@ -647,6 +699,9 @@ namespace Vanguard.Migrations
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime");
+
+                    b.Property<int?>("HomeSliderId")
+                        .HasColumnType("int");
 
                     b.Property<string>("IPAddress")
                         .IsRequired()
@@ -691,6 +746,10 @@ namespace Vanguard.Migrations
                     b.HasIndex("BlogId");
 
                     b.HasIndex("ColorId");
+
+                    b.HasIndex("HomeSliderId")
+                        .IsUnique()
+                        .HasFilter("[HomeSliderId] IS NOT NULL");
 
                     b.HasIndex("ProductId");
 
@@ -973,6 +1032,9 @@ namespace Vanguard.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime");
 
+                    b.Property<int?>("HomeSliderId")
+                        .HasColumnType("int");
+
                     b.Property<string>("IPAddress")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -1226,6 +1288,17 @@ namespace Vanguard.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.HomeSlider", b =>
+                {
+                    b.HasOne("Vanguard.Models.Tag", "Tag")
+                        .WithMany("HomeSliders")
+                        .HasForeignKey("TagId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Tag");
+                });
+
             modelBuilder.Entity("Vanguard.Models.Image", b =>
                 {
                     b.HasOne("Vanguard.Models.Blog", "Blog")
@@ -1236,6 +1309,11 @@ namespace Vanguard.Migrations
                         .WithMany("Images")
                         .HasForeignKey("ColorId");
 
+                    b.HasOne("Vanguard.Models.HomeSlider", "HomeSlider")
+                        .WithOne("Image")
+                        .HasForeignKey("Vanguard.Models.Image", "HomeSliderId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
                     b.HasOne("Vanguard.Models.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId");
@@ -1243,6 +1321,8 @@ namespace Vanguard.Migrations
                     b.Navigation("Blog");
 
                     b.Navigation("Color");
+
+                    b.Navigation("HomeSlider");
 
                     b.Navigation("Product");
                 });
@@ -1400,6 +1480,12 @@ namespace Vanguard.Migrations
                     b.Navigation("Products");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.HomeSlider", b =>
+                {
+                    b.Navigation("Image")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Vanguard.Models.Image", b =>
                 {
                     b.Navigation("AppUser");
@@ -1430,6 +1516,8 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Tag", b =>
                 {
+                    b.Navigation("HomeSliders");
+
                     b.Navigation("ProductTag");
 
                     b.Navigation("Tags");

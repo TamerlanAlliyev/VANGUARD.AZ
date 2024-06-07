@@ -75,9 +75,11 @@ public class BasketViewComponent : ViewComponent
                         ListVM.TotalDiscountPrice = ListVM.TotalDiscountPrice + (decimal)(item.DiscountPrice != null ? (item.DiscountPrice * item.Quantity) : (item.SellPrice * item.Quantity));
 
                         TempData["BasketItemCount"] = ListVM.TotalCount + item.Quantity;
+
                     }
 
                 }
+                TempData["WishItemCount"] = wishesCount.Count();
 
 
             }

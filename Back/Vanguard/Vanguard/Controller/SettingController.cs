@@ -136,6 +136,11 @@ namespace Vanguard.Controller
 
             ValidationHelper.ValidateUserInfoUpdate(vm.User, ModelState);
 
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(vm);
+            //}
+
             var exsisUser = await _context.Users.Include(u => u.UserAddress).Include(u=>u.Image).FirstOrDefaultAsync(u => u.Id == vm.User!.Id);
 
             exsisUser.Name = vm.User!.Name;

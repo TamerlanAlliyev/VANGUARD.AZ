@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.IdentityModel.Tokens;
 using System.Text.RegularExpressions;
 using Vanguard.Areas.Admin.ViewModels.Blog;
 using Vanguard.Areas.Admin.ViewModels.ProductViewModels;
+using Vanguard.Models;
 using Vanguard.ViewModels.Account;
 using Vanguard.ViewModels.Setting;
 
@@ -119,6 +121,23 @@ public static class ValidationHelper
     }
 
 
+
+    public static void ValidateHomeSlider(HomeSlider model, ModelStateDictionary modelState)
+    {
+        if (string.IsNullOrEmpty(model.Title))
+            modelState.AddModelError("Title", "Title is required.");
+
+        if (string.IsNullOrEmpty(model.Description))
+            modelState.AddModelError("Description", "Description is required.");
+
+        if (model.TagId==0)
+            modelState.AddModelError("TagId", "TagId is required.");
+
+
+        if (model.ImageFile == null || model.ImageFile.Length == 0)
+            modelState.AddModelError("ImageFile", "Image is required.");
+
+    }
 
     public static void ValidateBlogCreate(BlogCreateVM model, ModelStateDictionary modelState)
     {

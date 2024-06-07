@@ -24,7 +24,8 @@ public class ShopService : IShopService
             .Include(p => p.ProductColors).ThenInclude(pc => pc.Color)
             .Include(p => p.ProductCategory).ThenInclude(pc => pc.Category)
             .Include(p => p.ProductTag).ThenInclude(pt => pt.Tag)
-            .Include(p => p.Information).ThenInclude(i => i.Size).AsQueryable();
+            .Include(p => p.Information).ThenInclude(i => i.Size)
+            .AsQueryable();
     }
 
 

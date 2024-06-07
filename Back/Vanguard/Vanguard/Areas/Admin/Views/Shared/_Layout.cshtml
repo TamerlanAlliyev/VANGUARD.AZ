@@ -823,6 +823,49 @@
 							<li><a asp-action="EmployeeCreat" asp-controller="Admin" asp-area="Admin">Creat New Employee</a></li>
 						</ul>
 					</li>
+
+
+
+
+					<li>
+						<a class="has-arrow" href="javascript:void()" aria-expanded="false">
+							<i class="fa-solid fa-shirt"></i>
+							<span class="nav-text">Settings</span>
+						</a>
+						<ul aria-expanded="false">
+							<li>
+								<a class="has-arrow" href="javascript:void()" aria-expanded="false">
+									<i class="fa-solid fa-shirt"></i>
+									<span class="nav-text">Home</span>
+								</a>
+								<ul aria-expanded="true">
+									<li>
+										<a href="#" aria-expanded="false">
+											<span class="nav-text">Slider</span>
+										</a>
+										<ul aria-expanded="true">
+											<li><a asp-action="SliderList" asp-controller="SettingHome" asp-area="Admin">List</a></li>
+											<li><a asp-action="SliderCreate" asp-controller="SettingHome" asp-area="Admin">Create</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+
+							<li>
+								<a class="has-arrow" href="javascript:void()" aria-expanded="false">
+									<i class="fa-solid fa-shirt"></i>
+									<span class="nav-text">Shop</span>
+								</a>
+								<ul aria-expanded="false">
+									<li><a asp-action="Banner" asp-controller="SettingShopController" asp-area="Admin">Banner</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+
+
+
 					<li>
 						<a class="has-arrow " onclick="javascript:void()" aria-expanded="false">
 							<i class="fa-solid fa-shirt"></i>
