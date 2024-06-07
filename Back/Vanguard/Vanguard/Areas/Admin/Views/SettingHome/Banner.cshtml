@@ -1,0 +1,62 @@
+﻿@model List<HomeBanner>
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Blog</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">List</a></li>
+            </ol>
+        </div>
+        <!-- /.row -->
+
+
+        <div class="row">
+
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Blog List</h4>
+                        <a asp-action="Create" asp-area="Admin" asp-controller="Blog" class="btn btn-primary">Create New Blog</a>
+                    </div>
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="table table-striped" style="width:100%">
+
+                                <thead>
+                                    <tr>
+                                        <th style="width:270px;">Image</th>
+                                        <th>Title</th>
+                                        <th>SubTitle</th>
+                                        <th>Category</th>
+                                        <th style="width:50px;">Edit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var banner in Model)
+                                    {
+                                        <tr class="banner">
+                                            <td><img src="~/cilent/assets/settings/banner/@(banner.Image.Url)" alt="@banner.Title" style="width:250px; height:250px; object-fit:cover"></td>
+                                            <td>@banner.Title</td>
+                                            <td>@banner.SubTitle</td>
+                                            <td>@banner.Category.Name</td>
+                                            <td>
+                                                <div>
+                                                    <a asp-area="Admin" asp-controller="SettingHome" asp-action="BannerEdit" asp-route-id="@banner.Id" class="btn btn-primary btn-xs" title="Edit"><i class="fas fa-pencil-alt"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

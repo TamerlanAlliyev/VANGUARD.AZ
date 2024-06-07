@@ -13,9 +13,14 @@ public class Image : BaseAuditable
     public int? BlogId { get; set; }
     public string? AppUserId { get; set; }
     public int? HomeSliderId { get; set; }
+    public int? HomeBannerId { get; set; }
+    public int? ShopBannerId { get; set; }
     public Product? Product { get; set; }
     public Color? Color { get; set; }
     public AppUser? AppUser { get; set; }
     public Blog? Blog { get; set; }
     public HomeSlider? HomeSlider { get; set; }
+    public HomeBanner? HomeBanner { get; set; }
+    public ShopBanner? ShopBanner { get; set; }
+
 }

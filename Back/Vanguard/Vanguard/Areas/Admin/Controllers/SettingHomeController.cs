@@ -122,18 +122,48 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
             return View(slider);
         }
 
-
         var homeSlider = await _context.HomeSliders.Include(s => s.Image).Include(s => s.Tag).FirstOrDefaultAsync(s => s.Id == slider.Id);
         homeSlider.Title = slider.Title;
         homeSlider.Description = slider.Description;
         homeSlider.TagId = slider.TagId;
 
         if (slider.ImageFile != null)
-            await _sliderService.SliderImageCreateAsync(slider);
+        {
+            Image Image = new Image();
+            var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "settings", "slider");
+
+            await ImageDeleteAsync(homeSlider.Image.Url);
+
+            if (!slider.ImageFile.FileSize(5) || !slider.ImageFile.FileTypeAsync("image/"))
+            {
+                ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
+                return View(slider);
+            }
+            if (!slider.ImageFile.FileTypeAsync("image"))
+            {
+                ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
+                return View(slider);
+            }
+
+
+
+            var filename = await slider.ImageFile.SaveToAsync(path);
+
+            Image = new Image
+            {
+                Url = filename,
+                HomeSlider = homeSlider,
+            };
+
+            homeSlider.Image = Image;
+
+            await _context.Images.AddAsync(Image);
+        }
 
         await _context.SaveChangesAsync();
         return RedirectToAction("SliderList");
     }
+
 
 
 
@@ -179,5 +209,67 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
         {
             return ServiceResult.InternalServerError($"Internal server error: {ex.Message}");
         }
+    }
+
+
+
+
+    public async Task<IActionResult> Banner()
+    {
+        var banner = await _context.HomeBanners.Include(b => b.Category).Include(b => b.Image).ToListAsync();
+        ViewBag.Categories = await _context.Categories.Where(c => !c.IsDeleted).ToListAsync();
+        return View(banner);
+    }
+
+    public async Task<IActionResult> BannerEdit(int id)
+    {
+        var banner = await _context.HomeBanners.Include(b => b.Category).Include(b => b.Image).FirstOrDefaultAsync(b => b.Id == id);
+        ViewBag.Categories = await _context.Categories.Where(c => !c.IsDeleted).ToListAsync();
+        return View(banner);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> BannerEdit(HomeBanner banner)
+    {
+        var exsistBanner = await _context.HomeBanners.Include(b => b.Image).FirstOrDefaultAsync(b => b.Id == banner.Id);
+        exsistBanner.Title = banner.Title;
+        exsistBanner.SubTitle = banner.SubTitle;
+        exsistBanner.CategoryId = banner.CategoryId;
+        ViewBag.Categories = await _context.Categories.Where(c => !c.IsDeleted).ToListAsync();
+
+        if (banner.ImageFile != null)
+        {
+            Image Image = new Image();
+            var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "settings", "banner");
+
+            await ImageDeleteAsync(exsistBanner.Image.Url);
+
+            if (!banner.ImageFile.FileSize(5) || !banner.ImageFile.FileTypeAsync("image/"))
+            {
+                ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
+                return View(banner);
+            }
+            if (!banner.ImageFile.FileTypeAsync("image"))
+            {
+                ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
+                return View(banner);
+            }
+
+
+
+            var filename = await banner.ImageFile.SaveToAsync(path);
+
+            Image = new Image
+            {
+                Url = filename,
+                HomeBanner = exsistBanner,
+            };
+
+            exsistBanner.Image = Image;
+
+            await _context.Images.AddAsync(Image);
+        }
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Banner");
     }
 }

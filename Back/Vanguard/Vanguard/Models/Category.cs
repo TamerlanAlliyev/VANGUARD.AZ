@@ -11,4 +11,5 @@ public class Category : BaseAuditable
     public List<ProductCategory>? ProductCategory { get; set; }
     public List<BlogCategory> Categories { get; set; } = null!;
 
+    public List<HomeBanner>? HomeBanners { get; set; }
 }

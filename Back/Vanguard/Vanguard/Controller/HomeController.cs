@@ -52,6 +52,7 @@ public class HomeController : Microsoft.AspNetCore.Mvc.Controller
             TrendyVM = await _homeService.TrendySelectedAsync(),
             LastBlogs = lastBlogs,
             Sliders = await _context.HomeSliders.Include(s=>s.Image).Include(s=>s.Tag).ToListAsync(),
+            Banners = await _context.HomeBanners.Include(b=>b.Image).Include(b=>b.Category).ToListAsync(),
         };
 
         return View(vm);

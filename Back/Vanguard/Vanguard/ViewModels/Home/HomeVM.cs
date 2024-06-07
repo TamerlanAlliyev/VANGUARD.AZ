@@ -7,5 +7,6 @@ public class HomeVM
 {
     public TrendyProductVM? TrendyVM { get; set; }
     public List<BlogAllVM>? LastBlogs { get; set; }
-    public List<HomeSlider> Sliders { get; set; }=new List<HomeSlider>();
+    public List<HomeSlider> Sliders { get; set; } = new List<HomeSlider>();
+    public List<HomeBanner> Banners { get; set; } = new List<HomeBanner>();
 }

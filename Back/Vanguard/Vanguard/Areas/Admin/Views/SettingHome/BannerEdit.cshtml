@@ -1,0 +1,388 @@
+﻿@using Vanguard.Areas.Admin.ViewModels.Admin
+@model HomeBanner
+
+@{
+    List<Category> cats = ViewBag.Categories as List<Category>;
+}
+@section style {
+    <link rel="stylesheet" href="~/admin/vendor/select2/css/select2.min.css">
+    <link href="~/admin/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+
+    <style>
+
+        .image-box {
+            width: 100%;
+        }
+
+        .img-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 600px;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .label-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .label-image.active img {
+            width: 35%;
+            height: 35%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .label-image {
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-out;
+            cursor: pointer;
+            border: 3px solid #b4b4b4;
+            border-radius: 1rem;
+            transition: all 0.3s ease-out;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+            .label-image:active {
+                transform: scale(0.9);
+            }
+
+        /* ========== Image ========= */
+
+
+        /* ========== Image File ========= */
+
+        .add-files {
+            /* padding: 0 16px 0 90px; */
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            height: auto !important;
+            padding: 2rem 1rem 1rem 1rem;
+        }
+
+        .im-conta {
+            padding: 0;
+        }
+
+        .additional-image {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5%;
+            row-gap: 5%;
+            width: 100%;
+            row-gap: 30px;
+            max-height: auto !important;
+        }
+
+        .add-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 316px;
+            flex-direction: column;
+            gap: 10px;
+            width: 30%;
+        }
+
+        .hover-img-selected {
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+
+        .add-label-image {
+            width: 100%;
+            height: 100%;
+            transition: all 0.3s ease-out;
+            cursor: pointer;
+            border: 3px solid #b4b4b4;
+            border-radius: 1rem;
+            transition: all 0.3s ease-out;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+            .add-label-image:active {
+                transform: scale(0.9);
+            }
+
+        .add-container.add-img-box {
+            transition: all 0.5s ease;
+        }
+
+            .add-container.add-img-box .remove-img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: center;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: #202020;
+                background: #ffffff79;
+                padding: 10px;
+                font-size: 50px;
+                display: none;
+                transition: all 0.5s ease;
+            }
+
+        .add-img-box .add-label-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+        }
+
+        .add-container.add-img-box:hover .remove-img {
+            display: flex;
+        }
+
+        /* ========== Image File ========= */
+
+    </style>
+
+}
+
+
+
+
+
+
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Banner</a></li>
+                <li class="breadcrumb-item"><a sty href="javascript:void(0)">Edit</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <form method="post" enctype="multipart/form-data">
+
+                <div class="col-lg-12">
+
+
+                    <div class="card">
+
+                        
+
+                        <div class="card-body">
+                            <div class="form-validation">
+                                <div class="row">
+
+
+                                    <div class="col-xl-5 ">
+
+
+                                        <div class="mb-3 row">
+
+                                            <label class="col-lg-2 col-form-label" for="validationCustom05">
+                                                Title
+                                                <span class="text-danger">*</span>
+                                            </label>
+
+                                            <div class="col-lg-10">
+                                                <input asp-for=Title type="text" class="form-control"
+                                                       id="validationCustom01"
+                                                       placeholder="Enter a Slider Title..">
+                                                <span asp-validation-for="Title" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="mb-3 row">
+
+                                            <label class="col-lg-2 col-form-label" for="validationCustom05">
+                                                Description
+                                                <span class="text-danger">*</span>
+                                            </label>
+
+                                            <div class="col-lg-10">
+                                                <textarea asp-for="SubTitle" style="min-height: 250px;"
+                                                          class="form-control" id="validationCustom02" rows="5"
+                                                          placeholder="Enter a Slider Description..."></textarea>
+                                                <span asp-validation-for="SubTitle" class="text-danger"></span>
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Category
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+
+                                                <select asp-for="CategoryId" class="form-select" id="single-select" required>
+
+                                                    @if (Model.Category != null)
+                                                    {
+                                                        <option value="@Model.Category.Id" selected disabled>@Model.Category.Name</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option selected disabled>Select cat</option>
+                                                    }
+
+                                                    @if (cats != null)
+                                                    {
+                                                        foreach (var cat in cats)
+                                                        {
+                                                            <option value="@cat.Id">@cat.Name</option>
+
+                                                        }
+                                                    }
+                                                </select>
+                                                <span asp-validation-for="CategoryId" class="text-danger"></span>
+
+                                                <div class="invalid-feedback">
+                                                    Please select a cat.
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+
+
+
+
+
+                                    <div class="col-xl-7">
+
+                                        <div class="mb-3 row">
+
+                                            <label class="col-form-label" style="width:10%" for="validationCustom05">
+                                                Image
+                                                <span class="text-danger">*</span>
+                                            </label>
+
+                                            <div class="col-lg-10" style="width: 90%;">
+                                                <div class="main-hover ">
+                                                    <div class="row im-container " style="width: 100%;">
+                                                        <div class="col-xl-12 img-container">
+                                                            <label for="mainImage" class="label-image">
+                                                                <input asp-for=ImageFile type="file" id="mainImage" hidden>
+                                                                <img class="main-img selected-media" src="~/cilent/assets/settings/banner/@(Model.Image!=null?Model.Image.Url:"")" alt="">
+                                                                <video class="main-video selected-media" style="display:none;" controls></video>
+                                                            </label>
+                                                        </div>
+                                                        <span asp-validation-for="ImageFile" class="text-danger"></span>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div asp-validation-summary="ModelOnly"></div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="d-flex row justify-content-center">
+                    <div class="d-flex row justify-content-center">
+                        <button type="submit" class="btn btn-primary w-25">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+@section script {
+    <script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="~/admin/vendor/global/global.min.js"></script>
+    <script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+    <script src="~/admin/vendor/select2/js/select2.full.min.js"></script>
+    <script src="~/admin/js/plugins-init/select2-init.js"></script>
+
+
+    <script>
+        document.getElementById('mainImage').addEventListener('change', function (event) {
+            const file = event.target.files[0];
+            const imgElement = document.querySelector('.main-img');
+
+            if (file) {
+                const fileType = file.type;
+
+                if (fileType.startsWith('image/')) {
+                    const reader = new FileReader();
+                    reader.onload = function (e) {
+                        imgElement.src = e.target.result;
+                        imgElement.style.display = 'block';
+                        imgElement.style.width = '100%';
+                        imgElement.style.height = '100%';
+                        imgElement.style.objectFit = 'cover';
+                        imgElement.style.objectPosition = 'center';
+                    }
+                    reader.readAsDataURL(file);
+                } else {
+                    alert('Please upload image file only.');
+                }
+            }
+        });
+    </script>
+
+
+}
+
+

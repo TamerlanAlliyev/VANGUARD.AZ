@@ -8,7 +8,7 @@ using Vanguard.Models;
 
 namespace Vanguard.Areas.Admin.Services.Implementations;
 
-public class HomeSliderService: IHomeSliderService
+public class HomeSliderService : IHomeSliderService
 {
     readonly VanguardContext _context;
     readonly IWebHostEnvironment _environment;
@@ -19,62 +19,55 @@ public class HomeSliderService: IHomeSliderService
         _environment = environment;
     }
 
-    public async Task<ServiceResult> SliderImageCreateAsync(HomeSlider homeSlider)
+    public async Task<HomeSlider> SliderEditAsync(HomeSlider slider)
     {
-        try
-        {
-            if (homeSlider.ImageFile != null)
-            {
-                var path = Path.Combine(_environment.WebRootPath, "client", "assets", "settings", "slider");
-
-                if (homeSlider.Image != null)
-                    await ImageDeleteAsync(homeSlider.Image.Url);
-
-                var filename = await homeSlider.ImageFile.SaveToAsync(path);
-
-                Image image = new Image
-                {
-                    Url = filename,
-                    HomeSlider = homeSlider
-                };
-
-                homeSlider.Image = image;
-
-                await _context.Images.AddAsync(image);
-            }
-
-            await _context.SaveChangesAsync();
-            return ServiceResult.Ok("Slider image created successfully.");
-        }
-        catch (Exception ex)
-        {
-            return ServiceResult.InternalServerError($"Internal server error: {ex.Message}");
-        }
+        var homeSlider = await _context.HomeSliders.FirstOrDefaultAsync(s => s.Id == slider.Id);
+        if (homeSlider == null)
+          ServiceResult.NotFound("Slider not found.");
+        homeSlider.Title = slider.Title;
+        homeSlider.Description = slider.Description;
+        homeSlider.TagId = slider.TagId;
+         ServiceResult.Ok("Slider edit successfully.");
+        return homeSlider;
     }
 
+    public async Task<ServiceResult> SliderImageCreateAsync(HomeSlider slider, string url)
+    {
+        Image Image = new Image();
+        var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "settings", "slider");
+        if(url!=null)
+        await ImageDeleteAsync(url);
+
+        var filename = await slider.ImageFile.SaveToAsync(path);
+
+        Image = new Image
+        {
+            Url = filename,
+            HomeSlider = slider,
+        };
+
+        slider.Image = Image;
+        await _context.Images.AddAsync(Image);
+        return ServiceResult.Ok("Image created successfully.");
+    }
 
 
 
     public async Task<ServiceResult> ImageDeleteAsync(string url)
     {
-        var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "settings", "slider");
+        var path = Path.Combine(_environment.WebRootPath, "client", "assets", "settings", "slider");
         Image image = await _context.Images.FirstOrDefaultAsync(i => i.Url == url);
-        if (image == null) ServiceResult.NotFound("Image not found.");
+        if (image == null)
+            return ServiceResult.NotFound("Image not found.");
 
         string fileName = image.Url;
-        if (string.IsNullOrEmpty(fileName)) ServiceResult.BadRequest("File name is invalid.");
+        if (string.IsNullOrEmpty(fileName))
+            return ServiceResult.BadRequest("File name is invalid.");
 
-        try
-        {
-            ImageFileExtension.DeleteImagesService(path, fileName);
-            _context.Images.Remove(image);
-            await _context.SaveChangesAsync();
+        ImageFileExtension.DeleteImagesService(path, fileName);
+        _context.Images.Remove(image);
+        await _context.SaveChangesAsync();
 
-            return ServiceResult.Ok("Image deleted successfully.");
-        }
-        catch (Exception ex)
-        {
-            return ServiceResult.InternalServerError($"Internal server error: {ex.Message}");
-        }
+        return ServiceResult.Ok("Image deleted successfully.");
     }
 }

@@ -623,6 +623,34 @@ namespace Vanguard.Migrations
                     b.ToTable("Gender", (string)null);
                 });
 
+            modelBuilder.Entity("Vanguard.Models.HomeBanner", b =>
+                {
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SubTitle")
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("HomeBanners");
+                });
+
             modelBuilder.Entity("Vanguard.Models.HomeSlider", b =>
                 {
                     b.Property<int>("Id")
@@ -700,6 +728,9 @@ namespace Vanguard.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime");
 
+                    b.Property<int?>("HomeBannerId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("HomeSliderId")
                         .HasColumnType("int");
 
@@ -736,6 +767,9 @@ namespace Vanguard.Migrations
                     b.Property<int?>("ProductId")
                         .HasColumnType("int");
 
+                    b.Property<int?>("ShopBannerId")
+                        .HasColumnType("int");
+
                     b.Property<string>("Url")
                         .IsRequired()
                         .HasMaxLength(250)
@@ -746,6 +780,10 @@ namespace Vanguard.Migrations
                     b.HasIndex("BlogId");
 
                     b.HasIndex("ColorId");
+
+                    b.HasIndex("HomeBannerId")
+                        .IsUnique()
+                        .HasFilter("[HomeBannerId] IS NOT NULL");
 
                     b.HasIndex("HomeSliderId")
                         .IsUnique()
@@ -970,6 +1008,35 @@ namespace Vanguard.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("ProductTag");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.ShopBanner", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<int>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ShopBanner");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Size", b =>
@@ -1288,6 +1355,17 @@ namespace Vanguard.Migrations
                     b.Navigation("ParentCategory");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.HomeBanner", b =>
+                {
+                    b.HasOne("Vanguard.Models.Category", "Category")
+                        .WithMany("HomeBanners")
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Vanguard.Models.HomeSlider", b =>
                 {
                     b.HasOne("Vanguard.Models.Tag", "Tag")
@@ -1309,6 +1387,15 @@ namespace Vanguard.Migrations
                         .WithMany("Images")
                         .HasForeignKey("ColorId");
 
+                    b.HasOne("Vanguard.Models.HomeBanner", "HomeBanner")
+                        .WithOne("Image")
+                        .HasForeignKey("Vanguard.Models.Image", "HomeBannerId")
+                        .OnDelete(DeleteBehavior.SetNull);
+
+                    b.HasOne("Vanguard.Models.ShopBanner", "ShopBanner")
+                        .WithOne("Image")
+                        .HasForeignKey("Vanguard.Models.Image", "HomeBannerId");
+
                     b.HasOne("Vanguard.Models.HomeSlider", "HomeSlider")
                         .WithOne("Image")
                         .HasForeignKey("Vanguard.Models.Image", "HomeSliderId")
@@ -1322,9 +1409,13 @@ namespace Vanguard.Migrations
 
                     b.Navigation("Color");
 
+                    b.Navigation("HomeBanner");
+
                     b.Navigation("HomeSlider");
 
                     b.Navigation("Product");
+
+                    b.Navigation("ShopBanner");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Information", b =>
@@ -1463,6 +1554,8 @@ namespace Vanguard.Migrations
 
                     b.Navigation("ChildCategories");
 
+                    b.Navigation("HomeBanners");
+
                     b.Navigation("ProductCategory");
                 });
 
@@ -1478,6 +1571,12 @@ namespace Vanguard.Migrations
             modelBuilder.Entity("Vanguard.Models.Gender", b =>
                 {
                     b.Navigation("Products");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.HomeBanner", b =>
+                {
+                    b.Navigation("Image")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Vanguard.Models.HomeSlider", b =>
@@ -1507,6 +1606,12 @@ namespace Vanguard.Migrations
                     b.Navigation("ProductTag");
 
                     b.Navigation("Wishes");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.ShopBanner", b =>
+                {
+                    b.Navigation("Image")
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("Vanguard.Models.Size", b =>

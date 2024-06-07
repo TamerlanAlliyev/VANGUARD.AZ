@@ -21,7 +21,7 @@
                 {
                     <div class="slide">
 
-                        <img src="~/cilent/assets/settings/slider/@slide.Image.Url" alt="">
+                        <img src="~/cilent/assets/settings/slider/@(slide.Image!=null?slide.Image.Url:"")" alt="">
                         <div class="slide-info">
                             <h5 class="slide-title">@slide.Tag.Name</h5>
                             <h2 class="slide-name">@slide.Title</h2>
@@ -74,12 +74,12 @@
 
         <div class="collection-area">
 
-            <div class="list-one" style="background-image: url(/cilent/assets/images/products/product.jpg);">
+            <div class="list-one" style="background-image: url(/cilent/assets/settings/banner/@(Model.Banners[1].Image.Url));">
                 <div class="list-one-card">
 
                     <div class="list-one-info">
-                        <P>HOT LIST</P>
-                        <a href="#">T-SHIRT COLLECTION</a>
+                        <P>@Model.Banners[0]?.Category?.Name</P>
+                        <a href="#">@Model.Banners[0]?.Title</a>
                     </div>
 
                     <div class="one-btn">
@@ -92,14 +92,14 @@
             <div class="list-two">
 
                 <div class="list-two-product"
-                     style="background-image: url(/cilent/assets/images/products/product.jpg);">
+                     style="background-image: url(/cilent/assets/settings/banner/@(Model.Banners[1].Image.Url));">
 
 
                     <div class="list-two-card">
 
                         <div class="list-two-info">
-                            <P>HOT LIST</P>
-                            <a>T-SHIRT COLLECTION</a>
+                            <P>@Model.Banners[1]?.Category?.Name</P>
+                            <a href="#">@Model.Banners[1]?.Title</a>
                         </div>
 
                         <div class="two-btn">
@@ -111,11 +111,11 @@
                 </div>
 
 
-                <div class="list-two-gift" style="background-image: url(/cilent/assets/images/settings/bg-2.svg);">
+                <div class="list-two-gift" style="background-image: url(/cilent/assets/settings/banner/@(Model.Banners[2].Image.Url));">
 
                     <div class="gift-info">
-                        <a>E-GIFT CARDS</a>
-                        <a>Surprise someone with the gift theyreally want.</a>
+                        <a>@Model.Banners[2]?.SubTitle</a>
+                        <a>@Model.Banners[2]?.Title</a>
                     </div>
 
                     <a class="shop-btn">SHOP NOW</a>

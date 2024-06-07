@@ -1,24 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\settinghomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\settinghomecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\implementations\\homesliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\implementations\\homesliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\interfaces\\ihomesliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\interfaces\\ihomesliderservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\tamerlan\\vanguard.az\\back\\vanguard\\vanguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,58 +22,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Program.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Program.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Program.cs",
-              "RelativeToolTip": "Vanguard\\Program.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAA9wCEAAABJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T07:01:38.208Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IHomeSliderService.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Interfaces\\IHomeSliderService.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Interfaces\\IHomeSliderService.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Interfaces\\IHomeSliderService.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Interfaces\\IHomeSliderService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T07:01:34.063Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HomeSliderService.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\HomeSliderService.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Implementations\\HomeSliderService.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\HomeSliderService.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Implementations\\HomeSliderService.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABUAAABSAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-07T06:53:57.224Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SettingHomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\SettingHomeController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\SettingHomeController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\Tamerlan\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\SettingHomeController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\SettingHomeController.cs",
-              "ViewState": "AQIAAGkAAAAAAAAAAAAowIIAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-06T20:40:37.048Z",
-              "EditorCaption": ""
             }
           ]
         }
