@@ -22,6 +22,6 @@ public class ShopBannerConfiguration : IEntityTypeConfiguration<ShopBanner>
 
         builder.HasOne(hs => hs.Image)
             .WithOne(i => i.ShopBanner)
-            .HasForeignKey<Image>(i => i.HomeBannerId);
+            .HasForeignKey<Image>(i => i.ShopBannerId);
     }
 }

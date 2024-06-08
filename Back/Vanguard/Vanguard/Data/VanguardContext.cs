@@ -36,6 +36,8 @@ public class VanguardContext : IdentityDbContext<AppUser>
 	public DbSet<HomeBanner> HomeBanners { get; set; }
 	public DbSet<HomeSlider> HomeSliders {  get; set; } 
 	public DbSet<ShopBanner> ShopBanner { get; set; }
+    public DbSet<SettingProduct> SettingProducts { get; set; }
+	public DbSet<SettingHomeHero> SettingHomeHero {  get; set; }
     protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		base.OnModelCreating(modelBuilder);

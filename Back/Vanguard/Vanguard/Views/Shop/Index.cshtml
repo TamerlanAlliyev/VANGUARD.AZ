@@ -396,16 +396,13 @@
         <div class="sections product-container">
 
 
-            <div class="news" style="background-image: url('@Url.Content("~/cilent/assets/images/products/slider-3.webp")');">
-
+            <div class="news" style="background-image: url('/cilent/assets/settings/banner/@Model.Banner?.Image.Url');">
                 <h2>
-                    Plus-Size Styles for Every
-                    Season
+                  @Model.Banner?.Title
                 </h2>
 
                 <p>
-                    Quis ipsum suspendisse ultrices gravida. Risus commodo viverra
-                    maecenas.
+                    @Model.Banner?.Description
                 </p>
             </div>
 

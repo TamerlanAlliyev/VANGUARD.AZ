@@ -791,6 +791,10 @@ namespace Vanguard.Migrations
 
                     b.HasIndex("ProductId");
 
+                    b.HasIndex("ShopBannerId")
+                        .IsUnique()
+                        .HasFilter("[ShopBannerId] IS NOT NULL");
+
                     b.ToTable("Images", (string)null);
                 });
 
@@ -1008,6 +1012,69 @@ namespace Vanguard.Migrations
                     b.HasIndex("TagId");
 
                     b.ToTable("ProductTag");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.SettingHomeHero", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int?>("CategoryId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("HeroName")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar(150)");
+
+                    b.Property<int?>("Offer")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("TagId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("Time")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CategoryId");
+
+                    b.HasIndex("TagId");
+
+                    b.ToTable("SettingHomeHero");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.SettingProduct", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("Best")
+                        .HasColumnType("int");
+
+                    b.Property<int>("New")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SettingProducts");
                 });
 
             modelBuilder.Entity("Vanguard.Models.ShopBanner", b =>
@@ -1389,11 +1456,6 @@ namespace Vanguard.Migrations
 
                     b.HasOne("Vanguard.Models.HomeBanner", "HomeBanner")
                         .WithOne("Image")
-                        .HasForeignKey("Vanguard.Models.Image", "HomeBannerId")
-                        .OnDelete(DeleteBehavior.SetNull);
-
-                    b.HasOne("Vanguard.Models.ShopBanner", "ShopBanner")
-                        .WithOne("Image")
                         .HasForeignKey("Vanguard.Models.Image", "HomeBannerId");
 
                     b.HasOne("Vanguard.Models.HomeSlider", "HomeSlider")
@@ -1404,6 +1466,10 @@ namespace Vanguard.Migrations
                     b.HasOne("Vanguard.Models.Product", "Product")
                         .WithMany("Images")
                         .HasForeignKey("ProductId");
+
+                    b.HasOne("Vanguard.Models.ShopBanner", "ShopBanner")
+                        .WithOne("Image")
+                        .HasForeignKey("Vanguard.Models.Image", "ShopBannerId");
 
                     b.Navigation("Blog");
 
@@ -1509,6 +1575,21 @@ namespace Vanguard.Migrations
                         .IsRequired();
 
                     b.Navigation("Product");
+
+                    b.Navigation("Tag");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.SettingHomeHero", b =>
+                {
+                    b.HasOne("Vanguard.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId");
+
+                    b.HasOne("Vanguard.Models.Tag", "Tag")
+                        .WithMany()
+                        .HasForeignKey("TagId");
+
+                    b.Navigation("Category");
 
                     b.Navigation("Tag");
                 });

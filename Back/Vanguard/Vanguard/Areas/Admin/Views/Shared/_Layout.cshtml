@@ -838,21 +838,23 @@
 									<i class="fa-solid fa-house"></i>
 									<span class="nav-text">Home</span>
 								</a>
-								<ul aria-expanded="true">
-									<li>
-										<a href="#" aria-expanded="false">
-											<span class="nav-text">Slider</span>
-										</a>
-										<ul aria-expanded="true">
-											<li><a asp-action="SliderList" asp-controller="SettingHome" asp-area="Admin">List</a></li>
-											<li><a asp-action="SliderCreate" asp-controller="SettingHome" asp-area="Admin">Create</a></li>
-										</ul>
-									</li>
+								<ul aria-expanded="false">
+									<li><a asp-action="Hero" asp-controller="SettingHome" asp-area="Admin">Hero</a></li>
 									<li>
 										<a asp-action="Banner" asp-controller="SettingHome" asp-area="Admin" aria-expanded="false">
 											<span class="nav-text">Banner</span>
 										</a>
 									</li>
+									<li>
+										<a href="#" aria-expanded="false">
+											<span class="nav-text">Slider</span>
+										</a>
+										<ul aria-expanded="false">
+											<li><a asp-action="SliderList" asp-controller="SettingHome" asp-area="Admin">List</a></li>
+											<li><a asp-action="SliderCreate" asp-controller="SettingHome" asp-area="Admin">Create</a></li>
+										</ul>
+									</li>
+									
 								</ul>
 							</li>
 
@@ -862,7 +864,8 @@
 									<span class="nav-text">Shop</span>
 								</a>
 								<ul aria-expanded="false">
-									<li><a asp-action="Banner" asp-controller="SettingShopController" asp-area="Admin">Banner</a></li>
+									<li><a asp-action="Product" asp-controller="SettingShop" asp-area="Admin">Product</a></li>
+									<li><a asp-action="Banner" asp-controller="SettingShop" asp-area="Admin">Banner</a></li>
 								</ul>
 							</li>
 						</ul>

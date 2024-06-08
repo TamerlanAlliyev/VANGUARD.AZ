@@ -40,7 +40,7 @@ public class ShopVM
     public List<Tag>? SelectedTags { get; set; }
     public int[]? SentTag { get; set; }
 
-
-
     public List<Tag>? Tags { get; set; }
+
+    public ShopBanner? Banner { get; set; }
 }

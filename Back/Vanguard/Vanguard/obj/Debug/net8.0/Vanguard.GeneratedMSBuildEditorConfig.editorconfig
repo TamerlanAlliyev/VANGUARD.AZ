@@ -130,6 +130,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ0hvbWVcQmFubmVyRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/SettingHome/Hero.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ0hvbWVcSGVyby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/SettingHome/SliderCreate.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ0hvbWVcU2xpZGVyQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -142,8 +146,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ0hvbWVcU2xpZGVyTGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Settingshop/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ3Nob3BcSW5kZXguY3NodG1s
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Settingshop/Banner.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ3Nob3BcQmFubmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Settingshop/Product.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2V0dGluZ3Nob3BcUHJvZHVjdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Shared/Components/UserInfo/Default.cshtml]

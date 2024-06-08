@@ -20,7 +20,6 @@ public class HomeBannerConfiguration:IEntityTypeConfiguration<HomeBanner>
 
         builder.HasOne(hs => hs.Image)
             .WithOne(i => i.HomeBanner)
-            .HasForeignKey<Image>(i => i.HomeBannerId)
-            .OnDelete(DeleteBehavior.SetNull);
+            .HasForeignKey<Image>(i => i.HomeBannerId);
     }
 }

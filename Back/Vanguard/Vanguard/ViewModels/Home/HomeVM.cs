@@ -9,4 +9,5 @@ public class HomeVM
     public List<BlogAllVM>? LastBlogs { get; set; }
     public List<HomeSlider> Sliders { get; set; } = new List<HomeSlider>();
     public List<HomeBanner> Banners { get; set; } = new List<HomeBanner>();
+    public HeroVM Hero { get; set; } = new HeroVM();
 }

@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using NuGet.Configuration;
 using System.IO;
 using System.Security.Policy;
+using Vanguard.Areas.Admin.Services.Implementations;
 using Vanguard.Areas.Admin.Services.Interfaces;
 using Vanguard.Data;
 using Vanguard.Extensions;
@@ -18,11 +19,13 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
     readonly VanguardContext _context;
     readonly IWebHostEnvironment _environment;
     readonly IHomeSliderService _sliderService;
-    public SettingHomeController(VanguardContext context, IWebHostEnvironment environment, IHomeSliderService sliderService)
+    readonly ISettingHomeHeroService _heroService;
+    public SettingHomeController(VanguardContext context, IWebHostEnvironment environment, IHomeSliderService sliderService, ISettingHomeHeroService heroService)
     {
         _context = context;
         _environment = environment;
         _sliderService = sliderService;
+        _heroService = heroService;
     }
 
     public async Task<IActionResult> SliderList()
@@ -132,7 +135,7 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
             Image Image = new Image();
             var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "settings", "slider");
 
-            await ImageDeleteAsync(homeSlider.Image.Url);
+            await ImageDeleteAsync(homeSlider.Image.Url, path);
 
             if (!slider.ImageFile.FileSize(5) || !slider.ImageFile.FileTypeAsync("image/"))
             {
@@ -169,9 +172,9 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
 
 
 
-    public async Task<ServiceResult> ImageDeleteAsync(string url)
+    public async Task<ServiceResult> ImageDeleteAsync(string url, string path)
     {
-        var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "settings", "slider");
+
         Image image = await _context.Images.FirstOrDefaultAsync(i => i.Url == url);
         if (image == null) ServiceResult.NotFound("Image not found.");
 
@@ -198,8 +201,9 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
         try
         {
             var exsistBlog = await _context.HomeSliders.Include(b => b.Image).FirstOrDefaultAsync(i => i.Id == id);
+            var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "settings", "slider");
             if (exsistBlog.Image != null)
-                await ImageDeleteAsync(exsistBlog.Image.Url);
+                await ImageDeleteAsync(exsistBlog.Image.Url, path);
 
             _context.HomeSliders.Remove(exsistBlog);
             await _context.SaveChangesAsync();
@@ -241,8 +245,8 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
         {
             Image Image = new Image();
             var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "settings", "banner");
-
-            await ImageDeleteAsync(exsistBanner.Image.Url);
+            if (exsistBanner.Image.Url != null)
+                await ImageDeleteAsync(exsistBanner.Image.Url, path);
 
             if (!banner.ImageFile.FileSize(5) || !banner.ImageFile.FileTypeAsync("image/"))
             {
@@ -271,5 +275,30 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
         }
         await _context.SaveChangesAsync();
         return RedirectToAction("Banner");
+    }
+
+
+
+
+
+    public async Task<IActionResult> Hero()
+    {
+        ViewBag.Categories = await _context.Categories.Where(c=>!c.IsDeleted).ToListAsync();
+        ViewBag.Tags = await _context.Tags.Where(c=>!c.IsDeleted).ToListAsync();
+        var model = await _heroService.GetOrCreateSettingHomeHeroAsync();
+        return View(model);
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Hero(SettingHomeHero model)
+    {
+        if (ModelState.IsValid)
+        {
+            await _heroService.UpdateSettingHomeHeroAsync(model);
+            return RedirectToAction("Hero");
+        }
+        ViewBag.Categories = await _context.Categories.Where(c => !c.IsDeleted).ToListAsync();
+        ViewBag.Tags = await _context.Tags.Where(c => !c.IsDeleted).ToListAsync();
+        return View("Hero", model);
     }
 }

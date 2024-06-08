@@ -31,7 +31,9 @@ namespace Vanguard
             builder.Services.AddScoped<IShopService, ShopService>();
             builder.Services.AddScoped<IBlogService, BlogService>();
             builder.Services.AddScoped<IHomeSliderService, HomeSliderService>();
-            builder.Services.AddTransient<IEmailService, EmailService>();
+            builder.Services.AddScoped<ISettingProductService, SettingProductService>();
+            builder.Services.AddScoped<ISettingHomeHeroService, SettingHomeHeroService>();
+			builder.Services.AddTransient<IEmailService, EmailService>();
             builder.Services.AddScoped<AdminAuthorizationFilter>();
 
             builder.Services.AddScoped<IHomeService, HomeService>();

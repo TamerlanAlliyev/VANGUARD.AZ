@@ -26,14 +26,29 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
         _userManager = userManager;
     }
 
-    public async Task<IActionResult> Index(int? tagId,ShopVM shopVM)
+    public async Task<IActionResult> Index(int? tagId, int? catId ,ShopVM shopVM)
     {
+        var settings = await _context.SettingProducts.ToListAsync();
+        int New = settings[0].New;
+        int Best = settings[0].Best;
+
+
+
         var query = _shopService.ProductgetQuery();
 
         List<Product> products = new List<Product>();
         int totalItems = 0;
 
 
+        if (tagId != null)
+        {
+            query = query.Where(p => p.ProductTag.Any(t => t.TagId == tagId));
+        }
+        if (catId!=null)
+        {
+            query = query.Where(p => p.ProductCategory.Any(t => t.CategoryId == catId));
+
+        }
 
 
         //Category
@@ -134,11 +149,9 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
             query = query.Where(p => p.ProductTag.Any(pc => shopVM.SentTag.Contains(pc.TagId)));
         }
 
-        if (tagId!=null)
-        {
-            query = query.Where(p=>p.ProductTag.Any(t=>t.TagId==tagId));
-        }
 
+
+       
 
 
 
@@ -222,9 +235,9 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
             Categories = p.ProductCategory.Select(pc => pc.Category.Name).ToList(),
             Tags = p.ProductTag.Select(pc => pc.Tag.Name).ToList(),
             Informations = p.Information.ToList()!,
-            IsNew = p.CreatedDate >= (DateTime.UtcNow.AddDays(-5).AddHours(4)),
+            IsNew = p.CreatedDate >= (DateTime.UtcNow.AddDays(-(New)).AddHours(4)),
             IsDiscounted = p.DiscountPrice > 0,
-            IsBest = p.Information.Sum(p => p.OrderCount) >= 50,
+            IsBest = p.Information.Sum(p => p.OrderCount) >= Best,
             Offer = p.DiscountPrice > 0 ? (int)(((p.SellPrice - p.DiscountPrice) / p.SellPrice) * 100) : 0,
             IsWish = wishProductIds.Contains(p.Id)
         }).ToList();
@@ -317,7 +330,8 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
                 ItemsPerPage = shopVM.PageInfo.ItemsPerPage,
             },
             CurrrentMinPrice = shopVM.MinPrice,
-            CurrrentMaxPrice = shopVM.MaxPrice
+            CurrrentMaxPrice = shopVM.MaxPrice,
+            Banner = await _context.ShopBanner.Include(b=>b.Image).FirstOrDefaultAsync()
         };
 
 

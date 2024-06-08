@@ -1,0 +1,96 @@
+﻿@model SettingProduct
+@* @section style{
+    <link rel="stylesheet" href="~/admin/~/admin/vendor/pickadate/themes/default.css">
+    <link rel="stylesheet" href="~/admin/~/admin/vendor/pickadate/themes/default.date.css">
+    <link href="~/admin/~/admin/icon.css?family=Material+Icons" rel="stylesheet">
+}
+ *@
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Settings</a></li>
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Shop</a></li>
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Product</a></li>
+                <li class="breadcrumb-item"><a onclick="javascript:void(0)">Create</a></li>
+            </ol>
+        </div>
+
+
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Product Setting</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form method="post" asp-action="Product" asp-controller="SettingShop">
+                                <div class="row">
+                                    <div class="mb-3 row">
+                                        <label class="col-lg-9 col-form-label" for="validationCustom01">
+                                            How many days must products have the "New" label?
+                                            <span class="text-danger">*</span>
+                                        </label>
+                                        <div class="col-lg-3">
+                                            <input asp-for="New" type="text" class="form-control" id="validationCustom01" required="">
+                                            <div class="invalid-feedback">
+                                                Please enter a Product Name.
+                                            </div>
+                                        </div>
+                                        <span class="text-danger" asp-validation-for="New"></span>
+                                    </div>
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-9 col-form-label" for="validationCustom02">
+                                            After how many orders should products have the "Best" label?
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-3">
+                                                <input asp-for="Best" type="text" class="form-control" id="validationCustom02"  required="">
+                                                <div class="invalid-feedback">
+                                                    Please enter a Product Name.
+                                                </div>
+                                            </div>
+                                            <span class="text-danger" asp-validation-for="New"></span>
+                                        </div>
+                                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+                                </div>
+
+
+
+
+                                <div class="row ">
+                                    <div class="mb-3 row">
+                                        <div class=" ms-auto">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+ @section script {
+    <script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

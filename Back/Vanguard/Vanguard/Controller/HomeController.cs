@@ -47,12 +47,15 @@ public class HomeController : Microsoft.AspNetCore.Mvc.Controller
                                                  Descripton = b.MainDescription
                                              }).ToListAsync();
 
+   
+
         HomeVM vm = new HomeVM
         {
             TrendyVM = await _homeService.TrendySelectedAsync(),
             LastBlogs = lastBlogs,
             Sliders = await _context.HomeSliders.Include(s=>s.Image).Include(s=>s.Tag).ToListAsync(),
             Banners = await _context.HomeBanners.Include(b=>b.Image).Include(b=>b.Category).ToListAsync(),
+            Hero = await _homeService.HeroProductsAsync(),
         };
 
         return View(vm);

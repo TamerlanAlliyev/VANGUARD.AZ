@@ -1,0 +1,367 @@
+﻿@model SettingHomeHero
+@{
+    List<Tag> tags = ViewBag.Tags as List<Tag>;
+    List<Category> cats = ViewBag.Categories as List<Category>;
+}
+
+
+    <link rel="stylesheet" href="~/admin/vendor/select2/css/select2.min.css">
+    <link href="~/admin/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+    <!-- FAVICONS ICON -->
+    <link rel="shortcut icon" type="image/png" href="~/admin/images/favicon.png">
+    <!-- Daterange picker -->
+    <link href="~/admin/vendor/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <!-- Clockpicker -->
+    <link href="~/admin/vendor/clockpicker/css/bootstrap-clockpicker.min.css" rel="stylesheet">
+    <!-- asColorpicker -->
+    <link href="~/admin/vendor/jquery-asColorPicker/css/asColorPicker.min.css" rel="stylesheet">
+    <!-- Material color picker -->
+    <link href="~/admin/vendor/bootstrap-material-datetimepicker/css/bootstrap-material-datetimepicker.css" rel="stylesheet">
+
+    <!-- Pick date -->
+    <link rel="stylesheet" href="~/admin/vendor/pickadate/themes/default.css">
+    <link rel="stylesheet" href="~/admin/vendor/pickadate/themes/default.date.css">
+    <link href="~/admin/../icon.css?family=Material+Icons" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="~/admin/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+    <link href="~/admin/css/style.css" rel="stylesheet">
+
+
+
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Settings</a></li>
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Home</a></li>
+                <li class="breadcrumb-item"><a sty href="javascript:void(0)">Hero</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row">
+            <form id="Form" method="post" enctype="multipart/form-data">
+
+
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div asp-validation-summary="ModelOnly"></div>
+                    </div>
+                </div>
+
+
+
+
+                <!-- ==========================================
+                               Product Informations
+                ===============================================-->
+                <div class="col-lg-12">
+
+
+                    <div class="card">
+
+                        <div class="card-header card">
+                            <h4 class="card-title">home Hero</h4>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="form-validation">
+                                <div class="row">
+
+
+                                    <div class="col-xl-7">
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label ca-title"
+                                                   for="validationCustom1">
+                                                Hero Name <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8 ca-container">
+
+                                                <input asp-for="HeroName"
+                                                       class="form-control" id="validationCustom1" rows="5"
+                                                       placeholder="Enter a Hero Name...">
+                                                <span asp-validation-for="HeroName"
+                                                      class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label ca-title"
+                                                   for="validationCustom2">
+                                                Title <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8 ca-container">
+
+                                                <input asp-for="Title"
+                                                       class="form-control" id="validationCustom2" rows="5"
+                                                       placeholder="Enter a Title...">
+                                                <span asp-validation-for="Title"
+                                                      class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label ca-title"
+                                                   for="validationCustom03">
+                                                Detailed Description <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8 ca-container">
+
+                                                <textarea asp-for="Description" style="min-height: 200px;"
+                                                          class="form-control" id="validationCustom03" rows="5"
+                                                          placeholder="Enter a Product Description..."></textarea>
+                                                <span asp-validation-for="Description"
+                                                      class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+
+                                    <div class="col-xl-5">
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label ca-title"
+                                                   for="validationCustom4">
+                                                Until what date?
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8 ca-container">
+
+                                                <input asp-for="Time" type="datetime-local" class="form-control">
+                                                <span asp-validation-for="Title"
+                                                      class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label ca-title"
+                                                   for="validationCustom4">
+                                                Offer %
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-8 ca-container">
+
+                                                <input asp-for="Offer" value="@Model.Offer" min="0" max="100" type="number" class="form-control" placeholder="@(Model.Offer>0?"%"+Model.Offer:"%0")" id="min-date">
+                                                <span asp-validation-for="Title"
+                                                      class="text-danger"></span>
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Category
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+
+                                                <select asp-for="CategoryId" class="form-select" id="single-select" >
+
+                                                    @if (Model.Category != null)
+                                                    {
+                                                        <option value="@Model.Category.Id" selected disabled>@Model.Category.Name</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option selected disabled>Select Category</option>
+                                                    }
+
+                                                    @if (cats != null)
+                                                    {
+                                                        foreach (var cat in cats)
+                                                        {
+                                                            <option value="@cat.Id">@cat.Name</option>
+
+                                                        }
+                                                    }
+                                                </select>
+                                                <span asp-validation-for="CategoryId" class="text-danger"></span>
+
+                                                <div class="invalid-feedback">
+                                                    Please select a cat.
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Tag
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+
+                                                <select asp-for="TagId" class="form-select" id="single-select" >
+
+                                                    @if (Model.Tag != null)
+                                                    {
+                                                        <option value="@Model.Tag.Id" selected disabled>@Model.Tag.Name</option>
+                                                    }
+                                                    else
+                                                    {
+                                                        <option selected disabled>Select Tag</option>
+                                                    }
+
+                                                    @if (tags != null)
+                                                    {
+                                                        foreach (var tag in tags)
+                                                        {
+                                                            <option value="@tag.Id">@tag.Name</option>
+
+                                                        }
+                                                    }
+                                                </select>
+                                                <span asp-validation-for="TagId" class="text-danger"></span>
+
+                                                <div class="invalid-feedback">
+                                                    Please select a cat.
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+
+                                      
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+                <div class="d-flex row justify-content-center">
+                    <div class="d-flex row justify-content-center">
+                        <button type="submit" class="btn btn-primary w-25">Submit</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+<script src="~/admin/vendor/global/global.min.js"></script>
+<script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+<script src="~/admin/vendor/select2/js/select2.full.min.js"></script>
+<script src="~/admin/js/plugins-init/select2-init.js"></script>
+
+
+
+<script src="~/admin/vendor/global/global.min.js"></script>
+<script src="~/admin/vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+<script src="~/admin/vendor/chart.js/Chart.bundle.min.js"></script>
+<!-- Apex Chart -->
+<script src="~/admin/vendor/apexchart/apexchart.js"></script>
+
+
+
+<!-- Daterangepicker -->
+<!-- momment js is must -->
+<script src="~/admin/vendor/moment/moment.min.js"></script>
+<script src="~/admin/vendor/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- clockpicker -->
+<script src="~/admin/vendor/clockpicker/js/bootstrap-clockpicker.min.js"></script>
+<!-- asColorPicker -->
+<script src="~/admin/vendor/jquery-asColor/jquery-asColor.min.js"></script>
+<script src="~/admin/vendor/jquery-asGradient/jquery-asGradient.min.js"></script>
+<script src="~/admin/vendor/jquery-asColorPicker/js/jquery-asColorPicker.min.js"></script>
+<!-- Material color picker -->
+<script src="~/admin/vendor/bootstrap-material-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<!-- pickdate -->
+<script src="~/admin/vendor/pickadate/picker.js"></script>
+<script src="~/admin/vendor/pickadate/picker.time.js"></script>
+<script src="~/admin/vendor/pickadate/picker.date.js"></script>
+
+
+
+<!-- Daterangepicker -->
+<script src="~/admin/js/plugins-init/bs-daterange-picker-init.js"></script>
+<!-- Clockpicker init -->
+<script src="~/admin/js/plugins-init/clock-picker-init.js"></script>
+<!-- asColorPicker init -->
+<script src="~/admin/js/plugins-init/jquery-asColorPicker.init.js"></script>
+<!-- Material color picker init -->
+<script src="~/admin/js/plugins-init/material-date-picker-init.js"></script>
+<!-- Pickdate -->
+<script src="~/admin/js/plugins-init/pickadate-init.js"></script>
+
+<script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+
+
+
+
+@* <h1>Setting Product</h1>
+
+<form asp-action="Update" method="post">
+    <div class="form-group">
+        <label asp-for="New"></label>
+        <input asp-for="New" class="form-control" />
+        <span asp-validation-for="New" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Best"></label>
+        <input asp-for="Best" class="form-control" />
+        <span asp-validation-for="Best" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+</form>
+ *@
