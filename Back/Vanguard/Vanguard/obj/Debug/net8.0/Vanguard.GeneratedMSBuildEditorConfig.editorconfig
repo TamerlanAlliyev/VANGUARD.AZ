@@ -254,12 +254,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmFza2V0XERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/BlogList/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcQmxvZ0xpc3RcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/Search/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/User/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcVXNlclxEZWZhdWx0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Error403.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yNDAzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/_BlogTagsSearchPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9CbG9nVGFnc1NlYXJjaFBhcnRpYWxWaWV3LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/_Layout.cshtml]

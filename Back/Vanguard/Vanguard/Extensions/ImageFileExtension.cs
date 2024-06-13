@@ -29,6 +29,13 @@ public static class ImageFileExtension
         return false;
     }
 
+
+    public static bool FileTypeAsync(this IFormFile file, params string[] allowedFileTypes)
+    {
+        return allowedFileTypes.Any(fileType => file.ContentType.StartsWith(fileType));
+    }
+
+
     public static bool FileSize(this IFormFile file, int size)
     {
         if (file.Length < size * 1024 * 1024)

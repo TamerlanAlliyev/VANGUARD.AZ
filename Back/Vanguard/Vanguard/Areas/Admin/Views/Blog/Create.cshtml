@@ -2,6 +2,8 @@
 @model BlogCreateVM
 
 <style>
+
+
     .ca-title {
         width: 30%;
     }
@@ -61,6 +63,7 @@
         border: none !important;
     }
 
+   
         .del-btn:hover {
             background-color: #dc3545;
             color: #ffff;
@@ -486,9 +489,9 @@
     }
 
     .hover-img-selected {
-        width: 50%;
-        height: 50%;
-        object-fit: contain;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         object-position: center;
     }
 
@@ -910,71 +913,47 @@
                                Product Informations
                 ===============================================-->
                 <div class="col-lg-12">
-
-
                     <div class="card">
-
                         <div class="card-header card">
                             <h4 class="card-title">Blog Informations</h4>
                         </div>
-
                         <div class="card-body">
                             <div class="form-validation">
                                 <div class="row">
-
-                                    <div class="col-xl-12 ">
+                                    <div class="col-xl-12">
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label w-25"
-                                                   for="validationCustom01">
+                                            <label class="col-lg-4 col-form-label w-25" for="validationCustom01">
                                                 Blog Title
                                                 <span class="text-danger">*</span>
                                             </label>
                                             <div class="col-lg-10 w-75" style="padding-right: 10%;">
-                                                <input asp-for="Title" type="text" class="form-control" id="validationCustom01"
-                                                       placeholder="Enter a Title..." required="">
+                                                <input asp-for="Title" type="text" class="form-control" id="validationCustom01" placeholder="Enter a Title..." required="">
                                                 <span asp-validation-for="Title" class="text-danger"></span>
                                             </div>
                                         </div>
-
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label w-25"
-                                                   for="validationCustom04">
+                                            <label class="col-lg-4 col-form-label w-25" for="validationCustom04">
                                                 Main Description <span class="text-danger">*</span>
                                             </label>
-                                            <div class="col-lg-8 w-75" style="padding-right: 10%; ">
-
+                                            <div class="col-lg-8 w-75" style="padding-right: 10%;">
                                                 <textarea asp-for="@Model.MainDescription" id="MainDescription"></textarea>
                                                 <span asp-validation-for="@Model.MainDescription" class="text-danger"></span>
-
                                             </div>
                                         </div>
-
                                         <div class="mb-3 row">
-                                            <label class="col-lg-4 col-form-label w-25"
-                                                   for="validationCustom05">
-                                                Main Description <span class="text-danger">*</span>
+                                            <label class="col-lg-4 col-form-label w-25" for="validationCustom05">
+                                                Addination Description <span class="text-danger">*</span>
                                             </label>
-                                            <div class="col-lg-8 w-75" style="padding-right: 10%; ">
-
+                                            <div class="col-lg-8 w-75" style="padding-right: 10%;">
                                                 <textarea asp-for="@Model.AddinationDescription" class="form-control" id="AddinationDescription"></textarea>
-
                                             </div>
                                         </div>
-
                                     </div>
-
-
-
                                 </div>
-
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
-
 
                 <!-- ==========================================
                               Tags and Categories
@@ -1203,8 +1182,8 @@
                                             <label for="mainImage">Main Image/Video <span class="text-danger">*</span></label>
                                             <label for="mainImage" class="label-image">
                                                 <input asp-for="MainFile" type="file" id="mainImage" hidden>
-                                                <img class="main-img selected-media" src="~/admin//icons/plus.svg" alt="">
-                                                <video class="main-video selected-media" style="display:none;" controls></video>
+                                                <img    class="main-img selected-media" src="~/admin//icons/plus.svg" alt="">
+                                                <video style="width: 100%;  height: 100%; object-fit: cover; object-position: center; display:none;" class="main-video selected-media" controls></video>
                                             </label>
                                         </div>
                                         <span asp-validation-for="MainFile"></span>
@@ -1222,7 +1201,7 @@
                                             <div class="add-container">
                                                 <label for="add-AdditionalImages" class="add-label-image">
                                                     <input id="add-AdditionalImages" type="file" class="form-control" multiple hidden>
-                                                    <img class="hover-img-selected" src="~/admin//icons/plus.svg" alt="">
+                                                    <img class="hover-img-selected" style="width: 50%;  height: 50%; object-fit: contain; object-position: center;" src="~/admin//icons/plus.svg" alt="">
                                                 </label>
                                             </div>
                                         </div>
@@ -1233,7 +1212,7 @@
                         </div>
                     </div>
                 </div>
-
+                <div asp-validation-summary="ModelOnly"></div>
 
                 <div class="d-flex row justify-content-center">
                     <div class="d-flex row justify-content-center">
@@ -1273,14 +1252,21 @@
 
 @section script {
     <script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
-@*     <script src="~/admin/ckeditor/ckeditor.js"></script>
+    <script src="~/admin/ckeditor/ckeditor.js"></script>
     <script src="~/admin/ckeditor/build-config.js"></script>
     <script src="~/admin/ckeditor/config.js"></script>
     <script>
+        // CKEditor'u başlat
         CKEDITOR.replace("MainDescription");
         CKEDITOR.replace("AddinationDescription");
-    </script> *@
 
+        // Form gönderilmeden önce CKEditor içeriğini senkronize et
+        document.getElementById('Form').onsubmit = function () {
+            for (instance in CKEDITOR.instances) {
+                CKEDITOR.instances[instance].updateElement();
+            }
+        };
+    </script> 
 
     <script>
 
@@ -1328,9 +1314,14 @@
         const mainImageInput = document.getElementById('mainImage');
         const mainImage = document.querySelector('.main-img');
         const mainVideo = document.querySelector('.main-video');
-
+    
         mainImageInput.addEventListener('change', (event) => {
             displayMedia(event, mainImage, mainVideo);
+            if (mainImage) {
+                mainImage.style.width = "100%";
+                mainImage.style.height = "100%";
+                mainImage.style.objectFit = "cover";
+            }  
         });
 
 

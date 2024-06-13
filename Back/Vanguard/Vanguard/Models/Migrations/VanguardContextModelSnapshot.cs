@@ -17,7 +17,7 @@ namespace Vanguard.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "8.0.4")
+                .HasAnnotation("ProductVersion", "8.0.6")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -379,8 +379,7 @@ namespace Vanguard.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("AddinationDescription")
-                        .HasMaxLength(2000)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("AddinationPicture")
                         .HasColumnType("nvarchar(max)");
@@ -412,8 +411,7 @@ namespace Vanguard.Migrations
 
                     b.Property<string>("MainDescription")
                         .IsRequired()
-                        .HasMaxLength(1500)
-                        .HasColumnType("nvarchar");
+                        .HasColumnType("nvarchar(MAX)");
 
                     b.Property<string>("MainPicture")
                         .HasColumnType("nvarchar(max)");
@@ -1014,6 +1012,37 @@ namespace Vanguard.Migrations
                     b.ToTable("ProductTag");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.Rating", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Comment")
+                        .HasMaxLength(500)
+                        .HasColumnType("nvarchar(500)");
+
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("UserRating")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("Ratings");
+                });
+
             modelBuilder.Entity("Vanguard.Models.SettingHomeHero", b =>
                 {
                     b.Property<int>("Id")
@@ -1041,7 +1070,7 @@ namespace Vanguard.Migrations
                     b.Property<int?>("TagId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime>("Time")
+                    b.Property<DateTime?>("Time")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
@@ -1397,13 +1426,13 @@ namespace Vanguard.Migrations
             modelBuilder.Entity("Vanguard.Models.BlogTag", b =>
                 {
                     b.HasOne("Vanguard.Models.Blog", "Blog")
-                        .WithMany("Tags")
+                        .WithMany("BlogTags")
                         .HasForeignKey("BlogId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Vanguard.Models.Tag", "Tag")
-                        .WithMany("Tags")
+                        .WithMany("BlogTags")
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -1579,6 +1608,25 @@ namespace Vanguard.Migrations
                     b.Navigation("Tag");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.Rating", b =>
+                {
+                    b.HasOne("Vanguard.Models.AppUser", "AppUser")
+                        .WithMany("Ratings")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Vanguard.Models.Product", "Product")
+                        .WithMany("Ratings")
+                        .HasForeignKey("ProductId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Product");
+                });
+
             modelBuilder.Entity("Vanguard.Models.SettingHomeHero", b =>
                 {
                     b.HasOne("Vanguard.Models.Category", "Category")
@@ -1618,15 +1666,17 @@ namespace Vanguard.Migrations
                     b.Navigation("AllowedEmployee");
 
                     b.Navigation("Blogs");
+
+                    b.Navigation("Ratings");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Blog", b =>
                 {
+                    b.Navigation("BlogTags");
+
                     b.Navigation("Categories");
 
                     b.Navigation("Images");
-
-                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Category", b =>
@@ -1686,6 +1736,8 @@ namespace Vanguard.Migrations
 
                     b.Navigation("ProductTag");
 
+                    b.Navigation("Ratings");
+
                     b.Navigation("Wishes");
                 });
 
@@ -1702,11 +1754,11 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Tag", b =>
                 {
+                    b.Navigation("BlogTags");
+
                     b.Navigation("HomeSliders");
 
                     b.Navigation("ProductTag");
-
-                    b.Navigation("Tags");
                 });
 
             modelBuilder.Entity("Vanguard.Models.UserAddress", b =>

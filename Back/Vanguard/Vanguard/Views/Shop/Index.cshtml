@@ -289,7 +289,7 @@
                             <!-- <span>Search not found ...</span> -->
                                 @* @await Component.InvokeAsync("SearchsTagViewComponent") *@
 
-                                @await Html.PartialAsync("_TagsSearchPartialView")
+                                @await Html.PartialAsync("_BlogTagsSearchPartialView")
 
                         </ul>
 
@@ -486,7 +486,7 @@
                 </div>
 
 
-                <!-- Active -->
+                @* <!-- Active --> *@
                 @if (Model.Product.Count() > 0 && Model.Product != null)
                 {
                     @await Html.PartialAsync("_ProductPartialView", Model)

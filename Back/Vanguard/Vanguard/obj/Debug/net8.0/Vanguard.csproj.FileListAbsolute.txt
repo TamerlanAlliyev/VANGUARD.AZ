@@ -518,3 +518,10 @@ C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\obj\Debug\net8.0\refint\
 C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\obj\Debug\net8.0\Vanguard.pdb
 C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\obj\Debug\net8.0\Vanguard.genruntimeconfig.cache
 C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\obj\Debug\net8.0\ref\Vanguard.dll
+C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\bin\Debug\net8.0\System.Web.Mvc.dll
+C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\bin\Debug\net8.0\System.Web.Razor.dll
+C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\bin\Debug\net8.0\System.Web.Helpers.dll
+C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\bin\Debug\net8.0\System.Web.WebPages.Deployment.dll
+C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\bin\Debug\net8.0\System.Web.WebPages.Razor.dll
+C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\bin\Debug\net8.0\System.Web.WebPages.dll
+C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard\bin\Debug\net8.0\Microsoft.Web.Infrastructure.dll

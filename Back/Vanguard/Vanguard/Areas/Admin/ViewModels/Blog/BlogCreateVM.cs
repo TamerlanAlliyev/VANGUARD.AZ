@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Web.Mvc;
 using Vanguard.Areas.Admin.ViewModels.CategoryViewModels;
 using Vanguard.Areas.Admin.ViewModels.TagViewModels;
 using Vanguard.Models;
@@ -10,8 +11,9 @@ public class BlogCreateVM
     public string Title { get; set; } = null!;
     public int AppUserId { get; set; }
     public AppUser AppUser { get; set; } = null!;
-
+    [AllowHtml]
     public string MainDescription { get; set; } = null!;
+    [AllowHtml]
     public string? AddinationDescription { get; set; }
 
 

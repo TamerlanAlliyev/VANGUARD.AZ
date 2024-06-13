@@ -22,4 +22,5 @@ public class AppUser : IdentityUser
     public AllowedEmployee? AllowedEmployee { get; set; }
 
     public ICollection<Blog>? Blogs { get; set; }
+    public List<Rating>? Ratings { get; set; }
 }

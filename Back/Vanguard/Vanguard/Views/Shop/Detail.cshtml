@@ -12,6 +12,7 @@
             text-decoration: none;
             color: #000;
         }
+
         .section:nth-child(3) {
             margin: 5% 0;
             padding: 0 2%;
@@ -288,7 +289,7 @@
                 <a data-name="information" class="active">ADDITIONAL INFORMATION</a>
             </li>
             <li>
-                <a data-name="reviews">REVIEWS (2)</a>
+                <a data-name="reviews">REVIEWS (@Model.Ratings.Count())</a>
             </li>
         </ul>
 
@@ -355,95 +356,60 @@
 
             <ul class="review-list">
 
-                <li class="user-box">
+                @if (Model.Ratings != null)
+                {
+                    foreach (var rat in Model.Ratings)
+                    {
+                        <li class="user-box">
 
-                    <div class="user-profil-img">
-                        <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                    </div>
-
-                    <div class="com-user-info">
-                        <span class="comment-date">Date</span>
-
-                        <span class="product-rating">
-                            <h5>User Name </h5>
-                            <div class="rating-block">
-                                <span class="fas fa-star checked star_on"></span>
-                                <span class="fas fa-star checked star_on"></span>
-                                <span class="fas fa-star checked star_on"></span>
-                                <span class="fas fa-star-half-alt checked star_on"></span>
-                                <span class="far fa-star star_on"></span>
+                            <div class="user-profil-img">
+                                <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
                             </div>
-                        </span>
+
+                            <div class="com-user-info">
+
+                                <span class="product-rating">
+                                    <h5>@rat.AppUser.FullName</h5>
+                                    <div class="rating-block">
+                                        @for (int i = 1; i <= 5; i++)
+                                        {
+                                            <span class="fas fa-star star_on @(i <= rat.UserRating ? "checked" : "")"></span>
+                                        }
+                                    </div>
+                                </span>
+
+                                <p>
+                                    @rat.Comment
+                                </p>
+                            </div>
+
+                        </li>
+                    }
+                }
 
 
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Consequuntur
-                            error maxime, rem neque totam fugiat culpa dolore odit dolorem quis
-                            nesciunt aspernatur perferendis est sunt ab quas porro molestiae
-                            excepturi?
-                        </p>
-                    </div>
-
-                </li>
 
 
-                <li class="user-box">
-
-                    <div class="user-profil-img">
-                        <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                    </div>
-
-                    <div class="com-user-info">
-                        <span class="comment-date">Date</span>
-                        <h5>User Name</h5>
-
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                            Consequuntur
-                            error maxime, rem neque totam fugiat culpa dolore odit dolorem quis
-                            nesciunt aspernatur perferendis est sunt ab quas porro molestiae
-                            excepturi?
-                        </p>
-                    </div>
-
-                </li>
 
             </ul>
-            <!-- Eger rating bildiribdirse -->
-            <!-- <form action="" class="rating-true"> -->
-            <form action="" class="bought">
+            <form method="post" id="Form" asp-action="Rating" class="bought">
+                <input asp-for="NewRating.ProductId" type="hidden" />
 
-
-                <div class="stars-rating-block">
+                <div style="cursor:none" class="stars-rating-block">
                     <span>Your rating</span>
-                    <input type="radio" id="star1" name="rating" value="1" />
-                    <input type="radio" id="star2" name="rating" value="2" />
-                    <input type="radio" id="star3" name="rating" value="3" />
-                    <input type="radio" id="star4" name="rating" value="4" />
-                    <input type="radio" id="star5" name="rating" value="5" />
-
-                    <label for="star1">
-                        <i class="fa-regular fa-star"></i>
-                    </label>
-                    <label for="star2">
-                        <i class="fa-regular fa-star"></i>
-                    </label>
-                    <label for="star3">
-                        <i class="fa-regular fa-star"></i>
-                    </label>
-                    <label for="star4">
-                        <i class="fa-regular fa-star"></i>
-                    </label>
-                    <label for="star5">
-                        <i class="fa-regular fa-star"></i>
-                    </label>
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <input style="" disabled="@Model.NewRating.Commented" type="radio" id="star@(i)" name="NewRating.Rating" value="@i" />
+                        <label disabled="@Model.NewRating.Commented" for="star@(i)">
+                            <i class="fa-regular fa-star"></i>
+                        </label>
+                    }
                 </div>
 
-
-                <textarea placeholder="Enter your comment" name="" id=""></textarea>
-                <button type="submit">SUBMIT</button>
+                <textarea asp-for="NewRating.Comment" placeholder="Enter your comment" disabled="@Model.NewRating.Commented"></textarea>
+                <button disabled="@Model.NewRating.Commented" type="submit">SUBMIT</button>
             </form>
+
 
         </div>
 
@@ -469,7 +435,7 @@
                 <div class="swiper-wrapper">
 
 
-                    @foreach(var prod in Model.RelatedProducts)
+                    @foreach (var prod in Model.RelatedProducts)
                     {
                         <div class="swiper-slide">
 
@@ -498,7 +464,7 @@
                                                     </div>
                                                 }
                                             }
-                                     
+
 
                                         </div>
                                         <div class="swiper-button-prev"></div>
@@ -512,14 +478,14 @@
 
                                     <ul class="add-size ">
 
-                                        @foreach(var siz in Model.Information)
+                                        @foreach (var siz in Model.Information)
                                         {
-                                            if (siz.Count>0)
+                                            if (siz.Count > 0)
                                             {
                                                 <li class="btn-size" data-size="@siz.Size.Id">@siz.Size.Name</li>
                                             }
                                         }
-                      
+
 
                                     </ul>
                                 </div>
@@ -561,7 +527,7 @@
 
                         </div>
                     }
-                    
+
 
 
 
@@ -582,5 +548,30 @@
 
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v12.0"
             nonce="1010314584091002"></script>
+
+    @* <script>
+        document.getElementById('ratingForm').addEventListener('submit', async function (event) {
+            event.preventDefault();
+
+            const form = event.target;
+            const formData = new FormData(form);
+
+            try {
+                const response = await fetch('/Shop/Rating', {
+                    method: 'POST',
+                    body: formData,
+                });
+
+                if (response.ok) {
+                    alert('Rating submitted successfully!');
+                } else {
+                    alert('Failed to submit rating.');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                alert('An error occurred while submitting the rating.');
+            }
+        });
+    </script> *@
 
 }

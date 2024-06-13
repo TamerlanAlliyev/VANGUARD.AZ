@@ -4,8 +4,8 @@
     <link rel="stylesheet" href="~/cilent/assets/css/blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <style>
-        .blog-categories a{
-            cursor:pointer;
+        .blog-categories a {
+            cursor: pointer;
         }
     </style>
 }
@@ -80,7 +80,7 @@
                                     <div class="blog-box-info">
                                         <div class="blog-date">
                                             <span>By: <a>@blog.CreatedBy</a></span>
-                                            <span>@blog.Created.ToString("dd/MM/yyyy")</span>
+                                            <span>@blog.Created.ToString("dd MM yyyy")</span>
                                         </div>
                                         <a class="blog-title" asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">@blog.Title</a>
                                     </div>
@@ -132,225 +132,12 @@
 
 
                     <ul id="searchResults">
-
-                        <!-- <span>Search not found ...</span> -->
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/slider.png" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <video loop muted plays-inline>
-                                    <source src="~/cilent/assets/videos/Untitled video - Made with Clipchamp (1).mp4"
-                                            type="video/mp4">
-                                </video>
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-tag"><a href="#"># Tag</a></li>
-                        <li class="srch-tag"><a href="#"># Tag</a></li>
-                        <li class="srch-tag"><a href="#"># Tag</a></li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/slider.png" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-tag">
-                            <a href="#">
-                                # Tag Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                            </a>
-                        </li>
-
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
+                        @await Html.PartialAsync("_BlogTagsSearchPartialView")
 
                     </ul>
 
                     <div class="selected-tags">
                         <ul class="selected-tags-list">
-                            <li>
-                                <p>tag-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>taasdasdasdg-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>tag-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>tag-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>tag-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>t</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
                         </ul>
 
                     </div>
@@ -360,28 +147,40 @@
                         <h2>POPULAR BLOGS</h2>
 
                         <ul class="blog-boxs">
-                            <li class="popular-blog-box">
-                                <a class="blog-box-img" href="#">
-                                    <img src="~/cilent/assets/images/products/product.jpg" alt="">
-                                </a>
 
-                                <div class="blog-box-info">
-                                    <p>Date</p>
-                                    <a href="#">Lorem ipsum dolor ssssssssssssssssssssssssssssssit amet</a>
-                                </div>
+                            @if (Model.PopularBlogs != null || Model.PopularBlogs.Count() > 0)
+                            {
+                                @foreach (var blog in Model.PopularBlogs)
+                                {
 
-                            </li>
+                                    <li class="popular-blog-box">
+                               
 
-                            <li class="popular-blog-box">
-                                <a class="blog-box-img" href="#">
-                                    <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                </a>
+                                        @if (blog.IsVideo)
+                                        {
+                                            <a  class="blog-box-img" asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">
+                                                <video style="object-fit:cover; width:100%;height:100%;" loop muted plays-inline>
+                                                    <source src="~/cilent/assets/blogs/@blog.Image"
+                                                            type="video/mp4">
+                                                </video>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id" class="blog-box-img">
+                                                <img src="~/cilent/assets/blogs/@blog.Image" alt="blog-image">
+                                            </a>
+                                        }
 
-                                <div class="blog-box-info">
-                                    <p>Date</p>
-                                    <a href="#">Lorem ipsum dolor sit adsfsdmsssssssssssssset</a>
-                                </div>
-                            </li>
+                                        <div class="blog-box-info">
+                                            <p>@blog.Author</p>
+                                            <a asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">@blog.Title</a>
+                                        </div>
+
+                                    </li>
+                                }
+                            }
+
                         </ul>
 
 
@@ -396,32 +195,7 @@
 
         </div>
 
-        <!-- <div class="pagenation">
-
-            <div class="pagenation-box">
-                <a class="prev-btn" href="#">
-                    <i class="fa-solid fa-arrow-left"></i>
-                </a>
-
-                <a href="#" class="num-btn" data-num="1">1</a>
-                <a href="#" class="num-btn" data-num="1">1</a>
-                <a href="#" class="num-btn" data-num="1">1</a>
-                <a href="#" class="num-btn" data-num="1">1</a>
-
-                <a class="next-btn" href="#">
-                    <i class="fa-solid fa-arrow-right"></i>
-                </a>
-            </div>
-
-        </div> -->
-
-
-
-
-
-
-
-
+  
 
 
 
@@ -454,82 +228,128 @@
 
 @section script {
     <script src="~/cilent/assets/js/blog.js"></script>
-    <script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+    async function sendFilterRequest(page) {
+        const selectedCategory = document.querySelector('.blog-categories a.active').dataset.id || 0;
+        const formData = new FormData();
+        formData.append('PageInfo.CurrentPage', page);
+        formData.append('PageInfo.ItemsPerPage', 9);
+        formData.append('SelectedCategory', selectedCategory);
 
-        function sendFilterRequest(page) {
-            const formData = new FormData();
+        const selectedTags = [];
+        document.querySelectorAll('.selected-tags-list li').forEach(tag => {
+            selectedTags.push(tag.dataset.id);
+        });
+        selectedTags.forEach(tagId => formData.append('tagId', tagId));
 
-            const selectedCategory = document.querySelector('.blog-categories a.active').dataset.id || 0;
-            formData.append('PageInfo.CurrentPage', page);
-            formData.append('PageInfo.ItemsPerPage', 9);
-            formData.append('SelectedCategory', selectedCategory);
+        const queryString = new URLSearchParams(formData).toString();
 
-            const queryString = new URLSearchParams(formData).toString();
-            window.location.href = `/Blog/Index?${queryString}`;
-        }
-
-        function prevPage(event) {
-            event.preventDefault();
-            const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
-            if (currentPage > 1) {
-                sendFilterRequest(currentPage - 1);
-            }
-        }
-
-        function nextPage(event) {
-            event.preventDefault();
-            const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
-            const totalPages = parseInt(document.querySelector('.total-pages').dataset.total);
-            if (currentPage < totalPages) {
-                sendFilterRequest(currentPage + 1);
-            }
-        }
-
-        function goToPage(pageNum) {
-            sendFilterRequest(pageNum);
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const pageLinks = document.querySelectorAll('.num-btn');
-            const prevPageLink = document.getElementById('prevPage');
-            const nextPageLink = document.getElementById('nextPage');
-
-            // Sayfa linklerine event listener ekleme
-            pageLinks.forEach(link => {
-                link.addEventListener('click', function (event) {
-                    event.preventDefault();
-                    const pageNumber = parseInt(this.getAttribute('data-num'));
-                    goToPage(pageNumber);
-                });
+        try {
+            const response = await fetch('/Shop/Index', {
+                method: 'POST',
+                body: formData
             });
 
-            // Önceki ve sonraki düğmelere event listener ekleme
-            prevPageLink.addEventListener('click', prevPage);
-            nextPageLink.addEventListener('click', nextPage);
+            if (response.ok) {
+                console.log('The form has been sent successfully!');
+                window.location.href = `/Blog/Index?${queryString}`;
+            } else {
+                console.error('An error occurred while submitting the form:', response.statusText);
+            }
+        } catch (error) {
+            console.error('An error occurred while submitting the form:', error);
+        }
+    }
+
+    function prevPage(event) {
+        event.preventDefault();
+        const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
+        if (currentPage > 1) {
+            sendFilterRequest(currentPage - 1);
+        }
+    }
+
+    function nextPage(event) {
+        event.preventDefault();
+        const currentPage = parseInt(document.querySelector('.num-btn.active').dataset.num);
+        const totalPages = parseInt(document.querySelector('.total-pages').dataset.total);
+        if (currentPage < totalPages) {
+            sendFilterRequest(currentPage + 1);
+        }
+    }
+
+    function goToPage(pageNum) {
+        sendFilterRequest(pageNum);
+    }
+
+    document.querySelectorAll('.num-btn').forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const pageNumber = parseInt(this.getAttribute('data-num'));
+            goToPage(pageNumber);
         });
+    });
 
-        document.addEventListener('DOMContentLoaded', function () {
-            const categories = document.querySelectorAll('.blog-categories a');
-            console.log(categories);
+    document.getElementById('prevPage').addEventListener('click', prevPage);
+    document.getElementById('nextPage').addEventListener('click', nextPage);
 
-            categories.forEach(cat => {
-                cat.addEventListener('click', function (event) {
-                    event.preventDefault();
+    document.querySelectorAll('.blog-categories a').forEach(cat => {
+        cat.addEventListener('click', function (event) {
+            event.preventDefault();
+            document.querySelectorAll('.blog-categories a').forEach(c => c.classList.remove('active'));
+            this.classList.add('active');
+            sendFilterRequest(1);
+        });
+    });
 
-                    let selectedCategoryId = this.dataset.id;
+    function tagselecSearch() {
+        const searchbtn = document.querySelectorAll('.searchs-container #searchResults li');
+        const tagList = document.querySelector('.searchs-container .selected-tags-list');
 
-                    if (selectedCategoryId === undefined || selectedCategoryId === null) {
-                        selectedCategoryId = 0;
-                    }
+        searchbtn.forEach(search => {
+            search.addEventListener('click', function (event) {
+                event.preventDefault();
+                const id = search.getAttribute('data-id');
+                const searchText = search.textContent.trim().replace('#', '');
 
-                    const url = new URL(window.location.href);
-                    url.searchParams.set('SelectedCategory', selectedCategoryId);
-                    url.searchParams.set('PageInfo.CurrentPage', 1);
+                if (!tagList.querySelector(`li[data-id="${id}"]`)) {
+                    const tagElement = document.createElement('li');
+                    tagElement.classList.add('select-tag');
+                    tagElement.setAttribute('data-id', id);
+                    tagElement.innerHTML = `
+                        <p>${searchText}</p>
+                        <a href="#"><i class="fa-solid fa-xmark"></i></a>
+                    `;
+                    tagElement.querySelector('a').style.color = "#fff";
+                    tagElement.querySelector('a').style.textDecoration = "none";
+                    tagList.appendChild(tagElement);
 
-                    window.location.href = url.toString();
-                });
+                    tagElement.querySelector('a').addEventListener('click', function (event) {
+                        event.preventDefault();
+                        tagElement.remove();
+                        sendFilterRequest(1);  // Reload page when tag is removed
+                    });
+
+                    sendFilterRequest(1);  // Reload page when tag is added
+                }
             });
         });
+    }
 
-    </script>
+    tagselecSearch();
+
+    document.getElementById("searchInput").addEventListener("input", function () {
+        const text = this.value.trim();
+        fetch(`/Blog/TagsSearch?text=${text}`)
+            .then(res => res.text())
+            .then(res => {
+                document.getElementById('searchResults').innerHTML = res;
+                tagselecSearch(); // reinitialize tag search
+            })
+            .catch(e => console.error(e));
+    });
+});
+
+  </script>
 }

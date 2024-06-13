@@ -1,0 +1,59 @@
+﻿@using Vanguard.ViewModels.Blog
+@model BlogViewVM
+@foreach (var blog in Model.Blogs)
+{
+    <div class="mItem">
+
+        <div class="blog-box">
+
+            <div class="blog-image">
+
+                @if (blog.IsVideo)
+                {
+                    <a class="blog-video" asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">
+                        <video loop muted plays-inline>
+                            <source src="~/cilent/assets/blogs/@blog.Image"
+                                    type="video/mp4">
+                        </video>
+                    </a>
+                }
+                else
+                {
+                    <a asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">
+                        <img src="~/cilent/assets/blogs/@blog.Image" alt="blog-image">
+                    </a>
+                }
+
+
+            </div>
+
+            <div class="blog-info">
+
+                <div class="blog-box-info">
+                    <div class="blog-date">
+                        <span>By: <a>@blog.CreatedBy</a></span>
+                        <span>@blog.Created.ToString("dd MM yyyy")</span>
+                    </div>
+                    <a class="blog-title" asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">@blog.Title</a>
+                </div>
+
+
+
+                <div class="blog-rating">
+
+                    <div class="blog-views">
+                        <img src="~/cilent/assets/icons/view.svg" alt="view">
+                        <span>@blog.Clicked</span>
+                    </div>
+
+                    <div class="blog-comments">
+                        <img src="~/cilent/assets/icons/comment.svg" alt="comment">
+                        <span>100000</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+}

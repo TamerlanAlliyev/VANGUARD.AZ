@@ -13,14 +13,19 @@ public class BlogConfiguration : BaseEntityConfiguratiion<Blog>
 
         builder.HasKey(p => p.Id);
 
-        builder.Property(p => p.Title).HasColumnType("nvarchar").HasMaxLength(150).IsRequired(true);
-        builder.Property(p => p.MainDescription).HasColumnType("nvarchar").HasMaxLength(1500).IsRequired(true);
-        builder.Property(i => i.AddinationDescription).HasColumnType("nvarchar").HasMaxLength(2000).IsRequired(false);
+        builder.Property(p => p.Title)
+               .HasColumnType("nvarchar")
+               .HasMaxLength(150)
+               .IsRequired();
 
+        builder.Property(p => p.MainDescription)
+               .HasColumnType("nvarchar(MAX)")
+               .IsRequired();
+
+        builder.Property(p => p.AddinationDescription)
+               .HasColumnType("nvarchar(MAX)");
 
         builder.ToTable("Blog");
-
-
     }
 }
 

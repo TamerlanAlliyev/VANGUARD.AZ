@@ -7,6 +7,7 @@ using Vanguard.Data;
 using Vanguard.Helpers;
 using Vanguard.Models;
 using Vanguard.Services.Interfaces;
+using Vanguard.ViewModels.Rating;
 using Vanguard.ViewModels.Shop;
 using Vanguard.ViewModels.Shop.AdditionVMs;
 using Vanguard.ViewModels.Wish;
@@ -26,7 +27,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
         _userManager = userManager;
     }
 
-    public async Task<IActionResult> Index(int? tagId, int? catId ,ShopVM shopVM)
+    public async Task<IActionResult> Index(int? tagId, int? catId, ShopVM shopVM)
     {
         var settings = await _context.SettingProducts.ToListAsync();
         int New = settings[0].New;
@@ -44,7 +45,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
         {
             query = query.Where(p => p.ProductTag.Any(t => t.TagId == tagId));
         }
-        if (catId!=null)
+        if (catId != null)
         {
             query = query.Where(p => p.ProductCategory.Any(t => t.CategoryId == catId));
 
@@ -151,7 +152,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
 
 
 
-       
+
 
 
 
@@ -331,7 +332,7 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
             },
             CurrrentMinPrice = shopVM.MinPrice,
             CurrrentMaxPrice = shopVM.MaxPrice,
-            Banner = await _context.ShopBanner.Include(b=>b.Image).FirstOrDefaultAsync()
+            Banner = await _context.ShopBanner.Include(b => b.Image).FirstOrDefaultAsync()
         };
 
 
@@ -385,5 +386,39 @@ public class ShopController : Microsoft.AspNetCore.Mvc.Controller
         }
     }
 
+
+
+    [HttpPost]
+    public async Task<IActionResult> Rating(ShopDetailVM rating)
+    {
+      
+            var user = await _userManager.GetUserAsync((ClaimsPrincipal)User);
+            if (user == null)
+            {
+                return Unauthorized();
+            }
+
+            var product = await _context.Products.FindAsync(rating.NewRating.ProductId);
+            if (product == null)
+            {
+                // ProductId does not exist
+                ModelState.AddModelError(string.Empty, "The specified product does not exist.");
+                return View("Error500", new ServiceResult(false, "The specified product does not exist.", 500));
+            }
+
+            Rating newRating = new Rating
+            {
+                ProductId = rating.NewRating.ProductId,
+                AppUser = user,
+                Comment = rating.NewRating.Comment,
+                UserRating = rating.NewRating.rating,
+            };
+
+            await _context.Ratings.AddAsync(newRating);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Detail", new { id = rating.NewRating.ProductId });
+  
+    }
 
 }

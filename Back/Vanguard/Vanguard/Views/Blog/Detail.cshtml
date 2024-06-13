@@ -5,13 +5,17 @@
     <link rel="stylesheet" href="~/cilent/assets/css/blog-detail.css">
 }
 
-
+@{
+    var mainImage = Model.Blog.Images.FirstOrDefault(i => !i.IsDeleted && i.IsMain);
+}
 
 <main>
 
     <section class="header-news">
 
+        
         <div class="banner">
+    
             <video autoplay loop muted plays-inline>
                 <source src="~/cilent/assets/videos/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
             </video>
@@ -53,7 +57,7 @@
 
                         <span>
                             <img src="/cilent/assets/icons/clock.svg" alt="">
-                            @Model.Blog.CreatedDate.ToString("dd MM yyyy");
+                            @Model.Blog.CreatedDate.ToString("dd MM yyyy")
                         </span>
 
                         <span>
@@ -68,20 +72,19 @@
                     </div>
                 </div>
 
-                <div class="blog-main-img">
+                <div style="width:100%; height:100%; max-height:1000px" class="blog-main-img">
 
-                    @if (Model.Blog.Images.FirstOrDefault(i => !i.IsDeleted && i.IsMain) != null)
+                    @if (mainImage != null)
                     {
-                        if (Model.Blog.Images.FirstOrDefault(i => !i.IsDeleted && i.IsMain).IsVideo)
+                        if (mainImage.IsVideo)
                         {
-                            <video loop muted plays-inline controls>
-                                <source src="~/cilent/assets/blogs/@Model.Blog.Images.FirstOrDefault(i=>!i.IsDeleted&&i.IsMain)!.Url!"
-                                        type="video/mp4">
+                            <video style="height:500px; object-fit:contain" loop muted playsinline controls>
+                                <source src="@Url.Content("~/cilent/assets/blogs/" + mainImage.Url)" type="video/mp4">
                             </video>
                         }
                         else
                         {
-                            <img src="~/cilent/assets/blogs/@Model.Blog.Images.FirstOrDefault(i=>!i.IsDeleted&&i.IsMain)!.Url!" alt="">
+                            <img src="@Url.Content("~/cilent/assets/blogs/" + mainImage.Url)" alt="">
                         }
                     }
 
@@ -89,7 +92,7 @@
 
                 <div class="blog-description">
                     <p>
-                        @Model.Blog.MainDescription
+                        @Html.Raw(Model.Blog.MainDescription)
                     </p>
                 </div>
 
@@ -104,9 +107,7 @@
                     </div>
 
                     <div class="blog-about-description">
-                        <p>
-                            @Model.Blog.AddinationDescription
-                        </p>
+                        @Html.Raw(Model.Blog.AddinationDescription)
                     </div>
 
                     <div class="blog-images">
@@ -115,10 +116,15 @@
                         <div class="swiper mySwiper blogs-swp">
                             <div class="swiper-wrapper">
 
+                                <div class="swiper-slide">
+                                <img src="~/cilent/assets/images/products/035dabb5-c40c-43bd-ac53-000dd95ec13f_7ed13d8bdeedefe285e61d01f3d024fb.jpg" alt="">
+                                </div>
+
+
                                 @if(Model.Blog.Images.Where(i=>i.IsDeleted&&!i.IsMain).ToList()!=null)
                                 {
 
-                                    foreach (var img in @Model.Blog.Images.Where(i => i.IsDeleted && !i.IsMain).ToList())
+                                    foreach (var img in Model.Blog.Images.Where(i => i.IsDeleted && !i.IsMain).ToList())
                                     {
                                         if (img.IsVideo)
                                         {
@@ -438,232 +444,8 @@
                 </a>
 
                 <div class="searchs-container">
-                    <input id="searchInput" type="text" placeholder="Search...">
-
-
-                    <ul id="searchResults">
-
-                        <!-- <span>Search not found ...</span> -->
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/slider.png" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <video loop muted plays-inline>
-                                    <source src="~/cilent/assets/videos/Untitled video - Made with Clipchamp (1).mp4"
-                                            type="video/mp4">
-                                </video>
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-tag"><a href="#"># Tag</a></li>
-                        <li class="srch-tag"><a href="#"># Tag</a></li>
-                        <li class="srch-tag"><a href="#"># Tag</a></li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/slider.png" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-tag">
-                            <a href="#">
-                                # Tag Lorem ipsum dolor sit amet consectetur adipisicing
-                                elit.
-                            </a>
-                        </li>
-
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li class="srch-blog">
-                            <a href="#">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="wqe">
-
-                                <div class="blog-info">
-                                    <p>Date</p>
-                                    <h3>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam debitis
-                                        tenetur ratione est quo sed in alias natus vitae dolor.
-                                    </h3>
-                                </div>
-                            </a>
-                        </li>
-
-                    </ul>
-
-                    <div class="selected-tags">
-                        <ul class="selected-tags-list">
-                            <li>
-                                <p>tag-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>taasdasdasdg-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>tag-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>tag-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>tag-1</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                            <li>
-                                <p>t</p>
-                                <a href="#"><img src="~/cilent/assets/icons/close-white.svg" alt=""></a>
-                            </li>
-                        </ul>
-
-                    </div>
+                  
+                 
 
                     <div class="popular-blogs">
 
@@ -702,25 +484,17 @@
                         <h2>BLOG CATEGORIES</h2>
 
                         <ul class="b-categories">
-                            <li>
-                                <a href="#">ALL</a>
-                            </li>
 
-                            <li>
-                                <a href="#">COMPANY</a>
-                            </li>
 
-                            <li>
-                                <a href="#">FASHION</a>
-                            </li>
+                            <li><a class="@(Model.SelectedCategory>0?"":"active")" asp-action="Index" >ALL</a></li>
 
-                            <li>
-                                <a href="#">STYLE</a>
-                            </li>
+                            @foreach (var cat in Model.Categories)
+                            {
+                                <li><a asp-action="Index" asp-route-catId="@cat.Id" class="@(Model.SelectedCategory==cat.Id?"active":"")">@cat.Name</a></li>
+                            }
 
-                            <li>
-                                <a href="#">TRENDS</a>
-                            </li>
+                         
+ 
                         </ul>
                     </div>
                 </div>

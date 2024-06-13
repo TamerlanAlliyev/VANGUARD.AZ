@@ -6,6 +6,13 @@
         width: 30%;
     }
 
+    .main-video{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+        object-position:center;
+    }
+
     .ca-container {
         width: 70%;
     }
@@ -904,12 +911,6 @@
         <div class="row">
             <form id="Form" method="post" enctype="multipart/form-data">
 
-                @* <input hidden name="name" value="@Model.BlogId" asp-for="@Model.BlogId" /> *@
-                <input  asp-for="@Model.BlogId" />
-
-                <!-- ==========================================
-                               Product Informations
-                ===============================================-->
                 <div class="col-lg-12">
 
 
@@ -1218,15 +1219,15 @@
                                             <label for="mainImage">Main Image/Video <span class="text-danger">*</span></label>
                                             <label for="mainImage" class="label-image">
                                                 <input asp-for="MainFile" type="file" id="mainImage" hidden>
-                                                @if (Model.Images != null)
+                                                @if (Model.Images.FirstOrDefault(i=>i.IsMain) != null)
                                                 {
-                                                    if (!Model.Images.FirstOrDefault(i => i.IsMain).IsVideo)
+                                                    if (Model.Images.FirstOrDefault(i => i.IsMain).IsVideo)
                                                     {
-                                                        <img style="object-fit:cover" class="main-img selected-media" src="~/cilent/assets/blogs/@Model.Images.FirstOrDefault(i=>i.IsMain).Url" alt="">
+                                                        <video src="~/cilent/assets/blogs/@Model.Images.FirstOrDefault(i=>i.IsMain).Url" class="main-video selected-media" controls></video>
                                                     }
                                                     else
                                                     {
-                                                        <video src="~/cilent/assets/blogs/@Model.Images.FirstOrDefault(i=>i.IsMain).Url" class="main-video selected-media" controls></video>
+                                                        <img style="object-fit:cover" class="main-img selected-media" src="~/cilent/assets/blogs/@Model.Images.FirstOrDefault(i=>i.IsMain).Url" alt="">
                                                     }
                                                 }
                                             </label>
@@ -1326,14 +1327,19 @@
 
 @section script {
     <script src="~/admin/vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
-    @*     <script src="~/admin/ckeditor/ckeditor.js"></script>
+    <script src="~/admin/ckeditor/ckeditor.js"></script>
     <script src="~/admin/ckeditor/build-config.js"></script>
     <script src="~/admin/ckeditor/config.js"></script>
     <script>
         CKEDITOR.replace("MainDescription");
         CKEDITOR.replace("AddinationDescription");
-    </script> *@
 
+        document.getElementById('Form').onsubmit = function () {
+            for (instance in CKEDITOR.instances) {
+                CKEDITOR.instances[instance].updateElement();
+            }
+        };
+    </script>
 
     <script>
 
@@ -1384,6 +1390,11 @@
 
         mainImageInput.addEventListener('change', (event) => {
             displayMedia(event, mainImage, mainVideo);
+            if (mainImage) {
+                mainImage.style.width = "100%";
+                mainImage.style.height = "100%";
+                mainImage.style.objectFit = "cover";
+            }
         });
 
 

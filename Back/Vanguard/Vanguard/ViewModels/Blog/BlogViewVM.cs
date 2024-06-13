@@ -9,4 +9,5 @@ public class BlogViewVM
     public List<Category> Categories { get; set; } = new List<Category>();
     public int SelectedCategory { get; set; }
     public PageInfo? PageInfo { get; set; }
+    public List<BlogAllVM> PopularBlogs { get; set; } = new List<BlogAllVM>();
 }

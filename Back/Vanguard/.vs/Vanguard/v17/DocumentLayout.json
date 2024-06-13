@@ -1,0 +1,49 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Vanguard\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Vanguard\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAAF4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-13T15:46:31.304Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

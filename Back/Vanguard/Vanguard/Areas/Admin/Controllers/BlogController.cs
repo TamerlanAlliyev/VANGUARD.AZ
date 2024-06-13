@@ -81,10 +81,14 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
     }
 
 
+
+
     [HttpPost]
     public async Task<IActionResult> Create(BlogCreateVM vm)
     {
-        ModelState.Clear();
+        try
+        {
+            ModelState.Clear();
 
         ValidationHelper.ValidateBlogCreate(vm, ModelState);
         if (!ModelState.IsValid)
@@ -96,175 +100,60 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
         var user = await _userManager.GetUserAsync((ClaimsPrincipal)User);
         var author = await _context.Users.FirstOrDefaultAsync(u => u.Id == user!.Id);
 
-        Blog blog = new Blog
-        {
-            Title = vm.Title,
-            MainDescription = vm.MainDescription,
-            AddinationDescription = vm.AddinationDescription,
-            AppUser = author,
-        };
-
-        List<BlogCategory> categories = new List<BlogCategory>();
-
-        if (vm.SelectedCategoryIds != null)
-        {
-            foreach (var item in vm.SelectedCategoryIds)
-            {
-                BlogCategory cat = new BlogCategory
-                {
-                    Blog = blog,
-                    CategoryId = item,
-                };
-                categories.Add(cat);
-            }
-
-        }
+        Blog blog =  _blogService.BlogModelCreateAsync(vm,author!);
 
 
 
-        List<BlogTag> tags = new List<BlogTag>();
-        if (vm.SelectedTagIds != null)
-        {
-            foreach (var item in vm.SelectedTagIds)
-            {
-                BlogTag tag = new BlogTag
-                {
-                    TagId = item,
-                    Blog = blog,
-                };
-                tags.Add(tag);
-            }
-        }
+        List<BlogCategory> categories = _blogService.BlogCategoriesCreateAsync(vm,blog);
+
+        List<BlogTag> tags = _blogService.BlogTagsCreateAsync(vm,blog);
 
         List<Image> images = new List<Image>();
 
         if (vm.MainFile != null)
         {
-            if (vm.MainFile.ContentType.StartsWith("image/"))
+            if (!vm.MainFile.FileSize(5) || !vm.MainFile.FileTypeAsync("image/", "video/")) 
             {
-
-                if (!vm.MainFile.FileSize(5) || !vm.MainFile.FileTypeAsync("image/"))
-                {
-                    ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
-                    return View(vm);
-                }
-                if (!vm.MainFile.FileTypeAsync("image"))
-                {
-                    ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
-                    return View(vm);
-                }
-
-                var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "blogs");
-                var filename = await vm.MainFile.SaveToAsync(path);
-
-
-                Image newImage = new Image
-                {
-                    Url = filename,
-                    Blog = blog,
-                    IsMain = true,
-                    IsVideo = false,
-                };
-                images.Add(newImage);
-            }
-            else if (vm.MainFile.ContentType.StartsWith("video/"))
-            {
-
-                if (!vm.MainFile.FileSize(5) || !vm.MainFile.FileTypeAsync("video/"))
-                {
-                    ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
-                    return View(vm);
-                }
-                if (!vm.MainFile.FileTypeAsync("video"))
-                {
-                    ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
-                    return View(vm);
-                }
-                var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "blogs");
-                var filename = await vm.MainFile.SaveToAsync(path);
-
-
-                Image newImage = new Image
-                {
-                    Url = filename,
-                    Blog = blog,
-                    IsMain = true,
-                    IsVideo = true,
-                };
-                images.Add(newImage);
+                ModelState.AddModelError("ProfilImage", "Invalid file type or size. Only image and video files are allowed.");
+                return View(vm);
             }
 
+            var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "blogs"); 
+            var filename = await vm.MainFile.SaveToAsync(path);
+
+            Image newImage = new Image
+            {
+                Url = filename,
+                Blog = blog,
+                IsMain = true,
+                IsVideo = vm.MainFile.ContentType.StartsWith("video/") 
+            };
+            images.Add(newImage);
         }
-
-
 
         if (vm.AddinationFile != null)
         {
             foreach (var item in vm.AddinationFile)
             {
-                if (item.ContentType.StartsWith("image/"))
+                if (!item.FileSize(5) || !item.FileTypeAsync("image/", "video/"))
                 {
-
-                    if (!item.FileSize(5) || !item.FileTypeAsync("image/"))
-                    {
-                        ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
-                        return View(vm);
-                    }
-                    if (!item.FileTypeAsync("image"))
-                    {
-                        ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
-                        return View(vm);
-                    }
-                    var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "blogs");
-                    var filename = await vm.MainFile.SaveToAsync(path);
-
-
-                    Image newImage = new Image
-                    {
-                        Url = filename,
-                        Blog = blog,
-                        IsMain = false,
-                        IsVideo = false,
-                    };
-                    images.Add(newImage);
-
-                }
-                else if (item.ContentType.StartsWith("video/"))
-                {
-
-                    if (!item.FileSize(5) || !item.FileTypeAsync("video/"))
-                    {
-                        ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
-                        return View(vm);
-                    }
-                    if (!item.FileTypeAsync("video"))
-                    {
-                        ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
-                        return View(vm);
-                    }
-                    var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "blogs");
-                    var filename = await vm.MainFile.SaveToAsync(path);
-
-
-                    Image newImage = new Image
-                    {
-                        Url = filename,
-                        Blog = blog,
-                        IsMain = false,
-                        IsVideo = false,
-                    };
-                    images.Add(newImage);
+                    ModelState.AddModelError("ProfilImage", "Invalid file type or size. Only image and video files are allowed.");
+                    return View(vm);
                 }
 
+                var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "blogs");
+                var filename = await item.SaveToAsync(path); 
+
+                Image newImage = new Image
+                {
+                    Url = filename,
+                    Blog = blog,
+                    IsMain = false,
+                    IsVideo = item.ContentType.StartsWith("video/") 
+                };
+                images.Add(newImage);
             }
-
         }
-
-
-
-
-
-
 
 
         await _context.Blogs.AddAsync(blog);
@@ -273,7 +162,24 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
         await _context.Images.AddRangeAsync(images);
         await _context.SaveChangesAsync();
 
+
+     
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return View("Error404", new ServiceResult(false, ex.Message, 404));
+        }
+        catch (ArgumentException ex)
+        {
+            return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (Exception ex)
+        {
+            return View("Error500", new ServiceResult(false, ex.Message, 500));
+        }
+
         return RedirectToAction("Index");
+
 
     }
 
@@ -293,7 +199,7 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
                                 .Include(b => b.Images)
                                 .Include(b => b.Categories)
                                 .ThenInclude(b => b.Category)
-                                .Include(b => b.Tags)!
+                                .Include(b => b.BlogTags)!
                                 .ThenInclude(b => b.Tag)
                                 .FirstOrDefaultAsync(b => b.Id == id);
 
@@ -319,7 +225,7 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
             CategorySelection = await _productService.CategorySelectionsAsync(),
             TagSelections = await _productService.TagSelectionsAsync(),
             BlogCategories = blog.Categories.Select(c => c.Category).ToList(),
-            BlogTags = blog.Tags?.Select(t => t.Tag).ToList(),
+            BlogTags = blog.BlogTags?.Select(t => t.Tag).ToList(),
         };
         return View(vm);
     }
@@ -333,115 +239,70 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
     [HttpPost]
     public async Task<IActionResult> Edit(BlogEditVM vm)
     {
-        var exsistBlog = await _context.Blogs.FirstOrDefaultAsync(b => b.Id == vm.BlogId);
-        exsistBlog.Title = vm.Title;
-        exsistBlog.MainDescription = vm.MainDescription;
-        exsistBlog.AddinationDescription = vm.AddinationDescription;
+        var existingBlog = await _context.Blogs.FirstOrDefaultAsync(b => b.Id == vm.BlogId);
+        if (existingBlog == null) 
+        {
+            return NotFound();
+        }
 
+        existingBlog.Title = vm.Title;
+        existingBlog.MainDescription = vm.MainDescription;
+        existingBlog.AddinationDescription = vm.AddinationDescription;
 
+        // Kategorileri güncelle
         if (vm.SelectedCategoryIds != null)
         {
-            var newCategories = await _blogService.BlogCategoriesCreateAsync(vm.SelectedCategoryIds, exsistBlog);
+            var newCategories = await _blogService.BlogCategoriesCreateAsync(vm.SelectedCategoryIds, existingBlog);
             await _context.BlogCategory.AddRangeAsync(newCategories);
         }
 
-
-
+        // Etiketleri güncelle
         if (vm.SelectedTagIds != null)
         {
-            var newTags = await _blogService.BlogTagsCreateAsync(vm.SelectedTagIds, exsistBlog);
+            var newTags = await _blogService.BlogTagsCreateAsync(vm.SelectedTagIds, existingBlog);
             await _context.BlogTag.AddRangeAsync(newTags);
         }
-
 
         List<Image> images = new List<Image>();
 
         if (vm.MainFile != null)
         {
-            if (vm.MainFile.ContentType.StartsWith("image/"))
+            if (!vm.MainFile.FileSize(5) || !vm.MainFile.FileTypeAsync("image/", "video/"))
             {
-
-                if (!vm.MainFile.FileSize(5) || !vm.MainFile.FileTypeAsync("image/"))
-                {
-                    ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
-                    return View(vm);
-                }
-                if (!vm.MainFile.FileTypeAsync("image"))
-                {
-                    ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
-                    return View(vm);
-                }
-                var exsistMain = await _context.Images.FirstOrDefaultAsync(i => i.IsMain && i.BlogId == exsistBlog.Id);
-                await DeleteMedia(exsistMain!.Id!);
-                images.Add(await _blogService.ImageCreateAsync(vm.MainFile, true, false, exsistBlog));
-            }
-            else if (vm.MainFile.ContentType.StartsWith("video/"))
-            {
-
-                if (!vm.MainFile.FileSize(5) || !vm.MainFile.FileTypeAsync("video/"))
-                {
-                    ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
-                    return View(vm);
-                }
-                if (!vm.MainFile.FileTypeAsync("video"))
-                {
-                    ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
-                    return View(vm);
-                }
-                images.Add(await _blogService.ImageCreateAsync(vm.MainFile, true, true, exsistBlog));
-
+                ModelState.AddModelError("ProfilImage", "Invalid file type or size. Only image and video files are allowed.");
+                return View(vm);
             }
 
+            var existingMainImage = await _context.Images.FirstOrDefaultAsync(i => i.IsMain && i.BlogId == existingBlog.Id);
+            if (existingMainImage != null)
+            {
+                await DeleteMedia(existingMainImage.Id);
+                _context.Images.Remove(existingMainImage);
+            }
+
+            images.Add(await _blogService.ImageCreateAsync(vm.MainFile, true, vm.MainFile.ContentType.StartsWith("video/"), existingBlog));
         }
-
-
 
         if (vm.AddinationFile != null)
         {
             foreach (var item in vm.AddinationFile)
             {
-                if (item.ContentType.StartsWith("image/"))
+                if (!item.FileSize(5) || !item.FileTypeAsync("image/", "video/"))
                 {
-
-                    if (!item.FileSize(5) || !item.FileTypeAsync("image/"))
-                    {
-                        ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
-                        return View(vm);
-                    }
-                    if (!item.FileTypeAsync("image"))
-                    {
-                        ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
-                        return View(vm);
-                    }
-                    var exsistMain = await _context.Images.FirstOrDefaultAsync(i => i.IsMain && i.BlogId == exsistBlog.Id);
-                    await DeleteMedia(exsistMain!.Id!);
-                    images.Add(await _blogService.ImageCreateAsync(item, false, false, exsistBlog));
-
-                }
-                else if (item.ContentType.StartsWith("video/"))
-                {
-
-                    if (!item.FileSize(5) || !item.FileTypeAsync("video/"))
-                    {
-                        ModelState.AddModelError("ProfilImage", "Invalid file type or size.");
-                        return View(vm);
-                    }
-                    if (!item.FileTypeAsync("video"))
-                    {
-                        ModelState.AddModelError("ProfilImage", "Files must be 'image' type!.");
-                        return View(vm);
-                    }
-                    images.Add(await _blogService.ImageCreateAsync(item, false, true, exsistBlog));
+                    ModelState.AddModelError("ProfilImage", "Invalid file type or size. Only image and video files are allowed.");
+                    return View(vm);
                 }
 
+                images.Add(await _blogService.ImageCreateAsync(item, false, item.ContentType.StartsWith("video/"), existingBlog));
             }
-
         }
 
         await _context.Images.AddRangeAsync(images);
         await _context.SaveChangesAsync();
+
         return RedirectToAction("Index");
     }
+
 
 
 

@@ -64,14 +64,14 @@
         .basket-prices-count-input {
             display: flex;
             align-items: center;
-            flex-direction:inherit;
+            flex-direction: inherit;
             justify-content: space-between;
         }
 
         .searchs .basket-list .basket-product-list ul .basket-prod .basket-price-close {
             display: flex;
             flex-direction: column;
-            align-items: inherit; 
+            align-items: inherit;
             justify-content: space-between;
         }
 
@@ -139,7 +139,7 @@
                     <a class="i-user" href="#">
                         <img src="~/cilent/assets/icons/user.svg" alt="">
                     </a>
-                    <a class="i-basket" >
+                    <a class="i-basket">
                         <img src="~/cilent/assets/icons/basket.svg" alt="">
                         <sup>@basketCount</sup>
                     </a>
@@ -195,128 +195,11 @@
             </div>
 
             <div class="search-list">
-                <input type="text" placeholder="Search...">
+                <input type="text" id="searchProduct" placeholder="Search...">
 
-                <ul>
+                <ul id="SearchedProd">
 
-                    <li>
-                        <a class="product-list" href="#">
-                            <div class="search-prod-img">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="search-prod-img">
-                            </div>
-                            <div class="search-prod-info">
-                                <div class="prod-name">
-                                    <p>Category</p>
-                                    <h3>Product Productc</h3>
-                                </div>
-                                <div class="prod-price">
-                                    <span class="sell-price">$100</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="product-list" href="#">
-                            <div class="search-prod-img">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="search-prod-img">
-                            </div>
-                            <div class="search-prod-info">
-                                <div class="prod-name">
-                                    <p>Category</p>
-                                    <h3>Product Productc</h3>
-                                </div>
-                                <div class="prod-price">
-                                    <span class="sell-price">$100</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="product-list" href="#">
-                            <div class="search-prod-img">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="search-prod-img">
-                            </div>
-                            <div class="search-prod-info">
-                                <div class="prod-name">
-                                    <p>Category</p>
-                                    <h3>Product Productc</h3>
-                                </div>
-                                <div class="prod-price">
-                                    <span class="sell-price">$100</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="product-list" href="#">
-                            <div class="search-prod-img">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="search-prod-img">
-                            </div>
-                            <div class="search-prod-info">
-                                <div class="prod-name">
-                                    <p>Category</p>
-                                    <h3>Product Productc</h3>
-                                </div>
-                                <div class="prod-price">
-                                    <span class="sell-price">$100</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="product-list" href="#">
-                            <div class="search-prod-img">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="search-prod-img">
-                            </div>
-                            <div class="search-prod-info">
-                                <div class="prod-name">
-                                    <p>Category</p>
-                                    <h3>Product Productc</h3>
-                                </div>
-                                <div class="prod-price">
-                                    <span class="sell-price">$100</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="product-list" href="#">
-                            <div class="search-prod-img">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="search-prod-img">
-                            </div>
-                            <div class="search-prod-info">
-                                <div class="prod-name">
-                                    <p>Category</p>
-                                    <h3>Product Productc</h3>
-                                </div>
-                                <div class="prod-price">
-                                    <span class="sell-price">$100</span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a class="product-list" href="#">
-                            <div class="search-prod-img">
-                                <img src="~/cilent/assets/images/products/product.jpg" alt="search-prod-img">
-                            </div>
-                            <div class="search-prod-info">
-                                <div class="prod-name">
-                                    <p>Category</p>
-                                    <h3>Product Productc</h3>
-                                </div>
-                                <div class="prod-price">
-                                    <span class="dis-price">$80 <del class="sel-price">100</del></span>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
+                   @await Component.InvokeAsync("Search")
 
                 </ul>
             </div>
@@ -325,17 +208,37 @@
 
                 <a class="pages-close" href="#"><img src="~/cilent/assets/icons/x-button.svg" alt=""></a>
 
+
+
+
                 <ul>
-                    <li><a asp-action="Index" asp-controller="Home">Home</a></li>
-                    <li><a asp-action="Index" asp-controller="About">About</a></li>
-                    <li><a asp-action="Index" asp-controller="Blog">Blog</a></li>
-                    <li><a asp-action="Index" asp-controller="Contact">Contact</a></li>
-                    <li><a asp-action="Index" asp-controller="Basket">Basket</a></li>
-                    <li><a asp-controller="Setting" asp-action="Index" asp-route-id="3">Wish List</a></li>
-                    <li><a asp-controller="Setting" asp-action="Index" asp-route-id="1">My Account </a></li>
-                    <li><a asp-action="Logout" asp-controller="Account">Log Out</a></li>
-                    <li><a asp-action="Login" asp-controller="Account">Login</a></li>
-                    <li><a asp-action="Register" asp-controller="Account">Register</a></li>
+                    @if (User.Identity != null)
+                    {
+                        @if (user != null)
+                        {
+                            <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                            <li><a asp-action="Index" asp-controller="Shop">Shop</a></li>
+                            <li><a asp-action="Index" asp-controller="Blog">Blog</a></li>
+                            <li><a asp-action="Index" asp-controller="About">About</a></li>
+                            <li><a asp-action="Index" asp-controller="Contact">Contact</a></li>
+                            <li><a asp-controller="Setting" asp-action="Index" asp-route-id="1">My Account </a></li>
+                            <li><a asp-controller="Setting" asp-action="Index" asp-route-id="3">Wish List</a></li>
+                            <li><a asp-action="Logout" asp-controller="Account">Log Out</a></li>
+                        }
+                        else
+                        {
+                            <li><a asp-action="Index" asp-controller="Home">Home</a></li>
+                            <li><a asp-action="Index" asp-controller="Shop">Shop</a></li>
+                            <li><a asp-action="Index" asp-controller="Blog">Blog</a></li>
+                            <li><a asp-action="Index" asp-controller="About">About</a></li>
+                            <li><a asp-action="Index" asp-controller="Contact">Contact</a></li>
+                            <li><a asp-controller="Setting" asp-action="Index" asp-route-id="3">Wish List</a></li>
+                            <li><a asp-action="Login" asp-controller="Account">Login</a></li>
+                            <li><a asp-action="Register" asp-controller="Account">Register</a></li>
+                        }
+
+                    }
+ 
                 </ul>
             </nav>
 
@@ -402,42 +305,35 @@
             <div class="web-info">
 
                 <div class="info-list">
-                    <h3>
-                        COMPANY</h1>
+                    <h3>Information</h1>
 
                         <ul>
                             <li><a href="#">About Us</a></li>
-                            <li><a href="#">Blog</a></li>
                             <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Legal & Privacy</a></li>
+                            <li><a asp-controller="Setting" asp-action="Index" asp-route-id="1">My Account</a></li>
+                            @if (user!=null)
+                            {
+                                <li><a asp-controller="Setting" asp-action="Index" asp-route-id="2">Orders and Returns</a></li>
+                            }
+                            else
+                            {
+                                <li><a href="#"  >Orders and Returns</a></li>
+                            }
                         </ul>
-                </div>
-
+                </div> 
+      
                 <div class="info-list">
                     <h3>
-                        HELP</h1>
+                        Shop</h1>
 
                         <ul>
-                            <li><a asp-controller="Setting" asp-action="Index" asp-route-id="1">My Account</a></li>
-                            <li><a href="#">Find a Store</a></li>
-                            <li><a asp-controller="Shop" asp-action="Blog" asp-area="">Blog</a></li>
-                            <li><a href="#">Legal & Privacy</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Gift Card</a></li>
+                            <li><a asp-controller="Shop" asp-action="Index">Shop</a></li>
+                            <li><a asp-controller="Blog" asp-action="Index">Blog</a></li>
+                            <li><a asp-controller="Blog" asp-action="Index">Gift Card</a></li>
                         </ul>
                 </div>
 
-                <!-- <div class="info-list">
-                    <h3>HELP</h1>
-
-                        <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Find a Store</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Legal & Privacy</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Gift Card</a></li>
-                        </ul>
-                </div> -->
 
             </div>
 
@@ -513,7 +409,7 @@
                         updatePrices(sell, dis, 1);
 
 
-                        bskCount.innerText = parseInt(bskCount.innerText)+1
+                        bskCount.innerText = parseInt(bskCount.innerText) + 1
 
 
                         fetch(`/Basket/IncreaseBasket/${id}`)
@@ -596,18 +492,18 @@
                     updatePrices(sell, dis, difference);
 
                     fetch(`/Basket/ChangeBasket?id=${id}&count=${newValue}`)
-                            .then(response => {
-                                if (!response.ok) {
-                                    throw new Error('Network response was not ok');
-                                }
-                                return response.json();
-                            })
-                            .then(data => {
-                                console.log(data);
-                            })
-                            .catch(error => {
-                                console.error('There has been a problem with your fetch operation:', error);
-                            });
+                        .then(response => {
+                            if (!response.ok) {
+                                throw new Error('Network response was not ok');
+                            }
+                            return response.json();
+                        })
+                        .then(data => {
+                            console.log(data);
+                        })
+                        .catch(error => {
+                            console.error('There has been a problem with your fetch operation:', error);
+                        });
 
                     input.setAttribute('data-old-value', actualNewValue);
                 });
@@ -702,6 +598,17 @@
             });
         }
         CloseMenu();
+        console.log(document.getElementById("searchProduct"))
+
+        document.getElementById("searchProduct").addEventListener("input", function () {
+            const text = this.value.trim();
+            fetch(`/Home/Search?text=${text}`)
+                .then(res => res.text())
+                .then(res => {
+                    document.getElementById('SearchedProd').innerHTML = res;
+                })
+                .catch(e => console.error(e));
+        });
     </script>
 
 
@@ -717,172 +624,3 @@
 
 
 
-
-
-
-
-@*  <script>
-    function addListenersToViewComponent() {
-        const productItems = document.querySelectorAll('.basket-product-list .product-item');
-        let BasketHeaderCount = document.querySelector('.basket-header span');
-
-
-
-
-
-
-        productItems.forEach(productItem => {
-            let quantity = productItem.querySelector('.basket-quantity-box');
-            let close = productItem.querySelector('.basket-price-close a');
-            let input = quantity.querySelector('.quantity-input');
-            let minus = quantity.querySelector('.minus');
-            let plus = quantity.querySelector('.plus');
-            let totalItem = parseInt(quantity.getAttribute('data-total'));
-
-
-            let subSellPrice = document.querySelector('.basket-total-prices #sell-price');
-            let subDisPrice = document.querySelector('.basket-total-prices #dis-price');
-
-
-            // let subTot = document.querySelector('.basket-total-prices');
-
-            let hasDisPrice = productItem.querySelector('#dis-price') !== null;
-
-            console.log(`subTot içinde #dis-price elementi var mı: ${hasDisPrice}`);
-
-
-
-
-            plus.addEventListener('click', () => {
-                if (totalItem > parseInt(input.value)) {
-                    input.value = parseInt(input.value) + 1;
-                    BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) + 1;
-
-                    let sell = productItem.querySelector('#sell-price');
-                    if (hasDisPrice) {
-                        let dis = productItem.querySelector('#dis-price');
-
-                        let SellPrice = parseFloat(sell.innerText.replace('$', '').trim())
-                        let DisPrice = parseFloat(dis.innerText.replace('$', '').trim())
-
-                        subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) + SellPrice).toFixed(2);
-                        subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) + DisPrice).toFixed(2);
-
-                    }
-                    else {
-                        let SellPrice = parseFloat(sell.innerText.replace('$', '').trim())
-
-                        subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) + SellPrice).toFixed(2);
-                        subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) + SellPrice).toFixed(2);
-                    }
-
-                }
-            });
-
-            minus.addEventListener('click', () => {
-                if (parseInt(input.value) > 1) {
-                    input.value = parseInt(input.value) - 1;
-                    BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) - 1;
-
-                    let sell = productItem.querySelector('#sell-price');
-                    if (hasDisPrice) {
-                        let dis = productItem.querySelector('#dis-price');
-
-                        let SellPrice = parseFloat(sell.innerText.replace('$', '').trim())
-                        let DisPrice = parseFloat(dis.innerText.replace('$', '').trim())
-
-                        subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) - SellPrice).toFixed(2);
-                        subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) - DisPrice).toFixed(2);
-
-                    }
-                    else {
-                        let SellPrice = parseFloat(sell.innerText.replace('$', '').trim())
-
-                        subSellPrice.innerText = '$' + (parseFloat(subSellPrice.innerText.replace('$', '').trim()) - SellPrice).toFixed(2);
-                        subDisPrice.innerText = '$' + (parseFloat(subDisPrice.innerText.replace('$', '').trim()) - SellPrice).toFixed(2);
-                    }
-
-                }
-            });
-
-
-            const quantityInputs = document.querySelectorAll('.quantity-input');
-
-            function updateTotalCount() {
-                let totalCount = 0;
-                quantityInputs.forEach(input => {
-                    totalCount += parseInt(input.value) || 0;
-                });
-                BasketHeaderCount.innerText = totalCount;
-            }
-
-            updateTotalCount();
-
-            quantityInputs.forEach(input => {
-                input.addEventListener('input', () => {
-                    const newValue = parseInt(input.value);
-                    const maxQuantity = parseInt(input.closest('.basket-quantity-box').dataset.total);
-                    const currentCount = parseInt(BasketHeaderCount.innerText);
-
-                    if (newValue > maxQuantity) {
-                        input.value = maxQuantity;
-                    } else if (newValue < 1) {
-                        input.value = 1;
-                    }
-
-                    updateTotalCount();
-                });
-            });
-
-
-            close.addEventListener('click', (e) => {
-                e.preventDefault();
-                productItem.style.display = "none";
-
-                // SHOPPING Bag
-                BasketHeaderCount.innerText = parseInt(BasketHeaderCount.innerText) - parseInt(input.value);
-
-                // SUBTOTAL
-                input.closest('.basket-quantity-box').dataset.initialQuantity = currentQuantity;
-
-                updateTotalCount();
-            });
-        });
-    }
-
-    var basaketIcon = document.querySelector('.i-basket');
-    var basketList = document.querySelector('.basket-list');
-    var basketClose = document.querySelector('.basket-close');
-
-    basaketIcon.addEventListener('click', (event) => {
-        event.stopPropagation();
-        basketList.classList.add('show');
-
-        fetch('/Basket/Getbasket')
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.text();
-            })
-            .then(html => {
-                basketList.innerHTML = html;
-                addListenersToViewComponent();
-            })
-            .catch(error => {
-                console.error('There was a problem with the fetch operation:', error);
-            });
-    });
-
-    basketClose.addEventListener('click', (event) => {
-        event.stopPropagation();
-        basketList.classList.remove('show');
-    });
-
-    document.addEventListener('click', (event) => {
-        const clickedElement = event.target;
-        if (!basketList.contains(clickedElement) && !basaketIcon.contains(clickedElement)) {
-            basketList.classList.remove('show');
-        }
-    });
-</script> *@

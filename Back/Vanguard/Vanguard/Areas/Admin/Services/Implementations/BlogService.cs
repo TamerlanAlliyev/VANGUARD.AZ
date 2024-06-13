@@ -1,6 +1,9 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Security.Claims;
 using Vanguard.Areas.Admin.Services.Interfaces;
+using Vanguard.Areas.Admin.ViewModels.Blog;
 using Vanguard.Data;
 using Vanguard.Extensions;
 using Vanguard.Helpers;
@@ -12,10 +15,14 @@ public class BlogService : IBlogService
 {
     readonly IWebHostEnvironment _environment;
     readonly VanguardContext _context;
-    public BlogService(IWebHostEnvironment environment, VanguardContext context)
+      private readonly UserManager<AppUser> _userManager;
+
+    private readonly IHttpContextAccessor _httpContextAccessor;
+    public BlogService(IWebHostEnvironment environment, VanguardContext context, IHttpContextAccessor httpContextAccessor)
     {
         _environment = environment;
         _context = context;
+        _httpContextAccessor = httpContextAccessor;
     }
 
     public async Task<ServiceResult> ImageDeleteAsync(int id)
@@ -99,13 +106,13 @@ public class BlogService : IBlogService
     public async Task<List<BlogTag>> BlogTagsCreateAsync(int[] SelectedTagIds, Blog blog)
     {
         List<BlogTag> tags = new List<BlogTag>();
-        List < BlogTag > exsistTags = await _context.BlogTag.ToListAsync();
+        List<BlogTag> exsistTags = await _context.BlogTag.ToListAsync();
 
         if (SelectedTagIds != null)
         {
             foreach (var item in SelectedTagIds)
             {
-                if (exsistTags.FirstOrDefault(bc => bc.TagId == item&& bc.BlogId==blog.Id) == null)
+                if (exsistTags.FirstOrDefault(bc => bc.TagId == item && bc.BlogId == blog.Id) == null)
                 {
                     BlogTag tag = new BlogTag
                     {
@@ -138,4 +145,86 @@ public class BlogService : IBlogService
         return newImage;
     }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ///////////////////////////////////////////////////////////////////////
+    ///
+    public Blog BlogModelCreateAsync(BlogCreateVM vm,AppUser author)
+    {
+        return new Blog
+        {
+            Title = vm.Title,
+            MainDescription = vm.MainDescription,
+            AddinationDescription = vm.AddinationDescription,
+            AppUser = author!,
+        };
+    }
+
+
+    public List<BlogCategory> BlogCategoriesCreateAsync(BlogCreateVM vm, Blog blog)
+    {
+        List<BlogCategory> categories = new List<BlogCategory>();
+
+        if (vm.SelectedCategoryIds != null)
+        {
+            foreach (var item in vm.SelectedCategoryIds)
+            {
+                BlogCategory cat = new BlogCategory
+                {
+                    Blog = blog,
+                    CategoryId = item,
+                };
+                categories.Add(cat);
+            }
+
+        }
+        return categories;
+    }
+
+    public List<BlogTag> BlogTagsCreateAsync(BlogCreateVM vm, Blog blog)
+    {
+
+        List<BlogTag> tags = new List<BlogTag>();
+        if (vm.SelectedTagIds != null)
+        {
+            foreach (var item in vm.SelectedTagIds)
+            {
+                BlogTag tag = new BlogTag
+                {
+                    TagId = item,
+                    Blog = blog,
+                };
+                tags.Add(tag);
+            }
+        }
+        return tags;
+    }
+
+
+    public async Task<Image> BlogImageCreateAsync(BlogCreateVM vm, Blog blog, bool IsMain)
+    {
+        var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "blogs");
+        var filename = await vm.MainFile.SaveToAsync(path);
+
+        return new Image
+        {
+            Url = filename,
+            Blog = blog,
+            IsMain = IsMain,
+            IsVideo = vm.MainFile.ContentType.StartsWith("video/")
+        };
+    }
 }

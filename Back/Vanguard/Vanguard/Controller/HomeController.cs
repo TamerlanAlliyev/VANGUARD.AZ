@@ -64,5 +64,9 @@ public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     {
         return View("Error403");
     }
+    public IActionResult Search(string? text)
+    {
+        return ViewComponent("Search", new { text = text });
+    }
 }
 

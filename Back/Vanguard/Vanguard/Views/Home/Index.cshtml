@@ -74,16 +74,18 @@
 
         <div class="collection-area">
 
-            <div class="list-one" style="background-image: url(/cilent/assets/settings/banner/@(Model.Banners[1].Image.Url));">
-                <div class="list-one-card">
+            <div class="list-one">
+                
+                <div class="list-one-card"
+                     style="background-image: url(cilent/assets/settings/banner/@(Model.Banners[0].Image.Url));">
 
                     <div class="list-one-info">
                         <P>@Model.Banners[0]?.Category?.Name</P>
                         <a href="#">@Model.Banners[0]?.Title</a>
                     </div>
 
-                    <div class="one-btn">
-                        <a>SHOP NOW</a>
+                    <div  class="one-btn">
+                        <a asp-action="Index" asp-route-catId="@Model.Banners[0].CategoryId" asp-controller="Shop">SHOP NOW</a>
                     </div>
 
                 </div>
@@ -103,7 +105,7 @@
                         </div>
 
                         <div class="two-btn">
-                            <a>SHOP NOW</a>
+                            <a asp-action="Index" asp-route-catId="@Model.Banners[1].CategoryId" asp-controller="Shop">SHOP NOW</a>
                         </div>
 
                     </div>
@@ -319,7 +321,7 @@
                                     }
                                     else
                                     {
-                                        <img class="" src="~/cilent/assets/icons/wish-icon.svg" alt="">
+                                        <img class="" src="~/cilent/assets/icons/wish-white.svg" alt="">
                                     }
                                 </a>
 

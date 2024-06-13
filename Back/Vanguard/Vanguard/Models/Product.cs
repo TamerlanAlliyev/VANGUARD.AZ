@@ -29,5 +29,6 @@ public class Product : BaseAuditable
 
     public ICollection<Basket>? BasketList { get; set; }
     public ICollection<Wish>? Wishes { get; set; }
+    public List<Rating>? Ratings { get; set; } 
 
 }

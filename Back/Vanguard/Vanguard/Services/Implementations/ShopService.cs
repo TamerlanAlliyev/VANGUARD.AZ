@@ -5,16 +5,22 @@ using Vanguard.Models;
 using Vanguard.ViewModels.Shop.AdditionVMs;
 using Vanguard.ViewModels.Shop;
 using Vanguard.Helpers;
+using Vanguard.ViewModels.Rating;
+using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
 
 namespace Vanguard.Services.Implementations;
 
 public class ShopService : IShopService
 {
     readonly VanguardContext _context;
-
-    public ShopService(VanguardContext context)
+    readonly UserManager<AppUser> _userManager;
+    readonly IHttpContextAccessor _httpContextAccessor;
+    public ShopService(VanguardContext context, UserManager<AppUser> userManager, IHttpContextAccessor httpContextAccessor)
     {
         _context = context;
+        _userManager = userManager;
+        _httpContextAccessor = httpContextAccessor;
     }
 
     public IQueryable<Product> ProductgetQuery()
@@ -95,6 +101,16 @@ public class ShopService : IShopService
             var relatedProducts = await relatedProductsQuery.Include(p => p.Information)
                                                    .ThenInclude(p => p.Color).ToListAsync();
 
+            var user = await _userManager.GetUserAsync(_httpContextAccessor.HttpContext?.User); 
+
+            RatingVM rating = new RatingVM
+            {
+                ProductId = product.Id,
+                Commented = user != null && await _context.Ratings.AnyAsync(r => r.ProductId == product.Id && r.AppUserId == user.Id)
+                // Check if user is logged in
+            };
+
+
             ShopDetailVM vm = new ShopDetailVM
             {
                 Product = product,
@@ -109,7 +125,9 @@ public class ShopService : IShopService
                     totalCount = c.Information.Sum(i => i.Count),
                 }).ToList(),
                 Information = product.Information.ToList(),
-                RelatedProducts = relatedProducts
+                RelatedProducts = relatedProducts,
+                Ratings = await _context.Ratings.Where(r=>r.ProductId == product.Id).Include(u=>u.AppUser).ThenInclude(i=>i.Image).ToListAsync(),
+                NewRating = rating
             };
 
             product.ClicketCount = (product.ClicketCount == null ? 0 : product.ClicketCount) + 1;
