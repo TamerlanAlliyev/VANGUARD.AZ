@@ -38,6 +38,7 @@
     justify-content: center;
     width: 80%;
     align-items: center;
+    height: 100%;
     /* display: block; */
     /* flex-direction: row; */
 }
@@ -122,6 +123,7 @@ address strong:first-child {
 .swiper {
     width: 80%;
     height: 100%;
+    height: 300px;
 }
 
 .swiper-slide {
@@ -132,7 +134,7 @@ address strong:first-child {
 .swiper-slide img {
     display: block;
     width: 100%;
-    height: 78%;
+    height: 100%;
     object-fit: cover;
     margin-bottom: 5%;
 }

@@ -23,6 +23,10 @@
         <h1>BLOGS</h1>
     </section>
 
+    <div class="head-url">
+        <span><a asp-action="index" asp-controller="home">Home </a></span> /
+        <span> Blog</span>
+    </div>
 
 
     <section style="height: 100vh;" class="section blog">
@@ -96,7 +100,7 @@
 
                                         <div class="blog-comments">
                                             <img src="~/cilent/assets/icons/comment.svg" alt="comment">
-                                            <span>100000</span>
+                                            <span>@blog.Comment</span>
                                         </div>
                                     </div>
                                 </div>

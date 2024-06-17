@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 using Microsoft.EntityFrameworkCore;
 using Vanguard.Areas.Admin.Services.Interfaces;
@@ -12,6 +13,7 @@ using YourNamespace.Filters;
 namespace Vanguard.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin, Editor")]
 [ServiceFilter(typeof(AdminAuthorizationFilter))]
 
 public class ProductController : Microsoft.AspNetCore.Mvc.Controller

@@ -207,6 +207,79 @@ namespace Vanguard.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("Vanguard.Models.About", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(1500)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("About");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.AboutAccordion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasMaxLength(1500)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("AboutAccordion");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.AboutEmploees", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("FullName")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<int?>("ImageId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Position")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ImageId")
+                        .IsUnique()
+                        .HasFilter("[ImageId] IS NOT NULL");
+
+                    b.ToTable("AboutEmploees");
+                });
+
             modelBuilder.Entity("Vanguard.Models.AllowedEmployee", b =>
                 {
                     b.Property<int>("Id")
@@ -458,6 +531,64 @@ namespace Vanguard.Migrations
                     b.ToTable("BlogCategory");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.BlogComment", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("AppUserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Comment")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("IPAddress")
+                        .IsRequired()
+                        .HasMaxLength(250)
+                        .HasColumnType("varchar");
+
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<string>("ModifiedBy")
+                        .HasMaxLength(70)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<int?>("ReplyId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
+
+                    b.HasIndex("BlogId");
+
+                    b.HasIndex("ReplyId");
+
+                    b.ToTable("BlogComments");
+                });
+
             modelBuilder.Entity("Vanguard.Models.BlogTag", b =>
                 {
                     b.Property<int>("Id")
@@ -576,6 +707,44 @@ namespace Vanguard.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Colors", (string)null);
+                });
+
+            modelBuilder.Entity("Vanguard.Models.Contact", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasMaxLength(3000)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("AddressLink")
+                        .IsRequired()
+                        .HasMaxLength(3000)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("AddressUrl")
+                        .IsRequired()
+                        .HasMaxLength(3000)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasMaxLength(150)
+                        .HasColumnType("nvarchar");
+
+                    b.Property<string>("Number")
+                        .IsRequired()
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Gender", b =>
@@ -709,6 +878,12 @@ namespace Vanguard.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<int?>("AboutEmploeesId")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("AboutId")
+                        .HasColumnType("int");
+
                     b.Property<string>("AppUserId")
                         .HasColumnType("nvarchar(max)");
 
@@ -774,6 +949,10 @@ namespace Vanguard.Migrations
                         .HasColumnType("varchar");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AboutId")
+                        .IsUnique()
+                        .HasFilter("[AboutId] IS NOT NULL");
 
                     b.HasIndex("BlogId");
 
@@ -1337,6 +1516,15 @@ namespace Vanguard.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Vanguard.Models.AboutEmploees", b =>
+                {
+                    b.HasOne("Vanguard.Models.Image", "Image")
+                        .WithOne("AboutEmploees")
+                        .HasForeignKey("Vanguard.Models.AboutEmploees", "ImageId");
+
+                    b.Navigation("Image");
+                });
+
             modelBuilder.Entity("Vanguard.Models.AllowedEmployee", b =>
                 {
                     b.HasOne("Vanguard.Models.AppUser", "AppUser")
@@ -1423,6 +1611,32 @@ namespace Vanguard.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.BlogComment", b =>
+                {
+                    b.HasOne("Vanguard.Models.AppUser", "AppUser")
+                        .WithMany("BlogComments")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Vanguard.Models.Blog", "Blog")
+                        .WithMany("BlogComments")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("Vanguard.Models.BlogComment", "Reply")
+                        .WithMany("AnswerComments")
+                        .HasForeignKey("ReplyId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Blog");
+
+                    b.Navigation("Reply");
+                });
+
             modelBuilder.Entity("Vanguard.Models.BlogTag", b =>
                 {
                     b.HasOne("Vanguard.Models.Blog", "Blog")
@@ -1475,6 +1689,10 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Image", b =>
                 {
+                    b.HasOne("Vanguard.Models.About", "About")
+                        .WithOne("Image")
+                        .HasForeignKey("Vanguard.Models.Image", "AboutId");
+
                     b.HasOne("Vanguard.Models.Blog", "Blog")
                         .WithMany("Images")
                         .HasForeignKey("BlogId");
@@ -1499,6 +1717,8 @@ namespace Vanguard.Migrations
                     b.HasOne("Vanguard.Models.ShopBanner", "ShopBanner")
                         .WithOne("Image")
                         .HasForeignKey("Vanguard.Models.Image", "ShopBannerId");
+
+                    b.Navigation("About");
 
                     b.Navigation("Blog");
 
@@ -1661,9 +1881,16 @@ namespace Vanguard.Migrations
                     b.Navigation("Product");
                 });
 
+            modelBuilder.Entity("Vanguard.Models.About", b =>
+                {
+                    b.Navigation("Image");
+                });
+
             modelBuilder.Entity("Vanguard.Models.AppUser", b =>
                 {
                     b.Navigation("AllowedEmployee");
+
+                    b.Navigation("BlogComments");
 
                     b.Navigation("Blogs");
 
@@ -1672,11 +1899,18 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Blog", b =>
                 {
+                    b.Navigation("BlogComments");
+
                     b.Navigation("BlogTags");
 
                     b.Navigation("Categories");
 
                     b.Navigation("Images");
+                });
+
+            modelBuilder.Entity("Vanguard.Models.BlogComment", b =>
+                {
+                    b.Navigation("AnswerComments");
                 });
 
             modelBuilder.Entity("Vanguard.Models.Category", b =>
@@ -1718,6 +1952,8 @@ namespace Vanguard.Migrations
 
             modelBuilder.Entity("Vanguard.Models.Image", b =>
                 {
+                    b.Navigation("AboutEmploees");
+
                     b.Navigation("AppUser");
                 });
 

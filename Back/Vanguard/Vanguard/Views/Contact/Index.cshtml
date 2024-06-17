@@ -1,60 +1,59 @@
-﻿@section style{
+﻿@model Contact
+
+@section style {
     <link rel="stylesheet" href="~/cilent/assets/css/contact.css">
 }
 
 
-    <main>
-        <h1>CONTACT US</h1>
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48613.5977531735!2d49.819509220986006!3d40.40109968039558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2zQmFrxLE!5e0!3m2!1saz!2saz!4v1714147771064!5m2!1saz!2saz"
-            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+<main>
+    <h1>CONTACT US</h1>
+    <iframe src="@Model.AddressUrl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-        <section class="contact-us">
+    <section class="contact-us">
 
 
-            <div class="addresses">
+        <div class="addresses">
 
-                <div class="address">
-                    <h2>Store in Baku</h2>
-                    <a>Port Baku Mall, 151 Neftchilar Avenue, Baku</a>
-                </div>
-
-                <div class="contact">
-                    <a href="mailto:vanguardfashionaz@gmail.com">vanguardfashionaz@gmail.com</a>
-                    <a href="tel:+994507101015">+994507101015</a>
-                    <!-- <a href="https://wa.me/994507101015">+994507101015</a> -->
-                </div>
-
+            <div class="address">
+                <h2>Store in Baku</h2>
+                <a>@Model.Address</a>
             </div>
 
-            <form method="post">
-                <h3>Get In Touch</h3>
+            <div class="contact">
+                <a href="mailto:@(Model.Email)">@Model.Email</a>
+                <a href="tel:@(Model.Number)">@Model.Number</a>
+            </div>
 
-                <div class="form-box">
-                    <input type="text" class="form-input" placeholder="Name *">
-                </div>
+        </div>
 
-                <div class="form-box">
-                    <input type="email" class="form-input" placeholder="Email *">
-                </div>
+        <form method="post">
+            <h3>Get In Touch</h3>
 
+            <div class="form-box">
+                <input type="text" class="form-input" placeholder="Name *">
+            </div>
 
-                <div class="form-box">
-                    <textarea name="texts" placeholder="Your Message..."></textarea>
-                </div>
-
-                <button type="submit" class="submit">SUBMIT</button>
-
-            </form>
+            <div class="form-box">
+                <input type="email" class="form-input" placeholder="Email *">
+            </div>
 
 
-        </section>
+            <div class="form-box">
+                <textarea name="texts" placeholder="Your Message..."></textarea>
+            </div>
+
+            <button type="submit" class="submit">SUBMIT</button>
+
+        </form>
 
 
-    </main>
+    </section>
 
 
-@section script{
+</main>
+
+
+@section script {
     <script src="~/cilent/assets/js/contact.js"></script>
 }

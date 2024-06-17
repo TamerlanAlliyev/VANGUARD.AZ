@@ -1,5 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 using Vanguard.Areas.Admin.ViewModels.Blog;
 using Vanguard.Data;
 using Vanguard.Models;
@@ -13,9 +15,11 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;
 
-    public BlogController(VanguardContext context)
+    readonly UserManager<AppUser> _userManager;
+    public BlogController(VanguardContext context, UserManager<AppUser> userManager)
     {
         _context = context;
+        _userManager = userManager;
     }
 
     public async Task<IActionResult> Index(BlogViewVM postMV, int[]? tagId)
@@ -25,9 +29,10 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
             .Include(b => b.Images)
             .Include(b => b.AppUser)
             .ThenInclude(b => b.AllowedEmployee!.Role)
+            .Include(b=>b.BlogComments)
             .Include(b => b.Categories)
             .ThenInclude(bc => bc.Category)
-            .Include(b => b.BlogTags).AsQueryable(); 
+            .Include(b => b.BlogTags).AsQueryable();
 
         if (tagId != null && tagId.Length > 0)
         {
@@ -84,6 +89,7 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
             IsVideo = b.Images.FirstOrDefault(i => !i.IsDeleted && i.IsMain).IsVideo,
             Created = b.CreatedDate,
             CreatedBy = b.AppUser.FullName!,
+            Comment = b.BlogComments!.Count()
         }).ToList();
 
         BlogViewVM vm = new BlogViewVM
@@ -108,37 +114,96 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
 
     public async Task<IActionResult> Detail(int? id)
     {
-        if(id == null||id<1) return BadRequest();
+        if (id == null || id < 1) return BadRequest();
 
-        var blog = await _context.Blogs
+
+        var query = _context.Blogs
+                            .Where(b => !b.IsDeleted)
+                            .Include(b => b.Images)
+                            .Include(b => b.AppUser)
+                            .ThenInclude(b => b.AllowedEmployee!.Role)
+                            .Include(b => b.BlogComments)
+                            .Include(b => b.Categories)
+                            .ThenInclude(bc => bc.Category)
+                            .Include(b => b.BlogTags).AsQueryable();
+
+
+        var blog = await query
          .Where(b => !b.IsDeleted)
          .Include(b => b.Images)
          .Include(b => b.AppUser)
          .ThenInclude(b => b.AllowedEmployee!.Role)
          .Include(b => b.Categories)
          .ThenInclude(bc => bc.Category)
-         .FirstOrDefaultAsync(b=>b.Id==id);
+         .Select(b => new BlogGetVM
+         {
+             Title = b.Title,
+             MainDescription = b.MainDescription,
+             AddinationDescription = b.AddinationDescription,
+             Author = b.AppUser.FullName,
+             CreatedBy = b.AppUser.FullName,
+             Created = b.CreatedDate,
+             Clicked = b.Clickeds,
+             Id = b.Id,
+             Image = b.Images!.Where(b => b.IsMain && !b.IsDeleted).Select(i => new BlogImageVM
+             {
+                 Url = i.Url,
+                 IsVideo = i.IsVideo,
+             })!.FirstOrDefault()!,
+             AddunationImages = b.Images.Where(b => !b.IsMain && !b.IsDeleted).Select(i => new BlogImageVM
+             {
+                 Url = i.Url,
+                 IsVideo = i.IsVideo,
+             }).ToList(),
+             Categories = b.Categories.Select(c => c.Category.Name).ToList(),
+             Comments = b.BlogComments!.Count()
+
+         })
+         .FirstOrDefaultAsync(b => b.Id == id);
 
 
-        var Categorblogs = await _context.Blogs
-                                .Include(b => b.Categories)
-                                .ThenInclude(bc => bc.Category)
-                                .ToListAsync();
+        var popularBlogs = query
+         .Where(b => !b.IsDeleted)
+         .OrderByDescending(b => b.Clickeds)
+         .Take(5)
+         .Select(b => new BlogAllVM
+         {
+             Id = b.Id,
+             Title = b.Title,
+             Clicked = b.Clickeds,
+             Image = b.Images!.FirstOrDefault(i => !i.IsDeleted && i.IsMain)!.Url,
+             IsVideo = b.Images!.FirstOrDefault(i => !i.IsDeleted && i.IsMain)!.IsVideo,
+             Created = b.CreatedDate,
+             CreatedBy = b.AppUser.FullName!,
+             Author = b.AppUser.FullName!,
+         }).ToList();
 
-        var categories = Categorblogs
-            .SelectMany(b => b.Categories)
-            .Select(bc => bc.Category)
-            .Distinct()
-            .ToList();
 
 
+
+        var categories = query
+                        .SelectMany(b => b.Categories)
+                        .Select(bc => bc.Category)
+                        .Distinct()
+                        .ToList();
+
+
+        var tags = query.Where(b => b.Id == id).SelectMany(b => b.BlogTags)
+                        .Select(bc => bc.Tag)
+                        .Distinct()
+                        .ToList();
+        
+        var comments = await _context.BlogComments.Where(b => b.BlogId == id).Include(c=>c.AppUser).ThenInclude(u=>u.Image).ToListAsync();
 
         BlogDetailVM vm = new BlogDetailVM
         {
             Blog = blog,
             Categories = categories,
+            PopularBlogs = popularBlogs,
+            Tags = tags,
+            Comments = comments
+
         };
-        blog.Clickeds = blog.Clickeds == 0 || blog.Clickeds == null ? 1 : blog.Clickeds + 1;
         await _context.SaveChangesAsync();
 
         return View(vm);
@@ -164,24 +229,22 @@ public class BlogController : Microsoft.AspNetCore.Mvc.Controller
         return PartialView("_BlogTagsSearchPartialView");
     }
 
-
-    //public async Task<IActionResult> TagSearch(string? text)
-    //{
-    //    List<Tag> tags = new List<Tag>();
-    //    if (text == null)
-    //    {
-    //        return View(null);
-    //    }
-
-    //    text = text.ToLower().Trim();
-
-    //    tags = await _context.Tags
-    //        .Where(p => !p.IsDeleted && p.Name.Contains(text))
-    //        .Include(p => p.BlogTags)
-    //        .Where(p => p.BlogTags.Any(bt => bt.TagId == p.Id))
-    //        .ToListAsync();
-
-
-    //    return View(tags != null ? tags : null);
-    //}
+    [HttpPost]
+    public async Task<IActionResult> AddComment(BlogDetailVM comment)
+    {
+        var user = await _userManager.GetUserAsync((ClaimsPrincipal)User);
+        if (user == null)
+        {
+            return Unauthorized();
+        }
+        BlogComment com = new BlogComment
+        {
+            BlogId=comment.BlogComment.BlogId,
+            Comment = comment.BlogComment.Comment,
+            AppUser = user,
+        };
+        await _context.BlogComments.AddAsync(com);
+        await _context.SaveChangesAsync();
+        return RedirectToAction("Detail", new {Id= comment.BlogComment.BlogId });
+    }
 }

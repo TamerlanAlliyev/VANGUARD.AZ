@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using NuGet.Configuration;
@@ -10,10 +11,14 @@ using Vanguard.Data;
 using Vanguard.Extensions;
 using Vanguard.Helpers;
 using Vanguard.Models;
+using YourNamespace.Filters;
 
 namespace Vanguard.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin, Editor")]
+[ServiceFilter(typeof(AdminAuthorizationFilter))]
+
 public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;

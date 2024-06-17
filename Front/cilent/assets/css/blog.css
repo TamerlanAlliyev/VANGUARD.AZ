@@ -1,6 +1,9 @@
 .header-info {
     background: transparent;
 }
+.head-url {
+    display: none;
+}
 
 
 .header-info.scrolled {
@@ -577,7 +580,24 @@ main {
         margin: auto;
         /* height: 100vh; */
     }
+    .head-url {
+        display: flex;
+        width: 100%;
+        max-width: 1280px;
+        margin: 3% auto 0%;
+        padding: 20px;
+        color: #fff;
+        background: #000;
+    }
 
+    .head-url a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .head-url span {
+        margin: 0 10px;
+    }
 
     .blogs {
         width: 80%;
@@ -621,6 +641,7 @@ main {
 
     .blog nav .blog-categories {
         font-size: 18px;
+        margin: 2% auto 0;
     }
 
     .blog-container {

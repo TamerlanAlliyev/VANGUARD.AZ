@@ -25,5 +25,5 @@ public class Blog:BaseAuditable
     public IFormFile? AddinationFile { get; set; }
 
     public List<Image> Images { get; set; } = null!;
-
+    public List<BlogComment>? BlogComments {  get; set; }     
 }

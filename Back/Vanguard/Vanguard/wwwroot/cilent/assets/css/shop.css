@@ -13,6 +13,9 @@
     gap: 10%;
     margin-top: 20px;
 }
+.head-url {
+    display: none;
+}
 
 
 .buttons-filter button {
@@ -2338,9 +2341,6 @@ input[type="number"]::-webkit-outer-spin-button {
 =================================================*/
 
 @media screen and (min-width: 768px) {
-    .head-url {
-        display: none;
-    }
 
 
 

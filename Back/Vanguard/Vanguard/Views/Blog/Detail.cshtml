@@ -5,17 +5,14 @@
     <link rel="stylesheet" href="~/cilent/assets/css/blog-detail.css">
 }
 
-@{
-    var mainImage = Model.Blog.Images.FirstOrDefault(i => !i.IsDeleted && i.IsMain);
-}
 
 <main>
 
     <section class="header-news">
 
-        
+
         <div class="banner">
-    
+
             <video autoplay loop muted plays-inline>
                 <source src="~/cilent/assets/videos/Untitled video - Made with Clipchamp (1).mp4" type="video/mp4">
             </video>
@@ -24,6 +21,11 @@
         <h1>BLOGS</h1>
     </section>
 
+    <div class="head-url">
+        <span><a asp-action="index" asp-controller="home">Home </a></span> /
+        <span><a asp-action="index" asp-controller="blog">Blog</a></span> /
+        <span> Detail</span>
+    </div>
 
 
     <section style="height: 100vh;" class="section blog">
@@ -38,9 +40,9 @@
                 <div class="blog-header">
                     <div>
                         <a class="blog-header-category" href="#">
-                            @foreach (var cat in Model.Blog.Categories.ToList())
+                            @foreach (var cat in Model.Blog.Categories)
                             {
-                                @cat.Category.Name
+                                @cat
 
                                 @(cat != Model.Blog.Categories.Last() ? " , " : "")
                             }
@@ -52,39 +54,40 @@
 
                     <div class="blog-rating">
                         <span>
-                            By: <a href="#">@Model.Blog.AppUser.FullName</a>
+                            By: <a href="#">@Model.Blog.Author</a>
                         </span>
 
                         <span>
                             <img src="/cilent/assets/icons/clock.svg" alt="">
-                            @Model.Blog.CreatedDate.ToString("dd MM yyyy")
+                            @Model.Blog.Created.ToString("dd MM yyyy - HH:MM")
                         </span>
 
                         <span>
                             <img src="~/cilent/assets/icons/comment.svg" alt="">
-                            700 Comments
+                            @(Model.Blog.Comments) Comments
                         </span>
 
                         <span>
                             <img src="~/cilent/assets/icons/view.svg" alt="">
-                            @(Model.Blog.Clickeds) Views
+                            @(Model.Blog.Clicked) Views
                         </span>
                     </div>
                 </div>
 
-                <div style="width:100%; height:100%; max-height:1000px" class="blog-main-img">
+                <div class="blog-main-img">
 
-                    @if (mainImage != null)
+                    @if (Model.Blog.Image != null)
                     {
-                        if (mainImage.IsVideo)
+                        if (Model.Blog.Image.IsVideo)
                         {
-                            <video style="height:500px; object-fit:contain" loop muted playsinline controls>
-                                <source src="@Url.Content("~/cilent/assets/blogs/" + mainImage.Url)" type="video/mp4">
+                            <video autoplay loop muted playsinline controls>
+                                <source src="@Url.Content("~/cilent/assets/blogs/" + Model.Blog.Image.Url)" type="video/mp4">
                             </video>
+
                         }
                         else
                         {
-                            <img src="@Url.Content("~/cilent/assets/blogs/" + mainImage.Url)" alt="">
+                            <img src="@Url.Content("~/cilent/assets/blogs/" + Model.Blog.Image.Url)" alt="">
                         }
                     }
 
@@ -117,14 +120,14 @@
                             <div class="swiper-wrapper">
 
                                 <div class="swiper-slide">
-                                <img src="~/cilent/assets/images/products/035dabb5-c40c-43bd-ac53-000dd95ec13f_7ed13d8bdeedefe285e61d01f3d024fb.jpg" alt="">
+                                    <img src="~/cilent/assets/images/products/035dabb5-c40c-43bd-ac53-000dd95ec13f_7ed13d8bdeedefe285e61d01f3d024fb.jpg" alt="">
                                 </div>
 
 
-                                @if(Model.Blog.Images.Where(i=>i.IsDeleted&&!i.IsMain).ToList()!=null)
+                                @if (Model.Blog.AddunationImages != null)
                                 {
 
-                                    foreach (var img in Model.Blog.Images.Where(i => i.IsDeleted && !i.IsMain).ToList())
+                                    foreach (var img in Model.Blog.AddunationImages)
                                     {
                                         if (img.IsVideo)
                                         {
@@ -142,7 +145,7 @@
                                             </div>
                                         }
                                     }
-                               
+
                                 }
                             </div>
                             <div class="swiper-pagination"></div>
@@ -171,6 +174,8 @@
 
                         <ul class="comment-box">
 
+                            @foreach(var com in Model.Comments){
+                                
                             <li class="com-user-data">
 
                                 <div class="com-data">
@@ -178,246 +183,35 @@
                                     <div class="user-box">
 
                                         <div class="user-profil-img">
-                                            <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
+                                                <img src="~/cilent/assets/images/account/@com.AppUser!.Image?.Url" alt="">
                                         </div>
 
                                         <div class="com-user-info">
-                                            <span class="comment-date">Date</span>
-                                            <h5>User Name</h5>
+                                                <span class="comment-date">@com.CreatedDate.ToString("dd MM yyyy - HH:MM")</span>
+                                            <h5>@com.AppUser.FullName</h5>
 
-                                            <p>
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                Consequuntur
-                                                error maxime, rem neque totam fugiat culpa dolore odit dolorem quis
-                                                nesciunt aspernatur perferendis est sunt ab quas porro molestiae
-                                                excepturi?
+                                            <p>@com.Comment
                                             </p>
                                         </div>
                                     </div>
 
-                                    <div class="comment-reply">
-                                        <a class="reply" data-comment="">REPLY</a>
-                                    </div>
+                                  
                                 </div>
 
-
-
-                                <ul class="sub-comment-box">
-
-                                    <li class="sub-com-user-data">
-
-                                        <div class="sub-user-box">
-
-                                            <div class="sub-user-profil-img">
-                                                <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                            <div class="sub-com-user-info">
-                                                <span class="sub-comment-date">Date</span>
-                                                <h5>User Name</h5>
-
-                                                <p>
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Consequuntur error maxime, rem neque totam fugiat culpa dolore
-                                                    odit dolorem quis nesciunt aspernatur perferendis est sunt ab
-                                                    quas porro molestiae excepturi?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-
-                                    <li class="sub-com-user-data">
-
-                                        <div class="sub-user-box">
-
-                                            <div class="sub-user-profil-img">
-                                                <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                            <div class="sub-com-user-info">
-                                                <span class="sub-comment-date">Date</span>
-                                                <h5>User Name</h5>
-
-                                                <p>
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Consequuntur error maxime, rem neque totam fugiat culpa dolore
-                                                    odit dolorem quis nesciunt aspernatur perferendis est sunt ab
-                                                    quas porro molestiae excepturi?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-                                    <li class="sub-com-user-data">
-
-                                        <div class="sub-user-box">
-
-                                            <div class="sub-user-profil-img">
-                                                <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                            <div class="sub-com-user-info">
-                                                <span class="sub-comment-date">Date</span>
-                                                <h5>User Name</h5>
-
-                                                <p>
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Consequuntur error maxime, rem neque totam fugiat culpa dolore
-                                                    odit dolorem quis nesciunt aspernatur perferendis est sunt ab
-                                                    quas porro molestiae excepturi?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-
-
-                                </ul>
-
-                                <div class="reply-comment active">
-                                    <form method="post">
-
-                                        <textarea name="reply-comment" id="reply-comment"
-                                                  placeholder="Reply to your comment">
-                                            </textarea>
-                                        <button type="submit" class="reply-btn">Submit</button>
-                                    </form>
-                                </div>
                             </li>
+                            }
 
-
-                            <li class="com-user-data">
-
-                                <div class="com-data">
-
-                                    <div class="user-box">
-
-                                        <div class="user-profil-img">
-                                            <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                        </div>
-
-                                        <div class="com-user-info">
-                                            <span class="comment-date">Date</span>
-                                            <h5>User Name</h5>
-
-                                            <p>
-                                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                Consequuntur
-                                                error maxime, rem neque totam fugiat culpa dolore odit dolorem quis
-                                                nesciunt aspernatur perferendis est sunt ab quas porro molestiae
-                                                excepturi?
-                                            </p>
-                                        </div>
-                                    </div>
-
-                                    <div class="comment-reply">
-                                        <a class="reply" data-comment="">REPLY</a>
-                                    </div>
-                                </div>
-
-
-
-                                <ul class="sub-comment-box">
-
-                                    <li class="sub-com-user-data">
-
-                                        <div class="sub-user-box">
-
-                                            <div class="sub-user-profil-img">
-                                                <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                            <div class="sub-com-user-info">
-                                                <span class="sub-comment-date">Date</span>
-                                                <h5>User Name</h5>
-
-                                                <p>
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Consequuntur error maxime, rem neque totam fugiat culpa dolore
-                                                    odit dolorem quis nesciunt aspernatur perferendis est sunt ab
-                                                    quas porro molestiae excepturi?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-
-                                    <li class="sub-com-user-data">
-
-                                        <div class="sub-user-box">
-
-                                            <div class="sub-user-profil-img">
-                                                <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                            <div class="sub-com-user-info">
-                                                <span class="sub-comment-date">Date</span>
-                                                <h5>User Name</h5>
-
-                                                <p>
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Consequuntur error maxime, rem neque totam fugiat culpa dolore
-                                                    odit dolorem quis nesciunt aspernatur perferendis est sunt ab
-                                                    quas porro molestiae excepturi?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-                                    <li class="sub-com-user-data">
-
-                                        <div class="sub-user-box">
-
-                                            <div class="sub-user-profil-img">
-                                                <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                            </div>
-
-                                            <div class="sub-com-user-info">
-                                                <span class="sub-comment-date">Date</span>
-                                                <h5>User Name</h5>
-
-                                                <p>
-                                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                                                    Consequuntur error maxime, rem neque totam fugiat culpa dolore
-                                                    odit dolorem quis nesciunt aspernatur perferendis est sunt ab
-                                                    quas porro molestiae excepturi?
-                                                </p>
-                                            </div>
-                                        </div>
-
-                                    </li>
-
-
-
-                                </ul>
-
-                                <div class="reply-comment active">
-                                    <form method="post">
-
-                                        <textarea name="reply-comment" id="reply-comment"
-                                                  placeholder="Reply to your comment">
-                                            </textarea>
-                                        <button type="submit" class="reply-btn">Submit</button>
-                                    </form>
-                                </div>
-                            </li>
 
                         </ul>
 
 
 
                     </div>
-                    <div class="add-comment">
+                    <div class="add-comment" >
 
-                        <form method="post">
-
-                            <textarea name="reply-comment" id="reply-comment" placeholder="Add to your comment">
+                        <form method="post" asp-action="AddComment">
+                            <input asp-for="@Model.BlogComment.BlogId" value="@Model.Blog.Id" hidden/>
+                            <textarea asp-for="@Model.BlogComment.Comment"   id="reply-comment" placeholder="Add to your comment">
                             </textarea>
                             <button type="submit" class="reply-btn">Submit</button>
                         </form>
@@ -443,37 +237,66 @@
                     <img src="~/cilent/assets/icons/close-black.svg" alt="">
                 </a>
 
+                <div class="selected-tags" style="flex-direction:column;gap:15px">
+
+                    <h3>Tags</h3>
+                    <ul class="selected-tags-list">
+
+                        @if (Model.Tags != null)
+                        {
+                            foreach (var tag in Model.Tags)
+                            {
+                                <li> <p>@tag.Name</p>  </li>
+                            }
+                        }
+
+
+                    </ul>
+
+                </div>
+
                 <div class="searchs-container">
-                  
-                 
+
+
 
                     <div class="popular-blogs">
 
                         <h2>POPULAR BLOGS</h2>
 
                         <ul class="blog-boxs">
-                            <li class="popular-blog-box">
-                                <a class="blog-box-img" href="#">
-                                    <img src="~/cilent/assets/images/products/product.jpg" alt="">
-                                </a>
+                            @if (Model.PopularBlogs != null || Model.PopularBlogs.Count() > 0)
+                            {
+                                @foreach (var blog in Model.PopularBlogs)
+                                {
 
-                                <div class="blog-box-info">
-                                    <p>Date</p>
-                                    <a href="#">Lorem ipsum dolor ssssssssssssssssssssssssssssssit amet</a>
-                                </div>
+                                    <li class="popular-blog-box">
 
-                            </li>
 
-                            <li class="popular-blog-box">
-                                <a class="blog-box-img" href="#">
-                                    <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
-                                </a>
+                                        @if (blog.IsVideo)
+                                        {
+                                            <a class="blog-box-img" asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">
+                                                <video style="object-fit:cover; width:100%;height:100%;" loop muted plays-inline>
+                                                    <source src="~/cilent/assets/blogs/@blog.Image"
+                                                            type="video/mp4">
+                                                </video>
+                                            </a>
+                                        }
+                                        else
+                                        {
+                                            <a asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id" class="blog-box-img">
+                                                <img src="~/cilent/assets/blogs/@blog.Image" alt="blog-image">
+                                            </a>
+                                        }
 
-                                <div class="blog-box-info">
-                                    <p>Date</p>
-                                    <a href="#">Lorem ipsum dolor sit adsfsdmsssssssssssssset</a>
-                                </div>
-                            </li>
+                                        <div class="blog-box-info">
+                                            <p>@blog.Author</p>
+                                            <a asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">@blog.Title</a>
+                                        </div>
+
+                                    </li>
+                                }
+                            }
+
                         </ul>
 
 
@@ -486,15 +309,15 @@
                         <ul class="b-categories">
 
 
-                            <li><a class="@(Model.SelectedCategory>0?"":"active")" asp-action="Index" >ALL</a></li>
+                            <li><a class="@(Model.SelectedCategory>0?"":"active")" asp-action="Index">ALL</a></li>
 
                             @foreach (var cat in Model.Categories)
                             {
                                 <li><a asp-action="Index" asp-route-catId="@cat.Id" class="@(Model.SelectedCategory==cat.Id?"active":"")">@cat.Name</a></li>
                             }
 
-                         
- 
+
+
                         </ul>
                     </div>
                 </div>

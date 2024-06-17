@@ -39,7 +39,13 @@ public class VanguardContext : IdentityDbContext<AppUser>
     public DbSet<SettingProduct> SettingProducts { get; set; }
 	public DbSet<SettingHomeHero> SettingHomeHero {  get; set; }
 	public DbSet<Rating> Ratings { get; set; }
-	protected override void OnModelCreating(ModelBuilder modelBuilder)
+	public DbSet<BlogComment> BlogComments { get; set; }
+	public DbSet<About> About { get; set; }
+	public DbSet<AboutAccordion> AboutAccordion { get; set; }
+	public DbSet<AboutEmploees> AboutEmploees { get; set; }
+
+	public DbSet<Contact> Contacts { get; set; }	
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		base.OnModelCreating(modelBuilder);
 		modelBuilder.Entity<IdentityUser>().HasKey(u => u.Id);

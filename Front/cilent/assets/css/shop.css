@@ -5,7 +5,9 @@
 .header-info.scrolled {
     background-color: #000000;
 }
-
+.head-url {
+    display: none;
+}
 
 .buttons-filter {
     display: flex;
@@ -2338,9 +2340,7 @@ input[type="number"]::-webkit-outer-spin-button {
 =================================================*/
 
 @media screen and (min-width: 768px) {
-    .head-url {
-        display: none;
-    }
+
 
 
 

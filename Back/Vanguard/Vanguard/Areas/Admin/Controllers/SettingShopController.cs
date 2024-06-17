@@ -1,14 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vanguard.Areas.Admin.Services.Interfaces;
 using Vanguard.Data;
 using Vanguard.Extensions;
 using Vanguard.Helpers;
 using Vanguard.Models;
+using YourNamespace.Filters;
 
 namespace Vanguard.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin, Editor")]
+[ServiceFilter(typeof(AdminAuthorizationFilter))]
 public class SettingShopController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly VanguardContext _context;

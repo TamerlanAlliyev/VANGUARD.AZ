@@ -170,12 +170,12 @@
                     {
                         <h3>@user.FullName</h3>
                         <ul>
-                            <li><a href="#">My Account</a></li>
-                            <li><a href="#">Basket</a></li>
-                            <li><a href="#">Wish List</a></li>
+                            <li><a asp-action="Index" asp-controller="setting">My Account</a></li>
+                            <li><a asp-action="Index" asp-controller="basket">Basket</a></li>
+                            <li><a asp-action="Index" asp-controller="setting" asp-route-id="3" >Wish List</a></li>
                             <li><a asp-controller="Account" asp-action="Logout">Log Out</a></li>
                         </ul>
-                        @if (await UserManager.IsInRoleAsync(user, "Admin"))
+                        @if (!await UserManager.IsInRoleAsync(user, "Customer"))
                         {
                             <h4><a class="go-admin" asp-area="Admin" asp-action="Index" asp-controller="Home">Go Dashboard</a></h4>
                         }

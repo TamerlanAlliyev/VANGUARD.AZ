@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -13,6 +14,8 @@ using YourNamespace.Filters;
 namespace Vanguard.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin, Editor")]
+
 [ServiceFilter(typeof(AdminAuthorizationFilter))]
 public class CategoryController : Microsoft.AspNetCore.Mvc.Controller
 {

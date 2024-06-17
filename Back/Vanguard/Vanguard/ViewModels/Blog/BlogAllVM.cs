@@ -4,6 +4,7 @@ public class BlogAllVM
 {
     public int Id { get; set; }
     public int Clicked { get; set; }
+    public int Comment { get; set; }
     public string Title { get; set; } = null!;
     public string? Descripton { get; set; } 
     public string Image { get; set; } = null!;

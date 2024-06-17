@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Security.Claims;
@@ -10,10 +11,12 @@ using Vanguard.Data;
 using Vanguard.Extensions;
 using Vanguard.Helpers;
 using Vanguard.Models;
+using YourNamespace.Filters;
 
 namespace Vanguard.Areas.Admin.Controllers;
-
+[Authorize(Roles = "Admin, Author")]
 [Area("Admin")]
+[ServiceFilter(typeof(AdminAuthorizationFilter))]
 public class BlogController : Microsoft.AspNetCore.Mvc.Controller
 {
     readonly IProductService _productService;

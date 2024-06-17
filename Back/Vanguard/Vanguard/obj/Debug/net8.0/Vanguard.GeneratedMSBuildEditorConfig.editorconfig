@@ -26,6 +26,38 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\ROG\Desktop\VANGUARD.AZ\Back\Vanguard\Vanguard
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/About/Accordion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcQWNjb3JkaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/About/AccordionCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcQWNjb3JkaW9uQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/About/AccordionEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcQWNjb3JkaW9uRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/About/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/About/Emploee.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcRW1wbG9lZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/About/EmploeeCreate.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcRW1wbG9lZUNyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/About/EmploeeEdit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcRW1wbG9lZUVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/About/Title.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWJvdXRcVGl0bGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Account/AccessCode.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWNjb3VudFxBY2Nlc3NDb2RlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -244,6 +276,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Payment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGF5bWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/Desktop/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Setting/Index.cshtml]

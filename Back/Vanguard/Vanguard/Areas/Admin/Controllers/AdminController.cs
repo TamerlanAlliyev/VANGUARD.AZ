@@ -8,9 +8,10 @@ using YourNamespace.Filters;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.BlazorIdentity.Pages;
 using Vanguard.Helpers;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Vanguard.Areas.Admin.Controllers;
-//[Authorize(Roles = "Admin")]
+[Authorize(Roles = "Admin")]
 [Area("Admin")]
 [ServiceFilter(typeof(AdminAuthorizationFilter))]
 

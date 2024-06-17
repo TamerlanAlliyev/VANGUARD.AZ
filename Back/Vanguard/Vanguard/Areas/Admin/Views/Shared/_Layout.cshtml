@@ -887,6 +887,43 @@
 						</ul>
 					</li>
 
+
+
+					<li>
+						<a class="has-arrow " onclick="javascript:void()" aria-expanded="false">
+							<i class="bi bi-info-circle"></i>
+							<span class="nav-text">About Page</span>
+						</a>
+						<ul aria-expanded="false">
+							<span style="font-size:16px; margin-left:15%;font-weight:600;">About Page</span>
+							<li><a asp-action="Title" asp-controller="About" asp-area="Admin">Title</a></li>
+							<li><a asp-action="Contact" asp-controller="About" asp-area="Admin">Contact</a></li>
+
+							<li>
+								<a class="has-arrow " onclick="javascript:void()" aria-expanded="false">
+									<span class="nav-text">Accordion</span>
+								</a>
+								<ul aria-expanded="false">
+									<li><a asp-action="Accordion" asp-controller="About" asp-area="Admin">List</a></li>
+									<li><a asp-action="AccordionCreate" asp-controller="About" asp-area="Admin">Create</a></li>
+								</ul>
+							</li>
+
+
+							<li>
+								<a class="has-arrow " onclick="javascript:void()" aria-expanded="false">
+									<span class="nav-text">Emploee</span>
+								</a>
+								<ul aria-expanded="false">
+									<li><a asp-action="Emploee" asp-controller="About" asp-area="Admin">List</a></li>
+									<li><a asp-action="EmploeeCreate" asp-controller="About" asp-area="Admin">Create</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+
+
+
 					<li>
 						<a class="has-arrow " onclick="javascript:void()" aria-expanded="false">
 							<i class="fa-solid fa-shirt"></i>

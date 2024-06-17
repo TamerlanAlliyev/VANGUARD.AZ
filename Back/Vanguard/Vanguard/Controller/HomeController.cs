@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Braintree;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
@@ -7,6 +8,7 @@ using Vanguard.Data;
 using Vanguard.Models;
 using Vanguard.Services.Interfaces;
 using Vanguard.ViewModels.Blog;
+using Vanguard.ViewModels.Book;
 using Vanguard.ViewModels.Home;
 using Vanguard.ViewModels.Shop;
 using Vanguard.ViewModels.Wish;
@@ -17,12 +19,15 @@ public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     readonly UserManager<AppUser> _userManager;
     readonly IShopService _shopService;
     readonly IHomeService _homeService;
-    public HomeController(VanguardContext context, UserManager<AppUser> userManager, IShopService shopService, IHomeService homeService)
+    private readonly IBraintreeService _braintreeService;
+
+    public HomeController(VanguardContext context, UserManager<AppUser> userManager, IShopService shopService, IHomeService homeService, IBraintreeService braintreeService)
     {
         _context = context;
         _userManager = userManager;
         _shopService = shopService;
         _homeService = homeService;
+        _braintreeService = braintreeService;
     }
 
     public async Task<IActionResult> Index()
@@ -67,6 +72,33 @@ public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     public IActionResult Search(string? text)
     {
         return ViewComponent("Search", new { text = text });
+    }
+
+
+    [HttpPost]
+    public IActionResult Create(BookPurchaseVM model)
+    {
+        var gateway = _braintreeService.GetGateway();
+        var request = new TransactionRequest
+        {
+            Amount = Convert.ToDecimal("250"),
+            PaymentMethodNonce = model.Nonce,
+            Options = new TransactionOptionsRequest
+            {
+                SubmitForSettlement = true
+            }
+        };
+
+        Result<Transaction> result = gateway.Transaction.Sale(request);
+
+        if (result.IsSuccess())
+        {
+            return View("Success");
+        }
+        else
+        {
+            return View("Failure");
+        }
     }
 }
 

@@ -3,8 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\controller\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\controller\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,15 +42,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\HomeController.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Controller\\HomeController.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\HomeController.cs",
+              "RelativeToolTip": "Vanguard\\Controller\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGUAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T20:50:40.674Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Vanguard\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAF4AAAAAAAAA",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Payment\\Index.cshtml",
+              "RelativeDocumentMoniker": "Vanguard\\Views\\Payment\\Index.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Payment\\Index.cshtml",
+              "RelativeToolTip": "Vanguard\\Views\\Payment\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-13T15:46:31.304Z",
+              "WhenOpened": "2024-06-16T20:49:42.396Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\appsettings.json",
+              "RelativeDocumentMoniker": "Vanguard\\appsettings.json",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\appsettings.json",
+              "RelativeToolTip": "Vanguard\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-06-16T20:47:03.484Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Controller\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\PaymentController.cs*",
+              "RelativeToolTip": "Vanguard\\Controller\\PaymentController.cs*",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwDkAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-16T14:57:54.334Z",
               "EditorCaption": ""
             }
           ]

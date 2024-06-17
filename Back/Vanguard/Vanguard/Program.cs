@@ -7,7 +7,6 @@ using Vanguard.Data;
 using Vanguard.Models;
 using Vanguard.Services.Implementations;
 using Vanguard.Services.Interfaces;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using YourNamespace.Filters;
 
 namespace Vanguard
@@ -35,6 +34,8 @@ namespace Vanguard
             builder.Services.AddScoped<ISettingHomeHeroService, SettingHomeHeroService>();
 			builder.Services.AddTransient<IEmailService, EmailService>();
             builder.Services.AddScoped<AdminAuthorizationFilter>();
+            builder.Services.AddTransient<IBraintreeService, BraintreeService>();
+
 
             builder.Services.AddScoped<IHomeService, HomeService>();
 

@@ -1,0 +1,118 @@
+﻿@model Contact
+
+
+<div class="content-body">
+    <div class="container-fluid">
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a onclick="javascript:void(0)">About</a></li>
+                <li class="breadcrumb-item"><a onclick="javascript:void(0)">Contact</a></li>
+            </ol>
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Contact </h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-validation">
+                            <form method="post" class="needs-validation" novalidate="">
+                                <div class="row">
+                                    <div class="col-xl-12">
+
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Address 
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input asp-for="Address" type="text" class="form-control" id="validationCustom01" placeholder="Enter a Address.." required="">
+                                                <div class="invalid-feedback">
+                                                    Please enter a Address.
+                                                </div>
+                                            </div>
+                                            <span class="text-danger" asp-validation-for="Address"></span>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Address Url
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input asp-for="AddressUrl" type="text" class="form-control" id="validationCustom01" placeholder="Enter a Address Url.." required="">
+                                                <div class="invalid-feedback">
+                                                    Please enter a Addres sUrl.
+                                                </div>
+                                            </div>
+                                            <span class="text-danger" asp-validation-for="AddressUrl"></span>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Address Link
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input asp-for="AddressLink" type="text" class="form-control" id="validationCustom01" placeholder="Enter a Address Link.." required="">
+                                                <div class="invalid-feedback">
+                                                    Please enter a     Address Link.
+                                                </div>
+                                            </div>
+                                            <span class="text-danger" asp-validation-for="AddressLink"></span>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Phone Nummber
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input asp-for="Number" type="text" class="form-control" id="validationCustom01" placeholder="Enter a Phone Nummber.." required="">
+                                                <div class="invalid-feedback">
+                                                    Please enter a Phone Nummber.
+                                                </div>
+                                            </div>
+                                            <span class="text-danger" asp-validation-for="Number"></span>
+                                        </div>
+
+                                        <div class="mb-3 row">
+                                            <label class="col-lg-4 col-form-label" for="validationCustom01">
+                                                Email
+                                                <span class="text-danger">*</span>
+                                            </label>
+                                            <div class="col-lg-6">
+                                                <input asp-for="Email" type="text" class="form-control" id="validationCustom01" placeholder="Enter a Email.." required="">
+                                                <div class="invalid-feedback">
+                                                    Please enter a Email.
+                                                </div>
+                                            </div>
+                                            <span class="text-danger" asp-validation-for="Email"></span>
+                                        </div>
+                                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                                    </div>
+
+                                </div>
+                                <div class="row ">
+                                    <div class="mb-3 row">
+                                        <div class=" ms-auto">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script {
+    <script src="vendor/jquery-nice-select/js/jquery.nice-select.min.js"></script>
+}

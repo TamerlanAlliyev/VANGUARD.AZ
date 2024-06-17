@@ -23,4 +23,6 @@ public class AppUser : IdentityUser
 
     public ICollection<Blog>? Blogs { get; set; }
     public List<Rating>? Ratings { get; set; }
+    public List<BlogComment>? BlogComments { get; set; }
+
 }

@@ -1,0 +1,107 @@
+﻿@model List<AboutAccordion>
+
+@section style {
+    <link href="~/admin/vendor/datatables/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">Accordion</a></li>
+                <li class="breadcrumb-item"><a href="javascript:void(0)">List</a></li>
+            </ol>
+
+
+        </div>
+        <!-- row -->
+        <div class="row justify-content-center">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title">Accordion List</h4>
+                        <a asp-action="AccordionCreate" asp-area="Admin" asp-controller="About" class="btn btn-primary">Create Accordion</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table id="example3" class="display " style="min-width: 545px">
+                                <thead>
+                                    <tr>
+                                        <th class="w-25">Title</th>
+                                        <th >Description</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var Accordion in Model)
+                                    {
+                                        <tr>
+                                            <td>@Accordion.Title</td>
+                                            <td>@Accordion.Description</td>
+                                            <td>
+                                                <div class="d-flex">
+                                                    <a asp-action="AccordionEdit" asp-route-id="@Accordion.Id" asp-controller="About" asp-area="Admin" class="btn btn-primary shadow btn-xs sharp me-1"><i class="fas fa-pencil-alt"></i></a>
+                                                    <a  class="btn btn-danger shadow btn-xs sharp preview" data-id="@Accordion.Id"><i class="fa fa-trash"></i></a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section script {
+    <script src="~/admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/admin/js/plugins-init/datatables.init.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const trashButtons = document.querySelectorAll('.preview');
+
+            trashButtons.forEach(trashButton => {
+                trashButton.addEventListener('click', function (event) {
+                    event.preventDefault();
+
+                    let dataId = this.getAttribute('data-id');
+
+                    swal({
+                        title: "Are you sure?",
+                        text: "This tag can be restored after deletion!",
+                        icon: "warning",
+                        buttons: true,
+                        dangerMode: true,
+                    }).then((willDelete) => {
+                        if (willDelete) {
+                            let tr = this.closest('tr');
+                            fetch('AccordionDelete/' + dataId)
+                                .then(response => {
+                                    if (response.ok) {
+                                        toastr["success"]("Accordion deleted successfully");
+                                        tr.remove();
+                                    } else {
+                                        toastr["error"]("An error occurred while deleting the Accordion");
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Error:', error);
+                                    toastr["error"]("An error occurred while deleting the Accordion");
+                                });
+                        } else {
+                            swal("Accordion not deleted!");
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+}
+

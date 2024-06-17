@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Vanguard.Areas.Admin.ViewModels.Gender;
 using Vanguard.Data;
@@ -8,6 +9,8 @@ using YourNamespace.Filters;
 namespace Vanguard.Areas.Admin.Controllers;
 
 [Area("Admin")]
+[Authorize(Roles = "Admin, Editor")]
+
 [ServiceFilter(typeof(AdminAuthorizationFilter))]
 
 public class GenderController : Microsoft.AspNetCore.Mvc.Controller
