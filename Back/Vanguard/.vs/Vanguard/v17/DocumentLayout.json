@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\controller\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\controller\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\controller\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\extensions\\imagefileextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\extensions\\imagefileextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\views\\payment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -43,54 +43,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\HomeController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Controller\\HomeController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\HomeController.cs",
-              "RelativeToolTip": "Vanguard\\Controller\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGUAAAAEAAAA",
+              "Title": "ImageFileExtension.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Extensions\\ImageFileExtension.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Extensions\\ImageFileExtension.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Extensions\\ImageFileExtension.cs",
+              "RelativeToolTip": "Vanguard\\Extensions\\ImageFileExtension.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAIwB0AAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T20:50:40.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T09:43:21.849Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Payment\\Index.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Views\\Payment\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Views\\Payment\\Index.cshtml",
-              "RelativeToolTip": "Vanguard\\Views\\Payment\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAIAAAA",
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
+              "ViewState": "AQIAAI8DAAAAAAAAAAAAAAcAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-16T20:49:42.396Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T09:02:44.52Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\appsettings.json",
-              "RelativeDocumentMoniker": "Vanguard\\appsettings.json",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\appsettings.json",
-              "RelativeToolTip": "Vanguard\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-06-16T20:47:03.484Z",
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
+              "ViewState": "AQIAAOEBAAAAAAAAAAAQwOoBAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-17T20:35:02.321Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PaymentController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\PaymentController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Controller\\PaymentController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\PaymentController.cs*",
-              "RelativeToolTip": "Vanguard\\Controller\\PaymentController.cs*",
-              "ViewState": "AQIAABIAAAAAAAAAAAAYwDkAAAAMAAAA",
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
+              "ViewState": "AQIAAPcBAAAAAAAAAAAUwAUCAAAuAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-16T14:57:54.334Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-17T20:34:57.166Z"
             }
           ]
         }

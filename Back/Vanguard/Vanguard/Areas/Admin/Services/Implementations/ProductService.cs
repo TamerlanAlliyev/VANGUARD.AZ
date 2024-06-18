@@ -586,8 +586,6 @@ public class ProductService : IProductService
     public async Task<ServiceResult> CreateAsync(ProductCreateVM vm)
     {
 
-
-
         List<Color> colors = new List<Color>();
         List<Product> products = new List<Product>();
         List<Image> images = new List<Image>();
