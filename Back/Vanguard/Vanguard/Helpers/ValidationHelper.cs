@@ -5,12 +5,14 @@ using Vanguard.Areas.Admin.ViewModels.Blog;
 using Vanguard.Areas.Admin.ViewModels.ProductViewModels;
 using Vanguard.Models;
 using Vanguard.ViewModels.Account;
+using Vanguard.ViewModels.Contact;
 using Vanguard.ViewModels.Setting;
 
 namespace Vanguard.Helpers;
 
 public static class ValidationHelper
 {
+
     public static void ValidateProduct(ProductEditVM model, ModelStateDictionary modelState)
     {
         if (string.IsNullOrEmpty(model.Name))
@@ -118,6 +120,34 @@ public static class ValidationHelper
             if (!IsValidPostalCode(model.Postal))
                 modelState.AddModelError("Postal", "Invalid postal code format.");
         }
+    }
+
+
+    public static void ValidateConnect(ContactVM model, ModelStateDictionary modelState)
+    {
+        if (model.CustomerConnection == null)
+        {
+            modelState.AddModelError(string.Empty, "Customer connection data is required.");
+            return;
+        }
+
+        if (string.IsNullOrEmpty(model.CustomerConnection.Name))
+            modelState.AddModelError(nameof(model.CustomerConnection.Name), "Name is required.");
+
+        if (model.CustomerConnection.Name?.Length > 150)
+            modelState.AddModelError(nameof(model.CustomerConnection.Name), "Your Name cannot exceed 150 characters");
+
+        if (string.IsNullOrEmpty(model.CustomerConnection.Email))
+            modelState.AddModelError(nameof(model.CustomerConnection.Email), "Email is required.");
+
+        if (model.CustomerConnection.Email?.Length > 150)
+            modelState.AddModelError(nameof(model.CustomerConnection.Email), "Your Email cannot exceed 150 characters");
+
+        if (string.IsNullOrEmpty(model.CustomerConnection.Message))
+            modelState.AddModelError(nameof(model.CustomerConnection.Message), "Message is required.");
+
+        if (model.CustomerConnection.Message?.Length > 1000)
+            modelState.AddModelError(nameof(model.CustomerConnection.Message), "Your message cannot exceed 1000 characters");
     }
 
 

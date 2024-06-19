@@ -4,7 +4,6 @@ using Microsoft.EntityFrameworkCore;
 using Newtonsoft.Json;
 using System.Security.Claims;
 using Vanguard.Data;
-using Vanguard.Migrations;
 using Vanguard.Models;
 using Vanguard.ViewModels.Basket;
 

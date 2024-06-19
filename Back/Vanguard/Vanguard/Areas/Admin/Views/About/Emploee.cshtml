@@ -13,6 +13,7 @@
 
         <div class="row page-titles">
             <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="javascript:void(0)">About</a></li>
                 <li class="breadcrumb-item active"><a onclick="javascript:void(0)">Emploees</a></li>
                 <li class="breadcrumb-item"><a onclick="javascript:void(0)">List</a></li>
             </ol>
@@ -46,7 +47,7 @@
                                     @foreach (var Emploees in Model)
                                     {
                                         <tr class="Emploees">
-                                            <td><img width="250" height="150" style="object-fit:cover" src="~/cilent/assets/settings/about/emploee/@(Emploees.Image!=null?Emploees.Image.Url:"")" alt=""></td>
+                                            <td><img width="300" height="300" style="object-fit:cover" src="~/cilent/assets/settings/about/emploee/@(Emploees.Image!=null?Emploees.Image.Url:"")" alt=""></td>
                                             <td>@Emploees.FullName</td>
                                             <td>@Emploees.Position</td>
                                             <td>

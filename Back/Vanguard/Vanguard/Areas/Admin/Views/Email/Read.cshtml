@@ -1,0 +1,111 @@
+﻿@model Connection
+@section style{
+    <link rel="shortcut icon" type="image/png" href="~/admin/images/favicon.png">
+    <link href="~/admin/vendor/jquery-nice-select/css/nice-select.css" rel="stylesheet">
+}
+
+<div class="content-body">
+    <div class="container-fluid">
+
+        <div class="row page-titles">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item active"><a href="~/admin/javascript:void(0)">Amil</a></li>
+                <li class="breadcrumb-item"><a href="~/admin/javascript:void(0)">Read</a></li>
+            </ol>
+        </div>
+
+        <!-- row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="email-left-box generic-width px-0 mb-5">
+                            <div class="p-0">
+                                <a href="~/admin/email-compose.html" class="btn btn-primary btn-block">Compose</a>
+                            </div>
+                            <div class="mail-list rounded mt-4">
+                                <a asp-controller="email" asp-action="inbox" class="list-group-item active"><i class="fa fa-inbox font-18 align-middle me-2"></i> Inbox <span class="badge badge-primary badge-sm float-end">198</span> </a>
+                        
+                            </div>
+                            
+                        </div>
+                        <div class="email-right-box ms-0 ms-sm-4 ms-sm-0">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="right-box-padding">
+                                        <div class="toolbar mb-4" role="toolbar">
+                                            <div class="btn-group mb-1">
+                                                <button id="@Model.Id" class="btn btn-primary light px-3 message-trash" type="button">
+                                                    <i class="fa-solid fa-trash-can"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="read-content">
+                                             
+                                            <div class="media mb-2 mt-3">
+                                                <div class="media-body">
+                                            
+
+                                                    <span class="pull-end">@Model.CreatedDate.ToShortTimeString()</span>
+                                                    <h4 class="my-1 text-primary">@Model.Name</h4>
+                                                    <p class="read-content-email">
+                                                        To: Me, @Model.Email
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="read-content-body">
+                                                <h6 class="mb-4">@Model.Message</h6>
+                                            </div>
+                                          
+                                            <div class="mb-3 pt-3">
+                                                <textarea name="write-email" id="write-email" cols="30" rows="5" class="form-control" placeholder="It's really an amazing.I want to know more about it..!"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="btn btn-primary " type="button">Send</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section script {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.message-trash').addEventListener('click', function () {
+                var buttonId = this.id;
+                var id = parseInt(buttonId);
+
+                fetch(`/Admin/Email/EmailDeleteGet/${id}`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                })
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not successful');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        console.log('Messages marked as deleted', data);
+                    })
+                    .catch(error => {
+                        console.error('A problem occurred during the fetch operation:', error);
+                    });
+
+                window.location.href = "/Admin/Email/Inbox"
+            });
+        });
+
+
+    </script>
+}

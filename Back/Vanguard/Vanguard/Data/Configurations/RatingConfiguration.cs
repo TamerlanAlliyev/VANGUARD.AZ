@@ -12,14 +12,12 @@ namespace Vanguard.Data.Configurations
 
             builder.HasOne(r => r.Product)
                    .WithMany(p => p.Ratings)
-                   .HasForeignKey(r => r.ProductId)
-                   .OnDelete(DeleteBehavior.Cascade);
+                   .HasForeignKey(r => r.ProductId) ;
 
 
             builder.HasOne(r => r.AppUser)
                    .WithMany(p => p.Ratings)
-                   .HasForeignKey(r => r.AppUserId)
-                   .OnDelete(DeleteBehavior.Cascade);
+                   .HasForeignKey(r => r.AppUserId) ;
 
 
             builder.Property(r => r.Comment)

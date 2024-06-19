@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 using Vanguard.Areas.Admin.ViewModels.About;
@@ -6,10 +7,13 @@ using Vanguard.Data;
 using Vanguard.Extensions;
 using Vanguard.Helpers;
 using Vanguard.Models;
+using YourNamespace.Filters;
 
 namespace Vanguard.Areas.Admin.Controllers;
 
+[Authorize(Roles = "Admin")]
 [Area("Admin")]
+[ServiceFilter(typeof(AdminAuthorizationFilter))]
 public class AboutController : Microsoft.AspNetCore.Mvc.Controller
 {
 	readonly VanguardContext _context;
@@ -317,6 +321,20 @@ public class AboutController : Microsoft.AspNetCore.Mvc.Controller
 
 	public async Task<IActionResult> Contact()
 	{
+		if (await _context.Contacts.FirstOrDefaultAsync()==null)
+		{
+			Contact contact = new Contact
+			{
+				Address = "Port Baku Mall, 151 Neftchilar Avenue, Baku",
+				AddressUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48613.5977531735!2d49.819509220986006!3d40.40109968039558!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d6bd6211cf9%3A0x343f6b5e7ae56c6b!2zQmFrxLE!5e0!3m2!1saz!2saz!4v1714147771064!5m2!1saz!2saz",
+				AddressLink = "maps.app.goo.gl/WWYfJmJJxduwx3Ne9",
+				Number= "0507101015",
+				Email= "vanguardfashionaz@gmail.com"
+            };
+
+			await _context.Contacts.AddAsync(contact);
+			await _context.SaveChangesAsync();
+		}
 		return View(await _context.Contacts.FirstOrDefaultAsync());
 	}
 

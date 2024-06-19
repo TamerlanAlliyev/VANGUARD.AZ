@@ -7,6 +7,11 @@
 }
 <section class="section">
 
+    <div class="head-url">
+        <span><a asp-action="index" asp-controller="home">Home </a></span> /
+        <span>About Us</span>
+    </div>
+
     <div class="about-header">
         <h1>About Us</h1>
         <p>
@@ -83,14 +88,14 @@
 
                     @foreach (var emp in Model.Emploees)
                     {
-                        
-                    <div class="swiper-slide">
 
-                        <img src="~/cilent/assets/settings/about/emploee/@emp.Image.Url" alt="">
-                        <h5>@emp.FullName</h5>
-                        <p>@emp.Position</p>
+                        <div class="swiper-slide">
 
-                    </div>
+                            <img style="object-fit:top center" src="~/cilent/assets/settings/about/emploee/@emp.Image.Url" alt="">
+                            <h4>@emp.FullName</h4>
+                            <p style="font-size:12px">@emp.Position</p>
+
+                        </div>
                     }
 
                 </div>

@@ -3,8 +3,9 @@ using Vanguard.Models.BaseEntitys;
 
 namespace Vanguard.Models;
 
-public class HomeBanner: BaseEntity
+public class HomeBanner 
 {
+    public int Id { get; set; }
 	public string Title { get; set; } = null!;
 	public string? SubTitle { get; set; }
 	public int? CategoryId { get; set; }

@@ -8,7 +8,6 @@ using Vanguard.Services.Interfaces;
 using Vanguard.ViewModels.Home;
 using Vanguard.ViewModels.Wish;
 using Microsoft.AspNetCore.Identity;
-using Vanguard.Migrations;
 using Microsoft.AspNetCore.Http;
 using Vanguard.ViewModels.Blog;
 
@@ -114,8 +113,13 @@ namespace Vanguard.Services.Implementations
             var wishProductIds = wishesVM.Select(w => w.Id).ToList();
 
             var products = await _shopService.ProductgetQuery()
-                .Where(p => p.ProductCategory.Any(pc => pc.CategoryId == hero.CategoryId) || p.ProductTag.Any(pt => pt.TagId == hero.CategoryId))
+                .Where(p => p.ProductCategory.Any(pc => pc.CategoryId == hero.CategoryId) && p.ProductTag.Any(pt => pt.TagId == hero.TagId))
                 .ToListAsync();
+
+            if (products.Count()==0)
+            {
+                products = await _shopService.ProductgetQuery().ToListAsync();
+            }
 
             if (hero.Offer > 0 && hero.Offer <= 100)
             {

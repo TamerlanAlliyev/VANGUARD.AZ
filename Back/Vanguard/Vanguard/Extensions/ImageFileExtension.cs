@@ -10,8 +10,11 @@ public static class ImageFileExtension
         if (string.IsNullOrEmpty(folderPath))
             throw new ArgumentNullException(nameof(folderPath));
 
+        Directory.CreateDirectory(folderPath); 
+
         string uniqueFileName = Guid.NewGuid().ToString() + "_" + Path.GetFileName(file.FileName);
         string filePath = Path.Combine(folderPath, uniqueFileName);
+
         using (FileStream fileStream = new FileStream(filePath, FileMode.Create))
         {
             await file.CopyToAsync(fileStream);
@@ -19,6 +22,7 @@ public static class ImageFileExtension
 
         return uniqueFileName;
     }
+
 
     public static bool FileTypeAsync(this IFormFile file, string fileType)
     {

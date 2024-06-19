@@ -153,7 +153,7 @@
                                             </label>
                                             <div class="col-lg-8 ca-container">
 
-                                                <input asp-for="Offer" value="@Model.Offer" min="0" max="100" type="number" class="form-control" placeholder="@(Model.Offer>0?"%"+Model.Offer:"%0")" id="min-date">
+                                                <input asp-for="Offer" value="@Model.Offer" min="0" max="100" type="number" class="form-control" placeholder="@(Model.Offer>0?"%"+Model.Offer:"%0")"  >
                                                 <span asp-validation-for="Title"
                                                       class="text-danger"></span>
 
@@ -172,6 +172,7 @@
                                             <div class="col-lg-6">
 
                                                 <select asp-for="CategoryId" class="form-select" id="single-select" >
+                                                    <option value=""  >All</option>
 
                                                     @if (Model.Category != null)
                                                     {
@@ -209,7 +210,7 @@
                                             <div class="col-lg-6">
 
                                                 <select asp-for="TagId" class="form-select" id="single-select" >
-
+                                                    <option value="">All</option>
                                                     @if (Model.Tag != null)
                                                     {
                                                         <option value="@Model.Tag.Id" selected disabled>@Model.Tag.Name</option>

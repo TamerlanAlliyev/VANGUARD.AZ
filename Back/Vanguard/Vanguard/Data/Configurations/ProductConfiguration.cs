@@ -17,15 +17,13 @@ public class ProductConfiguration:BaseEntityConfiguratiion<Product>
         builder.Property(p => p.Name).HasColumnType("nvarchar").HasMaxLength(150).IsRequired(true);
         builder.Property(p => p.Model).HasColumnType("nvarchar").HasMaxLength(50).IsRequired(true);
         builder.Property(p=>p.ShortDescription).HasColumnType("nvarchar").HasMaxLength(200).IsRequired(true);
-        builder.Property(i => i.Description).HasColumnType("nvarchar").HasMaxLength(450).IsRequired(false);
+        builder.Property(i => i.Description).HasColumnType("nvarchar").HasMaxLength(1000).IsRequired(false);
         builder.Property(p => p.SellPrice).HasColumnType("decimal").HasPrecision(18, 2).IsRequired(true);
         builder.Property(p=>p.DiscountPrice).HasColumnType("decimal").HasPrecision(18, 2).IsRequired(false);
         builder.Property(p=>p.ClicketCount).HasColumnType("int").IsRequired(false);
 
         builder.ToTable("Products");
 
-		//builder.HasOne(g => g.Gender)
-		//	.WithMany(g => g.Products)
-		//	.HasForeignKey(g => g.GenderId);
+	 
 	}
 }

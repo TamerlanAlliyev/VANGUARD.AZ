@@ -1,22 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\",
+  "WorkspaceRootPath": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\services\\implementations\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\onedrive\\desktop\\new folder\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\aboutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\extensions\\imagefileextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\extensions\\imagefileextension.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\desktop\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\views\\product\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\onedrive\\desktop\\new folder\\vanguard.az\\back\\vanguard\\vanguard\\controller\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\controller\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,68 +18,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ImageFileExtension.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Extensions\\ImageFileExtension.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Extensions\\ImageFileExtension.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Extensions\\ImageFileExtension.cs",
-              "RelativeToolTip": "Vanguard\\Extensions\\ImageFileExtension.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAIwB0AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-18T09:43:21.849Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Views\\Product\\Create.cshtml",
-              "ViewState": "AQIAAI8DAAAAAAAAAAAAAAcAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-18T09:02:44.52Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductService.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Services\\Implementations\\ProductService.cs",
-              "ViewState": "AQIAAOEBAAAAAAAAAAAQwOoBAAARAAAA",
+              "Title": "AboutController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "ToolTip": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\AboutController.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwBwAAAAcAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T20:35:02.321Z",
+              "WhenOpened": "2024-06-19T23:14:30.248Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\ROG\\Desktop\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAPcBAAAAAAAAAAAUwAUCAAAuAAAA",
+              "Title": "BasketController.cs",
+              "DocumentMoniker": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\BasketController.cs",
+              "RelativeDocumentMoniker": "Vanguard\\Controller\\BasketController.cs",
+              "ToolTip": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Controller\\BasketController.cs",
+              "RelativeToolTip": "Vanguard\\Controller\\BasketController.cs",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAYwAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-17T20:34:57.166Z"
+              "WhenOpened": "2024-06-19T23:14:00.393Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             }
           ]
         }

@@ -44,6 +44,18 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                                                     .ToListAsync();
             return View(products);
         }
+        catch (KeyNotFoundException ex)
+        {
+            return View("Error404", new ServiceResult(false, ex.Message, 404));
+        }
+        catch (ArgumentException ex)
+        {
+            return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
+        }
         catch (Exception ex)
         {
             return View("Error500", new ServiceResult(false, ex.Message, 500));
@@ -61,6 +73,18 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                                                             .Include(p => p.Images)
                                                             .ToListAsync();
             return View(products);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return View("Error404", new ServiceResult(false, ex.Message, 404));
+        }
+        catch (ArgumentException ex)
+        {
+            return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
         }
         catch (Exception ex)
         {
@@ -85,6 +109,18 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
             };
             return View(vm);
         }
+        catch (KeyNotFoundException ex)
+        {
+            return View("Error404", new ServiceResult(false, ex.Message, 404));
+        }
+        catch (ArgumentException ex)
+        {
+            return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
+        }
         catch (Exception ex)
         {
             return View("Error500", new ServiceResult(false, ex.Message, 500));
@@ -96,11 +132,7 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
     [HttpPost]
     public async Task<IActionResult> Create(ProductCreateVM vm)
     {
-
-
-
         ModelState.Clear();
-
         ValidationHelper.ValidateProductCreate(vm, ModelState);
 
         if (!ModelState.IsValid)
@@ -122,7 +154,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
             List<ProductCategory> productCategories = new List<ProductCategory>();
             List<ProductTag> productTags = new List<ProductTag>();
             List<ProductColor> productColors = new List<ProductColor>();
-
 
             var exsistsSize = await _context.Sizes.Where(s => !s.IsDeleted).ToListAsync();
 
@@ -161,7 +192,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                 };
                 products.Add(product);
 
-
                 //ProductColor Create
                 ProductColor productColor = new ProductColor
                 {
@@ -169,7 +199,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                     Color = color
                 };
                 productColors.Add(productColor);
-
 
                 //Category Selects
                 if (vm.SelectedCategoryIds != null)
@@ -185,7 +214,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                     }
                 }
 
-
                 //Tag Selects
                 if (vm.SelectedTagIds != null)
                 {
@@ -199,8 +227,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                         productTags.Add(productTag);
                     }
                 }
-
-
 
 
                 //Images Create
@@ -312,14 +338,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 
 
 
-
-
-
-
-
-
-
-
                 if (item.Sizes != null)
                 {
                     foreach (var siz in item.Sizes)
@@ -329,7 +347,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 
                         if (exsistsSize.Any(s => s.Name == siz.Size))
                         {
-
                             size = exsistsSize.FirstOrDefault(s => s.Name == siz.Size);
                             info = new Information
                             {
@@ -375,26 +392,32 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
                             };
                             informations.Add(info);
                         }
-
-
                     }
                 }
             }
 
+            await using (var transaction = await _context.Database.BeginTransactionAsync())
+            {
+                _context.Colors.AddRange(colors);
+                _context.Products.AddRange(products);
+                _context.Images.AddRange(images);
+                _context.Sizes.AddRange(sizes);
+                _context.Informations.AddRange(informations);
+                _context.ProductCategory.AddRange(productCategories);
+                _context.ProductTag.AddRange(productTags);
+                _context.ProductColor.AddRange(productColors);
 
+                await _context.SaveChangesAsync();
 
-
-            await _context.Colors.AddRangeAsync(colors);
-            await _context.Products.AddRangeAsync(products);
-            await _context.Images.AddRangeAsync(images);
-            await _context.Sizes.AddRangeAsync(sizes);
-            await _context.Informations.AddRangeAsync(informations);
-            await _context.ProductCategory.AddRangeAsync(productCategories);
-            await _context.ProductTag.AddRangeAsync(productTags);
-            await _context.ProductColor.AddRangeAsync(productColors);
-
-            await _context.SaveChangesAsync();
-
+                await transaction.CommitAsync();
+            }
+        }
+        catch (DbUpdateException ex)
+        {
+           
+            var errorMessage = $"DB Update Exception: {ex.Message} InnerException: {ex.InnerException?.Message}";
+      
+            return View("Error500", new ServiceResult(false, errorMessage, 500));
         }
         catch (KeyNotFoundException ex)
         {
@@ -411,7 +434,6 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
 
         return RedirectToAction("Index");
     }
-
 
 
 
@@ -441,6 +463,10 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
         catch (ArgumentException ex)
         {
             return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
         }
         catch (Exception ex)
         {
@@ -474,6 +500,18 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
             await _productService.EditAsync(vm);
             return RedirectToAction("Index");
         }
+        catch (KeyNotFoundException ex)
+        {
+            return View("Error404", new ServiceResult(false, ex.Message, 404));
+        }
+        catch (ArgumentException ex)
+        {
+            return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
+        }
         catch (Exception ex)
         {
             return View("Error500", new ServiceResult(false, ex.Message, 500));
@@ -498,6 +536,10 @@ public class ProductController : Microsoft.AspNetCore.Mvc.Controller
         catch (ArgumentException ex)
         {
             return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
         }
         catch (Exception ex)
         {

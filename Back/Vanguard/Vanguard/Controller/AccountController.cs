@@ -47,63 +47,83 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
     [HttpPost]
     public async Task<IActionResult> Login(string ReturnUrl, LoginVM vm)
     {
-
-        var user = await _userManager.FindByEmailAsync(vm.Email);
-        if (user == null)
-        {
-            ModelState.AddModelError("", "Email not found");
-            return View(vm);
-        }
-
-
-
-        var result = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.RememberMe, true);
-        if (!result.IsLockedOut && user.LockoutEnd.HasValue)
-        {
-            ModelState.AddModelError("", "Wait until " + user.LockoutEnd.Value.AddHours(4).ToString("HH:mm:ss"));
-        }
-        if (!result.Succeeded)
-        {
-            ModelState.AddModelError("", "Email or Password is wrong");
-            return View();
-
-        }
-        if (ReturnUrl != null)
-        {
-            return Redirect(ReturnUrl);
-        }
-
-
-
-
-        var basket = HttpContext.Request.Cookies["basket"];
-        if (basket != null)
+        try
         {
 
-            List<BasketVM> basketItems = basket == null ? new List<BasketVM>() : JsonConvert.DeserializeObject<List<BasketVM>>(basket);
-
-            List<Basket> bskList = new List<Basket>();
-
-            foreach (var item in basketItems)
+            var user = await _userManager.FindByEmailAsync(vm.Email);
+            if (user == null)
             {
-                Basket bsk = new Basket
-                {
-                    InformationId = item.Id,
-                    Quantity = item.Count,
-                    AppUserId = user.Id,
-                    AppUser = user,
-                };
-                bskList.Add(bsk);
+                ModelState.AddModelError("", "Email not found");
+                return View(vm);
+            }
+
+
+
+            var result = await _signInManager.PasswordSignInAsync(user, vm.Password, vm.RememberMe, true);
+            if (!result.IsLockedOut && user.LockoutEnd.HasValue)
+            {
+                ModelState.AddModelError("", "Wait until " + user.LockoutEnd.Value.AddHours(4).ToString("HH:mm:ss"));
+            }
+            if (!result.Succeeded)
+            {
+                ModelState.AddModelError("", "Email or Password is wrong");
+                return View();
 
             }
-            HttpContext.Response.Cookies.Delete("basket");
+            if (ReturnUrl != null)
+            {
+                return Redirect(ReturnUrl);
+            }
 
-            await _context.Baskets.AddRangeAsync(bskList);
-            await _context.SaveChangesAsync();
+
+
+
+
+            var basket = HttpContext.Request.Cookies["basket"];
+            if (basket != null)
+            {
+
+                List<BasketVM> basketItems = basket == null ? new List<BasketVM>() : JsonConvert.DeserializeObject<List<BasketVM>>(basket);
+
+                List<Basket> bskList = new List<Basket>();
+
+                foreach (var item in basketItems)
+                {
+                    Basket bsk = new Basket
+                    {
+                        InformationId = item.Id,
+                        Quantity = item.Count,
+                        AppUserId = user.Id,
+                        AppUser = user,
+                    };
+                    bskList.Add(bsk);
+
+                }
+                HttpContext.Response.Cookies.Delete("basket");
+
+                await _context.Baskets.AddRangeAsync(bskList);
+                await _context.SaveChangesAsync();
+            }
+
+
+            return RedirectToAction("Index", "Home");
         }
-
-
-        return RedirectToAction("Index", "Home");
+        catch (KeyNotFoundException ex)
+        {
+            return View("Error404", new ServiceResult(false, ex.Message, 404));
+        }
+        catch (ArgumentException ex)
+        {
+            return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
+        }
+        catch (Exception ex)
+        {
+            return View("Error500", new ServiceResult(false, ex.Message, 500));
+        }
     }
 
 
@@ -124,91 +144,112 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
             return View(vm);
         }
 
-        string userName;
-        AppUser exsistUserName;
-        do
+        try
         {
-            Guid guid = Guid.NewGuid();
-            string guidString = guid.ToString();
-            string lastPart = guidString.Substring(guidString.Length - 12);
-            userName = $"{vm.Name}-{vm.Surname}_" + lastPart;
-            exsistUserName = await _userManager.FindByNameAsync(userName);
-
-        } while (exsistUserName != null);
 
 
-
-        var userEmail = await _userManager.FindByEmailAsync(vm.Email);
-        if (userEmail != null)
-        {
-            ModelState.AddModelError("", "Email already exists");
-            return View(vm);
-        }
-
-        AppUser user = new AppUser
-        {
-            Name = vm.Name,
-            Surname = vm.Surname,
-            FullName = $"{vm.Name} {vm.Surname}",
-            Email = vm.Email,
-            UserName = userName,
-            PhoneNumber = vm.PhoneNumber,
-        };
-
-
-
-        var result = await _userManager.CreateAsync(user, vm.Password);
-
-        if (!result.Succeeded)
-        {
-            foreach (var error in result.Errors)
+            string userName;
+            AppUser exsistUserName;
+            do
             {
-                ModelState.AddModelError("", $"{error.Code} - {error.Description}");
+                Guid guid = Guid.NewGuid();
+                string guidString = guid.ToString();
+                string lastPart = guidString.Substring(guidString.Length - 12);
+                userName = $"{vm.Name}-{vm.Surname}_" + lastPart;
+                exsistUserName = await _userManager.FindByNameAsync(userName);
+
+            } while (exsistUserName != null);
+
+
+
+            var userEmail = await _userManager.FindByEmailAsync(vm.Email);
+            if (userEmail != null)
+            {
+                ModelState.AddModelError("", "Email already exists");
+                return View(vm);
             }
-            return View(vm);
-        }
 
-        var roleResult = await _userManager.AddToRoleAsync(user, "Customer");
-
-        if (!roleResult.Succeeded)
-        {
-            foreach (var error in roleResult.Errors)
+            AppUser user = new AppUser
             {
-                ModelState.AddModelError("", error.Description);
-            }
-            return View(vm);
-        }
-
-        var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-        var link = Url.Action("EmailConfirmation", "Account", new { token = token, user = user }, Request.Scheme);
-        _emailService.Send(user.Email, "Email Confirmation", $"<a href='{link}'>Confirm</a>", true);
-
-
-        Image image = new Image();
-
-        if (vm.ImageFile != null)
-        {
-            if (!vm.ImageFile.FileSize(5) || !vm.ImageFile.FileTypeAsync("image/"))
-            {
-                throw new ArgumentException("Invalid file type or size.");
-            }
-            if (!vm.ImageFile.FileTypeAsync("image"))
-            {
-                throw new ArgumentException("MainImage", "Files must be 'Image' type!");
-            }
-            var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "images", "account");
-            var fileName = await vm.ImageFile.SaveToAsync(path);
-            image = new Image
-            {
-                Url = fileName,
-                AppUser = user
+                Name = vm.Name,
+                Surname = vm.Surname,
+                FullName = $"{vm.Name} {vm.Surname}",
+                Email = vm.Email,
+                UserName = userName,
+                PhoneNumber = vm.PhoneNumber,
             };
-            await _context.Images.AddAsync(image);
+
+
+
+            var result = await _userManager.CreateAsync(user, vm.Password);
+
+            if (!result.Succeeded)
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", $"{error.Code} - {error.Description}");
+                }
+                return View(vm);
+            }
+
+            var roleResult = await _userManager.AddToRoleAsync(user, "Customer");
+
+            if (!roleResult.Succeeded)
+            {
+                foreach (var error in roleResult.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+                return View(vm);
+            }
+
+            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+            var link = Url.Action("EmailConfirmation", "Account", new { token = token, user = user }, Request.Scheme);
+            _emailService.Send(user.Email, "Email Confirmation", $"<a href='{link}'>Confirm</a>", true);
+
+
+            Image image = new Image();
+
+            if (vm.ImageFile != null)
+            {
+                if (!vm.ImageFile.FileSize(5) || !vm.ImageFile.FileTypeAsync("image/"))
+                {
+                    throw new ArgumentException("Invalid file type or size.");
+                }
+                if (!vm.ImageFile.FileTypeAsync("image"))
+                {
+                    throw new ArgumentException("MainImage", "Files must be 'Image' type!");
+                }
+                var path = Path.Combine(_environment.WebRootPath, "cilent", "assets", "images", "account");
+                var fileName = await vm.ImageFile.SaveToAsync(path);
+                image = new Image
+                {
+                    Url = fileName,
+                    AppUser = user
+                };
+                await _context.Images.AddAsync(image);
+            }
+
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Login");
         }
-
-        await _context.SaveChangesAsync();
-
-        return RedirectToAction("Login");
+        catch (KeyNotFoundException ex)
+        {
+            return View("Error404", new ServiceResult(false, ex.Message, 404));
+        }
+        catch (ArgumentException ex)
+        {
+            return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
+        }
+        catch (Exception ex)
+        {
+            return View("Error500", new ServiceResult(false, ex.Message, 500));
+        }
     }
 
 
@@ -241,27 +282,50 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
         {
             return View(passwordVM);
         }
-        var userEmail = await _userManager.FindByEmailAsync(passwordVM.Email);
-        if (userEmail == null)
+
+        try
         {
-            ModelState.AddModelError("", "Email not found");
-            return View(userEmail);
+
+
+            var userEmail = await _userManager.FindByEmailAsync(passwordVM.Email);
+            if (userEmail == null)
+            {
+                ModelState.AddModelError("", "Email not found");
+                return View(userEmail);
+            }
+
+
+            var user = await _userManager.FindByIdAsync(userEmail.Id);
+
+            if (user == null)
+            {
+                ModelState.AddModelError("", "User not found");
+                return View(passwordVM);
+            }
+
+            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+            var link = Url.Action("ResetPassword", "Account", new { token = token, user = user }, Request.Scheme);
+            _emailService.Send(user.Email, "Reset Password", $"<a href='{link}'>Password Reset</a>", true);
+
+            return RedirectToAction(nameof(Login));
+
         }
-
-
-        var user = await _userManager.FindByIdAsync(userEmail.Id);
-
-        if (user == null)
+        catch (KeyNotFoundException ex)
         {
-            ModelState.AddModelError("", "User not found");
-            return View(passwordVM);
+            return View("Error404", new ServiceResult(false, ex.Message, 404));
         }
-
-        var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-        var link = Url.Action("ResetPassword", "Account", new { token = token, user = user }, Request.Scheme);
-        _emailService.Send(user.Email, "Reset Password", $"<a href='{link}'>Password Reset</a>", true);
-
-        return RedirectToAction(nameof(Login));
+        catch (ArgumentException ex)
+        {
+            return View("Error400", new ServiceResult(false, ex.Message, 400));
+        }
+        catch (UnauthorizedAccessException ex)
+        {
+            return View("Error401", new ServiceResult(false, ex.Message, 401));
+        }
+        catch (Exception ex)
+        {
+            return View("Error500", new ServiceResult(false, ex.Message, 500));
+        }
     }
 
 
@@ -288,9 +352,5 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
         return RedirectToAction("Login");
     }
 
-    //public async Task CreateRoles()
-    //{
-    //    await _roleManager.CreateAsync(new IdentityRole { Name = "Admin" });
-    //    await _roleManager.CreateAsync(new IdentityRole { Name = "Customer" });
-    //}
+ 
 }

@@ -116,7 +116,24 @@ iframe {
 
 
 @media screen and (min-width: 1024px) {
+    .head-url {
+        display: flex;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0% auto 3%;
+        padding: 20px;
+        color: #fff;
+        background: #000;
+    }
 
+        .head-url a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .head-url span {
+            margin: 0 10px;
+        }
     main h1 {
         font-size: 24px;
         margin: 100px auto 0;

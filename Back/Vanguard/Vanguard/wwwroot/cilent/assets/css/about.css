@@ -18,21 +18,21 @@
     text-align: center;
 }
 
-.about-header h1 {
-    margin-bottom: 2%;
-    font-size: 24px;
-    /* font-size: 32px; */
-}
+    .about-header h1 {
+        margin-bottom: 2%;
+        font-size: 24px;
+        /* font-size: 32px; */
+    }
 
-.about-header p {
-    margin-bottom: 5%;
-    font-size: 14px;
-    line-height: 1.7;
-    /* line-height: 2; */
-    /* font-size: 18px; */
-}
+    .about-header p {
+        margin-bottom: 5%;
+        font-size: 14px;
+        line-height: 1.7;
+        /* line-height: 2; */
+        /* font-size: 18px; */
+    }
 
-.informations-box{
+.informations-box {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -50,12 +50,12 @@
     max-height: 500px;
 }
 
-.about-header-img img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    object-position: top center;
-}
+    .about-header-img img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        object-position: top center;
+    }
 
 
 .informations {
@@ -66,7 +66,6 @@
     align-items: center;
     margin-top: 3%;
     flex-direction: column;
-
 }
 
 .informations-box {
@@ -129,13 +128,13 @@ address strong:first-child {
     flex-direction: column;
 }
 
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 78%;
-    object-fit: cover;
-    margin-bottom: 5%;
-}
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 78%;
+        object-fit: cover;
+        margin-bottom: 5%;
+    }
 
 
 .our-team {
@@ -154,7 +153,7 @@ h5 {
     /* font-size: 16px; */
 }
 
-.swiper-pagination{
+.swiper-pagination {
     width: 100%;
     position: static;
 }
@@ -172,36 +171,59 @@ h5 {
     --swiper-pagination-top: auto;
 }
 
+.head-url {
+    display: none;
+}
+
 
 
 @media screen and (min-width: 1024px) {
     .about-header h1 {
         font-size: 32px;
     }
-    
+
+    .head-url {
+        display: flex;
+        width: 100%;
+        max-width: 1280px;
+        margin: 0% auto 3%;
+        padding: 20px;
+        color: #fff;
+        background: #000;
+    }
+
+        .head-url a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .head-url span {
+            margin: 0 10px;
+        }
+
     .about-header p {
         line-height: 2;
         font-size: 18px;
     }
-    
-    .informations-box{
+
+    .informations-box {
         flex-direction: row;
         align-items: start;
     }
 
-    
+
     .inf-description {
         font-size: 16px;
     }
-    
+
     .inf-title {
         width: 20%;
         font-size: 20px;
     }
-    
-    
-    
-    
+
+
+
+
     .inf-description a {
         font-size: 16px;
     }
@@ -209,7 +231,7 @@ h5 {
     h5 {
         font-size: 20px;
     }
-    
+
     .our-team p {
         font-size: 16px;
     }

@@ -2372,12 +2372,12 @@
             const price = parseFloat(priceInput.value) || 0;
             let discountPrice = parseFloat(discountInput.value) || 0;
 
-            if (!isNaN(price) && !isNaN(discountPrice)) {
+            if (!isNaN(price) && !isNaN(discountPrice) && price > 0) {
                 discountPrice = Math.max(0, Math.min(price, discountPrice));
-                let offer = ((price - discountPrice) / price) * 100;
-                offerInput.value = offer;
+                const offer = ((price - discountPrice) / price) * 100;
+                offerInput.value = offer.toFixed(2);
 
-                discountInput.value = discountPrice === 0 ? "NaN" : discountPrice;
+                discountInput.value = discountPrice.toFixed(2);
             } else {
                 discountInput.value = "NaN";
                 offerInput.value = "NaN";
@@ -2388,16 +2388,11 @@
             let offer = parseFloat(offerInput.value) || 0;
             const price = parseFloat(priceInput.value) || 0;
 
-            if (!isNaN(price) && !isNaN(offer)) {
-                if (price > 0) {
-                    offer = Math.max(0, Math.min(100, offer));
-                    offerInput.value = offer;
-                    let discountPrice = price * (1 - (offer / 100));
-                    discountInput.value = discountPrice;
-                } else {
-                    offerInput.value = "0.0";
-                    discountInput.value = "0.0";
-                }
+            if (!isNaN(price) && !isNaN(offer) && price > 0) {
+                offer = Math.max(0, Math.min(100, offer));
+                offerInput.value = offer.toFixed(2);
+                const discountPrice = price * (1 - (offer / 100));
+                discountInput.value = discountPrice.toFixed(2);
             } else {
                 offerInput.value = "NaN";
                 discountInput.value = "NaN";
@@ -2405,12 +2400,14 @@
         }
 
         function calculatePrice() {
-            let offer = parseFloat(offerInput.value) || 0;
-            let discountPrice = parseFloat(discountInput.value) || 0;
+            const offer = parseFloat(offerInput.value) || 0;
+            const discountPrice = parseFloat(discountInput.value) || 0;
 
             if (!isNaN(offer) && !isNaN(discountPrice) && offer >= 0 && offer <= 100) {
                 const price = discountPrice / (1 - (offer / 100));
-                priceInput.value = price;
+                priceInput.value = price.toFixed(2);
+            } else {
+                priceInput.value = "NaN";
             }
         }
 

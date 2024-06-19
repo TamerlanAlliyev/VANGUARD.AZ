@@ -80,8 +80,8 @@
                      style="background-image: url(cilent/assets/settings/banner/@(Model.Banners[0].Image.Url));">
 
                     <div class="list-one-info">
-                        <P>@Model.Banners[0]?.Category?.Name</P>
-                        <a href="#">@Model.Banners[0]?.Title</a>
+                        <P>@Model.Banners[0]?.Title</P>
+                        <a href="#">@Model.Banners[0]?.SubTitle</a>
                     </div>
 
                     <div  class="one-btn">
@@ -100,8 +100,8 @@
                     <div class="list-two-card">
 
                         <div class="list-two-info">
-                            <P>@Model.Banners[1]?.Category?.Name</P>
-                            <a href="#">@Model.Banners[1]?.Title</a>
+                            <P>@Model.Banners[1]?.Title</P>
+                            <a href="#">@Model.Banners[1]?.SubTitle</a>
                         </div>
 
                         <div class="two-btn">
@@ -112,17 +112,27 @@
 
                 </div>
 
+                <div class="list-two-product"
+                     style="background-image: url(/cilent/assets/settings/banner/@(Model.Banners[2].Image.Url));">
 
-                <div class="list-two-gift" style="background-image: url(/cilent/assets/settings/banner/@(Model.Banners[2].Image.Url));">
 
-                    <div class="gift-info">
-                        <a>@Model.Banners[2]?.SubTitle</a>
-                        <a>@Model.Banners[2]?.Title</a>
+                    <div class="list-two-card">
+
+                        <div class="list-two-info">
+                            <P>@Model.Banners[2]?.Title</P>
+                            <a href="#">@Model.Banners[2]?.SubTitle</a>
+                        </div>
+
+                        <div class="two-btn">
+                            <a asp-action="Index" asp-route-catId="@Model.Banners[2].CategoryId" asp-controller="Shop">SHOP NOW</a>
+                        </div>
+
                     </div>
 
-                    <a class="shop-btn">SHOP NOW</a>
-
                 </div>
+
+
+           
 
             </div>
 

@@ -768,7 +768,7 @@
 			<div class="dlabnav-scroll">
 				<ul class="metismenu" id="menu">
 					<li>
-						<a class="has-arrow " href="~/admin/javascript:void()" aria-expanded="false">
+						<a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
 							<i class="fas fa-home"></i>
 							<span class="nav-text">Dashboard</span>
 						</a>
@@ -781,34 +781,20 @@
 					</li>
 
 					<li>
-						<a class="has-arrow " href="~/admin/javascript:void()" aria-expanded="false">
+						<a class="has-arrow " href="javascript:void(0);" aria-expanded="false">
 							<i class="fas fa-info-circle"></i>
 							<span class="nav-text">Apps</span>
 						</a>
 						<ul aria-expanded="false">
-							<li><a href="~/admin/app-profile.html">Profile</a></li>
-							<li><a href="~/admin/post-details.html">Post Details</a></li>
 							<li>
-								<a class="has-arrow" href="~/admin/javascript:void()" aria-expanded="false">Email</a>
+								<a class="has-arrow" href="javascript:void(0);" aria-expanded="false">Email</a>
 								<ul aria-expanded="false">
 									<li><a href="~/admin/email-compose.html">Compose</a></li>
-									<li><a href="~/admin/email-inbox.html">Inbox</a></li>
-									<li><a href="~/admin/email-read.html">Read</a></li>
+									<li><a asp-action="Inbox" asp-controller="Email" asp-area="Admin">Inbox</a></li>
 								</ul>
 							</li>
 							<li><a href="~/admin/app-calender.html">Calendar</a></li>
-							<li>
-								<a class="has-arrow" href="~/admin/javascript:void()" aria-expanded="false">Shop</a>
-								<ul aria-expanded="false">
-									<li><a href="~/admin/ecom-product-grid.html">Product Grid</a></li>
-									<li><a href="~/admin/ecom-product-list.html">Product List</a></li>
-									<li><a href="~/admin/ecom-product-detail.html">Product Details</a></li>
-									<li><a href="~/admin/ecom-product-order.html">Order</a></li>
-									<li><a href="~/admin/ecom-checkout.html">Checkout</a></li>
-									<li><a href="~/admin/ecom-invoice.html">Invoice</a></li>
-									<li><a href="~/admin/ecom-customers.html">Customers</a></li>
-								</ul>
-							</li>
+						 
 						</ul>
 					</li>
 

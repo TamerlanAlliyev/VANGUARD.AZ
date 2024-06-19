@@ -244,6 +244,7 @@ public class SettingHomeController : Microsoft.AspNetCore.Mvc.Controller
         exsistBanner.Title = banner.Title;
         exsistBanner.SubTitle = banner.SubTitle;
         exsistBanner.CategoryId = banner.CategoryId;
+
         ViewBag.Categories = await _context.Categories.Where(c => !c.IsDeleted).ToListAsync();
 
         if (banner.ImageFile != null)

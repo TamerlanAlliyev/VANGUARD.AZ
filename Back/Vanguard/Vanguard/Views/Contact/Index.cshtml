@@ -1,4 +1,5 @@
-﻿@model Contact
+﻿@using Vanguard.ViewModels.Contact
+@model ContactVM
 
 @section style {
     <link rel="stylesheet" href="~/cilent/assets/css/contact.css">
@@ -6,8 +7,14 @@
 
 
 <main>
+
+@*     <div class="head-url">
+        <span><a asp-action="index" asp-controller="home">Home </a></span> /
+        <span>CONTACT Us</span>
+    </div> *@
+
     <h1>CONTACT US</h1>
-    <iframe src="@Model.AddressUrl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+    <iframe src="@Model.Contact.AddressUrl" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
     <section class="contact-us">
@@ -17,32 +24,35 @@
 
             <div class="address">
                 <h2>Store in Baku</h2>
-                <a>@Model.Address</a>
+                <a>@Model.Contact.Address</a>
             </div>
 
             <div class="contact">
-                <a href="mailto:@(Model.Email)">@Model.Email</a>
-                <a href="tel:@(Model.Number)">@Model.Number</a>
+                <a href="mailto:@(Model.Contact.Email)">@Model.Contact.Email</a>
+                <a href="tel:@(Model.Contact.Number)">@Model.Contact.Number</a>
             </div>
 
         </div>
 
-        <form method="post">
+        <form   method="post">
             <h3>Get In Touch</h3>
 
             <div class="form-box">
-                <input type="text" class="form-input" placeholder="Name *">
+                <input asp-for=CustomerConnection.Name type="text" class="form-input" placeholder="Name *">
             </div>
+            <span style="color:red;" asp-validation-for="@Model.CustomerConnection.Name"> </span>
 
             <div class="form-box">
-                <input type="email" class="form-input" placeholder="Email *">
+                <input asp-for=CustomerConnection.Email type="email" class="form-input" placeholder="Email *">
             </div>
+            <span style="color:red;" asp-validation-for="@Model.CustomerConnection.Email"> </span>
 
 
             <div class="form-box">
-                <textarea name="texts" placeholder="Your Message..."></textarea>
+                <textarea asp-for="CustomerConnection.Message" name="CustomerConnection.Message" placeholder="Your Message..."></textarea>
             </div>
-
+            <span style="color:red;" asp-validation-for="@Model.CustomerConnection.Message"></span>
+            <!-- Other form elements -->
             <button type="submit" class="submit">SUBMIT</button>
 
         </form>
