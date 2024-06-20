@@ -134,6 +134,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcUmVhZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Email/Reply.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcUmVwbHkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Email/ReplyRead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcUmVwbHlSZWFkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Email/Send.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcU2VuZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

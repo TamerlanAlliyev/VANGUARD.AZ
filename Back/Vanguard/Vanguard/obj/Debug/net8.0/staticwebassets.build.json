@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5cT1zBB9WU6geboreixo7FO3gqD3CpgTiB4wc9PTKsg=",
+  "Hash": "bZWblUB0v6xSe5chdi69vZXEz9Wwb9OweIPWI7F01Rg=",
   "Source": "Vanguard",
   "BasePath": "_content/Vanguard",
   "Mode": "Default",
@@ -18732,12 +18732,12 @@
       "OriginalItemSpec": "wwwroot\\cilent\\assets\\videos\\Untitled video - Made with Clipchamp (1).mp4"
     },
     {
-      "Identity": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\client\\assets\\emailfiles\\01887450250-a1.jpg",
+      "Identity": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\client\\assets\\emailfiles\\682717624767014429 (1).mp4",
       "SourceId": "Vanguard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\",
       "BasePath": "_content/Vanguard",
-      "RelativePath": "client/assets/emailfiles/01887450250-a1.jpg",
+      "RelativePath": "client/assets/emailfiles/682717624767014429 (1).mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -18748,15 +18748,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\client\\assets\\emailfiles\\01887450250-a1.jpg"
+      "OriginalItemSpec": "wwwroot\\client\\assets\\emailfiles\\682717624767014429 (1).mp4"
     },
     {
-      "Identity": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\client\\assets\\emailfiles\\01887450250-p.jpg",
+      "Identity": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\client\\assets\\emailfiles\\682717624767014429.mp4",
       "SourceId": "Vanguard",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\",
       "BasePath": "_content/Vanguard",
-      "RelativePath": "client/assets/emailfiles/01887450250-p.jpg",
+      "RelativePath": "client/assets/emailfiles/682717624767014429.mp4",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -18767,7 +18767,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\client\\assets\\emailfiles\\01887450250-p.jpg"
+      "OriginalItemSpec": "wwwroot\\client\\assets\\emailfiles\\682717624767014429.mp4"
     },
     {
       "Identity": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\client\\assets\\emailfiles\\7twkh786.png",
@@ -18787,6 +18787,44 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\client\\assets\\emailfiles\\7twkh786.png"
+    },
+    {
+      "Identity": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\client\\assets\\emailfiles\\Bmw (1).pdf",
+      "SourceId": "Vanguard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\",
+      "BasePath": "_content/Vanguard",
+      "RelativePath": "client/assets/emailfiles/Bmw (1).pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\client\\assets\\emailfiles\\Bmw (1).pdf"
+    },
+    {
+      "Identity": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\client\\assets\\emailfiles\\Bmw.pdf",
+      "SourceId": "Vanguard",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\",
+      "BasePath": "_content/Vanguard",
+      "RelativePath": "client/assets/emailfiles/Bmw.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\client\\assets\\emailfiles\\Bmw.pdf"
     },
     {
       "Identity": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\wwwroot\\client\\assets\\images\\products\\01198c6a-be39-4d37-a7fa-7ebb4d8243c2_00304416737-e2.jpg",

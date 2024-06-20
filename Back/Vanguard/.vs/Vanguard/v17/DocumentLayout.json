@@ -1,12 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|c:\\users\\rog\\onedrive\\desktop\\new folder\\vanguard.az\\back\\vanguard\\vanguard\\areas\\admin\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0D865A25-723B-434A-AC4C-3C87BB738808}|Vanguard\\Vanguard.csproj|solutionrelative:vanguard\\areas\\admin\\controllers\\emailcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -14,24 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmailController.cs",
-              "DocumentMoniker": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\EmailController.cs",
-              "RelativeDocumentMoniker": "Vanguard\\Areas\\Admin\\Controllers\\EmailController.cs",
-              "ToolTip": "C:\\Users\\ROG\\OneDrive\\Desktop\\New folder\\VANGUARD.AZ\\Back\\Vanguard\\Vanguard\\Areas\\Admin\\Controllers\\EmailController.cs",
-              "RelativeToolTip": "Vanguard\\Areas\\Admin\\Controllers\\EmailController.cs",
-              "ViewState": "AQIAAH4AAAAAAAAAAAAuwIoAAAA7AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-20T15:28:02.748Z",
-              "EditorCaption": ""
             }
           ]
         }

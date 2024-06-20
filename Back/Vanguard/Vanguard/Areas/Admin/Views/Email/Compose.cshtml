@@ -25,7 +25,8 @@
                             </div>
                             <div class="mail-list rounded mt-4">
                                 <a asp-action="Inbox" class="list-group-item"><i class="fa fa-inbox font-18 align-middle me-2"></i> Inbox <span class="badge badge-primary badge-sm float-end">@ViewData["InboxCount"].ToString()</span> </a>
-                                <a asp-action="Send" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle me-2"></i>Sent</a>
+                                <a asp-controller="email" asp-action="send" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle me-2"></i>Sent</a>
+                                <a asp-controller="email" asp-action="Reply" class="list-group-item"><i class="bi bi-reply-fill font-18 align-middle me-2"></i>Reply</a>
                             </div>
                         </div>
                         <form id="Form" method="post" enctype="multipart/form-data">

@@ -789,8 +789,9 @@
 							<li>
 								<a class="has-arrow" href="javascript:void(0);" aria-expanded="false">Email</a>
 								<ul aria-expanded="false">
-									<li><a href="~/admin/email-compose.html">Compose</a></li>
+									<li><a asp-action="Compose" asp-controller="Email">Compose</a></li>
 									<li><a asp-action="Inbox" asp-controller="Email" asp-area="Admin">Inbox</a></li>
+									<li><a asp-action="Send" asp-controller="Email">Send</a></li>
 								</ul>
 							</li>
 							<li><a href="~/admin/app-calender.html">Calendar</a></li>

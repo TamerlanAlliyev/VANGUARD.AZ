@@ -46,7 +46,9 @@ public class VanguardContext : IdentityDbContext<AppUser>
     public DbSet<Connection> Connections { get; set; }
 	public DbSet<Subscription> Subscriptions { get; set; }
     public DbSet<Contact> Contacts { get; set; }	
-    protected override void OnModelCreating(ModelBuilder modelBuilder)
+	public DbSet<EmailSend> EmailSends { get; set; }
+
+	protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{
 		base.OnModelCreating(modelBuilder);
 		modelBuilder.Entity<IdentityUser>().HasKey(u => u.Id);
