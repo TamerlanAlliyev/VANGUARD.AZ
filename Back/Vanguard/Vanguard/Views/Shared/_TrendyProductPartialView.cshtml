@@ -52,7 +52,7 @@
                                 </div> -->
 
                                 <div class="swiper mySwiper hover-image">
-                                    <div class="swiper-wrapper">
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id" class="swiper-wrapper">
 
 
                                         @if (prod.AdditionalImagesURL != null)
@@ -71,7 +71,7 @@
 
 
 
-                                    </div>
+                                    </a>
                                     <div class="swiper-button-next p-btn"></div>
                                     <div class="swiper-button-prev p-btn"></div>
                                 </div>
@@ -131,7 +131,7 @@
                                             @(cat != prod.Categories.Last() ? " , " : "")
                                         }
                                     </h6>
-                                    <h3>@prod.Product.Name</h3>
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id">@prod.Product.Name</a>
                                 </div>
 
                                 <span>Color: @prod.Color</span>
@@ -211,7 +211,7 @@
                                 </div> -->
 
                                 <div class="swiper mySwiper hover-image">
-                                    <div class="swiper-wrapper">
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id" class="swiper-wrapper">
 
 
                                         @if (prod.AdditionalImagesURL != null)
@@ -230,7 +230,7 @@
 
 
 
-                                    </div>
+                                    </a>
                                     <div class="swiper-button-next p-btn"></div>
                                     <div class="swiper-button-prev p-btn"></div>
                                 </div>
@@ -290,7 +290,7 @@
                                             @(cat != prod.Categories.Last() ? " , " : "")
                                         }
                                     </h6>
-                                    <h3>@prod.Product.Name</h3>
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id">@prod.Product.Name</a>
                                 </div>
 
                                 <span>Color: @prod.Color</span>
@@ -372,7 +372,7 @@
                                 </div> -->
 
                                 <div class="swiper mySwiper hover-image">
-                                    <div class="swiper-wrapper">
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id" class="swiper-wrapper">
 
 
                                         @if (prod.AdditionalImagesURL != null)
@@ -391,7 +391,7 @@
 
 
 
-                                    </div>
+                                    </a>
                                     <div class="swiper-button-next p-btn"></div>
                                     <div class="swiper-button-prev p-btn"></div>
                                 </div>
@@ -451,7 +451,7 @@
                                             @(cat != prod.Categories.Last() ? " , " : "")
                                         }
                                     </h6>
-                                    <h3>@prod.Product.Name</h3>
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id">@prod.Product.Name</a>
                                 </div>
 
                                 <span>Color: @prod.Color</span>
@@ -526,7 +526,7 @@
                                 </div> -->
 
                                 <div class="swiper mySwiper hover-image">
-                                    <div class="swiper-wrapper">
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id" class="swiper-wrapper">
 
 
                                         @if (prod.AdditionalImagesURL != null)
@@ -545,7 +545,7 @@
 
 
 
-                                    </div>
+                                    </a>
                                     <div class="swiper-button-next p-btn"></div>
                                     <div class="swiper-button-prev p-btn"></div>
                                 </div>
@@ -605,7 +605,7 @@
                                             @(cat != prod.Categories.Last() ? " , " : "")
                                         }
                                     </h6>
-                                    <h3>@prod.Product.Name</h3>
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id">@prod.Product.Name</a>
                                 </div>
 
                                 <span>Color: @prod.Color</span>

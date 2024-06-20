@@ -1048,10 +1048,11 @@ TRENDY SLIDER - Start
 
 
 
-.product-info-box .p-inf div h3 {
+.product-info-box .p-inf div a {
     font-weight: 600;
     color: #000000;
     font-size: 10px;
+    text-decoration:none;
 }
 
 .product-info-box .p-inf span {
@@ -1421,7 +1422,7 @@ TRENDY SLIDER - Start
 
 
 
-    .product-info-box .p-inf div h3 {
+    .product-info-box .p-inf div a {
         font-size: 12px;
     }
 
@@ -1603,7 +1604,7 @@ TRENDY SLIDER - Start
 
 
 
-    .product-info-box .p-inf div h3 {
+    .product-info-box .p-inf div a {
         font-size: 16px;
     }
 
@@ -2495,10 +2496,11 @@ DEAL OF WEEK    SECTION - Start
 
 
 
-.product-info-boxs .p-inf div h3 {
+.product-info-boxs .p-inf div a {
     font-weight: 600;
     color: #ffffff;
     font-size: 12px;
+    text-decoration:none;
 }
 
 .product-info-boxs .p-inf span {
@@ -2862,7 +2864,7 @@ DEAL OF WEEK    SECTION - Start
 
 
 
-    .product-info-boxs .p-inf div h3 {
+    .product-info-boxs .p-inf div a {
         font-weight: 600;
         color: #ffffff;
         font-size: 12px;

@@ -228,17 +228,17 @@
 
                             <div class="prod-images">
 
-                                <div class="main-image">
+                                <a asp-action="Index" asp-controller="shop" asp-route-id="@prod.Id" class="main-image">
                                     <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
 
-                                </div>
+                                </a>
 
                                 <!-- <div class="">
                                 <img src="~/cilent/assets/images/products/slider-2.webp" alt="">
                                 </div> -->
 
                                 <div class="swiper mySwiper hover-image">
-                                    <div class="swiper-wrapper">
+                                    <a asp-action="detail" asp-controller="shop" asp-route-id="@prod.Id" class="swiper-wrapper">
 
                                         @if (prod.AdditionalImagesURL != null)
                                         {
@@ -254,7 +254,7 @@
                                             }
                                         }
 
-                                    </div>
+                                    </a>
                                     <div class="swiper-button-next p-btn"></div>
                                     <div class="swiper-button-prev p-btn"></div>
                                 </div>
@@ -288,7 +288,7 @@
                                 }
                                 @if (prod.IsDiscounted)
                                 {
-                                    <a class="dis">-@prod.Offer%</a>
+                                    <a  class="dis">-@prod.Offer%</a>
                                 }
                                 @if (prod.IsBest)
                                 {
@@ -315,7 +315,7 @@
                                             @(cat != prod.Categories.Last() ? " , " : "")
                                         }
                                     </h6>
-                                    <h3>@prod.Product.Name</h3>
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id">@prod.Product.Name</a>
                                 </div>
 
                                 <span>Color: @prod.Color</span>
@@ -405,10 +405,7 @@
 
                         <div class="swiper-slide blog-card">
 
-                            @*     <a href="#" class="blog-image">
-                    <img src="~/cilent/assets/blogs/@blog.Image" alt="">
-                    </a>
-                    *@
+                 
                             @if (blog.IsVideo)
                             {
                                 <a class="blog-video blog-image" asp-action="Detail" asp-controller="Blog" asp-area="" asp-route-id="@blog.Id">

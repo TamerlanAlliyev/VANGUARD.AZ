@@ -129,7 +129,7 @@
                                         @(cat != prod.Categories.Last() ? " , " : "")
                                     }
                                 </h6>
-                                <h3>@prod.Product.Name</h3>
+                                <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Product.Id">@prod.Product.Name</a>
                             </div>
 
                             <span>Color: @prod.Color</span>
@@ -195,7 +195,7 @@
 
                         <!-- Swiper -->
                         <div class="swiper mySwiper img-detail">
-                            <div class="swiper-wrapper">
+                            <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Product.Id" class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="~/cilent/assets/images/products/@prod.MainImageURL" alt="">
                                 </div>
@@ -214,7 +214,7 @@
                                     }
                                 }
 
-                            </div>
+                            </a>
                             <div class="swiper-button-next p-btn"></div>
                             <div class="swiper-button-prev p-btn"></div>
                             <div class="swiper-pagination"></div>

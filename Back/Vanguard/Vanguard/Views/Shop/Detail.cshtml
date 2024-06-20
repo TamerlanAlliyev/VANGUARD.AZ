@@ -441,12 +441,12 @@
 
                             <div class="image-box">
 
-                                <a href="#" class="main-image im active">
+                                <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id" class="main-image im active">
                                     <img src="~/cilent/assets/images/products/@prod.Images.Where(i=>!i.IsDeleted&&i.IsMain).FirstOrDefault()!.Url" alt="asd">
                                 </a>
 
 
-                                <a href="#" class="hover-image im active">
+                                <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id" class="hover-image im active">
                                     <!-- Swiper -->
                                     <div class="swiper mySwiper">
                                         <div class="swiper-wrapper">
@@ -502,7 +502,7 @@
                                             <a>@cat.Category.Name@(cat == Model.Product.ProductCategory.Last() ? "" : ", ")</a>
                                         }
                                     </span>
-                                    <h3>@prod.Name</h3>
+                                    <a asp-action="Detail" asp-controller="shop" asp-route-id="@prod.Id">@prod.Name</a>
                                     <p>Color : @prod.ProductColors.Color.Name</p>
                                 </div>
 

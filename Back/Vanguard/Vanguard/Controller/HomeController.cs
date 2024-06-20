@@ -9,7 +9,6 @@ using Vanguard.Models;
 using Vanguard.Services.Interfaces;
 using Vanguard.ViewComponents;
 using Vanguard.ViewModels.Blog;
-using Vanguard.ViewModels.Book;
 using Vanguard.ViewModels.Home;
 using Vanguard.ViewModels.Shop;
 using Vanguard.ViewModels.Wish;
@@ -97,30 +96,5 @@ public class HomeController : Microsoft.AspNetCore.Mvc.Controller
     }
 
 
-    [HttpPost]
-    public IActionResult Create(BookPurchaseVM model)
-    {
-        var gateway = _braintreeService.GetGateway();
-        var request = new TransactionRequest
-        {
-            Amount = Convert.ToDecimal("250"),
-            PaymentMethodNonce = model.Nonce,
-            Options = new TransactionOptionsRequest
-            {
-                SubmitForSettlement = true
-            }
-        };
-
-        Result<Transaction> result = gateway.Transaction.Sale(request);
-
-        if (result.IsSuccess())
-        {
-            return View("Success");
-        }
-        else
-        {
-            return View("Failure");
-        }
-    }
 }
 

@@ -4,6 +4,7 @@ namespace Vanguard.ViewModels.Shop;
 
 public class ShopProductVM
 {
+    public int Id { get; set; }
     public Product Product { get; set; } = null!;
     public string MainImageURL { get; set; } = null!;
     public string HoverImageURL { get; set; } = null!;
@@ -16,5 +17,5 @@ public class ShopProductVM
     public bool IsDiscounted { get; set; }
     public bool IsBest { get; set; }
     public int? Offer { get; set; }
-    public bool IsWish {  get; set; }
+    public bool IsWish { get; set; }
 }

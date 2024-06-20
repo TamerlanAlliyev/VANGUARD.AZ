@@ -59,6 +59,7 @@ namespace Vanguard.Services.Implementations
 
             var productsVM = products.OrderByDescending(p=>p.CreatedDate).Select(p => new ShopProductVM
             {
+                Id=p.Id,
                 Product = p,
                 MainImageURL = p.Images.FirstOrDefault(i => i.IsMain)?.Url ?? string.Empty,
                 HoverImageURL = p.Images.FirstOrDefault(i => i.IsHover)?.Url ?? string.Empty,
@@ -132,6 +133,7 @@ namespace Vanguard.Services.Implementations
 
             var productsVM = products.OrderByDescending(p => p.CreatedDate).Select(p => new ShopProductVM
             {
+                Id=p.Id,
                 Product = p,
                 MainImageURL = p.Images.FirstOrDefault(i => i.IsMain)?.Url ?? string.Empty,
                 HoverImageURL = p.Images.FirstOrDefault(i => i.IsHover)?.Url ?? string.Empty,

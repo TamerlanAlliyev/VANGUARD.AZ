@@ -1625,10 +1625,11 @@ input[type="range"]::-webkit-slider-thumb {
     /* font-size: 12px; */
 }
 
-.product-info-box .p-inf div h3 {
+.product-info-box .p-inf div a {
     font-weight: 600;
     color: #000000;
     font-size: 8px;
+    text-decoration:none;
     /* font-size: 16px; */
 }
 
@@ -1923,6 +1924,7 @@ input[type="range"]::-webkit-slider-thumb {
     font-weight: 600;
     width: 100%;
     font-size: 16px;
+    text-decoration:none;
     /* font-size: 20px; */
 }
 
@@ -3431,7 +3433,7 @@ input[type="number"]::-webkit-outer-spin-button {
         /* font-size: 12px; */
     }
 
-    .product-info-box .p-inf div h3 {
+    .product-info-box .p-inf div a {
         /**/
         font-size: 10px;
         /* font-size: 16px; */
@@ -4396,7 +4398,7 @@ input[type="number"]::-webkit-outer-spin-button {
         font-size: 10px;
     }
 
-    .product-info-box .p-inf div h3 {
+    .product-info-box .p-inf div a {
         font-size: 14px;
     }
 
