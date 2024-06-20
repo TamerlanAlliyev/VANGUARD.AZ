@@ -44,7 +44,7 @@ public class VanguardContext : IdentityDbContext<AppUser>
 	public DbSet<AboutAccordion> AboutAccordion { get; set; }
 	public DbSet<AboutEmploees> AboutEmploees { get; set; }
     public DbSet<Connection> Connections { get; set; }
-
+	public DbSet<Subscription> Subscriptions { get; set; }
     public DbSet<Contact> Contacts { get; set; }	
     protected override void OnModelCreating(ModelBuilder modelBuilder)
 	{

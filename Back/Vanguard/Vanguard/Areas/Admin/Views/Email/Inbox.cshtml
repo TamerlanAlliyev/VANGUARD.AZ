@@ -25,11 +25,11 @@
                     <div class="card-body">
                         <div class="email-left-box px-0 mb-3">
                             <div class="p-0">
-                                <a href="~/admin/email-compose.html" class="btn btn-primary btn-block">Compose</a>
+                                <a asp-action="Compose" class="btn btn-primary btn-block">Compose</a>
                             </div>
                             <div class="mail-list rounded mt-4">
-                                <a asp-controller="email" asp-action="inbox" class="list-group-item active"><i class="fa fa-inbox font-18 align-middle me-2"></i> Inbox <span class="badge badge-primary badge-sm float-end">198</span> </a>
-                                @* <a href="javascript:void(0);" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle me-2"></i>Sent</a> <a href="javascript:void(0);" class="list-group-item"> *@
+                                <a asp-controller="email" asp-action="inbox" class="list-group-item active"><i class="fa fa-inbox font-18 align-middle me-2"></i> Inbox <span class="badge badge-primary badge-sm float-end inbox-count">@Model.Count()</span> </a>
+                                <a asp-controller="email" asp-action="send" class="list-group-item"><i class="fa fa-paper-plane font-18 align-middle me-2"></i>Sent</a> <a href="javascript:void(0);" class="list-group-item">
                                 </a>
                             </div>
                         </div>
@@ -141,17 +141,28 @@
             document.addEventListener('DOMContentLoaded', function () {
                 document.querySelector('.message-read').addEventListener('click', function () {
                     var ids = [];
-                    document.querySelectorAll('.inbox-cb:checked').forEach(function (checkbox) {
-                        ids.push(parseInt(checkbox.id));  
-                    });
-                    console.log(ids);  
+                   
 
-                    fetch('ReadAll', {  
+                    document.querySelectorAll('.message .inbox-cb:checked').forEach(function (checkbox) {
+                        ids.push(parseInt(checkbox.id));
+
+                        let message = checkbox.closest('.message');
+                        let subject = message.querySelector('.subject');
+                        let date = message.querySelector('.date');
+
+                        subject.style.removeProperty('color');
+                        date.style.removeProperty('color');
+                    });
+
+                    console.log(ids);
+           
+
+                    fetch('ReadAll', {
                         method: 'POST',
                         headers: {
-                            'Content-Type': 'application/x-www-form-urlencoded' 
+                            'Content-Type': 'application/x-www-form-urlencoded'
                         },
-                        body: 'ids=' + ids.join('&ids=') 
+                        body: 'ids=' + ids.join('&ids=')
                     })
                         .then(response => {
                             if (!response.ok) {
@@ -169,12 +180,20 @@
 
 
                 document.querySelector('.message-trash').addEventListener('click', function () {
+
+                    let inboxCountElement = document.querySelector('.inbox-count');
+                    let initialCount = parseInt(inboxCountElement.innerText, 10);
                     var ids = [];
                     document.querySelectorAll('.message .inbox-cb:checked').forEach(function (checkbox) {
                         ids.push(parseInt(checkbox.id));
-                        checkbox.closest('.message').remove();  
+                        checkbox.closest('.message').remove();
+              
                     });
                     console.log(ids);
+
+                    let removedCount = ids.length;
+                    let newCount = initialCount - removedCount;
+                    inboxCountElement.innerText = newCount;
 
                     fetch('EmailDelete', {
                         method: 'POST',

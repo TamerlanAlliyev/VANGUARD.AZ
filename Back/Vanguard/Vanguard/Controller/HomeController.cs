@@ -7,6 +7,7 @@ using System.Security.Claims;
 using Vanguard.Data;
 using Vanguard.Models;
 using Vanguard.Services.Interfaces;
+using Vanguard.ViewComponents;
 using Vanguard.ViewModels.Blog;
 using Vanguard.ViewModels.Book;
 using Vanguard.ViewModels.Home;
@@ -32,8 +33,8 @@ public class HomeController : Microsoft.AspNetCore.Mvc.Controller
 
     public async Task<IActionResult> Index()
     {
-        var lastBlogs = await _context.Blogs.Where(b=>!b.IsDeleted)
-                                             .OrderByDescending(b=>b.CreatedDate)
+        var lastBlogs = await _context.Blogs.Where(b => !b.IsDeleted)
+                                             .OrderByDescending(b => b.CreatedDate)
                                              .Take(10)
                                              .Include(b => b.Images)
                                              .Include(b => b.AppUser)
@@ -52,19 +53,40 @@ public class HomeController : Microsoft.AspNetCore.Mvc.Controller
                                                  Descripton = b.MainDescription
                                              }).ToListAsync();
 
-   
+
 
         HomeVM vm = new HomeVM
         {
             TrendyVM = await _homeService.TrendySelectedAsync(),
             LastBlogs = lastBlogs,
-            Sliders = await _context.HomeSliders.Include(s=>s.Image).Include(s=>s.Tag).ToListAsync(),
+            Sliders = await _context.HomeSliders.Include(s => s.Image).Include(s => s.Tag).ToListAsync(),
             Banners = await _context.HomeBanners.Include(b => b.Image).Include(b => b.Category).ToListAsync(),
             Hero = await _homeService.HeroProductsAsync(),
         };
 
         return View(vm);
     }
+
+    [HttpPost]
+    public async Task<IActionResult> SubscriptionCreate( Vanguard.Models.Subscription subscription)
+    {
+        if (!ModelState.IsValid)
+        {
+            return ViewComponent(nameof(SubscriptionViewComponent), new { sub = subscription });
+        }
+ 
+
+        Vanguard.Models.Subscription newSub = new Vanguard.Models.Subscription
+        {
+            Email = subscription.Email,
+        };
+
+        await _context.Subscriptions.AddAsync(newSub);
+        await _context.SaveChangesAsync();
+
+        return RedirectToAction("Index");
+    }
+
     public IActionResult Forbidden()
     {
         return View("Error403");

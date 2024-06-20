@@ -122,12 +122,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Email/Compose.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcQ29tcG9zZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Email/Inbox.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcSW5ib3guY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Email/Read.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcUmVhZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Email/Send.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcU2VuZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Email/SendRead.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRW1haWxcU2VuZFJlYWQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Areas/Admin/Views/Gender/Create.cshtml]
@@ -304,6 +316,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/Search/Default.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU2VhcmNoXERlZmF1bHQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/Subscription/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXENvbXBvbmVudHNcU3Vic2NyaXB0aW9uXERlZmF1bHQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/ROG/OneDrive/Desktop/New folder/VANGUARD.AZ/Back/Vanguard/Vanguard/Views/Shared/Components/User/Default.cshtml]

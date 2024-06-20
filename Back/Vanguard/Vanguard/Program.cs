@@ -32,7 +32,8 @@ namespace Vanguard
             builder.Services.AddScoped<IHomeSliderService, HomeSliderService>();
             builder.Services.AddScoped<ISettingProductService, SettingProductService>();
             builder.Services.AddScoped<ISettingHomeHeroService, SettingHomeHeroService>();
-			builder.Services.AddTransient<IEmailService, EmailService>();
+			builder.Services.AddTransient<Vanguard.Services.Interfaces.IEmailService, Vanguard.Services.Implementations.EmailService>();
+            builder.Services.AddTransient<Vanguard.Areas.Admin.Services.Interfaces.IEmailService, EmailService>();
             builder.Services.AddScoped<AdminAuthorizationFilter>();
             builder.Services.AddTransient<IBraintreeService, BraintreeService>();
 

@@ -332,12 +332,12 @@ public class AccountController : Microsoft.AspNetCore.Mvc.Controller
     }
 
 
-    public async Task CreateRoles()
-    {
-        await _roleManager.CreateAsync(new IdentityRole { Name = "Admin" });
-        await _roleManager.CreateAsync(new IdentityRole { Name = "Editor" });
-        await _roleManager.CreateAsync(new IdentityRole { Name = "Moderator" });
-        await _roleManager.CreateAsync(new IdentityRole { Name = "Author" });
-        await _roleManager.CreateAsync(new IdentityRole { Name = "Customer" });
-    }
+    //public async Task CreateRoles()
+    //{
+    //    await _roleManager.CreateAsync(new IdentityRole { Name = "Admin" });
+    //    await _roleManager.CreateAsync(new IdentityRole { Name = "Editor" });
+    //    await _roleManager.CreateAsync(new IdentityRole { Name = "Moderator" });
+    //    await _roleManager.CreateAsync(new IdentityRole { Name = "Author" });
+    //    await _roleManager.CreateAsync(new IdentityRole { Name = "Customer" });
+    //}
 }

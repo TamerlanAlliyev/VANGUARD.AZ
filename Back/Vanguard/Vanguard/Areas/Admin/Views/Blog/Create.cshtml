@@ -1256,11 +1256,11 @@
     <script src="~/admin/ckeditor/build-config.js"></script>
     <script src="~/admin/ckeditor/config.js"></script>
     <script>
-        // CKEditor'u başlat
+ 
         CKEDITOR.replace("MainDescription");
         CKEDITOR.replace("AddinationDescription");
 
-        // Form gönderilmeden önce CKEditor içeriğini senkronize et
+ 
         document.getElementById('Form').onsubmit = function () {
             for (instance in CKEDITOR.instances) {
                 CKEDITOR.instances[instance].updateElement();
