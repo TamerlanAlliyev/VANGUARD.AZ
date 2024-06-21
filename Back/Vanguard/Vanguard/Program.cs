@@ -8,6 +8,7 @@ using Vanguard.Models;
 using Vanguard.Services.Implementations;
 using Vanguard.Services.Interfaces;
 using YourNamespace.Filters;
+using Vanguard.Helpers;
 
 namespace Vanguard
 {
@@ -21,7 +22,7 @@ namespace Vanguard
             builder.Services.AddHttpContextAccessor();
             builder.Services.AddDbContext<VanguardContext>(options =>
             {
-                options.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL"));
+                options.UseSqlServer(builder.Configuration.GetConnectionString("MSSQL")); 
             });
 
             builder.Services.AddScoped<ITagService, TagService>();
@@ -35,8 +36,11 @@ namespace Vanguard
 			builder.Services.AddTransient<Vanguard.Services.Interfaces.IEmailService, Vanguard.Services.Implementations.EmailService>();
             builder.Services.AddTransient<Vanguard.Areas.Admin.Services.Interfaces.IEmailService, EmailService>();
             builder.Services.AddScoped<AdminAuthorizationFilter>();
-            builder.Services.AddTransient<IBraintreeService, BraintreeService>();
 
+            builder.Services.Configure<BrainTreeSettings>(builder.Configuration.GetSection("Braintree"));
+            builder.Services.AddSingleton<IBraintreeService, BraintreeService>();
+
+            builder.Services.AddScoped<BrainTreeSettings>();
 
             builder.Services.AddScoped<IHomeService, HomeService>();
 

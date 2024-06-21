@@ -596,7 +596,7 @@ z-index: 5; */
     transition: all 0.3s ease;
     font-weight: 500;
     border: 1px solid #ffff;
-    width: 38px;
+    width: 100%;
     /* width: 46px; */
     /* border: 1.5px solid #ffff; */
 }
@@ -2539,18 +2539,18 @@ input[type="number"]::-webkit-outer-spin-button {
         display: flex;
     }
 
-    .size .size-box span {
-        padding: 2px 8px;
-        text-align: center;
-        color: #ffff;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        font-weight: 500;
-        border: 1px solid #ffff;
-        width: 38px;
-        /* width: 46px; */
-        /* border: 1.5px solid #ffff; */
-    }
+        .size .size-box span {
+            padding: 2px 8px;
+            text-align: center;
+            color: #ffff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            border: 1px solid #ffff;
+            width: 100%;
+            /* width: 46px; */
+            /* border: 1.5px solid #ffff; */
+        }
 
     .size .size-box span:hover {
         color: #000;
@@ -4055,10 +4055,10 @@ input[type="number"]::-webkit-outer-spin-button {
 
 
 
-    .size .size-box span {
-        width: 46px;
-        border: 1.5px solid #ffff;
-    }
+        .size .size-box span {
+            width: 100%;
+            border: 1.5px solid #ffff;
+        }
 
     .size .size-box span:hover {
         border: 1.5px solid #fff;

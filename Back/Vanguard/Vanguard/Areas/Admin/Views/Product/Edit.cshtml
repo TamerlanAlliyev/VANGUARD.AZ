@@ -2370,32 +2370,31 @@
 
         function calculateDiscount() {
             const price = parseFloat(priceInput.value) || 0;
-            let discountPrice = parseFloat(discountInput.value) || 0;
+            let discountPrice = parseFloat(discountInput.value);
 
             if (!isNaN(price) && !isNaN(discountPrice) && price > 0) {
                 discountPrice = Math.max(0, Math.min(price, discountPrice));
                 const offer = ((price - discountPrice) / price) * 100;
-                offerInput.value = offer.toFixed(2);
-
+                offerInput.value = offer.toFixed(0);
                 discountInput.value = discountPrice.toFixed(2);
             } else {
-                discountInput.value = "NaN";
-                offerInput.value = "NaN";
+                discountInput.value = "";
+                offerInput.value = "";
             }
         }
 
         function calculateOffer() {
-            let offer = parseFloat(offerInput.value) || 0;
+            let offer = parseFloat(offerInput.value);
             const price = parseFloat(priceInput.value) || 0;
 
             if (!isNaN(price) && !isNaN(offer) && price > 0) {
                 offer = Math.max(0, Math.min(100, offer));
-                offerInput.value = offer.toFixed(2);
+                offerInput.value = offer.toFixed(0);
                 const discountPrice = price * (1 - (offer / 100));
                 discountInput.value = discountPrice.toFixed(2);
             } else {
-                offerInput.value = "NaN";
-                discountInput.value = "NaN";
+                offerInput.value = "";
+                discountInput.value = "";
             }
         }
 
@@ -2407,18 +2406,31 @@
                 const price = discountPrice / (1 - (offer / 100));
                 priceInput.value = price.toFixed(2);
             } else {
-                priceInput.value = "NaN";
+                priceInput.value = "";
             }
         }
 
-        discountInput.addEventListener('input', calculateDiscount);
-        offerInput.addEventListener('input', calculateOffer);
+        discountInput.addEventListener('input', () => {
+            if (discountInput.value === "") {
+                offerInput.value = "";
+            } else {
+                calculateDiscount();
+            }
+        });
+
+        offerInput.addEventListener('input', () => {
+            if (offerInput.value === "") {
+                discountInput.value = "";
+            } else {
+                calculateOffer();
+            }
+        });
 
         priceInput.addEventListener('input', () => {
             const price = parseFloat(priceInput.value) || 0;
             if (price === 0) {
-                discountInput.value = "NaN";
-                offerInput.value = "NaN";
+                discountInput.value = "";
+                offerInput.value = "";
             } else {
                 calculateDiscount();
             }
@@ -2426,10 +2438,11 @@
 
         discountInput.addEventListener('keydown', (event) => {
             if (event.key === 'Backspace' && discountInput.value.length === 1) {
-                discountInput.value = "NaN";
-                offerInput.value = "NaN";
+                discountInput.value = "";
+                offerInput.value = "";
             }
         });
+
 
 
     </script>

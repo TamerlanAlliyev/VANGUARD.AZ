@@ -443,11 +443,12 @@
                                     <p>
                                         @if (blog.Descripton.Length > 130)
                                         {
-                                            @blog.Descripton.Substring(0, 130) <span>...</span>
+                                            @Html.Raw(blog.Descripton.Length > 130 ? blog.Descripton.Substring(0, 130) + "<span>...</span>" : blog.Descripton)
+
                                         }
                                         else
                                         {
-                                            @blog.Descripton
+                                            @Html.Raw(blog.Descripton)
                                         }
                                     </p>
                                 </div>

@@ -1,4 +1,6 @@
 ﻿using Braintree;
+using Microsoft.Extensions.Options;
+using Vanguard.Helpers;
 using Vanguard.Services.Interfaces;
 
 namespace Vanguard.Services.Implementations
@@ -6,30 +8,25 @@ namespace Vanguard.Services.Implementations
     public class BraintreeService : IBraintreeService
     {
         private readonly IConfiguration _config;
-
-        public BraintreeService(IConfiguration config)
+        public BrainTreeSettings Options { get; set; }
+        private IBraintreeGateway BraintreeGateway { get; set; }
+        public BraintreeService(IOptions<BrainTreeSettings> options)
         {
-            _config = config;
+            Options = options.Value;
         }
-
 
         public IBraintreeGateway CreateGateway()
         {
-            var newGateway = new BraintreeGateway()
-            {
-                Environment = Braintree.Environment.SANDBOX,
-                MerchantId = _config.GetValue<string>("BraintreeGateway:MerchantId"),
-                PublicKey = _config.GetValue<string>("BraintreeGateway:PublicKey"),
-                PrivateKey = _config.GetValue<string>("BraintreeGateway:PrivateKey")
-            };
-
-            return newGateway;
+            return new BraintreeGateway(Options.Environment, Options.MerchantId, Options.PublicKey, Options.PrivateKey);
         }
 
         public IBraintreeGateway GetGateway()
         {
-            return CreateGateway();
-
+            if (BraintreeGateway == null)
+            {
+                BraintreeGateway = CreateGateway();
+            }
+            return BraintreeGateway;
         }
     }
 }

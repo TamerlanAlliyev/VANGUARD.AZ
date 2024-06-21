@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Web.Mvc;
 using YourNamespace.Filters;
 
 namespace Vanguard.Areas.Admin.Controllers;
